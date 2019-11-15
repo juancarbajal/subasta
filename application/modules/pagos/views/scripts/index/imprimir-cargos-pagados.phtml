@@ -1,0 +1,57 @@
+<?php if (!isset($this->resultDetalle) || (count($this->resultDetalle)==0)) { ?>
+<div class="error">No existen cargos asignados.</div>
+<?php } else {?>
+<?php //print_r($this->resultCabezera);?>
+<div align="center">
+<div align="center" style="width: 600px; border: 1px solid #000; padding: 20px">
+
+    <div align="left">
+    <img src="<?php echo $this->baseUrl();?>/img/global/pic_r1_c1.gif">
+</div>
+    <br>
+<table align="center" >
+    <tr>
+        <th align="left"><?php echo (strlen($this->resultCabezera->NroDocumento)>=11)?'Razón':'Nombre'?>:</th> <td><?php echo $this->resultCabezera->NomCompleto; ?></td>
+    </tr>
+    <tr>
+        <th align="left"><?php echo (strlen($this->resultCabezera->NroDocumento)>=11)?'RUC':'DNI'?></th> <td><?php echo $this->resultCabezera->NroDocumento; ?></td>
+    </tr>
+    <tr>
+        <th align="left">Dirección:</th> <td><?php echo $this->resultCabezera->Direccion; ?></td>
+    </tr>
+    <tr>
+        <th align="left">Teléfono:</th> <td><?php echo $this->resultCabezera->Telefono; ?></td>
+    </tr>
+
+</table>
+    <br>
+    <table align="center" width="90%" >
+  <tr>
+    <th align="left"> Fecha </th>
+    <th align="left"> Descripci&oacute;n </th>
+    <th align="left"> Monto </th>
+  </tr>
+  <?php $monto = 0;  ?>
+  <?php foreach($this->resultDetalle as $index): ?>
+  <tr>
+    <td><?php echo $index->Fecha; ?></td>
+    <td><?php echo $index->Transaccion; ?></td>
+    <td align="right" >S/. <?php echo number_format($index->Monto,2,'.',''); ?> </td>
+  </tr>
+  <?php $monto = $monto + $index->Monto;
+  endforeach; ?>
+  <tr class="rowtotal">
+  	<td colspan="2" class="desc" ><strong>Total</strong></td>
+    <td align="right" ><strong>S/. <?php echo number_format($monto,2,'.','') ?></strong></td>
+  </tr>
+</table>
+<br/>
+     <div align="left" style="font-size:0.8em">
+    <?php if ($this->tipo==1){ ?>* Cargos generados del 01 de <?=$this->mes ?> al <?=$this->ultimoDia?> de <?=$this->mes ?> del <?=$this->anio?><br/><?php } ?>
+    ** El presente documento no posee ning&uacute;n valor legal
+    </div>
+</div>
+
+</div>
+
+<?php } //end if?>

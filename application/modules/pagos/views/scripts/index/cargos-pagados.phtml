@@ -1,0 +1,121 @@
+<?php foreach ($this->transacciones as $t) : ?>
+    <?php $monto=$monto+$t->Monto;
+endforeach; ?>
+<?php echo $this->action('buscador', 'busqueda', 'default');?>
+<div id="body-content" class="estadocuenta-pag col-master">
+    <div id="s_level1" class="clearfix">
+        <h3>Koteando (Mi Cuenta)</h3>
+    </div>
+    <?php echo $this->action('navegacion','menu','default',array('nav' => 'pagos','opc'=>1)); ?>
+    <div class="pagetitle">
+        <h4>Cargos Pagados</h4>
+
+    </div>
+
+    <div id="s_level2" class="clearfix">
+        <div id="left-bar" class="col5">
+             <ul class="box">
+                <li class="active">Importante</li>
+                <li>Si desea generar facturas a partir de ahora registre sus <a href="<?php echo $this->baseUrl(); ?>/pagos/index/datos-facturacion">datos de facturaci&oacute;n</a></li>
+            </ul>
+        </div>
+        <div id="right-bar" class="col17 last">
+            <!--<div class="total-detail float_right inblock radius_top no_margin">-->
+               <!-- <p>Saldo total a pagar al &nbsp; <?php echo date('d/m/Y') ;?> &nbsp;  <strong class="mount"> S/. <?php echo number_format($this->total,2,'.','') ?></strong>-->
+ <!--<a href="<?php echo $this->baseUrl() . '/pagos/index/kotear-pagos-estado-cuenta/'; ?>" class="btn_submit sep_left" title="Pagar">Pagar</a>--> <!--</p>-->
+            <!--</div>-->
+                <table border="0" cellspacing="0" cellpadding="0" class="mf consolidado" width="100%">
+                <thead>
+                    <tr>
+                        <th width="15%"><input type="radio" class="tipoCuenta" name="tipoCuenta" value="1" checked="checked" >Consolidado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="15%">Selecione el mes y a&ntilde;o a consolidar &nbsp;&nbsp;
+                            <select name="consolidaddoMes" id="consolidaddoMes">
+                            <?php foreach($this->mesConsolidado as $index=>$value):
+                                    ?><option value="<?php echo $index; ?>"><?php echo $value; ?> </option> <?php
+                                    endforeach;?>
+                            </select>
+                            &nbsp;&nbsp;
+                            <select name="consolidaddoAnio" id="consolidaddoAnio">
+                            <?php foreach($this->anioConsolidado as $index=>$value):
+                                    ?><option value="<?php echo $index; ?>"><?php echo $value; ?> </option> <?php
+                                    endforeach;?>
+                            </select>
+                            <div class="float_right inblock"><a rel="#paydetail" class="btn_submit cmd_remote_detalle_transaccion_cons" title="Generar">Generar</a></div></td>
+                    </tr>
+                </tbody>
+                </table>
+            <table border="0" cellspacing="0" cellpadding="0" class="mf unitario" width="100%">
+                <thead>
+                    <tr >
+                        <th width="15%"><input type="radio" class="tipoCuenta" name="tipoCuenta" id="tipoCuenta" value="0" > Unitario</th>
+                        <th width="15%">&nbsp;</th>
+                        <th width="15%">&nbsp;</th>
+                        <th width="15%">&nbsp;</th>
+                    </tr>
+
+                </thead>
+                <thead>
+                    <tr>
+                        <th width="15%"><center>Seleccionar</center></th>
+                        <th width="55%">Concepto</th>
+                        <th width="10%" class="right">&nbsp;</th>
+                       <th width="30%" class="right">Monto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($this->transacciones as $t) : ?>
+                    <tr>
+                        <td><center><input type="radio" name="transacid" class="rad_tran" id="transacid" value="<?php echo  $t->ID?>"></center></td>
+                            <?php if($t->EsTransaccion==1){?>
+                        <td><a href="<?php echo $this->baseUrl(); ?>/pagos/index/detalle-transaccion/cod/<?php echo  $t->ID?>" rel="#paydetail" class="cmd_remote" title="Concepto: <?php echo $t->Descripcion; ?>"><?php echo $t->Descripcion; ?></a></td>
+                                <?php } else {?>
+                        <td><?php echo $t->Descripcion; ?></td>
+                                <?php } ?>
+                        <td class="number"> &nbsp;</td>
+                        <td class="number"> S/. <?php echo number_format($t->Monto,2,'.',''); ?></td>
+                       <!-- <td class="number"> <?php if ($t->Monto >= 0) { ?>  S/. <?php echo number_format($this->saldos[$t->ID],2,'.','') ?> <?php } else {?> &nbsp;<?php }?></td>-->
+                    </tr>
+                    <?php endforeach; ?>
+                    <tr class="rowtotal">
+                        <td colspan="3" class="desc"><strong><!--Saldo total a pagar al <?php echo date('d/m/Y') ;?>  &raquo; --> &nbsp;</strong></td>
+                        <td class="number"><!--<big><strong> S/. <?php echo number_format($this->total,2,'.','') ?></strong></big>--><div class="float_right inblock"><a rel="#paydetail" class="btn_submit cmd_remote_detalle_transaccion_unit" title="Generar">Generar</a></div></td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+<!--<a href="<?php echo $this->baseUrl() . '/construccion/' . $this->pagar; ?>" class="btn_submit float_right" title="Pagar">Pagar</a>-->
+
+            <!-- <div class="total-detail float_right inblock">
+                 <p>Saldo total a pagar al &nbsp; <?php echo date('d-m-Y') ;?> &nbsp; <strong class="mount"><?php echo $monto ?></strong> <a href="<?php echo $this->baseUrl() . '/pagos/index/kotear-pagos-estado-cuenta/'; ?>" class="btn_submit sep_left" title="Pagar">Pagar</a></p>
+             </div>-->
+        </div>
+    </div>
+    <div class="clear"></div>
+
+</div>
+<hr class="hide" />
+<div id="paydetail" class="modal">
+    <h3>Detalle de cargos</h3>
+    <div class="content">
+ 
+    </div>
+
+    <p class="buttons">
+        <button name="cancel" type="button" value="Cancelar" class="btn_submit close"><span>Cerrar</span></button>
+    </p>
+</div>
+<div id="paydetailConsolidado" class="modal">
+    <h3>Detalle de cargos</h3>
+    <div class="content">
+
+    </div>
+
+    <p class="buttons">
+        <button name="cancel" type="button" value="Cancelar" class="btn_submit close"><span>Cerrar</span></button>
+    </p>
+</div>

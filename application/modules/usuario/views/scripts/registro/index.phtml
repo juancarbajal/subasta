@@ -1,0 +1,104 @@
+<script type="text/javascript">
+var _ubiProv = <?=$this->arrUbigeo['prov']?>,
+    _ubiDist = <?=$this->arrUbigeo['dist']?>
+</script>
+<form id="form-sign-in" class="sign-in" action="<?php echo $this->baseUrl(); ?>/usuario/registro" method="post" >
+  <h2 class="k-title"><span></span>Registrate</h2>
+  <div class="form-horizontal">
+    <div class="control-group">     
+      <label for="txt-nickname" class="control-label"><span>*</span> Apodo</label>
+      <div class="controls">
+        <?=$this->form->apodo->renderViewHelper()?> 
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="txt-password" class="control-label"><span>*</span> Clave</label>
+      <div class="controls">
+            <?=$this->form->clave->renderViewHelper()?>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="txt-repeat-password" class="control-label"><span>*</span> Repetir Clave</label>
+      <div class="controls">
+            <?=$this->form->claveRep->renderViewHelper()?>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="txt-names" class="control-label"><span>*</span> Nombres</label>
+      <div class="controls">
+            <?=$this->form->nombre->renderViewHelper()?>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="txt-surnames" class="control-label"><span>*</span> Apellidos</label>
+      <div class="controls">
+        <?=$this->form->apellido->renderViewHelper()?>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="txt-email" class="control-label"><span>*</span> E-mail</label>
+      <div class="controls">
+        <?=$this->form->email->renderViewHelper()?>     
+      </div>
+    </div>
+    <div class="control-group">
+        <label for="txt-document" class="control-label"><span>*</span> Documento</label>
+        <div class="controls">
+            <?=$this->form->tipodocumento->renderViewHelper()?>
+            <?=$this->form->numerodocumento->renderViewHelper()?>
+        </div>
+    </div>  
+    <div class="control-group">
+      <label for="txt-phone-1" class="control-label"><span>*</span> Teléfono 1</label>
+      <div class="controls">
+            <?=$this->form->telefono->renderViewHelper()?>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="txt-phone-2" class="control-label">Teléfono 2</label>
+      <div class="controls">
+            <?=$this->form->telefono2->renderViewHelper()?>
+      </div>
+    </div>
+    <div class="control-group">
+          <label class="control-label" for="ubication_departement"><span>*</span> Departamento</label>
+          <div class="controls">
+              <?=$this->form->ubication_departement->renderViewHelper()?>
+          </div>
+      </div>
+      <div class="control-group">
+          <label class="control-label" for="ubication_province"><span>*</span> Provincia</label>
+          <div class="controls">
+              <?=$this->form->ubication_province->renderViewHelper()?>
+          </div>
+      </div>
+      <div class="control-group">
+          <label class="control-label" for="ubication_district"><span>*</span> Distrito</label>
+          <div class="controls">
+              <?=$this->form->ubication_district->renderViewHelper()?>
+          </div>
+      </div>
+      <div class="control-group">
+          <label class="control-label" for="captcha"><span>*</span> Ingrese Capcha</label>
+          <div id="captcha-label-control" class="controls">
+              <?=$this->form->captcha->render($this, null)?>
+          </div>
+      </div>
+    <div class="control-group">
+      <div class="controls">        
+        <label for="terms" class="checkbox"><input title="title" type="checkbox" id="terms" value="0" name="terms"/>Declaro ser mayor de edad, haber leido y acepto los <a href="http://centraldeayuda.kotear.pe/entries/21772626-terminos-y-condiciones" title="title" class="terms-condition" target="_blank">Términos y condiciones </a>de uso del sitio
+        </label>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <label for="emailing" class="checkbox"><input title="title" type="checkbox" id="emailing" value="1" name="emailing"/>Estoy de acuerdo en recibir información o mensajes sobre nuevos servicios, promociones y novedades de Kotear.pe</label>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <button id="btn-register-confirm-email" type="submit" class="btn-kotear fix">Registrarse y Continuar</button><span>¿Ya tienes una cuenta?</span><span><a id="sign-in-inner"  href="javascript:;" title="title">Ingresa aquí. </a></span>
+      </div>
+    </div>
+  </div>
+</form>

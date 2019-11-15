@@ -1,0 +1,57 @@
+  <?if (isset($this->errors)){?>
+                                 <div>
+                                 <? foreach ($this->errors as $index =>$error){?>
+                                                                               <? if ($error!=null){ ?>
+                                                                                                     <br/><b/><?=$index?><br/>
+                                                                                                     <?=implode('<br/>',$error);?>
+                                                                                                     <?}?>
+                                                                               <?}?>
+                                 </div>
+                                 <?}?>
+
+<div id="body-content" class="misdatos-pag col-master">
+
+      <form action="<?php echo $this->url(array('controller'=>'edicion','action'=>'cancelar-cuenta')) ?>" method="post" name="darbaja" id="darbaja">
+
+    <?php if (isset($this->msg)){?>
+    <div class="mensajeerror">
+        <img src='<?=$this->baseUrl()?>/img/icons/warning.gif'/><?php echo $this->msg; ?>
+    </div>
+    <?php }?>
+        <h3>Datos de usuario </h3>
+        <div class="block1 group clearfix">
+          <p class="inpt">
+            <label for="apodo">Apodo<br />
+              <input type="text" name="apodo" id="apodo" maxlength="64" />
+              <span class="required">(*) </span> </label>
+          </p>
+          <p class="inpt">
+            <label for="email">E-mail<br />
+              <input type="text" name="email" id="email" maxlength="64" />
+              <span class="required">(*) </span> </label>
+          </p>
+           <p class="inpt">
+            <label for="password">Password<br />
+                <input type="password" name="password" id="password" maxlength="64" />
+              <span class="required">(*) </span> </label>
+          </p>
+
+          <?php if (isset($this->error) ) { echo $this->error; } ?>
+
+</div>
+
+<div class="block5 group clearfix">
+  
+</div>
+<div class="controls">
+  <button type="reset" class="botonCancelar">Cancelar</button>
+  <button type="submit" class="botonContinuar"
+          >Dar de Baja
+  </button>
+
+</div>
+</form>
+</div>
+
+
+

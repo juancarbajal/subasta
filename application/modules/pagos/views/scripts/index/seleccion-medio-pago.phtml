@@ -1,0 +1,41 @@
+<?php if (isset($this->msg)) {?>
+    <div class="error"><?=$this->msg?></div>
+<?} else {?>
+    <div id="message-ad" class="message-modal">
+        <h3 class="k-title"><span></span>Pago de Pendiente</h3>
+        <form class="modal-paid" name="frm-seleccion-medio-pago" id="frm-seleccion-medio-pago" 
+              action ="<?=$this->baseUrl()?>/pagos/index/enviar-medio-pago/ids/<?=$this->ids?>/montoids/<?=$this->monto?>" method ="get" >
+            <div class="error_item"></div>
+            <p class="message">A continuaci&oacute;n Ud. podr&aacute; seleccionar el medio de pago para realizar la cancelaci&oacute;n de la transacci&oacute;n seleccionada:</p>
+            <table>
+                <tr><th>Transacci&oacute;n</th>
+                <th>Tipo de Cargo</th>
+                <th>Fecha</th>
+                <th>Importe</th>
+                <?php foreach($this->result as $index):?>
+                <tr>
+                    <td><?=$index->IdCargo?></td>
+                    <td><?=$index->Descripcion?></td>
+                    <td><?=$index->Fecha?></td>
+                    <td><?=number_format($index->Monto,2,'.','')?></td>
+                <?php endforeach;?>
+
+                </tr>
+                <tr><td>&nbsp;</td><td>&nbsp;</td><td><strong>Monto</strong></td><th><?=number_format($this->monto,2,'.','')?></th></tr>
+
+            </table>
+            <label><strong>Medio de Pago</strong>
+            <select id="medioPago" name="medioPago" class="required">
+                    <option selected="selected" value="">Selecione el medio de pago</option>
+                    <option value="1">Pago Efectivo</option>
+                    <option value="2">VISA</option>
+                    <option value="3">MASTERCARD</option>
+            </select>
+            </label>
+            <div class="control">
+                    <button type="submit" class="btn-kotear">Aceptar</button>
+            </div>
+        </form>
+    </div>
+
+<?} //end if?>

@@ -1,0 +1,299 @@
+<script type="text/javascript">var _categoria2 ="",_categoria3="";</script>
+<?php
+$arrPaso = $this->arrPaso;
+$optionMoneda = array('1'=>'S/.', '2'=>'$');
+$optionProductType = array('1'=>'Nuevo', '2'=>'Usado');
+$primerFoto = $this->primerFoto;
+?>
+<div class="container">
+    <div class="head-step">
+        <div class="step-title">
+            <h3 class="k-title"><span></span><?php  
+                    switch($this->publicacionEstado) {
+                        case 1 : ?>Publicar: Paso 4 - Confirmar Publicación del Aviso<?php break;
+                        case 3 : ?>Destacar: Paso 3 - Confirmar la Modificación del Aviso<?php break;
+                        case 4 : ?>Republicar: Paso 3 - Confirma la Actualización del Aviso<?php break;
+                        default : break;
+                } ?></h3>
+            <p>Ingresa los datos necesarios para publicar el Aviso</p>
+        </div>
+        <ul class="step-progress">
+            <?if($arrPaso->paso1){?><li><span>Destaca el Aviso</span><span class="icon-off-step"></span></li><?}?>
+            <?if($arrPaso->paso2){?><li><span>Selecciona el Rubro</span><span class="icon-off-step"></span></li><?}?>
+            <?if($arrPaso->paso3){?><li><span>Datos del Aviso</span><span class="icon-off-step"></span></li><?}?>
+            <?if($arrPaso->paso4){?><li><span>Confirmación</span><span class="icon-on-step"></span></li><?}?>
+        </ul>
+    </div>	
+    
+        <form id="frm_confirm" class="form-confirm-data"  method="post" 
+              action="<?=$this->baseUrl()?>/usuario/publicacion/confirmar-publicacion" 
+              enctype="multipart/form-data">
+            <?php
+                $moneda = $this->form->currency->getValue();
+                $price = $this->form->price->getValue();
+                $product_type = $this->form->product_type->getValue();
+            ?>
+            <?=$this->form->categoriaId1->renderViewHelper()?>
+            <?=$this->form->categoriaId2->renderViewHelper()?>
+            <?=$this->form->categoriaId3->renderViewHelper()?>
+            <?=$this->form->categoriaId4->renderViewHelper()?>
+            <?=$this->form->categoriaText1->renderViewHelper()?>
+            <?=$this->form->categoriaText2->renderViewHelper()?>
+            <?=$this->form->categoriaText3->renderViewHelper()?>
+            <?=$this->form->categoriaText4->renderViewHelper()?>
+            <?=$this->form->ids_hidden_ad->renderViewHelper()?>
+            <?=$this->form->destaqueId->renderViewHelper()?>
+            <input type="hidden" name='announcement_title' value="<?=$this->form->announcement_title->getValue()?>" />
+            <input type="hidden" name='product_type' value="<?=$product_type?>" />
+            <input type="hidden" name='price' value="<?=$price?>" />
+            <input type="hidden" name='currency' value="<?=$moneda?>" />
+            <input type="hidden" name='ubication_departement' value="<?=$this->form->ubication_departement->getValue()?>" />
+            <input type="hidden" name='ubication_province' value="<?=$this->form->ubication_province->getValue()?>" />
+            <input type="hidden" name='ubication_district' value="<?=$this->form->ubication_district->getValue()?>" />
+            <?php foreach ($this->form->payment_method->getValue() as $value) { ?>
+                    <input type="hidden" name='payment_method[]' value="<?=$value?>" />
+            <?php } ?>
+            <input type="hidden" name='informacion_adicional' 
+                   value="<?=$this->escape($this->form->informacion_adicional->getValue())?>" />
+            <?php if ($this->form->announcement_title_impress) { ?>
+                <input type="hidden" name='announcement_title_impress' 
+                       value="<?=$this->form->announcement_title_impress->getValue()?>" />
+                <input type="hidden" name='letter_free' 
+                       value="<?=$this->form->letter_free->getValue()?>" />
+            <?php } ?>
+            <?=($this->form->atoken3)?$this->form->atoken3->renderViewHelper():''?>
+            <?=($this->form->atoken4)?$this->form->atoken4->renderViewHelper():''?>
+            <?=($this->form->idAviso)?$this->form->idAviso->renderViewHelper():''?>
+                    
+            <div class="pay-flow row">
+                <div class="left-column">
+                    <div class="item-flow">
+                        <h3>Información del aviso</h3>
+                        <img width="100" height="100" src="<?=$primerFoto?>" alt="descripcion">
+                        <h2><?=$this->form->announcement_title->getValue()?></h2>
+                        <div class="pay-detail-product">
+                            <div class="row-item">
+                                <span class="left">Precio Final:</span>
+                                <span class="right red">
+                                    <?=$optionMoneda[$moneda]?>
+                                    <?=$price?> 
+                                    (por unidad)
+                                </span>
+                            </div>
+                            <div class="row-item">
+                                <span class="left">Producto:</span>
+                                <span class="right"><?=$optionProductType[$product_type]?></span>
+                            </div>
+                            <div class="row-item">
+                                <span class="left">Publicado:</span>
+                                <span class="right"><?=date ('d/m/Y H:i' )?></span>
+                            </div>
+                            <div class="row-item">
+                                <span class="left">Duración del aviso:</span>
+                                <span class="right"><?=$this->arrDestaque->DIAS_PUB?> D&iacute;as</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-flow">
+                        <h3>Detalle de Compra</h3>
+                        <ul class="detail-buy">
+                            <li class="title">
+                                <span>Producto: <strong><?=$this->arrDestaque->TIT?></strong></span>
+                            </li>
+                            <li>
+                                <span>- Publicación en Edición Impresa de Clasificados el Comercio:</span>
+                                <strong class="line"><?=$this->arrDatos->impresoFecPublicacion?></strong>
+                            </li>
+                            <li>
+                                <span>- <?=$this->arrDestaque->DIAS_PUB?> d&iacute;as de publicación en web 
+                                    (<?=date("d/m")?> al <?=$this->arrDatos->fecDiasPublicacionWeb?>)
+                                </span>
+                            </li>
+                            <li>
+                                <span>- Resaltado en listado</span>
+                            </li>
+                        </ul>
+                        <span class="sub-total">
+                            <span>Sub-total</span>
+                            <span>S/. <?=$this->arrDestaque->MONTO?></span>
+                        </span>
+                        <span class="detail-max">Puede cancelar el monto del aviso hasta antes de la fecha de cierre 
+                            (<?=$this->arrDatos->impresoFecCierre?>) Pasado esta fecha, 
+                            la publicación se realizará la siguiente semana. 
+                            Una vez efectuado el pago, el aviso no está sujeto a reclamo
+                        </span>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="item-flow">
+                        <h3>Tipo de Comprobante</h3>
+                        <div class="form-horizontal">
+                            <div class="control-group options">
+                                <label class="control-label">El producto es</label>
+                                <div class="controls">
+                                    <?=$this->form->voucher->renderViewHelper()?>
+                                </div>
+                                <!--FACTURACION FORM-->
+                                <br/>
+                                <div id="voucher-form">
+                                    <div class="control-group">
+                                        <label class="control-label">
+                                            <span class="red">*</span>
+                                            <?=$this->formFacturacion->document_number->getLabel()?>
+                                        </label>
+                                        <div class="controls">
+                                            <?=$this->formFacturacion->document_number
+                                                    ->setAttribs(array('class' => 'span2'))
+                                                    ->renderViewHelper()?>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">
+                                            <span class="red">*</span>
+                                            <?=$this->formFacturacion->customer_name->getLabel()?>
+                                        </label>
+                                        <div class="controls">
+                                            <?=$this->formFacturacion->customer_name
+                                                    ->setAttribs(array('class' => 'span3'))
+                                                    ->renderViewHelper()?>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">
+                                            <span class="red">*</span>
+                                            <?=$this->formFacturacion->address->getLabel()?>
+                                        </label>
+                                        <div class="controls">
+                                            <?=$this->formFacturacion->address
+                                                    ->setAttribs(array('class' => 'span3'))
+                                                    ->renderViewHelper()?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-flow">
+                        <h3>Métodos de Pago</h3>
+                        <h4 class="title-type-pay">Pagar sin Tarjeta de Crédito</h4>
+                        <label class="card">
+                            <input type="radio" checked="checked" value="1" id="means_of_payment-1" 
+                                   name="means_of_payment">
+                            <span class="img pago-efectivo"></span>
+                        </label>
+                        <span class="description">
+                            Compra con PagoEfectivo y paga a través de internet o en cualquier oficina del BCP, 
+                            BBVA, Scotiabank, en agencias Western Union y en establecimientos autorizados que 
+                            tengan el logo de PagoEfectivo y/o FullCarga.
+                            <a id="link-video" href="#wrapper-video" title="¿Ques es pago efectivo?">
+                                ¿Qué es PagoEfectivo?
+                            </a>
+                        </span>
+                        <h4 class="title-type-pay">Pagar con Tarjeta de Crédito</h4>
+                        <div class="row">
+                            <label class="card">
+                                <input type="radio" value="2" id="means_of_payment-2" 
+                                   name="means_of_payment">
+                            </label>
+                            <a href="http://www.visanet.com.pe/" target="_blank"><span class="img visa"></span></a>
+                            <span class="description middle">Paga con tarjeta de crédito</span>
+                            <a class="verify-visa-window" href="javascript:;"><span class="img verify-visa"></span></a>
+                        </div>
+                        <div class="row">
+                            <label class="card">
+                                <input type="radio" value="3" id="means_of_payment-3" 
+                                   name="means_of_payment">
+                                <span class="img master-card"></span>
+                            </label>
+                            <span class="description">
+                                Pago con tarjeta de crédito Mastercard.
+                                <span>Se aceptan tarjetas Curacao, Carsa, Ace Home Center, Ripley y afiliados</span>
+                            </span>
+                        </div>
+                        <span class="btn-paid">
+                            <button type="submit">Pagar</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </form>
+</div>
+<div class="hide">
+    <div id="wrapper-video">
+        <div class="pagoefectivo-wrap-pago">
+            <div class="pagoefectivo-lb-pago">
+                <div class="pagoefectivo-container-pago">
+                    <h2 class="k-title"><span></span>¿Qué es PagoEfectivo?</h2>
+                    <p class="description-pago">
+                        PagoEfectivo es una forma fácil  y segura de comprar a través de internet. 
+                        Es cómodo y efectivo pues no necesitas tarjeta de crédito.
+                    </p>
+                    <div class="video-player-pago">
+                        <div style="width: 500px; height: 300px; border: 0px;" id="mediaplayer">
+                            <video width="500" height="300" poster="<?=$this->baseUrl()?>/f/video/1.jpg" 
+                                    controls="controls" tabindex="0">
+                                <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" 
+                                        src="<?=$this->baseUrl()?>/f/video/1.webm"></source>
+                                <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" 
+                                        src="<?=$this->baseUrl()?>/f/video/1.mp4"></source>
+                                <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" 
+                                        src="<?=$this->baseUrl()?>/f/video/1.ogv"></source>
+                                <source src="<?=$this->baseUrl()?>/f/video/1.m4v"></source>
+                            </video>
+                        </div>
+                    </div>
+                    <p class="description2-pago">
+                        Hacerlo es absolutamente gratis, seguro y no incluye adicionales. 
+                        Puedes hacer efectivo tu pago en las agencias autorizadas de:
+                    </p>
+                    <div class="means-of-payment-pago">
+                        <div class="left-pago">
+                            <img width="90" height="30" alt="BCP" 
+                                 src="<?=URL_STATIC?>img/creditCard/bcp-pe.jpg">
+                        </div>
+                        <div class="right-pago"><p>Agencias del BCP, Agentes BCP o por banca por internet BCP.</p></div>
+                    </div>
+                    <div class="means-of-payment-pago">
+                        <div class="left-pago">
+                            <img width="90" height="30" alt="BBVA" 
+                                 src="<?=URL_STATIC?>img/creditCard/bbva-pe.jpg">
+                        </div>
+                        <div class="right-pago">
+                            <p>Agencias del BBVA, AgentesExpress, Kasnet o por banca por internet del BBVA.</p>
+                        </div>
+                    </div>
+                    <div class="means-of-payment-pago">
+                        <div class="left-pago">
+                            <img width="90" height="30" alt="Scotiabank" 
+                                 src="<?=URL_STATIC?>img/creditCard/scotiabank-pe.jpg">
+                        </div>
+                        <div class="right-pago">
+                            <p>Agencias de Scotiabank, Cajeros Express o por Vía Scotia en línea.</p>
+                        </div>
+                    </div>
+                    <div class="means-of-payment-pago">
+                        <div class="left-pago">
+                            <img width="90" height="30" alt="Westerunion" 
+                                 src="<?=URL_STATIC?>img/creditCard/westernunion-pe.jpg">
+                        </div>
+                        <div class="right-pago">
+                            <p>Cualquier agencia de Pago de Servicio de Western Union a nivel nacional.</p>
+                        </div>
+                    </div>
+                    <div class="means-of-payment-pago">
+                        <div class="left-pago">
+                            <img width="90" height="30" alt="Full Carga" 
+                                 src="<?=URL_STATIC?>img/creditCard/fullcarga-pe.jpg">
+                        </div>
+                        <div class="right-pago">
+                            <p>
+                                Cualquier establecimiento autorizado (Bodegas, Farmacias, Cabinas, Locutorios, etc.) 
+                                con el logo de PagoEfectivo y/o Fullcarga.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>      

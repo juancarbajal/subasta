@@ -1,0 +1,118 @@
+<?php $count = count($this->data); ?>
+<form id="apFormSearch"action="<?=$this->baseUrl()?>/usuario/compra/preguntas-realizadas" method="get" style="width: 100%">
+</form>
+<div class="active-notices">
+    <div class="title-active-notices">
+            <h2>Preguntas Realizadas <span>(<?=empty($this->data[0]->TOTAL)?0:$this->data[0]->TOTAL?>)</span></h2>
+    </div>
+    <div class="options-search row">
+        <div class="show-dates c-inline">
+                <label>Mostrar</label>
+                <select name="" id="cboFiltroPregunta">
+                    <option value="0">Todas las preguntas</option>
+                    <option value="1" <?=$this->filter['K_PARAM']==1?'selected':''?> >Preguntas no contestadas</option>
+                    <option value="2" <?=$this->filter['K_PARAM']==2?'selected':''?>>Preguntas contestadas</option>
+                </select>
+        </div>
+        <div class="apPagination pagination-results">
+            <?= $this->paginationControl($this->paginador, 'Sliding', '_partials/_pag.phtml') ?>
+        </div>
+    </div>
+    <?php if($count>0) { ?>
+    <?php 
+        $ID_AVISO = '';
+        $i = 0;
+        foreach($this->data as $index):
+            $i++;
+    ?>
+        <?php 
+            if($index->ID_AVISO != $ID_AVISO){ 
+                $ID_AVISO = $index->ID_AVISO;
+                $titulo = $this->escape($index->TIT);
+                echo ($i != 1)?'</ul>':'';
+        ?>
+        <ul class="list-result-products">
+            <li class="product-row blue">
+                <div class="description-product-large">
+                    <div class="conteiner-img">
+                        <a href="<?=$this->baseUrl() . '/aviso/' . $index->ID_AVISO . '-' .$index->URL?>"
+                           title="<?=$titulo?>">
+                            <img class="lazy" src="<?=URL_STATIC?>img/notFound.jpg" 
+                                 data-original="<?=$this->ruta.$index->RUTA_IMAGEN?>" 
+                                 alt="<?=$titulo?>" width="90" height="68" />
+                        </a>
+                    </div>
+                    <h3>
+                        <a href="<?=$this->baseUrl() . '/aviso/' . $index->ID_AVISO . '-' .$index->URL?>"
+                           title="<?=$titulo?>">
+                            <?=$index->TITULO?>
+                        </a>
+                    </h3>
+                </div>
+                <div class="questions">
+                    <a class="show-question-link" href="javascript:;">
+                        Preguntas sin responder (<?=$index->CONTADOR?>) 
+                        <img class="arrow-uniq" src="<?=URL_STATIC?>img/arrow-unique.png" />
+                    </a>
+                </div>
+            </li>
+        <?php } ?>
+            
+        <?php 
+            if($index->result == 'P'){
+                $ID_AVISO = $index->ID_AVISO;
+        ?>
+            <li class="unanswered-questions">
+                <div class="detail-content">
+                    <div class="answer-question">
+                        <span class="column-date"><?=$index->FEC_CREA1?></span>
+                        <div class="column-icon">
+                            <span class="icon-question"></span>
+                        </div>
+                        <div class="column-text">
+                            <div>
+                                <?php echo $this->escape($index->COMENT); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        <?php } ?>
+            
+        <?php 
+            if($index->result == 'R'){
+                $ID_AVISO = $index->ID_AVISO;
+        ?>            
+            <li class="unanswered-questions">
+                <p>Vendedor: <strong><?=$index->COMPRADOR?></strong></p>
+                <div class="detail-content">
+                    <span class="column-date"><?=$index->FEC_CREA1?></span>
+                    <div class="column-icon">
+                        <span class="icon-question-ok"></span>
+                    </div>
+                    <div class="column-text">
+                        <div><?=$index->COMENT?></div>
+                    </div>
+                </div>
+            </li>
+            <li class="unanswered-questions">&nbsp;</li>
+        <?php 
+            } 
+            if($count == $i){
+        ?>
+        </ul>
+    <?php  
+            }
+        endforeach; 
+    ?>
+	<div class="options-search last row">
+        <div class="apPagination pagination-results">
+            <?= $this->paginationControl($this->paginador, 'Sliding', '_partials/_pag.phtml') ?>
+        </div>
+	</div>
+    <?php } else { ?>
+        <div class="title-active-notices">
+            <div>No se encontraron resultados</div>
+        </div>
+    <?php }?>
+</div>

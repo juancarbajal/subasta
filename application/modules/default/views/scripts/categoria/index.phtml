@@ -1,0 +1,79 @@
+<input type="hidden" value="<?php echo $this->categoria->ID_CATEGORIA;?>" name="show_more_category" id="show-more-category" />
+<div class="category-content container">
+      <?php 
+      echo $this->action('busqueda','index', 'default');?>
+        
+      <div id="breadcrumb">
+        <div class="content"><a href="<?php echo $this->baseUrl(); ?>/busqueda/categoria/" title="Inicio">Inicio</a>&nbsp;&rsaquo;&nbsp;
+        <a href="<?php echo $this->baseUrl(); ?>/busqueda/?categs=<?php echo $this->categoria->ID_CATEGORIA; ?>" title="<?php echo $this->categoria->TIT; ?>"><?php echo $this->categoria->TIT; ?></a>
+        </div>
+      </div>              
+      <h2 class="title-category">
+        <span style="background-image:url(<?=URL_STATIC?>img/categories/Cat-id<?php echo $this->categoria->ID_CATEGORIA;?>.gif);" title="Categoría: <?php echo $this->categoria->TIT; ?>"></span>
+        <p><?php echo $this->categoria->TIT; ?></p>
+      </h2>
+      
+      
+     <!-- category --> 
+    <div class="content-subcategory">
+      <?php
+        $ac = $this->arbolCategoria;
+        for ($i=0; $i<count($ac); $i++) {
+            $titulo = $ac[$i]->NOM_CATEGORIA;
+            $idCategoria = $ac[$i]->ID_CATEGORIA;
+            $NroAvisos = $ac[$i]->Avisos;
+            if ($ac[$i]->NIVEL > 1) { ?>        
+        <?php
+            if ($ac[$i]->NIVEL == 2) { ?>
+            
+                <ul class="item-subcategory mb20"> <!-- werik -->
+                <?php if ($ac[$i+1]->NIVEL > 2) { // Contiene L3 ?>
+                <li class="title-subcategory">
+                <h3><a href="<?php echo $this->baseUrl(); ?>/busqueda/?categs=<?php echo $idCategoria; ?>" title="<?php echo $titulo; ?>"><?php echo $titulo .' ('.$NroAvisos.')'; ?></a></h3>
+                </li>
+                <?php } else { ?>                
+                <li class="title-subcategory">
+                <h3><a href="<?php echo $this->baseUrl(); ?>/busqueda/?categs=<?php echo $idCategoria; ?>" title="<?php echo $titulo; ?>"><?php echo $titulo .' ('.$NroAvisos.')'; ?></a></h3>
+                </li></ul>
+                <?php } ?>
+            <?php } else { // Es L3 o L4 ?>
+            <?php
+            if ($ac[$i]->NIVEL == 3) { ?>                    
+                    <li><a href="<?php echo $this->baseUrl(); ?>/busqueda/?categs=<?php echo $idCategoria; ?>" title="<?php echo $titulo; ?>"><?php echo $titulo .' ('.$NroAvisos.')'; ?></a></li>
+            <?php } ?>
+                
+            <?php if ($ac[$i+1]->NIVEL == 2) { // Cerramos la etiqueta, para niveles L3 o L4 ?>
+                </ul>
+            <?php } ?>
+        <?php }            
+        } 
+      } ?>
+    </div> 
+<!-- category --> 
+<!-- Inicio de "Los Mas Destacados" -->
+<?php if (count($this->modulo5) > 0) {?>
+<div class="gallery-3d"><div class="carousel-container"><div id="carousel" style="width:534px">
+<?php foreach ($this->modulo5 as $lmd) :
+$titulo = $this->escape($lmd->TIT);
+$href = $this->baseUrl() . '/aviso/' . $lmd->ID_AVISO . '-' .$lmd->URL;
+$image = $this->rutaimagen300 . $lmd->RUTA_IMAGEN; ?>
+<div class="carousel-feature carousel-shadow-item"><a class="carousel-image-contenedor" href="<?php echo $href;?>"><img class="carousel-image" alt="<?php echo $titulo;?>" src="<?php echo $image;?>" onerror="this.src = '<?=URL_STATIC?>img/notFound.jpg'"></a><!--[if lt IE 7]><b></b><![endif]-->
+<div class="carousel-caption">
+<p><?php echo $titulo ?></p>
+</div>
+<span class="carousel-caption-price"><?php echo $lmd->SIMB; ?> <?php echo number_format($lmd->PRECIO,2,'.',',')?></span>
+</div>                
+<?php endforeach; ?>                    
+</div>
+<div id="carousel-left"><img src="<?=URL_STATIC?>img/btn-left.jpg<?php echo App_Config::getStaticVersion(); ?>" width="31" height="66" /></div>
+<div id="carousel-right"><img src="<?=URL_STATIC?>img/btn-right.jpg<?php echo App_Config::getStaticVersion(); ?>" width="31" height="66" /></div>
+</div>
+</div>
+<?php }?>
+<!-- Fin de "Los Mas Destacados" -->
+<div class="shadow-space"></div> 
+<div class="go-to-index-category">
+<span class="icon-left"></span>
+<a href="<?php echo $this->baseUrl(); ?>/busqueda/categoria/" title="Inicio">Ir a la página principal de categorías</a>
+</div>
+</div>

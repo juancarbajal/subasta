@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+<body>
+<p>&iexcl;Hola [nombre] 	&iexcl;<br />
+Estos son los detalles de tu aviso que ha sido activado posterior al pago del destaque que has realizado.</p>
+<p>[titulo]: <br />
+Estado:  	 [estado]<br />
+Unidades a la venta:  	 [cantidad]<br />
+Precio final :  	 <strong>[moneda] &nbsp; [monto]</strong><br />
+[detalle_destaque]
+<p>
+   <a href='[rutakp]'>ir a kotear pagos</a><br />
+</p>
+<p><strong>Recomedaciones para vender mejor:</strong></p>
+<ul>
+  <li>Revisa toda la informaci&oacute;n incluida en tu aviso; si encuentras alg&uacute;n error u omisi&oacute;n, es preferible que modifiques tu publicaci&oacute;n ahora antes de que se registre una compra.</li>
+  <li> Responde a todas las preguntas que te realicen los interesados en tu aviso; estar atento
+    a sus inquietudes te va a ayudar a cerrar r&aacute;pidamente una venta.</li>
+  <li>Sigue de cerca la venta desde la secci&oacute;n de &quot;Ventas Activas&quot; dentro de Mis Oportunidades</li>
+</ul>
+
+<p>&iexcl;Suerte con tu venta y sigue vendiendo en Kotear.pe &iexcl;<br />
+  Kotear.pe<br />
+  Comprar y vender en Per&uacute; <br />
+  <a href="http://www.kotear.pe">www.kotear.pe</a></p>
+</body>
+</html>

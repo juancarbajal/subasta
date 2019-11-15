@@ -1,0 +1,36 @@
+<?php $class_activo = 'active'; ?>
+<div class="accordion" id="accordion2">
+    <?php if(!empty($this->layout()->authMenu[1])) { ?>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" 
+                   href="#collapseOne">
+                    <i class="icon-wrench"></i> MANTENIMIENTO
+                </a>
+            </div>
+            <div id="collapseOne" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                    <ul class="nav nav-pills nav-stacked">
+                    <?php
+                        $options = $this->layout()->authMenu[1];
+                        foreach ($options as $opt){
+                    ?>
+                        <li class="<?=($this->layout()->active['controller'] == $opt['CONTROLADOR']
+                            ? $class_activo : ''); ?> liMianMenu left">
+                            <a href="<?= $this->url(
+                                array(
+                                    'action' => 'index',
+                                    'controller' => $opt['CONTROLADOR'],
+                                    'module' => $opt['MODULO']
+                                ),
+                                'default',
+                                true
+                            ); ?>" class="aMenuMain left"><?=$opt['TIT']; ?></a>
+                        </li>
+                    <?php } ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
+</div>

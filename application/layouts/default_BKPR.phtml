@@ -1,0 +1,221 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="google-site-verification" content="0ZWsiCvjZvsOUeRcUtV5PgTeUzDHpmXg0USJH1LBH-o" />
+    <?php
+    $controller = Zend_Controller_Front::getInstance()->getRequest()->getControllerName();
+    if($controller=='registro' ){ ?>
+    <META NAME="ROBOTS" CONTENT="NOINDEX" />
+    <meta Name="robots" content="noimageindex"/>
+   <?php  } ?>
+
+    <?php echo $this->headMeta(); ?>
+    <?php echo $this->headTitle(); ?>
+    <?php echo $this->headLink(); ?> 
+    <meta name="description" content="¿Quieres comprar  o quieres vender en el Perú?, Kotear te ofrece el mejor espacio de compra y venta de productos y servicios, Anuncia Gratis en Kotear.clasificados.pe" />
+    <meta name="keywords" content="Comprar en Peru, Vender en Peru , compra y venta de productos y servicios , clasificados peru. anuncio gratis, clasificados en el peru" />
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-28124903-1']);
+      _gaq.push(['_setDomainName', 'clasificados.pe']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_trackPageLoadTime']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+<body class="home">
+    
+    <?php  
+    echo $this->mediakit;
+    echo $this->dax; ?>
+    <?php   echo $this->clickTale;
+            echo $this->ClickTale_Top; ?>
+    <div id="wrapper">
+      <div class="top-gec">
+      <div class="wpage-gec">
+        <div class="left-gec"><a title="Grupo El Comercio" href="http://elcomercio.pe" target="_blank" class="logo-gec"></a></div>
+        <div class="middle-gec">
+            <ul class="persistent-menu">
+            <li> <a href="<?php echo $this->baseUrl(); ?>" title="Ir a Inicio">Inicio</a></li>
+            <li> <a href="<?php echo $this->wikiUrl?>/index.php/Sobre_kotear" title="Ir a ¿Qué es Kotear?">¿Qué es Kotear?</a> </li>
+            <li> <a href="<?php echo $this->wikiUrl?>/index.php/Ayuda" title="Ir a Ayuda">Ayuda</a> </li>
+            <li> <a href="http://centraldeayuda.kotear.pe/home" title="Ir a Soporte técnico" target="_blank">Soporte técnico</a> </li>
+            <!--<li> <a href="<?php //echo $this->wikiUrl?>/index.php/Soporte_Tecnico" title="Ir a Soporte técnico">Soporte técnico</a> </li>-->
+            
+            </ul>
+        </div>
+        <div itemscope="itemscope" itemtype="http://schema.org/Organization" class="right-gec">
+          <div class="head-gec"><span class="part-of-gec">Parte de </span><a href="http://clasificados.pe/?ref=kotear" title="Clasificados.pe" target="_blank" itemprop="name" class="link-gec">Clasificados.pe</a>
+          </div>
+          <div class="body-gec">
+            <ul id="slide-gec">
+              <li itemscope="itemscope" itemtype="http://schema.org/Organization" class="first-gec"><span itemprop="member" class="title-gec">Empleos</span><a href="http://aptitus.clasificados.pe/?ref=kotear" title="Aptitus.pe" target="_blank" itemprop="url" class="main-link-gec">Aptitus.pe</a>
+              </li>
+              <li itemscope="itemscope" itemtype="http://schema.org/Organization"><span itemprop="member" class="title-gec">Inmuebles y propiedades</span><a href="http://urbania.clasificados.pe/?ref=kotear" title="Urbania.pe" target="_blank" itemprop="url" class="main-link-gec">Urbania.pe</a>
+              </li>
+              <li itemscope="itemscope" itemtype="http://schema.org/Organization"><span itemprop="member" class="title-gec">Autos y motos</span><a href="http://neoauto.clasificados.pe/?ref=kotear" title="Neoauto.pe" target="_blank" itemprop="url" class="main-link-gec">Neoauto.pe</a>
+              </li>
+              <li itemscope="itemscope" itemtype="http://schema.org/Organization"><span itemprop="member" class="title-gec">Micro y peque&ntilde;as empresas</span><a href="http://nuestromercado.clasificados.pe/?ref=kotear" title="NuestroMercado.pe" target="_blank" itemprop="url" class="main-link-gec">NuestroMercado.pe</a>
+              </li>
+              <li itemscope="itemscope" itemtype="http://schema.org/Organization" class="last-gec"><span itemprop="member" class="title-gec">Restaurantes y caf&eacute;s</span><a href="http://guiagps.clasificados.pe/restaurantes?ref=kotear" title="GPSRestaurantes.pe" target="_blank" itemprop="url" class="main-link-gec">GPSRestaurantes.pe</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- Publicidad  960 x90 -->        
+        <div class="inner col-master">
+            <div id="h_banner_2 ico_pubcab" style="margin-left:0px;margin-top:5px; margin-bottom:-10px" >
+                <?php echo '<script type="text/javascript">eplAD4("Top"); </script>';
+                 ?>                
+            </div>
+        </div>
+        </div>
+      <hr class="hide" />
+      <div id="header">
+        <div id="innerheader" class="inner col-master">
+          <h1 id="logo"><a class="indent" href="<?php echo $this->baseUrl(); ?>/" title="Regresar al inicio - Kotear.pe">Kotear.pe</a></h1>
+          <p class="hide">Comprar y vender en el Perú</p>
+          <ul id="global-menu">
+            <li class="opt1 sub1"><a class="tab" href="#" title="Buscar"><span><span><span>Buscar</span></span></span></a>
+              <ul class="opt1-1 ie6zfix">
+                <li class="opt1-1-1"><a href="<?php echo $this->baseUrl(); ?>/busqueda/avanzada" title="Busqueda avanzada">Busqueda avanzada</a></li>
+                <li class="opt1-1-2"><a href="<?php echo $this->baseUrl(); ?>/busqueda/categoria" title="Busqueda por categorias">Búsqueda por categoría</a></li>
+              </ul>
+            </li>
+            <li class="opt2 sub1"><a class="tab" href="#" title="Vender"><span><span><span>Vender</span></span></span></a>
+              <ul class="opt1-1 ie6zfix">
+                <li class="opt1-1-1">
+                    <a href="<?php echo $this->baseUrl(); ?>/usuario/publicacion/registro-destaque" title="Publicar Aviso">
+                        Publicar Avisos
+                    </a>
+                </li>
+                <li class="opt1-1-2">
+                    <a href="<?php echo $this->baseUrl(); ?>/usuario/venta/activas/opc/categoria/codigo/0" title="Mis Avisos">
+                        Mis Avisos
+                    </a></li>
+              </ul>
+            </li>
+            <li class="opt3 sub1"><a class="tab"
+                href="<?php if(!$this->identity) { echo $this->baseUrl() .'/usuario/acceso'; ?>
+                                            <? } else { echo $this->baseUrl() .'/usuario/cuenta'; } ?>">
+                                    <span><span><span>Koteando <em>(Mi cuenta)</em></span></span></span></a>
+              <?php if(isset($this->identity)){ ?>
+                <?php echo $this->action('menu-usuario', 'menu', 'default'); ?>
+              <?php }
+              	 else { ?>
+              <ul class="opt1-1 ie6zfix">
+                <li class="opt1-1-1"><a href="<?php //echo $this->baseUrl(); ?>/usuario/acceso">Accede a tu cuenta</a></li>
+              </ul>
+              <?php } ?>
+            </li>
+            <?php if(!isset($this->identity)){; ?>
+            <li id="regs-btn"  class="opt5"><a rel="nofollow" href="<?php echo $this->baseUrl(); ?>/usuario/registro" title="¡Regístrate Gratis!">¡Regístrate Gratis!</a></li>
+            <li id="user-btns" class="opt6"><a class="user_state_session_off" href="<?php echo $this->baseUrl(); ?>/usuario/acceso" title="Iniciar Sesión">Iniciar Sesión</a></li>
+            <?php } else { ; ?>
+            <li id="user-btns" class="opt6">
+            	<a href="<?php echo $this->baseUrl(); ?>/usuario/cuenta" title="Ir a la cuenta de <?php echo $this->identity->APODO ; ?>"><?php echo $this->identity->APODO ; ?></a> |
+            	<a class="user_state_session_on" href="<?php echo $this->baseUrl(); ?>/usuario/acceso/logout" title="Terminar sesión">Cerrar Sesión</a>
+            </li>
+            <?php } ?>
+          </ul>
+        </div>
+      </div>
+  <hr class="hide" />
+
+  <!--INICIO-->
+	  <?php echo $this->layout()->content; ?>
+  <!--FIN-->
+  <!-- Lista de tarjetas -->
+  <div id="conteiner-footer-pay">
+    <div id="conteiner-footer-pay-border">
+      <p>
+          <span>Pagos 100% seguros con:</span>
+          <a href="javascript:;" class="logo-pago-efectivo" title="PagoEfectivo"></a>
+          <a href="http://www.visanet.com.pe/" target="_blank" class="logo-visa" title="Visa"></a>
+          <a href="javascript:;" class="logo-verified-visa" title="Verified by Visa"></a>
+          <a href="javascript:;" class="logo-mastercard" title="Mastercard"></a>
+          <a href="javascript:;" class="logo-mastercard-securecode" title="Mastercard Securecode"></a>
+      </p>
+      <a href="http://www.VisaNet.com.pe/promovbv/bancos.html" target="_blank" class="left afiliate-visa" title="Verified by Visa"></a>
+      <div class="clear"></div>
+      <p class="sub">
+          Autorizados por Visa para realizar transacciones electrónicas
+      </p>
+    </div>
+  </div>
+  <!-- // lista de tarjetas -->
+  <hr class="hide" />
+  <div id="footer-persistent" class="clearfix">
+    <div class="inner col-master">
+		<span class="logofooter">Comprar y Vender en el Perú</span>
+      <div class="site-links">
+	  <ul class="sites-menu">
+		<li><a href="<?php echo $this->baseUrl(); ?>" title="Home">Home</a></li>
+		<li><a href="<?php echo $this->baseUrl(); ?>/busqueda/avanzada" title="Buscar">Buscar</a></li>
+		<li><a href="<?php echo $this->baseUrl(); ?>/usuario/publicacion/registro-categoria" title="Vender">Vender</a></li>
+		<li><a href="<?php echo $this->baseUrl(); ?>/usuario/cuenta" title="Koteando (Mi Cuenta)">Koteando (Mi Cuenta)</a></li>
+		<li><a href="<?php echo $this->baseUrl(); ?>/usuario/registro" title="Regístrate gratis">Regístrate gratis</a></li>
+		<li class="last"><a href="<?php echo $this->wikiUrl?>" title="Ayuda">Ayuda</a></li>
+	  </ul>
+	  </div>
+      <span class="cont_sociales float_right"><span>Síguenos en: </span>
+		<a href="http://www.facebook.com/koteando" target="_blank" title="Kotear en Facebook" class="ico-facebook">Facebook</a>
+		<!--<a href="#" title="Kotear en Twitter" class="ico-twitter">Twitter</a>-->
+	  </span>
+		<ul class="persistent-menu list_reset">
+			<li>&copy; <?php echo date ("Y" );?>  <a title="Kotear" href="http://kotear.pe/">kotear.pe</a></li>
+			<li><a href="<?php echo $this->wikiUrl?>/index.php/Kotear:Acerca_de" title="Acerca de Kotear">Acerca de Kotear</a> </li>
+			<li><a href="<?php echo $this->wikiUrl?>" title="Términos de servicio">Términos de servicio</a> </li>
+			<li><a href="<?php echo $this->wikiUrl?>/index.php/Kotear:Política_de_protección_de_datos" class="last" title="Política de privacidad">Política de privacidad</a> </li>
+			<li class="last"><a href="<?php echo $this->wikiUrl?>" class="last" title="Mapa del Sitio">Mapa del Sitio</a> </li>
+		</ul>
+		<div class="clear"></div>
+               
+                   <div class="footer-link">
+        <span>Visite también:</span>
+        <ul>
+            <li><a title="Diario El Comercio" href="http://elcomercio.pe/" target="_blank">elcomercio.pe</a></li>
+                <li><a title="Peru.com" href="http://peru.com/" target="_blank">peru.com</a></li>
+				<li><a title="Diario Perú21" href="http://peru21.pe/" target="_blank">peru21.pe</a></li>
+				<li><a title="Diario Gestión" href="http://gestion.pe/" target="_blank">gestion.pe</a></li>
+				<li><a title="Diario Depor" href="http://depor.pe/" target="_blank">depor.pe</a></li>
+                <li><a title="Diario Trome" href="http://trome.pe/" target="_blank">trome.pe</a></li>
+                <li><a title="Diario Publimetro" href="http://publimetro.pe/" target="_blank">publimetro.pe</a></li>
+                <li><a title="Grupo el Comercio" href="http://gec.pe/" target="_blank">gec.pe</a></li>
+				<li><a title="Clasificados El Comercio" href="http://clasificados.elcomercio.com.pe/" target="_blank">clasificados.pe</a></li>
+				<li><a title="Aptitus" href="http://aptitus.pe/" target="_blank">aptitus.pe</a></li>
+                <li><a title="Urbania.pe" href="http://urbania.pe/" target="_blank">urbania.pe</a></li>
+				<li><a title="Neoauto.pe" href="http://neoauto.pe/" target="_blank">neoauto.pe</a></li>
+                <li><a title="Guiagps.pe" href="http://guiagps.pe/" target="_blank">guiagps.pe</a></li>
+                <li><a title="Ofertop.pe" href="http://ofertop.pe/" target="_blank">ofertop.pe</a></li>
+                <li><a title="Nuestromercado.pe" href="http://nuestromercado.pe/" target="_blank">nuestromercado.pe</a></li>
+                <li><a title="Pagoefectivo.pe" href="http://pagoefectivo.pe/" target="_blank">pagoefectivo.pe</a></li>
+                <li><a title="Clubsuscriptores.pe" href="http://clubsuscriptores.pe/" target="_blank">clubsuscriptores.pe</a></li>
+                <li class="last"><a title="Perured.pe" href="http://perured.pe/" target="_blank">perured.pe</a></li>
+        </ul>         
+    </div>
+                
+
+	   </div>
+    </div>
+  <!--</div>-->
+<div style="visibility: hidden; display: none;">
+    <?php echo $this->headScript();?>
+    </div>
+      <script type="text/javascript" src="<?=URL_STATIC?>js/jqClasificados.js"></script>
+  <!-- Para el DAX de kotear -->
+  <script language="JavaScript1.3" src="http://b.scorecardresearch.com/c2/6906602/ct.js"></script>
+  <!-- ----------------------- -->
+  <?php 
+  echo $this->scCXSearch;
+  echo $this->ClickTale_Bottom;?>
+</body>
+</html>

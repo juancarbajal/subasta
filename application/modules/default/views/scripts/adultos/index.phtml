@@ -1,0 +1,32 @@
+<div class="container">
+      <?php echo $this->action('busqueda', 'index', 'default'); ?>
+      <h3 class="k-title mb20"><span></span>Categoría Adultos</h3>
+        <h2>Términos y Condiciones de la categoría Adultos</h2>
+        <p>Estás por acceder a contenidos de la categoría Adultos de Kotear.pe y, de acuerdo a los bienes y servicios ofrecidos en la misma, se establece que sólo podrán ingresar, publicar avisos, realizar transacciones personas mayores de 18 años de edad y que tengan capacidad legal de contratar. <br />
+          En la categoría Adultos de Kotear.pe vas a encontrarte con avisos con contenido sexual, obsceno, desnudos, fotos y descripciones eróticas entre otros. SI POR CUALQUIER MOTIVO CONSIDERAS QUE ESTOS PRODUCTOS PUEDEN AFECTAR TU SUSCEPTIBILIDAD Y/O NO CUMPLES CON EL REQUISITO DE LA EDAD, TE SOLICITAMOS ABSTENERTE DE NAVEGAR Y/O REALIZAR TRANSACCIONES EN LA CATEGORÍA</p>
+        <p><strong>En virtud de lo antes expresado, declaras que: </strong></p>
+
+        <ol>
+          <li>Tienes más de 18 años de edad y la capacidad legal para adquirir y poseer material erótico o pornográfico. Declaras que no vas a permitir acceder a ninguna persona menor de 18 años a la categoría Adultos ni a los productos que en ella estén publicados. </li>
+          <li>Ingresas a la categoría Adultos por tu propia decisión voluntaria y personal, porque quieres acceder, ver, ofertar, comprar o vender los productos que en ella se comercializan. Asimismo, declaras que conoces y aceptas que puedes encontrar material obsceno, adulto y no apto para menores de edad.</li>
+          <li>Conoces y aceptas que está terminantemente prohibida la venta, publicación u oferta de artículos, bienes o servicios:
+              <ul>
+                <li>Relacionados con pedofilia, pornografía infantil, desnudos de menores o que de cualquier modo involucre personas menores de 18 años.</li>
+                <li>Que impliquen sexo forzado, violaciones, películas   &quot;snuff&quot;.</li>
+                <li>Películas o fotografías que hayan sido tomadas de   forma ilegal, de personas menores de 18 años o sin el consentimiento de las   personas que en ellas aparecen.</li>
+                <li style="list-style: none">Eres exclusivamente responsable por la legalidad de los productos, bienes o servicios que ofreces / adquieres, y liberas a <strong>Kotear.pe</strong> de toda responsabilidad relacionada con estas cuestiones.</li>
+              </ul>
+          </li>
+          <li>No consideras ofensivas o lesivas de algún derecho que te corresponde las imágenes pornográficas, eróticas, de desnudos, o de connotación sexual que pudieras encontrar en la categoría Adultos.</li>
+          <li>Si en algún momento te sintieras ofendido por los productos u ofertas que están publicados, te comprometes a salir inmediatamente de la categoría Adultos.</li>
+        </ol>
+        <form name="aceptarAdultos" id="aceptarAdultos" action="<?php echo $this->baseUrl()?>/adultos" method="post">
+          <p class="mb20"><input name="aceptarContenidoAdulto" type="checkbox" value="1"/> Declaras ser mayor de 18 años y haber comprendido y aceptado los Términos y Condiciones arriba enunciados.</p>
+          <div class="control">
+            <button type="submit" class="btn-kotear btn-large"><span>Aceptar</span></button>
+            <a class="btn-close btn-large" href="<?php echo $this->baseUrl() . $this->fromPage; ?>">No aceptar</a>                
+            <input type="hidden" name="toPage" value="<?php echo $this->toPage;?>">
+           </div>
+        </form>
+      </p>
+</div>

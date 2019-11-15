@@ -1,0 +1,24 @@
+<form id="form-log-in" class="log-in" name="login" method="post" action="<?php echo $this->baseUrl(); ?>/usuario/acceso">
+     <h3 class="k-title"><span></span>Ingresa</h3>
+    <div class="form-horizontal">
+      <p>Coloca tu e-mail y tu clave</p>
+      <div class="control-group" >
+        <label for="txtEmail" class="control-label">Email o Apodo</label>
+        <div class="controls">
+          <input id="user" type="text" name="user" tabindex="1" />
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="txtPassword" class="control-label">Clave</label>
+        <div class="controls">
+          <input id="password" type="password" name="password" tabindex="2" />
+        </div>
+      </div>
+      <p class="ta-right mb20"><a href="javascript:;" id="forget-password-link" tabindex="4" >¿Olvidaste tu clave?</a></p>
+      <div class="control-group">
+        <div class="controls">
+          <button type="submit" class="btn-kotear fix" tabindex="3">Continuar</button><span>¿No tienes una cuenta?</span><a id="log-in-inner" href="javascript:;" title="title" tabindex="5">Regístrate aquí.</a>
+        </div>
+      </div>
+    </div>
+</form>

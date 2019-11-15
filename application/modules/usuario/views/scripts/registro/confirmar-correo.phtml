@@ -1,0 +1,122 @@
+<input type="hidden" id="change-ruta" />
+<div id="register-confirm-email" class="container">
+		<div class="colum-left">
+                        <h2 class="k-title"><span></span>Registro / Confirmación de tu Email</h2>
+			<p>
+				Registrate en Kotear.pe y podrás acceder a muchas funcionalidades para comprar y vender lo que desees.
+			</p>
+			<div class="content-confirm-email">
+				<p>
+					Confirma tu e-mail
+				</p>
+				<div class="text-confirm-email">
+					<b><?=$this->usuario?>:</b> 
+                    Se te ha enviado un e-mail para la validación de tu registro. 
+                    Si no lo haz recibido todavia puedes hacer clic en el botón a continuación para recibir el e-mail 
+                    para la validación de tu registro.
+					<p>
+						Confirma tu registro desde tu cuenta <a href="javascript:;" class="inline"><?=$this->correo?></a>
+					</p>
+					<a id="resend-email-link" class="btn-standar" href="javascript:;">Reenviar e-mail para validación de registro</a>
+				</div>
+				<!-- / text-confirm-email -->
+				<div class="detail-confirm-email">
+					<ol>
+						<li>
+                            Al registrarte en Kotear.pe, el sistema te envía un e-mail a la cuenta de correo electrónico 
+                            que indicaste para confirmar que la misma esté en funcionamiento.
+                        </li>
+						<li>
+                            Sólo al hacer clic en ese link, que te enviamos por e-mail, vas a poder estar habilitado 
+                            para comprar y vender de todo en nuestro sitio.
+                        </li>
+						<li>
+                            Una vez que recibas este e-mail de confirmación, haz clic en el link para validarte como 
+                            usuario registrado del sitio.
+                        </li>
+					</ol>
+					<b>¡Revisa tu cuenta <?=$this->correo?> y valida tu registro ahora!</b>
+				</div>
+				<p class="f-tip">
+					<span class="icon-footer-tip"></span>
+                    <b>Nota:</b>
+                    De acuerdo a la configuración de algunas cuentas de correo, puede que el e-mail para confirmar 
+                    tu registro en Kotear.pe te haya llegado a la carpeta de "Correo no deseado". 
+                    Para que esto no suceda, agrega el dominio @kotear.pe a la lista de correo seguro de tu cuenta de 
+                    e-mail.
+				</p>
+			</div>
+		</div>
+		<!-- colum-left -->
+		<div class="colum-right steps-to-pay">
+			<ul class="step-progress fix">
+				<li><span>Completa tus datos</span><span class="icon-on-step"></span></li>
+				<li><span>Activa tu cuenta</span><span class="icon-off-step"></span></li>
+			</ul>
+		</div>
+		<!-- colum-right -->
+</div>
+<!-- / register-confirm-email -->
+    
+<div class="hide">
+    <div class="message-modal" id="change-email">
+        <div class="hidden-dom" id="change-email-msg"></div>
+            <form name="change-email" method="post" 
+                  action=<?=$this->baseUrl()?>"/usuario/registro/cambio-correo" 
+                  id="change-email-form" novalidate="novalidate">
+                <div class="title-gen">
+                    <h3 class="title-step">
+                        <span class="icon-right"></span>
+                        <p>Cambio de e-mail </p>
+                    </h3>
+                </div>
+                <div id="change-email-msg-error"></div>
+                <div class="content">
+                    <h3>Modificación de tu e-mail de contacto </h3>
+                    <p>
+                        <strong>
+                            Antes de modificar el e-mail que tienes registrado en Kotear.pe, ten en cuenta lo siguiente: 
+                        </strong>
+                    </p>
+                    <ul>
+                        <li>
+                            La dirección <strong>tucorreo@hotmail.com</strong> es el medio que utiliza 
+                            <strong>Kotear.pe</strong> y todas tus contrapartes en una compra-venta
+                            para mantenerse con contacto contigo. 
+                        </li>
+                        <li>
+                            Por motivos de seguridad, al modificar tu e-mail el sistema debe enviarte un e-mail a tu 
+                            nueva dirección de correo electrónico para validarla. Sólo al hacer clic en el link que se 
+                            te envíe en ese e-mail vas a haber cambiado tu dirección de correo en 
+                            <strong>Kotear.pe</strong> ; en tanto no hagas clic en el link, se continuará utilizando la 
+                            presente dirección de correo electrónico. 
+                        </li>
+                        <li>
+                            Una vez modificada tu dirección de correo, toda comunicación de <strong>Kotear.pe</strong> 
+                            o de tus contrapartes en una compra-venta pasarán a enviarse a tu nueva dirección de correo 
+                            electrónico. 
+                        </li>
+                    </ul>
+                    <p>Ahora sí, por favor ingresa tu nuevo e-mail: </p>
+                    <fieldset>
+                        <label class="odd first">
+                            <strong>Nuevo e-mail:</strong>
+                            <input type="text" name="newmail" id="newmail">
+                            <small class="description">
+                                Este e-mail servirá para confirmar tu registro y será utilizado como vía de contacto. 
+                            </small>
+                        </label>
+                        <label class="even last"> 
+                            <strong>Repetir nuevo e-mail:</strong> 
+                            <input type="text" name="newmail2" id="newmail2"> 
+                        </label>
+                    </fieldset>
+                </div>
+                  <p class="btn-options">
+                        <button type="submit" class="btn-standar" name="continuar"><span>Continuar</span></button>
+                        <a init-value="&lt;span&gt;Cancelar&lt;/span&gt;" value="&lt;span&gt;Cancelar&lt;/span&gt;" 
+                           class="btn-finish" name="cancel" href="javascript:;"><span>Cancelar</span></a>
+                  </p>
+                </form>
+        </div>
+</div>

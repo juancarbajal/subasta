@@ -1,0 +1,55 @@
+
+<div class="column-three">
+        <h4><span></span>Quiénes somos</h4>
+        <ul>
+            <li>
+                <a href="http://centraldeayuda.kotear.pe/entries/21701048-que-es-kotear-pe" 
+                    title="Sobre Kotear" target="_blank">Sobre Kotear</a>
+            </li>
+            <li>
+                <a href="http://centraldeayuda.kotear.pe/forums/21068941-terminos-condiciones" 
+                    title="¿Qué promocionamos?" target="_blank">¿Qué promocionamos?</a>
+            </li>
+        </ul>
+    </div>
+    <div class="column-three">
+        <h4><span></span>Ofertas imperdibles</h4>
+        <ul>
+            <?php foreach ($this->apFooter as $value) {?>
+            <li>
+                <a href="<?=$this->baseUrl().'/aviso/'.$value->ID_AVISO.'-'.$value->URL?>"
+                   title="<?=$value->TITULO_IMPRESO?>">
+                    <?=$value->TITULO_IMPRESO?></a>
+            </li>
+            <?php }?>
+        </ul>
+    </div>
+    <div class="column-three">
+        <h4><span></span>Ayuda rápida</h4>
+        <ul>
+            <li>
+                <a href="http://centraldeayuda.kotear.pe/entries/21635718-como-es-el-proceso-de-registro" 
+                    title="Proceso de registro" target="_blank">Proceso de registro</a>
+            </li>
+            <li>
+                <a href="http://centraldeayuda.kotear.pe/forums/21084167-guia-del-comprador" 
+                    title="Guía del comprador" target="_blank">Guía del comprador</a>
+            </li>
+            <li>
+                <a href="http://centraldeayuda.kotear.pe/forums/21072432-guia-del-vendedor" 
+                    title="Guía del vendedor" target="_blank">Guía del vendedor</a>
+            </li>
+        </ul>
+    </div>
+    <div class="help-fast">
+        <h4><span></span>Ayuda rápida</h4>
+        <div class="question-tooltip"></div>
+        <div class="question-description">
+            <p>¿Tienes alguna duda o consulta?, estamos para ayudarte.</p>
+        </div>
+        <div class="btn-help">
+            <form name="searchfrm" method="get" target="_blank" action="http://centraldeayuda.kotear.pe/home">
+                <button type="submit">Click aquí</button>
+            </form>
+        </div>
+    </div>

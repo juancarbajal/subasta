@@ -1,0 +1,128 @@
+<?php echo $this->action('buscador', 'busqueda', 'default');?>
+<div id="body-content" class="estadocuenta-pag col-master">
+    <div id="s_level1" class="clearfix">
+        <h3>Koteando (Mi Cuenta)</h3>
+    </div>
+
+    <?php $active2='active';
+    require_once 'navegacion.phtml';
+    ?>
+    <div class="pagetitle">
+        <h4>Pendiente de Pago</h4>
+    </div>
+    <div id="s_level2" class="clearfix">
+        <div id="left-bar" class="col5">
+            <ul class="box">
+                <?php if(($this->filtro1!=4) && ($this->filtro1!=3)){?>
+                	<li class="active">Cualquier Tipo</li>
+                <?php } else {?>
+                	<li><a href="<?php echo $this->baseURL(); ?>/pagos/index/pendiente-de-pago">Cualquier Tipo</a></li>
+                <?php }?>
+                <?php if($this->filtro1==4){?>
+                	<li class="active">S&oacute;lo destaques</li>
+                <?php } else {?>
+                	<li><a href="<?php echo $this->baseURL(); ?>/pagos/index/pendiente-de-pago/filtro1/4">S&oacute;lo destaques</a></li>
+                <?php }?>
+                <?php if($this->filtro1==3){?>
+                	<li class="active">S&oacute;lo comisiones</li>
+                <?php } else {?>                
+                	<li><a href="<?php echo $this->baseURL(); ?>/pagos/index/pendiente-de-pago/filtro1/3">S&oacute;lo comisiones</a></li>
+                <?php }?>
+                
+                <?php if(($this->filtro1!=1) && ($this->filtro1!=2)){?>
+                	<li class="active">Cualquier Fecha</li>
+                <?php } else {?>
+                	<li><a href="<?php echo $this->baseURL(); ?>/pagos/index/pendiente-de-pago">Cualquier Fecha</a></li>
+                <?php }?>
+                <?php if($this->filtro1==1){?>
+                	<li class="active">Ultima semana</li>
+                <?php } else {?>
+                	<li><a href="<?php echo $this->baseURL(); ?>/pagos/index/pendiente-de-pago/filtro1/1">Ultima semana</a></li>
+                <?php }?>
+                <?php if($this->filtro1==2){?>
+                	<li class="active">Ultimo mes</li>
+                <?php } else {?>
+                	<li><a href="<?php echo $this->baseURL(); ?>/pagos/index/pendiente-de-pago/filtro1/2">Ultimo mes</a></li>
+                <?php }?>
+            </ul>
+        </div>
+        <div id="right-bar" class="col17 last">
+            <div class="total-detail float_right inblock">
+                <p>Saldo total a pagar al <?php echo date('d/m/Y') ;?> &nbsp; <strong class="mount"> S/. <?php echo number_format($this->total,2,'.',''); ?></strong> <?php if ($this->total>0){ ?><a rel="#medio-pago" class="btn_submit cmd_remote_medio_pago"  title="Pagar">Pagar</a><?php } ?></p>
+            </div>
+            <table border="0" cellspacing="0" cellpadding="0" class="mf float_right" width="100%">
+                <thead>
+                    <tr>
+                        <th width="5%">&nbsp;</th>
+                        <th width="15%">Fecha</th>
+                        <th width="55%">Concepto</th>
+                        <th width="15%" class="right">Monto</th>
+                        <th width="15%" class="right">Saldo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php $primero = false ?>
+                    <?php foreach ($this->transacciones as $t) : ?>
+                    <tr><?php if ($t->TipoTransaccion == 0) { //Son Comisiones sueltas, sin una transaccion asociada ?>
+                        <td><input type="radio" name="t" id="t" value="0" <?php if ($primero == false) { $primero = true; ?> checked="checked" <?php } ?> /></td>
+                        <td><?php echo date('d/m/Y'); ?></td>
+                        <td><a href="<?php echo $this->baseUrl(); ?>/pagos/index/detalle-transaccion/cod/0" rel="#paydetail" class="cmd_remote" title="Concepto: <?php echo $t->Descripcion; ?>">Comisiones Generadas al Fecha: <?php echo date('d/m/Y'); ?></a></td>
+                        <td class="number">S/. <?php echo number_format($t->Monto,2,'.',''); ?>  </td>
+                        <td class="number">S/. <?php echo number_format($this->saldos[$t->ID],2,'.',''); ?>  </td>
+                                <?php } else { //Son Cargos por comisiones o destaque ?>
+                        <td>
+                            <?php if ($t->EstadoTransaccionPendiente == 0) {?>
+                            <input type="radio" name="t" id="t" value="<?php echo $t->ID;?>" <?php if ($primero == false) { $primero = true; ?> checked="checked" <?php } ?> />
+                            <?php } ?>
+                        </td>
+                        <td><?php echo $t->Fecha; ?></td>
+                        <?php if ($t->TipoTransaccion == 1) { //Destaques?>
+                        <td><a href="<?php echo $this->baseUrl(); ?>/pagos/index/detalle-transaccion/cod/<?php echo  $t->ID?>" rel="#paydetail" class="cmd_remote" title="Concepto: <?php echo $t->Descripcion; ?>">Destaque Pendiente - Aviso: <?php echo $t->Aviso; ?></a> (<a href="<?php echo $this->baseUrl()?>/aviso/<?php echo $t->IdAviso?>-<?php echo $this->utils->convertSEO($t->Aviso)?>" target ="_blank">Ver Aviso</a>) <?php if ($t->EstadoTransaccionPendiente == 1) {?> <font color="green">Pendiente de confirmaci&oacute;n</font><?php } ?></td>
+                        <?php } elseif($t->TipoTransaccion == 2) { //Comisiones?>
+                        <td><a href="<?php echo $this->baseUrl(); ?>/pagos/index/detalle-transaccion/cod/<?php echo  $t->ID?>" rel="#paydetail" class="cmd_remote" title="Concepto: <?php echo $t->Descripcion; ?>">Comision Pendiente</a> <?php if ($t->EstadoTransaccionPendiente == 1) {?> <font color="green">Pendiente de confirmaci&oacute;n</font><?php } ?></td>
+                        <?php } //end if ?>
+
+                        <td class="number">S/. <?php echo number_format($t->Monto,2,'.',''); ?>  </td>
+                        <td class="number">S/. <?php echo number_format($this->saldos[$t->ID],2,'.','') ?>  </td>
+                                <?php } ?>
+                    </tr>
+                    <?php endforeach ?>
+                    <tr class="rowtotal"><th class="desc" >&nbsp;</th><th class="desc" colspan="3" align="right">TOTAL&raquo;</th><td class="number"><strong>S/. <?php echo number_format($this->total,2,'.','');?></strong></td></tr>
+                </tbody>
+
+            </table>
+<?php if ($this->total>0){ ?>
+            <div class="total-detail float_right inblock">
+                <p><a rel="#medio-pago" class="btn_submit cmd_remote_medio_pago"  title="Pagar">Pagar</a></p>
+            </div>
+<?php } ?>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+</div>
+<hr class="hide" />
+<div id="paydetail" class="modal">
+    <h3>Detalle de cargos</h3>
+    <div class="content">
+
+    </div>
+    <p class="buttons">
+        <button name="cancel" type="button" value="Cancelar" class="btn_submit close"><span>Cerrar</span></button>
+
+
+    </p>
+</div>
+<div id="medio-pago" class="modal">
+    <h2>Pagar</h2>
+    <h3>Seleccionar el medio de pago</h3>
+    <div class="content">
+
+    </div>
+
+     <p class="buttons">
+        <button type="submit" name="continuar" class="btn_submit"><span>Pagar</span></button>
+        <!--<button type="button" name="cancel" class="close btn_cancel"><span>Cancelar</span></button>-->
+    </p>
+</div>

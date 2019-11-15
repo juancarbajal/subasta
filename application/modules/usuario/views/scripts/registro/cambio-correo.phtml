@@ -1,0 +1,45 @@
+<!--Cambio de Correo Mail-->
+<?php if (isset($this->ok)) {?>
+    <script type="text/javascript">
+    window.opener.location.href = window.opener.location.href;
+
+    window.close();</script>
+<?php } else {?>
+        <?php if (isset($this->errors)){?>
+        <div>
+          <?php  foreach ($this->errors as $index =>$error):?>
+          <?php if ($error != null){ ?>
+          <br/><b/><?php echo $index?></b><br/>
+          <?php echo implode('<br/>', $error);?>
+          <?php }?>
+          <?php endforeach ?>
+        </div>
+        <?php }?>
+
+<form id="frmCambioCorreo" name="frmCambioCorreo" action="<?php echo $this->baseUrl()?>/usuario/registro/cambio-correo" method="post">
+  <table class="f">
+    <tr><td>
+        <div class='title'>Confirma tu e-mail</div>
+    </td></tr>
+    <tr><td>
+        <p align="justify">Para completar tu registro es necesario que incluyas una dirección de e-mail válida que puedas revisar y confirmar en unos instantes:</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+<center>
+        E-mail: <input type="text" id="email" name="email" value="<?php echo $this->frm['email']?>" />
+        Repetir e-mail: <input type="text" id="emailRep" name="emailRep" value="<?php echo $this->frm['emailRep']?>"/>
+</center>
+      </td>
+    </tr>
+    <tr><td><center><input type="submit"/></center></td></tr>
+    <tr>
+      <td>
+        Este e-mail servirá para confirmar tu registro y será utilizado como vía de contacto.
+      </td>
+    </tr>
+  </table>
+</form>
+    <?php };?>
+<!--Cambio de Correo Mail-->

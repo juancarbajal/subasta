@@ -1,0 +1,65 @@
+<div id="body-content" class="cambioclave-pag regform-pag col-master">
+  <div id="s_level1" class="clearfix">
+    <div class="col17">
+      <h3>Recuperación de clave / Confirmación de solicitud de cambio de clave </h3>
+    </div>
+    <div class="last col5"></div>
+  </div>
+
+  <?php if (isset($this->msg)){ ?>
+    <div class="notice">
+    <?php echo $this->msg?>
+    </div>
+  <?php } ?>
+
+  <?php if (isset($this->errors)) { ?>
+        <div class="error">
+        <?php if (is_array($this->errors)){?>
+          <?php  foreach ($this->errors as $index =>$error):?>
+          <dl>
+          <?php if ($error != null){ ?>
+          <dt><?php echo $index; ?></dt>
+          <dd><?php echo implode('<br/>', $error);?></dd>
+          </dl>
+          <?php } ?>
+          <?php endforeach; ?>
+        <?php } else {?>
+        <?php echo $this->errors?>
+        <?php }?>
+        </div>
+  <?php } ?>
+
+  <div class="pagetitle">
+    <h4>Ingresa tu nueva clave</h4>
+  </div>
+  <div id="s_level2" class="clearfix">
+    <form action="" method="post" name="cambioclave" id="cambioclave" class="dlgrid biglabel">
+      <fieldset>
+        <div class="w100 clearfix">
+          <dl class="clearfix">
+            <dt>
+              <label for="clave">Ingresar nueva clave</label>
+            </dt>
+            <dt>
+              <p class="inpt">
+                <input type="password" id="clave" name="clave">
+              </p>
+            </dt>
+          </dl>
+          <dl class="clearfix">
+            <dt>
+              <label for="clave2">Repetir nueva clave</label>
+            </dt>
+            <dt>
+              <p class="inpt">
+                <input type="password" id="clave2" name="clave2">
+              </p>
+            </dt>
+          </dl>
+        </div>
+        <button class="confirmar btn_submit" type="submit"><span>Aceptar</span></button>
+      </fieldset>
+    </form>
+  </div>
+  <div class="clear"></div>
+</div>

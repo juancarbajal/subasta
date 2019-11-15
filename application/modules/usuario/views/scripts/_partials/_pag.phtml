@@ -1,0 +1,50 @@
+<!--<a title="title" class="off-content">&lsaquo;&lsaquo;</a>
+<a title="title" class="off-content">Anterior</a>
+<a title="title" class="current">Página</a>
+<a title="title" class="current">1</a>
+<a href="javascript:;" title="title" class="on-content">2</a>
+<a href="javascript:;" title="title" class="on-content">3</a>
+<a href="javascript:;" title="title" class="on-content">Siguiente</a>
+<a href="javascript:;" title="title" class="on-content">&rsaquo;&rsaquo;</a>-->
+<?php if ($this->pageCount) { ?>
+        <?php
+        if (isset($this->previous)) {
+            echo '<a rel=' . $this->first . ' href="#" title="title" class="on-content">&lsaquo;&lsaquo;</a>';
+            //echo '<li class="itemPag firstNextP"><a rel=' . $this->first . ' class="linkPag firstP pag" href="#">« Primero</a></li>';
+        }
+
+        if (isset($this->previous)) {
+            $params = array('page' => $this->previous);
+            echo '<a rel=' . $this->previous . ' href="#" title="title" class="on-content">Anterior</a>';
+            //echo '<a rel=' . $this->previous . ' href="#" title="title" class="off-content">Anterior</a>';
+        }
+        ?>
+
+        <a title="title" class="current">Página</a>
+        <? foreach ($this->pagesInRange as $page): ?>
+            <? if ($page != $this->current): ?>
+                <a class="on-content" rel="<?= $page ?>" href="#"><?= $page; ?></a>
+                <?= $this->last == $page ? '' : '' ?>
+            <? else: ?>
+                <a class="current" rel="<?= $page; ?>"><?= $page; ?> <?= $this->last == $page ? '' : '' ?></a>
+            <? endif; ?>
+        <? endforeach; ?>
+
+        <?
+        if (isset($this->next)) {
+            echo '<a rel="' . $this->next . '" href="javascript:;" title="title" class="on-content">Siguiente</a>';
+        }
+
+        if (isset($this->next)) {
+            echo '<a rel="' . $this->last . '" href="javascript:;" title="title" class="on-content">&rsaquo;&rsaquo;</a>';
+            //echo '<li class="itemPag lastNext"><a rel="' . $this->last . '" class="linkPag next pag" href="#">Último »</a></li>';
+        }
+        ?>
+    <?php
+} 
+//else {
+//    echo '<div class="paginador all">';
+//    echo "<div class='pagUl theta alignL'> - No hay datos registrados con esos parámetros </div>";
+//    echo '</div>';
+//}
+?>

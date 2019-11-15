@@ -1,0 +1,380 @@
+<div class="result-content container">
+    <div id="banner-exp"></div>
+    <?php if ($this->menuCategorias <> 0) { ?>
+        <div id="breadcrumb">
+            <div class="content">
+                <a href="<?=$this->baseUrl()?>" title="Inicio">Inicio</a>
+                <?php if ($this->menuCategorias[0]->L1>0) { ?>
+                    &nbsp;&rsaquo;&nbsp;
+                    <a href="<?=$this->baseUrl()?>/busqueda/?categs=<?=$this->menuCategorias[0]->L1?>">
+                        <?=$this->menuCategorias[0]->L1_NOM?>
+                    </a>
+                <?php } if ($this->menuCategorias[0]->L2>0) { ?>
+                    &nbsp;&rsaquo;&nbsp;
+                    <a href="<?=$this->baseUrl()?>/busqueda/?categs=<?=$this->menuCategorias[0]->L2?>">
+                        <?=$this->menuCategorias[0]->L2_NOM?>
+                    </a>
+                <?php } if ($this->menuCategorias[0]->L3>0) { ?>
+                    &nbsp;&rsaquo;&nbsp;
+                    <a href="<?=$this->baseUrl()?>/busqueda/?categs=<?=$this->menuCategorias[0]->L3?>">
+                        <?=$this->menuCategorias[0]->L3_NOM?>
+                    </a>
+                <?php } if ($this->menuCategorias[0]->L4>0) { ?>
+                    &nbsp;&rsaquo;&nbsp;
+                    <a href="<?=$this->baseUrl()?>/busqueda/?categs=<?=$this->menuCategorias[0]->L4?>">
+                        <?=$this->menuCategorias[0]->L4_NOM?>
+                    </a>
+                <?php } ?>
+            </div>
+        </div>
+        <?php } ?>
+    <nav class="nav-menu">
+        <?php $listcategoria = $this->categoriasL2;
+        for ($i=0; $i<count($listcategoria);$i++) {
+            if ($i == 0) { ?>
+                <h3 class="k-title">
+                    <span></span>
+                    <?php if ($listcategoria[$i]['ACTIVE'] == 'active') { ?>
+                        <?=$this->escape($listcategoria[$i]['NOMBRE'])?>
+                    <?php } else { ?>
+                        <a href="<?=$this->baseUrl().'/busqueda/?'.
+                                        $this->escape($listcategoria[$i]['BASEURL'])?>">
+                            <?=$this->escape($listcategoria[$i]['NOMBRE'])?>
+                        </a>
+                    <?php } ?>
+                </h3>
+                <div class="contentShowMore"> 
+                    <ul class="list-menu"><?php } else {
+                    if ($listcategoria[$i]['ACTIVE'] == 'active') { ?><li class="<?=$this->escape($listcategoria[$i]['ACTIVE'])?>"><?=$this->escape($listcategoria[$i]['NOMBRE'])?></li>
+                    <?php } else { ?>
+                    <li><a href="<?=$this->baseUrl().'/busqueda/?'.$this->escape($listcategoria[$i]['BASEURL'])?>"><?=$this->escape($listcategoria[$i]['NOMBRE'])?></a></li>
+                    <?php }
+                }   
+         } ?></ul><?php if (count($listcategoria) > 5) { ?><a href="#" id="muestra-c" rel="list-categoria" class="last-item show-all">&rsaquo;&rsaquo; M&aacute;s Categor&iacute;as</a><?php }?></div>
+         <div class="shadow-space"></div>
+        <?php $ubicacion = $this->ubigeos;
+
+        for ($i=0; $i<count($ubicacion);$i++) {
+            if ($i == 0) { ?>
+                <h3 class="k-title">
+                    <span></span>
+                    <?php if ($ubicacion[$i]['ACTIVE'] == 'active') {
+                            echo $this->escape($ubicacion[$i]['NOMBRE']);
+                        } else { ?>
+                            <a href="<?=$this->baseUrl() . '/busqueda/?' . 
+                                            $this->escape($ubicacion[$i]['BASEURL'])?>">
+                                <?=$this->escape($ubicacion[$i]['NOMBRE'])?>
+                            </a>
+                    <?php } ?>
+                </h3>
+                <div class="contentShowMore"><ul class="list-menu"><?php                  
+            } else {
+                if ($ubicacion[$i]['ACTIVE'] == 'active') { ?><li class="<?=$this->escape($ubicacion[$i]['ACTIVE'])?>"><?=$this->escape($ubicacion[$i]['NOMBRE'])?></li>
+                <?php } else { ?>
+                    <li><a href="<?=$this->baseUrl().'/busqueda/?'.$this->escape($ubicacion[$i]['BASEURL'])?>"><?=$this->escape($ubicacion[$i]['NOMBRE'])?></a></li>
+                <?php }
+            }
+        } ?></ul><?php if (count($ubicacion) > 5) { ?>
+        <a href="#" id="muestra-u" rel="list-ubicacion" class="last-item show-all">&rsaquo;&rsaquo; M&aacute;s Ubicaciones</a><?php }?>
+                </div>
+                <div class="shadow-space"></div>
+
+
+        <?php $tm = $this->monedas;
+        for ($i=0; $i<count($tm);$i++) {
+            if ($i == 0) { ?>
+                <h3 class="k-title">
+                    <span></span>
+                    <?php if ($tm[$i]['ACTIVE'] == 'active') { 
+                            echo $this->escape($tm[$i]['NOMBRE']); 
+                        } else { ?>
+                            <a href="<?=$this->baseUrl() . '/busqueda/?' . 
+                                            $this->escape($tm[$i]['BASEURL'])?>">
+                                <?=$this->escape($tm[$i]['NOMBRE'])?>
+                            </a>
+                    <?php } ?>
+                </h3>
+                <ul class="list-menu"><?php                     
+            } else {
+                if ($tm[$i]['ACTIVE'] == 'active') { ?>
+                    <li class="<?=$this->escape($tm[$i]['ACTIVE'])?>"><?=$this->escape($tm[$i]['NOMBRE'])?></li>
+                <?php } else { ?>
+                    <li><a href="<?=$this->baseUrl() . '/busqueda/?' . $this->escape($tm[$i]['BASEURL'])?>"><?=$this->escape($tm[$i]['NOMBRE'])?></a></li>
+                <?php }
+            }   
+        } ?></ul>
+        <div class="shadow-space"></div>
+
+        <?php $pre = $this->precios;
+       //var_dump($pre); exit;
+        for ($i=0; $i<count($pre);$i++) {
+            if ($i == 0) { ?>
+               <h3 class="k-title">
+                   <span></span>
+                   <?php if ($pre[$i]['ACTIVE'] == 'active') { 
+                            echo $this->escape($pre[$i]['NOMBRE']); 
+                       } else { ?>
+                        <a href="<?=$this->baseUrl().'/busqueda/?'.$this->escape($pre[$i]['BASEURL'])?>" >
+                            <?=$this->escape($pre[$i]['NOMBRE'])?>
+                        </a>
+                    <?php } ?>
+               </h3>
+               <ul class="list-menu">  
+                <?php                     
+            } else {
+                if ($pre[$i]['ACTIVE'] == 'active') { ?>
+                    <li class="<?=$this->escape($pre[$i]['ACTIVE'])?>">
+                        <?=$this->escape($pre[$i]['NOMBRE'])?>
+                    </li>
+                <?php } else { ?>
+                    <li>
+                        <a href="<?=$this->baseUrl() . '/busqueda/?'.$this->escape($pre[$i]['BASEURL'])?>">
+                            <?=$this->escape($pre[$i]['NOMBRE'])?>
+                        </a>
+                    </li>
+                <?php }
+            }   
+        } ?>  
+                </ul>
+                <div class="shadow-space"></div>
+
+        <?php $tp = $this->estados;
+        for ($i=0; $i<count($tp);$i++) {
+            if ($i == 0) { ?>
+                <h3 class="k-title">
+                    <span></span>
+                    <?php if ($tp[$i]['ACTIVE'] == 'active') { 
+                            echo $this->escape($tp[$i]['NOMBRE']); 
+                        } else { ?>
+                            <a href="<?=$this->baseUrl() . '/busqueda/?'.$this->escape($tp[$i]['BASEURL'])?>">
+                                <?=$this->escape($tp[$i]['NOMBRE'])?>
+                            </a>
+                    <?php } ?>
+                </h3>
+                <ul class="list-menu">   
+                <?php                     
+            } else {
+                if ($tp[$i]['ACTIVE'] == 'active') { ?>
+                    <li class="<?=$this->escape($tp[$i]['ACTIVE'])?>">
+                        <?=$this->escape($tp[$i]['NOMBRE'])?>
+                    </li>
+                <?php } else { ?>
+                    <li>
+                        <a href="<?=$this->baseUrl().'/busqueda/?'.$this->escape($tp[$i]['BASEURL'])?>">
+                            <?=$this->escape($tp[$i]['NOMBRE'])?>
+                        </a>
+                    </li>
+                <?php }
+            }   
+        } ?>  
+                </ul>       
+                <div class="shadow-space"></div>
+    </nav>
+    
+    <div class="content-right">
+
+        <?=$this->action('busqueda','index', 'default');?>
+
+        <?php if (count($this->avisos) <> 0) { ?>    
+            <?php if (isset($this->palabraCorregida)) { ?>
+                Se ha corregido el resultado de búsqueda, quiza quiso decir 
+                    <?=$this->escape($this->palabraCorregida)?>
+            <?php } ?>                
+        <?php } else { ?>
+
+            <br/>
+            <h3>Sugerencias:</h3>
+            <br/>* Comprueba que todas las palabras están escritas correctamente.
+            <br/>* Intenta usar otras palabras.
+            <br/>* Intenta usar palabras más generales.
+            <br/><br/>  
+            <h3> 
+                <?php if ($this->textoBusqueda <> '') { ?> 
+                    La búsqueda <?='de ' . $this->escape($this->textoBusqueda)?> no obtuvo ningún resultado.
+                <?php } else {?> 
+                    <?php 
+                    if ($this->textoVendedor <> '') {
+                        if ($this->usuarioExiste == 0) { ?>
+                            <?='No existe el ' . $this->escape($this->textoVendedor); 
+                        }  else {
+                            echo 'El ' . $this->escape($this->textoVendedor);?> 
+                            no posee avisos activos en este momento.
+                <?php   }
+                   }
+                }
+                ?>
+            </h3>
+            <p>
+                Si no encontraste el producto deseado puedes intentar con la 
+                <a href="javascript:;" class="show-advanced-search">Busqueda Avanzada</a>
+            </p>
+        <?php } ?>
+
+        <?php if ($this->resultadoTotalAvisos == 0 && $this->resultadoContenidoAdulto > 0) { ?>
+            <?php if ($this->resultadoContenidoAdulto >= 1) { ?>
+                    <h1>Se ha encontrado resultados en la categoria</h1> 
+                    <a href="<?=$this->baseUrl() . '/adultos'?>">Adultos</a>
+                    <br/><br/>
+            <?php } ?>
+            <h3>No existen resultados validos.</h3>
+        <?php } ?>
+            
+        <?php if ($this->resultadoTotalAvisos <> 0) { ?>
+            <?php if ($this->resultadoContenidoAdulto > 0) { ?>
+                <h1>Se ha encontrado resultados en la categoria</h1> 
+                <a href="<?=$this->baseUrl() . '/adultos'?>">Adultos</a>
+                <br/><br/>
+            <?php } ?>
+            
+            <h3>Resultado de la Búsqueda</h3>   
+            <div class="row">
+                <div class="result-detail">    
+                    <?=$this->paginationControl(
+                            $this->avisos, 'Sliding', 'busqueda/paginadortop.phtml', 
+                            array('variables' => $this->variables)); 
+                    ?>
+                <?=($this->parametros['q'] <> '')?' resultados de: <strong>'.
+                            $this->escape($this->textoBusqueda).'</strong>':'' ?>
+                </div>                    
+                <ul class="other-options-header">
+                    <li class="margin">
+                        <span class="icon-mail"></span>
+                        <a class="send-list-ad-email-link" href="#enviar-mail"  
+                           title="Enviar lista de avisos por mail">
+                            Enviar Mail
+                        </a>
+                    </li>
+                    <li>
+                        <span class="icon-printer"></span>
+                        <a class="print-list" target="_blank" 
+                           href="<?=$this->baseUrl().'/busqueda/impresion/?avisos='?>" 
+                           title="Imprimir Resultados" 
+                           lhref="http://kotear.clasificados.pe/busqueda/impresion/?avisos=">
+                            Imprimir
+                        </a>
+                    </li>
+                </ul>
+            </div>   
+            <div class="options-search last row">
+                <ul>
+                    <li class="item-line">Ver como:</li>
+                    <?php foreach ($this->vistas as $vw) {
+                          if ($vw['ACTIVE'] == 'active') { ?>
+                            <li>
+                                <span class="<?=($vw['NOMBRE'] == 'Galeria')?'icon-list-square-active'
+                                                    :'icon-list-line-active'?>">
+                                </span>
+                            </li>
+                      <?php } else { ?>
+                            <li>
+                                <a href="<?=$this->baseUrl() . '/busqueda/?' . $vw['BASEURL']?>" 
+                                   title="<?=$vw['NOMBRE']?>">
+                                    <span class="<?=($vw['NOMBRE'] == 'Galeria')?'icon-list-square-noActive'
+                                                        :'icon-list-line-noActive'?>">
+                                    </span>
+                                </a>
+                            </li>
+                    <?php } 
+                    } ?>   
+                </ul>            
+                <?=(count($this->avisos) <> 0)
+                        ?$this->paginationControl($this->avisos, 'Sliding', 'busqueda/paginador.phtml', 
+                            array('variables' => $this->variables))
+                        :''?>
+            </div>
+            
+            <?php if ($this->parametros['vw'] != 2) { ?> 
+                <div class="pagination-barra">
+                    <ul>
+                        <li class="description">Descripción</li>
+                        <!--<li class="visit"><a href="javascript:;" title="title">Visitas</a><span></span>                    
+                        </li>
+                        <li class="price"><a href="javascript:;" title="title">Precio</a><span></span>
+                        </li>-->
+                        <li class="visit">Visitas</li>
+                        <li class="price">Precio</li>
+                    </ul>
+                </div>
+            <?php } ?> 
+            <form id="resultados" class="search_results" action="#" method="post">
+                <?php if ($this->parametros['vw'] == 2) { ?>
+                    <?=$this->action('galeria', 'busqueda', 'default')?>
+                <?php } else {?>
+                    <?=$this->action('lista', 'busqueda', 'default')?>
+                <?php } ?>
+                <hr class="hide" />
+            </form>
+            <div class="options-search last row">
+                <ul class="other-options-footer">
+                    <li class="margin">
+                        <span class="icon-mail"></span>
+                        <a class="send-list-ad-email-link" href="#enviar-mail" 
+                           title="Enviar lista de avisos por mail">
+                            Enviar Mail
+                        </a>
+                    </li>
+                    <li>
+                        <span class="icon-printer"></span>
+                        <a class="print-list" target="_blank" 
+                           href="http://kotear.clasificados.pe/busqueda/impresion/?avisos=132512" 
+                           title="Imprimir Resultados" 
+                           lhref="http://kotear.clasificados.pe/busqueda/impresion/?avisos=">
+                            Imprimir
+                        </a>
+                    </li>
+                </ul>
+                <?=(count($this->avisos) <> 0)
+                        ?$this->paginationControl($this->avisos, 'Sliding', 'busqueda/paginador.phtml', 
+                                array('variables' => $this->variables))
+                        :''?>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+
+
+<div class="hide">
+    <div id="enviar-mail" class="send-friend">
+        <form action="<?=$this->baseUrl() . '/busqueda/envio-correo'?>" method="post" name="enviar_amigo" 
+              id="send-friend-form-search" class="form-horizontal">
+            <h2 class="k-title mb10"><span></span>Enviar a un amigo</h2>
+            <div class="control-group">
+                <p>Comparte esta oportunidad con alguien que la esté buscando o la necesite.</p> 
+                <p>Envíale un mensaje para contarle sobre este aviso.</p>
+            </div>
+            <ul id="avisos-seleccionados" class="avisos-seleccionados">
+                <li></li>
+            </ul><!-- / -->
+            <div class="extra" style="display:none"></div>
+            <div class="control-group">
+                <?php if (isset($this->identity->EMAIL)) { $emailUsuario = $this->identity->EMAIL; } ?>
+                <label for="inputEmailMe" class="control-label">Tu email</label>
+                <div class="controls">
+                    <input type="text" name="email" id="inputEmailMe" maxlength="50" 
+                           value="<?=$emailUsuario?>">
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="inputEmailFriend" class="control-label">Email destinatario</label>
+                <div class="controls">
+                    <input type="text" name="email2" id="inputEmailFriend">
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="inputMessage" class="control-label">Mensaje</label>
+                <div class="controls">
+                    <textarea name="message" id="inputMessage" rows="4" cols="20"></textarea>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <label class="checkbox">
+                        <input type="checkbox" name="copia" value="1"> Enviar una copia del mensaje
+                    </label>
+                <button class="btn-kotear" name="continuar" type="submit"><span>Enviar</span></button>
+                <button class="btn-close" name="cancel" type="button"><span>Cancelar</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

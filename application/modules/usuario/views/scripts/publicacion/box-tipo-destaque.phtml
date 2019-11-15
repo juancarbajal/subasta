@@ -1,0 +1,19 @@
+<!--Box del tipo de destaque -->
+<div class="example-highlight">
+	<div class="title-main">
+        <span class="icon"></span>
+		<h2 class="title">Ejemplo de Destaque</h2>
+	</div>
+	<p><?=$this->data['title']?></p>
+    <img class="image-highlight" src="<?=URL_STATIC?>img/destaques/<?=$this->data['img']?>" alt="<?=$this->data['img']?>"/>
+    <?php if(!empty($this->data['flag'])){ ?>
+        <div class="paper-preview">
+            <p>Tu aviso en papel</p>
+            <p class="preview-inline">
+                <span><strong>Galaxy Tab</strong></span>
+                <img src="<?=URL_STATIC?>img/ejemploModelo.jpg">
+                <span>Tablet Galaxy P7310 Pantalla De 8.9” 10.1” Wifi Android 3.1. Tel:995057043</span>
+            </p>
+        </div>
+    <?php } ?>
+</div>

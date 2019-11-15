@@ -1,0 +1,594 @@
+<script type="text/javascript">
+  //<![CDATA[
+  function imprimir(){var v = window.open('<?php echo $this->baseUrl()?>/usuario/aviso/ver-impresion/id/<? echo $this->data->K_ID_AVISO;?>')}
+  //]]>
+</script> 
+<?php //echo '********************** INICIO PERURED ***********************' ?>
+<script type="text/javascript">
+function eplCustomShow(adsArray) {
+  var r=''; pad=''; a1=false;
+  // Variables para personalizar:
+  var cols_per_row = 1;
+  var imgFloat = 'left';
+  var code_header = '<span style="float:left; padding-left:15px; font-weight:normal;">Avisos <strong>PERÚRED</strong></span> <a href="http://perured.pe" style="float:right; font-family:Arial, Helvetica, sans-serif; color:#0D53B2; line-height:14px; font-size:11px; font-weight:normal; text-decoration:underline; padding-right:15px; padding-top:1px;" target="_blank">Anuncia aquí</a>';
+  var style_header = 'font-family:Arial, Helvetica, sans-serif; color:gray; font-size:12px; background-color:#EEEEEE; height:43px; border-bottom:1px solid #CCCCCC; border-radius:7px; border-bottom-left-radius:0; border-bottom-right-radius:0;';
+  var code_footer = '';
+  var style_footer = 'text-align:right;background-color:#FFFFFF;';
+  var style_table = 'float:left;border:3px solid #CCCCCC; border-radius:8px; width: 100%; height:160px; background-color:#FFFFFF;';
+  var style_cell = 'width:220px; background-color:#FFFFFF; padding:10px 5px; text-align:left;';
+  var style_title = 'line-height:15px; font-family:Arial, Helvetica, sans-serif; color:#1B2FC4; font-size:16px; font-weight:bold;text-decoration:none; margin-left:2px; ';
+  var style_desc = 'line-height:13px; width:210px; word-wrap:break-word;font-family:Arial, Helvetica, sans-serif;color:#000000; font-size:11px;font-weight:normal;text-decoration:none;';
+  var style_url = 'line-height:15px;width:100%;word-wrap:break-word;font-family:Arial, Helvetica, sans-serif;color:#1B2FC4;font-size:11px;font-weight:normal;text-decoration:underline;';
+  var adsStretch = false;
+  var dirStretch = 2;
+  var image_small_wh = [ 71 , 78 ];
+  var image_large_wh = [ 100 , 100 ];
+ 
+  // fin variables personalizables
+  var coln = 0;
+  for (var i=0; i<adsArray.length; i++) {
+    var ad = adsArray[i];
+    if (!ad.shown && (1==ad.t||2==ad.t||7==ad.t||8==ad.t||41==ad.t) && !(7==ad.e||8==ad.e)) {
+    if (!a1) {
+      r+= '<table style="'+ style_table +'" cellpadding="0" cellspacing="0">';
+      if (code_header) r+= '<tr><th style="'+style_header+'">'+code_header+'</th></tr>';
+      r+= '<tr><td style="background:#FFFFFF; border-radius:7px; border-top-left-radius:0; border-top-right-radius:0;"><table border="0" style="width:100%;">';
+      a1 = true;
+    } else {
+      pad = 'padding-left:10px';
+    }
+    if (0===coln) {
+      r+= '<tr style="display:inline-block;float:left;*zoom:1;*display:block">';
+      coln++;
+    }
+    r+= '<td style="'+ style_cell +'">';
+    if (41==ad.t) { // link de texto
+      r+= '<a target="_blank" href="'+ ad.lU +'" style="'+ style_title +'">'+ ad.tit +'</a>';
+      if (ad.desc) r+= '<br/><span style="'+ style_desc +'">'+ ad.desc +'</span>';
+      if (ad.urlv) r+= '<br/><a target="_blank" href="'+ ad.lU +'" style="'+ style_url +'">'+ ad.urlv +'</a>';
+    } else if (!ad.e) { // flash o imagen sin efecto
+      r+= ad.getBaseTag();
+    } else { // imagen+texto
+      if (33!=ad.e) r+= '<div style="clear:both;width:100%;padding-bottom:5px;"><a target="_blank" href="'+ ad.lU +'" style="'+ style_title +'">'+ ad.tit +'</a></div>';
+      r+= '<table style="border:0px;margin:0px;padding:0px;"><tr>';
+      r+= '<td style="padding-right:5px; vertical-align:top; width:73px; background:#FFFFFF;">'
+      r+= '<a target="_blank" href="'+ ad.lU +'">';
+      r+= '<img src="'+ ad.getURL() +'" border=0 style="border:1px solid #EEEEEE; width:'+image_small_wh[0]+'px; height:'+image_small_wh[1]+'px;" '+(adsStretch?'onmouseover="javascript:eplCustomStretch(this,'+image_large_wh[0]+','+image_large_wh[1]+','+dirStretch+')" onmouseout="javascript:eplCustomStretch(this,'+image_small_wh[0]+','+image_small_wh[1]+','+dirStretch+')"':'')+' />';
+      r+= '</a></td><td style="width:130px;vertical-align:top;word-wrap:break-word;text-align:left;overflow:hidden;background:#FFFFFF;">';
+      r+= '<span style="'+ style_desc +'">'+ ad.desc +'</span>';
+      if (ad.urlv) r+= '<br/><a target="_blank" href="'+ ad.lU +'" style="'+ style_url +'">'+ ad.urlv +'</a>';
+      r+= '</td></tr></table>'
+    }
+    r+= '</td>';
+    if (coln >= cols_per_row) {
+      r+='</tr>'; coln=0;
+    } else {
+      coln++;
+    }
+    ad.shown = true;
+    }
+  }
+  if (a1) {
+    if (0!==coln) {
+      while (coln <= cols_per_row) {
+        r+= '<td style="display:none;"></td>';
+        coln++;
+      }
+      r+= '</tr>';
+    }
+    r+= '</table></td></tr>';
+    if (code_footer) r+= '<tr><th style="'+style_footer+'">'+code_footer+'</th></tr>';
+    r+= '</table>';
+  }
+  return r;
+}
+ function eplCustomStretch(obj,w,h,dir) {
+ obj.style.width = obj.parentNode.parentNode.style.width = w+"px";
+ obj.style.height = obj.parentNode.parentNode.style.height = h+"px";
+ var bW = parseInt(obj.parentNode.parentNode.parentNode.style.width,10);
+ var bH = parseInt(obj.parentNode.parentNode.parentNode.style.height,10);
+ if (dir == 0) { obj.parentNode.parentNode.parentNode.style.top = (bH-h)+"px"; obj.parentNode.parentNode.parentNode.style.left = 0+"px"; }
+ if (dir == 1) { obj.parentNode.parentNode.parentNode.style.top = (bH-h)+"px"; obj.parentNode.parentNode.parentNode.style.right = (w-bW)+"px"; }
+ if (dir == 2) { obj.parentNode.parentNode.parentNode.style.top = 0+"px"; obj.parentNode.parentNode.parentNode.style.left = 0+"px"; }
+ if (dir == 3) { obj.parentNode.parentNode.parentNode.style.top = 0+"px"; obj.parentNode.parentNode.parentNode.style.right = (w-bW)+"px"; }
+ if (dir == 4) { obj.parentNode.parentNode.parentNode.style.top = ((bH-h)/2)+"px"; obj.parentNode.parentNode.parentNode.style.left = ((bW-w)/2)+"px"; }
+ }
+ 
+function eplSetAdM(eID) {
+    if (eplCheckStart()) {
+        var opts = (eplArgs.sOpts && eplArgs.sOpts[eID]) ? eplArgs.sOpts[eID] : {};
+        if (opts.custF) { document.epl.setCustomAdShow(eID,opts.custF); }
+        document.epl.setSpace(eID, opts);
+    } else {
+        setTimeout('eplSetAdM("'+eID+'");', 250);
+    }
+}
+function eplAD4M(eID, opts) {
+    document.write('<div id="eplAdDiv'+eID+'"></div>');
+    if (!opts) opts = {t:1};
+    if (!eplArgs.sOpts) { eplArgs.sOpts = {}; }
+    eplArgs.sOpts[eID] = opts;
+    eplSetAdM(eID);
+}
+// -->
+</script> 
+<?php //echo '********************** FIN PERURED ***********************' ?>
+
+<div class="container">
+    <!-- GPLUS -->
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <div id="banner-exp"><script type="text/javascript">eplAD4("Expandible");</script></div>
+      <?php if ((!($avisoDetalle->K_EST_AVISO == 1 || $avisoDetalle->K_EST_AVISO == 3) 
+              || $this->data->K_EST_USUARIO == 5) && count($this->listSugerencia)>0)  { ?>
+        <h2 class="k-title mb10"><span></span>Sugerencias de Categoria</h2>
+          <!-- carusel top -->               
+          <div id="ad-carousel-products-top" class="row ad-carousel-products-top">
+          <div class="jcarousel-container">
+            <div disabled="disabled" class="jcarousel-prev jcarousel-prev-disabled">
+              <img class="btn-arrow" src="<?php echo $this->baseUrl() ?>/f/img/btn-left.jpg<?php echo App_Config::getStaticVersion(); ?>" alt="Imagen anterior"/>
+            </div>
+            <div class="jcarousel-clip">
+              <ul class="jcarousel-list">
+                  
+                <?php 
+                //var_dump($this->listSugerencia); exit;
+                foreach($this->listSugerencia as $sugerencia){
+                        $titulo = $this->escape($sugerencia->TIT);
+                        $urlSeo = $sugerencia->ID_AVISO . '-' . $sugerencia->URL?> 
+                <li class="jcarousel-item-1 item-product">
+                  <div class="wrapper-image">
+                      <div class="inner-wrapper-image">
+                          <a title="<?php echo $titulo; ?>" href="<?php echo $urlSeo ?>">
+                              <img onerror="this.src = '<?php echo $this->baseUrl() ?>/f/img/notFound.jpg'" 
+                           alt="<?php echo $titulo; ?>" src="<?php echo $sugerencia->RUTA_IMAGEN;?>"/> 
+                          </a>   
+                            <!--[if lt IE 7]><b></b><![endif]-->
+                       </div>
+                 </div>
+                  <p class="name"><a title="<?php echo $titulo; ?>" href="<?php echo $urlSeo ?>">
+                          <?php echo $titulo; ?></a>
+                  </p>
+                  <p class="price"><?php echo $sugerencia->SIMB ?> <?php echo $sugerencia->PRECIO; ?></p>
+                  <p class="detail"><a href="<?php echo $urlSeo ?>">ver detalle</a>
+                  </p>
+                </li>
+                <?php }?>                      
+              </ul>
+            </div>
+              
+            <div class="jcarousel-next">
+              <img class="btn-arrow" src="<?php echo $this->baseUrl() ?>/f/img/btn-right.jpg<?php echo App_Config::getStaticVersion(); ?>" alt="Imagen siguiente"/>
+            </div>                  
+          </div>
+      </div>
+      <!-- //carusel top -->               
+      <?php } ?>
+            
+      <?//php echo $this->action('busqueda','index', 'default');?>
+      <?= $this->partial(
+          '_partials/_busqueda.phtml',
+          'default',
+          array('arrCategoria' => $this->arrCategoria, 'arrCiudadesActivas' => $this->arrCiudadesActivas));
+      ?>
+      
+      <div id="breadcrumb">          
+        <span class="logo"></span><a href="<?php echo $this->baseUrl()?>" title="Inicio">Inicio</a>
+        <?php if ($this->menuCategorias[0]->L1>0) { ?>
+        &nbsp;&rsaquo;&nbsp;<a href="<?php echo $this->baseUrl(); ?>/busqueda/?categs=<?php echo $this->menuCategorias[0]->L1; ?>"><?php echo $this->menuCategorias[0]->L1_NOM?></a>
+        <?php } ?>        
+        <?php if ($this->menuCategorias[0]->L2>0) { ?>
+        &nbsp;&rsaquo;&nbsp;<a href="<?php echo $this->baseUrl(); ?>/busqueda/?categs=<?php echo $this->menuCategorias[0]->L2; ?>"><?php echo $this->menuCategorias[0]->L2_NOM?></a>
+        <?php } ?>
+        <?php if ($this->menuCategorias[0]->L3>0) { ?>
+        &nbsp;&rsaquo;&nbsp;<a href="<?php echo $this->baseUrl(); ?>/busqueda/?categs=<?php echo $this->menuCategorias[0]->L3; ?>"><?php echo $this->menuCategorias[0]->L3_NOM?></a>
+        <?php } ?>
+        <?php if ($this->menuCategorias[0]->L4>0) { ?>
+        &nbsp;&rsaquo;&nbsp;<a href="<?php echo $this->baseUrl(); ?>/busqueda/?categs=<?php echo $this->menuCategorias[0]->L4; ?>"><?php echo $this->menuCategorias[0]->L4_NOM?></a>
+        <?php } ?>
+      </div>
+      <div class="row">
+      
+      
+      <div class="detail-product" itemtype="http://www.schema.org/Product" itemscope="itemscope">
+        <div class="image-product">
+          <a id="photo-main" class="show-photo" title="<?php echo $this->escape($this->data->K_TITULO);?>" href="javascript:;">
+            <img itemprop="image" src="<?php echo $this->baseUrl() ?>/f/img/bg.jpg" 
+                 data-original="<?php echo $this->prioridad['url']?>" 
+                 alt="<?= $this->escape($this->data->K_TITULO);?>" class="image-main lazy"/>
+          </a>
+          <p><span></span><a href="javascript:;" title="Imagen" id="click-img-full">Click en la imagen para ampliarla</a>
+          </p>
+          <div class="shadow-space-mini"></div>
+          <ul class="image-mini-product">            
+            <?php foreach($this->urls as $url):?>
+            <?php $imagen = $url['thumbnails'];?>              
+            <li>
+              <a class="show-photo" rel="groupGallery" title="<?php echo $this->escape($this->data->K_TITULO);?>" href="<?php echo $url['zoom'] ?>">
+                <img class="lazy shadow-transition" src="<?php echo $this->baseUrl() ?>/f/img/bg.jpg" data-original="<?php echo $url['thumbnails'] ?>" alt="Fotos en miniatura del producto" title="Click para ampliar" />
+              </a>
+            </li>
+            <?php endforeach;?>
+          </ul>
+          <?php if (count($this->urls)>6){?>
+          <p class="see-more">
+              <a class="show-photo shadow-transition" id="show-gallery-all" href="javascript:;"
+                 title="<?= $this->escape($this->data->K_TITULO); ?>">Ver más</a>
+          </p>          
+          <?php }?>
+        </div>          
+        <div class="text-product">
+          <h2 itemprop="name"><?=$this->escape($this->data->K_TITULO)?></h2>
+          <div class="social-buttons">
+            <iframe src="//www.facebook.com/plugins/like.php?href=<?= $this->urlPagina; ?>&amp;send=false&amp;layout=box_count&amp;width=78&amp;show_faces=false&amp;action=like&amp;locale=es_ES&amp;colorscheme=light&amp;font&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:78px; height:65px;float: left;" allowTransparency="true"></iframe>
+            <div id="twitter-btn" style="width: 66px; float:left">
+                <a href="https://twitter.com/share" class="twitter-share-button" 
+                   data-url="<?= $this->urlPagina; ?>" data-via="koteando" 
+                   data-lang="es" data-count="vertical" 
+                   data-text="<?= $this->escape($this->data->K_TITULO); ?>">Tweet</a>
+            </div>
+            <div><g:plusone size="tall" ></g:plusone></div>
+            <div style="position: relative; text-align: center; float: left; height: 60px; width: 40px;">
+                 <span style="display: inline; position: relative; bottom: -19px;">
+                 <a data-pin-config="above" 
+                 href="http://pinterest.com/pin/create/button/?url=<?= $this->urlPagina; ?>&media=<?= 
+                   $imagen; ?>&description=<?= $this->escape($this->data->K_TITULO);?>" 
+                   data-pin-do="buttonPin">
+                     <img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" />
+                 </a>
+                 </span>
+             </div>
+          </div>
+          <div itemprop="offers" itemscope="itemscope" itemtype="http://www.schema.org/Offer"> 
+        <ul class="detail-text-product row">
+          <li>
+            <label>Producto</label><span><?php echo $this->data->K_TIPO_PRODUCTO?></span>
+          </li>
+          <li class="right-position">
+            <label>Visitas</label><span itemprop="review"><?php echo $this->data->K_NUM_VISITAS?></span>
+          </li>
+          <li>
+            <label>Vence el</label><span itemprop="availabilityEnds"><?php echo $this->data->K_FECHA_CADUCIDAD?></span>
+          </li>
+          <li class="right-position">
+            <label></label><span></span> 
+          </li>
+        </ul>
+          <div class="price-product">
+              <span><strong>Precio:</strong></span>
+              <span class="price-number-product"><strong itemprop="price"><?php echo $this->data->K_SIMB_MONEDA.' '.number_format($this->data->K_PRECIO_FINAL,2,'.',',');?></strong></span>
+              <span itemprop="priceCurrency" class="hide">PEN</span>
+              <span class="red">(POR UNIDAD)</span>
+          </div>
+              <ul style="display:none" class="ranking" itemtype="http://www.schema.org/AggregateRating" itemscope="itemscope" itemprop="aggregateRating">
+                        <li style="width: 50px;" class="current-rating" id="rankingMainProduct-">
+                            <span itemprop="ratingValue" class="hide">3</span>
+                            <span itemprop="ratingCount" class="hide"><?php echo $this->data->K_NUM_VISITAS?></span>
+                            <span itemprop="reviewCount" class="hide"><?php echo $this->data->K_NUM_VISITAS?></span>
+                        </li>
+                        <li id="rankingIndividualProduct-1">
+                            <a href="javascript:;" title="Deja tu puntuación: 1 de 5" rel="nofollow">1</a>
+                        </li>
+                        <li id="rankingIndividualProduct-2">
+                            <a href="javascript:;" title="Deja tu puntuación: 2 de 5" rel="nofollow">2</a></li>
+                        <li id="rankingIndividualProduct-3"><a href="javascript:;" title="Deja tu puntuación: 3 de 5" rel="nofollow">3</a></li>
+                        <li id="rankingIndividualProduct-4"><a href="javascript:;" title="Deja tu puntuación: 4 de 5" rel="nofollow">4</a></li>
+                        <li id="rankingIndividualProduct-5"><a href="javascript:;" title="Deja tu puntuación: 5 de 5" rel="nofollow">5</a></li>
+                    </ul>
+          <h3 class="k-title"><span></span>Datos del vendedor</h3>
+         <div class="detail-text-seller row">
+            <ul class="list-data-seller">
+                <li>
+                  <div class="icon-seller"></div>
+                  <div class="item-seller" itemprop="seller">Apodo</div>
+                  <div class="data-seller">                    
+                    <h3><?php echo $this->data->K_APODO_VENDEDOR?></h3>
+                  </div>
+                </li>
+                <li>
+                  <div class="icon-email-seller"></div>
+                  <div class="item-seller">Email</div>
+                  <div class="data-seller"><?php echo $this->data->K_EMAIL?></div>
+                </li>
+                <li>
+                  <div class="icon-phone-seller"></div>
+                  <div class="item-seller">Teléfono</div>
+                  <div class="data-seller"><?php echo $this->data->K_TELEFONO?></div>
+                </li>
+                <li>
+                  <div class="icon-location-seller"></div>
+                  <div class="item-seller">Ubicación</div>
+                  <div class="data-seller"><?php echo $this->data->K_NOM_UBIGEO?></div>
+                </li>
+              </ul>
+            <ul class="list-medals">
+              <li><span><strong>Vendedor</strong></span><span class="user <?php echo  $this->data->K_ESTILO_TIPO_USUARIO?>">
+                  </span><span><?php echo $this->data->K_CANT_TIPO_USUARIO;?></span>
+              </li>
+              <li><span><strong>Productos</strong></span><span class="medal medal-<?php echo  $this->data->K_ESTILO_PRODUCTOS?>">
+                  </span><span><?php echo $this->data->K_CANT_PRODUCTOS;?></span>
+              </li>
+              <li><span><strong>Permanencia</strong></span><span class="medal medal-<?php echo  $this->data->K_ESTILO_PERMANENCIA?>">
+                  </span><span><?php echo $this->data->K_CANT_PERMANENCIA;?></span>
+              </li>
+            </ul>
+            <?php if (!($this->data->K_EST_AVISO == 5 || $this->data->K_EST_USUARIO == 5)) { ?>  
+            <ul class="list-comunication">
+              <li><span class="icon-other-productos"></span><span class="text-other-productos">
+                  <a href="<?php echo $this->baseUrl()?>/vendedor/<?php echo $this->data->K_APODO_VENDEDOR?>" 
+                            title="Ver artículos del vendedor">Ver artículos del vendedor</a></span>
+              </li>
+              <li><span class="icon-question"></span><span class="text-question">
+                  <a href="#question-seller" id="question-seller-scroll" title="Hacerle una pregunta al vendedor">Hacerle una pregunta al vendedor</a></span>
+              </li>
+            </ul>
+          <?php } ?>
+          </div>
+
+
+          <div class="payment row">
+            <h3>Formas de Pago</h3>            
+            <ul>
+              <?php foreach($this->medioPagos as $medioPago){?>
+              <li><span class="<?php echo $medioPago->K_IMG;?>"></span><span><?php echo $medioPago->K_TIT;?></span></li>
+              <?php }?>
+            </ul>
+          </div>
+          <div class="options-share">
+            <ul>                  
+              <li>
+                <span class="icon-options-mail"></span><a href="#send-friend" class="send-friend-link" title="Enviar a un amigo">Enviar a un amigo </a>
+              </li>
+              <li>
+                <span class="icon-options-print"></span><a href="javascript:imprimir();" title="Imprimir">Imprimir</a>
+              </li>
+              <li>
+                <span class="icon-options-favorites"></span><a class="book-mark-add" href="<?php echo $this->baseUrl() ?>/aviso/342684-aviso-de-prueba-de-kotear" title="<?php echo $this->escape($this->data->K_TITULO);?>">A favoritos</a>
+              </li>              
+              <li>
+              <?php if ($this->tieneSeguimiento){?>  
+                  <span class="icon-options-continue"></span>
+                  <span title="En seguimiento" id="following-ad">
+                      <a id="follow-ad-link" title="Dejar de seguir" href="javascript:;" 
+                         rel="<?=$this->tieneSeguimiento;?>" detail="unfollow">
+                          Siguiendo
+                      </a>
+                  </span>
+              <?php } else {?>    
+              <span class="icon-options-continue"></span><a  id="follow-ad-link" href="javascript:;" title="Recibir Alertas" rel="<?php echo $this->data->K_ID_AVISO ?>" detail="follow">A Seguir</a>    
+              <?php } ?>  
+              </li>              
+            </ul>              
+          </div>          
+
+          <div class="options-alert"><span class="icon-options-alert"></span><a class="report-ad-link" href="#report-ad" title="Reportar abuso">Reportar abuso</a></div>
+          </div>
+          
+        </div>
+        <!-- Deshabilitar aviso -->
+        <?php if (!($this->data->K_EST_AVISO == 1 || $this->data->K_EST_AVISO == 3 )) { ?>       
+        <span id="background-desabled-add"></span>
+        <span id="img-desabled-add"></span>
+        <?php } ?> 
+        <!-- // desabilitar aviso -->
+      </div>
+        <div class="vertical-promo">
+            <script type="text/javascript">eplAD4("Right");</script>
+        </div>
+      </div>
+      <h2 class="k-title mb10"><span></span>Información</h2>
+      <div class="row mb10 ov">
+         <?php echo $this->data->K_HTML;?>
+      </div>
+      <div id="question-seller" class="question-to-seller">
+        <h2 class="k-title mb10"><span></span>Preguntas realizadas al Vendedor</h2>
+        <dl class="text-question-to-seller row">            
+          <?php if (isset($this->preguntasRespuestas)){?>
+            <?php foreach($this->preguntasRespuestas as $pr):?>            
+            <?php if ($pr->result == 'P'){ echo $this->datoAviso->K_NOM_LARGO;?>   
+          <dt class="question-customer <? if ($pr->TieneRpta == '1') {echo 'border-bottom';}  ?>"><span class="icon-question"></span>
+            <p><strong><?php echo $pr->APODO?>: </strong><span><?php echo $this->escape($pr->COMENT)?></span>
+            </p><span class="date-hour"><?php echo $pr->FEC_CREA?></span>                        
+          </dt>
+          <?php }else {?>
+          <dl class="answer-seller"><span class="icon-answer"></span>
+            <p><strong><?php echo $pr->APODO?>: </strong><span><?php echo $this->escape($pr->COMENT)?></span>
+            </p><span class="date-hour"><?php echo $pr->FEC_CREA?></span>
+          </dl>                                 
+          <?php }  endforeach; }?>
+        </dl>
+      </div>
+      <?php if (!($this->data->K_EST_AVISO == 5 || $this->data->K_EST_USUARIO == 5)) { ?>  
+        <div class="maybe-sesion-star">    
+        <?php if($this->identity!=null)  {  ?>
+          <p><a id="question-seller-link" href="#question-seller-content">Pregúntale al Vendedor</a></p>
+        <?php  } else { ?>
+        <p>Ud. debe <a href="<?php echo $this->baseUrl()?>/usuario/acceso" title="Click aqui para Iniciar sessión">
+                Iniciar sesión</a> para poder realizar preguntas al vendedor.</p>
+        <?php } ?>
+      </div>
+      <?php } ?>
+      <div class="footer-tip"><span class="icon-footer-tip"></span>
+        <p>Los Vendedores tienen un máximo de 15 días para responder a tus preguntas. Encuentra aquí todas las preguntas que realizaste, tanto las que ya te fueron respondidas como las que aún faltan responder.</p>
+      </div>
+      <div class="shadow-space"></div>
+
+      <?php if (isset($this->ventasActivas) && count($this->ventasActivas)>0){ ?>  
+        <h2 class="k-title mb10"><span></span>Otros productos del Vendedor</h2>
+        <!-- carusel bottom -->
+        <div id="ad-carousel-products-bottom" class="row ad-carousel-products-bottom">
+          <div class="jcarousel-container">
+            <div disabled="disabled" class="jcarousel-prev jcarousel-prev-disabled">
+              <img class="btn-arrow" src="<?php echo $this->baseUrl() ?>/f/img/btn-left.jpg<?php echo App_Config::getStaticVersion(); ?>" alt="Imagen anterior"/>
+            </div>
+            <div class="jcarousel-clip">
+              <ul class="jcarousel-list">
+                <?php foreach($this->ventasActivas as $venta){
+                    $urlSeo = $venta->ID_AVISO . '-' . $this->escape($venta->URL_SEO)?>  
+                <li class="jcarousel-item-1 item-product">
+                  <div class="wrapper-image">
+                      <div class="inner-wrapper-image">
+                          <a title="<?php echo $this->escape($venta->TIT); ?>" href="<?php echo $urlSeo ?>">
+                          <img onerror="this.src = '<?php echo $this->baseUrl() ?>/f/img/notFound.jpg'" 
+                               alt="<?php echo $this->escape($venta->TIT) ?>" 
+                               src="<?php echo $venta->RUTA_IMAGEN;?>"/>
+                          </a>
+                            <!--[if lt IE 7]><b></b><![endif]-->
+                       </div>
+                  </div>
+                  <p class="name"><a title="<?php echo $this->escape($venta->TIT); ?>" href="<?php echo $urlSeo ?>"><?php echo $this->escape($venta->TIT);?></a></p>
+                  <p class="price"><?php echo $venta->SIMB ?> <?php echo $venta->PRECIO ?></p>
+                  <p class="detail"><a href="<?php echo $this->escape($urlSeo); ?>">ver detalle</a></p>
+                </li>
+                <?php } ?>
+              </ul>
+            </div>
+            <div class="jcarousel-next">
+              <img class="btn-arrow" src="<?php echo $this->baseUrl() ?>/f/img/btn-right.jpg<?php echo App_Config::getStaticVersion(); ?>" alt="Imagen siguiente"/>
+            </div>                  
+          </div>
+      </div>
+       <!-- // carusel bottom -->
+        
+      <div class="shadow-space"></div>
+      <?php } ?>
+      <div class="peru-red row">
+          <script language="JavaScript" type="text/javascript">
+          eplAD4M("033f444c460dc981",{t:1,timeout:0,ma:4,custF:eplCustomShow,sd:"e91d!!http://ads.us.e-planning.net/!!"});          
+          </script>
+      </div>  
+  </div>
+
+    <div class="hide">
+        <div id="report-ad" class="report-ad">
+            <form action="" method="post" name="reportAd" id="report-ad-form" class="form-horizontal">
+                <input type="hidden" name="idAviso" value="<?=$this->data->K_ID_AVISO?>">
+                <div class="control-group">
+                    <h3 class="k-title mb10"><span></span>Denunciar Aviso</h3>
+                </div>
+                <div class="control-group">
+                    <p>Llene el siguiente formulario y exponga el motivo de su denuncia.</p>
+                </div>
+                <div class="control-group">
+                    <label for="input-names" class="control-label">Nombres</label>
+                    <div class="controls">
+                        <input type="text" name="nombres" id="input-names"
+                               value="<?=$this->nomUsuario?>">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="input-surnames" class="control-label">Apellidos</label>
+                    <div class="controls">
+                        <input type="text" name="apellidos" id="input-surnames"
+                               value="<?=$this->apelUsuario?>">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="input-email" class="control-label">Email</label>
+                    <div class="controls">
+                        <input type="text" name="email" id="input-email"
+                               value="<?=$this->emailUsuario?>">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="input-phone" class="control-label">Teléfono</label>
+                    <div class="controls">
+                        <input type="text" name="telefono" id="input-phone"
+                               value="<?=$this->fonoUsuario?>">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="input-document" class="control-label">Motivo</label>
+                    <div class="controls">
+                        <select name="slcmotivo" id="input-document">
+                            <option value="">Seleccione Motivo</option>
+                            <option value="1">Palabras Obscenas</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="input-coment" class="control-label">Comentario</label>
+                    <div class="controls">
+                        <textarea name="comentario" id="input-coment"></textarea>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <button class="btn-kotear" name="continuar" type="submit">
+                            <span>Continuar</span>
+                        </button>
+                        <button class="btn-close" name="cancel" type="button"><span>Cancelar</span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<div class="hide">
+  <div id="send-friend" class="send-friend">
+        <form action="" method="post" name="recover-passw" id="send-friend-form-ad" class="form-horizontal">
+            <input type="hidden" name="id" value="<?php echo $this->data->K_ID_AVISO ?>">
+            <h2 class="k-title mb10"><span></span>Enviar a un amigo</h2>
+            <p class="mb20">Comparte esta oportunidad con alguien que la esté buscando o la necesite.<br />
+                Envíale un mensaje para contarle sobre este aviso.</p>
+            <div class="control-group">
+              <label for="inputEmailMe" class="control-label">Tu email</label>
+              <div class="controls">
+                  <input type="text" name="de" value="<?=$this->emailUsuario?>" id="inputEmailMe">
+              </div>
+            </div>
+            <div class="control-group">
+              <label for="inputEmailFriend" class="control-label">Email destinatario</label>
+              <div class="controls">
+                <input type="text" name="para" id="inputEmailFriend">
+              </div>
+            </div>
+            <div class="control-group">
+              <label for="inputMessage" class="control-label">Mensaje</label>
+              <div class="controls">
+                <textarea name="mensaje" id="inputMessage"></textarea>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <label class="checkbox">
+                    <input type="checkbox" name="copia" value="1"> Enviar una copia del mensaje
+                </label>
+              </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button id="btn-send-form" class="btn-kotear" name="enviar" type="submit">Enviar</button>
+                    <a class="btn-close" name="cancel" href="javascript:;">Cancelar</a>
+                </div>
+            </div>            
+    </form>
+  </div>
+</div>
+
+<div class="hide"> 
+    <div id="question-seller-content" class="question-seller-content" style="width:500px">
+        <div id="change-question-msg"></div>
+        <form method="post" name="preguntar" id="question-seller-form" class="form-horizontal">
+            <input type="hidden" value="<?php echo $this->data->K_ID_AVISO ?>" id="idAviso" name="idAviso">
+            <h2 class="k-title mb10"><span></span>Pregunta al vendedor </h2>
+            <div class="control-group">
+                <p><strong><?php echo $this->escape($this->data->K_TITULO)?></strong></p>
+                <p><strong>Atención:</strong> No se permite incluir datos personales o incurrir en cualquier intercambio de información que no corresponda al producto en cuestión. <br>
+                Todo usuario que no cumpla con ésta regla será suspendido.</p>
+            </div>
+            <div class="control-group">
+                <label class="control-label"> <strong>Mensaje : </strong></label>
+                <div class="controls">
+                    <textarea cols="20" rows="4" id="mensage" name="mensage" class="required"></textarea>
+                </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <button class="btn-kotear" name="continuar" type="submit"><span>Enviar</span></button>
+                <button class="btn-close" name="cancel" type="button"><span>Cancelar</span></button>
+              </div>
+            </div>
+          </form>
+    </div>
+</div>

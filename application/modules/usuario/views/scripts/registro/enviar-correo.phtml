@@ -1,0 +1,15 @@
+<!--Envio de Correo -->
+<?php if (isset($this->error)) {?>
+<?php echo $this->error;?>
+<?php } else { ?>
+<p align="center">
+&#33;Revisa tu cuenta<br/>
+<?=$this->correo?><br/>
+y valida tu registro ahora!
+</p>
+<script type="text/javascript">
+   window.opener.location.href='<?=$this->baseUrl()?>/';
+   setTimeout('window.close()',3000);
+</script>
+<?} //end if?>
+<!--Envio de Correo -->

@@ -1,0 +1,3781 @@
+{
+    "project": {},
+    "files": {
+        "application/schemas/modules.js": {
+            "name": "application/schemas/modules.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "application/yoson.js": {
+            "name": "application/yoson.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/class/classCookie.js": {
+            "name": "libs/class/classCookie.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/min/jquery.validate.js": {
+            "name": "libs/plugins/min/jquery.validate.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/advhr/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/advhr/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/advimage/editor_plugin.js": {
+            "name": "libs/plugins/tiny_mce/plugins/advimage/editor_plugin.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/advimage/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/advimage/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/advlink/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/advlink/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/advlist/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/advlist/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/autolink/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/autolink/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/autoresize/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/autoresize/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js",
+            "modules": {},
+            "classes": {
+                "tinymce.plugins.AutoSave": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/bbcode/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/bbcode/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/contextmenu/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/contextmenu/editor_plugin_src.js",
+            "modules": {},
+            "classes": {
+                "tinymce.plugins.ContextMenu": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/directionality/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/directionality/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/emotions/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/emotions/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/example/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/example/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/example_dependency/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/example_dependency/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/fullpage/js/fullpage.js": {
+            "name": "libs/plugins/tiny_mce/plugins/fullpage/js/fullpage.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/fullpage/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/fullpage/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/fullscreen/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/fullscreen/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/iespell/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/iespell/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/inlinepopups/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/inlinepopups/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/insertdatetime/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/insertdatetime/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/layer/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/layer/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/legacyoutput/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/legacyoutput/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/lists/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/lists/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/media/js/embed.js": {
+            "name": "libs/plugins/tiny_mce/plugins/media/js/embed.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/media/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/media/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/nonbreaking/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/nonbreaking/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/noneditable/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/noneditable/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/pagebreak/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/pagebreak/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/paste/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/paste/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/preview/jscripts/embed.js": {
+            "name": "libs/plugins/tiny_mce/plugins/preview/jscripts/embed.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/preview/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/preview/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/print/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/print/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/save/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/save/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/searchreplace/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/searchreplace/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/spellchecker/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/spellchecker/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/style/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/style/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/tabfocus/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/tabfocus/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/table/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/table/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/template/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/template/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/visualblocks/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/visualblocks/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/visualchars/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/visualchars/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/wordcount/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/wordcount/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/abbr.js": {
+            "name": "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/abbr.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/acronym.js": {
+            "name": "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/acronym.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/attributes.js": {
+            "name": "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/attributes.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/cite.js": {
+            "name": "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/cite.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/del.js": {
+            "name": "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/del.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/element_common.js": {
+            "name": "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/element_common.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/ins.js": {
+            "name": "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/ins.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/plugins/xhtmlxtras/editor_plugin_src.js": {
+            "name": "libs/plugins/tiny_mce/plugins/xhtmlxtras/editor_plugin_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/themes/advanced/js/charmap.js": {
+            "name": "libs/plugins/tiny_mce/themes/advanced/js/charmap.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/themes/advanced/editor_template_src.js": {
+            "name": "libs/plugins/tiny_mce/themes/advanced/editor_template_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/themes/simple/editor_template_src.js": {
+            "name": "libs/plugins/tiny_mce/themes/simple/editor_template_src.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/utils/editable_selects.js": {
+            "name": "libs/plugins/tiny_mce/utils/editable_selects.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/utils/form_utils.js": {
+            "name": "libs/plugins/tiny_mce/utils/form_utils.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/utils/mctabs.js": {
+            "name": "libs/plugins/tiny_mce/utils/mctabs.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/tiny_mce/utils/validate.js": {
+            "name": "libs/plugins/tiny_mce/utils/validate.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/jqBxSlider.js": {
+            "name": "libs/plugins/jqBxSlider.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/jqTopHover.js": {
+            "name": "libs/plugins/jqTopHover.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/jqValidate.js": {
+            "name": "libs/plugins/jqValidate.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/jquery.featureCarousel.js": {
+            "name": "libs/plugins/jquery.featureCarousel.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/jquery.jcarousel.js": {
+            "name": "libs/plugins/jquery.jcarousel.js",
+            "modules": {},
+            "classes": {
+                "jcarousel": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/plugins/uiAutoComplete.js": {
+            "name": "libs/plugins/uiAutoComplete.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "libs/framework.js": {
+            "name": "libs/framework.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "modules/tmp/admin.js": {
+            "name": "modules/tmp/admin.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "modules/tmp/index-admin.js": {
+            "name": "modules/tmp/index-admin.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "modules/tmp/nombre-del-modulo.js": {
+            "name": "modules/tmp/nombre-del-modulo.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "modules/admin.js": {
+            "name": "modules/admin.js",
+            "modules": {
+                "some-module4": 1
+            },
+            "classes": {
+                "admin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "modules/all-modules.js": {
+            "name": "modules/all-modules.js",
+            "modules": {
+                "show-popup": 1,
+                "validate": 1,
+                "lightbox-logIn-signUp": 1,
+                "banner-top classified": 1,
+                "search-categories": 1,
+                "show-advanced-search": 1,
+                "geotags": 1,
+                "validate-document": 1,
+                "data-ubigeo": 1
+            },
+            "classes": {
+                "all-modules": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "modules/default.js": {
+            "name": "modules/default.js",
+            "modules": {
+                "showMoreCategories": 1,
+                "placeholder": 1,
+                "add-class-middle": 1,
+                "send-list-ad-email": 1,
+                "impress-ad-list": 1,
+                "scrollTop": 1
+            },
+            "classes": {
+                "default": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "modules/usuario.js": {
+            "name": "modules/usuario.js",
+            "modules": {
+                "yOSON": 1,
+                "register-category": 1,
+                "show-example-ads": 1,
+                "show-video": 1,
+                "uploader-photos": 1,
+                "carousel-products": 1,
+                "remove-class-home": 1,
+                "show-photo-products": 1,
+                "count-word": 1,
+                "tinymce-register": 1,
+                "validate-image": 1,
+                "preview-impress": 1,
+                "moduleName": 1,
+                "show-register-trigger": 1,
+                "show-login-trigger": 1,
+                "report-ad": 1,
+                "send-ad-friend": 1,
+                "add-favorites": 1,
+                "venta": 1,
+                "ad-actions": 1,
+                "show-questions": 1,
+                "all-checked-uncheked": 1
+            },
+            "classes": {
+                "usuario": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "yOSON": {
+            "name": "yOSON",
+            "submodules": {
+                "some-module4": 1,
+                "show-popup": 1,
+                "validate": 1,
+                "lightbox-logIn-signUp": 1,
+                "banner-top classified": 1,
+                "search-categories": 1,
+                "show-advanced-search": 1,
+                "geotags": 1,
+                "validate-document": 1,
+                "data-ubigeo": 1,
+                "showMoreCategories": 1,
+                "placeholder": 1,
+                "add-class-middle": 1,
+                "send-list-ad-email": 1,
+                "impress-ad-list": 1,
+                "scrollTop": 1,
+                "register-category": 1,
+                "show-example-ads": 1,
+                "show-video": 1,
+                "uploader-photos": 1,
+                "carousel-products": 1,
+                "remove-class-home": 1,
+                "show-photo-products": 1,
+                "count-word": 1,
+                "tinymce-register": 1,
+                "validate-image": 1,
+                "preview-impress": 1,
+                "moduleName": 1,
+                "show-register-trigger": 1,
+                "show-login-trigger": 1,
+                "report-ad": 1,
+                "send-ad-friend": 1,
+                "add-favorites": 1,
+                "venta": 1,
+                "ad-actions": 1,
+                "show-questions": 1,
+                "all-checked-uncheked": 1
+            },
+            "classes": {
+                "tinymce.plugins.AutoSave": 1,
+                "tinymce.plugins.ContextMenu": 1,
+                "jcarousel": 1,
+                "admin": 1,
+                "all-modules": 1,
+                "default": 1,
+                "usuario": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "modules/usuario.js",
+            "line": 1,
+            "description": "Modulo principal de usuario",
+            "since": "0.1.0"
+        },
+        "some-module4": {
+            "name": "some-module4",
+            "submodules": {},
+            "classes": {
+                "admin": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/admin.js",
+            "line": 1,
+            "description": "Module description example 4"
+        },
+        "show-popup": {
+            "name": "show-popup",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/all-modules.js",
+            "line": 8,
+            "description": "Popup para visa ubicado en el footer",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "validate": {
+            "name": "validate",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/all-modules.js",
+            "line": 30,
+            "description": "Validador general para todos los formularios",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "lightbox-logIn-signUp": {
+            "name": "lightbox-logIn-signUp",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/all-modules.js",
+            "line": 49,
+            "description": "LightBox para mostrar ingreso y registro",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "banner-top classified": {
+            "name": "banner-top classified",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/all-modules.js",
+            "line": 171,
+            "description": "Mostrar listado de clasificados en la cabecera de toda la web",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "search-categories": {
+            "name": "search-categories",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/all-modules.js",
+            "line": 195,
+            "description": "Combos dependientes para buscar por la diferentes categorias",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "show-advanced-search": {
+            "name": "show-advanced-search",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/all-modules.js",
+            "line": 274,
+            "description": "Mostrar formulario de busquedas avanzadas",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "geotags": {
+            "name": "geotags",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/all-modules.js",
+            "line": 301,
+            "description": "Muestra los tags de localizacion",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "validate-document": {
+            "name": "validate-document",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/all-modules.js",
+            "line": 393,
+            "description": "Validacion de documentos por diferentes tipos",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "data-ubigeo": {
+            "name": "data-ubigeo",
+            "submodules": {},
+            "classes": {
+                "all-modules": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/all-modules.js",
+            "line": 1,
+            "description": "Mostrar la data del ubigeo",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "showMoreCategories": {
+            "name": "showMoreCategories",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/default.js",
+            "line": 58,
+            "description": "Mostrar mas categorias",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "placeholder": {
+            "name": "placeholder",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/default.js",
+            "line": 116,
+            "description": "PlaceHolder",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "add-class-middle": {
+            "name": "add-class-middle",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/default.js",
+            "line": 134,
+            "description": "Agregar estilo medio para mostrar la galeria del productos",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "send-list-ad-email": {
+            "name": "send-list-ad-email",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/default.js",
+            "line": 150,
+            "description": "Enviar lista de aviso por email",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "impress-ad-list": {
+            "name": "impress-ad-list",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/default.js",
+            "line": 208,
+            "description": "Valida avisos y manda lista para el impreso",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "scrollTop": {
+            "name": "scrollTop",
+            "submodules": {},
+            "classes": {
+                "default": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/default.js",
+            "line": 1,
+            "description": "Envia a la cabecera cuando se tiene una lista muy larga",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "register-category": {
+            "name": "register-category",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 7,
+            "description": "Registrar categoria",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "show-example-ads": {
+            "name": "show-example-ads",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 104,
+            "description": "Mostrar la fotografia de como quedarian los destacados",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "show-video": {
+            "name": "show-video",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 124,
+            "description": "Muestra video pago efectivo",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "uploader-photos": {
+            "name": "uploader-photos",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 187,
+            "description": "Cargador de fotos",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "carousel-products": {
+            "name": "carousel-products",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 255,
+            "description": "Slider para mostrar los productos en la parte inferior del detalle del producto",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "remove-class-home": {
+            "name": "remove-class-home",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 292,
+            "description": "Estilar buscador detalle producto y posiciona la busqueda avanzada",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "show-photo-products": {
+            "name": "show-photo-products",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 310,
+            "description": "Mostrar las fotos del producto",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "count-word": {
+            "name": "count-word",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 335,
+            "description": "Permite contar las palabras escritas",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "tinymce-register": {
+            "name": "tinymce-register",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 366,
+            "description": "Edición de texto de ingreso para el registro de un anuncio",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "validate-image": {
+            "name": "validate-image",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 409,
+            "description": "Envia mensaje para validar la imagen",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "preview-impress": {
+            "name": "preview-impress",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 439,
+            "description": "Muestra la previsualizacion del aviso impreso",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "moduleName": {
+            "name": "moduleName",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 602,
+            "description": "Mostrar formulario de olvidado de contraseña",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "show-register-trigger": {
+            "name": "show-register-trigger",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 622,
+            "description": "Mostrar registro mediante un trigger",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "show-login-trigger": {
+            "name": "show-login-trigger",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 639,
+            "description": "Mostrar login mediante un trigger",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "report-ad": {
+            "name": "report-ad",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 660,
+            "description": "Reportar aviso",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "send-ad-friend": {
+            "name": "send-ad-friend",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 694,
+            "description": "Enviar aviso a un amigo",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "add-favorites": {
+            "name": "add-favorites",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 721,
+            "description": "Añadir a mis favoritos",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "venta": {
+            "name": "venta",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 773,
+            "description": "Aviso-inactivos",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "ad-actions": {
+            "name": "ad-actions",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 882,
+            "description": "eliminar y desactivar para acciones",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "show-questions": {
+            "name": "show-questions",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 962,
+            "description": "Mostrar y constestar las preguntas recibidas",
+            "tag": "main",
+            "itemtype": "main"
+        },
+        "all-checked-uncheked": {
+            "name": "all-checked-uncheked",
+            "submodules": {},
+            "classes": {
+                "usuario": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 1,
+            "description": "Hacer check a toda la lista",
+            "tag": "main",
+            "itemtype": "main"
+        }
+    },
+    "classes": {
+        "tinymce.plugins.AutoSave": {
+            "name": "tinymce.plugins.AutoSave",
+            "shortname": "tinymce.plugins.AutoSave",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "yOSON",
+            "namespace": "",
+            "file": "libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js",
+            "line": 55,
+            "description": "This plugin adds auto-save capability to the TinyMCE text editor to rescue content\ninadvertently lost. By using localStorage."
+        },
+        "tinymce.plugins.ContextMenu": {
+            "name": "tinymce.plugins.ContextMenu",
+            "shortname": "tinymce.plugins.ContextMenu",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "yOSON",
+            "namespace": "",
+            "file": "libs/plugins/tiny_mce/plugins/contextmenu/editor_plugin_src.js",
+            "line": 14,
+            "description": "This plugin a context menu to TinyMCE editor instances."
+        },
+        "jcarousel": {
+            "name": "jcarousel",
+            "shortname": "jcarousel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "yOSON",
+            "namespace": "",
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 53,
+            "description": "The jCarousel object.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "e",
+                    "description": "The element to create the carousel for.",
+                    "type": "HTMLElement"
+                },
+                {
+                    "name": "o",
+                    "description": "A set of key/value pairs to set as configuration properties.",
+                    "type": "Object"
+                }
+            ],
+            "cat": "Plugins/jCarousel"
+        },
+        "admin": {
+            "name": "admin",
+            "shortname": "admin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/admin.js",
+            "line": 1,
+            "description": "Modulo principal de admin",
+            "submodule": "some-module4"
+        },
+        "all-modules": {
+            "name": "all-modules",
+            "shortname": "all-modules",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/all-modules.js",
+            "line": 1,
+            "description": "Modulo principal de all-modules",
+            "submodule": "data-ubigeo"
+        },
+        "default": {
+            "name": "default",
+            "shortname": "default",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/default.js",
+            "line": 1,
+            "description": "Modulo principal de default",
+            "submodule": "scrollTop"
+        },
+        "usuario": {
+            "name": "usuario",
+            "shortname": "usuario",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "yOSON",
+            "namespace": "",
+            "file": "modules/usuario.js",
+            "line": 1,
+            "description": "Modulo principal de usuario",
+            "submodule": "all-checked-uncheked"
+        }
+    },
+    "classitems": [
+        {
+            "file": "application/schemas/modules.js",
+            "line": 11,
+            "description": "List of router modules, router controllers and router actions.",
+            "class": "tinymce.plugins.AutoSave"
+        },
+        {
+            "file": "application/schemas/modules.js",
+            "line": 19,
+            "description": "router actions",
+            "class": "tinymce.plugins.AutoSave"
+        },
+        {
+            "file": "application/schemas/modules.js",
+            "line": 26,
+            "description": "the instructions in byDefault function are executed \nwhen the router controller 'index' hasn't actions defined",
+            "class": "tinymce.plugins.AutoSave"
+        },
+        {
+            "file": "application/schemas/modules.js",
+            "line": 32,
+            "description": "the instructions in allActions function are executed automatically\nfor the router controller 'index', in this case: 'index'",
+            "class": "tinymce.plugins.AutoSave"
+        },
+        {
+            "file": "libs/class/classCookie.js",
+            "line": 4,
+            "description": "Set a cookie",
+            "params": [
+                {
+                    "name": "n",
+                    "description": "name",
+                    "type": "String"
+                },
+                {
+                    "name": "v",
+                    "description": "value",
+                    "type": "Scalar"
+                },
+                {
+                    "name": "days",
+                    "description": "",
+                    "type": "Int"
+                }
+            ],
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/min/jquery.validate.js",
+            "line": 1,
+            "description": "jQuery Validation Plugin 1.9.0\n\nhttp://bassistance.de/jquery-plugins/jquery-plugin-validation/\nhttp://docs.jquery.com/Plugins/Validation\n\nCopyright (c) 2006 - 2011 Jörn Zaefferer\n\nDual licensed under the MIT and GPL licenses:\n  http://www.opensource.org/licenses/mit-license.php\n  http://www.gnu.org/licenses/gpl.html",
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/advhr/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/advimage/editor_plugin.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/advimage/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/advlink/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/advlist/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autolink/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2011, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autolink/editor_plugin_src.js",
+            "line": 13,
+            "description": "Initializes the plugin, this will be executed after the plugin has been created.\nThis call is done before the editor instance has finished it's initialization so use the onInit event\nof the editor instance to intercept that event.",
+            "params": [
+                {
+                    "name": "ed",
+                    "description": "Editor instance that the plugin is initialized in.",
+                    "type": "tinymce.Editor"
+                },
+                {
+                    "name": "url",
+                    "description": "Absolute URL to where the plugin is located.",
+                    "type": "String"
+                }
+            ],
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autolink/editor_plugin_src.js",
+            "line": 165,
+            "description": "Returns information about the plugin as a name/value array.\nThe current keys are longname, author, authorurl, infourl and version.",
+            "return": {
+                "description": "Name/value array containing information about the plugin.",
+                "type": "Object"
+            },
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autoresize/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autoresize/editor_plugin_src.js",
+            "line": 12,
+            "description": "Auto Resize\n\nThis plugin automatically resizes the content area to fit its content height.\nIt will retain a minimum height, which is the height of the content area when\nit's initialized.",
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autoresize/editor_plugin_src.js",
+            "line": 20,
+            "description": "Initializes the plugin, this will be executed after the plugin has been created.\nThis call is done before the editor instance has finished it's initialization so use the onInit event\nof the editor instance to intercept that event.",
+            "params": [
+                {
+                    "name": "ed",
+                    "description": "Editor instance that the plugin is initialized in.",
+                    "type": "tinymce.Editor"
+                },
+                {
+                    "name": "url",
+                    "description": "Absolute URL to where the plugin is located.",
+                    "type": "String"
+                }
+            ],
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autoresize/editor_plugin_src.js",
+            "line": 34,
+            "description": "This method gets executed each time the editor needs to resize.",
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autoresize/editor_plugin_src.js",
+            "line": 100,
+            "description": "Returns information about the plugin as a name/value array.\nThe current keys are longname, author, authorurl, infourl and version.",
+            "return": {
+                "description": "Name/value array containing information about the plugin.",
+                "type": "Object"
+            },
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing\n\nAdds auto-save capability to the TinyMCE text editor to rescue content\ninadvertently lost. This plugin was originally developed by Speednet\nand that project can be found here: http://code.google.com/p/tinyautosave/\n\nTECHNOLOGY DISCUSSION:\n\nThe plugin attempts to use the most advanced features available in the current browser to save\nas much content as possible.  There are a total of four different methods used to autosave the\ncontent.  In order of preference, they are:\n\n1. localStorage - A new feature of HTML 5, localStorage can store megabytes of data per domain\non the client computer. Data stored in the localStorage area has no expiration date, so we must\nmanage expiring the data ourselves.  localStorage is fully supported by IE8, and it is supposed\nto be working in Firefox 3 and Safari 3.2, but in reality is is flaky in those browsers.  As\nHTML 5 gets wider support, the AutoSave plugin will use it automatically. In Windows Vista/7,\nlocalStorage is stored in the following folder:\nC:\\Users\\[username]\\AppData\\Local\\Microsoft\\Internet Explorer\\DOMStore\\[tempFolder]\n\n2. sessionStorage - A new feature of HTML 5, sessionStorage works similarly to localStorage,\nexcept it is designed to expire after a certain amount of time.  Because the specification\naround expiration date/time is very loosely-described, it is preferrable to use locaStorage and\nmanage the expiration ourselves.  sessionStorage has similar storage characteristics to\nlocalStorage, although it seems to have better support by Firefox 3 at the moment.  (That will\ncertainly change as Firefox continues getting better at HTML 5 adoption.)\n\n3. UserData - A very under-exploited feature of Microsoft Internet Explorer, UserData is a\nway to store up to 128K of data per \"document\", or up to 1MB of data per domain, on the client\ncomputer.  The feature is available for IE 5+, which makes it available for every version of IE\nsupported by TinyMCE.  The content is persistent across browser restarts and expires on the\ndate/time specified, just like a cookie.  However, the data is not cleared when the user clears\ncookies on the browser, which makes it well-suited for rescuing autosaved content.  UserData,\nlike other Microsoft IE browser technologies, is implemented as a behavior attached to a\nspecific DOM object, so in this case we attach the behavior to the same DOM element that the\nTinyMCE editor instance is attached to.",
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js",
+            "line": 62,
+            "description": "Initializes the plugin, this will be executed after the plugin has been created.\nThis call is done before the editor instance has finished it's initialization so use the onInit event\nof the editor instance to intercept that event.",
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "ed",
+                    "description": "Editor instance that the plugin is initialized in.",
+                    "type": "tinymce.Editor"
+                },
+                {
+                    "name": "url",
+                    "description": "Absolute URL to where the plugin is located.",
+                    "type": "String"
+                }
+            ],
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js",
+            "line": 147,
+            "description": "This event gets fired when a draft is stored to local storage.",
+            "itemtype": "event",
+            "name": "onStoreDraft",
+            "params": [
+                {
+                    "name": "sender",
+                    "description": "Plugin instance sending the event.",
+                    "type": "tinymce.plugins.AutoSave"
+                },
+                {
+                    "name": "draft",
+                    "description": "Draft object containing the HTML contents of the editor.",
+                    "type": "Object"
+                }
+            ],
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js",
+            "line": 156,
+            "description": "This event gets fired when a draft is restored from local storage.",
+            "itemtype": "event",
+            "name": "onStoreDraft",
+            "params": [
+                {
+                    "name": "sender",
+                    "description": "Plugin instance sending the event.",
+                    "type": "tinymce.plugins.AutoSave"
+                },
+                {
+                    "name": "draft",
+                    "description": "Draft object containing the HTML contents of the editor.",
+                    "type": "Object"
+                }
+            ],
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js",
+            "line": 165,
+            "description": "This event gets fired when a draft removed/expired.",
+            "itemtype": "event",
+            "name": "onRemoveDraft",
+            "params": [
+                {
+                    "name": "sender",
+                    "description": "Plugin instance sending the event.",
+                    "type": "tinymce.plugins.AutoSave"
+                },
+                {
+                    "name": "draft",
+                    "description": "Draft object containing the HTML contents of the editor.",
+                    "type": "Object"
+                }
+            ],
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js",
+            "line": 181,
+            "description": "Returns information about the plugin as a name/value array.\nThe current keys are longname, author, authorurl, infourl and version.",
+            "itemtype": "method",
+            "name": "getInfo",
+            "return": {
+                "description": "Name/value array containing information about the plugin.",
+                "type": "Object"
+            },
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js",
+            "line": 198,
+            "description": "Returns an expiration date UTC string.",
+            "itemtype": "method",
+            "name": "getExpDate",
+            "return": {
+                "description": "Expiration date UTC string.",
+                "type": "String"
+            },
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js",
+            "line": 210,
+            "description": "This method will setup the storage engine. If the browser has support for it.",
+            "itemtype": "method",
+            "name": "setupStorage",
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js",
+            "line": 301,
+            "description": "This method will store the current contents in the the storage engine.",
+            "itemtype": "method",
+            "name": "storeDraft",
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js",
+            "line": 334,
+            "description": "This method will restore the contents from the storage engine back to the editor.",
+            "itemtype": "method",
+            "name": "restoreDraft",
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js",
+            "line": 354,
+            "description": "This method will return true/false if there is a local storage draft available.",
+            "itemtype": "method",
+            "name": "hasDraft",
+            "return": {
+                "description": "true/false state if there is a local draft.",
+                "type": "Boolean"
+            },
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js",
+            "line": 385,
+            "description": "Removes the currently stored draft.",
+            "itemtype": "method",
+            "name": "removeDraft",
+            "class": "tinymce.plugins.AutoSave",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/bbcode/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "tinymce.plugins.ContextMenu",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/contextmenu/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "tinymce.plugins.ContextMenu",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/contextmenu/editor_plugin_src.js",
+            "line": 20,
+            "description": "Initializes the plugin, this will be executed after the plugin has been created.\nThis call is done before the editor instance has finished it's initialization so use the onInit event\nof the editor instance to intercept that event.",
+            "itemtype": "method",
+            "name": "init",
+            "params": [
+                {
+                    "name": "ed",
+                    "description": "Editor instance that the plugin is initialized in.",
+                    "type": "tinymce.Editor"
+                },
+                {
+                    "name": "url",
+                    "description": "Absolute URL to where the plugin is located.",
+                    "type": "String"
+                }
+            ],
+            "class": "tinymce.plugins.ContextMenu",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/contextmenu/editor_plugin_src.js",
+            "line": 36,
+            "description": "This event gets fired when the context menu is shown.",
+            "itemtype": "event",
+            "name": "onContextMenu",
+            "params": [
+                {
+                    "name": "sender",
+                    "description": "Plugin instance sending the event.",
+                    "type": "tinymce.plugins.ContextMenu"
+                },
+                {
+                    "name": "menu",
+                    "description": "Drop down menu to fill with more items if needed.",
+                    "type": "tinymce.ui.DropMenu"
+                }
+            ],
+            "class": "tinymce.plugins.ContextMenu",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/contextmenu/editor_plugin_src.js",
+            "line": 99,
+            "description": "Returns information about the plugin as a name/value array.\nThe current keys are longname, author, authorurl, infourl and version.",
+            "itemtype": "method",
+            "name": "getInfo",
+            "return": {
+                "description": "Name/value array containing information about the plugin.",
+                "type": "Object"
+            },
+            "class": "tinymce.plugins.ContextMenu",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/directionality/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/emotions/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/example/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/example/editor_plugin_src.js",
+            "line": 16,
+            "description": "Initializes the plugin, this will be executed after the plugin has been created.\nThis call is done before the editor instance has finished it's initialization so use the onInit event\nof the editor instance to intercept that event.",
+            "params": [
+                {
+                    "name": "ed",
+                    "description": "Editor instance that the plugin is initialized in.",
+                    "type": "tinymce.Editor"
+                },
+                {
+                    "name": "url",
+                    "description": "Absolute URL to where the plugin is located.",
+                    "type": "String"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/example/editor_plugin_src.js",
+            "line": 51,
+            "description": "Creates control instances based in the incomming name. This method is normally not\nneeded since the addButton method of the tinymce.Editor class is a more easy way of adding buttons\nbut you sometimes need to create more complex controls like listboxes, split buttons etc then this\nmethod can be used to create those.",
+            "params": [
+                {
+                    "name": "n",
+                    "description": "Name of the control to create.",
+                    "type": "String"
+                },
+                {
+                    "name": "cm",
+                    "description": "Control manager to use inorder to create new control.",
+                    "type": "tinymce.ControlManager"
+                }
+            ],
+            "return": {
+                "description": "New control instance or null if no control was created.",
+                "type": "tinymce.ui.Control"
+            },
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/example/editor_plugin_src.js",
+            "line": 65,
+            "description": "Returns information about the plugin as a name/value array.\nThe current keys are longname, author, authorurl, infourl and version.",
+            "return": {
+                "description": "Name/value array containing information about the plugin.",
+                "type": "Object"
+            },
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/example_dependency/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/example_dependency/editor_plugin_src.js",
+            "line": 14,
+            "description": "Initializes the plugin, this will be executed after the plugin has been created.\nThis call is done before the editor instance has finished it's initialization so use the onInit event\nof the editor instance to intercept that event.",
+            "params": [
+                {
+                    "name": "ed",
+                    "description": "Editor instance that the plugin is initialized in.",
+                    "type": "tinymce.Editor"
+                },
+                {
+                    "name": "url",
+                    "description": "Absolute URL to where the plugin is located.",
+                    "type": "String"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/example_dependency/editor_plugin_src.js",
+            "line": 26,
+            "description": "Returns information about the plugin as a name/value array.\nThe current keys are longname, author, authorurl, infourl and version.",
+            "return": {
+                "description": "Name/value array containing information about the plugin.",
+                "type": "Object"
+            },
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/example_dependency/editor_plugin_src.js",
+            "line": 43,
+            "description": "Register the plugin, specifying the list of the plugins that this plugin depends on.  They are specified in a list, with the list loaded in order.\nplugins in this list will be initialised when this plugin is initialized. (before the init method is called).\nplugins in a depends list should typically be specified using the short name).  If neccesary this can be done\nwith an object which has the url to the plugin and the shortname.",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/fullpage/js/fullpage.js",
+            "line": 1,
+            "description": "fullpage.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/fullpage/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/fullscreen/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/iespell/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/inlinepopups/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/insertdatetime/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/layer/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/legacyoutput/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing\n\nThis plugin will force TinyMCE to produce deprecated legacy output such as font elements, u elements, align\nattributes and so forth. There are a few cases where these old items might be needed for example in email applications or with Flash\n\nHowever you should NOT use this plugin if you are building some system that produces web contents such as a CMS. All these elements are\nnot apart of the newer specifications for HTML and XHTML.",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/lists/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2011, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/media/js/embed.js",
+            "line": 1,
+            "description": "This script contains embed functions for common plugins. This scripts are complety free to use for any purpose.",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/media/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/media/editor_plugin_src.js",
+            "line": 233,
+            "description": "Converts the JSON data object to an img node.",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/media/editor_plugin_src.js",
+            "line": 271,
+            "description": "Converts the JSON data object to a HTML string.",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/media/editor_plugin_src.js",
+            "line": 278,
+            "description": "Converts the JSON data object to a HTML string.",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/media/editor_plugin_src.js",
+            "line": 309,
+            "description": "Get type item by extension, class, clsid or mime type.",
+            "itemtype": "method",
+            "name": "getType",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "Value to get type item by.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Type item object or undefined.",
+                "type": "Object"
+            },
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/media/editor_plugin_src.js",
+            "line": 329,
+            "description": "Converts a tinymce.html.Node image element to video/object/embed.",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/media/editor_plugin_src.js",
+            "line": 644,
+            "description": "Converts a tinymce.html.Node video/object/embed to an img element.\n\nThe video/object/embed will be converted into an image placeholder with a JSON data attribute like this:\n<img class=\"mceItemMedia mceItemFlash\" width=\"100\" height=\"100\" data-mce-json=\"{..}\" />\n\nThe JSON structure will be like this:\n{'params':{'flashvars':'something','quality':'high','src':'someurl'}, 'video':{'sources':[{src: 'someurl', type: 'video/mp4'}]}}",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/nonbreaking/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/noneditable/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/pagebreak/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/paste/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/paste/editor_plugin_src.js",
+            "line": 583,
+            "description": "Various post process items.",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/paste/editor_plugin_src.js",
+            "line": 657,
+            "description": "Converts the most common bullet and number formats in Office into a real semantic UL/LI list.",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/paste/editor_plugin_src.js",
+            "line": 738,
+            "description": "Inserts the specified contents at the caret position.",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/paste/editor_plugin_src.js",
+            "line": 751,
+            "description": "Instead of the old plain text method which tried to re-create a paste operation, the\nnew approach adds a plain text mode toggle switch that changes the behavior of paste.\nThis function is passed the same input that the regular paste plugin produces.\nIt performs additional scrubbing and produces (and inserts) the plain text.\nThis approach leverages all of the great existing functionality in the paste\nplugin, and requires minimal changes to add the new functionality.\nSpeednet - June 2009",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/paste/editor_plugin_src.js",
+            "line": 851,
+            "description": "This method will open the old style paste dialogs. Some users might want the old behavior but still use the new cleanup engine.",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/preview/jscripts/embed.js",
+            "line": 1,
+            "description": "This script contains embed functions for common plugins. This scripts are complety free to use for any purpose.",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/preview/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/print/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/save/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/searchreplace/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/spellchecker/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/style/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/tabfocus/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/table/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/table/editor_plugin_src.js",
+            "line": 32,
+            "description": "Table Grid class.",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/table/editor_plugin_src.js",
+            "line": 1295,
+            "description": "Fixes bug in Gecko where shift-enter in table cell does not place caret on new line\n\nRemoved: Since the new enter logic seems to fix this one.",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/template/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/visualblocks/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2012, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/visualchars/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/wordcount/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/abbr.js",
+            "line": 1,
+            "description": "abbr.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/acronym.js",
+            "line": 1,
+            "description": "acronym.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/attributes.js",
+            "line": 1,
+            "description": "attributes.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/cite.js",
+            "line": 1,
+            "description": "cite.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/del.js",
+            "line": 1,
+            "description": "del.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/element_common.js",
+            "line": 1,
+            "description": "element_common.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/xhtmlxtras/js/ins.js",
+            "line": 1,
+            "description": "ins.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/plugins/xhtmlxtras/editor_plugin_src.js",
+            "line": 1,
+            "description": "editor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/themes/advanced/js/charmap.js",
+            "line": 1,
+            "description": "charmap.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/themes/advanced/editor_template_src.js",
+            "line": 1,
+            "description": "editor_template_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/themes/simple/editor_template_src.js",
+            "line": 1,
+            "description": "editor_template_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/utils/editable_selects.js",
+            "line": 1,
+            "description": "editable_selects.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/utils/form_utils.js",
+            "line": 1,
+            "description": "form_utils.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/utils/mctabs.js",
+            "line": 1,
+            "description": "mctabs.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/utils/validate.js",
+            "line": 1,
+            "description": "validate.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/tiny_mce/utils/validate.js",
+            "line": 11,
+            "description": "// String validation:\n\nif (!Validator.isEmail('myemail'))\n\talert('Invalid email.');\n\n// Form validation:\n\nvar f = document.forms['myform'];\n\nif (!Validator.isEmail(f.myemail))\n\talert('Invalid email.');",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 1,
+            "description": "jQuery bxSlider v3.0\nhttp://bxslider.com\n\nCopyright 2011, Steven Wanderski\nhttp://bxcreative.com\n\nFree to use and abuse under the MIT license.\nhttp://www.opensource.org/licenses/mit-license.php",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 109,
+            "description": "Go to specified slide",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 172,
+            "description": "Go to next slide",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 264,
+            "description": "Go to previous slide",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 363,
+            "description": "Go to first slide",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 374,
+            "description": "Go to last slide",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 385,
+            "description": "Get the current slide",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 392,
+            "description": "Get the total slide count",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 399,
+            "description": "Stop the slideshow",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 414,
+            "description": "Start the slideshow",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 429,
+            "description": "Stops the ticker",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 444,
+            "description": "Starts the ticker",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 491,
+            "description": "Initialize a new slideshow",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 605,
+            "description": "Destroy the current slideshow",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 622,
+            "description": "Reload the current slideshow",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 632,
+            "description": "Creates all neccessary styling for the slideshow",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 696,
+            "description": "Depending on mode, lays out children in the proper setup",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 729,
+            "description": "Sets all variables associated with the controls",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 754,
+            "description": "Puts slideshow into auto mode",
+            "params": [
+                {
+                    "name": "int",
+                    "description": "pause number of ms the slideshow will wait between slides"
+                },
+                {
+                    "name": "string",
+                    "description": "direction 'forward', 'backward' sets the direction of the slideshow (forward/backward)"
+                },
+                {
+                    "name": "bool",
+                    "description": "controls determines if start/stop controls will be displayed"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 880,
+            "description": "Sets all variables associated with the controls",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 905,
+            "description": "Handles hover events for auto shows",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 921,
+            "description": "Handles hover events for ticker mode",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 937,
+            "description": "Handles fade animation",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 955,
+            "description": "Makes slide active",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 969,
+            "description": "Displays next/prev controls",
+            "params": [
+                {
+                    "name": "string",
+                    "description": "nextType 'image', 'text'"
+                },
+                {
+                    "name": "string",
+                    "description": "nextContent if type='image', specify a filepath to the image. if type='text', specify text."
+                },
+                {
+                    "name": "string",
+                    "description": "prevType 'image', 'text'"
+                },
+                {
+                    "name": "string",
+                    "description": "prevContent if type='image', specify a filepath to the image. if type='text', specify text."
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 1017,
+            "description": "Displays the paginador",
+            "params": [
+                {
+                    "name": "string",
+                    "description": "type 'full', 'short'"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 1084,
+            "description": "Displays captions",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 1108,
+            "description": "Displays start/stop controls for auto and ticker mode",
+            "params": [
+                {
+                    "name": "string",
+                    "description": "type 'image', 'text'"
+                },
+                {
+                    "name": "string",
+                    "description": "next [optional] if type='image', specify a filepath to the image. if type='text', specify text."
+                },
+                {
+                    "name": "string",
+                    "description": "prev [optional] if type='image', specify a filepath to the image. if type='text', specify text."
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 1158,
+            "description": "Checks if show is in finite mode, and if slide is either first or last, then hides the respective control",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 1179,
+            "description": "Returns the left offset of the slide from the parent container",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 1191,
+            "description": "Returns the width of the wrapper",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 1199,
+            "description": "Returns the height of the wrapper",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqBxSlider.js",
+            "line": 1208,
+            "description": "Returns a sample of an arry and loops back on itself if the end of the array is reached",
+            "params": [
+                {
+                    "name": "array",
+                    "description": "array original array the sample is derived from"
+                },
+                {
+                    "name": "int",
+                    "description": "start array index sample will start"
+                },
+                {
+                    "name": "int",
+                    "description": "length number of items in the sample"
+                },
+                {
+                    "name": "string",
+                    "description": "direction 'forward', 'backward' direction the loop should travel in the array"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqTopHover.js",
+            "line": 1,
+            "description": "topHover - efecto de slideup parametrizado para globitos de nuevo/oferta de un producto",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jqValidate.js",
+            "line": 1,
+            "description": "jQuery Validation Plugin 1.9.0\n\nhttp://bassistance.de/jquery-plugins/jquery-plugin-validation/\nhttp://docs.jquery.com/Plugins/Validation\n\nCopyright (c) 2006 - 2011 JÃ¶rn Zaefferer\n\nDual licensed under the MIT and GPL licenses:\n  http://www.opensource.org/licenses/mit-license.php\n  http://www.gnu.org/licenses/gpl.html",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.featureCarousel.js",
+            "line": 48,
+            "description": "Function to preload the images in the carousel if desired.\nThis is not recommended if there are a lot of images in the carousel because\nit may take a while. Functionality does not depend on preloading the images",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.featureCarousel.js",
+            "line": 111,
+            "description": "Because there are several options the user can set for the width and height\nof the feature images, this function is used to determine which options were set\nand to set the appropriate dimensions used for a small and large feature",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.featureCarousel.js",
+            "line": 154,
+            "description": "Function to take care of setting up various aspects of the carousel,\nmost importantly the default positions for the features",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.featureCarousel.js",
+            "line": 211,
+            "description": "Here all the position data is set for the features.\nThis is an important part of the carousel to keep track of where\neach feature within the carousel is",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.featureCarousel.js",
+            "line": 259,
+            "description": "This function will set up the two different types of trackers used",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.featureCarousel.js",
+            "line": 331,
+            "description": "This function will set the autoplay for the carousel to\nautomatically rotate it given the time in the options\npass in TRUE to just clear the timer",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.featureCarousel.js",
+            "line": 364,
+            "description": "This function is used to animate the given feature to the given\nlocation. Valid locations are \"left\", \"right\", \"center\", \"hidden\"",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.featureCarousel.js",
+            "line": 492,
+            "description": "move the carousel to the left or to the right. The features that\nwill move into the four positions are calculated and then animated\nrotate to the RIGHT when direction is TRUE and\nrotate to the LEFT when direction is FALSE",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.featureCarousel.js",
+            "line": 550,
+            "description": "This will find the shortest distance to travel the carousel from\none position to another position. It will return the shortest distance\nin number form, and will be positive to go to the right and negative for left",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.featureCarousel.js",
+            "line": 669,
+            "description": "PUBLIC FUNCTIONS",
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 212,
+            "description": "Setups the carousel.",
+            "itemtype": "method",
+            "name": "setup",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 245,
+            "description": "Clears the list and resets the carousel.",
+            "itemtype": "method",
+            "name": "reset",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 264,
+            "description": "Reloads the carousel and adjusts positions.",
+            "itemtype": "method",
+            "name": "reload",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 299,
+            "description": "Locks the carousel.",
+            "itemtype": "method",
+            "name": "lock",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 310,
+            "description": "Unlocks the carousel.",
+            "itemtype": "method",
+            "name": "unlock",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 321,
+            "description": "Sets the size of the carousel.",
+            "itemtype": "method",
+            "name": "size",
+            "return": {
+                "description": "undefined"
+            },
+            "params": [
+                {
+                    "name": "s",
+                    "description": "The size of the carousel.",
+                    "type": "Number"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 339,
+            "description": "Checks whether a list element exists for the given index (or index range).",
+            "itemtype": "method",
+            "name": "get",
+            "return": {
+                "description": "bool"
+            },
+            "params": [
+                {
+                    "name": "i",
+                    "description": "The index of the (first) element.",
+                    "type": "Number"
+                },
+                {
+                    "name": "i2",
+                    "description": "The index of the last element.",
+                    "type": "Number"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 366,
+            "description": "Returns a jQuery object with list element for the given index.",
+            "itemtype": "method",
+            "name": "get",
+            "return": {
+                "description": "jQuery"
+            },
+            "params": [
+                {
+                    "name": "i",
+                    "description": "The index of the element.",
+                    "type": "Number"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 377,
+            "description": "Adds an element for the given index to the list.\nIf the element already exists, it updates the inner html.\nReturns the created element as jQuery object.",
+            "itemtype": "method",
+            "name": "add",
+            "return": {
+                "description": "jQuery"
+            },
+            "params": [
+                {
+                    "name": "i",
+                    "description": "The index of the element.",
+                    "type": "Number"
+                },
+                {
+                    "name": "s",
+                    "description": "The innerHTML of the element.",
+                    "type": "String"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 429,
+            "description": "Removes an element for the given index from the list.",
+            "itemtype": "method",
+            "name": "remove",
+            "return": {
+                "description": "undefined"
+            },
+            "params": [
+                {
+                    "name": "i",
+                    "description": "The index of the element.",
+                    "type": "Number"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 455,
+            "description": "Moves the carousel forwards.",
+            "itemtype": "method",
+            "name": "next",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 469,
+            "description": "Moves the carousel backwards.",
+            "itemtype": "method",
+            "name": "prev",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 483,
+            "description": "Scrolls the tail of the carousel.",
+            "itemtype": "method",
+            "name": "scrollTail",
+            "return": {
+                "description": "undefined"
+            },
+            "params": [
+                {
+                    "name": "b",
+                    "description": "Whether scroll the tail back or forward.",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 509,
+            "description": "Scrolls the carousel to a certain position.",
+            "itemtype": "method",
+            "name": "scroll",
+            "return": {
+                "description": "undefined"
+            },
+            "params": [
+                {
+                    "name": "i",
+                    "description": "The index of the element to scoll to.",
+                    "type": "Number"
+                },
+                {
+                    "name": "a",
+                    "description": "Flag indicating whether to perform animation.",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 526,
+            "description": "Prepares the carousel and return the position for a certian index.",
+            "itemtype": "method",
+            "name": "pos",
+            "return": {
+                "description": "",
+                "type": "Number"
+            },
+            "params": [
+                {
+                    "name": "i",
+                    "description": "The index of the element to scoll to.",
+                    "type": "Number"
+                },
+                {
+                    "name": "fv",
+                    "description": "Whether to force last item to be visible.",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 701,
+            "description": "Animates the carousel to a certain position.",
+            "itemtype": "method",
+            "name": "animate",
+            "return": {
+                "description": "undefined"
+            },
+            "params": [
+                {
+                    "name": "p",
+                    "description": "Position to scroll to.",
+                    "type": "Number"
+                },
+                {
+                    "name": "a",
+                    "description": "Flag indicating whether to perform animation.",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 765,
+            "description": "Starts autoscrolling.",
+            "itemtype": "method",
+            "name": "auto",
+            "return": {
+                "description": "undefined"
+            },
+            "params": [
+                {
+                    "name": "s",
+                    "description": "Seconds to periodically autoscroll the content.",
+                    "type": "Number"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 791,
+            "description": "Stops autoscrolling.",
+            "itemtype": "method",
+            "name": "stopAuto",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 802,
+            "description": "Pauses autoscrolling.",
+            "itemtype": "method",
+            "name": "pauseAuto",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 817,
+            "description": "Sets the states of the prev/next buttons.",
+            "itemtype": "method",
+            "name": "buttons",
+            "return": {
+                "description": "undefined"
+            },
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 880,
+            "description": "Notify callback of a specified event.",
+            "itemtype": "method",
+            "name": "notify",
+            "return": {
+                "description": "undefined"
+            },
+            "params": [
+                {
+                    "name": "evt",
+                    "description": "The event name",
+                    "type": "String"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 993,
+            "description": "Gets/Sets the global default configuration properties.",
+            "itemtype": "method",
+            "name": "defaults",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "params": [
+                {
+                    "name": "d",
+                    "description": "A set of key/value pairs to set as configuration properties.",
+                    "type": "Object"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/jquery.jcarousel.js",
+            "line": 1014,
+            "description": "Creates a carousel for all matched elements.",
+            "example": [
+                " $(\"#mycarousel\").jcarousel();"
+            ],
+            "before": "<ul id=\"mycarousel\" class=\"jcarousel-skin-name\"><li>First item</li><li>Second item</li></ul>",
+            "result": "<div class=\"jcarousel-skin-name\">\n  <div class=\"jcarousel-container\">\n    <div class=\"jcarousel-clip\">\n      <ul class=\"jcarousel-list\">\n        <li class=\"jcarousel-item-1\">First item</li>\n        <li class=\"jcarousel-item-2\">Second item</li>\n      </ul>\n    </div>\n    <div disabled=\"disabled\" class=\"jcarousel-prev jcarousel-prev-disabled\"></div>\n    <div class=\"jcarousel-next\"></div>\n  </div>\n</div>",
+            "itemtype": "method",
+            "name": "jcarousel",
+            "return": {
+                "description": "jQuery"
+            },
+            "params": [
+                {
+                    "name": "o",
+                    "description": "A set of key/value pairs to set as configuration properties or a method name to call on a formerly created instance.",
+                    "type": "Hash|String"
+                }
+            ],
+            "class": "jcarousel",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/plugins/uiAutoComplete.js",
+            "line": 1,
+            "jqueryui": "jQuery UI Widget 1.8.16",
+            "dependencias": ": jQuery , QueryUI , jQuery UI Widget , UI Position\n///---------------------------------------------------------------------------------------------------\n(function(d){var e=0;d.widget(\"ui.autocomplete\",{options:{appendTo:\"body\",autoFocus:false,delay:300,minLength:1,position:{my:\"left top\",at:\"left bottom\",collision:\"none\"},source:null},pending:0,_create:function(){var a=this,b=this.element[0].ownerDocument,g;this.element.addClass(\"ui-autocomplete-input\").attr(\"autocomplete\",\"off\").attr({role:\"textbox\",\"aria-autocomplete\":\"list\",\"aria-haspopup\":\"true\"}).bind(\"keydown.autocomplete\",function(c){if(!(a.options.disabled||a.element.propAttr(\"readOnly\"))){g=\nfalse;var f=d.ui.keyCode;switch(c.keyCode){case f.PAGE_UP:a._move(\"previousPage\",c);break;case f.PAGE_DOWN:a._move(\"nextPage\",c);break;case f.UP:a._move(\"previous\",c);c.preventDefault();break;case f.DOWN:a._move(\"next\",c);c.preventDefault();break;case f.ENTER:case f.NUMPAD_ENTER:if(a.menu.active){g=true;c.preventDefault()}case f.TAB:if(!a.menu.active)return;a.menu.select(c);break;case f.ESCAPE:a.element.val(a.term);a.close(c);break;default:clearTimeout(a.searching);a.searching=setTimeout(function(){if(a.term!=\na.element.val()){a.selectedItem=null;a.search(null,c)}},a.options.delay);break}}}).bind(\"keypress.autocomplete\",function(c){if(g){g=false;c.preventDefault()}}).bind(\"focus.autocomplete\",function(){if(!a.options.disabled){a.selectedItem=null;a.previous=a.element.val()}}).bind(\"blur.autocomplete\",function(c){if(!a.options.disabled){clearTimeout(a.searching);a.closing=setTimeout(function(){a.close(c);a._change(c)},150)}});this._initSource();this.response=function(){return a._response.apply(a,arguments)};\nthis.menu=d(\"<ul></ul>\").addClass(\"ui-autocomplete\").appendTo(d(this.options.appendTo||\"body\",b)[0]).mousedown(function(c){var f=a.menu.element[0];d(c.target).closest(\".ui-menu-item\").length||setTimeout(function(){d(document).one(\"mousedown\",function(h){h.target!==a.element[0]&&h.target!==f&&!d.ui.contains(f,h.target)&&a.close()})},1);setTimeout(function(){clearTimeout(a.closing)},13)}).menu({focus:function(c,f){f=f.item.data(\"item.autocomplete\");false!==a._trigger(\"focus\",c,{item:f})&&/^key/.test(c.originalEvent.type)&&\na.element.val(f.value)},selected:function(c,f){var h=f.item.data(\"item.autocomplete\"),i=a.previous;if(a.element[0]!==b.activeElement){a.element.focus();a.previous=i;setTimeout(function(){a.previous=i;a.selectedItem=h},1)}false!==a._trigger(\"select\",c,{item:h})&&a.element.val(h.value);a.term=a.element.val();a.close(c);a.selectedItem=h},blur:function(){a.menu.element.is(\":visible\")&&a.element.val()!==a.term&&a.element.val(a.term)}}).zIndex(this.element.zIndex()+1).css({top:0,left:0}).hide().data(\"menu\");\nd.fn.bgiframe&&this.menu.element.bgiframe()},destroy:function(){this.element.removeClass(\"ui-autocomplete-input\").removeAttr(\"autocomplete\").removeAttr(\"role\").removeAttr(\"aria-autocomplete\").removeAttr(\"aria-haspopup\");this.menu.element.remove();d.Widget.prototype.destroy.call(this)},_setOption:function(a,b){d.Widget.prototype._setOption.apply(this,arguments);a===\"source\"&&this._initSource();if(a===\"appendTo\")this.menu.element.appendTo(d(b||\"body\",this.element[0].ownerDocument)[0]);a===\"disabled\"&&\nb&&this.xhr&&this.xhr.abort()},_initSource:function(){var a=this,b,g;if(d.isArray(this.options.source)){b=this.options.source;this.source=function(c,f){f(d.ui.autocomplete.filter(b,c.term))}}else if(typeof this.options.source===\"string\"){g=this.options.source;this.source=function(c,f){a.xhr&&a.xhr.abort();a.xhr=d.ajax({url:g,data:c,dataType:\"json\",autocompleteRequest:++e,success:function(h){this.autocompleteRequest===e&&f(h)},error:function(){this.autocompleteRequest===e&&f([])}})}}else this.source=\nthis.options.source},search:function(a,b){a=a!=null?a:this.element.val();this.term=this.element.val();if(a.length<this.options.minLength)return this.close(b);clearTimeout(this.closing);if(this._trigger(\"search\",b)!==false)return this._search(a)},_search:function(a){this.pending++;this.element.addClass(\"ui-autocomplete-loading\");this.source({term:a},this.response)},_response:function(a){if(!this.options.disabled&&a&&a.length){a=this._normalize(a);this._suggest(a);this._trigger(\"open\")}else this.close();\nthis.pending--;this.pending||this.element.removeClass(\"ui-autocomplete-loading\")},close:function(a){clearTimeout(this.closing);if(this.menu.element.is(\":visible\")){this.menu.element.hide();this.menu.deactivate();this._trigger(\"close\",a)}},_change:function(a){this.previous!==this.element.val()&&this._trigger(\"change\",a,{item:this.selectedItem})},_normalize:function(a){if(a.length&&a[0].label&&a[0].value)return a;return d.map(a,function(b){if(typeof b===\"string\")return{label:b,value:b};return d.extend({label:b.label||\nb.value,value:b.value||b.label},b)})},_suggest:function(a){var b=this.menu.element.empty().zIndex(this.element.zIndex()+1);this._renderMenu(b,a);this.menu.deactivate();this.menu.refresh();b.show();this._resizeMenu();b.position(d.extend({of:this.element},this.options.position));this.options.autoFocus&&this.menu.next(new d.Event(\"mouseover\"))},_resizeMenu:function(){var a=this.menu.element;a.outerWidth(Math.max(a.width(\"\").outerWidth(),this.element.outerWidth()))},_renderMenu:function(a,b){var g=this;\nd.each(b,function(c,f){g._renderItem(a,f)})},_renderItem:function(a,b){return d(\"<li></li>\").data(\"item.autocomplete\",b).append(d(\"<a></a>\").text(b.label)).appendTo(a)},_move:function(a,b){if(this.menu.element.is(\":visible\"))if(this.menu.first()&&/^previous/.test(a)||this.menu.last()&&/^next/.test(a)){this.element.val(this.term);this.menu.deactivate()}else this.menu[a](b);else this.search(null,b)},widget:function(){return this.menu.element}});d.extend(d.ui.autocomplete,{escapeRegex:function(a){return a.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g,\n\"\\\\$&\")},filter:function(a,b){var g=new RegExp(d.ui.autocomplete.escapeRegex(b),\"i\");return d.grep(a,function(c){return g.test(c.label||c.value||c)})}})})(jQuery);\n(function(d){d.widget(\"ui.menu\",{_create:function(){var e=this;this.element.addClass(\"ui-menu ui-widget ui-widget-content ui-corner-all\").attr({role:\"listbox\",\"aria-activedescendant\":\"ui-active-menuitem\"}).click(function(a){if(d(a.target).closest(\".ui-menu-item a\").length){a.preventDefault();e.select(a)}});this.refresh()},refresh:function(){var e=this;this.element.children(\"li:not(.ui-menu-item):has(a)\").addClass(\"ui-menu-item\").attr(\"role\",\"menuitem\").children(\"a\").addClass(\"ui-corner-all\").attr(\"tabindex\",\n-1).mouseenter(function(a){e.activate(a,d(this).parent())}).mouseleave(function(){e.deactivate()})},activate:function(e,a){this.deactivate();if(this.hasScroll()){var b=a.offset().top-this.element.offset().top,g=this.element.scrollTop(),c=this.element.height();if(b<0)this.element.scrollTop(g+b);else b>=c&&this.element.scrollTop(g+b-c+a.height())}this.active=a.eq(0).children(\"a\").addClass(\"ui-state-hover\").attr(\"id\",\"ui-active-menuitem\").end();this._trigger(\"focus\",e,{item:a})},deactivate:function(){if(this.active){this.active.children(\"a\").removeClass(\"ui-state-hover\").removeAttr(\"id\");\nthis._trigger(\"blur\");this.active=null}},next:function(e){this.move(\"next\",\".ui-menu-item:first\",e)},previous:function(e){this.move(\"prev\",\".ui-menu-item:last\",e)},first:function(){return this.active&&!this.active.prevAll(\".ui-menu-item\").length},last:function(){return this.active&&!this.active.nextAll(\".ui-menu-item\").length},move:function(e,a,b){if(this.active){e=this.active[e+\"All\"](\".ui-menu-item\").eq(0);e.length?this.activate(b,e):this.activate(b,this.element.children(a))}else this.activate(b,\nthis.element.children(a))},nextPage:function(e){if(this.hasScroll())if(!this.active||this.last())this.activate(e,this.element.children(\".ui-menu-item:first\"));else{var a=this.active.offset().top,b=this.element.height(),g=this.element.children(\".ui-menu-item\").filter(function(){var c=d(this).offset().top-a-b+d(this).height();return c<10&&c>-10});g.length||(g=this.element.children(\".ui-menu-item:last\"));this.activate(e,g)}else this.activate(e,this.element.children(\".ui-menu-item\").filter(!this.active||\nthis.last()?\":first\":\":last\"))},previousPage:function(e){if(this.hasScroll())if(!this.active||this.first())this.activate(e,this.element.children(\".ui-menu-item:last\"));else{var a=this.active.offset().top,b=this.element.height();result=this.element.children(\".ui-menu-item\").filter(function(){var g=d(this).offset().top-a+b-d(this).height();return g<10&&g>-10});result.length||(result=this.element.children(\".ui-menu-item:first\"));this.activate(e,result)}else this.activate(e,this.element.children(\".ui-menu-item\").filter(!this.active||\nthis.first()?\":last\":\":first\"))},hasScroll:function(){return this.element.height()<this.element[d.fn.prop?\"prop\":\"attr\"](\"scrollHeight\")},select:function(e){this._trigger(\"selected\",e,{item:this.active})}})})(jQuery);",
+            "jquery": "UI Autocomplete 1.8.16",
+            "class": "admin",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/framework.js",
+            "line": 1,
+            "description": "Framework.js",
+            "class": "admin",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/framework.js",
+            "line": 5,
+            "description": "masking the console",
+            "class": "admin",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/framework.js",
+            "line": 20,
+            "description": "function copy",
+            "class": "admin",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/framework.js",
+            "line": 28,
+            "description": "Remover Items de un array\n\nRemove the second item from the array           :        array.remove(1);\nRemove the second-to-last item from the array   :        array.remove(-2);\nRemove the second and third items from the array:        array.remove(1,2);\nRemove the last and second-to-last items from the array: array.remove(-2,-1);",
+            "return": {
+                "description": "Array con elemento ya eliminado",
+                "type": "Array"
+            },
+            "class": "admin",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/framework.js",
+            "line": 45,
+            "description": "jQuery v1.8.2",
+            "class": "admin",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/framework.js",
+            "line": 49,
+            "description": "placeholder",
+            "class": "admin",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/framework.js",
+            "line": 53,
+            "description": "Effect with Drop and Blind",
+            "class": "admin",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/framework.js",
+            "line": 57,
+            "description": "Background animate",
+            "class": "admin",
+            "module": "yOSON"
+        },
+        {
+            "file": "libs/framework.js",
+            "line": 61,
+            "description": "Toltip para validate",
+            "class": "admin",
+            "module": "yOSON"
+        },
+        {
+            "file": "modules/tmp/admin.js",
+            "line": 1,
+            "description": "index.js - Modulos                                                                           *\nModule    : default                                                                          *\nController: index                                                                            *\n                                                                                             *\nCompany: Perucomsultores.pe                                                                  *\nAuthors: Jaime Rodriguez                                                                     *\n         Jan Sanchez A.                                                                      *\n         Andres Muñoz                                                                        *\n         Erik Flores                                                                         *\n         Brayan Borda                                                                        *",
+            "class": "admin",
+            "module": "yOSON"
+        },
+        {
+            "file": "modules/tmp/index-admin.js",
+            "line": 1,
+            "description": "index.js - Modulos                                                                           *\nModule    : default                                                                          *\nController: index                                                                            *\n                                                                                             *\nCompany: Perucomsultores.pe                                                                  *\nAuthors: Jaime Rodriguez                                                                     *\n         Jan Sanchez A.                                                                      *\n         Andres Muñoz                                                                        *\n         Erik Flores                                                                         *\n         Brayan Borda                                                                        *",
+            "class": "admin",
+            "module": "yOSON"
+        },
+        {
+            "file": "modules/tmp/nombre-del-modulo.js",
+            "line": 1,
+            "description": "index.js - Modulos                                                                           *\nModule    : default                                                                          *\nController: index                                                                            *\n                                                                                             *\nCompany: Perucomsultores.pe                                                                  *\nAuthors: Jaime Rodriguez                                                                     *\n         Jan Sanchez A.                                                                      *\n         Andres Muñoz                                                                        *\n         Erik Flores                                                                         *\n         Brayan Borda                                                                        *",
+            "class": "admin",
+            "module": "yOSON"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "unknown tag: cat",
+            "line": " libs/plugins/jquery.jcarousel.js:53"
+        },
+        {
+            "message": "unknown tag: before",
+            "line": " libs/plugins/jquery.jcarousel.js:1014"
+        },
+        {
+            "message": "unknown tag: result",
+            "line": " libs/plugins/jquery.jcarousel.js:1014"
+        },
+        {
+            "message": "unknown tag: jqueryui",
+            "line": " libs/plugins/uiAutoComplete.js:1"
+        },
+        {
+            "message": "unknown tag: dependencias",
+            "line": " libs/plugins/uiAutoComplete.js:1"
+        },
+        {
+            "message": "unknown tag: jqueryui",
+            "line": " libs/plugins/uiAutoComplete.js:1"
+        },
+        {
+            "message": "unknown tag: dependencias",
+            "line": " libs/plugins/uiAutoComplete.js:1"
+        },
+        {
+            "message": "unknown tag: jquery",
+            "line": " libs/plugins/uiAutoComplete.js:1"
+        },
+        {
+            "message": "unknown tag: dependencias",
+            "line": " libs/plugins/uiAutoComplete.js:1"
+        },
+        {
+            "message": "unknown tag: jquery",
+            "line": " libs/plugins/uiAutoComplete.js:1"
+        },
+        {
+            "message": "unknown tag: dependencias",
+            "line": " libs/plugins/uiAutoComplete.js:1"
+        },
+        {
+            "message": "Missing item type\nList of router modules, router controllers and router actions.",
+            "line": " application/schemas/modules.js:11"
+        },
+        {
+            "message": "Missing item type\nrouter actions",
+            "line": " application/schemas/modules.js:19"
+        },
+        {
+            "message": "Missing item type\nthe instructions in byDefault function are executed \nwhen the router controller 'index' hasn't actions defined",
+            "line": " application/schemas/modules.js:26"
+        },
+        {
+            "message": "Missing item type\nthe instructions in allActions function are executed automatically\nfor the router controller 'index', in this case: 'index'",
+            "line": " application/schemas/modules.js:32"
+        },
+        {
+            "message": "Missing item type\nSet a cookie",
+            "line": " libs/class/classCookie.js:4"
+        },
+        {
+            "message": "Missing item type\njQuery Validation Plugin 1.9.0\n\nhttp://bassistance.de/jquery-plugins/jquery-plugin-validation/\nhttp://docs.jquery.com/Plugins/Validation\n\nCopyright (c) 2006 - 2011 Jörn Zaefferer\n\nDual licensed under the MIT and GPL licenses:\n  http://www.opensource.org/licenses/mit-license.php\n  http://www.gnu.org/licenses/gpl.html",
+            "line": " libs/plugins/min/jquery.validate.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/advhr/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/advimage/editor_plugin.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/advimage/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/advlink/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/advlist/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2011, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/autolink/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\nInitializes the plugin, this will be executed after the plugin has been created.\nThis call is done before the editor instance has finished it's initialization so use the onInit event\nof the editor instance to intercept that event.",
+            "line": " libs/plugins/tiny_mce/plugins/autolink/editor_plugin_src.js:13"
+        },
+        {
+            "message": "Missing item type\nReturns information about the plugin as a name/value array.\nThe current keys are longname, author, authorurl, infourl and version.",
+            "line": " libs/plugins/tiny_mce/plugins/autolink/editor_plugin_src.js:165"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/autoresize/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\nAuto Resize\n\nThis plugin automatically resizes the content area to fit its content height.\nIt will retain a minimum height, which is the height of the content area when\nit's initialized.",
+            "line": " libs/plugins/tiny_mce/plugins/autoresize/editor_plugin_src.js:12"
+        },
+        {
+            "message": "Missing item type\nInitializes the plugin, this will be executed after the plugin has been created.\nThis call is done before the editor instance has finished it's initialization so use the onInit event\nof the editor instance to intercept that event.",
+            "line": " libs/plugins/tiny_mce/plugins/autoresize/editor_plugin_src.js:20"
+        },
+        {
+            "message": "Missing item type\nThis method gets executed each time the editor needs to resize.",
+            "line": " libs/plugins/tiny_mce/plugins/autoresize/editor_plugin_src.js:34"
+        },
+        {
+            "message": "Missing item type\nReturns information about the plugin as a name/value array.\nThe current keys are longname, author, authorurl, infourl and version.",
+            "line": " libs/plugins/tiny_mce/plugins/autoresize/editor_plugin_src.js:100"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing\n\nAdds auto-save capability to the TinyMCE text editor to rescue content\ninadvertently lost. This plugin was originally developed by Speednet\nand that project can be found here: http://code.google.com/p/tinyautosave/\n\nTECHNOLOGY DISCUSSION:\n\nThe plugin attempts to use the most advanced features available in the current browser to save\nas much content as possible.  There are a total of four different methods used to autosave the\ncontent.  In order of preference, they are:\n\n1. localStorage - A new feature of HTML 5, localStorage can store megabytes of data per domain\non the client computer. Data stored in the localStorage area has no expiration date, so we must\nmanage expiring the data ourselves.  localStorage is fully supported by IE8, and it is supposed\nto be working in Firefox 3 and Safari 3.2, but in reality is is flaky in those browsers.  As\nHTML 5 gets wider support, the AutoSave plugin will use it automatically. In Windows Vista/7,\nlocalStorage is stored in the following folder:\nC:\\Users\\[username]\\AppData\\Local\\Microsoft\\Internet Explorer\\DOMStore\\[tempFolder]\n\n2. sessionStorage - A new feature of HTML 5, sessionStorage works similarly to localStorage,\nexcept it is designed to expire after a certain amount of time.  Because the specification\naround expiration date/time is very loosely-described, it is preferrable to use locaStorage and\nmanage the expiration ourselves.  sessionStorage has similar storage characteristics to\nlocalStorage, although it seems to have better support by Firefox 3 at the moment.  (That will\ncertainly change as Firefox continues getting better at HTML 5 adoption.)\n\n3. UserData - A very under-exploited feature of Microsoft Internet Explorer, UserData is a\nway to store up to 128K of data per \"document\", or up to 1MB of data per domain, on the client\ncomputer.  The feature is available for IE 5+, which makes it available for every version of IE\nsupported by TinyMCE.  The content is persistent across browser restarts and expires on the\ndate/time specified, just like a cookie.  However, the data is not cleared when the user clears\ncookies on the browser, which makes it well-suited for rescuing autosaved content.  UserData,\nlike other Microsoft IE browser technologies, is implemented as a behavior attached to a\nspecific DOM object, so in this case we attach the behavior to the same DOM element that the\nTinyMCE editor instance is attached to.",
+            "line": " libs/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/bbcode/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/contextmenu/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/directionality/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/emotions/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/example/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\nInitializes the plugin, this will be executed after the plugin has been created.\nThis call is done before the editor instance has finished it's initialization so use the onInit event\nof the editor instance to intercept that event.",
+            "line": " libs/plugins/tiny_mce/plugins/example/editor_plugin_src.js:16"
+        },
+        {
+            "message": "Missing item type\nCreates control instances based in the incomming name. This method is normally not\nneeded since the addButton method of the tinymce.Editor class is a more easy way of adding buttons\nbut you sometimes need to create more complex controls like listboxes, split buttons etc then this\nmethod can be used to create those.",
+            "line": " libs/plugins/tiny_mce/plugins/example/editor_plugin_src.js:51"
+        },
+        {
+            "message": "Missing item type\nReturns information about the plugin as a name/value array.\nThe current keys are longname, author, authorurl, infourl and version.",
+            "line": " libs/plugins/tiny_mce/plugins/example/editor_plugin_src.js:65"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/example_dependency/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\nInitializes the plugin, this will be executed after the plugin has been created.\nThis call is done before the editor instance has finished it's initialization so use the onInit event\nof the editor instance to intercept that event.",
+            "line": " libs/plugins/tiny_mce/plugins/example_dependency/editor_plugin_src.js:14"
+        },
+        {
+            "message": "Missing item type\nReturns information about the plugin as a name/value array.\nThe current keys are longname, author, authorurl, infourl and version.",
+            "line": " libs/plugins/tiny_mce/plugins/example_dependency/editor_plugin_src.js:26"
+        },
+        {
+            "message": "Missing item type\nRegister the plugin, specifying the list of the plugins that this plugin depends on.  They are specified in a list, with the list loaded in order.\nplugins in this list will be initialised when this plugin is initialized. (before the init method is called).\nplugins in a depends list should typically be specified using the short name).  If neccesary this can be done\nwith an object which has the url to the plugin and the shortname.",
+            "line": " libs/plugins/tiny_mce/plugins/example_dependency/editor_plugin_src.js:43"
+        },
+        {
+            "message": "Missing item type\nfullpage.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/fullpage/js/fullpage.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/fullpage/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/fullscreen/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/iespell/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/inlinepopups/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/insertdatetime/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/layer/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing\n\nThis plugin will force TinyMCE to produce deprecated legacy output such as font elements, u elements, align\nattributes and so forth. There are a few cases where these old items might be needed for example in email applications or with Flash\n\nHowever you should NOT use this plugin if you are building some system that produces web contents such as a CMS. All these elements are\nnot apart of the newer specifications for HTML and XHTML.",
+            "line": " libs/plugins/tiny_mce/plugins/legacyoutput/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2011, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/lists/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\nThis script contains embed functions for common plugins. This scripts are complety free to use for any purpose.",
+            "line": " libs/plugins/tiny_mce/plugins/media/js/embed.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/media/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\nConverts the JSON data object to an img node.",
+            "line": " libs/plugins/tiny_mce/plugins/media/editor_plugin_src.js:233"
+        },
+        {
+            "message": "Missing item type\nConverts the JSON data object to a HTML string.",
+            "line": " libs/plugins/tiny_mce/plugins/media/editor_plugin_src.js:271"
+        },
+        {
+            "message": "Missing item type\nConverts the JSON data object to a HTML string.",
+            "line": " libs/plugins/tiny_mce/plugins/media/editor_plugin_src.js:278"
+        },
+        {
+            "message": "Missing item type\nConverts a tinymce.html.Node image element to video/object/embed.",
+            "line": " libs/plugins/tiny_mce/plugins/media/editor_plugin_src.js:329"
+        },
+        {
+            "message": "Missing item type\nConverts a tinymce.html.Node video/object/embed to an img element.\n\nThe video/object/embed will be converted into an image placeholder with a JSON data attribute like this:\n<img class=\"mceItemMedia mceItemFlash\" width=\"100\" height=\"100\" data-mce-json=\"{..}\" />\n\nThe JSON structure will be like this:\n{'params':{'flashvars':'something','quality':'high','src':'someurl'}, 'video':{'sources':[{src: 'someurl', type: 'video/mp4'}]}}",
+            "line": " libs/plugins/tiny_mce/plugins/media/editor_plugin_src.js:644"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/nonbreaking/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/noneditable/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/pagebreak/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/paste/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\nVarious post process items.",
+            "line": " libs/plugins/tiny_mce/plugins/paste/editor_plugin_src.js:583"
+        },
+        {
+            "message": "Missing item type\nConverts the most common bullet and number formats in Office into a real semantic UL/LI list.",
+            "line": " libs/plugins/tiny_mce/plugins/paste/editor_plugin_src.js:657"
+        },
+        {
+            "message": "Missing item type\nInserts the specified contents at the caret position.",
+            "line": " libs/plugins/tiny_mce/plugins/paste/editor_plugin_src.js:738"
+        },
+        {
+            "message": "Missing item type\nInstead of the old plain text method which tried to re-create a paste operation, the\nnew approach adds a plain text mode toggle switch that changes the behavior of paste.\nThis function is passed the same input that the regular paste plugin produces.\nIt performs additional scrubbing and produces (and inserts) the plain text.\nThis approach leverages all of the great existing functionality in the paste\nplugin, and requires minimal changes to add the new functionality.\nSpeednet - June 2009",
+            "line": " libs/plugins/tiny_mce/plugins/paste/editor_plugin_src.js:751"
+        },
+        {
+            "message": "Missing item type\nThis method will open the old style paste dialogs. Some users might want the old behavior but still use the new cleanup engine.",
+            "line": " libs/plugins/tiny_mce/plugins/paste/editor_plugin_src.js:851"
+        },
+        {
+            "message": "Missing item type\nThis script contains embed functions for common plugins. This scripts are complety free to use for any purpose.",
+            "line": " libs/plugins/tiny_mce/plugins/preview/jscripts/embed.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/preview/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/print/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/save/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/searchreplace/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/spellchecker/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/style/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/tabfocus/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/table/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\nTable Grid class.",
+            "line": " libs/plugins/tiny_mce/plugins/table/editor_plugin_src.js:32"
+        },
+        {
+            "message": "Missing item type\nFixes bug in Gecko where shift-enter in table cell does not place caret on new line\n\nRemoved: Since the new enter logic seems to fix this one.",
+            "line": " libs/plugins/tiny_mce/plugins/table/editor_plugin_src.js:1295"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/template/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2012, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/visualblocks/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/visualchars/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/wordcount/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\nabbr.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/xhtmlxtras/js/abbr.js:1"
+        },
+        {
+            "message": "Missing item type\nacronym.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/xhtmlxtras/js/acronym.js:1"
+        },
+        {
+            "message": "Missing item type\nattributes.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/xhtmlxtras/js/attributes.js:1"
+        },
+        {
+            "message": "Missing item type\ncite.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/xhtmlxtras/js/cite.js:1"
+        },
+        {
+            "message": "Missing item type\ndel.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/xhtmlxtras/js/del.js:1"
+        },
+        {
+            "message": "Missing item type\nelement_common.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/xhtmlxtras/js/element_common.js:1"
+        },
+        {
+            "message": "Missing item type\nins.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/xhtmlxtras/js/ins.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_plugin_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/plugins/xhtmlxtras/editor_plugin_src.js:1"
+        },
+        {
+            "message": "Missing item type\ncharmap.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/themes/advanced/js/charmap.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_template_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/themes/advanced/editor_template_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditor_template_src.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/themes/simple/editor_template_src.js:1"
+        },
+        {
+            "message": "Missing item type\neditable_selects.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/utils/editable_selects.js:1"
+        },
+        {
+            "message": "Missing item type\nform_utils.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/utils/form_utils.js:1"
+        },
+        {
+            "message": "Missing item type\nmctabs.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/utils/mctabs.js:1"
+        },
+        {
+            "message": "Missing item type\nvalidate.js\n\nCopyright 2009, Moxiecode Systems AB\nReleased under LGPL License.\n\nLicense: http://tinymce.moxiecode.com/license\nContributing: http://tinymce.moxiecode.com/contributing",
+            "line": " libs/plugins/tiny_mce/utils/validate.js:1"
+        },
+        {
+            "message": "Missing item type\n// String validation:\n\nif (!Validator.isEmail('myemail'))\n\talert('Invalid email.');\n\n// Form validation:\n\nvar f = document.forms['myform'];\n\nif (!Validator.isEmail(f.myemail))\n\talert('Invalid email.');",
+            "line": " libs/plugins/tiny_mce/utils/validate.js:11"
+        },
+        {
+            "message": "Missing item type\njQuery bxSlider v3.0\nhttp://bxslider.com\n\nCopyright 2011, Steven Wanderski\nhttp://bxcreative.com\n\nFree to use and abuse under the MIT license.\nhttp://www.opensource.org/licenses/mit-license.php",
+            "line": " libs/plugins/jqBxSlider.js:1"
+        },
+        {
+            "message": "Missing item type\nGo to specified slide",
+            "line": " libs/plugins/jqBxSlider.js:109"
+        },
+        {
+            "message": "Missing item type\nGo to next slide",
+            "line": " libs/plugins/jqBxSlider.js:172"
+        },
+        {
+            "message": "Missing item type\nGo to previous slide",
+            "line": " libs/plugins/jqBxSlider.js:264"
+        },
+        {
+            "message": "Missing item type\nGo to first slide",
+            "line": " libs/plugins/jqBxSlider.js:363"
+        },
+        {
+            "message": "Missing item type\nGo to last slide",
+            "line": " libs/plugins/jqBxSlider.js:374"
+        },
+        {
+            "message": "Missing item type\nGet the current slide",
+            "line": " libs/plugins/jqBxSlider.js:385"
+        },
+        {
+            "message": "Missing item type\nGet the total slide count",
+            "line": " libs/plugins/jqBxSlider.js:392"
+        },
+        {
+            "message": "Missing item type\nStop the slideshow",
+            "line": " libs/plugins/jqBxSlider.js:399"
+        },
+        {
+            "message": "Missing item type\nStart the slideshow",
+            "line": " libs/plugins/jqBxSlider.js:414"
+        },
+        {
+            "message": "Missing item type\nStops the ticker",
+            "line": " libs/plugins/jqBxSlider.js:429"
+        },
+        {
+            "message": "Missing item type\nStarts the ticker",
+            "line": " libs/plugins/jqBxSlider.js:444"
+        },
+        {
+            "message": "Missing item type\nInitialize a new slideshow",
+            "line": " libs/plugins/jqBxSlider.js:491"
+        },
+        {
+            "message": "Missing item type\nDestroy the current slideshow",
+            "line": " libs/plugins/jqBxSlider.js:605"
+        },
+        {
+            "message": "Missing item type\nReload the current slideshow",
+            "line": " libs/plugins/jqBxSlider.js:622"
+        },
+        {
+            "message": "Missing item type\nCreates all neccessary styling for the slideshow",
+            "line": " libs/plugins/jqBxSlider.js:632"
+        },
+        {
+            "message": "Missing item type\nDepending on mode, lays out children in the proper setup",
+            "line": " libs/plugins/jqBxSlider.js:696"
+        },
+        {
+            "message": "Missing item type\nSets all variables associated with the controls",
+            "line": " libs/plugins/jqBxSlider.js:729"
+        },
+        {
+            "message": "Missing item type\nPuts slideshow into auto mode",
+            "line": " libs/plugins/jqBxSlider.js:754"
+        },
+        {
+            "message": "Missing item type\nSets all variables associated with the controls",
+            "line": " libs/plugins/jqBxSlider.js:880"
+        },
+        {
+            "message": "Missing item type\nHandles hover events for auto shows",
+            "line": " libs/plugins/jqBxSlider.js:905"
+        },
+        {
+            "message": "Missing item type\nHandles hover events for ticker mode",
+            "line": " libs/plugins/jqBxSlider.js:921"
+        },
+        {
+            "message": "Missing item type\nHandles fade animation",
+            "line": " libs/plugins/jqBxSlider.js:937"
+        },
+        {
+            "message": "Missing item type\nMakes slide active",
+            "line": " libs/plugins/jqBxSlider.js:955"
+        },
+        {
+            "message": "Missing item type\nDisplays next/prev controls",
+            "line": " libs/plugins/jqBxSlider.js:969"
+        },
+        {
+            "message": "Missing item type\nDisplays the paginador",
+            "line": " libs/plugins/jqBxSlider.js:1017"
+        },
+        {
+            "message": "Missing item type\nDisplays captions",
+            "line": " libs/plugins/jqBxSlider.js:1084"
+        },
+        {
+            "message": "Missing item type\nDisplays start/stop controls for auto and ticker mode",
+            "line": " libs/plugins/jqBxSlider.js:1108"
+        },
+        {
+            "message": "Missing item type\nChecks if show is in finite mode, and if slide is either first or last, then hides the respective control",
+            "line": " libs/plugins/jqBxSlider.js:1158"
+        },
+        {
+            "message": "Missing item type\nReturns the left offset of the slide from the parent container",
+            "line": " libs/plugins/jqBxSlider.js:1179"
+        },
+        {
+            "message": "Missing item type\nReturns the width of the wrapper",
+            "line": " libs/plugins/jqBxSlider.js:1191"
+        },
+        {
+            "message": "Missing item type\nReturns the height of the wrapper",
+            "line": " libs/plugins/jqBxSlider.js:1199"
+        },
+        {
+            "message": "Missing item type\nReturns a sample of an arry and loops back on itself if the end of the array is reached",
+            "line": " libs/plugins/jqBxSlider.js:1208"
+        },
+        {
+            "message": "Missing item type\ntopHover - efecto de slideup parametrizado para globitos de nuevo/oferta de un producto",
+            "line": " libs/plugins/jqTopHover.js:1"
+        },
+        {
+            "message": "Missing item type\njQuery Validation Plugin 1.9.0\n\nhttp://bassistance.de/jquery-plugins/jquery-plugin-validation/\nhttp://docs.jquery.com/Plugins/Validation\n\nCopyright (c) 2006 - 2011 JÃ¶rn Zaefferer\n\nDual licensed under the MIT and GPL licenses:\n  http://www.opensource.org/licenses/mit-license.php\n  http://www.gnu.org/licenses/gpl.html",
+            "line": " libs/plugins/jqValidate.js:1"
+        },
+        {
+            "message": "Missing item type\nFunction to preload the images in the carousel if desired.\nThis is not recommended if there are a lot of images in the carousel because\nit may take a while. Functionality does not depend on preloading the images",
+            "line": " libs/plugins/jquery.featureCarousel.js:48"
+        },
+        {
+            "message": "Missing item type\nBecause there are several options the user can set for the width and height\nof the feature images, this function is used to determine which options were set\nand to set the appropriate dimensions used for a small and large feature",
+            "line": " libs/plugins/jquery.featureCarousel.js:111"
+        },
+        {
+            "message": "Missing item type\nFunction to take care of setting up various aspects of the carousel,\nmost importantly the default positions for the features",
+            "line": " libs/plugins/jquery.featureCarousel.js:154"
+        },
+        {
+            "message": "Missing item type\nHere all the position data is set for the features.\nThis is an important part of the carousel to keep track of where\neach feature within the carousel is",
+            "line": " libs/plugins/jquery.featureCarousel.js:211"
+        },
+        {
+            "message": "Missing item type\nThis function will set up the two different types of trackers used",
+            "line": " libs/plugins/jquery.featureCarousel.js:259"
+        },
+        {
+            "message": "Missing item type\nThis function will set the autoplay for the carousel to\nautomatically rotate it given the time in the options\npass in TRUE to just clear the timer",
+            "line": " libs/plugins/jquery.featureCarousel.js:331"
+        },
+        {
+            "message": "Missing item type\nThis function is used to animate the given feature to the given\nlocation. Valid locations are \"left\", \"right\", \"center\", \"hidden\"",
+            "line": " libs/plugins/jquery.featureCarousel.js:364"
+        },
+        {
+            "message": "Missing item type\nmove the carousel to the left or to the right. The features that\nwill move into the four positions are calculated and then animated\nrotate to the RIGHT when direction is TRUE and\nrotate to the LEFT when direction is FALSE",
+            "line": " libs/plugins/jquery.featureCarousel.js:492"
+        },
+        {
+            "message": "Missing item type\nThis will find the shortest distance to travel the carousel from\none position to another position. It will return the shortest distance\nin number form, and will be positive to go to the right and negative for left",
+            "line": " libs/plugins/jquery.featureCarousel.js:550"
+        },
+        {
+            "message": "Missing item type\nPUBLIC FUNCTIONS",
+            "line": " libs/plugins/jquery.featureCarousel.js:669"
+        },
+        {
+            "message": "Missing item type",
+            "line": " libs/plugins/uiAutoComplete.js:1"
+        },
+        {
+            "message": "Missing item type\nFramework.js",
+            "line": " libs/framework.js:1"
+        },
+        {
+            "message": "Missing item type\nmasking the console",
+            "line": " libs/framework.js:5"
+        },
+        {
+            "message": "Missing item type\nfunction copy",
+            "line": " libs/framework.js:20"
+        },
+        {
+            "message": "Missing item type\nRemover Items de un array\n\nRemove the second item from the array           :        array.remove(1);\nRemove the second-to-last item from the array   :        array.remove(-2);\nRemove the second and third items from the array:        array.remove(1,2);\nRemove the last and second-to-last items from the array: array.remove(-2,-1);",
+            "line": " libs/framework.js:28"
+        },
+        {
+            "message": "Missing item type\njQuery v1.8.2",
+            "line": " libs/framework.js:45"
+        },
+        {
+            "message": "Missing item type\nplaceholder",
+            "line": " libs/framework.js:49"
+        },
+        {
+            "message": "Missing item type\nEffect with Drop and Blind",
+            "line": " libs/framework.js:53"
+        },
+        {
+            "message": "Missing item type\nBackground animate",
+            "line": " libs/framework.js:57"
+        },
+        {
+            "message": "Missing item type\nToltip para validate",
+            "line": " libs/framework.js:61"
+        },
+        {
+            "message": "Missing item type\nindex.js - Modulos                                                                           *\nModule    : default                                                                          *\nController: index                                                                            *\n                                                                                             *\nCompany: Perucomsultores.pe                                                                  *\nAuthors: Jaime Rodriguez                                                                     *\n         Jan Sanchez A.                                                                      *\n         Andres Muñoz                                                                        *\n         Erik Flores                                                                         *\n         Brayan Borda                                                                        *",
+            "line": " modules/tmp/admin.js:1"
+        },
+        {
+            "message": "Missing item type\nindex.js - Modulos                                                                           *\nModule    : default                                                                          *\nController: index                                                                            *\n                                                                                             *\nCompany: Perucomsultores.pe                                                                  *\nAuthors: Jaime Rodriguez                                                                     *\n         Jan Sanchez A.                                                                      *\n         Andres Muñoz                                                                        *\n         Erik Flores                                                                         *\n         Brayan Borda                                                                        *",
+            "line": " modules/tmp/index-admin.js:1"
+        },
+        {
+            "message": "Missing item type\nindex.js - Modulos                                                                           *\nModule    : default                                                                          *\nController: index                                                                            *\n                                                                                             *\nCompany: Perucomsultores.pe                                                                  *\nAuthors: Jaime Rodriguez                                                                     *\n         Jan Sanchez A.                                                                      *\n         Andres Muñoz                                                                        *\n         Erik Flores                                                                         *\n         Brayan Borda                                                                        *",
+            "line": " modules/tmp/nombre-del-modulo.js:1"
+        }
+    ]
+}

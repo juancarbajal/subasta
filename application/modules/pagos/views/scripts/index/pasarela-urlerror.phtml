@@ -1,0 +1,48 @@
+<div class="pasarela-ok container">
+   <h2 class="k-title mb10"><span></span>Confirmaci&oacute;n de Pasarela</h2>
+   <div class="message-gateway">
+        <h3>!Lo sentimos, no se pudo procesar la operaci&oacute;n </h3>
+        <p>Hemos recibido el pago de tu operaci&oacute;n por Pasarela con los siguientes datos</p>
+        <div class="form-horizontal mb20">
+            <div class="control-group first">
+                <label class="control-label"><strong>Medio de Pago:</strong></label>
+                <div class="controls"><?php echo $this->medioPago; ?></div>
+            </div>
+            <div class="control-group first">
+                <label class="control-label"><strong>Transacci&oacute;n:</strong></label>
+                <div class="controls"><?php echo $this->idTransaccion; ?></div>
+            </div>
+            <div class="control-group first">
+                <label class="control-label"><strong>Monto:</strong></label>
+                <div class="controls"><?php echo $this->monto; ?></div>
+            </div>
+            <div class="control-group first">
+                <label class="control-label"><strong>Fecha de error:</strong></label>
+                <div class="controls"><?php echo $this->fechaPasarela;  ?></div>
+            </div>
+            <div class="control-group first">
+                <label class="control-label"><strong>Motivo de error:</strong></label>
+                <div class="controls"><?php echo $this->errorPasarela; ?></div>
+            </div>
+            <div class="control">
+                <a class="btn-kotear" href="<?=$this->baseUrl()?>/usuario/venta/pendiente-pago">Volver</a>
+            </div> 
+        </div>
+        <ul class="list">
+            <li >Una copia de esta operación ha sido enviada a tu correo <a><?php echo $this->mail?></a></li>
+            <li >Los cargos asociados a esta operación se han retomado a pendiente de pago, intenta nuevamente a realizar el pago o sino comunícate con nuestra central de <a href="mailto:info@kotear.pe">Atención al Cliente</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="paydetail" class="hide">
+    <h2>Kotear | Envío de correo</h2>
+    <div class="content">
+
+    </div>
+
+     <p class="buttons">
+        <button name="cancel" type="button" value="Cancelar" class="btn-close"><span>Cerrar</span></button>
+    </p>
+</div>

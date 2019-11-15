@@ -1,0 +1,239 @@
+<?php
+$aIdDestaque = $this->arrEditAviso->idDestaque;
+$arrPaso = $this->arrPaso;
+$paso = $arrPaso->pasoSgte;
+$arrDestaquesActivas = $this->arrDestaquesActivas;
+?>
+<div class="container">
+    <div class="head-step">
+        <div class="step-title">
+            <h3 class="k-title"><span></span><?php
+                        switch($this->publicacionEstado) {
+                            case 1 : ?>Publicar: Paso 1 - Seleccionar Destaques al Aviso<?php break;
+                            case 3 : ?>Destacar: Paso 1 - Modificar Selección de Destaques al Aviso<?php break;
+                            case 4 : ?>Republicar: Paso 1 - Actualizar Destaques al Aviso<?php break;
+                            default : break;
+                        }
+                    ?>
+            </h3>
+            <p>Elige que exposición quieres darle a tu aviso.</p>
+        </div>
+        <ul class="step-progress">
+            <?if($arrPaso->paso1){?><li><span>Destaca el Aviso</span><span class="icon-on-step"></span></li><?}?>
+            <?if($arrPaso->paso2){?><li><span>Selecciona el Rubro</span><span class="icon-off-step"></span></li><?}?>
+            <?if($arrPaso->paso3){?><li><span>Datos del Aviso</span><span class="icon-off-step"></span></li><?}?>
+            <?if($arrPaso->paso4){?><li><span>Confirmación</span><span class="icon-off-step"></span></li><?}?>
+        </ul>
+    </div> <!-- content-header -->
+    <?php if (empty($this->msg['error'])){ ?>
+    <div class="error">
+        <?=$this->msg['error']?>
+    </div>
+    <?php } ?>
+    <?php if ($this->verificaCIP == 0) { ?>
+    <div class="steps-options">
+        <?php if(!empty($this->sesionPaso1)){ ?>
+        <div class="rbox"><?=$this->sesionPaso1?></div>
+        <?php } ?>
+        <div class="steps-align row">
+            <!-- GRATIS -->
+            <?php 
+                $plan = 2;
+                $habilitado = ($plan > $aIdDestaque)?1:0; 
+            ?>
+            <ul class="free fix">
+                <li class="title">
+                    <h1><?=$arrDestaquesActivas[$plan]['TIT']?></h1>
+                    <a class="show-example-img" title="Ejemplo aviso basico" 
+                       href="<?=$this->baseUrl()?>/usuario/publicacion/box-tipo-destaque/id/1">
+                        Mira el ejemplo
+                    </a>
+                </li>
+                <li class="price">
+                    <h2>
+                        <a class="btn-price-highlight <?=($habilitado==1)?'':'not-available'?>" href="javascript:;" 
+                           destaqueId="<?=$plan?>" paso="<?=$paso?>" 
+                           habilitado="<?=$habilitado?>">
+                            <?=($habilitado==1)?'Gratis':'No disponible'?>
+                        </a>
+<?php /* <!--                            <a class=" logout" href="/usuario/publicacion/registro-categoria/destaqueId/2"  data="">Gratis</a>--> */?>
+                    </h2>
+                </li>
+                <li class="day"><h3><?=$arrDestaquesActivas[$plan]['DIAS_PUB']?> DÍAS</h3><span>de publicación en Kotear.pe</span></li>
+                <li class="photo"><h3><?=$arrDestaquesActivas[$plan]['CANT_FOTO']?> FOTO</h3><span>en la web</span></li>
+                <li class="impress-detail"><span>Tu aviso podrá aparecer en la web.</span></li>
+                <li class="detail"></li> 
+                <li class="important"><span>Sin prioridad en resultado de búsqueda y/o listados</span></li>
+                <li class="c-continue">
+                    <a class="btn-continuar-highlight" href="javascript:;" destaqueId="<?=$plan?>" paso="<?=$paso?>" 
+                       habilitado="<?=$habilitado?>">
+                        <?=($habilitado==1)?'Continuar':'No disponible'?>
+                    </a>
+<?php /* <!--                            <a href="< ?php echo $this->baseUrl() . '/usuario/publicacion/registro-categoria/destaqueId/2'; ?>" >Continuar</a>-->                        */ ?>
+                </li>
+            </ul>
+
+            <!-- SILVER -->
+            <?php 
+                $plan = 5;
+                $habilitado = ($plan > $aIdDestaque)?1:0; 
+            ?>
+            <ul class="silver marginl">
+                <li class="title">
+                        <h1><?=$arrDestaquesActivas[$plan]['TIT']?></h1>
+                    <a class="show-example-img" title="Ejemplo aviso silver" 
+                       href="<?=$this->baseUrl()?>/usuario/publicacion/box-tipo-destaque/id/2">
+                        Mira el ejemplo
+                    </a>
+                </li>
+                <li class="price">
+                    <h2>
+                        <a class="btn-price-highlight <?=($habilitado==1)?'':'not-available'?>" href="javascript:;" 
+                           destaqueId="<?=$plan?>" paso="<?=$paso?>" 
+                           habilitado="<?=$habilitado?>">
+                            <?=($habilitado==1)?'S/. '.number_format($arrDestaquesActivas[$plan]['MONTO'], 2):'No disponible'?>
+                        </a>
+<!--                            <a class=" logout" href="/usuario/publicacion/registro-categoria/destaqueId/5"  data="">S/. 10.00</a>-->
+                    </h2>
+                </li>
+                <li class="day"><h3><?=$arrDestaquesActivas[$plan]['DIAS_PUB']?> DÍAS</h3><span>de publicación en kotear.pe</span></li>
+                <li class="photo"><h3><?=$arrDestaquesActivas[$plan]['CANT_FOTO']?> FOTOS</h3><span>en la web</span></li>
+                <li class="impress-detail"><span>Tu aviso podrá aparecer la web.</span></li>
+                <li class="detail">
+                    <ul>
+                        <li><span class="square-black"></span>Resaltado en listado.</li>
+                        <li><span class="square-black"></span>Tendrá exposición de datos.</li>
+                    </ul>
+                </li>
+                <li class="important"><span>Prioridad baja en resultado de búsqueda y/o listados</span></li>
+                <li class="c-continue">
+                    <a class="btn-continuar-highlight" href="javascript:;" destaqueId="<?=$plan?>" paso="<?=$paso?>" 
+                       habilitado="<?=$habilitado?>">
+                        <?=($habilitado==1)?'Continuar':'No disponible'?>
+                    </a>
+<!--                            <a id="simple"  class="go logout" href="< ?php echo $this->baseUrl() . '/usuario/publicacion/registro-categoria/destaqueId/5'; ?>"  data="">Continuar</a>-->
+                </li>
+            </ul>
+
+            <!-- GOLD -->
+            <?php 
+                $plan = 9;
+                $habilitado = ($plan > $aIdDestaque)?1:0; 
+            ?>
+            <ul class="gold marginl">
+                <li class="title">
+                    <h1><?=$arrDestaquesActivas[$plan]['TIT']?></h1>
+                    <a class="show-example-img" title="Ejemplo aviso gold" 
+                       href="<?=$this->baseUrl()?>/usuario/publicacion/box-tipo-destaque/id/3">
+                        Mira el ejemplo
+                    </a>
+                </li>
+                <li class="price">
+                    <h2>
+                        <a class="btn-price-highlight <?=($habilitado==1)?'':'not-available'?>" href="javascript:;" 
+                           destaqueId="<?=$plan?>" paso="<?=$paso?>" 
+                           habilitado="<?=$habilitado?>">
+                            <?=($habilitado==1)?'S/. '.number_format($arrDestaquesActivas[$plan]['MONTO'], 2):'No disponible'?>
+<!--                            <a class=" logout" href="/usuario/publicacion/registro-categoria/destaqueId/9"  data="">S/. 10.00</a>-->
+                        </a>
+                    </h2>
+                </li>
+                <li class="day"><h3><?=$arrDestaquesActivas[$plan]['DIAS_PUB']?> DÍAS</h3><span>de publicación en kotear.pe</span></li>
+                <li class="photo"><h3><?=$arrDestaquesActivas[$plan]['CANT_FOTO']?> FOTOS</h3><span>en la web</span></li>
+                <li class="impress-detail">
+                    <span>Aviso en</span>
+                    <h3>VERSION IMPRESA CON FOTO</h3>
+                    <div class="specification">Título: <?=$arrDestaquesActivas[$plan]['NUM_TIT_IMP']?> caracteres</div>
+                    <div class="specification">Cuerpo: <?=$arrDestaquesActivas[$plan]['NUM_WORD_IMP']?> palabras</div>
+                </li>
+                <li class="detail">
+                    <ul>
+                        <li>
+                            <span class="square-black"></span>
+                            Será publicado en la edición impresa del día domingo.
+                            <span class="red">*</span>
+                        </li>
+                        <li><span class="square-black"></span>Aparecerá en Página Principal.</li>
+                        <li><span class="square-black"></span>Estará resaltado en listado.</li>
+                        <li><span class="square-black"></span>Tendrá exposición de datos.</li>
+                    </ul>
+                </li>
+                <li class="important"><span>Prioridad media en resultado de búsqueda y/o listados</span></li>
+                <li class="c-continue">
+                    <a class="btn-continuar-highlight" href="javascript:;" destaqueId="<?=$plan?>" paso="<?=$paso?>" 
+                       habilitado="<?=$habilitado?>">
+                        <?=($habilitado==1)?'Continuar':'No disponible'?>
+                    </a>
+<!--                            <a id="simple"  class="go logout" href="< ?php echo $this->baseUrl() . '/usuario/publicacion/registro-categoria/destaqueId/9'; ?>"  data="">Continuar</a>-->
+                </li>
+            </ul>
+
+            <!-- PLATINIUM -->
+            <?php 
+                $plan = 10;
+                $habilitado = ($plan > $aIdDestaque)?1:0; 
+            ?>
+            <ul class="platinium marginl">
+                <li class="title">
+                    <h1><?=$arrDestaquesActivas[$plan]['TIT']?></h1>
+                    <a class="show-example-img" title="Ejemplo aviso platinium" href="<?=$this->baseUrl()?>/usuario/publicacion/box-tipo-destaque/id/4">
+                        Mira el ejemplo
+                    </a>
+                </li>
+                <li class="price">
+                    <h2>
+                        <a class="btn-price-highlight <?=($habilitado==1)?'':'not-available'?>" href="javascript:;" 
+                           destaqueId="<?=$plan?>" paso="<?=$paso?>" 
+                           habilitado="<?=$habilitado?>">
+                            <?=($habilitado==1)?'S/. '.number_format($arrDestaquesActivas[$plan]['MONTO'], 2):'No disponible'?>
+                        </a>
+<!--                            <a class=" logout" href="/usuario/publicacion/registro-categoria/destaqueId/10"  data="">S/. 10.00</a>-->
+                    </h2>
+                </li>
+                <li class="day"><h3><?=$arrDestaquesActivas[$plan]['DIAS_PUB']?> DÍAS</h3><span>de publicación en kotear.pe</span></li>
+                <li class="photo"><h3>FOTOS ILIMITADAS</h3></li>
+                <li class="impress-detail">
+                    <span>Aviso en</span>
+                    <h3>VERSION IMPRESA CON FOTO</h3>
+                    <div class="specification">Título: <?=$arrDestaquesActivas[$plan]['NUM_TIT_IMP']?> caracteres</div>
+                    <div class="specification">Cuerpo: <?=$arrDestaquesActivas[$plan]['NUM_WORD_IMP']?> palabras</div>
+                </li>
+                <li class="detail">
+                    <ul>
+                        <li>
+                            <span class="square-black"></span>
+                            Será publicado en la edición impresa del día domingo.
+                            <span class="red">*</span>
+                        </li>
+                        <li><span class="square-black"></span>Aparecerá en Página Principal.</li>
+                        <li><span class="square-black"></span>Aparecerá en Página Principal de la Categoría.</li>
+                        <li><span class="square-black"></span>Estará resaltado en listado.</li>
+                        <li><span class="square-black"></span>Tendrá exposición de datos.</li>
+                        <li><span class="square-black"></span>Aparecerá en el boletín de Kotear.pe.</li>
+                    </ul>
+                </li>
+                <li class="important"><span>Prioridad alta en resultado de búsqueda y/o listados</span></li>
+                <li class="c-continue">
+                    <a class="btn-continuar-highlight" href="javascript:;" destaqueId="<?=$plan?>" paso="<?=$paso?>" 
+                       habilitado="<?=$habilitado?>">
+                        <?=($habilitado==1)?'Continuar':'No disponible'?>
+                    </a>
+<?php /* <!--                            <a id="simple"  class="go logout" href="< ?php echo $this->baseUrl() . '/usuario/publicacion/registro-categoria/destaqueId/10'; ?>"  data="">Continuar</a>--> */ ?>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p class="obs"><span>*</span> Serán publicados en los Clasificados de El Comercio, sección de Oportunidades.</p>
+    <?php } else {?>
+    <div class="cont_felicitaciones">
+        <h3>Transacción pendiente de pago</h3>
+        <p class="block"> En este momento existe una transacción generada pendiente de pago. Hasta que finalice
+        dicha operación no se podrá cambiar los destaques de su aviso.</p>
+    </div>
+    <?php } ?>
+</div>
+<form id="next-form-destaque" method="post" action="" paso2="usuario/publicacion/registro-categoria/" paso3="usuario/publicacion/registro-datos/">
+    <input id="idDestaqueHidden" type="hidden" name="destaqueId" value="">
+    <?//=$this->form->atoken->renderViewHelper()?>
+    <?=($this->form->idAviso)?$this->form->idAviso->renderViewHelper():''?>
+</form>

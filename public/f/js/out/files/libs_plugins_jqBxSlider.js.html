@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>libs&#x2F;plugins&#x2F;jqBxSlider.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.7.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.7.0&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/admin.html">admin</a></li>
+            
+                <li><a href="..&#x2F;classes/all-modules.html">all-modules</a></li>
+            
+                <li><a href="..&#x2F;classes/default.html">default</a></li>
+            
+                <li><a href="..&#x2F;classes/jcarousel.html">jcarousel</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.AutoSave.html">tinymce.plugins.AutoSave</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.ContextMenu.html">tinymce.plugins.ContextMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/usuario.html">usuario</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/ad-actions.html">ad-actions</a></li>
+            
+                <li><a href="..&#x2F;modules/add-class-middle.html">add-class-middle</a></li>
+            
+                <li><a href="..&#x2F;modules/add-favorites.html">add-favorites</a></li>
+            
+                <li><a href="..&#x2F;modules/all-checked-uncheked.html">all-checked-uncheked</a></li>
+            
+                <li><a href="..&#x2F;modules/banner-top classified.html">banner-top classified</a></li>
+            
+                <li><a href="..&#x2F;modules/carousel-products.html">carousel-products</a></li>
+            
+                <li><a href="..&#x2F;modules/count-word.html">count-word</a></li>
+            
+                <li><a href="..&#x2F;modules/data-ubigeo.html">data-ubigeo</a></li>
+            
+                <li><a href="..&#x2F;modules/geotags.html">geotags</a></li>
+            
+                <li><a href="..&#x2F;modules/impress-ad-list.html">impress-ad-list</a></li>
+            
+                <li><a href="..&#x2F;modules/lightbox-logIn-signUp.html">lightbox-logIn-signUp</a></li>
+            
+                <li><a href="..&#x2F;modules/moduleName.html">moduleName</a></li>
+            
+                <li><a href="..&#x2F;modules/placeholder.html">placeholder</a></li>
+            
+                <li><a href="..&#x2F;modules/preview-impress.html">preview-impress</a></li>
+            
+                <li><a href="..&#x2F;modules/register-category.html">register-category</a></li>
+            
+                <li><a href="..&#x2F;modules/remove-class-home.html">remove-class-home</a></li>
+            
+                <li><a href="..&#x2F;modules/report-ad.html">report-ad</a></li>
+            
+                <li><a href="..&#x2F;modules/scrollTop.html">scrollTop</a></li>
+            
+                <li><a href="..&#x2F;modules/search-categories.html">search-categories</a></li>
+            
+                <li><a href="..&#x2F;modules/send-ad-friend.html">send-ad-friend</a></li>
+            
+                <li><a href="..&#x2F;modules/send-list-ad-email.html">send-list-ad-email</a></li>
+            
+                <li><a href="..&#x2F;modules/show-advanced-search.html">show-advanced-search</a></li>
+            
+                <li><a href="..&#x2F;modules/show-example-ads.html">show-example-ads</a></li>
+            
+                <li><a href="..&#x2F;modules/show-login-trigger.html">show-login-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-photo-products.html">show-photo-products</a></li>
+            
+                <li><a href="..&#x2F;modules/show-popup.html">show-popup</a></li>
+            
+                <li><a href="..&#x2F;modules/show-questions.html">show-questions</a></li>
+            
+                <li><a href="..&#x2F;modules/show-register-trigger.html">show-register-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-video.html">show-video</a></li>
+            
+                <li><a href="..&#x2F;modules/showMoreCategories.html">showMoreCategories</a></li>
+            
+                <li><a href="..&#x2F;modules/some-module4.html">some-module4</a></li>
+            
+                <li><a href="..&#x2F;modules/tinymce-register.html">tinymce-register</a></li>
+            
+                <li><a href="..&#x2F;modules/uploader-photos.html">uploader-photos</a></li>
+            
+                <li><a href="..&#x2F;modules/validate.html">validate</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-document.html">validate-document</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-image.html">validate-image</a></li>
+            
+                <li><a href="..&#x2F;modules/venta.html">venta</a></li>
+            
+                <li><a href="..&#x2F;modules/yOSON.html">yOSON</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: libs&#x2F;plugins&#x2F;jqBxSlider.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * jQuery bxSlider v3.0
+ * http:&#x2F;&#x2F;bxslider.com
+ *
+ * Copyright 2011, Steven Wanderski
+ * http:&#x2F;&#x2F;bxcreative.com
+ *
+ * Free to use and abuse under the MIT license.
+ * http:&#x2F;&#x2F;www.opensource.org&#x2F;licenses&#x2F;mit-license.php
+ * 
+ *&#x2F;
+
+
+(function($){
+	
+    $.fn.bxSlider = function(options){		
+	                                  			
+        var defaults = {
+            mode: &#x27;horizontal&#x27;,     									&#x2F;&#x2F; &#x27;horizontal&#x27;, &#x27;vertical&#x27;, &#x27;fade&#x27;
+            infiniteLoop: true,     									&#x2F;&#x2F; true, false - display first slide after last
+            hideControlOnEnd: false,						&#x2F;&#x2F; true, false - if true, will hide &#x27;next&#x27; control on last slide and &#x27;prev&#x27; control on first
+            controls: true,         											&#x2F;&#x2F; true, false - previous and next controls
+            speed: 500,             													&#x2F;&#x2F; integer - in ms, duration of time slide transitions will occupy
+            easing: &#x27;swing&#x27;,                    &#x2F;&#x2F; used with jquery.easing.1.3.js - see http:&#x2F;&#x2F;gsgd.co.uk&#x2F;sandbox&#x2F;jquery&#x2F;easing&#x2F; for available options
+            paginador: false,                        												&#x2F;&#x2F; true &#x2F; false - display a paginador
+            paginadorSelector: null,                 								&#x2F;&#x2F; jQuery selector - element to contain the paginador. ex: &#x27;#paginador&#x27;
+            paginadorType: &#x27;full&#x27;,                   									&#x2F;&#x2F; &#x27;full&#x27;, &#x27;short&#x27; - if &#x27;full&#x27; paginador displays 1,2,3... if &#x27;short&#x27; paginador displays 1 &#x2F; 4
+            paginadorLocation: &#x27;bottom&#x27;,             						&#x2F;&#x2F; &#x27;bottom&#x27;, &#x27;top&#x27; - location of paginador
+            paginadorShortSeparator: &#x27;&#x2F;&#x27;,            						&#x2F;&#x2F; string - ex: &#x27;of&#x27; paginador would display 1 of 4
+            paginadorActiveClass: &#x27;paginador-active&#x27;,		&#x2F;&#x2F; string - classname attached to the active paginador link
+            nextText: &#x27;next&#x27;,                        										&#x2F;&#x2F; string - text displayed for &#x27;next&#x27; control
+            nextImage: &#x27;&#x27;,                           											&#x2F;&#x2F; string - filepath of image used for &#x27;next&#x27; control. ex: &#x27;images&#x2F;next.jpg&#x27;
+            nextSelector: null,                      									&#x2F;&#x2F; jQuery selector - element to contain the next control. ex: &#x27;#next&#x27;
+            prevText: &#x27;prev&#x27;,                        										&#x2F;&#x2F; string - text displayed for &#x27;previous&#x27; control
+            prevImage: &#x27;&#x27;,                           											&#x2F;&#x2F; string - filepath of image used for &#x27;previous&#x27; control. ex: &#x27;images&#x2F;prev.jpg&#x27;
+            prevSelector: null,                      									&#x2F;&#x2F; jQuery selector - element to contain the previous control. ex: &#x27;#next&#x27;
+            captions: false,                         										&#x2F;&#x2F; true, false - display image captions (reads the image &#x27;title&#x27; tag)
+            captionsSelector: null,                  							&#x2F;&#x2F; jQuery selector - element to contain the captions. ex: &#x27;#captions&#x27;
+            auto: false,                             												&#x2F;&#x2F; true, false - make slideshow change automatically
+            autoDirection: &#x27;next&#x27;,                   							&#x2F;&#x2F; &#x27;next&#x27;, &#x27;prev&#x27; - direction in which auto show will traverse
+            autoControls: false,                     								&#x2F;&#x2F; true, false - show &#x27;start&#x27; and &#x27;stop&#x27; controls for auto show
+            autoControlsSelector: null,              					&#x2F;&#x2F; jQuery selector - element to contain the auto controls. ex: &#x27;#auto-controls&#x27;
+            autoStart: true,                         										&#x2F;&#x2F; true, false - if false show will wait for &#x27;start&#x27; control to activate
+            autoHover: false,                        										&#x2F;&#x2F; true, false - if true show will pause on mouseover
+            autoDelay: 0,                       &#x2F;&#x2F; integer - in ms, the amount of time before starting the auto show
+            pause: 3000,            												&#x2F;&#x2F; integer - in ms, the duration between each slide transition
+            startText: &#x27;start&#x27;,     									&#x2F;&#x2F; string - text displayed for &#x27;start&#x27; control
+            startImage: &#x27;&#x27;,         											&#x2F;&#x2F; string - filepath of image used for &#x27;start&#x27; control. ex: &#x27;images&#x2F;start.jpg&#x27;
+            stopText: &#x27;stop&#x27;,       										&#x2F;&#x2F; string - text displayed for &#x27;stop&#x27; control
+            stopImage: &#x27;&#x27;,          											&#x2F;&#x2F; string - filepath of image used for &#x27;stop&#x27; control. ex: &#x27;images&#x2F;stop.jpg&#x27;
+            ticker: false,          											&#x2F;&#x2F; true, false - continuous motion ticker mode (think news ticker)
+            &#x2F;&#x2F; note: autoControls, autoControlsSelector, and autoHover apply to ticker!
+            tickerSpeed: 5000,      								  &#x2F;&#x2F; float - use value between 1 and 5000 to determine ticker speed - the smaller the value the faster the ticker speed
+            tickerDirection: &#x27;next&#x27;,						&#x2F;&#x2F; &#x27;next&#x27;, &#x27;prev&#x27; - direction in which ticker show will traverse
+            tickerHover: false,                 &#x2F;&#x2F; true, false - if true ticker will pause on mouseover
+            wrapperClass: &#x27;bx-wrapper&#x27;, 					&#x2F;&#x2F; string - classname attached to the slider wraper
+            startingSlide: 0,           									&#x2F;&#x2F; integer - show will start on specified slide. note: slides are zero based!
+            displaySlideQty: 1,         									&#x2F;&#x2F; integer - number of slides to display at once
+            moveSlideQty: 1,            										&#x2F;&#x2F; integer - number of slides to move at once
+            randomStart: false,         									&#x2F;&#x2F; true, false - if true show will start on a random slide
+            onBeforeSlide: function(){},				&#x2F;&#x2F; function(currentSlideNumber, totalSlideQty, currentSlideHtmlObject) - advanced use only! see the tutorial here: http:&#x2F;&#x2F;bxslider.com&#x2F;custom-paginador
+            onAfterSlide: function(){}, 					&#x2F;&#x2F; function(currentSlideNumber, totalSlideQty, currentSlideHtmlObject) - advanced use only! see the tutorial here: http:&#x2F;&#x2F;bxslider.com&#x2F;custom-paginador
+            onLastSlide: function(){},  					&#x2F;&#x2F; function(currentSlideNumber, totalSlideQty, currentSlideHtmlObject) - advanced use only! see the tutorial here: http:&#x2F;&#x2F;bxslider.com&#x2F;custom-paginador
+            onFirstSlide: function(){}, 					&#x2F;&#x2F; function(currentSlideNumber, totalSlideQty, currentSlideHtmlObject) - advanced use only! see the tutorial here: http:&#x2F;&#x2F;bxslider.com&#x2F;custom-paginador
+            onNextSlide: function(){},  					&#x2F;&#x2F; function(currentSlideNumber, totalSlideQty, currentSlideHtmlObject) - advanced use only! see the tutorial here: http:&#x2F;&#x2F;bxslider.com&#x2F;custom-paginador
+            onPrevSlide: function(){},  					&#x2F;&#x2F; function(currentSlideNumber, totalSlideQty, currentSlideHtmlObject) - advanced use only! see the tutorial here: http:&#x2F;&#x2F;bxslider.com&#x2F;custom-paginador
+            buildpaginador: null        										&#x2F;&#x2F; function(slideIndex, slideHtmlObject){ return string; } - advanced use only! see the tutorial here: http:&#x2F;&#x2F;bxslider.com&#x2F;custom-paginador
+        }
+	                                  	
+        var options = $.extend(defaults, options);
+	                                  	
+        &#x2F;&#x2F; cache the base element
+        var base = this;
+        &#x2F;&#x2F; initialize (and localize) all variables
+        var $parent = &#x27;&#x27;;
+        var $origElement = &#x27;&#x27;;
+        var $children = &#x27;&#x27;;
+        var $outerWrapper = &#x27;&#x27;;
+        var $firstChild = &#x27;&#x27;;
+        var childrenWidth = &#x27;&#x27;;
+        var childrenOuterWidth = &#x27;&#x27;;
+        var wrapperWidth = &#x27;&#x27;;
+        var wrapperHeight = &#x27;&#x27;;
+        var $paginador = &#x27;&#x27;;	
+        var interval = &#x27;&#x27;;
+        var $autoControls = &#x27;&#x27;;
+        var $stopHtml = &#x27;&#x27;;
+        var $startContent = &#x27;&#x27;;
+        var $stopContent = &#x27;&#x27;;
+        var autoPlaying = true;
+        var loaded = false;
+        var childrenMaxWidth = 0;
+        var childrenMaxHeight = 0;
+        var currentSlide = 0;	
+        var origLeft = 0;
+        var origTop = 0;
+        var origShowWidth = 0;
+        var origShowHeight = 0;
+        var tickerLeft = 0;
+        var tickerTop = 0;
+        var isWorking = false;
+    
+        var firstSlide = 0;
+        var lastSlide = $children.length - 1;
+		
+						
+        &#x2F;&#x2F; PUBLIC FUNCTIONS
+						
+        &#x2F;**
+		 * Go to specified slide
+		 *&#x2F;		
+        this.goToSlide = function(number, stopAuto){
+            if(!isWorking){
+                isWorking = true;
+                &#x2F;&#x2F; set current slide to argument
+                currentSlide = number;
+                options.onBeforeSlide(currentSlide, $children.length, $children.eq(currentSlide));
+                &#x2F;&#x2F; check if stopAuto argument is supplied
+                if(typeof(stopAuto) == &#x27;undefined&#x27;){
+                    var stopAuto = true;
+                }
+                if(stopAuto){
+                    &#x2F;&#x2F; if show is auto playing, stop it
+                    if(options.auto){
+                        base.stopShow(true);
+                    }
+                }			
+                slide = number;
+                &#x2F;&#x2F; check for first slide callback
+                if(slide == firstSlide){
+                    options.onFirstSlide(currentSlide, $children.length, $children.eq(currentSlide));
+                }
+                &#x2F;&#x2F; check for last slide callback
+                if(slide == lastSlide){
+                    options.onLastSlide(currentSlide, $children.length, $children.eq(currentSlide));
+                }
+                &#x2F;&#x2F; horizontal
+                if(options.mode == &#x27;horizontal&#x27;){
+                    $parent.animate({
+                        &#x27;left&#x27;: &#x27;-&#x27;+getSlidePosition(slide, &#x27;left&#x27;)+&#x27;px&#x27;
+                        }, options.speed, options.easing, function(){
+                        isWorking = false;
+                        &#x2F;&#x2F; perform the callback function
+                        options.onAfterSlide(currentSlide, $children.length, $children.eq(currentSlide));
+                    });
+                &#x2F;&#x2F; vertical
+                }else if(options.mode == &#x27;vertical&#x27;){
+                    $parent.animate({
+                        &#x27;top&#x27;: &#x27;-&#x27;+getSlidePosition(slide, &#x27;top&#x27;)+&#x27;px&#x27;
+                        }, options.speed, options.easing, function(){
+                        isWorking = false;
+                        &#x2F;&#x2F; perform the callback function
+                        options.onAfterSlide(currentSlide, $children.length, $children.eq(currentSlide));
+                    });			
+                &#x2F;&#x2F; fade	
+                }else if(options.mode == &#x27;fade&#x27;){
+                    setChildrenFade();
+                }
+                &#x2F;&#x2F; check to remove controls on last&#x2F;first slide
+                checkEndControls();
+                &#x2F;&#x2F; accomodate multi slides
+                if(options.moveSlideQty &gt; 1){
+                    number = Math.floor(number &#x2F; options.moveSlideQty);
+                }
+                &#x2F;&#x2F; make the current slide active
+                makeSlideActive(number);
+                &#x2F;&#x2F; display the caption
+                showCaptions();
+            }
+        }
+		
+        &#x2F;**
+		 * Go to next slide
+		 *&#x2F;		
+        this.goToNextSlide = function(stopAuto){
+            &#x2F;&#x2F; check if stopAuto argument is supplied
+            if(typeof(stopAuto) == &#x27;undefined&#x27;){
+                var stopAuto = true;
+            }
+            if(stopAuto){
+                &#x2F;&#x2F; if show is auto playing, stop it
+                if(options.auto){
+                    base.stopShow(true);
+                }
+            }			
+            &#x2F;&#x2F; makes slideshow finite
+            if(!options.infiniteLoop){
+                if(!isWorking){
+                    var slideLoop = false;
+                    &#x2F;&#x2F; make current slide the old value plus moveSlideQty
+                    currentSlide = (currentSlide + (options.moveSlideQty));
+                    &#x2F;&#x2F; if current slide has looped on itself
+                    if(currentSlide &lt;= lastSlide){
+                        checkEndControls();
+                        &#x2F;&#x2F; next slide callback
+                        options.onNextSlide(currentSlide, $children.length, $children.eq(currentSlide));
+                        &#x2F;&#x2F; move to appropriate slide
+                        base.goToSlide(currentSlide);						
+                    }else{
+                        currentSlide -= options.moveSlideQty;
+                    }
+                } &#x2F;&#x2F; end if(!isWorking)		
+            }else{ 
+                if(!isWorking){
+                    isWorking = true;					
+                    var slideLoop = false;
+                    &#x2F;&#x2F; make current slide the old value plus moveSlideQty
+                    currentSlide = (currentSlide + options.moveSlideQty);
+                    &#x2F;&#x2F; if current slide has looped on itself
+                    if(currentSlide &gt; lastSlide){
+                        currentSlide = currentSlide % $children.length;
+                        slideLoop = true;
+                    }
+                    &#x2F;&#x2F; next slide callback
+                    options.onNextSlide(currentSlide, $children.length, $children.eq(currentSlide));
+                    &#x2F;&#x2F; slide before callback
+                    options.onBeforeSlide(currentSlide, $children.length, $children.eq(currentSlide));
+                    if(options.mode == &#x27;horizontal&#x27;){						
+                        &#x2F;&#x2F; get the new &#x27;left&#x27; property for $parent
+                        var parentLeft = (options.moveSlideQty * childrenOuterWidth);
+                        &#x2F;&#x2F; animate to the new &#x27;left&#x27;
+                        $parent.animate({
+                            &#x27;left&#x27;: &#x27;-=&#x27;+parentLeft+&#x27;px&#x27;
+                            }, options.speed, options.easing, function(){
+                            isWorking = false;
+                            &#x2F;&#x2F; if its time to loop, reset the $parent
+                            if(slideLoop){
+                                $parent.css(&#x27;left&#x27;, &#x27;-&#x27;+getSlidePosition(currentSlide, &#x27;left&#x27;)+&#x27;px&#x27;);
+                            }
+                            &#x2F;&#x2F; perform the callback function
+                            options.onAfterSlide(currentSlide, $children.length, $children.eq(currentSlide));
+                        });
+                    }else if(options.mode == &#x27;vertical&#x27;){
+                        &#x2F;&#x2F; get the new &#x27;left&#x27; property for $parent
+                        var parentTop = (options.moveSlideQty * childrenMaxHeight);
+                        &#x2F;&#x2F; animate to the new &#x27;left&#x27;
+                        $parent.animate({
+                            &#x27;top&#x27;: &#x27;-=&#x27;+parentTop+&#x27;px&#x27;
+                            }, options.speed, options.easing, function(){
+                            isWorking = false;
+                            &#x2F;&#x2F; if its time to loop, reset the $parent
+                            if(slideLoop){
+                                $parent.css(&#x27;top&#x27;, &#x27;-&#x27;+getSlidePosition(currentSlide, &#x27;top&#x27;)+&#x27;px&#x27;);
+                            }
+                            &#x2F;&#x2F; perform the callback function
+                            options.onAfterSlide(currentSlide, $children.length, $children.eq(currentSlide));
+                        });
+                    }else if(options.mode == &#x27;fade&#x27;){
+                        setChildrenFade();
+                    }					
+                    &#x2F;&#x2F; make the current slide active
+                    if(options.moveSlideQty &gt; 1){
+                        makeSlideActive(Math.ceil(currentSlide &#x2F; options.moveSlideQty));
+                    }else{
+                        makeSlideActive(currentSlide);
+                    }
+                    &#x2F;&#x2F; display the caption
+                    showCaptions();
+                } &#x2F;&#x2F; end if(!isWorking)
+				
+            }	
+        } &#x2F;&#x2F; end function
+		
+        &#x2F;**
+		 * Go to previous slide
+		 *&#x2F;		
+        this.goToPreviousSlide = function(stopAuto){
+            &#x2F;&#x2F; check if stopAuto argument is supplied
+            if(typeof(stopAuto) == &#x27;undefined&#x27;){
+                var stopAuto = true;
+            }
+            if(stopAuto){
+                &#x2F;&#x2F; if show is auto playing, stop it
+                if(options.auto){
+                    base.stopShow(true);
+                }
+            }			
+            &#x2F;&#x2F; makes slideshow finite
+            if(!options.infiniteLoop){	
+                if(!isWorking){
+                    var slideLoop = false;
+                    &#x2F;&#x2F; make current slide the old value plus moveSlideQty
+                    currentSlide = currentSlide - options.moveSlideQty;
+                    &#x2F;&#x2F; if current slide has looped on itself
+                    if(currentSlide &lt; 0){
+                        currentSlide = 0;
+                        &#x2F;&#x2F; if specified, hide the control on the last slide
+                        if(options.hideControlOnEnd){
+                            $(&#x27;.bx-prev&#x27;, $outerWrapper).hide();
+                        }
+                    }
+                    checkEndControls();
+                    &#x2F;&#x2F; next slide callback
+                    options.onPrevSlide(currentSlide, $children.length, $children.eq(currentSlide));
+                    &#x2F;&#x2F; move to appropriate slide
+                    base.goToSlide(currentSlide);
+                }							
+            }else{
+                if(!isWorking){
+                    isWorking = true;			
+                    var slideLoop = false;
+                    &#x2F;&#x2F; make current slide the old value plus moveSlideQty
+                    currentSlide = (currentSlide - (options.moveSlideQty));
+                    &#x2F;&#x2F; if current slide has looped on itself
+                    if(currentSlide &lt; 0){
+                        negativeOffset = (currentSlide % $children.length);
+                        if(negativeOffset == 0){
+                            currentSlide = 0;
+                        }else{
+                            currentSlide = ($children.length) + negativeOffset; 
+                        }
+                        slideLoop = true;
+                    }
+                    &#x2F;&#x2F; next slide callback
+                    options.onPrevSlide(currentSlide, $children.length, $children.eq(currentSlide));
+                    &#x2F;&#x2F; slide before callback
+                    options.onBeforeSlide(currentSlide, $children.length, $children.eq(currentSlide));
+                    if(options.mode == &#x27;horizontal&#x27;){
+                        &#x2F;&#x2F; get the new &#x27;left&#x27; property for $parent
+                        var parentLeft = (options.moveSlideQty * childrenOuterWidth);
+                        &#x2F;&#x2F; animate to the new &#x27;left&#x27;
+                        $parent.animate({
+                            &#x27;left&#x27;: &#x27;+=&#x27;+parentLeft+&#x27;px&#x27;
+                            }, options.speed, options.easing, function(){
+                            isWorking = false;
+                            &#x2F;&#x2F; if its time to loop, reset the $parent
+                            if(slideLoop){
+                                $parent.css(&#x27;left&#x27;, &#x27;-&#x27;+getSlidePosition(currentSlide, &#x27;left&#x27;)+&#x27;px&#x27;);
+                            }
+                            &#x2F;&#x2F; perform the callback function
+                            options.onAfterSlide(currentSlide, $children.length, $children.eq(currentSlide));
+                        });
+                    }else if(options.mode == &#x27;vertical&#x27;){
+                        &#x2F;&#x2F; get the new &#x27;left&#x27; property for $parent
+                        var parentTop = (options.moveSlideQty * childrenMaxHeight);
+                        &#x2F;&#x2F; animate to the new &#x27;left&#x27;
+                        $parent.animate({
+                            &#x27;top&#x27;: &#x27;+=&#x27;+parentTop+&#x27;px&#x27;
+                            }, options.speed, options.easing, function(){
+                            isWorking = false;
+                            &#x2F;&#x2F; if its time to loop, reset the $parent
+                            if(slideLoop){
+                                $parent.css(&#x27;top&#x27;, &#x27;-&#x27;+getSlidePosition(currentSlide, &#x27;top&#x27;)+&#x27;px&#x27;);
+                            }
+                            &#x2F;&#x2F; perform the callback function
+                            options.onAfterSlide(currentSlide, $children.length, $children.eq(currentSlide));
+                        });
+                    }else if(options.mode == &#x27;fade&#x27;){
+                        setChildrenFade();
+                    }					
+                    &#x2F;&#x2F; make the current slide active
+                    if(options.moveSlideQty &gt; 1){
+                        makeSlideActive(Math.ceil(currentSlide &#x2F; options.moveSlideQty));
+                    }else{
+                        makeSlideActive(currentSlide);
+                    }
+                    &#x2F;&#x2F; display the caption
+                    showCaptions();
+                } &#x2F;&#x2F; end if(!isWorking)				
+            }
+        } &#x2F;&#x2F; end function
+		
+        &#x2F;**
+		 * Go to first slide
+		 *&#x2F;		
+        this.goToFirstSlide = function(stopAuto){
+            &#x2F;&#x2F; check if stopAuto argument is supplied
+            if(typeof(stopAuto) == &#x27;undefined&#x27;){
+                var stopAuto = true;
+            }
+            base.goToSlide(firstSlide, stopAuto);
+        }
+		
+        &#x2F;**
+		 * Go to last slide
+		 *&#x2F;		
+        this.goToLastSlide = function(){
+            &#x2F;&#x2F; check if stopAuto argument is supplied
+            if(typeof(stopAuto) == &#x27;undefined&#x27;){
+                var stopAuto = true;
+            }
+            base.goToSlide(lastSlide, stopAuto);
+        }
+		
+        &#x2F;**
+		 * Get the current slide
+		 *&#x2F;		
+        this.getCurrentSlide = function(){
+            return currentSlide;
+        }
+		
+        &#x2F;**
+		 * Get the total slide count
+		 *&#x2F;		
+        this.getSlideCount = function(){
+            return $children.length;
+        }
+		
+        &#x2F;**
+		 * Stop the slideshow
+		 *&#x2F;		
+        this.stopShow = function(changeText){
+            clearInterval(interval);
+            &#x2F;&#x2F; check if changeText argument is supplied
+            if(typeof(changeText) == &#x27;undefined&#x27;){
+                var changeText = true;
+            }
+            if(changeText &amp;&amp; options.autoControls){
+                $autoControls.html($startContent).removeClass(&#x27;stop&#x27;).addClass(&#x27;start&#x27;);
+                autoPlaying = false;
+            }
+        }
+		
+        &#x2F;**
+		 * Start the slideshow
+		 *&#x2F;		
+        this.startShow = function(changeText){
+            &#x2F;&#x2F; check if changeText argument is supplied
+            if(typeof(changeText) == &#x27;undefined&#x27;){
+                var changeText = true;
+            }
+            setAutoInterval();
+            if(changeText &amp;&amp; options.autoControls){
+                $autoControls.html($stopContent).removeClass(&#x27;start&#x27;).addClass(&#x27;stop&#x27;);
+                autoPlaying = true;
+            }
+        }
+		
+        &#x2F;**
+		 * Stops the ticker
+		 *&#x2F;		
+        this.stopTicker = function(changeText){
+            $parent.stop();
+            &#x2F;&#x2F; check if changeText argument is supplied
+            if(typeof(changeText) == &#x27;undefined&#x27;){
+                var changeText = true;
+            }
+            if(changeText &amp;&amp; options.ticker){
+                $autoControls.html($startContent).removeClass(&#x27;stop&#x27;).addClass(&#x27;start&#x27;);
+                autoPlaying = false;
+            }			
+        }
+		
+        &#x2F;**
+		 * Starts the ticker
+		 *&#x2F;		
+        this.startTicker = function(changeText){
+            if(options.mode == &#x27;horizontal&#x27;){
+                if(options.tickerDirection == &#x27;next&#x27;){
+                    &#x2F;&#x2F; get the &#x27;left&#x27; property where the ticker stopped
+                    var stoppedLeft = parseInt($parent.css(&#x27;left&#x27;));
+                    &#x2F;&#x2F; calculate the remaining distance the show must travel until the loop
+                    var remainingDistance = (origShowWidth + stoppedLeft) + $children.eq(0).width();			
+                }else if(options.tickerDirection == &#x27;prev&#x27;){
+                    &#x2F;&#x2F; get the &#x27;left&#x27; property where the ticker stopped
+                    var stoppedLeft = -parseInt($parent.css(&#x27;left&#x27;));
+                    &#x2F;&#x2F; calculate the remaining distance the show must travel until the loop
+                    var remainingDistance = (stoppedLeft) - $children.eq(0).width();
+                }
+                &#x2F;&#x2F; calculate the speed ratio to seamlessly finish the loop
+                var finishingSpeed = (remainingDistance * options.tickerSpeed) &#x2F; origShowWidth;
+                &#x2F;&#x2F; call the show
+                moveTheShow(tickerLeft, remainingDistance, finishingSpeed);					
+            }else if(options.mode == &#x27;vertical&#x27;){
+                if(options.tickerDirection == &#x27;next&#x27;){
+                    &#x2F;&#x2F; get the &#x27;top&#x27; property where the ticker stopped
+                    var stoppedTop = parseInt($parent.css(&#x27;top&#x27;));
+                    &#x2F;&#x2F; calculate the remaining distance the show must travel until the loop
+                    var remainingDistance = (origShowHeight + stoppedTop) + $children.eq(0).height();			
+                }else if(options.tickerDirection == &#x27;prev&#x27;){
+                    &#x2F;&#x2F; get the &#x27;left&#x27; property where the ticker stopped
+                    var stoppedTop = -parseInt($parent.css(&#x27;top&#x27;));
+                    &#x2F;&#x2F; calculate the remaining distance the show must travel until the loop
+                    var remainingDistance = (stoppedTop) - $children.eq(0).height();
+                }
+                &#x2F;&#x2F; calculate the speed ratio to seamlessly finish the loop
+                var finishingSpeed = (remainingDistance * options.tickerSpeed) &#x2F; origShowHeight;
+                &#x2F;&#x2F; call the show
+                moveTheShow(tickerTop, remainingDistance, finishingSpeed);
+                &#x2F;&#x2F; check if changeText argument is supplied
+                if(typeof(changeText) == &#x27;undefined&#x27;){
+                    var changeText = true;
+                }
+                if(changeText &amp;&amp; options.ticker){
+                    $autoControls.html($stopContent).removeClass(&#x27;start&#x27;).addClass(&#x27;stop&#x27;);
+                    autoPlaying = true;
+                }						
+            }
+        }
+				
+        &#x2F;**
+		 * Initialize a new slideshow
+		 *&#x2F;		
+        this.initShow = function(){
+			
+            &#x2F;&#x2F; reinitialize all variables
+            &#x2F;&#x2F; base = this;
+            $parent = $(this);
+            $origElement = $parent.clone();
+            $children = $parent.children();
+            $outerWrapper = &#x27;&#x27;;
+            $firstChild = $parent.children(&#x27;:first&#x27;);
+            childrenWidth = $firstChild.width();
+            childrenMaxWidth = 0;
+            childrenOuterWidth = $firstChild.outerWidth();
+            childrenMaxHeight = 0;
+            wrapperWidth = getWrapperWidth();
+            wrapperHeight = getWrapperHeight();
+            isWorking = false;
+            $paginador = &#x27;&#x27;;	
+            currentSlide = 0;	
+            origLeft = 0;
+            origTop = 0;
+            interval = &#x27;&#x27;;
+            $autoControls = &#x27;&#x27;;
+            $stopHtml = &#x27;&#x27;;
+            $startContent = &#x27;&#x27;;
+            $stopContent = &#x27;&#x27;;
+            autoPlaying = true;
+            loaded = false;
+            origShowWidth = 0;
+            origShowHeight = 0;
+            tickerLeft = 0;
+            tickerTop = 0;
+      
+            firstSlide = 0;
+            lastSlide = $children.length - 1;
+						
+            &#x2F;&#x2F; get the largest child&#x27;s height and width
+            $children.each(function(index) {
+                if($(this).outerHeight() &gt; childrenMaxHeight){
+                    childrenMaxHeight = $(this).outerHeight();
+                }
+                if($(this).outerWidth() &gt; childrenMaxWidth){
+                    childrenMaxWidth = $(this).outerWidth();
+                }
+            });
+
+            &#x2F;&#x2F; get random slide number
+            if(options.randomStart){
+                var randomNumber = Math.floor(Math.random() * $children.length);
+                currentSlide = randomNumber;
+                origLeft = childrenOuterWidth * (options.moveSlideQty + randomNumber);
+                origTop = childrenMaxHeight * (options.moveSlideQty + randomNumber);
+            &#x2F;&#x2F; start show at specific slide
+            }else{
+                currentSlide = options.startingSlide;
+                origLeft = childrenOuterWidth * (options.moveSlideQty + options.startingSlide);
+                origTop = childrenMaxHeight * (options.moveSlideQty + options.startingSlide);
+            }
+						
+            &#x2F;&#x2F; set initial css
+            initCss();
+			
+            &#x2F;&#x2F; check to show paginador
+            if(options.paginador &amp;&amp; !options.ticker){
+                if(options.paginadorType == &#x27;full&#x27;){
+                    showpaginador(&#x27;full&#x27;);
+                }else if(options.paginadorType == &#x27;short&#x27;){
+                    showpaginador(&#x27;short&#x27;);
+                }
+            }
+						
+            &#x2F;&#x2F; check to show controls
+            if(options.controls &amp;&amp; !options.ticker){
+                setControlsVars();
+            }
+						
+            &#x2F;&#x2F; check if auto
+            if(options.auto || options.ticker){
+                &#x2F;&#x2F; check if auto controls are displayed
+                if(options.autoControls){
+                    setAutoControlsVars();
+                }
+                &#x2F;&#x2F; check if show should auto start
+                if(options.autoStart){
+                    &#x2F;&#x2F; check if autostart should delay
+                    setTimeout(function(){
+                        base.startShow(true);
+                    }, options.autoDelay);
+                }else{
+                    base.stopShow(true);
+                }
+                &#x2F;&#x2F; check if show should pause on hover
+                if(options.autoHover &amp;&amp; !options.ticker){
+                    setAutoHover();
+                }
+            }						
+            &#x2F;&#x2F; make the starting slide active
+            if(options.moveSlideQty &gt; 1){
+                makeSlideActive(Math.ceil(currentSlide &#x2F; options.moveSlideQty));
+            }else{	                              		
+                makeSlideActive(currentSlide);			
+            }
+            &#x2F;&#x2F; check for finite show and if controls should be hidden
+            checkEndControls();
+            &#x2F;&#x2F; show captions
+            if(options.captions){
+                showCaptions();
+            }
+            &#x2F;&#x2F; perform the callback function
+            options.onAfterSlide(currentSlide, $children.length, $children.eq(currentSlide));
+        }
+		
+        &#x2F;**
+		 * Destroy the current slideshow
+		 *&#x2F;                           		
+        this.destroyShow = function(){			
+            &#x2F;&#x2F; stop the auto show
+            clearInterval(interval);
+            &#x2F;&#x2F; remove any controls &#x2F; paginadors that have been appended
+            $(&#x27;.bx-next, .bx-prev, .bx-paginador, .bx-auto&#x27;, $outerWrapper).remove();
+            &#x2F;&#x2F; unwrap all bx-wrappers
+            $parent.unwrap().unwrap().removeAttr(&#x27;style&#x27;);
+            &#x2F;&#x2F; remove any styles that were appended
+            $parent.children().removeAttr(&#x27;style&#x27;).not(&#x27;.paginador&#x27;).remove();
+            &#x2F;&#x2F; remove any childrent that were appended
+            $children.removeClass(&#x27;paginador&#x27;);
+		                              	
+        }
+		
+        &#x2F;**
+		 * Reload the current slideshow
+		 *&#x2F;		
+        this.reloadShow = function(){
+            base.destroyShow();
+            base.initShow();
+        }
+		
+        &#x2F;&#x2F; PRIVATE FUNCTIONS
+		
+        &#x2F;**
+		 * Creates all neccessary styling for the slideshow
+		 *&#x2F;		
+        function initCss(){
+            &#x2F;&#x2F; layout the children
+            setChildrenLayout(options.startingSlide);
+            &#x2F;&#x2F; CSS for horizontal mode
+            if(options.mode == &#x27;horizontal&#x27;){
+                &#x2F;&#x2F; wrap the &lt;ul&gt; in div that acts as a window and make the &lt;ul&gt; uber wide
+                $parent
+                .wrap(&#x27;&lt;div class=&quot;&#x27;+options.wrapperClass+&#x27;&quot; style=&quot;width:&#x27;+wrapperWidth+&#x27;px; position:relative;&quot;&gt;&lt;&#x2F;div&gt;&#x27;)
+                .wrap(&#x27;&lt;div class=&quot;bx-window&quot; style=&quot;position:relative; overflow:hidden; width:&#x27;+wrapperWidth+&#x27;px;&quot;&gt;&lt;&#x2F;div&gt;&#x27;)
+                .css({
+                    width: &#x27;999999px&#x27;,
+                    position: &#x27;relative&#x27;,
+                    left: &#x27;-&#x27;+(origLeft)+&#x27;px&#x27;
+                });
+                $parent.children().css({
+                    width: childrenWidth,
+                    &#x27;float&#x27;: &#x27;left&#x27;,
+                    listStyle: &#x27;none&#x27;
+                });					
+                $outerWrapper = $parent.parent().parent();
+                $children.addClass(&#x27;paginador&#x27;);
+            &#x2F;&#x2F; CSS for vertical mode
+            }else if(options.mode == &#x27;vertical&#x27;){
+                &#x2F;&#x2F; wrap the &lt;ul&gt; in div that acts as a window and make the &lt;ul&gt; uber tall
+                $parent
+                .wrap(&#x27;&lt;div class=&quot;&#x27;+options.wrapperClass+&#x27;&quot; style=&quot;width:&#x27;+childrenMaxWidth+&#x27;px; position:relative;&quot;&gt;&lt;&#x2F;div&gt;&#x27;)
+                .wrap(&#x27;&lt;div class=&quot;bx-window&quot; style=&quot;width:&#x27;+childrenMaxWidth+&#x27;px; height:&#x27;+wrapperHeight+&#x27;px; position:relative; overflow:hidden;&quot;&gt;&lt;&#x2F;div&gt;&#x27;)
+                .css({
+                    height: &#x27;999999px&#x27;,
+                    position: &#x27;relative&#x27;,
+                    top: &#x27;-&#x27;+(origTop)+&#x27;px&#x27;
+                });
+                $parent.children().css({
+                    listStyle: &#x27;none&#x27;,
+                    height: childrenMaxHeight
+                });					
+                $outerWrapper = $parent.parent().parent();
+                $children.addClass(&#x27;paginador&#x27;);
+            &#x2F;&#x2F; CSS for fade mode
+            }else if(options.mode == &#x27;fade&#x27;){
+                &#x2F;&#x2F; wrap the &lt;ul&gt; in div that acts as a window
+                $parent
+                .wrap(&#x27;&lt;div class=&quot;&#x27;+options.wrapperClass+&#x27;&quot; style=&quot;width:&#x27;+childrenMaxWidth+&#x27;px; position:relative;&quot;&gt;&lt;&#x2F;div&gt;&#x27;)
+                .wrap(&#x27;&lt;div class=&quot;bx-window&quot; style=&quot;height:&#x27;+childrenMaxHeight+&#x27;px; width:&#x27;+childrenMaxWidth+&#x27;px; position:relative; overflow:hidden;&quot;&gt;&lt;&#x2F;div&gt;&#x27;);
+                $parent.children().css({
+                    listStyle: &#x27;none&#x27;,
+                    position: &#x27;absolute&#x27;,
+                    top: 0,
+                    left: 0,
+                    zIndex: 98
+                });					
+                $outerWrapper = $parent.parent().parent();
+                $children.not(&#x27;:eq(&#x27;+currentSlide+&#x27;)&#x27;).fadeTo(0, 0);
+                $children.eq(currentSlide).css(&#x27;zIndex&#x27;, 99);
+            }
+            &#x2F;&#x2F; if captions = true setup a div placeholder
+            if(options.captions &amp;&amp; options.captionsSelector == null){
+                $outerWrapper.append(&#x27;&lt;div class=&quot;bx-captions&quot;&gt;&lt;&#x2F;div&gt;&#x27;);
+            }			
+        }
+		
+        &#x2F;**
+		 * Depending on mode, lays out children in the proper setup
+		 *&#x2F;                          		
+        function setChildrenLayout(){			
+            &#x2F;&#x2F; lays out children for horizontal or vertical modes
+            if(options.mode == &#x27;horizontal&#x27; || options.mode == &#x27;vertical&#x27;){
+		                             						
+                &#x2F;&#x2F; get the children behind
+                var $prependedChildren = getArraySample($children, 0, options.moveSlideQty, &#x27;backward&#x27;);
+		                             		
+                &#x2F;&#x2F; add each prepended child to the back of the original element
+                $.each($prependedChildren, function(index) {
+                    $parent.prepend($(this));
+                });			
+		                             		
+                &#x2F;&#x2F; total number of slides to be hidden after the window
+                var totalNumberAfterWindow = ($children.length + options.moveSlideQty) - 1;
+                &#x2F;&#x2F; number of original slides hidden after the window
+                var paginadorExcess = $children.length - options.displaySlideQty;
+                &#x2F;&#x2F; number of slides to append to the original hidden slides
+                var numberToAppend = totalNumberAfterWindow - paginadorExcess;
+                &#x2F;&#x2F; get the sample of extra slides to append
+                var $appendedChildren = getArraySample($children, 0, numberToAppend, &#x27;forward&#x27;);
+		                             		
+                if(options.infiniteLoop){
+                    &#x2F;&#x2F; add each appended child to the front of the original element
+                    $.each($appendedChildren, function(index) {
+                        $parent.append($(this));
+                    });
+                }
+            }
+        }
+		
+        &#x2F;**
+		 * Sets all variables associated with the controls
+		 *&#x2F;		
+        function setControlsVars(){
+            &#x2F;&#x2F; check if text or images should be used for controls
+            &#x2F;&#x2F; check &quot;next&quot;
+            if(options.nextImage != &#x27;&#x27;){
+                nextContent = options.nextImage;
+                nextType = &#x27;image&#x27;;
+            }else{
+                nextContent = options.nextText;
+                nextType = &#x27;text&#x27;;
+            }
+            &#x2F;&#x2F; check &quot;prev&quot;
+            if(options.prevImage != &#x27;&#x27;){
+                prevContent = options.prevImage;
+                prevType = &#x27;image&#x27;;
+            }else{
+                prevContent = options.prevText;
+                prevType = &#x27;text&#x27;;
+            }
+            &#x2F;&#x2F; show the controls
+            showControls(nextType, nextContent, prevType, prevContent);
+        }			
+		
+        &#x2F;**
+		 * Puts slideshow into auto mode
+		 *
+		 * @param int pause number of ms the slideshow will wait between slides 
+		 * @param string direction &#x27;forward&#x27;, &#x27;backward&#x27; sets the direction of the slideshow (forward&#x2F;backward)
+		 * @param bool controls determines if start&#x2F;stop controls will be displayed
+		 *&#x2F;		
+        function setAutoInterval(){
+            if(options.auto){
+                &#x2F;&#x2F; finite loop
+                if(!options.infiniteLoop){
+                    if(options.autoDirection == &#x27;next&#x27;){
+                        interval = setInterval(function(){
+                            currentSlide += options.moveSlideQty;
+                            &#x2F;&#x2F; if currentSlide has exceeded total number
+                            if(currentSlide &gt; lastSlide){
+                                currentSlide = currentSlide % $children.length;
+                            }
+                            base.goToSlide(currentSlide, false);
+                        }, options.pause);
+                    }else if(options.autoDirection == &#x27;prev&#x27;){
+                        interval = setInterval(function(){
+                            currentSlide -= options.moveSlideQty;
+                            &#x2F;&#x2F; if currentSlide is smaller than zero
+                            if(currentSlide &lt; 0){
+                                negativeOffset = (currentSlide % $children.length);
+                                if(negativeOffset == 0){
+                                    currentSlide = 0;
+                                }else{
+                                    currentSlide = ($children.length) + negativeOffset; 
+                                }
+                            }
+                            base.goToSlide(currentSlide, false);
+                        }, options.pause);
+                    }
+                &#x2F;&#x2F; infinite loop
+                }else{
+                    if(options.autoDirection == &#x27;next&#x27;){
+                        interval = setInterval(function(){
+                            base.goToNextSlide(false);
+                        }, options.pause);
+                    }else if(options.autoDirection == &#x27;prev&#x27;){
+                        interval = setInterval(function(){
+                            base.goToPreviousSlide(false);
+                        }, options.pause);
+                    }
+                }
+			
+            }else if(options.ticker){
+			 	
+                options.tickerSpeed *= 10;
+			 									
+                &#x2F;&#x2F; get the total width of the original show
+                $(&#x27;.paginador&#x27;, $outerWrapper).each(function(index) {
+                    origShowWidth += $(this).width();
+                    origShowHeight += $(this).height();
+                });
+			 	
+                &#x2F;&#x2F; if prev start the show from the last slide
+                if(options.tickerDirection == &#x27;prev&#x27; &amp;&amp; options.mode == &#x27;horizontal&#x27;){
+                    $parent.css(&#x27;left&#x27;, &#x27;-&#x27;+(origShowWidth+origLeft)+&#x27;px&#x27;);
+                }else if(options.tickerDirection == &#x27;prev&#x27; &amp;&amp; options.mode == &#x27;vertical&#x27;){
+                    $parent.css(&#x27;top&#x27;, &#x27;-&#x27;+(origShowHeight+origTop)+&#x27;px&#x27;);
+                }
+			 	
+                if(options.mode == &#x27;horizontal&#x27;){
+                    &#x2F;&#x2F; get the starting left position
+                    tickerLeft = parseInt($parent.css(&#x27;left&#x27;));
+                    &#x2F;&#x2F; start the ticker
+                    moveTheShow(tickerLeft, origShowWidth, options.tickerSpeed);
+                }else if(options.mode == &#x27;vertical&#x27;){
+                    &#x2F;&#x2F; get the starting top position
+                    tickerTop = parseInt($parent.css(&#x27;top&#x27;));
+                    &#x2F;&#x2F; start the ticker
+                    moveTheShow(tickerTop, origShowHeight, options.tickerSpeed);
+                }												
+			 	
+                &#x2F;&#x2F; check it tickerHover applies
+                if(options.tickerHover){
+                    setTickerHover();
+                }					
+            }	 		
+        }
+		
+        function moveTheShow(leftCss, distance, speed){
+            &#x2F;&#x2F; if horizontal
+            if(options.mode == &#x27;horizontal&#x27;){
+                &#x2F;&#x2F; if next
+                if(options.tickerDirection == &#x27;next&#x27;){
+                    $parent.animate({
+                        &#x27;left&#x27;: &#x27;-=&#x27;+distance+&#x27;px&#x27;
+                        }, speed, &#x27;linear&#x27;, function(){
+                        $parent.css(&#x27;left&#x27;, leftCss);
+                        moveTheShow(leftCss, origShowWidth, options.tickerSpeed);
+                    });
+                &#x2F;&#x2F; if prev
+                }else if(options.tickerDirection == &#x27;prev&#x27;){
+                    $parent.animate({
+                        &#x27;left&#x27;: &#x27;+=&#x27;+distance+&#x27;px&#x27;
+                        }, speed, &#x27;linear&#x27;, function(){
+                        $parent.css(&#x27;left&#x27;, leftCss);
+                        moveTheShow(leftCss, origShowWidth, options.tickerSpeed);
+                    });
+                }
+            &#x2F;&#x2F; if vertical		
+            }else if(options.mode == &#x27;vertical&#x27;){
+                &#x2F;&#x2F; if next
+                if(options.tickerDirection == &#x27;next&#x27;){
+                    $parent.animate({
+                        &#x27;top&#x27;: &#x27;-=&#x27;+distance+&#x27;px&#x27;
+                        }, speed, &#x27;linear&#x27;, function(){
+                        $parent.css(&#x27;top&#x27;, leftCss);
+                        moveTheShow(leftCss, origShowHeight, options.tickerSpeed);
+                    });
+                &#x2F;&#x2F; if prev
+                }else if(options.tickerDirection == &#x27;prev&#x27;){
+                    $parent.animate({
+                        &#x27;top&#x27;: &#x27;+=&#x27;+distance+&#x27;px&#x27;
+                        }, speed, &#x27;linear&#x27;, function(){
+                        $parent.css(&#x27;top&#x27;, leftCss);
+                        moveTheShow(leftCss, origShowHeight, options.tickerSpeed);
+                    });
+                }
+            }
+        }		
+		
+        &#x2F;**
+		 * Sets all variables associated with the controls
+		 *&#x2F;		
+        function setAutoControlsVars(){
+            &#x2F;&#x2F; check if text or images should be used for controls
+            &#x2F;&#x2F; check &quot;start&quot;
+            if(options.startImage != &#x27;&#x27;){
+                startContent = options.startImage;
+                startType = &#x27;image&#x27;;
+            }else{
+                startContent = options.startText;
+                startType = &#x27;text&#x27;;
+            }
+            &#x2F;&#x2F; check &quot;stop&quot;
+            if(options.stopImage != &#x27;&#x27;){
+                stopContent = options.stopImage;
+                stopType = &#x27;image&#x27;;
+            }else{
+                stopContent = options.stopText;
+                stopType = &#x27;text&#x27;;
+            }
+            &#x2F;&#x2F; show the controls
+            showAutoControls(startType, startContent, stopType, stopContent);
+        }
+		
+        &#x2F;**
+		 * Handles hover events for auto shows
+		 *&#x2F;		
+        function setAutoHover(){
+            &#x2F;&#x2F; hover over the slider window
+            $outerWrapper.find(&#x27;.bx-window&#x27;).hover(function() {
+                if(autoPlaying){
+                    base.stopShow(false);
+                }
+            }, function() {
+                if(autoPlaying){
+                    base.startShow(false);
+                }
+            });
+        }
+		
+        &#x2F;**
+		 * Handles hover events for ticker mode
+		 *&#x2F;		
+        function setTickerHover(){
+            &#x2F;&#x2F; on hover stop the animation
+            $parent.hover(function() {
+                if(autoPlaying){
+                    base.stopTicker(false);
+                }
+            }, function() {
+                if(autoPlaying){
+                    base.startTicker(false);
+                }
+            });
+        }		
+		
+        &#x2F;**
+		 * Handles fade animation
+		 *&#x2F;		
+        function setChildrenFade(){
+            &#x2F;&#x2F; fade out any other child besides the current
+            $children.not(&#x27;:eq(&#x27;+currentSlide+&#x27;)&#x27;).fadeTo(options.speed, 0).css(&#x27;zIndex&#x27;, 98);
+            &#x2F;&#x2F; fade in the current slide
+            $children.eq(currentSlide).css(&#x27;zIndex&#x27;, 99).fadeTo(options.speed, 1, function(){
+                isWorking = false;
+                &#x2F;&#x2F; ie fade fix
+                if(jQuery.browser.msie){
+                    $children.eq(currentSlide).get(0).style.removeAttribute(&#x27;filter&#x27;);
+                }
+                &#x2F;&#x2F; perform the callback function
+                options.onAfterSlide(currentSlide, $children.length, $children.eq(currentSlide));
+            });
+        };
+				
+        &#x2F;**
+		 * Makes slide active
+		 *&#x2F;		
+        function makeSlideActive(number){
+            if(options.paginadorType == &#x27;full&#x27; &amp;&amp; options.paginador){
+                &#x2F;&#x2F; remove all active classes
+                $(&#x27;a&#x27;, $paginador).removeClass(options.paginadorActiveClass);
+                &#x2F;&#x2F; assign active class to appropriate slide
+                $(&#x27;a&#x27;, $paginador).eq(number).addClass(options.paginadorActiveClass);
+            }else if(options.paginadorType == &#x27;short&#x27; &amp;&amp; options.paginador){
+                $(&#x27;.bx-paginador-current&#x27;, $paginador).html(currentSlide+1);
+            }
+        }
+				
+        &#x2F;**
+		 * Displays next&#x2F;prev controls
+		 *
+		 * @param string nextType &#x27;image&#x27;, &#x27;text&#x27;
+		 * @param string nextContent if type=&#x27;image&#x27;, specify a filepath to the image. if type=&#x27;text&#x27;, specify text.
+		 * @param string prevType &#x27;image&#x27;, &#x27;text&#x27;
+		 * @param string prevContent if type=&#x27;image&#x27;, specify a filepath to the image. if type=&#x27;text&#x27;, specify text.
+		 *&#x2F;		
+        function showControls(nextType, nextContent, prevType, prevContent){
+            &#x2F;&#x2F; create paginador html elements
+            var $nextHtml = $(&#x27;&lt;a href=&quot;&quot; class=&quot;bx-next&quot;&gt;&lt;&#x2F;a&gt;&#x27;);
+            var $prevHtml = $(&#x27;&lt;a href=&quot;&quot; class=&quot;bx-prev&quot;&gt;&lt;&#x2F;a&gt;&#x27;);
+            &#x2F;&#x2F; check if next is &#x27;text&#x27; or &#x27;image&#x27;
+            if(nextType == &#x27;text&#x27;){
+                $nextHtml.html(nextContent);
+            }else{
+                $nextHtml.html(&#x27;&lt;img src=&quot;&#x27;+nextContent+&#x27;&quot; &#x2F;&gt;&#x27;);
+            }
+            &#x2F;&#x2F; check if prev is &#x27;text&#x27; or &#x27;image&#x27;
+            if(prevType == &#x27;text&#x27;){
+                $prevHtml.html(prevContent);
+            }else{
+                $prevHtml.html(&#x27;&lt;img src=&quot;&#x27;+prevContent+&#x27;&quot; &#x2F;&gt;&#x27;);
+            }
+            &#x2F;&#x2F; check if user supplied a selector to populate next control
+            if(options.prevSelector){
+                $(options.prevSelector).append($prevHtml);
+            }else{
+                $outerWrapper.append($prevHtml);
+            }
+            &#x2F;&#x2F; check if user supplied a selector to populate next control
+            if(options.nextSelector){
+                $(options.nextSelector).append($nextHtml);
+            }else{
+                $outerWrapper.append($nextHtml);
+            }
+            &#x2F;&#x2F; click next control
+            $nextHtml.click(function() {
+                base.goToNextSlide();
+                return false;
+            });
+            &#x2F;&#x2F; click prev control
+            $prevHtml.click(function() {
+                base.goToPreviousSlide();
+                return false;
+            });
+        }
+		
+        &#x2F;**
+		 * Displays the paginador
+		 *
+		 * @param string type &#x27;full&#x27;, &#x27;short&#x27;
+		 *&#x2F;		
+        function showpaginador(type){
+            &#x2F;&#x2F; sets up logic for finite multi slide shows
+            var paginadorQty = $children.length;
+            &#x2F;&#x2F; if we are moving more than one at a time and we have a finite loop
+            if(options.moveSlideQty &gt; 1){
+                &#x2F;&#x2F; if slides create an odd number of pages
+                if($children.length % options.moveSlideQty != 0){
+                    &#x2F;&#x2F; paginadorQty = $children.length &#x2F; options.moveSlideQty + 1;
+                    paginadorQty = Math.ceil($children.length &#x2F; options.moveSlideQty);
+                &#x2F;&#x2F; if slides create an even number of pages
+                }else{
+                    paginadorQty = $children.length &#x2F; options.moveSlideQty;
+                }
+            }
+            var paginadorString = &#x27;&#x27;;
+            &#x2F;&#x2F; check if custom build function was supplied
+            if(options.buildpaginador){
+                for(var i=0; i&lt;paginadorQty; i++){
+                    paginadorString += options.buildpaginador(i, $children.eq(i * options.moveSlideQty));
+                }
+				
+            &#x2F;&#x2F; if not, use default paginador
+            }else if(type == &#x27;full&#x27;){
+                &#x2F;&#x2F; build the full paginador
+                for(var i=1; i&lt;=paginadorQty; i++){
+                    paginadorString += &#x27;&lt;a href=&quot;&quot; class=&quot;paginador-link paginador-&#x27;+i+&#x27;&quot;&gt;&#x27;+i+&#x27;&lt;&#x2F;a&gt;&#x27;;
+                }
+            }else if(type == &#x27;short&#x27;) {
+                &#x2F;&#x2F; build the short paginador
+                paginadorString = &#x27;&lt;span class=&quot;bx-paginador-current&quot;&gt;&#x27;+(options.startingSlide+1)+&#x27;&lt;&#x2F;span&gt; &#x27;+options.paginadorShortSeparator+&#x27; &lt;span class=&quot;bx-paginador-total&quot;&gt;&#x27;+$children.length+&#x27;&lt;&#x2F;span&gt;&#x27;;
+            }	
+            &#x2F;&#x2F; check if user supplied a paginador selector
+            if(options.paginadorSelector){
+                $(options.paginadorSelector).append(paginadorString);
+                $paginador = $(options.paginadorSelector);
+            }else{
+                var $paginadorContainer = $(&#x27;&lt;div class=&quot;bx-paginador&quot;&gt;&lt;&#x2F;div&gt;&#x27;);
+                $paginadorContainer.append(paginadorString);
+                &#x2F;&#x2F; attach the paginador to the DOM
+                if(options.paginadorLocation == &#x27;top&#x27;){
+                    $outerWrapper.prepend($paginadorContainer);
+                }else if(options.paginadorLocation == &#x27;bottom&#x27;){
+                    $outerWrapper.append($paginadorContainer);
+                }
+                &#x2F;&#x2F; cache the paginador element
+                $paginador = $(&#x27;.bx-paginador&#x27;, $outerWrapper);
+            }
+            $paginador.children().click(function() {
+                &#x2F;&#x2F; only if paginador is full mode
+                if(options.paginadorType == &#x27;full&#x27;){
+                    &#x2F;&#x2F; get the index from the link
+                    var slideIndex = $paginador.children().index(this);
+                    &#x2F;&#x2F; accomodate moving more than one slide
+                    if(options.moveSlideQty &gt; 1){
+                        slideIndex *= options.moveSlideQty;
+                    }
+                    base.goToSlide(slideIndex);
+                }
+                return false;
+            });
+        }
+				
+        &#x2F;**
+		 * Displays captions
+		 *&#x2F;		
+        function showCaptions(){
+            &#x2F;&#x2F; get the title from each image
+            var caption = $(&#x27;img&#x27;, $children.eq(currentSlide)).attr(&#x27;title&#x27;);
+            &#x2F;&#x2F; if the caption exists
+            if(caption != &#x27;&#x27;){
+                &#x2F;&#x2F; if user supplied a selector
+                if(options.captionsSelector){
+                    $(options.captionsSelector).html(caption);
+                }else{
+                    $(&#x27;.bx-captions&#x27;, $outerWrapper).html(caption);
+                }
+            }else{
+                &#x2F;&#x2F; if user supplied a selector
+                if(options.captionsSelector){
+                    $(options.captionsSelector).html(&#x27;&amp;nbsp;&#x27;);
+                }else{
+                    $(&#x27;.bx-captions&#x27;, $outerWrapper).html(&#x27;&amp;nbsp;&#x27;);
+                }				
+            }
+        }
+		
+        &#x2F;**
+		 * Displays start&#x2F;stop controls for auto and ticker mode
+		 *
+		 * @param string type &#x27;image&#x27;, &#x27;text&#x27;
+		 * @param string next [optional] if type=&#x27;image&#x27;, specify a filepath to the image. if type=&#x27;text&#x27;, specify text.
+		 * @param string prev [optional] if type=&#x27;image&#x27;, specify a filepath to the image. if type=&#x27;text&#x27;, specify text.
+		 *&#x2F;
+        function showAutoControls(startType, startContent, stopType, stopContent){
+            &#x2F;&#x2F; create paginador html elements
+            $autoControls = $(&#x27;&lt;a href=&quot;&quot; class=&quot;bx-start&quot;&gt;&lt;&#x2F;a&gt;&#x27;);
+            &#x2F;&#x2F; check if start is &#x27;text&#x27; or &#x27;image&#x27;
+            if(startType == &#x27;text&#x27;){
+                $startContent = startContent;
+            }else{
+                $startContent = &#x27;&lt;img src=&quot;&#x27;+startContent+&#x27;&quot; &#x2F;&gt;&#x27;;
+            }
+            &#x2F;&#x2F; check if stop is &#x27;text&#x27; or &#x27;image&#x27;
+            if(stopType == &#x27;text&#x27;){
+                $stopContent = stopContent;
+            }else{
+                $stopContent = &#x27;&lt;img src=&quot;&#x27;+stopContent+&#x27;&quot; &#x2F;&gt;&#x27;;
+            }
+            &#x2F;&#x2F; check if user supplied a selector to populate next control
+            if(options.autoControlsSelector){
+                $(options.autoControlsSelector).append($autoControls);
+            }else{
+                $outerWrapper.append(&#x27;&lt;div class=&quot;bx-auto&quot;&gt;&lt;&#x2F;div&gt;&#x27;);
+                $(&#x27;.bx-auto&#x27;, $outerWrapper).html($autoControls);
+            }
+						
+            &#x2F;&#x2F; click start control
+            $autoControls.click(function() {
+                if(options.ticker){
+                    if($(this).hasClass(&#x27;stop&#x27;)){
+                        base.stopTicker();
+                    }else if($(this).hasClass(&#x27;start&#x27;)){
+                        base.startTicker();
+                    }
+                }else{
+                    if($(this).hasClass(&#x27;stop&#x27;)){
+                        base.stopShow(true);
+                    }else if($(this).hasClass(&#x27;start&#x27;)){
+                        base.startShow(true);
+                    }
+                }
+                return false;
+            });
+			
+        }
+		
+        &#x2F;**
+		 * Checks if show is in finite mode, and if slide is either first or last, then hides the respective control
+		 *&#x2F;		
+        function checkEndControls(){
+            if(!options.infiniteLoop &amp;&amp; options.hideControlOnEnd){
+                &#x2F;&#x2F; check previous
+                if(currentSlide == firstSlide){
+                    $(&#x27;.bx-prev&#x27;, $outerWrapper).hide();				
+                }else{
+                    $(&#x27;.bx-prev&#x27;, $outerWrapper).show();
+                }
+                &#x2F;&#x2F; check next
+                &#x2F;*modificado por jan*&#x2F;
+                if(currentSlide == (lastSlide-4)){
+                    $(&#x27;.bx-next&#x27;, $outerWrapper).hide();
+                }else{
+                    $(&#x27;.bx-next&#x27;, $outerWrapper).show();
+                }
+            }
+        }
+		
+        &#x2F;**
+		 * Returns the left offset of the slide from the parent container
+		 *&#x2F;                                     		
+        function getSlidePosition(number, side){			
+            if(side == &#x27;left&#x27;){
+                var position = $(&#x27;.paginador&#x27;, $outerWrapper).eq(number).position().left;
+            }else if(side == &#x27;top&#x27;){
+                var position = $(&#x27;.paginador&#x27;, $outerWrapper).eq(number).position().top;
+            }
+            return position;
+        }
+		
+        &#x2F;**
+		 * Returns the width of the wrapper
+		 *&#x2F;		
+        function getWrapperWidth(){
+            var wrapperWidth = $firstChild.outerWidth() * options.displaySlideQty;
+            return wrapperWidth;
+        }
+		
+        &#x2F;**
+		 * Returns the height of the wrapper
+		 *&#x2F;		
+        function getWrapperHeight(){
+            &#x2F;&#x2F; if displaying multiple slides, multiple wrapper width by number of slides to display
+            var wrapperHeight = $firstChild.outerHeight() * options.displaySlideQty;
+            return wrapperHeight;
+        }
+		
+        &#x2F;**
+		 * Returns a sample of an arry and loops back on itself if the end of the array is reached
+		 *
+		 * @param array array original array the sample is derived from
+		 * @param int start array index sample will start
+		 * @param int length number of items in the sample
+		 * @param string direction &#x27;forward&#x27;, &#x27;backward&#x27; direction the loop should travel in the array
+		 *&#x2F;		
+        function getArraySample(array, start, length, direction){
+            &#x2F;&#x2F; initialize empty array
+            var sample = [];
+            &#x2F;&#x2F; clone the length argument
+            var loopLength = length;
+            &#x2F;&#x2F; determines when the empty array should start being populated
+            var startPopulatingArray = false;
+            &#x2F;&#x2F; reverse the array if direction = &#x27;backward&#x27;
+            if(direction == &#x27;backward&#x27;){
+                array = $.makeArray(array);
+                array.reverse();
+            }
+            &#x2F;&#x2F; loop through original array until the length argument is met
+            while(loopLength &gt; 0){				
+                &#x2F;&#x2F; loop through original array
+                $.each(array, function(index, val) {
+                    &#x2F;&#x2F; check if length has been met
+                    if(loopLength &gt; 0){
+                        &#x2F;&#x2F; don&#x27;t do anything unless first index has been reached
+                        if(!startPopulatingArray){
+                            &#x2F;&#x2F; start populating empty array
+                            if(index == start){
+                                startPopulatingArray = true;
+                                &#x2F;&#x2F; add element to array
+                                sample.push($(this).clone());
+                                &#x2F;&#x2F; decrease the length clone variable
+                                loopLength--;
+                            }
+                        }else{
+                            &#x2F;&#x2F; add element to array
+                            sample.push($(this).clone());
+                            &#x2F;&#x2F; decrease the length clone variable
+                            loopLength--;
+                        }
+                    &#x2F;&#x2F; if length has been met, break loose
+                    }else{
+                        return false;
+                    }			
+                });	 			
+            }
+            return sample;
+        }
+												
+        this.each(function(){
+            &#x2F;&#x2F; make sure the element has children
+            if($(this).children().length &gt; 0){
+                base.initShow();
+            }
+        });
+		            		
+        return this;						
+    }
+	
+    jQuery.fx.prototype.cur = function(){
+        if ( this.elem[this.prop] != null &amp;&amp; (!this.elem.style || this.elem.style[this.prop] == null) ) {
+            return this.elem[ this.prop ];
+        }
+
+        var r = parseFloat( jQuery.css( this.elem, this.prop ) );
+        &#x2F;&#x2F; return r &amp;&amp; r &gt; -10000 ? r : 0;
+        return r;
+    }
+
+		
+})(jQuery);
+
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* CSS Document */
+.awidth2 { margin: 0 4px 0 25px; width: 115px; }
+.awidth3 { margin: 0 4px 0 25px; width: 100px; }
+
+.aFormLine { margin: 12px 0 12px 0; }
+
+.ahero-unit {
+    background-color: #F5F5F5;
+    border-radius: 6px 6px 6px 6px;
+    margin-bottom: 30px;
+    padding: 4px;
+}
+
+.loading { background: url('../img/loading.gif') center no-repeat; }
+.headAccion{  width: 14px; }
+.afbBtnModal{  cursor: pointer }

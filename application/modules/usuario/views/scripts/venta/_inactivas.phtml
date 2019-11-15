@@ -1,0 +1,169 @@
+<?php if($this->msg) { ?><div class="ybox"><?=$this->escape($this->msg)?></div><?php } ?>
+<form id="apFormSearch"action="<?=$this->baseUrl()?>/usuario/venta/inactivas" method="get" style="width: 100%">
+    <div class="active-notices">
+        <div class="title-active-notices">
+            <h2>Avisos No Activos <span>(<?=empty($this->data[0]->TOTAL)?0:$this->data[0]->TOTAL?>)</span></h2>
+            <a class="btn-kotear" href="<?=$this->baseUrl()?>/usuario/publicacion/registro-destaque">
+                Añadir un nuevo aviso
+            </a>
+        </div>
+        <div class="form-search">
+            <input type="text" id="txtTitle" class="input-medium search-query" placeholder="Estoy buscando ..." 
+                    value="<?=$this->filter['K_TIT']?>">
+            <button type="submit" id="btnSearchTitle" class="btn-kotear btn-small">Buscar</button>
+            <a class="btn-close btn-small" id="btnRepublish" href="<?=$this->baseUrl()?>/usuario/republicacion/masiva" 
+           method="post">Republicar Masivo</a>
+        </div>
+        <?php /* <!--<a class="btn-finish">Eliminar</a>--> */?>
+        <div class="options-search no-top row">
+            <div class="show-dates c-inline">
+                <label>Mostrar avisos de</label>
+                <select name="" id="cboMostrarAvisoDe">
+                    <option value="0">Cualquier fecha</option>
+                    <option value="1" <?=$this->filter['K_FILTRO_FECHA']==1?'selected':''?> >Ultima semana</option>
+                    <option value="2" <?=$this->filter['K_FILTRO_FECHA']==2?'selected':''?>>Ultimo mes</option>
+                </select>
+            </div>
+            <div class="apPagination pagination-results">
+                <?= $this->paginationControl($this->paginador, 'Sliding', '_partials/_pag.phtml') ?>
+            </div>
+        </div>
+        <?php  if(count($this->data)>0){ ?>
+        <div class="pagination-barra">
+            <ul>
+                <?php 
+                    $orderAsc = 'row-asc'; 
+                    $orderDesc = 'row-desc';
+                ?>
+                <input type="hidden" id="hddOrder" value="<?=$this->filter['K_FILTRO']?>">
+                <li class="check-all"><input class="check-parent" name="name" type="checkbox"/></li>
+                <li class="star">
+                    Caducó 
+                    <a href="javascript:;" order="<?=$this->filter['K_FILTRO']==2?'1':'2'?>"
+                       class="linkOrder <?=$this->filter['K_FILTRO']==2?$orderAsc:$orderDesc?>">
+                   </a>
+                </li>
+                <li class="description">
+                    Descripcion
+                    <a href="javascript:;" order="<?=$this->filter['K_FILTRO']==4?'3':'4'?>"
+                       class="linkOrder <?=$this->filter['K_FILTRO']==4?$orderAsc:$orderDesc?>">
+                   </a>
+                </li>
+                <li class="down-motive">
+                    Motivo de baja
+                    <a href="javascript:;" order="<?=$this->filter['K_FILTRO']==6?'5':'6'?>"
+                       class="linkOrder <?=$this->filter['K_FILTRO']==6?$orderAsc:$orderDesc?>">
+                   </a>
+                </li>
+                <li class="message-types">
+                    Destaque
+                    <a href="javascript:;" order="<?=$this->filter['K_FILTRO']==8?'7':'8'?>"
+                       class="linkOrder <?=$this->filter['K_FILTRO']==8?$orderAsc:$orderDesc?>">
+                   </a>
+                </li>
+                <li class="actions">Acciones</li>
+            </ul>
+        </div> 
+        <ul class="list-result-products">
+            <?php foreach($this->data as $index){
+                    $titulo = $this->escape($index->TIT); 
+            ?>
+            <li class="product-row <?=$index->ESTILO?>">
+                <div class="check-product">
+                    <input id="chk_ID_AVISO" class="check-children" name="chkavisos[<?=$index->ID_AVISO?>]" 
+                           type="checkbox" value="<?=$index->ID_AVISO?>"/>
+                </div>
+                <div class="line-vertical"></div>
+                <div class="star-product">
+                    <!--<p><strong>Finaliza en:</strong></p>-->
+                    <p><?=$index->CADUCIDAD ?></p>
+                </div>
+                <div class="line-vertical"></div>
+                <div class="description-product">
+                    <div class="conteiner-img">
+                        <a href="<?=$this->baseUrl() . '/aviso/' . $index->ID_AVISO . '-' .$index->URL?>"
+                           title="<?=$titulo;?>">
+                        <img class="lazy" src="<?=URL_STATIC?>img/notFound.jpg" data-original="<?=$this->ruta.$index->RUTA_IMAGEN?>" alt="<?=$titulo?>" width="90" height="68" />
+                        </a>    
+                    </div>
+                    <span class="finish-data"><?=$index->FEC_PUB.' - '.$index->FEC_FIN ?></span>
+                    <h3>
+                        <a href="<?=$this->baseUrl() . '/aviso/' . $index->ID_AVISO . '-' .$index->URL?>"
+                            title="<?=$titulo;?>">
+                            <?=(strlen($titulo) > 57)?substr($titulo, 0, 57) . ' ...':$titulo?>
+                        </a>
+                    </h3>
+                </div>
+                <div class="line-vertical"></div>
+                <div class="down-motive-product"><?=$index->MOTIVO_BAJA?></div>
+                <div class="line-vertical"></div>
+                <div class="type-product"><span><?=$index->TIPO_DESTAQUE?></span></div>
+                <div class="line-vertical"></div>
+                <div class="delete-product">
+                    <ul class="action-options">
+                        <? if($index->ESTADO==16 || $index->ESTADO==5){ ?>
+                            <li>
+                                <a class="ad-link-modal" title="eliminar"
+                                   href="<?=$this->baseUrl()?>/usuario/publicacion/eliminar-aviso/cod/<?=$index->ID_AVISO?>"
+                                   title="Eliminar">
+                                    Eliminar
+                                    <span class="icon-delete-action"></span>
+                                </a>
+                                
+                            </li>
+                        <? } if($index->ESTADO==16){ ?>
+                            <li>
+                                <a class="ad-link-modal" 
+                                   href="<?=$this->baseUrl()?>/usuario/aviso/activar-aviso/cod/<?=$index->ID_AVISO?>" 
+                                   title="Activar">
+                                    Activar Aviso
+                                    <span class="icon-active-action"></span>
+                                </a>
+                                
+                            </li>
+                        <? } if($index->ESTADO==5){ ?> 
+                            <li>
+                                <a href="<?=$this->baseUrl()?>/usuario/aviso/republicar/cod/<?=$index->ID_AVISO?>"
+                                   title="Republicar">
+                                    Republicar
+                                    <span class="icon-republish-action"></span>
+                                </a>
+                                
+                            </li>
+                            <li>
+                                <a href="<?=$this->baseUrl()?>/usuario/publicacion/registro-destaque/cod/<?=$index->ID_AVISO?>" 
+                                   title="Editar y Republicar">
+                                    <span class="block">Editar y Republicar</span>
+                                    <span class="icon-edit-action"></span>
+                                </a>
+                                
+                            </li>
+                        <? } ?>
+                    </ul>
+                </div>
+            </li>
+            <?php } ?>
+        </ul>
+        <div class="options-search last row">
+            <div class="apPagination pagination-results">
+                <?= $this->paginationControl($this->paginador, 'Sliding', '_partials/_pag.phtml') ?>
+            </div>
+        </div>
+        <?php } else { ?>
+            <div class="title-active-notices">
+                <div>No se encontraron resultados</div>
+            </div>
+        <?php }?>
+    </div>
+</form>
+
+<div class="hide">
+    <div id="message-ad" class="message-modal">
+        <h3 class="k-title"><span></span>Mensaje</h3>
+            <div class="mb20 message">¿Esta seguro que desea <strong id="type-action">eliminar</strong> el aviso?</div>
+            <div class="control btn-options">
+                <a href="javascript:;" class="btn-kotear">Aceptar</a>
+                <a href="javascript:;" class="btn-close">Cancelar</a>
+            </div>
+    </div>
+</div><!-- / finish ad -->

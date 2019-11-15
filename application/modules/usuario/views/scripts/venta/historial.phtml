@@ -1,0 +1,198 @@
+  <?php echo $this->action('buscador','busqueda','default'); ?>
+
+  <div id="body-content" class="misventas-pag col-master">
+    <div id="s_level1" class="clearfix">
+      <h3>Koteando (Mi Cuenta)</h3>
+            <?php
+			$active3='active';
+//			include 'navegacion.phtml'; 
+?>
+<?php echo $this->action('navegacion','menu','default', array('nav'=>'venta', 'opc'=>3));?>
+
+    </div>
+    <div class="pagetitle">
+      <h4>Historial de ventas <span><?php if ($this->historialCount>0){?>(<?php echo $this->historialCount?> <?php if ($this->historialCount>1){?>ventas<?php } else {?>venta<?php }?> realizadas)<?php }?></span></h4>
+    </div>
+    <div id="s_level2" class="clearfix">
+      <div id="left-bar" class="col5">
+        <ul class="box">
+          <?php if ($this->filtroCategoria == -1){?>
+            <li class="active">Cualquier Categoría</li>
+          <?php } else {?>
+            <li><a href="<?php echo sprintf($this->qsCategoria,-1)?>">Cualquier Categoría</a></li>
+          <?php }?>
+          <?php foreach ($this->totalCategoria as $index => $row):?>
+            <?php if ($this->filtroCategoria==$index ){?>
+            <li class="active"><?php echo $row['nom']?></li>
+            <?php } else {?>
+            <li><a href="<?php echo sprintf($this->qsCategoria,$index) ?>"><?php echo $row['nom']?></a></li>
+            <?php }?>
+          <?php endforeach;?>
+        </ul>
+        <!--
+          <ul class="box">
+          <?php if ($this->filtroEstadoCalificacion == -1){?>
+            <li class="active">Cualquier Estado</li>
+          <?php } else {?>
+            <li><a href="<?php echo sprintf($this->qsEstadoCalificacion,-1) ?>">Cualquier Estado</a></li>
+          <?php }?>
+          <?php if ($this->filtroEstadoCalificacion == 1){?>
+            <li class="active">Calificadas</li>
+          <?php } else{?>
+            <li><a href="<?php echo sprintf($this->qsEstadoCalificacion,1)?>">Calificadas</a></li>
+          <?php }?>
+          <?php if ($this->filtroEstadoCalificacion == 2){?>
+            <li class="active">No Calificadas</li>
+          <?php } else{?>
+            <li><a href="<?php echo sprintf($this->qsEstadoCalificacion,2)?>">No Calificadas</a></li>
+          <?php }?>
+          <?php if ($this->filtroEstadoCalificacion == 3){?>
+            <li class="active">Aguardando Calificación</li>
+          <?php } else{?>
+            <li><a href="<?php echo sprintf($this->qsEstadoCalificacion,3)?>">Aguardando Calificación</a></li>
+          <?php }?>
+        </ul>
+        <ul class="box">
+          <?php if ($this->filtroCalificacion == -1){?>
+            <li class="active">Cualquier Calificacíon</li>
+          <?php } else {?>
+            <li><a href="<?php echo sprintf($this->qsCalificacion,-1)?>">Cualquier Calificacíon</a></li>
+          <?php }?>
+          <?php if ($this->filtroCalificacion == 3){?>
+            <li class="active">Positivas</li>
+          <?php } else {?>
+            <li><a href="<?php echo sprintf($this->qsCalificacion,3)?>">Positivas</a></li>
+          <?php }?>
+          <?php if ($this->filtroCalificacion == 1){?>
+            <li class="active">Negativas</li>
+          <?php } else {?>
+            <li><a href="<?php echo sprintf($this->qsCalificacion,1)?>">Negativas</a></li>
+          <?php }?>
+          <?php if ($this->filtroCalificacion ==2){?>
+            <li class="active">Neutras</li>
+          <?php } else {?>
+            <li><a href="<?php echo sprintf($this->qsCalificacion,2)?>">Neutras</a></li>
+          <?php }?>
+        </ul>-->
+        <ul class="box">
+
+          <?php if ($this->filtroDias ==-1){?>
+            <li class="active">Cualquier Fecha</li>
+          <?php } else {?>
+            <li><a href="<?php echo sprintf($this->qsDias,-1)?>">Cualquier Fecha</a></li>
+          <?php }?>
+          <?php if ($this->filtroDias == 0){?>
+            <li class="active">Hoy</li>
+          <?php } else{?>
+            <li><a href="<?php echo sprintf($this->qsDias,0)?>">Hoy</a></li>
+          <?php }?>
+          <?php if ($this->filtroDias == 7){?>
+            <li class="active">Ultima Semana</li>
+          <?php } else{?>
+            <li><a href="<?php echo sprintf($this->qsDias,7)?>">Ultima Semana</a></li>
+          <?php }?>
+          <?php if ($this->filtroDias == 30){?>
+            <li class="active">Ultimo Mes</li>
+          <?php } else{?>
+            <li><a href="<?php echo sprintf($this->qsDias,30)?>">Ultimo Mes</a></li>
+          <?php }?>
+        </ul>
+      </div>
+
+      <div id="right-bar" class="col17 last">
+      <p class="col6 float_left"><?php if ($this->historialCount>0) { ?><?php echo $this->paginationControl($this->avisos, 'Sliding', 'venta/paginadortop.phtml', array('variables' => $this->variables)); ?><?php }?></p>
+      <form id="filtro_apodo" action="" method="get">
+		<div class="cont_filtrar_paginacion col17 last">
+			<div class="col6 last float_rightdiv">
+				<button type="submit" class="btn_submit sep_left float_right">Filtrar</button><input class="float_right" type="text" name="apodo" value="Apodo" onblur="if(this.value.length == 0) this.value='Apodo';" onclick="if(this.value == 'Apodo') this.value='';" id="search_term" />
+				<input type="hidden" name="fc" value="<?php echo $this->filtroCategoria?>"/>
+				<input type="hidden" name="fl" value="<?php echo $this->filtroCalificacion?>"/>
+				<input type="hidden" name="fe" value="<?php echo $this->filtroEstadoCalificacion?>"/>
+				<input type="hidden" name="fd" value="<?php echo $this->filtroDias?>"/>
+				<?php if (isset($this->v)){?><input type="hidden" name="v" value="<?php echo $this->v?>"/><?php }?>
+			</div>
+		</div>
+	  </form>
+<form id="form_historialventas" class="frm_datatables chktarget" method="post" action="<?php echo $this->baseUrl()?>/usuario/calificaciones/calificar">
+
+
+<?php
+$rowCount = count($this->data);
+//print_r($this->data);
+if ($rowCount>0){?>
+<table border="0" cellspacing="0" cellpadding="0"  class="float_left">
+  <tbody>
+<?php 
+$fechaAnterior = '';
+$apodoAnterior = '';
+for($i = 0 ;$i < $rowCount; $i++):
+$row = $this->data[$i]?>
+<!--Categorias-->
+            <!-- Aviso Inicio  -->
+           <tr>
+				<td colspan="3" class="historial_ventas">
+					<?php if (($fechaAnterior != $row->TRANSACCION_FEC) && ($apodoAnterior != $row->COMPRADOR_ID)){?>
+					<p class="data_user">
+						<a href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $row->COMPRADOR_ID?>" class="apodo_user fontsize13 bold"><?php echo $row->COMPRADOR_APODO?><span class="apodo_puntaje">(<?php echo $row->COMPRADOR_PUNTAJE?>)</span></a><span class="nombre_user resaltador ico_user"><?php echo $row->COMPRADOR_NOM?></span><a href="mailto:<?php echo $row->COMPRADOR_EMAIL ?>" class="email_user email-2"><?php echo $row->COMPRADOR_EMAIL ?></a><span class="telefono_user fono"><?php echo $row->COMPRADOR_FONO1?> <?php if ($row->COMPRADOR_FONO2!=''){?> / <?php echo $row->COMPRADOR_FONO2?> <?php }?></span>
+					</p>
+					<?php $fechaAnterior = $row->TRANSACCION_FEC; $apodoAnterior=$row->COMPRADOR_ID;}?>
+					<div class="cont_data_venta">
+						<span class="cont_check"><?php if ($row->CALIFICACION_VENDEDOR === null){?><input type="checkbox" name="select[<?php echo $row->TRANSACCION_ID?>]" value="<?php echo $row->TRANSACCION_ID?>"><?php }?></span>
+						<div class="cont_textoventa">
+							<h4 class="titulo_aviso <?php if ($row->AVISO_TIPO == 2){?>ico_subasta_right<?php }?>"><a href="<?php echo $this->baseUrl()?>/aviso/<?php echo $row->AVISO_ID?>-<?php echo $this->utils->convertSEO($row->AVISO_TIT)?>"><?php echo $row->AVISO_TIT?></a> (<?php echo $row->AVISO_ID?>)</h4>
+							<p class="date unidad_precio width100">Realizada el <?php echo $this->utils->convertDateHistorial($row->TRANSACCION_FEC_NOR)?>. - <?php echo $row->OFERTA_CANTIDAD?> und. por <?php echo $row->OFERTA_MONEDA?> <?php echo number_format($row->OFERTA_PRECIO,2,'.','')?></p>
+
+						</div>
+                        <!--<div class="cont_opciones">
+                        <?php if ($row->CALIFICACION_VENDEDOR != null){?>
+	                        <?php if ($row->CALIFICACION_VENDEDOR ==3 ) $icono = 'ico_calificaste_pos_right';
+	                        elseif ($row->CALIFICACION_VENDEDOR == 2) $icono = 'ico_calificaste_pos_neutro';
+	                            else $icono = 'ico_calificaste_pos_nega'; ?>
+	                        <p class="no_margin"><span class="<?php echo $icono?> ">calificaste</span></p>
+                        <?php } else {?>
+                            <p class="no_margin"><span class="alert"><?php echo $row->CALIFICACION_DIAS?> dias para calificar</span></p>
+                            <?php if($row->CALIFICACION_DIAS >= 0) { ?><p><a class="positivo" href="<?php echo $this->baseUrl()?>/usuario/calificaciones/calificar/trns/<?php echo $row->TRANSACCION_ID?>">Calificar</a></p><?php } ?>
+                        <?php }?>
+                            <?php if ($row->CALIFICACION_COMPRADOR == null) {?>
+                            <p><span class="aguarda_calificacion">Aguardando calificacion</span></p>
+                            <?php } ?>
+						</div>-->
+					</div>
+				</td>
+            </tr>
+            <!-- Aviso Fin  -->
+<?php endfor; ?>
+  </tbody>
+</table>
+<!--Categorias Fin -->
+
+
+<p class="col17 last cont_filtrar_checks chktoggler float_left">&nbsp;</p>
+        <!--
+		<p class="col17 last cont_filtrar_checks chktoggler float_left">
+		<a title="Seleccionar todos" class="chktrigger" href="#">Seleccionar Todos</a>  |
+		<a title="Deseleccionar todos" class="chkunselect" href="#">Deseleccionar Todos</a>  |
+		<a title="Seleccionar todos" class="chkinverter" href="#">Invertir Seleccion</a>
+
+		</p>
+		<div class="recuadro_historial float_left">
+			<div class="col8 float_left">
+			<h4 class="fontsize16">Calificaciones Masivas</h4>
+			<p>has seleccionado <span class="checks_seccionados">1</span> venta(s) para realizar la calificacion</p>
+			</div>
+			<a href="#" class="btn_submit calificar_historialventas float_right"><span>Calificar ahora</span></a>
+			<!-- <button type="submit" class="btn_submit calificar_historialventas float_right"><span>Calificar ahora</span></button>
+		</div>-->
+		<?php echo $this->paginationControl($this->paginator,'Sliding','venta/paginador.phtml'); ?>
+<? } else { ?>
+    <div id="right-bar" class="col17 last">
+            <div class="pagetitle">
+                <h4><p align="center">No se encontraron resultados</p></h4>
+            </div>
+     </div>
+    <? }  ?>
+		</form>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>

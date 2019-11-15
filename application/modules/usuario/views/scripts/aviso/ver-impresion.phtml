@@ -1,0 +1,67 @@
+<div id="wrapper">
+<header class="header">    
+    <h1 itemscope="itemscope" itemtype="http://schema.org/Organization" class="min-img">
+        <a itemprop="url" title="Kotear.pe" href="<?=$this->baseUrl()?>">
+            <img width="130" height="40" src="<?=URL_STATIC?>img/logo-mini.jpg" alt="Kotear.pe">
+        </a>
+        <meta itemprop="name" content="kotear.pe">
+    </h1>
+  <div id="user-name-login">
+    <a href="javascript:;" title="title" onclick = 'window.print()'>Impresión de archivo</a>
+  </div>
+  <div class="shadow-space"></div>
+</header>
+<div class="row">
+  <div class="header-impress"></div>
+    <div class="content-impress row">
+      <!--<img src="< ?php echo $this->baseUrl()?>/f/img/notFound.jpg?>" onerror="< ?php echo $this->baseUrl()?>/f/img/notFound.jpg?>" alt="" width="120" height="120" />-->      
+      <h3><?php echo $this->data->K_TITULO?></h3>
+        <img src="<?php echo $this->img; ?>" alt="<?php echo $r->K_TITULO; ?>" 
+           onerror="this.src = '<?=URL_STATIC?>img/notFound.jpg'" />
+        <div class="text-impress">
+        
+        <ul id="" class="">
+            <li>
+                <span>Producto:</span> 
+                <strong><?php echo $this->data->K_TIPO_PRODUCTO?></strong>
+            </li>
+            <li>
+                <span>Vence el:</span> 
+                <strong><?php echo $this->data->K_FECHA_CADUCIDAD?></strong>
+            </li>
+            <li>
+                <span>Visitas:</span> 
+                <strong><?php echo $this->data->K_NUM_VISITAS?></strong>
+            </li>
+            <li>
+                <span>Precio final:</span>
+                <span class="red">
+                        <?php echo $this->data->K_SIMB_MONEDA?> <?php echo $this->data->K_PRECIO_FINAL?>
+                </span> (Por unidad)
+            </li>
+        </ul>
+      </div>
+    </div>
+  <h2 class="k-title mb10"><span></span>Información</h2>
+<div class="data-html">
+   <?php echo $this->data->K_HTML?>
+</div>
+<div class="shadow-space"></div>
+<h2 class="k-title mb10"><span></span>Datos del Vendedor</h2>
+<ul>
+    <li>Apodo : <strong><?=$this->data->K_APODO_VENDEDOR?></strong></li>
+    <li>Nombre: <strong><?=$this->data->K_NOMBRE_VENDEDOR?></strong></li>
+    <li>Tipo de Vendedor: <strong><?=$this->data->K_NOMBRE_TIPO?></strong></li>
+    <li>Productos: <strong><?=$this->data->K_CANT_PRODUCTOS?></strong></li>
+    <li>Permanencia: <strong><?=$this->data->K_CANT_PERMANENCIA?></strong></li>
+</ul>
+<div class="shadow-space"></div>
+<h2 class="k-title mb10"><span></span>Formas de Pago</h2>
+<ul>
+    <?php foreach($this->medioPagos as $medioPago):?>
+    <li><span class="<?php echo $medioPago->K_IMG;?>"></span><?php echo $medioPago->K_TIT;?></li>
+    <?php endforeach;?>
+</ul>
+<div class="shadow-space"></div>
+</div>
+</div>

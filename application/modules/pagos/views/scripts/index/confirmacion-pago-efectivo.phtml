@@ -1,0 +1,60 @@
+<div id="body-content" class="estadocuenta-pag col-master">
+
+
+  <div id="s_level1" class="clearfix">
+      <h3>C&oacute;digo de Indentificaci&oacute;n de pago (CIP)</h3>
+    
+
+    <p>Se ha generado el siguiente c&oacute;digo de indentificaci&oacute;n de pago (CIP) de PagoEfectivo </p>
+</div>
+<div align="center" class="info_box">
+    <p>
+    <?php if( $this->error==''){?>
+    <div class="pagetitle"><h4><?php echo $this->numCip; ?></h4></div>
+    <img  src="<?php echo $this->codBarra; ?>">
+    <p>Monto a pagar: <strong>S/.<?php echo $this->monto; ?></strong> nuevos soles</p>
+                                <p>Tiempo Expiración: <?php echo $this->TiempoExpiracionCip; ?>
+    <p>Fecha de Emisión: <?php echo $this->FechaEmisionCip; ?>
+    <br><br><p>Puedes <a  target="_blank" href="<?php echo $this->baseUrl() ?>/pagos/index/imprimir-cip/monto/<?php echo $this->monto; ?>/numcip/<?php echo $this->numCip; ?>">imprimir</a> tu c&oacute;digo o enviarte una <a href="<?php echo $this->baseUrl() ?>/pagos/index/correoenviado/numCip/<?php echo $this->numCip;?>/monto/<?php echo $this->monto;?>" rel="#paydetail" class="cmd_remote">copia a tu correo</a></p>
+    <br><br><p>
+<?php } else {?>
+    <p>No se pudo generar el cip......</p>
+    <p>&nbsp;</p>
+        <?php } ?>
+        <button class="btn_submit" onclick="location.href='<?php echo $this->baseUrl()?>/pagos/index/pendiente-de-pago'" name="continuar" type="submit"><span>volver</span></button>
+    </p>
+    <br><br>
+</div>
+
+    <p>
+    <ul class="ul">
+        <li  class="float_left">El CIP ha sido generado el <?php echo date('d') ?> de <?php echo date('m') ?> del <?php echo date('Y') ?></li>
+        <li class="float_right" >Una copia del CIP ha sido enviada a tu correo</li>
+        <li class="clear"></li>
+    </ul>
+    <p>
+    <br>
+    <ul class="ul">
+        <li class="">Ud. eligi&oacute; realizar su pago con <a target="_blanck" href="http://pagoefectivo.pe">PagoEfectivo</a></li>
+        <li class="">Dispone de 2 opciones para realizar el pago</li>
+        <li class="clear"></li>
+    </ul>
+    <p>
+    <br>
+    <ul class="ul">
+    <li><a href="http://pagoefectivo.pe/UTI/PagoViaBCP.aspx">Pago en el BCP por internet (v&iacute;a BCP)</a></li>
+    <li><a href="http://pagoefectivo.pe/UTI/PagoBCP.aspx">Pago en el BCP por Ventanilla</a></li>
+    <li style="visibility: hidden; display: none;"><a href="http://pagoefectivo.pe/UTI/PagoAgenciaElComercio.aspx">Pago en las Agencias Concesionarias de El Comercio</a></li>
+    </ul>
+</div>
+
+<div id="paydetail" class="modal">
+    <h2>Kotear | Env&iacute;o de correo</h2>
+    <div class="content">
+
+    </div>
+
+     <p class="buttons">
+        <button name="cancel" type="button" value="Cancelar" class="btn_submit close"><span>Cerrar</span></button>
+    </p>
+</div>

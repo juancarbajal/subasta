@@ -1,0 +1,38 @@
+<?php
+$totalMicuenta = 1;
+$totalAvisosNoActivos = 1;
+$totalAlertas = $this->preguntasSinContestar + $this->numeroCalificacionesPendientes + $this->avisosPorCaducar + $this->avisosSeguimiento;
+$totalPagos = $this->saldo;
+
+?>
+
+<ul class="opt1-1 ie6zfix">
+    <?php if ($totalMicuenta > 0) { ?>
+        <li class="label">Koteando</li>
+        <?php if ($totalAvisosNoActivos > 0) {?>
+        <li class="opt1-1-3"><a href="<?php echo $this->baseUrl(); ?>/usuario/venta/inactivas/opc/categoria/codigo/0">Avisos No Activos</a>
+        </li><?php } ?>
+    <?php } ?>
+    <?php if ($totalAlertas > 0) { ?>
+    <li class="label">Alertas</li>
+        <?php if ($this->preguntasSinContestar > 0) {?>
+    <li class="opt1-1-3"><a href="<?php echo $this->baseUrl(); ?>/usuario/venta/preguntas-recibidas/opc/pregunta/codigo/1">(<?php echo $this->preguntasSinContestar; ?>) Preguntas sin contestar</a>
+    </li><?php } ?>
+    <!--<?php if ($this->numeroCalificacionesPendientes > 0) {?>
+    <li class="opt1-1-4">
+    	<a href="<?php echo $this->baseUrl(); ?>/usuario/calificaciones/pendientes">(<?php echo $this->numeroCalificacionesPendientes ?>) Transacciones por calificar</a>
+    </li><?php } ?>-->
+        <?php if ($this->avisosPorCaducar > 0) {?>
+    <li class="opt1-1-5">
+    	<a href="<?php echo $this->baseUrl(); ?>/usuario/venta/activas/opc/categoria/codigo/0">(<?php echo $this->avisosPorCaducar; ?>) Avisos por caducar</a>
+    </li><?php } ?>
+        <?php if ($this->avisosSeguimiento > 0) {?>
+    <li class="opt1-1-7">
+    	<a href="<?php echo $this->baseUrl(); ?>/usuario/compra/seguimiento">(<?php echo $this->avisosSeguimiento ?>) Avisos en seguimiento </a>
+    </li><?php } ?>
+        <?php } ?>
+    <?php if ($totalPagos > 0) { ?>
+    <li class="label">Cargos Pagados</li>
+        <?php if ($this->saldo > 0) {?><li class="opt1-1-6"><a href="<?php echo $this->baseUrl(); ?>/pagos/index/pendiente-de-pago">Pendientes de Pago (s/. <?php echo $this->saldo ?>)</a></li><?php } ?>
+        <?php } ?>
+</ul>

@@ -1,0 +1,40 @@
+<?php echo $this->action('buscador','busqueda','default'); ?>
+
+<script type="text/javascript">
+function f_mandar(){
+	$.ajax({
+		type: "POST",
+		url: "<?php $this->baseUrl()?>/usuario/clave/recuperar",
+		dataType: "json",
+		cache: "false",
+        data: { usercontact : $('#usercontact').val()},
+		success: function(data){
+			alert(data.msg);
+			}
+		})
+    return false;
+}
+</script>
+<form id="recover-passw"  name="recover-passw" method="post">
+    <h2>Recuperación de clave  </h2>
+
+    	<h3>Obtén tu clave nuevamente  </h3>
+
+        <div class="tip">Por razones de seguridad, Kotear.pe te recomienda modificar tu clave una vez recuperada la olvidada. </div>
+
+        <p>Para recuperar tu clave, ingresa a continuación tu Apodo o E-mail:  </p>
+
+        <p class="inpt">
+          <label for="usercontact">Apodo o E-mail:
+            <input class="required" type="text" name="usercontact" id="usercontact" />
+          </label>
+        </p>
+
+        <p class="buttons">
+			<input value="Continuar" type="button" id="continuar" name="continuar" onclick="f_mandar()"/>
+			<input class="close" value="Cancelar" type="button" id="cancel" name="cancel" />
+		</p>
+    </form>
+<script type="text/javascript" src="/f/js/jquery.js"></script>
+<script type="text/javascript" src="/f/js/jquery.utils.js"></script>
+<script type="text/javascript" src="/f/js/kotear.core.js"></script>

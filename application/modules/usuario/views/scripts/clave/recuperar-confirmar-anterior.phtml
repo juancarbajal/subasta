@@ -1,0 +1,40 @@
+<!--Recuperar Clave Validar -->
+<?php # if (isset($this->msg)) { echo $this->msg; } 
+      # mas abajo esta el codigo para los mensajes, es igual al del login (borrar esto)
+	  # seguro lo puedes reutilizar ?>
+
+  <div id="body-content" class="login-pag col-master">
+    <div id="s_level1" class="clearfix">
+      <h3>Cambiar contraseña</h3>
+    </div>
+    <div id="s_level2" class="clearfix">
+      <div class="col12">
+        <?php if (isset($this->msg)){ ?>
+      	<div class="notice"><?php echo $this->msg?> <?php if (isset($this->msgUrl)){ ?>:
+            <a class="cmd" rel="#frmSuspended" href="<?php echo $this->msgUrl['href']?>"><?php echo $this->msgUrl['label']?></a><?php } ?></div>
+        <? }?>
+        <h3>Coloca tu Apodo y el Código proporcionado:</h3>
+        <form id="login" name="login"  action="<?php echo $this->baseUrl()?>/usuario/clave/recuperar-confirmar" method="get">
+          <p class="inpt">
+            <label for="apodo">Apodo:
+              <input class="required" type="text" name="apodo" id="apodo" maxlength="50" />
+            </label>
+          </p>
+          <p class="inpt">
+            <label for="codigo">Código:
+              <input class="required" type="text" name="codigo" id="codigo" maxlength="255" />
+            </label>
+            </p>
+          <button type="submit">Continuar</button>
+        </form>
+      </div>
+      <div class="last col10">
+        <h3>¿Todavía no estás registrado?</h3>
+        <p>Para poder comprar y vender hace falta estar registrado.<br />
+          ¡Regístrate ahora gratis en sólo 2 pasos!</p>
+        <h4><a href="<?php echo $this->baseUrl()?>/usuario/registro" class="button_rb">¡Registrate Gratis!</a></h4>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+

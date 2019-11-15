@@ -1,0 +1,31 @@
+<?php echo $this->action('buscador', 'busqueda', 'default'); ?>
+
+<div id="body-content" class="col-master">
+   <?php  // CASO LEVE
+   if($this->nivelLeve == 1) { ?>
+   
+  <div id="s_level1" class="clearfix">
+    <h3>Suspension Leve</h3>
+  </div>
+  <div id="s_level2" class="clearfix">
+    <h2>Contacta al administrador para cambiar tu suspensión</h2>
+    <p>No puedes acceder a la publiación si estas supendido levemente</p>
+ 	<button type="submit" class="aceptar btn_submit" onclick='location.href="<?php echo $this->baseUrl(); ?>/usuario/cuenta/"'><span>Aceptar</span></button>
+  </div>
+  <div class="clear"></div>
+    <? } ?>
+    <?php
+    // CASO MODERADO
+    if($this->nivelModerado == 2) {
+    ?>
+  <div id="s_level1" class="clearfix">
+    <h3>Suspension Moderada</h3>
+  </div>
+  <div id="s_level2" class="clearfix">
+    <h2>Contacta al administrador para cambiar tu suspensión</h2>
+    <p>No puedes acceder a la publiación si tu supensión es Moderada</p>
+ 	<button type="submit" class="aceptar btn_submit" onclick='location.href="<?php echo $this->baseUrl(); ?>/usuario/cuenta/"'><span>Aceptar</span></button>
+  </div>
+  <div class="clear"></div>
+<?php  }// FIN CASO MODERADO ?>
+</div>

@@ -1,0 +1,153 @@
+<!--<div class="ybox">El elemento fue solucionado correctamente.</div>-->
+<?=$this->form->apToken->renderViewHelper()?>
+<form id="apFormSearch"action="<?=$this->baseUrl()?>/usuario/venta/pendiente-pago" 
+      method="get" style="width: 100%">
+<div class="result-content">
+    <div class="active-notices content-right">
+        <div class="title-active-notices">
+            <h2>
+                Avisos Pendientes de pago 
+                <span>(<?=empty($this->data[0]->TOTAL)?0:$this->data[0]->TOTAL?>)</span>
+            </h2>
+            <a class="btn-kotear btn-middle" 
+               href="<?=$this->baseUrl()?>/usuario/publicacion/registro-destaque">
+                Añadir un nuevo aviso
+            </a>
+        </div>
+        <div class="form-search">
+            <input type="text" id="txtTitle" class="input-medium search-query" placeholder="Estoy buscando ..." 
+                   value="<?=$this->filter['K_TIT']?>">
+            <button type="submit" id="btnSearchTitle" class="btn-kotear btn-small">Buscar</button>
+        </div>
+        <?php /*<!-- <a class="btn-finish">Finalizar</a> // futura implementacion --> */?>
+        <div class="options-search no-top row">
+            <div class="show-dates c-inline">
+                <label>Mostrar avisos de</label>
+                <select name="" id="cboMostrarAvisoDe">
+                    <option value="0">Cualquier fecha</option>
+                    <option value="1" <?=$this->filter['K_FILTRO_FECHA']==1?'selected':''?> >
+                        Ultima semana
+                    </option>
+                    <option value="2" <?=$this->filter['K_FILTRO_FECHA']==2?'selected':''?>>
+                        Ultimo mes
+                    </option>
+                </select>
+            </div>
+            <div class="apPagination pagination-results">
+                <?= $this->paginationControl($this->paginador, 'Sliding', '_partials/_pag.phtml') ?>
+            </div>
+        </div>
+        <?php  if(count($this->data)>0){ ?>
+        <div class="pagination-barra">
+            <ul>
+                <?php 
+                    $orderAsc = 'row-asc'; 
+                    $orderDesc = 'row-desc';
+                ?>
+                <input type="hidden" id="hddOrder" value="<?=$this->filter['K_FILTRO']?>">
+                <!--<li class="check-all"><input id="id" name="name" type="checkbox"/></li> //futura implementacion -->
+                <li class="description">
+                    Descripcion
+                    <a href="javascript:;" order="<?=$this->filter['K_FILTRO']==2?'1':'2'?>"
+                       class="linkOrder <?=$this->filter['K_FILTRO']==2?$orderAsc:$orderDesc?>">
+                   </a>
+                </li>
+                <li class="price">
+                    Destaque
+                    <a href="javascript:;" order="<?=$this->filter['K_FILTRO']==3?'4':'3'?>"
+                       class="linkOrder <?=$this->filter['K_FILTRO']==3?$orderAsc:$orderDesc?>">
+                   </a>
+                </li>
+                <li class="delete">Acciones</li>
+            </ul>
+        </div>
+        <ul class="list-result-products pending-payment">
+        <?php foreach($this->data as $index): 
+                $titulo = $this->escape($index->TIT);
+                $btnPagar = false;
+                $linkEliminar = false;
+                if($index->SERVICIO_PAGO == 0 && $index->ESTADO == 0 && empty($index->NUM_OPERACION)) {
+                    $btnPagar = true;
+                } elseif($index->SERVICIO_PAGO == 1 && $index->ESTADO == 1 && !empty($index->NUM_OPERACION)) {
+                    $linkEliminar = true;
+                }
+        ?>
+        <?/* if($anterior!=$index->L1) {?>
+                <div class="name-category"><strong><?=$index->CATEGORIA?></strong>
+                    <?php $anterior = $index->L1;?>
+                </div>
+            <?php } */?>        
+            <li class="product-row <?=$index->ESTILO?>">
+                <!--<div class="check-product">
+                 <input id="chk_ID_AVISO" name="chk_ID_AVISO" type="checkbox" value="<?=$index->ID_AVISO?>"/>
+                </div> 
+                <div class="line-vertical"></div> //futura implementacion -->
+                <div class="description-product">
+                    <div class="conteiner-img">
+                    <a href="<?=$this->baseUrl() . '/aviso/' . $index->ID_AVISO . '-' .$index->URL?>"
+                    title="<?=$titulo;?>">
+                        <img class="lazy" src="<?=URL_STATIC?>img/notFound.jpg" 
+                             data-original="<?=$this->ruta.$index->RUTA_IMAGEN?>" 
+                             alt="<?=$titulo?>" width="90" height="68" />
+                    </a>    
+                    </div>
+                    <h3>
+                        <a href="<?=$this->baseUrl() . '/aviso/' . $index->ID_AVISO . '-' .$index->URL?>"
+                            title="<?=$titulo;?>">
+                            <?=(strlen($titulo) > 57)?substr($titulo, 0, 57) . ' ...':$titulo?>
+                        </a>
+                    </h3>
+                    <div class="red"><?=$index->MONEDA_PRODUCTO.' '.$index->PRECIO_PRODUCTO ?></div>
+                </div>
+                <div class="line-vertical"></div>
+                <div class="precio-product">
+                    <span>Destaque <?=$index->TIPO_DESTAQUE?></span>
+                    <span class="red"><?=$index->MONEDA_DESTAQUE.' '.$index->MONTO_DESTAQUE?></span>
+                    <span><?=$index->MEDIO_PAGO?></span>
+                </div>
+                <div class="line-vertical"></div>
+                <div class="delete-product w148">
+                    <?php if($btnPagar){ ?>
+                        <a class="btn-kotear paid-btn btn-small" 
+                        href="<?=$this->baseUrl()?>/pagos/index/seleccion-medio-pago/id/<?=$index->IDTRANSACCION?>">
+                            Pagar
+                        </a>
+                    <?php } ?>
+                    <?php if($linkEliminar){ ?>
+                        <a class="ad-link-modal btn-kotear btn-small" 
+                        href="<?=$this->baseUrl()?>/pagos/index/eliminar-cip/id/<?=$index->ID_AVISO.
+                            '/apToken/'.$this->form->apToken->getValue()?>"
+                        title="Eliminar" rel="htmlValue">
+                            Eliminar
+                        </a>
+                    <?php } ?>
+                </div>
+            </li>
+        <?php  endforeach; ?>
+        </ul>
+        <div class="options-search last row">
+            <div class="apPagination pagination-results">
+                <?= $this->paginationControl($this->paginador, 'Sliding', '_partials/_pag.phtml') ?>
+            </div>
+        </div>
+        <?php } else { ?>
+        <div class="title-active-notices">
+            <div>No se encontraron resultados</div>
+        </div>
+        <?php }?>
+    </div>
+</div>
+</form>
+
+<div class="hide">
+    <div id="message-ad" class="message-modal">
+         <h3 class="k-title"><span></span>Mensaje</h3>
+            <div class="mb20 message">
+                Esta seguro que desea <strong style="font-size:16px">eliminar</strong> el anuncio.
+            </div>
+            <div class="control btn-options">
+                <a href="javascript:;" class="btn-kotear">Aceptar</a>
+                <a href="javascript:;" class="btn-close">Cancelar</a>
+            </div>
+    </div>
+</div><!-- / finish ad -->

@@ -1,0 +1,23 @@
+
+<table class="mf" cellpadding="0" cellspacing="0">
+  <tr>
+    <th> FECHA </th>
+    <th > CODIGO DE<BR/> CARGO </th>
+    <th> DESCRIPCION </th>
+    <th> MONTO </th>
+  </tr>
+  <?php foreach($this->result as $index): ?>
+  <tr>
+    <td><?php echo $index->Fecha; ?></td>
+    <td><?php echo $index->IdCargo; ?></td>
+    <td><?php echo $index->Descripcion; ?>&nbsp;&nbsp;&nbsp; </td>
+    <td class="number"><?php echo number_format($index->Monto,2); ?> &nbsp;</td>
+  </tr>
+  <?php
+  $monto = $monto + $index->Monto;
+  endforeach; ?>
+  <tr class="rowtotal">
+  	<td colspan="3" class="desc"><strong>Total</strong></td>
+    <td class="number"><strong><?php echo number_format($monto,2) ?></strong></td>
+  </tr>
+</table>

@@ -1,0 +1,48 @@
+<?php if (!isset($this->resultDetalle) || (count($this->resultDetalle)==0)) { ?>
+<div class="error">No existen cargos asignados.</div>
+<?php } else {?>
+<?php //print_r($this->resultCabezera);?>
+<a class="ico-print" title="Imprimir" target="_blank"  href="<?php echo $this->baseUrl()?>/pagos/index/imprimir-cargos-pagados/tipo/<?php echo $this->tipo; ?>/cod/<?php echo $this->cod; ?>/anio/<?php echo $this->anio; ?>">Imprimir</a>
+<img src="<?php echo $this->baseUrl(); ?>/img/global/pdf.gif"><a title="pdf" target="_blank"  href="<?php echo $this->baseUrl()?>/pagos/index/pdf-cargos-pagados/tipo/<?php echo $this->tipo; ?>/cod/<?php echo $this->cod; ?>/anio/<?php echo $this->anio; ?>">Pdf</a>
+
+<table>
+    <tr>
+      <th><?php echo (strlen($this->resultCabezera->NroDocumento)>=11)?'Razón':'Nombre'?></th> <td><?php echo $this->resultCabezera->NomCompleto; ?></td>
+    </tr>
+    <tr>
+
+      <th><?php echo (strlen($this->resultCabezera->NroDocumento)>=11)?'RUC':'DNI'?></th> <td><?php echo $this->resultCabezera->NroDocumento; ?></td>
+   </tr>
+    <tr>
+        <th>Dirección</th> <td><?php echo $this->resultCabezera->Direccion; ?></td>
+    </tr>
+    <tr>
+        <th>Teléfono</th> <td><?php echo $this->resultCabezera->Telefono; ?></td>
+    </tr>
+
+</table>
+<div id="result-modal-scroll" class="modal-scroll-mostrar">
+<table class="mf" cellpadding="0" cellspacing="0">
+  <tr>
+    <th> Fecha </th>
+    <th> Concepto </th>
+    <th> Monto </th>
+  </tr>
+  <?php $monto = 0;  ?>
+  <?php foreach($this->resultDetalle as $index): ?>
+  <tr>
+    <td><?php echo $index->Fecha; ?></td>
+    <td><?php echo $index->Transaccion; ?></td>
+    <td class="number">S/. <?php echo number_format($index->Monto,2,'.',''); ?> &nbsp;</td>
+  </tr>
+  <?php $monto = $monto + $index->Monto;
+  endforeach; ?>
+  <tr class="rowtotal">
+  	<td colspan="2" class="desc"><strong>Total</strong></td>
+    <td class="number"><strong>S/. <?php echo number_format($monto,2,'.','') ?></strong> &nbsp;</td>
+  </tr>
+</table>
+</div>
+<?php if ($this->tipo==1){ ?>* Cargos generados del 01 de <?=$this->mes ?> al <?=$this->ultimoDia?> de <?=$this->mes ?> del <?=$this->anio?><br/><?php } ?>
+** El presente documento no posee ning&uacute;n valor legal
+<?php } //end if?>

@@ -1,0 +1,128 @@
+<script type="text/javascript">
+var _categoria2 = <?=$this->arrCategoria['cat2Json']?>,
+    _categoria3 = <?=$this->arrCategoria['cat3Json']?>;  
+</script>
+<div class="c-search">
+        <div class="search-general"> 
+          <form id="searchfrm" name="searchfrm" method="get" action="<?php echo $this->baseUrl(); ?>/busqueda/">
+          <input id="q" name="q" type="text" placeholder="Estoy Buscando" class="home"/>
+            <select id="search-category-global" name="categs">
+            <option value='-1' selected="selected">Seleccionar</option>
+            <?php            
+                foreach($this->arrCategoria['cat1'] as $index):?>
+                    <option value='<?php echo $index->K_ID_CATEGORIA ?>' > <?php echo $index->K_TIT ?></option>
+            <?php
+                   $valor_inicial = (!isset($valor_inicial))? $index->K_ID_CATEGORIA : $valor_inicial;
+                endforeach;
+            ?>
+            </select>          
+            <select id='search-option1-global' name='categs2'> 
+              <option value="-1">Seleccionar</option>               
+            </select>
+            <input type="hidden" name='categoriaText2-global' value="" />                    
+            <select id='search-option2-global' name='categs3'>
+              <option value="-1">Seleccionar</option>
+            </select>
+            <input type="hidden" name='categoriaText3-global' value="" />
+            
+          <button type="submit">Buscar</button>
+          <a class="show-advanced-search" href="javascript:;">B&uacute;squeda Avanzada</a>
+          </form>  
+        </div> 
+
+        <!-- Busqueda Avanzada -->
+        <div id="advanced-search"> 
+            <div class="detail-triangule"><img width="45" height="20" alt="descripcionImagen" src="<?=URL_STATIC?>img/detail-triangle.png<?php echo App_Config::getStaticVersion(); ?>"/>
+          </div>
+          <div class="content-advanced-search">
+            <h2><span class="icon-left"></span>
+                <p>B&uacute;squeda Avanzada</p> 
+            </h2>
+            <form id="form-advanced-search" class="form-horizontal" method="get" action="<?php echo $this->baseUrl(); ?>/busqueda/">
+              <div class="control-group search-input-row-one">
+                <!-- NOTA PARA FRONT NO CAMBIAR LOS NAME DE LOS INPUTS, CHECKBOX, RADIOBUTTONS, ETC SIN COORDINAR CON FRONT-->  
+                <input id="isearch" name="q" type="text" placeholder="Estoy buscando ...."/>
+                <select id="search-category-advanced" name="categs">
+                    <option value='-1' selected="selected">Seleccionar</option>
+                    <?php                        
+                        foreach($this->arrCategoria['cat1'] as $index):?>
+                            <option value='<?php echo $index->K_ID_CATEGORIA ?>' > <?php echo $index->K_TIT ?></option>
+                    <?php
+                           $valor_inicial = (!isset($valor_inicial))? $index->K_ID_CATEGORIA : $valor_inicial;
+                        endforeach;
+                    ?>
+                </select>
+                <select id="search-option1-advanced" name="categs2" class="disable-input">
+                  <option value="-1">Seleccionar</option>
+                </select>
+                <input type="hidden" name='categoriaText2-advanced' value="" /> 
+                <select id="search-option2-advanced" name="categs3" class="disable-input">
+                  <option value="-1">Seleccionar</option>
+                </select>
+                <input type="hidden" name='categoriaText3-advanced' value="" /> 
+              </div>
+              <div class="search-input-row-two">
+                <div class="control-group">
+                  <label class="control-label">Apodo del Vendedor:</label>
+                  <div class="controls">
+                    <input id="apodo" name="apodo" type="text"/>
+                  </div>
+                </div>
+                <div class="control-group"> 
+                  <label class="control-label">Rango de Precio</label>
+                  <div class="controls">
+                    <input id="price-min" name="pmin" type="text" placeholder="Desde" class="txt-price"/>
+                    <input id="price-max" name="pmax" type="text" placeholder="Hasta" class="txt-price"/>
+                  </div>
+                </div>
+                <div class="control-group right-option">
+                  <label class="control-label">Moneda</label>
+                  <div class="controls">
+                    <label class="radio inline">
+                      <input id="currency1" name="tm" type="radio" value="1" />Soles
+                    </label>
+                    <label class="radio inline">
+                      <input id="currency2" name="tm" type="radio" value="2"/>D&oacute;lares
+                    </label>
+                  </div>
+                </div>
+                <div class="control-group right-option">
+                  <label class="control-label">Estado de Producto:</label>
+                  <div class="control">
+                    <label class="checkbox inline">
+                        <input id="optproductonuevo" name="tp" type="checkbox" value="1"/>Nuevo
+                    </label>
+                    <label class="checkbox inline">
+                      <input id="optproductousado" name="tp" type="checkbox" value="2"/>Usado
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="search-input-row-three">
+                <div class="control-group">
+                  <label class="control-label">Ubicaci&oacute;n:</label>
+                  <div class="control">
+                    <select id="ub" class="ub" name="ub" class="disable-input">                      
+                      <option value="-1">Todas las ciudades</option>
+                        <?php foreach($this->arrCiudadesActivas as $ciudades) : ?>
+                        <option value="<?php echo $ciudades->ID_UBIGEO?>"><?php echo $ciudades->NOM?></option>
+                        <?php endforeach; ?>
+                    </select>
+                      <a href="javascript:;" title="title" alt="#ub:#geotags" class="tag-selector">Agregar</a>
+                      <ul id="geotags" class="row">
+                        <li style="display:inline">
+                        Todas las ciudades
+                        <a title="Remover ubicación" href="#">x</a><input type="hidden" name="ubic[]" value="-1">
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="search-input-row-four">
+                <button type="submit" class="btn-search">Buscar</button>
+                <a href="javascript:;" class="close-search-advanced">Cerrar (x)</a>
+              </div>
+            </form>
+          </div>
+        </div>
+</div>

@@ -1,0 +1,17 @@
+      <div class="  search-general">
+        <input id="search" name="search" type="text" value="Estoy Buscando"/>
+        <select id="search-category" name="search-category">
+        <?php foreach ($this->categoriasBuscador as $cb): ?>  
+            <option value='<?php echo $cb->ID_CATEGORIA ?>'><?php echo $cb->TIT ?></option>
+        <?php endforeach; ?>
+        </select>
+        <select id="search-option1" name="search-option1" disabeld="disabel">
+          <option value="0">Option1</option>
+          <option value="1">Option2</option>
+        </select>
+        <select id="search-option2" name="search-option2" disabel="disabel">
+          <option value="0">Option2</option>
+          <option value="1">Option3</option>
+        </select>
+        <button type="submit">Buscar</button><a href="<?php echo $this->baseUrl() . '/busqueda/avanzada'; ?>">Búsqueda Avanzada</a>
+      </div>

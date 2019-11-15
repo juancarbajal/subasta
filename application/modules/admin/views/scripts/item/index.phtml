@@ -1,0 +1,35 @@
+<form method="post" action="/item/buscar" form="/item/form" enctype="application/x-www-form-urlencoded" id="formSearchItem">
+    <div class="form-inline aFormLine">
+       <label class="awidth3 optional" for="a_tipoModulo">Tipo Modulo:</label>
+       <span class="element"><?= $this->form->a_tipoModulo->renderViewHelper(); ?></span>
+    </div>
+    <div class="ahero-unit hidden hidden-default">
+            <div class="form-inline aFormLine">
+                <label class="awidth3 optional" for="a_modulo">Modulo:</label>
+                <span class="element"><?= $this->form->a_modulo->renderViewHelper(); ?></span>
+                <div class="especial">
+                    <label class="awidth1 optional" for="a_codigoAviso">Código Aviso:</label>
+                    <span class="element"><?= $this->form->a_codigoAviso->renderViewHelper(); ?></span>
+                </div>  
+            </div>
+            <div class="form-inline aFormLine">
+                <div class="enlace">
+                    <label class="awidth3 optional" for="a_nombreItem">Nombre Item:</label>
+                    <span class="element"><?= $this->form->a_nombreItem->renderViewHelper(); ?></span>
+                </div>
+                <div class="enlace">
+                    <label class="awidth1 optional" for="a_link">Link:</label>
+                    <span class="element"><?= $this->form->a_link->renderViewHelper(); ?></span>
+                </div>
+                <label class="awidth1 optional" for="a_activo">Activo:</label>
+                <span class="element"><?= $this->form->a_activo->renderViewHelper(); ?></span>
+            </div>
+        <div class="form-actions">
+            <?= $this->form->a_buscar->renderViewHelper(); ?>
+        </div>
+    </div>
+</form>
+<div class="ahero-unit mb10 hidden add-register-content">
+    <a href="javascript:;" class="add-register" id="addRegister"><i class="icon-plus"></i>Agregar nuevo registro</a>
+</div>
+<div id="afbResultAjax"></div>

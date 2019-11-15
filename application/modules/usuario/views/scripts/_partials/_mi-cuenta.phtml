@@ -1,0 +1,73 @@
+<div class="internal-message row">
+    <ul class="menu-level-one">
+        <?php 
+            $tabPerfil = 'perfil';
+            $tabCuenta = 'cuenta';
+            $tabMasOportunidades = 'masoportunidades';
+            $classMarco='content-level-two';
+        ?>
+        <li class="first <?=$this->arrRender->tab==$tabPerfil?'active-page':''?>">
+            <a href="<?=$this->baseUrl()?>/usuario/edicion" title="Mi Perfil">Mi perfil</a>
+        </li>
+        <li class="<?=$this->arrRender->tab==$tabCuenta?'active-page':''?>">
+            <a href="<?=$this->baseUrl()?>/usuario/venta/activas/order/2" title="Mis Avisos">Mis Avisos</a></li>
+        <li class="opportunity <?=$this->arrRender->tab=='negocio'?'active-page':''?>">
+            <a href="<?=$this->baseUrl()?>/usuario/venta/mas-oportunidades" title="Más Oportunidades">Oportunidades de Negocio</a>
+        </li>
+    </ul>
+    <div class="content-level-one row">
+        <?php if($this->arrRender->tab==$tabCuenta){ ?>
+            <ul class="menu-level-two">
+                <li class="<?=$this->arrRender->active=='activas'?'active-page':''?>">
+                    <a title="Avisos Activos" href="<?=$this->baseUrl()?>/usuario/venta/activas/order/2">Avisos Activos</a>
+                </li>
+                <li class="<?=$this->arrRender->active=='pendiente-pago'?'active-page':''?>">
+                    <a title="Pendientes de Pago" href="<?=$this->baseUrl()?>/usuario/venta/pendiente-pago">Pendientes de pago</a>
+                </li>
+                <li class="<?=$this->arrRender->active=='inactivas'?'active-page':''?>">
+                    <a title="Avisos No Activos" href="<?=$this->baseUrl()?>/usuario/venta/inactivas/order/1">Avisos no activos</a>
+                </li>
+                <li class="<?=$this->arrRender->active=='preguntas-recibidas'?'active-page':''?>">
+                    <a title="Preguntas Recibidas" href="<?=$this->baseUrl()?>/usuario/venta/preguntas-recibidas">Preguntas recibidas</a>
+                </li>
+                <li class="<?=$this->arrRender->active=='preguntas-realizadas'?'active-page':''?>">
+                    <a title="Preguntas Realizadas" href="<?=$this->baseUrl()?>/usuario/compra/preguntas-realizadas">Preguntas realizadas</a>
+                </li>
+            </ul>
+        <?php 
+            } elseif($this->arrRender->tab==$tabPerfil){ 
+                $edicionFavorite = ($this->arrRender->active=='index' || $this->arrRender->active=='seguimiento');
+        ?>
+            <ul class="menu-level-two">
+                <li class="<?=$edicionFavorite?'active-page':''?>">
+                    <a href="<?=$this->baseUrl()?>/usuario/edicion" title="Mis Datos">Mi Datos</a>
+                    <?php if($edicionFavorite){ ?>
+                        <ul class="options">
+                            <li class="<?=$this->arrRender->active=='index'?'active':''?>">
+                                <a href="<?=$this->baseUrl()?>/usuario/edicion" title="Datos del Contacto">
+                                    Datos del contacto
+                                </a>
+                            </li>
+                            <li class="<?=$this->arrRender->active=='seguimiento'?'active':''?>">
+                                <a href="<?=$this->baseUrl()?>/usuario/compra/seguimiento" title="En Seguimiento">
+                                    En seguimiento
+                                </a>
+                            </li>
+                        </ul>
+                    <?php } ?>
+                </li>
+                <li class="<?=$this->arrRender->active=='facturacion'?'active-page':''?>">
+                    <a href="<?=$this->baseUrl()?>/usuario/facturacion" title="Datos de Facturacion ">
+                        Datos de Facturación
+                    </a>
+                </li>
+            </ul>
+        <?php } elseif($this->arrRender->tab==$tabMasOportunidades) {
+            $classMarco='';
+        }
+?>
+        <div class="<?=$classMarco?>">
+            <?=$this->render($this->arrRender->page.'.phtml')?>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+
+body{
+font-family: "Bitstream Vera Serif";
+font-size: 10pt;
+line-height: 14pt;
+}
+.col-master{width: 6.25in;}
+h1,h2,h3{margin:0 0 1em;}
+h1{font-size: 2em;}
+h2{font-size: 1.6em;}
+h3{font-size: 1.2em;}
+
+ul,ol{
+padding:0 0 0 2em;
+margin: .5em 0;
+}
+input, select, textarea{border: none;}
+
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:inline-block;}
+* html .clearfix{height:1%;}
+
+/***********************/
+
+
+
+
+h1{
+padding:0 0 .5em;
+border-bottom: solid 2px #CC0000;
+}
+.prodimg_gallery img{
+display:block;
+margin:0;
+}
+.product-info{
+float:left;
+width:280px;
+}
+.product-description{
+clear:both;
+margin:2em 0;
+}
+.seller-payment{
+width:100%;
+}
+.seller-payment .info_box{
+float:left;
+}
+.seller_info{
+float:left;
+width:50%;
+}
+#kpreguntas{
+margin:2em 0;
+page-break-before:always;
+}

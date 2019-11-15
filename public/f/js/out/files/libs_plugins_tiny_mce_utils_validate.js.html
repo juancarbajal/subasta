@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>libs&#x2F;plugins&#x2F;tiny_mce&#x2F;utils&#x2F;validate.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.7.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.7.0&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/admin.html">admin</a></li>
+            
+                <li><a href="..&#x2F;classes/all-modules.html">all-modules</a></li>
+            
+                <li><a href="..&#x2F;classes/default.html">default</a></li>
+            
+                <li><a href="..&#x2F;classes/jcarousel.html">jcarousel</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.AutoSave.html">tinymce.plugins.AutoSave</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.ContextMenu.html">tinymce.plugins.ContextMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/usuario.html">usuario</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/ad-actions.html">ad-actions</a></li>
+            
+                <li><a href="..&#x2F;modules/add-class-middle.html">add-class-middle</a></li>
+            
+                <li><a href="..&#x2F;modules/add-favorites.html">add-favorites</a></li>
+            
+                <li><a href="..&#x2F;modules/all-checked-uncheked.html">all-checked-uncheked</a></li>
+            
+                <li><a href="..&#x2F;modules/banner-top classified.html">banner-top classified</a></li>
+            
+                <li><a href="..&#x2F;modules/carousel-products.html">carousel-products</a></li>
+            
+                <li><a href="..&#x2F;modules/count-word.html">count-word</a></li>
+            
+                <li><a href="..&#x2F;modules/data-ubigeo.html">data-ubigeo</a></li>
+            
+                <li><a href="..&#x2F;modules/geotags.html">geotags</a></li>
+            
+                <li><a href="..&#x2F;modules/impress-ad-list.html">impress-ad-list</a></li>
+            
+                <li><a href="..&#x2F;modules/lightbox-logIn-signUp.html">lightbox-logIn-signUp</a></li>
+            
+                <li><a href="..&#x2F;modules/moduleName.html">moduleName</a></li>
+            
+                <li><a href="..&#x2F;modules/placeholder.html">placeholder</a></li>
+            
+                <li><a href="..&#x2F;modules/preview-impress.html">preview-impress</a></li>
+            
+                <li><a href="..&#x2F;modules/register-category.html">register-category</a></li>
+            
+                <li><a href="..&#x2F;modules/remove-class-home.html">remove-class-home</a></li>
+            
+                <li><a href="..&#x2F;modules/report-ad.html">report-ad</a></li>
+            
+                <li><a href="..&#x2F;modules/scrollTop.html">scrollTop</a></li>
+            
+                <li><a href="..&#x2F;modules/search-categories.html">search-categories</a></li>
+            
+                <li><a href="..&#x2F;modules/send-ad-friend.html">send-ad-friend</a></li>
+            
+                <li><a href="..&#x2F;modules/send-list-ad-email.html">send-list-ad-email</a></li>
+            
+                <li><a href="..&#x2F;modules/show-advanced-search.html">show-advanced-search</a></li>
+            
+                <li><a href="..&#x2F;modules/show-example-ads.html">show-example-ads</a></li>
+            
+                <li><a href="..&#x2F;modules/show-login-trigger.html">show-login-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-photo-products.html">show-photo-products</a></li>
+            
+                <li><a href="..&#x2F;modules/show-popup.html">show-popup</a></li>
+            
+                <li><a href="..&#x2F;modules/show-questions.html">show-questions</a></li>
+            
+                <li><a href="..&#x2F;modules/show-register-trigger.html">show-register-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-video.html">show-video</a></li>
+            
+                <li><a href="..&#x2F;modules/showMoreCategories.html">showMoreCategories</a></li>
+            
+                <li><a href="..&#x2F;modules/some-module4.html">some-module4</a></li>
+            
+                <li><a href="..&#x2F;modules/tinymce-register.html">tinymce-register</a></li>
+            
+                <li><a href="..&#x2F;modules/uploader-photos.html">uploader-photos</a></li>
+            
+                <li><a href="..&#x2F;modules/validate.html">validate</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-document.html">validate-document</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-image.html">validate-image</a></li>
+            
+                <li><a href="..&#x2F;modules/venta.html">venta</a></li>
+            
+                <li><a href="..&#x2F;modules/yOSON.html">yOSON</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: libs&#x2F;plugins&#x2F;tiny_mce&#x2F;utils&#x2F;validate.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * validate.js
+ *
+ * Copyright 2009, Moxiecode Systems AB
+ * Released under LGPL License.
+ *
+ * License: http:&#x2F;&#x2F;tinymce.moxiecode.com&#x2F;license
+ * Contributing: http:&#x2F;&#x2F;tinymce.moxiecode.com&#x2F;contributing
+ *&#x2F;
+
+&#x2F;**
+	&#x2F;&#x2F; String validation:
+
+	if (!Validator.isEmail(&#x27;myemail&#x27;))
+		alert(&#x27;Invalid email.&#x27;);
+
+	&#x2F;&#x2F; Form validation:
+
+	var f = document.forms[&#x27;myform&#x27;];
+
+	if (!Validator.isEmail(f.myemail))
+		alert(&#x27;Invalid email.&#x27;);
+*&#x2F;
+
+var Validator = {
+	isEmail : function(s) {
+		return this.test(s, &#x27;^[-!#$%&amp;\&#x27;*+\\.&#x2F;0-9=?A-Z^_&#x60;a-z{|}~]+@[-!#$%&amp;\&#x27;*+\\&#x2F;0-9=?A-Z^_&#x60;a-z{|}~]+\.[-!#$%&amp;\&#x27;*+\\.&#x2F;0-9=?A-Z^_&#x60;a-z{|}~]+$&#x27;);
+	},
+
+	isAbsUrl : function(s) {
+		return this.test(s, &#x27;^(news|telnet|nttp|file|http|ftp|https):&#x2F;&#x2F;[-A-Za-z0-9\\.]+\\&#x2F;?.*$&#x27;);
+	},
+
+	isSize : function(s) {
+		return this.test(s, &#x27;^[0-9.]+(%|in|cm|mm|em|ex|pt|pc|px)?$&#x27;);
+	},
+
+	isId : function(s) {
+		return this.test(s, &#x27;^[A-Za-z_]([A-Za-z0-9_])*$&#x27;);
+	},
+
+	isEmpty : function(s) {
+		var nl, i;
+
+		if (s.nodeName == &#x27;SELECT&#x27; &amp;&amp; s.selectedIndex &lt; 1)
+			return true;
+
+		if (s.type == &#x27;checkbox&#x27; &amp;&amp; !s.checked)
+			return true;
+
+		if (s.type == &#x27;radio&#x27;) {
+			for (i=0, nl = s.form.elements; i&lt;nl.length; i++) {
+				if (nl[i].type == &quot;radio&quot; &amp;&amp; nl[i].name == s.name &amp;&amp; nl[i].checked)
+					return false;
+			}
+
+			return true;
+		}
+
+		return new RegExp(&#x27;^\\s*$&#x27;).test(s.nodeType == 1 ? s.value : s);
+	},
+
+	isNumber : function(s, d) {
+		return !isNaN(s.nodeType == 1 ? s.value : s) &amp;&amp; (!d || !this.test(s, &#x27;^-?[0-9]*\\.[0-9]*$&#x27;));
+	},
+
+	test : function(s, p) {
+		s = s.nodeType == 1 ? s.value : s;
+
+		return s == &#x27;&#x27; || new RegExp(p).test(s);
+	}
+};
+
+var AutoValidator = {
+	settings : {
+		id_cls : &#x27;id&#x27;,
+		int_cls : &#x27;int&#x27;,
+		url_cls : &#x27;url&#x27;,
+		number_cls : &#x27;number&#x27;,
+		email_cls : &#x27;email&#x27;,
+		size_cls : &#x27;size&#x27;,
+		required_cls : &#x27;required&#x27;,
+		invalid_cls : &#x27;invalid&#x27;,
+		min_cls : &#x27;min&#x27;,
+		max_cls : &#x27;max&#x27;
+	},
+
+	init : function(s) {
+		var n;
+
+		for (n in s)
+			this.settings[n] = s[n];
+	},
+
+	validate : function(f) {
+		var i, nl, s = this.settings, c = 0;
+
+		nl = this.tags(f, &#x27;label&#x27;);
+		for (i=0; i&lt;nl.length; i++) {
+			this.removeClass(nl[i], s.invalid_cls);
+			nl[i].setAttribute(&#x27;aria-invalid&#x27;, false);
+		}
+
+		c += this.validateElms(f, &#x27;input&#x27;);
+		c += this.validateElms(f, &#x27;select&#x27;);
+		c += this.validateElms(f, &#x27;textarea&#x27;);
+
+		return c == 3;
+	},
+
+	invalidate : function(n) {
+		this.mark(n.form, n);
+	},
+	
+	getErrorMessages : function(f) {
+		var nl, i, s = this.settings, field, msg, values, messages = [], ed = tinyMCEPopup.editor;
+		nl = this.tags(f, &quot;label&quot;);
+		for (i=0; i&lt;nl.length; i++) {
+			if (this.hasClass(nl[i], s.invalid_cls)) {
+				field = document.getElementById(nl[i].getAttribute(&quot;for&quot;));
+				values = { field: nl[i].textContent };
+				if (this.hasClass(field, s.min_cls, true)) {
+					message = ed.getLang(&#x27;invalid_data_min&#x27;);
+					values.min = this.getNum(field, s.min_cls);
+				} else if (this.hasClass(field, s.number_cls)) {
+					message = ed.getLang(&#x27;invalid_data_number&#x27;);
+				} else if (this.hasClass(field, s.size_cls)) {
+					message = ed.getLang(&#x27;invalid_data_size&#x27;);
+				} else {
+					message = ed.getLang(&#x27;invalid_data&#x27;);
+				}
+				
+				message = message.replace(&#x2F;{\#([^}]+)\}&#x2F;g, function(a, b) {
+					return values[b] || &#x27;{#&#x27; + b + &#x27;}&#x27;;
+				});
+				messages.push(message);
+			}
+		}
+		return messages;
+	},
+
+	reset : function(e) {
+		var t = [&#x27;label&#x27;, &#x27;input&#x27;, &#x27;select&#x27;, &#x27;textarea&#x27;];
+		var i, j, nl, s = this.settings;
+
+		if (e == null)
+			return;
+
+		for (i=0; i&lt;t.length; i++) {
+			nl = this.tags(e.form ? e.form : e, t[i]);
+			for (j=0; j&lt;nl.length; j++) {
+				this.removeClass(nl[j], s.invalid_cls);
+				nl[j].setAttribute(&#x27;aria-invalid&#x27;, false);
+			}
+		}
+	},
+
+	validateElms : function(f, e) {
+		var nl, i, n, s = this.settings, st = true, va = Validator, v;
+
+		nl = this.tags(f, e);
+		for (i=0; i&lt;nl.length; i++) {
+			n = nl[i];
+
+			this.removeClass(n, s.invalid_cls);
+
+			if (this.hasClass(n, s.required_cls) &amp;&amp; va.isEmpty(n))
+				st = this.mark(f, n);
+
+			if (this.hasClass(n, s.number_cls) &amp;&amp; !va.isNumber(n))
+				st = this.mark(f, n);
+
+			if (this.hasClass(n, s.int_cls) &amp;&amp; !va.isNumber(n, true))
+				st = this.mark(f, n);
+
+			if (this.hasClass(n, s.url_cls) &amp;&amp; !va.isAbsUrl(n))
+				st = this.mark(f, n);
+
+			if (this.hasClass(n, s.email_cls) &amp;&amp; !va.isEmail(n))
+				st = this.mark(f, n);
+
+			if (this.hasClass(n, s.size_cls) &amp;&amp; !va.isSize(n))
+				st = this.mark(f, n);
+
+			if (this.hasClass(n, s.id_cls) &amp;&amp; !va.isId(n))
+				st = this.mark(f, n);
+
+			if (this.hasClass(n, s.min_cls, true)) {
+				v = this.getNum(n, s.min_cls);
+
+				if (isNaN(v) || parseInt(n.value) &lt; parseInt(v))
+					st = this.mark(f, n);
+			}
+
+			if (this.hasClass(n, s.max_cls, true)) {
+				v = this.getNum(n, s.max_cls);
+
+				if (isNaN(v) || parseInt(n.value) &gt; parseInt(v))
+					st = this.mark(f, n);
+			}
+		}
+
+		return st;
+	},
+
+	hasClass : function(n, c, d) {
+		return new RegExp(&#x27;\\b&#x27; + c + (d ? &#x27;[0-9]+&#x27; : &#x27;&#x27;) + &#x27;\\b&#x27;, &#x27;g&#x27;).test(n.className);
+	},
+
+	getNum : function(n, c) {
+		c = n.className.match(new RegExp(&#x27;\\b&#x27; + c + &#x27;([0-9]+)\\b&#x27;, &#x27;g&#x27;))[0];
+		c = c.replace(&#x2F;[^0-9]&#x2F;g, &#x27;&#x27;);
+
+		return c;
+	},
+
+	addClass : function(n, c, b) {
+		var o = this.removeClass(n, c);
+		n.className = b ? c + (o != &#x27;&#x27; ? (&#x27; &#x27; + o) : &#x27;&#x27;) : (o != &#x27;&#x27; ? (o + &#x27; &#x27;) : &#x27;&#x27;) + c;
+	},
+
+	removeClass : function(n, c) {
+		c = n.className.replace(new RegExp(&quot;(^|\\s+)&quot; + c + &quot;(\\s+|$)&quot;), &#x27; &#x27;);
+		return n.className = c != &#x27; &#x27; ? c : &#x27;&#x27;;
+	},
+
+	tags : function(f, s) {
+		return f.getElementsByTagName(s);
+	},
+
+	mark : function(f, n) {
+		var s = this.settings;
+
+		this.addClass(n, s.invalid_cls);
+		n.setAttribute(&#x27;aria-invalid&#x27;, &#x27;true&#x27;);
+		this.markLabels(f, n, s.invalid_cls);
+
+		return false;
+	},
+
+	markLabels : function(f, n, ic) {
+		var nl, i;
+
+		nl = this.tags(f, &quot;label&quot;);
+		for (i=0; i&lt;nl.length; i++) {
+			if (nl[i].getAttribute(&quot;for&quot;) == n.id || nl[i].htmlFor == n.id)
+				this.addClass(nl[i], ic);
+		}
+
+		return null;
+	}
+};
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

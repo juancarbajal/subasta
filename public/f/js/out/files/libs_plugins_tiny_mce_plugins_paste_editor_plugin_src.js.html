@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>libs&#x2F;plugins&#x2F;tiny_mce&#x2F;plugins&#x2F;paste&#x2F;editor_plugin_src.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.7.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.7.0&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/admin.html">admin</a></li>
+            
+                <li><a href="..&#x2F;classes/all-modules.html">all-modules</a></li>
+            
+                <li><a href="..&#x2F;classes/default.html">default</a></li>
+            
+                <li><a href="..&#x2F;classes/jcarousel.html">jcarousel</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.AutoSave.html">tinymce.plugins.AutoSave</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.ContextMenu.html">tinymce.plugins.ContextMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/usuario.html">usuario</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/ad-actions.html">ad-actions</a></li>
+            
+                <li><a href="..&#x2F;modules/add-class-middle.html">add-class-middle</a></li>
+            
+                <li><a href="..&#x2F;modules/add-favorites.html">add-favorites</a></li>
+            
+                <li><a href="..&#x2F;modules/all-checked-uncheked.html">all-checked-uncheked</a></li>
+            
+                <li><a href="..&#x2F;modules/banner-top classified.html">banner-top classified</a></li>
+            
+                <li><a href="..&#x2F;modules/carousel-products.html">carousel-products</a></li>
+            
+                <li><a href="..&#x2F;modules/count-word.html">count-word</a></li>
+            
+                <li><a href="..&#x2F;modules/data-ubigeo.html">data-ubigeo</a></li>
+            
+                <li><a href="..&#x2F;modules/geotags.html">geotags</a></li>
+            
+                <li><a href="..&#x2F;modules/impress-ad-list.html">impress-ad-list</a></li>
+            
+                <li><a href="..&#x2F;modules/lightbox-logIn-signUp.html">lightbox-logIn-signUp</a></li>
+            
+                <li><a href="..&#x2F;modules/moduleName.html">moduleName</a></li>
+            
+                <li><a href="..&#x2F;modules/placeholder.html">placeholder</a></li>
+            
+                <li><a href="..&#x2F;modules/preview-impress.html">preview-impress</a></li>
+            
+                <li><a href="..&#x2F;modules/register-category.html">register-category</a></li>
+            
+                <li><a href="..&#x2F;modules/remove-class-home.html">remove-class-home</a></li>
+            
+                <li><a href="..&#x2F;modules/report-ad.html">report-ad</a></li>
+            
+                <li><a href="..&#x2F;modules/scrollTop.html">scrollTop</a></li>
+            
+                <li><a href="..&#x2F;modules/search-categories.html">search-categories</a></li>
+            
+                <li><a href="..&#x2F;modules/send-ad-friend.html">send-ad-friend</a></li>
+            
+                <li><a href="..&#x2F;modules/send-list-ad-email.html">send-list-ad-email</a></li>
+            
+                <li><a href="..&#x2F;modules/show-advanced-search.html">show-advanced-search</a></li>
+            
+                <li><a href="..&#x2F;modules/show-example-ads.html">show-example-ads</a></li>
+            
+                <li><a href="..&#x2F;modules/show-login-trigger.html">show-login-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-photo-products.html">show-photo-products</a></li>
+            
+                <li><a href="..&#x2F;modules/show-popup.html">show-popup</a></li>
+            
+                <li><a href="..&#x2F;modules/show-questions.html">show-questions</a></li>
+            
+                <li><a href="..&#x2F;modules/show-register-trigger.html">show-register-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-video.html">show-video</a></li>
+            
+                <li><a href="..&#x2F;modules/showMoreCategories.html">showMoreCategories</a></li>
+            
+                <li><a href="..&#x2F;modules/some-module4.html">some-module4</a></li>
+            
+                <li><a href="..&#x2F;modules/tinymce-register.html">tinymce-register</a></li>
+            
+                <li><a href="..&#x2F;modules/uploader-photos.html">uploader-photos</a></li>
+            
+                <li><a href="..&#x2F;modules/validate.html">validate</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-document.html">validate-document</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-image.html">validate-image</a></li>
+            
+                <li><a href="..&#x2F;modules/venta.html">venta</a></li>
+            
+                <li><a href="..&#x2F;modules/yOSON.html">yOSON</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: libs&#x2F;plugins&#x2F;tiny_mce&#x2F;plugins&#x2F;paste&#x2F;editor_plugin_src.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * editor_plugin_src.js
+ *
+ * Copyright 2009, Moxiecode Systems AB
+ * Released under LGPL License.
+ *
+ * License: http:&#x2F;&#x2F;tinymce.moxiecode.com&#x2F;license
+ * Contributing: http:&#x2F;&#x2F;tinymce.moxiecode.com&#x2F;contributing
+ *&#x2F;
+
+(function() {
+	var each = tinymce.each,
+		defs = {
+			paste_auto_cleanup_on_paste : true,
+			paste_enable_default_filters : true,
+			paste_block_drop : false,
+			paste_retain_style_properties : &quot;none&quot;,
+			paste_strip_class_attributes : &quot;mso&quot;,
+			paste_remove_spans : false,
+			paste_remove_styles : false,
+			paste_remove_styles_if_webkit : true,
+			paste_convert_middot_lists : true,
+			paste_convert_headers_to_strong : false,
+			paste_dialog_width : &quot;450&quot;,
+			paste_dialog_height : &quot;400&quot;,
+			paste_max_consecutive_linebreaks: 2,
+			paste_text_use_dialog : false,
+			paste_text_sticky : false,
+			paste_text_sticky_default : false,
+			paste_text_notifyalways : false,
+			paste_text_linebreaktype : &quot;combined&quot;,
+			paste_text_replacements : [
+				[&#x2F;\u2026&#x2F;g, &quot;...&quot;],
+				[&#x2F;[\x93\x94\u201c\u201d]&#x2F;g, &#x27;&quot;&#x27;],
+				[&#x2F;[\x60\x91\x92\u2018\u2019]&#x2F;g, &quot;&#x27;&quot;]
+			]
+		};
+
+	function getParam(ed, name) {
+		return ed.getParam(name, defs[name]);
+	}
+
+	tinymce.create(&#x27;tinymce.plugins.PastePlugin&#x27;, {
+		init : function(ed, url) {
+			var t = this;
+
+			t.editor = ed;
+			t.url = url;
+
+			&#x2F;&#x2F; Setup plugin events
+			t.onPreProcess = new tinymce.util.Dispatcher(t);
+			t.onPostProcess = new tinymce.util.Dispatcher(t);
+
+			&#x2F;&#x2F; Register default handlers
+			t.onPreProcess.add(t._preProcess);
+			t.onPostProcess.add(t._postProcess);
+
+			&#x2F;&#x2F; Register optional preprocess handler
+			t.onPreProcess.add(function(pl, o) {
+				ed.execCallback(&#x27;paste_preprocess&#x27;, pl, o);
+			});
+
+			&#x2F;&#x2F; Register optional postprocess
+			t.onPostProcess.add(function(pl, o) {
+				ed.execCallback(&#x27;paste_postprocess&#x27;, pl, o);
+			});
+
+			ed.onKeyDown.addToTop(function(ed, e) {
+				&#x2F;&#x2F; Block ctrl+v from adding an undo level since the default logic in tinymce.Editor will add that
+				if (((tinymce.isMac ? e.metaKey : e.ctrlKey) &amp;&amp; e.keyCode == 86) || (e.shiftKey &amp;&amp; e.keyCode == 45))
+					return false; &#x2F;&#x2F; Stop other listeners
+			});
+
+			&#x2F;&#x2F; Initialize plain text flag
+			ed.pasteAsPlainText = getParam(ed, &#x27;paste_text_sticky_default&#x27;);
+
+			&#x2F;&#x2F; This function executes the process handlers and inserts the contents
+			&#x2F;&#x2F; force_rich overrides plain text mode set by user, important for pasting with execCommand
+			function process(o, force_rich) {
+				var dom = ed.dom, rng;
+
+				&#x2F;&#x2F; Execute pre process handlers
+				t.onPreProcess.dispatch(t, o);
+
+				&#x2F;&#x2F; Create DOM structure
+				o.node = dom.create(&#x27;div&#x27;, 0, o.content);
+
+				&#x2F;&#x2F; If pasting inside the same element and the contents is only one block
+				&#x2F;&#x2F; remove the block and keep the text since Firefox will copy parts of pre and h1-h6 as a pre element
+				if (tinymce.isGecko) {
+					rng = ed.selection.getRng(true);
+					if (rng.startContainer == rng.endContainer &amp;&amp; rng.startContainer.nodeType == 3) {
+						&#x2F;&#x2F; Is only one block node and it doesn&#x27;t contain word stuff
+						if (o.node.childNodes.length === 1 &amp;&amp; &#x2F;^(p|h[1-6]|pre)$&#x2F;i.test(o.node.firstChild.nodeName) &amp;&amp; o.content.indexOf(&#x27;__MCE_ITEM__&#x27;) === -1)
+							dom.remove(o.node.firstChild, true);
+					}
+				}
+
+				&#x2F;&#x2F; Execute post process handlers
+				t.onPostProcess.dispatch(t, o);
+
+				&#x2F;&#x2F; Serialize content
+				o.content = ed.serializer.serialize(o.node, {getInner : 1, forced_root_block : &#x27;&#x27;});
+
+				&#x2F;&#x2F; Plain text option active?
+				if ((!force_rich) &amp;&amp; (ed.pasteAsPlainText)) {
+					t._insertPlainText(o.content);
+
+					if (!getParam(ed, &quot;paste_text_sticky&quot;)) {
+						ed.pasteAsPlainText = false;
+						ed.controlManager.setActive(&quot;pastetext&quot;, false);
+					}
+				} else {
+					t._insert(o.content);
+				}
+			}
+
+			&#x2F;&#x2F; Add command for external usage
+			ed.addCommand(&#x27;mceInsertClipboardContent&#x27;, function(u, o) {
+				process(o, true);
+			});
+
+			if (!getParam(ed, &quot;paste_text_use_dialog&quot;)) {
+				ed.addCommand(&#x27;mcePasteText&#x27;, function(u, v) {
+					var cookie = tinymce.util.Cookie;
+
+					ed.pasteAsPlainText = !ed.pasteAsPlainText;
+					ed.controlManager.setActive(&#x27;pastetext&#x27;, ed.pasteAsPlainText);
+
+					if ((ed.pasteAsPlainText) &amp;&amp; (!cookie.get(&quot;tinymcePasteText&quot;))) {
+						if (getParam(ed, &quot;paste_text_sticky&quot;)) {
+							ed.windowManager.alert(ed.translate(&#x27;paste.plaintext_mode_sticky&#x27;));
+						} else {
+							ed.windowManager.alert(ed.translate(&#x27;paste.plaintext_mode&#x27;));
+						}
+
+						if (!getParam(ed, &quot;paste_text_notifyalways&quot;)) {
+							cookie.set(&quot;tinymcePasteText&quot;, &quot;1&quot;, new Date(new Date().getFullYear() + 1, 12, 31))
+						}
+					}
+				});
+			}
+
+			ed.addButton(&#x27;pastetext&#x27;, {title: &#x27;paste.paste_text_desc&#x27;, cmd: &#x27;mcePasteText&#x27;});
+			ed.addButton(&#x27;selectall&#x27;, {title: &#x27;paste.selectall_desc&#x27;, cmd: &#x27;selectall&#x27;});
+
+			&#x2F;&#x2F; This function grabs the contents from the clipboard by adding a
+			&#x2F;&#x2F; hidden div and placing the caret inside it and after the browser paste
+			&#x2F;&#x2F; is done it grabs that contents and processes that
+			function grabContent(e) {
+				var n, or, rng, oldRng, sel = ed.selection, dom = ed.dom, body = ed.getBody(), posY, textContent;
+
+				&#x2F;&#x2F; Check if browser supports direct plaintext access
+				if (e.clipboardData || dom.doc.dataTransfer) {
+					textContent = (e.clipboardData || dom.doc.dataTransfer).getData(&#x27;Text&#x27;);
+
+					if (ed.pasteAsPlainText) {
+						e.preventDefault();
+						process({content : dom.encode(textContent).replace(&#x2F;\r?\n&#x2F;g, &#x27;&lt;br &#x2F;&gt;&#x27;)});
+						return;
+					}
+				}
+
+				if (dom.get(&#x27;_mcePaste&#x27;))
+					return;
+
+				&#x2F;&#x2F; Create container to paste into
+				n = dom.add(body, &#x27;div&#x27;, {id : &#x27;_mcePaste&#x27;, &#x27;class&#x27; : &#x27;mcePaste&#x27;, &#x27;data-mce-bogus&#x27; : &#x27;1&#x27;}, &#x27;\uFEFF\uFEFF&#x27;);
+
+				&#x2F;&#x2F; If contentEditable mode we need to find out the position of the closest element
+				if (body != ed.getDoc().body)
+					posY = dom.getPos(ed.selection.getStart(), body).y;
+				else
+					posY = body.scrollTop + dom.getViewPort(ed.getWin()).y;
+
+				&#x2F;&#x2F; Styles needs to be applied after the element is added to the document since WebKit will otherwise remove all styles
+				&#x2F;&#x2F; If also needs to be in view on IE or the paste would fail
+				dom.setStyles(n, {
+					position : &#x27;absolute&#x27;,
+					left : tinymce.isGecko ? -40 : 0, &#x2F;&#x2F; Need to move it out of site on Gecko since it will othewise display a ghost resize rect for the div
+					top : posY - 25,
+					width : 1,
+					height : 1,
+					overflow : &#x27;hidden&#x27;
+				});
+
+				if (tinymce.isIE) {
+					&#x2F;&#x2F; Store away the old range
+					oldRng = sel.getRng();
+
+					&#x2F;&#x2F; Select the container
+					rng = dom.doc.body.createTextRange();
+					rng.moveToElementText(n);
+					rng.execCommand(&#x27;Paste&#x27;);
+
+					&#x2F;&#x2F; Remove container
+					dom.remove(n);
+
+					&#x2F;&#x2F; Check if the contents was changed, if it wasn&#x27;t then clipboard extraction failed probably due
+					&#x2F;&#x2F; to IE security settings so we pass the junk though better than nothing right
+					if (n.innerHTML === &#x27;\uFEFF\uFEFF&#x27;) {
+						ed.execCommand(&#x27;mcePasteWord&#x27;);
+						e.preventDefault();
+						return;
+					}
+
+					&#x2F;&#x2F; Restore the old range and clear the contents before pasting
+					sel.setRng(oldRng);
+					sel.setContent(&#x27;&#x27;);
+
+					&#x2F;&#x2F; For some odd reason we need to detach the the mceInsertContent call from the paste event
+					&#x2F;&#x2F; It&#x27;s like IE has a reference to the parent element that you paste in and the selection gets messed up
+					&#x2F;&#x2F; when it tries to restore the selection
+					setTimeout(function() {
+						&#x2F;&#x2F; Process contents
+						process({content : n.innerHTML});
+					}, 0);
+
+					&#x2F;&#x2F; Block the real paste event
+					return tinymce.dom.Event.cancel(e);
+				} else {
+					function block(e) {
+						e.preventDefault();
+					};
+
+					&#x2F;&#x2F; Block mousedown and click to prevent selection change
+					dom.bind(ed.getDoc(), &#x27;mousedown&#x27;, block);
+					dom.bind(ed.getDoc(), &#x27;keydown&#x27;, block);
+
+					or = ed.selection.getRng();
+
+					&#x2F;&#x2F; Move select contents inside DIV
+					n = n.firstChild;
+					rng = ed.getDoc().createRange();
+					rng.setStart(n, 0);
+					rng.setEnd(n, 2);
+					sel.setRng(rng);
+
+					&#x2F;&#x2F; Wait a while and grab the pasted contents
+					window.setTimeout(function() {
+						var h = &#x27;&#x27;, nl;
+
+						&#x2F;&#x2F; Paste divs duplicated in paste divs seems to happen when you paste plain text so lets first look for that broken behavior in WebKit
+						if (!dom.select(&#x27;div.mcePaste &gt; div.mcePaste&#x27;).length) {
+							nl = dom.select(&#x27;div.mcePaste&#x27;);
+
+							&#x2F;&#x2F; WebKit will split the div into multiple ones so this will loop through then all and join them to get the whole HTML string
+							each(nl, function(n) {
+								var child = n.firstChild;
+
+								&#x2F;&#x2F; WebKit inserts a DIV container with lots of odd styles
+								if (child &amp;&amp; child.nodeName == &#x27;DIV&#x27; &amp;&amp; child.style.marginTop &amp;&amp; child.style.backgroundColor) {
+									dom.remove(child, 1);
+								}
+
+								&#x2F;&#x2F; Remove apply style spans
+								each(dom.select(&#x27;span.Apple-style-span&#x27;, n), function(n) {
+									dom.remove(n, 1);
+								});
+
+								&#x2F;&#x2F; Remove bogus br elements
+								each(dom.select(&#x27;br[data-mce-bogus]&#x27;, n), function(n) {
+									dom.remove(n);
+								});
+
+								&#x2F;&#x2F; WebKit will make a copy of the DIV for each line of plain text pasted and insert them into the DIV
+								if (n.parentNode.className != &#x27;mcePaste&#x27;)
+									h += n.innerHTML;
+							});
+						} else {
+							&#x2F;&#x2F; Found WebKit weirdness so force the content into paragraphs this seems to happen when you paste plain text from Nodepad etc
+							&#x2F;&#x2F; So this logic will replace double enter with paragraphs and single enter with br so it kind of looks the same
+							h = &#x27;&lt;p&gt;&#x27; + dom.encode(textContent).replace(&#x2F;\r?\n\r?\n&#x2F;g, &#x27;&lt;&#x2F;p&gt;&lt;p&gt;&#x27;).replace(&#x2F;\r?\n&#x2F;g, &#x27;&lt;br &#x2F;&gt;&#x27;) + &#x27;&lt;&#x2F;p&gt;&#x27;;
+						}
+
+						&#x2F;&#x2F; Remove the nodes
+						each(dom.select(&#x27;div.mcePaste&#x27;), function(n) {
+							dom.remove(n);
+						});
+
+						&#x2F;&#x2F; Restore the old selection
+						if (or)
+							sel.setRng(or);
+
+						process({content : h});
+
+						&#x2F;&#x2F; Unblock events ones we got the contents
+						dom.unbind(ed.getDoc(), &#x27;mousedown&#x27;, block);
+						dom.unbind(ed.getDoc(), &#x27;keydown&#x27;, block);
+					}, 0);
+				}
+			}
+
+			&#x2F;&#x2F; Check if we should use the new auto process method			
+			if (getParam(ed, &quot;paste_auto_cleanup_on_paste&quot;)) {
+				&#x2F;&#x2F; Is it&#x27;s Opera or older FF use key handler
+				if (tinymce.isOpera || &#x2F;Firefox\&#x2F;2&#x2F;.test(navigator.userAgent)) {
+					ed.onKeyDown.addToTop(function(ed, e) {
+						if (((tinymce.isMac ? e.metaKey : e.ctrlKey) &amp;&amp; e.keyCode == 86) || (e.shiftKey &amp;&amp; e.keyCode == 45))
+							grabContent(e);
+					});
+				} else {
+					&#x2F;&#x2F; Grab contents on paste event on Gecko and WebKit
+					ed.onPaste.addToTop(function(ed, e) {
+						return grabContent(e);
+					});
+				}
+			}
+
+			ed.onInit.add(function() {
+				ed.controlManager.setActive(&quot;pastetext&quot;, ed.pasteAsPlainText);
+
+				&#x2F;&#x2F; Block all drag&#x2F;drop events
+				if (getParam(ed, &quot;paste_block_drop&quot;)) {
+					ed.dom.bind(ed.getBody(), [&#x27;dragend&#x27;, &#x27;dragover&#x27;, &#x27;draggesture&#x27;, &#x27;dragdrop&#x27;, &#x27;drop&#x27;, &#x27;drag&#x27;], function(e) {
+						e.preventDefault();
+						e.stopPropagation();
+
+						return false;
+					});
+				}
+			});
+
+			&#x2F;&#x2F; Add legacy support
+			t._legacySupport();
+		},
+
+		getInfo : function() {
+			return {
+				longname : &#x27;Paste text&#x2F;word&#x27;,
+				author : &#x27;Moxiecode Systems AB&#x27;,
+				authorurl : &#x27;http:&#x2F;&#x2F;tinymce.moxiecode.com&#x27;,
+				infourl : &#x27;http:&#x2F;&#x2F;wiki.moxiecode.com&#x2F;index.php&#x2F;TinyMCE:Plugins&#x2F;paste&#x27;,
+				version : tinymce.majorVersion + &quot;.&quot; + tinymce.minorVersion
+			};
+		},
+
+		_preProcess : function(pl, o) {
+			var ed = this.editor,
+				h = o.content,
+				grep = tinymce.grep,
+				explode = tinymce.explode,
+				trim = tinymce.trim,
+				len, stripClass;
+
+			&#x2F;&#x2F;console.log(&#x27;Before preprocess:&#x27; + o.content);
+
+			function process(items) {
+				each(items, function(v) {
+					&#x2F;&#x2F; Remove or replace
+					if (v.constructor == RegExp)
+						h = h.replace(v, &#x27;&#x27;);
+					else
+						h = h.replace(v[0], v[1]);
+				});
+			}
+			
+			if (ed.settings.paste_enable_default_filters == false) {
+				return;
+			}
+
+			&#x2F;&#x2F; IE9 adds BRs before&#x2F;after block elements when contents is pasted from word or for example another browser
+			if (tinymce.isIE &amp;&amp; document.documentMode &gt;= 9 &amp;&amp; &#x2F;&lt;(h[1-6r]|p|div|address|pre|form|table|tbody|thead|tfoot|th|tr|td|li|ol|ul|caption|blockquote|center|dl|dt|dd|dir|fieldset)&#x2F;.test(o.content)) {
+				&#x2F;&#x2F; IE9 adds BRs before&#x2F;after block elements when contents is pasted from word or for example another browser
+				process([[&#x2F;(?:&lt;br&gt;&amp;nbsp;[\s\r\n]+|&lt;br&gt;)*(&lt;\&#x2F;?(h[1-6r]|p|div|address|pre|form|table|tbody|thead|tfoot|th|tr|td|li|ol|ul|caption|blockquote|center|dl|dt|dd|dir|fieldset)[^&gt;]*&gt;)(?:&lt;br&gt;&amp;nbsp;[\s\r\n]+|&lt;br&gt;)*&#x2F;g, &#x27;$1&#x27;]]);
+
+				&#x2F;&#x2F; IE9 also adds an extra BR element for each soft-linefeed and it also adds a BR for each word wrap break
+				process([
+					[&#x2F;&lt;br&gt;&lt;br&gt;&#x2F;g, &#x27;&lt;BR&gt;&lt;BR&gt;&#x27;], &#x2F;&#x2F; Replace multiple BR elements with uppercase BR to keep them intact
+					[&#x2F;&lt;br&gt;&#x2F;g, &#x27; &#x27;], &#x2F;&#x2F; Replace single br elements with space since they are word wrap BR:s
+					[&#x2F;&lt;BR&gt;&lt;BR&gt;&#x2F;g, &#x27;&lt;br&gt;&#x27;] &#x2F;&#x2F; Replace back the double brs but into a single BR
+				]);
+			}
+
+			&#x2F;&#x2F; Detect Word content and process it more aggressive
+			if (&#x2F;class=&quot;?Mso|style=&quot;[^&quot;]*\bmso-|w:WordDocument&#x2F;i.test(h) || o.wordContent) {
+				o.wordContent = true;			&#x2F;&#x2F; Mark the pasted contents as word specific content
+				&#x2F;&#x2F;console.log(&#x27;Word contents detected.&#x27;);
+
+				&#x2F;&#x2F; Process away some basic content
+				process([
+					&#x2F;^\s*(&amp;nbsp;)+&#x2F;gi,				&#x2F;&#x2F; &amp;nbsp; entities at the start of contents
+					&#x2F;(&amp;nbsp;|&lt;br[^&gt;]*&gt;)+\s*$&#x2F;gi		&#x2F;&#x2F; &amp;nbsp; entities at the end of contents
+				]);
+
+				if (getParam(ed, &quot;paste_convert_headers_to_strong&quot;)) {
+					h = h.replace(&#x2F;&lt;p [^&gt;]*class=&quot;?MsoHeading&quot;?[^&gt;]*&gt;(.*?)&lt;\&#x2F;p&gt;&#x2F;gi, &quot;&lt;p&gt;&lt;strong&gt;$1&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;&quot;);
+				}
+
+				if (getParam(ed, &quot;paste_convert_middot_lists&quot;)) {
+					process([
+						[&#x2F;&lt;!--\[if !supportLists\]--&gt;&#x2F;gi, &#x27;$&amp;__MCE_ITEM__&#x27;],					&#x2F;&#x2F; Convert supportLists to a list item marker
+						[&#x2F;(&lt;span[^&gt;]+(?:mso-list:|:\s*symbol)[^&gt;]+&gt;)&#x2F;gi, &#x27;$1__MCE_ITEM__&#x27;],		&#x2F;&#x2F; Convert mso-list and symbol spans to item markers
+						[&#x2F;(&lt;p[^&gt;]+(?:MsoListParagraph)[^&gt;]+&gt;)&#x2F;gi, &#x27;$1__MCE_ITEM__&#x27;]				&#x2F;&#x2F; Convert mso-list and symbol paragraphs to item markers (FF)
+					]);
+				}
+
+				process([
+					&#x2F;&#x2F; Word comments like conditional comments etc
+					&#x2F;&lt;!--[\s\S]+?--&gt;&#x2F;gi,
+
+					&#x2F;&#x2F; Remove comments, scripts (e.g., msoShowComment), XML tag, VML content, MS Office namespaced tags, and a few other tags
+					&#x2F;&lt;(!|script[^&gt;]*&gt;.*?&lt;\&#x2F;script(?=[&gt;\s])|\&#x2F;?(\?xml(:\w+)?|img|meta|link|style|\w:\w+)(?=[\s\&#x2F;&gt;]))[^&gt;]*&gt;&#x2F;gi,
+
+					&#x2F;&#x2F; Convert &lt;s&gt; into &lt;strike&gt; for line-though
+					[&#x2F;&lt;(\&#x2F;?)s&gt;&#x2F;gi, &quot;&lt;$1strike&gt;&quot;],
+
+					&#x2F;&#x2F; Replace nsbp entites to char since it&#x27;s easier to handle
+					[&#x2F;&amp;nbsp;&#x2F;gi, &quot;\u00a0&quot;]
+				]);
+
+				&#x2F;&#x2F; Remove bad attributes, with or without quotes, ensuring that attribute text is really inside a tag.
+				&#x2F;&#x2F; If JavaScript had a RegExp look-behind, we could have integrated this with the last process() array and got rid of the loop. But alas, it does not, so we cannot.
+				do {
+					len = h.length;
+					h = h.replace(&#x2F;(&lt;[a-z][^&gt;]*\s)(?:id|name|language|type|on\w+|\w+:\w+)=(?:&quot;[^&quot;]*&quot;|\w+)\s?&#x2F;gi, &quot;$1&quot;);
+				} while (len != h.length);
+
+				&#x2F;&#x2F; Remove all spans if no styles is to be retained
+				if (getParam(ed, &quot;paste_retain_style_properties&quot;).replace(&#x2F;^none$&#x2F;i, &quot;&quot;).length == 0) {
+					h = h.replace(&#x2F;&lt;\&#x2F;?span[^&gt;]*&gt;&#x2F;gi, &quot;&quot;);
+				} else {
+					&#x2F;&#x2F; We&#x27;re keeping styles, so at least clean them up.
+					&#x2F;&#x2F; CSS Reference: http:&#x2F;&#x2F;msdn.microsoft.com&#x2F;en-us&#x2F;library&#x2F;aa155477.aspx
+
+					process([
+						&#x2F;&#x2F; Convert &lt;span style=&quot;mso-spacerun:yes&quot;&gt;___&lt;&#x2F;span&gt; to string of alternating breaking&#x2F;non-breaking spaces of same length
+						[&#x2F;&lt;span\s+style\s*=\s*&quot;\s*mso-spacerun\s*:\s*yes\s*;?\s*&quot;\s*&gt;([\s\u00a0]*)&lt;\&#x2F;span&gt;&#x2F;gi,
+							function(str, spaces) {
+								return (spaces.length &gt; 0)? spaces.replace(&#x2F;.&#x2F;, &quot; &quot;).slice(Math.floor(spaces.length&#x2F;2)).split(&quot;&quot;).join(&quot;\u00a0&quot;) : &quot;&quot;;
+							}
+						],
+
+						&#x2F;&#x2F; Examine all styles: delete junk, transform some, and keep the rest
+						[&#x2F;(&lt;[a-z][^&gt;]*)\sstyle=&quot;([^&quot;]*)&quot;&#x2F;gi,
+							function(str, tag, style) {
+								var n = [],
+									i = 0,
+									s = explode(trim(style).replace(&#x2F;&amp;quot;&#x2F;gi, &quot;&#x27;&quot;), &quot;;&quot;);
+
+								&#x2F;&#x2F; Examine each style definition within the tag&#x27;s style attribute
+								each(s, function(v) {
+									var name, value,
+										parts = explode(v, &quot;:&quot;);
+
+									function ensureUnits(v) {
+										return v + ((v !== &quot;0&quot;) &amp;&amp; (&#x2F;\d$&#x2F;.test(v)))? &quot;px&quot; : &quot;&quot;;
+									}
+
+									if (parts.length == 2) {
+										name = parts[0].toLowerCase();
+										value = parts[1].toLowerCase();
+
+										&#x2F;&#x2F; Translate certain MS Office styles into their CSS equivalents
+										switch (name) {
+											case &quot;mso-padding-alt&quot;:
+											case &quot;mso-padding-top-alt&quot;:
+											case &quot;mso-padding-right-alt&quot;:
+											case &quot;mso-padding-bottom-alt&quot;:
+											case &quot;mso-padding-left-alt&quot;:
+											case &quot;mso-margin-alt&quot;:
+											case &quot;mso-margin-top-alt&quot;:
+											case &quot;mso-margin-right-alt&quot;:
+											case &quot;mso-margin-bottom-alt&quot;:
+											case &quot;mso-margin-left-alt&quot;:
+											case &quot;mso-table-layout-alt&quot;:
+											case &quot;mso-height&quot;:
+											case &quot;mso-width&quot;:
+											case &quot;mso-vertical-align-alt&quot;:
+												n[i++] = name.replace(&#x2F;^mso-|-alt$&#x2F;g, &quot;&quot;) + &quot;:&quot; + ensureUnits(value);
+												return;
+
+											case &quot;horiz-align&quot;:
+												n[i++] = &quot;text-align:&quot; + value;
+												return;
+
+											case &quot;vert-align&quot;:
+												n[i++] = &quot;vertical-align:&quot; + value;
+												return;
+
+											case &quot;font-color&quot;:
+											case &quot;mso-foreground&quot;:
+												n[i++] = &quot;color:&quot; + value;
+												return;
+
+											case &quot;mso-background&quot;:
+											case &quot;mso-highlight&quot;:
+												n[i++] = &quot;background:&quot; + value;
+												return;
+
+											case &quot;mso-default-height&quot;:
+												n[i++] = &quot;min-height:&quot; + ensureUnits(value);
+												return;
+
+											case &quot;mso-default-width&quot;:
+												n[i++] = &quot;min-width:&quot; + ensureUnits(value);
+												return;
+
+											case &quot;mso-padding-between-alt&quot;:
+												n[i++] = &quot;border-collapse:separate;border-spacing:&quot; + ensureUnits(value);
+												return;
+
+											case &quot;text-line-through&quot;:
+												if ((value == &quot;single&quot;) || (value == &quot;double&quot;)) {
+													n[i++] = &quot;text-decoration:line-through&quot;;
+												}
+												return;
+
+											case &quot;mso-zero-height&quot;:
+												if (value == &quot;yes&quot;) {
+													n[i++] = &quot;display:none&quot;;
+												}
+												return;
+										}
+
+										&#x2F;&#x2F; Eliminate all MS Office style definitions that have no CSS equivalent by examining the first characters in the name
+										if (&#x2F;^(mso|column|font-emph|lang|layout|line-break|list-image|nav|panose|punct|row|ruby|sep|size|src|tab-|table-border|text-(?!align|decor|indent|trans)|top-bar|version|vnd|word-break)&#x2F;.test(name)) {
+											return;
+										}
+
+										&#x2F;&#x2F; If it reached this point, it must be a valid CSS style
+										n[i++] = name + &quot;:&quot; + parts[1];		&#x2F;&#x2F; Lower-case name, but keep value case
+									}
+								});
+
+								&#x2F;&#x2F; If style attribute contained any valid styles the re-write it; otherwise delete style attribute.
+								if (i &gt; 0) {
+									return tag + &#x27; style=&quot;&#x27; + n.join(&#x27;;&#x27;) + &#x27;&quot;&#x27;;
+								} else {
+									return tag;
+								}
+							}
+						]
+					]);
+				}
+			}
+
+			&#x2F;&#x2F; Replace headers with &lt;strong&gt;
+			if (getParam(ed, &quot;paste_convert_headers_to_strong&quot;)) {
+				process([
+					[&#x2F;&lt;h[1-6][^&gt;]*&gt;&#x2F;gi, &quot;&lt;p&gt;&lt;strong&gt;&quot;],
+					[&#x2F;&lt;\&#x2F;h[1-6][^&gt;]*&gt;&#x2F;gi, &quot;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;&quot;]
+				]);
+			}
+
+			process([
+				&#x2F;&#x2F; Copy paste from Java like Open Office will produce this junk on FF
+				[&#x2F;Version:[\d.]+\nStartHTML:\d+\nEndHTML:\d+\nStartFragment:\d+\nEndFragment:\d+&#x2F;gi, &#x27;&#x27;]
+			]);
+
+			&#x2F;&#x2F; Class attribute options are: leave all as-is (&quot;none&quot;), remove all (&quot;all&quot;), or remove only those starting with mso (&quot;mso&quot;).
+			&#x2F;&#x2F; Note:-  paste_strip_class_attributes: &quot;none&quot;, verify_css_classes: true is also a good variation.
+			stripClass = getParam(ed, &quot;paste_strip_class_attributes&quot;);
+
+			if (stripClass !== &quot;none&quot;) {
+				function removeClasses(match, g1) {
+						if (stripClass === &quot;all&quot;)
+							return &#x27;&#x27;;
+
+						var cls = grep(explode(g1.replace(&#x2F;^([&quot;&#x27;])(.*)\1$&#x2F;, &quot;$2&quot;), &quot; &quot;),
+							function(v) {
+								return (&#x2F;^(?!mso)&#x2F;i.test(v));
+							}
+						);
+
+						return cls.length ? &#x27; class=&quot;&#x27; + cls.join(&quot; &quot;) + &#x27;&quot;&#x27; : &#x27;&#x27;;
+				};
+
+				h = h.replace(&#x2F; class=&quot;([^&quot;]+)&quot;&#x2F;gi, removeClasses);
+				h = h.replace(&#x2F; class=([\-\w]+)&#x2F;gi, removeClasses);
+			}
+
+			&#x2F;&#x2F; Remove spans option
+			if (getParam(ed, &quot;paste_remove_spans&quot;)) {
+				h = h.replace(&#x2F;&lt;\&#x2F;?span[^&gt;]*&gt;&#x2F;gi, &quot;&quot;);
+			}
+
+			&#x2F;&#x2F;console.log(&#x27;After preprocess:&#x27; + h);
+
+			o.content = h;
+		},
+
+		&#x2F;**
+		 * Various post process items.
+		 *&#x2F;
+		_postProcess : function(pl, o) {
+			var t = this, ed = t.editor, dom = ed.dom, styleProps;
+
+			if (ed.settings.paste_enable_default_filters == false) {
+				return;
+			}
+			
+			if (o.wordContent) {
+				&#x2F;&#x2F; Remove named anchors or TOC links
+				each(dom.select(&#x27;a&#x27;, o.node), function(a) {
+					if (!a.href || a.href.indexOf(&#x27;#_Toc&#x27;) != -1)
+						dom.remove(a, 1);
+				});
+
+				if (getParam(ed, &quot;paste_convert_middot_lists&quot;)) {
+					t._convertLists(pl, o);
+				}
+
+				&#x2F;&#x2F; Process styles
+				styleProps = getParam(ed, &quot;paste_retain_style_properties&quot;); &#x2F;&#x2F; retained properties
+
+				&#x2F;&#x2F; Process only if a string was specified and not equal to &quot;all&quot; or &quot;*&quot;
+				if ((tinymce.is(styleProps, &quot;string&quot;)) &amp;&amp; (styleProps !== &quot;all&quot;) &amp;&amp; (styleProps !== &quot;*&quot;)) {
+					styleProps = tinymce.explode(styleProps.replace(&#x2F;^none$&#x2F;i, &quot;&quot;));
+
+					&#x2F;&#x2F; Retains some style properties
+					each(dom.select(&#x27;*&#x27;, o.node), function(el) {
+						var newStyle = {}, npc = 0, i, sp, sv;
+
+						&#x2F;&#x2F; Store a subset of the existing styles
+						if (styleProps) {
+							for (i = 0; i &lt; styleProps.length; i++) {
+								sp = styleProps[i];
+								sv = dom.getStyle(el, sp);
+
+								if (sv) {
+									newStyle[sp] = sv;
+									npc++;
+								}
+							}
+						}
+
+						&#x2F;&#x2F; Remove all of the existing styles
+						dom.setAttrib(el, &#x27;style&#x27;, &#x27;&#x27;);
+
+						if (styleProps &amp;&amp; npc &gt; 0)
+							dom.setStyles(el, newStyle); &#x2F;&#x2F; Add back the stored subset of styles
+						else &#x2F;&#x2F; Remove empty span tags that do not have class attributes
+							if (el.nodeName == &#x27;SPAN&#x27; &amp;&amp; !el.className)
+								dom.remove(el, true);
+					});
+				}
+			}
+
+			&#x2F;&#x2F; Remove all style information or only specifically on WebKit to avoid the style bug on that browser
+			if (getParam(ed, &quot;paste_remove_styles&quot;) || (getParam(ed, &quot;paste_remove_styles_if_webkit&quot;) &amp;&amp; tinymce.isWebKit)) {
+				each(dom.select(&#x27;*[style]&#x27;, o.node), function(el) {
+					el.removeAttribute(&#x27;style&#x27;);
+					el.removeAttribute(&#x27;data-mce-style&#x27;);
+				});
+			} else {
+				if (tinymce.isWebKit) {
+					&#x2F;&#x2F; We need to compress the styles on WebKit since if you paste &lt;img border=&quot;0&quot; &#x2F;&gt; it will become &lt;img border=&quot;0&quot; style=&quot;... lots of junk ...&quot; &#x2F;&gt;
+					&#x2F;&#x2F; Removing the mce_style that contains the real value will force the Serializer engine to compress the styles
+					each(dom.select(&#x27;*&#x27;, o.node), function(el) {
+						el.removeAttribute(&#x27;data-mce-style&#x27;);
+					});
+				}
+			}
+		},
+
+		&#x2F;**
+		 * Converts the most common bullet and number formats in Office into a real semantic UL&#x2F;LI list.
+		 *&#x2F;
+		_convertLists : function(pl, o) {
+			var dom = pl.editor.dom, listElm, li, lastMargin = -1, margin, levels = [], lastType, html;
+
+			&#x2F;&#x2F; Convert middot lists into real semantic lists
+			each(dom.select(&#x27;p&#x27;, o.node), function(p) {
+				var sib, val = &#x27;&#x27;, type, html, idx, parents;
+
+				&#x2F;&#x2F; Get text node value at beginning of paragraph
+				for (sib = p.firstChild; sib &amp;&amp; sib.nodeType == 3; sib = sib.nextSibling)
+					val += sib.nodeValue;
+
+				val = p.innerHTML.replace(&#x2F;&lt;\&#x2F;?\w+[^&gt;]*&gt;&#x2F;gi, &#x27;&#x27;).replace(&#x2F;&amp;nbsp;&#x2F;g, &#x27;\u00a0&#x27;);
+
+				&#x2F;&#x2F; Detect unordered lists look for bullets
+				if (&#x2F;^(__MCE_ITEM__)+[\u2022\u00b7\u00a7\u00d8o\u25CF]\s*\u00a0*&#x2F;.test(val))
+					type = &#x27;ul&#x27;;
+
+				&#x2F;&#x2F; Detect ordered lists 1., a. or ixv.
+				if (&#x2F;^__MCE_ITEM__\s*\w+\.\s*\u00a0+&#x2F;.test(val))
+					type = &#x27;ol&#x27;;
+
+				&#x2F;&#x2F; Check if node value matches the list pattern: o&amp;nbsp;&amp;nbsp;
+				if (type) {
+					margin = parseFloat(p.style.marginLeft || 0);
+
+					if (margin &gt; lastMargin)
+						levels.push(margin);
+
+					if (!listElm || type != lastType) {
+						listElm = dom.create(type);
+						dom.insertAfter(listElm, p);
+					} else {
+						&#x2F;&#x2F; Nested list element
+						if (margin &gt; lastMargin) {
+							listElm = li.appendChild(dom.create(type));
+						} else if (margin &lt; lastMargin) {
+							&#x2F;&#x2F; Find parent level based on margin value
+							idx = tinymce.inArray(levels, margin);
+							parents = dom.getParents(listElm.parentNode, type);
+							listElm = parents[parents.length - 1 - idx] || listElm;
+						}
+					}
+
+					&#x2F;&#x2F; Remove middot or number spans if they exists
+					each(dom.select(&#x27;span&#x27;, p), function(span) {
+						var html = span.innerHTML.replace(&#x2F;&lt;\&#x2F;?\w+[^&gt;]*&gt;&#x2F;gi, &#x27;&#x27;);
+
+						&#x2F;&#x2F; Remove span with the middot or the number
+						if (type == &#x27;ul&#x27; &amp;&amp; &#x2F;^__MCE_ITEM__[\u2022\u00b7\u00a7\u00d8o\u25CF]&#x2F;.test(html))
+							dom.remove(span);
+						else if (&#x2F;^__MCE_ITEM__[\s\S]*\w+\.(&amp;nbsp;|\u00a0)*\s*&#x2F;.test(html))
+							dom.remove(span);
+					});
+
+					html = p.innerHTML;
+
+					&#x2F;&#x2F; Remove middot&#x2F;list items
+					if (type == &#x27;ul&#x27;)
+						html = p.innerHTML.replace(&#x2F;__MCE_ITEM__&#x2F;g, &#x27;&#x27;).replace(&#x2F;^[\u2022\u00b7\u00a7\u00d8o\u25CF]\s*(&amp;nbsp;|\u00a0)+\s*&#x2F;, &#x27;&#x27;);
+					else
+						html = p.innerHTML.replace(&#x2F;__MCE_ITEM__&#x2F;g, &#x27;&#x27;).replace(&#x2F;^\s*\w+\.(&amp;nbsp;|\u00a0)+\s*&#x2F;, &#x27;&#x27;);
+
+					&#x2F;&#x2F; Create li and add paragraph data into the new li
+					li = listElm.appendChild(dom.create(&#x27;li&#x27;, 0, html));
+					dom.remove(p);
+
+					lastMargin = margin;
+					lastType = type;
+				} else
+					listElm = lastMargin = 0; &#x2F;&#x2F; End list element
+			});
+
+			&#x2F;&#x2F; Remove any left over makers
+			html = o.node.innerHTML;
+			if (html.indexOf(&#x27;__MCE_ITEM__&#x27;) != -1)
+				o.node.innerHTML = html.replace(&#x2F;__MCE_ITEM__&#x2F;g, &#x27;&#x27;);
+		},
+
+		&#x2F;**
+		 * Inserts the specified contents at the caret position.
+		 *&#x2F;
+		_insert : function(h, skip_undo) {
+			var ed = this.editor, r = ed.selection.getRng();
+
+			&#x2F;&#x2F; First delete the contents seems to work better on WebKit when the selection spans multiple list items or multiple table cells.
+			if (!ed.selection.isCollapsed() &amp;&amp; r.startContainer != r.endContainer)
+				ed.getDoc().execCommand(&#x27;Delete&#x27;, false, null);
+
+			ed.execCommand(&#x27;mceInsertContent&#x27;, false, h, {skip_undo : skip_undo});
+		},
+
+		&#x2F;**
+		 * Instead of the old plain text method which tried to re-create a paste operation, the
+		 * new approach adds a plain text mode toggle switch that changes the behavior of paste.
+		 * This function is passed the same input that the regular paste plugin produces.
+		 * It performs additional scrubbing and produces (and inserts) the plain text.
+		 * This approach leverages all of the great existing functionality in the paste
+		 * plugin, and requires minimal changes to add the new functionality.
+		 * Speednet - June 2009
+		 *&#x2F;
+		_insertPlainText : function(content) {
+			var ed = this.editor,
+				linebr = getParam(ed, &quot;paste_text_linebreaktype&quot;),
+				rl = getParam(ed, &quot;paste_text_replacements&quot;),
+				is = tinymce.is;
+
+			function process(items) {
+				each(items, function(v) {
+					if (v.constructor == RegExp)
+						content = content.replace(v, &quot;&quot;);
+					else
+						content = content.replace(v[0], v[1]);
+				});
+			};
+
+			if ((typeof(content) === &quot;string&quot;) &amp;&amp; (content.length &gt; 0)) {
+				&#x2F;&#x2F; If HTML content with line-breaking tags, then remove all cr&#x2F;lf chars because only tags will break a line
+				if (&#x2F;&lt;(?:p|br|h[1-6]|ul|ol|dl|table|t[rdh]|div|blockquote|fieldset|pre|address|center)[^&gt;]*&gt;&#x2F;i.test(content)) {
+					process([
+						&#x2F;[\n\r]+&#x2F;g
+					]);
+				} else {
+					&#x2F;&#x2F; Otherwise just get rid of carriage returns (only need linefeeds)
+					process([
+						&#x2F;\r+&#x2F;g
+					]);
+				}
+
+				process([
+					[&#x2F;&lt;\&#x2F;(?:p|h[1-6]|ul|ol|dl|table|div|blockquote|fieldset|pre|address|center)&gt;&#x2F;gi, &quot;\n\n&quot;],		&#x2F;&#x2F; Block tags get a blank line after them
+					[&#x2F;&lt;br[^&gt;]*&gt;|&lt;\&#x2F;tr&gt;&#x2F;gi, &quot;\n&quot;],				&#x2F;&#x2F; Single linebreak for &lt;br &#x2F;&gt; tags and table rows
+					[&#x2F;&lt;\&#x2F;t[dh]&gt;\s*&lt;t[dh][^&gt;]*&gt;&#x2F;gi, &quot;\t&quot;],		&#x2F;&#x2F; Table cells get tabs betweem them
+					&#x2F;&lt;[a-z!\&#x2F;?][^&gt;]*&gt;&#x2F;gi,						&#x2F;&#x2F; Delete all remaining tags
+					[&#x2F;&amp;nbsp;&#x2F;gi, &quot; &quot;],							&#x2F;&#x2F; Convert non-break spaces to regular spaces (remember, *plain text*)
+					[&#x2F;(?:(?!\n)\s)*(\n+)(?:(?!\n)\s)*&#x2F;gi, &quot;$1&quot;] &#x2F;&#x2F; Cool little RegExp deletes whitespace around linebreak chars.
+				]);
+
+				var maxLinebreaks = Number(getParam(ed, &quot;paste_max_consecutive_linebreaks&quot;));
+				if (maxLinebreaks &gt; -1) {
+					var maxLinebreaksRegex = new RegExp(&quot;\n{&quot; + (maxLinebreaks + 1) + &quot;,}&quot;, &quot;g&quot;);
+					var linebreakReplacement = &quot;&quot;;
+
+					while (linebreakReplacement.length &lt; maxLinebreaks) {
+						linebreakReplacement += &quot;\n&quot;;
+					}
+
+					process([
+						[maxLinebreaksRegex, linebreakReplacement] &#x2F;&#x2F; Limit max consecutive linebreaks
+					]);
+				}
+
+				content = ed.dom.decode(tinymce.html.Entities.encodeRaw(content));
+
+				&#x2F;&#x2F; Perform default or custom replacements
+				if (is(rl, &quot;array&quot;)) {
+					process(rl);
+				} else if (is(rl, &quot;string&quot;)) {
+					process(new RegExp(rl, &quot;gi&quot;));
+				}
+
+				&#x2F;&#x2F; Treat paragraphs as specified in the config
+				if (linebr == &quot;none&quot;) {
+					&#x2F;&#x2F; Convert all line breaks to space
+					process([
+						[&#x2F;\n+&#x2F;g, &quot; &quot;]
+					]);
+				} else if (linebr == &quot;br&quot;) {
+					&#x2F;&#x2F; Convert all line breaks to &lt;br &#x2F;&gt;
+					process([
+						[&#x2F;\n&#x2F;g, &quot;&lt;br &#x2F;&gt;&quot;]
+					]);
+				} else if (linebr == &quot;p&quot;) {
+					&#x2F;&#x2F; Convert all line breaks to &lt;p&gt;...&lt;&#x2F;p&gt;
+					process([
+						[&#x2F;\n+&#x2F;g, &quot;&lt;&#x2F;p&gt;&lt;p&gt;&quot;],
+						[&#x2F;^(.*&lt;\&#x2F;p&gt;)(&lt;p&gt;)$&#x2F;, &#x27;&lt;p&gt;$1&#x27;]
+					]);
+				} else {
+					&#x2F;&#x2F; defaults to &quot;combined&quot;
+					&#x2F;&#x2F; Convert single line breaks to &lt;br &#x2F;&gt; and double line breaks to &lt;p&gt;...&lt;&#x2F;p&gt;
+					process([
+						[&#x2F;\n\n&#x2F;g, &quot;&lt;&#x2F;p&gt;&lt;p&gt;&quot;],
+						[&#x2F;^(.*&lt;\&#x2F;p&gt;)(&lt;p&gt;)$&#x2F;, &#x27;&lt;p&gt;$1&#x27;],
+						[&#x2F;\n&#x2F;g, &quot;&lt;br &#x2F;&gt;&quot;]
+					]);
+				}
+
+				ed.execCommand(&#x27;mceInsertContent&#x27;, false, content);
+			}
+		},
+
+		&#x2F;**
+		 * This method will open the old style paste dialogs. Some users might want the old behavior but still use the new cleanup engine.
+		 *&#x2F;
+		_legacySupport : function() {
+			var t = this, ed = t.editor;
+
+			&#x2F;&#x2F; Register command(s) for backwards compatibility
+			ed.addCommand(&quot;mcePasteWord&quot;, function() {
+				ed.windowManager.open({
+					file: t.url + &quot;&#x2F;pasteword.htm&quot;,
+					width: parseInt(getParam(ed, &quot;paste_dialog_width&quot;)),
+					height: parseInt(getParam(ed, &quot;paste_dialog_height&quot;)),
+					inline: 1
+				});
+			});
+
+			if (getParam(ed, &quot;paste_text_use_dialog&quot;)) {
+				ed.addCommand(&quot;mcePasteText&quot;, function() {
+					ed.windowManager.open({
+						file : t.url + &quot;&#x2F;pastetext.htm&quot;,
+						width: parseInt(getParam(ed, &quot;paste_dialog_width&quot;)),
+						height: parseInt(getParam(ed, &quot;paste_dialog_height&quot;)),
+						inline : 1
+					});
+				});
+			}
+
+			&#x2F;&#x2F; Register button for backwards compatibility
+			ed.addButton(&quot;pasteword&quot;, {title : &quot;paste.paste_word_desc&quot;, cmd : &quot;mcePasteWord&quot;});
+		}
+	});
+
+	&#x2F;&#x2F; Register plugin
+	tinymce.PluginManager.add(&quot;paste&quot;, tinymce.plugins.PastePlugin);
+})();
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

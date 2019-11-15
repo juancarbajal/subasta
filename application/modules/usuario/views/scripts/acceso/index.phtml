@@ -1,0 +1,152 @@
+<?php /* <!--< ?php echo $this->action('buscador','busqueda','default'); ?>--> */?>
+<div class="c-acceso container">
+    <div class="col-left">
+      <form action="<?php echo $this->baseUrl(); ?>/usuario/acceso" method="post" name="login" class="form-horizontal" id="form-log-in" novalidate="novalidate">          
+        <h2 class="k-title mb10"><span></span>Identificate</h2>
+        <?php if (!empty($this->msj)){ ?>
+          <div class="ybox">
+            <?=$this->msj?> 
+            <?php if (isset($this->msgUrl)){ ?>:
+                <a class="cmd" id="<?=$this->msgUrl['id']?>" rel="<?=$this->msgUrl['rel']?>" 
+                   href="<?=$this->msgUrl['href']?>">
+                  <?=$this->msgUrl['label']?>
+              </a>
+            <?php } ?>
+          </div>
+        <? }?>    
+        <div class="control-group">
+            <span>Coloca tu e-mail y tu clave</span>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="txtEmail">Email o Apodo</label>
+            <div class="controls">
+                <input type="text" name="user" id="user" tabindex="1">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="txtPassword">Clave</label>
+            <div class="controls">
+                <input type="password" name="password" id="password" tabindex="2">
+            </div>
+        </div>
+        <p class="ta-right mb20"><a class="recover-passw" href="#recover-passw" tabindex="4">¿Olvidaste tu clave?</a></p>
+        <div class="control">
+            <button class="btn-kotear" type="submit" tabindex="3">Continuar</button>
+        </div>
+      </form>
+    </div><!-- //left-column-static -->
+    <div class="col-right">
+            <h2 class="k-title mb10"><span></span>¿Todavía no estás registrado?</h2>
+            <p>Para poder comprar y vender hace falta estar registrado.</p>
+            <p class="mb20">¡Regístrate ahora gratis en sólo 2 pasos!</p>
+            <div class="control">
+                <a id="show-register" href="javascript:;" class="btn-kotear">¡Regístrate Gratis!</a>
+            </div>
+    </div><!-- //right-column-static -->
+</div>
+
+
+
+<!-- Modal recover pass -->
+<div class="hide">
+    <form class="form-horizontal" id="recover-passw" name="recover-passw" method="post" action="<?php echo $this->baseUrl()?>/usuario/clave/recuperar">
+      <h2 class="k-title mb10"><span></span>Recuperación de clave</h2>
+      <p class="mb20">Para recuperar tu clave, ingresa el código de verificacíon e ingresa tu Apodo o E-mail:  </p>
+      <div class="control-group">
+        <label class="control-label" for="code-verify">Código de verificacíon</label>
+        <div class="controls">
+          <?php echo $this->captcha->render($this)?>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="code-verify-2">Código de verificacíon</label>
+        <div class="controls">
+          <input id="code-verify-2" type="text" name="captcha" id="captcha" maxlength="10" />
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="inputEmail">Apodo o E-mail:</label>
+        <div class="controls">
+          <input id="inputEmail"  type="text" name="usercontact" id="usercontact" />
+        </div>
+      </div>
+      <p class="mb20">Por razones de seguridad, <strong>Kotear</strong> te recomienda modificar tu clave una vez recuperada </p>
+      <div class="control">
+          <button type="submit" name="continuar" class="btn-kotear"><span>Continuar</span></button>
+          <button type="button" name="cancel" class="btn-close"><span>Cancelar</span></button>
+      </div>
+    </form>
+</div><!-- // Modal recover pass -->
+
+
+
+<!-- Modal Suspendido -->
+<div class="hide">
+   <form id="frmSuspended" name="frmSuspended"  method="post" action="<?php echo $this->baseUrl()?>/usuario/suspension/cancelacion">
+        <!--<?php if (isset($this->msg)){?>
+                    <div class="mensajeerror">
+                        <img src='<?php $this->baseUrl()?>/img/icons/warning.gif'/><?php echo $this->msg; ?>
+                    </div>
+        <?php }?>-->
+	     <h2>Cancelar suspensión</h2>
+		  <div class="content">
+			<p><strong><?php echo $this->usuarioSuspendido;?></strong> tu cuenta se encuentra suspendida, puedes enviar un mensaje solicitando la cancelación de tu suspensión utilizando la casilla de texto siguiente.</p>
+			 <fieldset>
+			     <label class="odd first">
+				      <strong>Digite su Mensaje:</strong>
+				      <textarea name="mensaje" id="mensaje" cols="30" rows="5" ></textarea>
+			     </label>
+				  <input type="hidden" id="usuariosuspendido" name="usuariosuspendido"  value="<?php echo $this->usuarioSuspendido;?>"/>
+			 </fieldset>
+      </div>
+        <p class="buttons">
+          <button type="submit" name="continuar" id="continuar" class="btn_submit"><span>Continuar</span></button>
+			     <button type="button" name="cancel" class="close btn_cancel"><span>Cancelar</span></button>
+	      </p>
+        <!--<?php if (isset($this->envioExito)) { echo $this->envioExito; } ?>-->
+  </form>
+</div><!-- //Modal Suspendido -->
+
+
+
+<!-- Modal Suspendido 2 -->
+<div class="hide">
+    <form id="frmSuspendedAper" name="frmSuspendedAper" method="post" action="<?php echo $this->baseUrl()?>/usuario/suspension/cancelacion">
+            <!--<?php if (isset($this->msg)){?>
+                    <div class="mensajeerror">
+                        <img src='<?php $this->baseUrl()?>/img/icons/warning.gif'/><?php echo $this->msg; ?>
+                    </div>
+            <?php }?>-->
+	<h2>Cancelar suspensión</h2>
+		<div class="content">
+			<p><strong><?php echo $this->usuarioSuspendido;?></strong> tu cuenta se encuentra suspendida, por exceso de <a href="url[wiki-apercibimientos]" title="Los apercibimientos son marcas que impone el sistema a los usuarios que no califican a su contraparte luego de una compra / venta. Los apercibimientos se otorgan pasados los 21 días del registro de una operación que no fue calificada. Al llegar a la suma de 3 apercibimiento el sistema suspende a un usuario automáticamente. ">Apercibimientos.</a></p>
+
+			<fieldset>
+			  <label class="odd first">
+				<strong>Digite su Mensaje:</strong>
+				<textarea name="msg" id="msg" cols="30" rows="5" ></textarea>
+			 </label>
+				<input type="hidden" id="usuariosuspendido" name="usuariosuspendido"  value="<?php echo $this->usuarioSuspendido;?>"/>
+			</fieldset>
+            </div>
+            <p class="buttons">
+                <button type="submit" name="continuar" id="continuar" class="btn_submit"><span>Continuar</span></button>
+			<button type="button" name="cancel" class="close btn_cancel"><span>Cancelar</span></button>
+	</p>
+            <!--<?php if (isset($this->envioExito)) { echo $this->envioExito; } ?>-->
+    </form>
+</div><!-- //Modal Suspendido 2 -->
+
+
+<!-- Modal reenviar email -->
+<div class="hide">
+<form id="revalidar-email" name="revalidar-email" method="post" action="<?php echo $this->baseUrl()?>/usuario/registro/envio-correo-confirmacion">
+    <h2>Reenviar email de validación</h2>
+    <div class="content">
+        <p>¿Desea renviar el email de validación a tu correo: <strong><?php echo $this->email ?></strong>?</p>
+    </div>
+    <p class="buttons">
+        <button type="submit" name="continuar" class="btn_submit"><span>Aceptar</span></button>
+    </p>
+</form>
+</div><!-- // Modal reenviar email -->

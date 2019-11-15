@@ -1,0 +1,287 @@
+<script type="text/javascript">
+var _ubiProv = <?=$this->arrUbigeo['prov']?>,
+    _ubiDist = <?=$this->arrUbigeo['dist']?>,
+    _cantImg = <?=$this->arrDestaque->CANT_FOTO?>,
+    _cantTitImp = <?=$this->arrDestaque->NUM_TIT_IMP?>,
+    _cantWordImp = <?=$this->arrDestaque->NUM_WORD_IMP?>;
+</script>
+<?php
+$categoriaText1 = $this->form->categoriaText1->getValue();
+$categoriaText2 = $this->form->categoriaText2->getValue();
+$categoriaText3 = $this->form->categoriaText3->getValue();
+$categoriaText4 = $this->form->categoriaText4->getValue();
+$arrPaso = $this->arrPaso;
+?>
+<input type="hidden" id="publicacion_estado" value="<?=$this->publicacionEstado?>">
+<div class="container">
+    <div class="head-step">
+        <div class="step-title">
+            <h3 class="k-title"><span></span><?php switch($this->publicacionEstado) {
+                        case 1 : ?>Publicar: Paso 3 - Registrar Datos del Aviso<?php break;
+                        case 2 : ?>Editar: Paso 1 - Modificar Datos del Aviso<?php break;
+                        case 3 : ?>Destacar: Paso 2 - Actualizar Datos del Aviso<?php break;
+                        case 4 : ?>Republicar: Paso 2 - Actualizar Datos del Aviso<?php break;
+                        default : break;
+                    }
+                ?>
+            </h3>
+            <p>Ingresa los datos necesarios para publicar el Aviso</p>
+        </div>
+        <ul class="step-progress">
+            <?if($arrPaso->paso1){?><li><span>Destaca el Aviso</span><span class="icon-off-step"></span></li><?}?>
+            <?if($arrPaso->paso2){?><li><span>Selecciona el Rubro</span><span class="icon-off-step"></span></li><?}?>
+            <?if($arrPaso->paso3){?><li><span>Datos del Aviso</span><span class="icon-on-step"></span></li><?}?>
+            <?if($arrPaso->paso4){?><li><span>Confirmación</span><span class="icon-off-step"></span></li><?}?>
+        </ul>
+    </div>
+    <div class="register-data row">
+        <div class="register-data-form">
+            <h3>Rubros y Subrubros</h3>
+            <div class="selected-category">
+            <?php if(trim($categoriaText1)!='') { ?>
+                <span class="strong"><?=$categoriaText1?></span>
+            <?php } 
+                if(trim($categoriaText2)) { ?>
+                <span class="row-r">››</span>
+                <span><?=$categoriaText2?></span>
+            <?php } 
+                if(trim($categoriaText3)!='') { ?>
+                <span class="row-r">››</span>
+                <span><?=$categoriaText3?></span>
+            <?php } 
+                if(trim($categoriaText4)!='') { ?>
+                <span class="row-r">››</span>
+                <span><?=$categoriaText4?></span>
+            <?php } ?>                    
+            </div>
+            <div class="shadow-space"></div>
+            <h3>Información Principal</h3>
+            <form id="frm_add" class="form-register-data" autocomplete="off" method="post" 
+                  action="<?=$this->baseUrl()?>/usuario/publicacion/confirmar-publicacion" 
+                  enctype="multipart/form-data">
+                <div class="register-user">
+                    <?=($this->form->idAviso)?$this->form->idAviso->renderViewHelper():''?>
+                    <input type="hidden" name='paso' value="3" />
+<!--                        <input type="hidden" name='destaqueId' id='destaqueId' value="< ?=$this->destaqueId?>" />-->
+                    <?=$this->form->destaqueId->renderViewHelper()?>
+                    <?=$this->form->categoriaId1->renderViewHelper()?>
+                    <?=$this->form->categoriaId2->renderViewHelper()?>
+                    <?=$this->form->categoriaId3->renderViewHelper()?>
+                    <?=$this->form->categoriaId4->renderViewHelper()?>
+                    <?=$this->form->categoriaText1->renderViewHelper()?>
+                    <?=$this->form->categoriaText2->renderViewHelper()?>
+                    <?=$this->form->categoriaText3->renderViewHelper()?>
+                    <?=$this->form->categoriaText4->renderViewHelper()?>
+                    <?=($this->form->atoken)?$this->form->atoken->renderViewHelper():''?>
+                    <?=($this->form->atoken3)?$this->form->atoken3->renderViewHelper():''?>
+                    <div class="form-horizontal">
+                        <div class="control-group"> 
+                            <label><?=$this->form->announcement_title->getLabel()?></label>
+                            <?=$this->form->announcement_title->renderViewHelper()?>
+
+                            <span class="red-important inline">*</span>
+                            <span class="detail-max-number">
+                                Máximo <?= $this->form->announcement_title->getAttrib('maxlength'); ?>. caracteres
+                            </span>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label"><?=$this->form->product_type->getLabel()?></label>
+                            <div class="controls">
+                                <?=$this->form->product_type->renderViewHelper()?>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label"><?=$this->form->price->getLabel()?></label>
+                            <div class="controls">
+                                <?=$this->form->price->renderViewHelper()?>
+                                <?=$this->form->currency->renderViewHelper()?>
+                            </div>
+                        </div>
+                        <div class="control-group margin-min"><strong>Ubicación del producto</strong></div>
+                        <div class="control-group">
+                            <label class="control-label"><?=$this->form->ubication_departement->getLabel()?></label>
+                            <div class="controls">
+                                <?=$this->form->ubication_departement->renderViewHelper()?>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label"><?=$this->form->ubication_province->getLabel()?></label>
+                            <div class="controls">
+                                <?=$this->form->ubication_province->renderViewHelper()?>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label"><?=$this->form->ubication_district->getLabel()?></label>
+                            <div class="controls">
+                                <?=$this->form->ubication_district->renderViewHelper()?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shadow-space"></div>
+                </div>
+                <h3><?=$this->form->payment_method->getLabel()?></h3>
+                <ul class="type-paid">
+                <?php 
+                $elem = $this->form->payment_method;
+                $elemName = $elem->getName();
+                $values = $elem->getValue();
+                $arrImg = array('1'=>'icon-cash', '2'=>'icon-check', '3'=>'icon-deposit', '4'=>'icon-money-order', '5'=>'icon-reimbursement', '6'=>'icon-credit-card');
+                foreach($elem->getMultiOptions() as $option=>$value){ ?>
+                    <li>
+                        <label for="<?php echo $elemName; ?>-<?=$option; ?>" class="<?=$arrImg[$option]?>"></label>
+                        <span class="name-type">
+                            <?php echo $value; ?>
+                        </span>
+                        <input type="checkbox" name="<?php echo $elemName; ?>[]" 
+                            id="<?php echo $elemName; ?>-<?php echo $option; ?>" 
+                            value="<?php echo $option; ?>" <?php if($values && in_array($option, $values)){ echo ' checked="checked"'; }?> />
+                    </li>
+                <?php } ?>
+                </ul>
+                <div class="shadow-space"></div>
+                <h3><?=$this->form->photo_product->getLabel()?></h3>
+                <div class="ybox">Las imágenes que se carguen serán necesarias para destacar el aviso en el paso siguiente.</div>
+                <div id="register-user-image" class="register-user">
+                    <!-- uploader -->
+                    <div class="admin-image-content">
+                        <div class="options-image">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td class="first-columm"><b>Im&aacute;genes</b>
+                                  <input id="MAX_FILE_SIZE" type="hidden" name="MAX_FILE_SIZE" value="2097152"/>
+                                </td>
+                                <td class="second-columm">
+                                  <?=$this->form->photo_product->renderFile()?>
+                                </td>
+                                <td class="third-columm">
+                                  <input type="button" id="addProductImage" name="addProductImage" value="Añadir" class="addProductImage"/>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <span class="detail-max">Formatos permitidos: JPG, PNG, GIF (Tamaño máximo: 2Mb).</span>
+                        <span class="detail-max">Puede ordenar las imágenes cómo desee.</span>
+                        <div class="fielset-content">
+                            <div class="fielset-content-left">
+                                <h3>Principal</h3>
+                                <a lang="1" href="javascript:;" title="title" class="main-img">
+                                    <img src="" alt="texto de imagen" width="130" height="130"/>
+                                </a>
+                            </div>
+                            <div class="fielset-content-right" id="container-imgs">
+                            <?php foreach ($this->arrImg as $key => $value) { ?>
+                                  <div id="<?=$key?>" class="w120">
+                                      <div class="options">
+                                          <div class="item-del">
+                                              <a href="javascript:;" title="eliminar">
+                                                  <img src="<?=URL_STATIC?>img/remove.png" alt="eliminar">
+                                              </a>
+                                          </div>
+                                          <div class="item-fav">
+                                              <a href="javascript:;" title="default">
+                                                  <img src="<?=URL_STATIC?>img/fav.png" alt="default">
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <a href="javascript:;" title="<?=$value?>">
+                                          <img width="130" height="130" src="<?=$this->ruta.$value?>" 
+                                               alt="imagen" class="main-class">
+                                      </a>
+                                  </div>
+                            <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // uploader -->
+                </div>
+                <div class="shadow-space"></div>
+                <h3><?=$this->form->informacion_adicional->getLabel()?></h3>
+                <div class="register-user">
+                    <?=$this->form->informacion_adicional->renderViewHelper()?>
+                </div>
+                <div class="shadow-space"></div>
+
+                <?php if($this->form->announcement_title_impress){ ?>
+                    <input type="hidden" name='img_tipo_destaque' id='img_tipo_destaque' value=""/>
+                    <input type="hidden" name='fono1' id='fono1' value="<?=$this->telefonoUser?>"/>
+                    <h3>Información impreso</h3>                
+                    <div class="form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label xlarge">
+                                <?=$this->form->announcement_title_impress->getLabel()?>
+                            </label>
+                            <div class="controls xlarge">
+                                <?=$this->form->announcement_title_impress->renderViewHelper()?>                            
+                                <span class="block">
+                                    Impreso <?=$this->arrDestaque->NUM_TIT_IMP?> caracteres
+                                </span>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label xlarge">
+                                <?=$this->form->letter_free->getLabel()?>
+                            </label>
+                            <div class="controls xlarge">
+                                <?=$this->form->letter_free->renderViewHelper()?>
+                                <span>
+                                    <div class="block">
+                                        Te quedan 
+                                        <span id="display_count"><?=$this->arrDestaque->NUM_WORD_IMP?></span> 
+                                        palabras
+                                        <span class="display_count_error error"></span>
+                                    </div>
+                                </span>
+                                <input id="text_imp_valid" type="hidden" value="">
+                                <input id="text_imp_word_valid" type="hidden" value="wordEx" name="text_imp_word_valid">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label xlarge">Vista referencial en impreso</label>
+                            <div class="controls xlarge">
+                                <div class="impress">
+                                    <strong class="title" id="imp_tit"></strong>
+                                    <span class="description" id="imp_des_linea1"></span>
+                                    <span class="description" id="imp_des_linea2">
+                                        <strong id="imp_city"></strong>
+                                        <strong>
+                                            <span id="imp_currency">S/.</span>
+                                            <span id="imp_money"></span>
+                                        </strong>
+                                        <strong>T.</strong><?=$this->telefonoUser?>
+                                    </span>
+                                </div>
+                            </div>
+                            <input type="hidden" val="0" name="backPrint" id="backPrint">
+                            <input type="hidden" value="" id="imp_tit_hidden" name="imp_tit_hidden">
+                            <input type="hidden" value="" id="impreso_des_linea1_hidden" name="impreso_des_linea1_hidden">
+                        </div>
+                    </div>
+                <?php } ?>
+                <div class="control">
+                    <button type="submit" class="btn-kotear btn-large">Continuar</button>
+                </div>
+            </form>
+        </div>
+        <div class="register-data-advice">
+            <div class="advice">
+                <h4 class="k-title"><span class="start"></span>Consejo para publicar</h4>
+                <p>Elige el rubro y subrubros que se correspondan con el producto que estás por publicar a la venta. Ten en cuenta que, cuanto más precisa sea tu elección, más fácil será para los compradores acceder a tu aviso</p>
+                <div class="shadow-space-mini"></div>
+            </div>
+            <div class="w246-h564"></div>
+            <div class="advice">
+                <h4 class="k-title"><span class="start"></span>Carga de Imágenes</h4>
+                <p>Asegúrate de que el formato de las fotos por cargar sea JPG, PNG o GIF (sin animación); y que cada una pese menos de 2MB.</p>
+                <div class="shadow-space-mini"></div>
+            </div>
+            <div class="w246-h17"></div>
+            <div class="advice">
+                <h4 class="k-title"><span class="start"></span>Información adicional</h4>
+                <p>En este campo puedes agregar toda la información adicional que quieras incorporar a tu aviso, inclusive textos, imágenes e hipervínculos. Usa la pestaña de “Previsualización” y trabaja con las herramientas de edición disponibles o, si sabes HTML, agrega el código directamente desde la pestaña “Código HTML”.</p>
+                <div class="shadow-space-mini"></div>
+            </div>
+        </div>
+    </div>
+</div>

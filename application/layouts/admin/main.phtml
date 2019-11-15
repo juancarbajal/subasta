@@ -1,0 +1,53 @@
+<?=$this->doctype()?>
+<html>
+    <head>
+        <?=$this->headTitle()?>
+        <?=$this->headLink()?>
+        <?=$this->headMeta()?>
+        <?php 
+            if ($this->layout()->staticCache) {
+                $excepciones = array("jquery");
+                $this->CacheStatic($this->headScript(), $excepciones);
+            }
+        ?>
+        <?=$this->yoson; ?>
+        <?=$this->headScript()?>
+        <?=$this->headStyle()?>
+    </head>
+    <body>
+        <div id="wrapper" class="wrapper-admin">
+            <!-- nav -->
+            <?=$this->partial('admin/_navbar.phtml')?>
+            <!-- // nav -->
+            
+            <div id="colum-left">
+                <?=$this->partial('admin/_menu.phtml')?>
+            </div>
+            
+            <div id="colum-right">
+                <?=$this->partial('admin/_breadcrumb.phtml')?>                    
+                <?=$this->layout()->content?>
+            </div>
+            <div class="clear"></div>
+      
+        </div>
+        <!-- MODAL -->
+        <div id="myModal" class="modal" style="display: none;">
+            <div id="contenModal"></div>
+        </div>
+        
+        <!-- Joson -->
+        <?php $sv = App_Config::getStaticVersion(); ?>
+        <script type="text/javascript" src="<?=URL_STATIC?>js/libs/framework.js<?=$sv?>"></script>
+        <script type="text/javascript" src="<?=URL_STATIC?>js/application/<?=JOSON_MIN?>yoson.js<?=$sv?>" >
+        </script>
+        <script type="text/javascript" 
+            src="<?=URL_STATIC?>js/application/schemas/<?=JOSON_MIN?>requires.js<?=$sv?>"></script>
+        <script type="text/javascript" src="<?=URL_STATIC?>js/modules/<?=JOSON_MIN?>admin.js<?=$sv?>">
+        </script>
+        <script type="text/javascript" src="<?=URL_STATIC?>js/application/schemas/modules.js<?=$sv?>" >
+        </script>
+        <script type="text/javascript" src="<?=URL_STATIC?>js/<?=JOSON_MIN?>appLoad.js<?=$sv?>"></script>
+        <script type="text/javascript" src="<?=URL_STATIC?>js/libs/bootstrap/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+  
+  <div class="category-content row">
+   <!--   
+   <?php if ($this->mensaje == 1) { ?>
+        <p class="info-catnull">Escribe en el buscador lo que quieres encontrar
+        <br/>* <strong>Escribe tu búsqueda</strong> en el campo que figura en la parte superior de la pantalla a partir de 2 caracteres y con palabras claves. Ejemplo: celulares, laptops, relojes, etc.
+        <br/>* Para realizar tu busqueda, <strong>no escribas solo palabras irrelevantes</strong>. Por ejemplo 'como', 'cuando', 'aun', 'para', 'los', etc.
+        <br/>* <strong>Navega por categorías de productos</strong> para encontrar el producto que buscas.
+        </p>
+    <?php } ?>-->
+      <!--<div class="search-general">
+        <input id="search" name="search" type="text" value="Estoy Buscando"/>
+        <select id="search-category" name="search-category">
+          <option value="0">Categorias</option>
+          <option value="1">Categorias uno</option>
+        </select>
+        <select id="search-option1" name="search-option1" disabeld="disabel">
+          <option value="0">Option1</option>
+          <option value="1">Option2</option>
+        </select>
+        <select id="search-option2" name="search-option2" disabel="disabel">
+          <option value="0">Option2</option>
+          <option value="1">Option3</option>
+        </select>
+        <button type="submit">Buscar</button><a href="#">Busqueda Avanzada</a>
+      </div>-->
+        
+      <?php echo $this->action('busqueda','index', 'default');?>
+        <?php
+            //$nroColumnas = 2;
+            $cont1 = 0; $primeroL1 = 0;  $aperturaL1 = 0; $cierreL1 = 0; $columnaL1 = 'even';
+            $cont2 = 0; $primeroL2 = 0;  $aperturaL2 = 0; $cierreL2 = 0; $columnaL2 = 'even';
+            $cont3 = 0; $primeroL3 = 0;  $aperturaL3 = 0; $cierreL3 = 0;
+            $odd = 0;
+            $even = 0;
+            $ac = $this->arbolCategoria;
+            $totalRegistros = count($ac);
+            for ($i=0; $i<$totalRegistros; $i++) {
+              $titulo = $ac[$i]->NOM_CATEGORIA;
+              $idCategoria = $ac[$i]->ID_CATEGORIA;
+              $NroAvisos = $ac[$i]->Avisos;
+              $urlSeo = $ac[$i]->URL;
+
+              if ($ac[$i]->NIVEL == 1) {
+                $aperturaL1 = 1;
+                
+               ?>
+               <div class="shadow-space"></div>               
+               <h2 class="title-category">
+                   <span style="background-image:url(<?=URL_STATIC?>img/categories/Cat-id<?php echo $idCategoria;?>.gif); background-position:left center;"></span>                   
+                    <p class="blue"><?php echo $titulo; ?></p>
+               </h2>
+              <?php 
+              echo '<div class="content-subcategory">';                            
+              $cont1++;
+              }
+
+              if ($ac[$i]->NIVEL == 2) {
+                $aperturaL2 = 1;
+                
+                if ($primeroL2 == 0) {                    
+                    echo '<ul class="item-subcategory mb20">';
+                    $primeroL2 = 1;
+                } else {
+                    echo '</ul>';
+                    echo '<ul class="item-subcategory mb20">';                    
+                }
+                
+                echo'<li class="title-subcategory">';
+                echo '<h3><a href="' . $this->baseUrl() . '/busqueda/?categs=' . $idCategoria .'" title="' . $titulo . '">' . $titulo . ' (' . $NroAvisos . ')</a></h3>';
+                echo'</li>';
+                
+                $cont2++;
+                if ($ac[$i+1]->NIVEL <= 2) {
+                    $aperturaL2 = 0;
+                    $cierreL2 = 1;
+                }
+              }
+
+              if ($ac[$i]->NIVEL == 3) {
+                $aperturaL3 = 1;           
+                
+                echo '<li>';                
+                
+                if ($ac[$i+1]->NIVEL == 4) {                    
+                    echo '<a href="' . $this->baseUrl() . '/busqueda/?categs=' . $idCategoria .'" title="' . $titulo . '">' . $titulo . ' (' . $NroAvisos. ')' . '</a>';
+                    $cont4 = 1;
+                } else {                    
+                    echo '<a href="' . $this->baseUrl() . '/busqueda/?categs=' . $idCategoria .'" title="' . $titulo . '">' . $titulo . ' (' . $NroAvisos. ')' . '</a>';
+                    $cont4 = 0;
+                }
+                echo '</li>';
+                
+                if ($ac[$i+1]->NIVEL == 2) {
+                    $aperturaL3 = 0;
+                    $cierreL3 = 1;
+                    $cont4 = 0;
+                    echo '</ul>';
+                }
+              }
+
+             if ($ac[$i+1]->NIVEL == 1) {
+                $aperturaL1 = 0;
+                $cierreL1 = 1;                
+                echo '</div>';
+                                
+                // Inicializamos variables L2
+                $primeroL2 = 0;
+                $cont2 = 0;
+                $columnaL2 = 'even';
+              }
+
+              if ($ac[$i+1]->NIVEL == '') {
+                  $primeroL1 = 2;
+              }
+
+              if ($ac[$i]->NIVEL == 4) {
+                  //Verificamos el siguiente
+                  if ($ac[$i+1]->NIVEL == 2) {
+                    $aperturaL3 = 0;
+                    $cierreL3 = 1;
+                    $cont4 = 0;                    
+                  }
+              }
+            }
+            ?>
+  </div>
+      <div class="shadow-space"></div>
+      
+  </div>
+

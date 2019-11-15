@@ -1,0 +1,104 @@
+<?php echo $this->action('buscador', 'busqueda', 'default'); ?>
+
+    <div id="body-content" class="miscompradores-pag misventas-pag col-master">
+      <div id="s_level1" class="clearfix">
+        <h3>Koteando (Mi Cuenta)</h3>
+        <?php $active1='active';
+//include 'navegacion.phtml';
+?>
+<?php echo $this->action('navegacion','menu','default', array('nav'=>'venta', 'opc'=>1));?>
+      </div>
+      <div class="pagetitle">
+        <h4>Compradores de la venta<span></span></h4>
+      </div>
+      <div id="s_level2" class="clearfix">
+        <div id="left-bar" class="col5">
+          <ul class="box">
+            <li class="active">Cualquier Fecha</li>
+            <li><a href ="<?php  echo $this ->baseUrl() . '/usuario/venta/mis-compradores/cod/'. $this->cod . '/filtro/1' ; ?> ">Ultima Semana</a></li>
+            <li><a href ="<?php  echo $this ->baseUrl() . '/usuario/venta/mis-compradores/cod/'. $this->cod . '/filtro/2' ; ?> ">Ultima Mes</a></li>
+          </ul>
+          <!--<ul class="box">
+            <li class="active">Cualquier Estado</li>
+            <li><a href ="<?php  echo $this ->baseUrl() . '/usuario/venta/mis-compradores/cod/'. $this->cod . '/filtro/3' ; ?> ">Sin Calificar</a></li>
+            <li><a href ="<?php  echo $this ->baseUrl() . '/usuario/venta/mis-compradores/cod/'. $this->cod . '/filtro/4' ; ?> ">Calificadas</a></li>
+          </ul>-->
+        </div>
+        <div id="navegar"><a href="<?php echo $this->baseUrl() . '/usuario/venta/activas/opc/categoria/codigo/0';?>"> << Regresar a mis Avisos</a></div>
+        <div id="right-bar" class="search_results col17 last">
+            <div class="item">
+            	<div class="pic"> 
+                    <img src="<?php echo $this->ruta.$this->datosAviso->K_FOTO_PRINCIPAL; ?>" alt="<?php echo $this->datosAviso->K_TITULO;   ?>" />
+                </div>
+                <div class="opts">
+                    <h4 class="comprainmediata">
+                    	<a href="<?php  echo $this ->baseUrl(). '/aviso/' . $this->codigoAviso . '-'. $this->utils->convertSEO($this->datosAviso->K_TITULO); ?>">
+                        <?php echo $this->datosAviso->K_TITULO;   ?></a>
+                    </h4>  
+                    <ul>
+                    <?php if ($this->datosAviso->K_TIPO_VENTA == "Compra Inmediata") { ?>
+                    <li class="derecha">Visitas: <strong><?php echo $this->datosAviso->K_NUM_VISITAS; ?></strong></li>
+                    <li class="distancia">Fecha de expiración: <strong><?php  echo $this->datosAviso->K_FECHA_PUB; ?> </strong></li>                	
+                    <li class="distancia">Precio Unitario: <strong><?php  echo $this->datosAviso->K_SIMB_MONEDA . ' ' . $this->datosAviso->K_PRECIO_FINAL; ?></strong></li>
+    	            <li class="derecha">Compras: <strong><?PHP echo $this->datosAviso->K_NUM_COMPRAS; ?></strong></li>
+                    <li class="distancia">Disponibles: <strong><?php echo $this->datosAviso->K_STOCK; ?></strong></li>
+            	    <li class="distancia">Tipo Destaque: <strong><?php echo $this->d1; ?></strong></li>
+                    <?php } else { ?>
+                    <li class="derecha">Visitas: <strong><?php echo $this->datosAviso->K_NUM_VISITAS; ?></strong></li>
+                    <li class="distancia">Fecha de expiración: <strong><?php  echo $this->datosAviso->K_FECHA_PUB; ?> </strong></li>
+                    <li class="distancia">Precio final: <strong><?php echo $this->datosAviso->K_SIMB_MONEDA . ' ' . $this->datosAviso->K_PRECIO_BASE; ?></strong></li>
+    	            <li class="derecha">Ofertas: <strong><?PHP echo $this->datosAviso->K_OFERTAS; ?></strong></li>
+                    <li class="distancia">Disponibles: <strong><?php echo $this->datosAviso->K_STOCK; ?></strong></li>
+            	    <li class="distancia">Tipo Destaque: <strong><?php echo $this->d1; ?></strong></li>
+                    <?php } ?>
+                    </ul>            
+                </div>
+            </div>
+          <?php
+          foreach ($this->misCompradores as $dato) :
+            $dias = $dato->DIAS_CALIFIC;
+            if($dato->REGLA_VENDEDOR != '' ) {
+                $calfi=0;
+            }
+            else {
+                if($dato->DIAS_CALIFIC >= 0) {
+                    $calfi=1;
+                    }
+                if($dato->DIAS_CALIFIC0 < 0) {
+                    $calfi=2;
+                    }
+                } ?>
+          <div class="detalle">
+            <ul class="user">
+            	<li>Comprador: <a class="user-id bigseller" href="<?php echo $this ->baseUrl() . '/usuario/reputacion/ver/cod/' . $dato->ID_USR;?>"><?php echo $dato->APODO; ?></a></li>
+                <li><?php echo $dato->NOM; ?> <?php echo $dato->APEL; ?></li>
+                <li><a class="email" href="mailto:<?php echo $dato->EMAIL; ?>"><?php echo $dato->EMAIL; ?></a></li>
+                <li><span class="fono"><?php echo $dato->FONO1; ?> <?php if ($dato->FONO2) { echo " / " . $dato->FONO2; } ?></span></li>
+                <!--<?php if ($calfi == 1) { ?>
+                	<li class="right"><span class="advertencia"><?php echo $dias?> d&iacute;as para calificar</span></li>
+                <?php } 
+                ?>-->
+            </ul>
+            <ul class="trasncnum">
+            	<li>Transacción Nº <?php echo $dato->ID_TRANSACCION; ?></li>
+                <!--<?php if($calfi == 0 ) { ?>
+                    <li class="right">  Calificaste </li>
+                <?php } 
+                if ($calfi == 1) { ?>
+                <li class="right">
+                    <a class="calificar" href="<?php echo $this ->baseUrl() . '/usuario/calificaciones/calificar/trns/'.$dato->ID_TRANSACCION; ?>">Calificar</a>
+                </li><?php } if($calfi == 2) { ?>
+                <li class="right">  La fecha de calificación expiro </li>
+                <?php } ?>-->
+            </ul>
+            <ul class="date">
+            	<li>Realizada el <?php echo $dato->FECR; ?></li>
+            </ul>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  <!--</div>
+  -->

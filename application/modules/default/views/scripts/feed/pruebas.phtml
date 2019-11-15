@@ -1,0 +1,125 @@
+<?php
+echo '<?xml version="1.0"?>
+   <rss version="2.0">
+   <channel>
+   <title>Virtuosi Media</title>
+   <link>http://www.virtuosimedia.com</link>
+   <description>A feed for articles on web development</description>
+   <item>
+   <title>Tutorial: How to Create RSS Feeds</title>
+   <link>http://www.virtuosimedia.com/article.php?id=60</link>
+  </item>
+  </channel>
+  </rss>';
+
+/*header("Content-Type: application/rss+xml");
+echo "<?xml version='1.0' encoding='iso-8859-1'?> "
+      ."<rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>"
+      ."<channel>"
+        ."<title><![CDATA[título de tu web]]></title>"
+        ."<link><![CDATA[http://www.tuweb.com]]></link>"
+        ."<description><![CDATA[descripción MUY BREVE de tu web]]></description>"
+        ."<language>es-es</language>"
+        ."<copyright><![CDATA[tu nombre y apellidos, por ejemplo]]></copyright>"
+        ."<atom:link href='http://kotear.pe/rss.php' rel='self' type='application/rss+xml' />"
+        ."<ttl>15</ttl>";
+
+    foreach ($this->avisos as $r) {
+        $href = $this->baseUrl() . '/aviso/' . $r->ID_AVISO . '-' .$r->URL;
+        if ($r->FOTO == 1) {
+            $img = $this->rutaimagen . $r->IMAGEN;
+        }
+        else {
+            $img = $this->rutaimagen . 'none.gif';
+        }
+        echo "<item>"
+            ."<link>".$r->URL."</link>"
+            ."<title>".$r->TIT."</title>"
+            ."<description>"
+                ."<img></img>"
+                ."<precio>$r->SIMB $r->PRECIO</precio>"
+            ."</description>"
+            ."</item>";
+    }
+echo "</channel>"
+        ."</rss>";
+//var_dump($this->avisos);
+
+
+/*
+header('Content-Type: text/xml'); //Indicamos al navegador que es un documento en XML
+//Versión y juego de carácteres de nuestro documento
+echo '<?xml version="1.0" encoding="iso-88859-1"?>';
+//$descripcion=substr($row[articulo],0,300)."...";
+echo '<rss version="2.0">
+<channel>
+    <item>
+    <title>kotear</title>
+    <link>http://www.miurl.com/</link>
+    <language>es-CL</language>
+    <description>Busqueda</description>
+    <generator>Kotear</generator>
+    </item>
+';
+*/
+
+
+/* Aquí debemos conectarnos a la base de datos, */
+/* Obtener los diferentes items e incluirlos    */
+/* adecuadamente mediante un bucle "for".       */
+/* Lo explico en el "paso 3".                   */
+/*
+foreach($this->avisos as $r){
+    $href = $this->baseUrl() . '/aviso/' . $r->ID_AVISO . '-' .$r->URL;
+              if ($r->FOTO == 1) { $img = $this->rutaimagen . $r->IMAGEN; }
+              else { $img = $this->rutaimagen . 'none.gif'; }
+  echo '  <item>
+        <title>'.$r->TIT.'</title>
+        <link>'. $href.'</link>
+        <description>
+            <img></img>
+
+            
+        &lt;table &gt;
+            &lt;tr &gt;
+                &lt;td &gt;
+                    &lt;img src="'.$img.'" &gt;
+                &lt;/td &gt;
+                &lt;table &gt;
+                    &lt;tr &gt;
+                        &lt;td &gt;
+                                &lt;a  href="'. $this->baseUrl() . '/usuario/reputacion/ver/cod/' . $r->ID_USR.'"&gt;'.$r->APODO.'('.$r->PUNTAJE.')&lt;/a&gt;
+                        &lt;/ td &gt;
+                    &lt;/ tr &gt;
+                    &lt;tr &gt;
+                        &lt;td &gt;
+                            Precio:
+                        &lt;/td &gt;
+                        &lt;td &gt; '.
+                       $r->SIMB .$r->PRECIO.
+                        '&lt;/td &gt;
+                    &lt;/tr &gt;
+
+                    &lt;tr &gt;
+                        &lt;td &gt;
+                            Ofertas:
+                        &lt;/td &gt;
+                        &lt;td &gt; '.
+                       $r->NUM_OFERTAS.
+                        '&lt;/td &gt;
+                    &lt;/tr &gt;
+                &lt;/ table &gt;
+            &lt;/ tr &gt;
+        &lt;/ table &gt;
+</description>
+        </item>
+';
+  
+}
+
+
+ echo '   </channel>
+    </rss>';*/
+?>
+
+

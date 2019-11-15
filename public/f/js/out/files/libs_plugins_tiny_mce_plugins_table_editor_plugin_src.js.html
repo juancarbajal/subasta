@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>libs&#x2F;plugins&#x2F;tiny_mce&#x2F;plugins&#x2F;table&#x2F;editor_plugin_src.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.7.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.7.0&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/admin.html">admin</a></li>
+            
+                <li><a href="..&#x2F;classes/all-modules.html">all-modules</a></li>
+            
+                <li><a href="..&#x2F;classes/default.html">default</a></li>
+            
+                <li><a href="..&#x2F;classes/jcarousel.html">jcarousel</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.AutoSave.html">tinymce.plugins.AutoSave</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.ContextMenu.html">tinymce.plugins.ContextMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/usuario.html">usuario</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/ad-actions.html">ad-actions</a></li>
+            
+                <li><a href="..&#x2F;modules/add-class-middle.html">add-class-middle</a></li>
+            
+                <li><a href="..&#x2F;modules/add-favorites.html">add-favorites</a></li>
+            
+                <li><a href="..&#x2F;modules/all-checked-uncheked.html">all-checked-uncheked</a></li>
+            
+                <li><a href="..&#x2F;modules/banner-top classified.html">banner-top classified</a></li>
+            
+                <li><a href="..&#x2F;modules/carousel-products.html">carousel-products</a></li>
+            
+                <li><a href="..&#x2F;modules/count-word.html">count-word</a></li>
+            
+                <li><a href="..&#x2F;modules/data-ubigeo.html">data-ubigeo</a></li>
+            
+                <li><a href="..&#x2F;modules/geotags.html">geotags</a></li>
+            
+                <li><a href="..&#x2F;modules/impress-ad-list.html">impress-ad-list</a></li>
+            
+                <li><a href="..&#x2F;modules/lightbox-logIn-signUp.html">lightbox-logIn-signUp</a></li>
+            
+                <li><a href="..&#x2F;modules/moduleName.html">moduleName</a></li>
+            
+                <li><a href="..&#x2F;modules/placeholder.html">placeholder</a></li>
+            
+                <li><a href="..&#x2F;modules/preview-impress.html">preview-impress</a></li>
+            
+                <li><a href="..&#x2F;modules/register-category.html">register-category</a></li>
+            
+                <li><a href="..&#x2F;modules/remove-class-home.html">remove-class-home</a></li>
+            
+                <li><a href="..&#x2F;modules/report-ad.html">report-ad</a></li>
+            
+                <li><a href="..&#x2F;modules/scrollTop.html">scrollTop</a></li>
+            
+                <li><a href="..&#x2F;modules/search-categories.html">search-categories</a></li>
+            
+                <li><a href="..&#x2F;modules/send-ad-friend.html">send-ad-friend</a></li>
+            
+                <li><a href="..&#x2F;modules/send-list-ad-email.html">send-list-ad-email</a></li>
+            
+                <li><a href="..&#x2F;modules/show-advanced-search.html">show-advanced-search</a></li>
+            
+                <li><a href="..&#x2F;modules/show-example-ads.html">show-example-ads</a></li>
+            
+                <li><a href="..&#x2F;modules/show-login-trigger.html">show-login-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-photo-products.html">show-photo-products</a></li>
+            
+                <li><a href="..&#x2F;modules/show-popup.html">show-popup</a></li>
+            
+                <li><a href="..&#x2F;modules/show-questions.html">show-questions</a></li>
+            
+                <li><a href="..&#x2F;modules/show-register-trigger.html">show-register-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-video.html">show-video</a></li>
+            
+                <li><a href="..&#x2F;modules/showMoreCategories.html">showMoreCategories</a></li>
+            
+                <li><a href="..&#x2F;modules/some-module4.html">some-module4</a></li>
+            
+                <li><a href="..&#x2F;modules/tinymce-register.html">tinymce-register</a></li>
+            
+                <li><a href="..&#x2F;modules/uploader-photos.html">uploader-photos</a></li>
+            
+                <li><a href="..&#x2F;modules/validate.html">validate</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-document.html">validate-document</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-image.html">validate-image</a></li>
+            
+                <li><a href="..&#x2F;modules/venta.html">venta</a></li>
+            
+                <li><a href="..&#x2F;modules/yOSON.html">yOSON</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: libs&#x2F;plugins&#x2F;tiny_mce&#x2F;plugins&#x2F;table&#x2F;editor_plugin_src.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * editor_plugin_src.js
+ *
+ * Copyright 2009, Moxiecode Systems AB
+ * Released under LGPL License.
+ *
+ * License: http:&#x2F;&#x2F;tinymce.moxiecode.com&#x2F;license
+ * Contributing: http:&#x2F;&#x2F;tinymce.moxiecode.com&#x2F;contributing
+ *&#x2F;
+
+(function(tinymce) {
+	var each = tinymce.each;
+
+	&#x2F;&#x2F; Checks if the selection&#x2F;caret is at the start of the specified block element
+	function isAtStart(rng, par) {
+		var doc = par.ownerDocument, rng2 = doc.createRange(), elm;
+
+		rng2.setStartBefore(par);
+		rng2.setEnd(rng.endContainer, rng.endOffset);
+
+		elm = doc.createElement(&#x27;body&#x27;);
+		elm.appendChild(rng2.cloneContents());
+
+		&#x2F;&#x2F; Check for text characters of other elements that should be treated as content
+		return elm.innerHTML.replace(&#x2F;&lt;(br|img|object|embed|input|textarea)[^&gt;]*&gt;&#x2F;gi, &#x27;-&#x27;).replace(&#x2F;&lt;[^&gt;]+&gt;&#x2F;g, &#x27;&#x27;).length == 0;
+	};
+
+	function getSpanVal(td, name) {
+		return parseInt(td.getAttribute(name) || 1);
+	}
+
+	&#x2F;**
+	 * Table Grid class.
+	 *&#x2F;
+	function TableGrid(table, dom, selection) {
+		var grid, startPos, endPos, selectedCell;
+
+		buildGrid();
+		selectedCell = dom.getParent(selection.getStart(), &#x27;th,td&#x27;);
+		if (selectedCell) {
+			startPos = getPos(selectedCell);
+			endPos = findEndPos();
+			selectedCell = getCell(startPos.x, startPos.y);
+		}
+
+		function cloneNode(node, children) {
+			node = node.cloneNode(children);
+			node.removeAttribute(&#x27;id&#x27;);
+
+			return node;
+		}
+
+		function buildGrid() {
+			var startY = 0;
+
+			grid = [];
+
+			each([&#x27;thead&#x27;, &#x27;tbody&#x27;, &#x27;tfoot&#x27;], function(part) {
+				var rows = dom.select(&#x27;&gt; &#x27; + part + &#x27; tr&#x27;, table);
+
+				each(rows, function(tr, y) {
+					y += startY;
+
+					each(dom.select(&#x27;&gt; td, &gt; th&#x27;, tr), function(td, x) {
+						var x2, y2, rowspan, colspan;
+
+						&#x2F;&#x2F; Skip over existing cells produced by rowspan
+						if (grid[y]) {
+							while (grid[y][x])
+								x++;
+						}
+
+						&#x2F;&#x2F; Get col&#x2F;rowspan from cell
+						rowspan = getSpanVal(td, &#x27;rowspan&#x27;);
+						colspan = getSpanVal(td, &#x27;colspan&#x27;);
+
+						&#x2F;&#x2F; Fill out rowspan&#x2F;colspan right and down
+						for (y2 = y; y2 &lt; y + rowspan; y2++) {
+							if (!grid[y2])
+								grid[y2] = [];
+
+							for (x2 = x; x2 &lt; x + colspan; x2++) {
+								grid[y2][x2] = {
+									part : part,
+									real : y2 == y &amp;&amp; x2 == x,
+									elm : td,
+									rowspan : rowspan,
+									colspan : colspan
+								};
+							}
+						}
+					});
+				});
+
+				startY += rows.length;
+			});
+		};
+
+		function getCell(x, y) {
+			var row;
+
+			row = grid[y];
+			if (row)
+				return row[x];
+		};
+
+		function setSpanVal(td, name, val) {
+			if (td) {
+				val = parseInt(val);
+
+				if (val === 1)
+					td.removeAttribute(name, 1);
+				else
+					td.setAttribute(name, val, 1);
+			}
+		}
+
+		function isCellSelected(cell) {
+			return cell &amp;&amp; (dom.hasClass(cell.elm, &#x27;mceSelected&#x27;) || cell == selectedCell);
+		};
+
+		function getSelectedRows() {
+			var rows = [];
+
+			each(table.rows, function(row) {
+				each(row.cells, function(cell) {
+					if (dom.hasClass(cell, &#x27;mceSelected&#x27;) || cell == selectedCell.elm) {
+						rows.push(row);
+						return false;
+					}
+				});
+			});
+
+			return rows;
+		};
+
+		function deleteTable() {
+			var rng = dom.createRng();
+
+			rng.setStartAfter(table);
+			rng.setEndAfter(table);
+
+			selection.setRng(rng);
+
+			dom.remove(table);
+		};
+
+		function cloneCell(cell) {
+			var formatNode;
+
+			&#x2F;&#x2F; Clone formats
+			tinymce.walk(cell, function(node) {
+				var curNode;
+
+				if (node.nodeType == 3) {
+					each(dom.getParents(node.parentNode, null, cell).reverse(), function(node) {
+						node = cloneNode(node, false);
+
+						if (!formatNode)
+							formatNode = curNode = node;
+						else if (curNode)
+							curNode.appendChild(node);
+
+						curNode = node;
+					});
+
+					&#x2F;&#x2F; Add something to the inner node
+					if (curNode)
+						curNode.innerHTML = tinymce.isIE ? &#x27;&amp;nbsp;&#x27; : &#x27;&lt;br data-mce-bogus=&quot;1&quot; &#x2F;&gt;&#x27;;
+
+					return false;
+				}
+			}, &#x27;childNodes&#x27;);
+
+			cell = cloneNode(cell, false);
+			setSpanVal(cell, &#x27;rowSpan&#x27;, 1);
+			setSpanVal(cell, &#x27;colSpan&#x27;, 1);
+
+			if (formatNode) {
+				cell.appendChild(formatNode);
+			} else {
+				if (!tinymce.isIE)
+					cell.innerHTML = &#x27;&lt;br data-mce-bogus=&quot;1&quot; &#x2F;&gt;&#x27;;
+			}
+
+			return cell;
+		};
+
+		function cleanup() {
+			var rng = dom.createRng();
+
+			&#x2F;&#x2F; Empty rows
+			each(dom.select(&#x27;tr&#x27;, table), function(tr) {
+				if (tr.cells.length == 0)
+					dom.remove(tr);
+			});
+
+			&#x2F;&#x2F; Empty table
+			if (dom.select(&#x27;tr&#x27;, table).length == 0) {
+				rng.setStartAfter(table);
+				rng.setEndAfter(table);
+				selection.setRng(rng);
+				dom.remove(table);
+				return;
+			}
+
+			&#x2F;&#x2F; Empty header&#x2F;body&#x2F;footer
+			each(dom.select(&#x27;thead,tbody,tfoot&#x27;, table), function(part) {
+				if (part.rows.length == 0)
+					dom.remove(part);
+			});
+
+			&#x2F;&#x2F; Restore selection to start position if it still exists
+			buildGrid();
+
+			&#x2F;&#x2F; Restore the selection to the closest table position
+			row = grid[Math.min(grid.length - 1, startPos.y)];
+			if (row) {
+				selection.select(row[Math.min(row.length - 1, startPos.x)].elm, true);
+				selection.collapse(true);
+			}
+		};
+
+		function fillLeftDown(x, y, rows, cols) {
+			var tr, x2, r, c, cell;
+
+			tr = grid[y][x].elm.parentNode;
+			for (r = 1; r &lt;= rows; r++) {
+				tr = dom.getNext(tr, &#x27;tr&#x27;);
+
+				if (tr) {
+					&#x2F;&#x2F; Loop left to find real cell
+					for (x2 = x; x2 &gt;= 0; x2--) {
+						cell = grid[y + r][x2].elm;
+
+						if (cell.parentNode == tr) {
+							&#x2F;&#x2F; Append clones after
+							for (c = 1; c &lt;= cols; c++)
+								dom.insertAfter(cloneCell(cell), cell);
+
+							break;
+						}
+					}
+
+					if (x2 == -1) {
+						&#x2F;&#x2F; Insert nodes before first cell
+						for (c = 1; c &lt;= cols; c++)
+							tr.insertBefore(cloneCell(tr.cells[0]), tr.cells[0]);
+					}
+				}
+			}
+		};
+
+		function split() {
+			each(grid, function(row, y) {
+				each(row, function(cell, x) {
+					var colSpan, rowSpan, newCell, i;
+
+					if (isCellSelected(cell)) {
+						cell = cell.elm;
+						colSpan = getSpanVal(cell, &#x27;colspan&#x27;);
+						rowSpan = getSpanVal(cell, &#x27;rowspan&#x27;);
+
+						if (colSpan &gt; 1 || rowSpan &gt; 1) {
+							setSpanVal(cell, &#x27;rowSpan&#x27;, 1);
+							setSpanVal(cell, &#x27;colSpan&#x27;, 1);
+
+							&#x2F;&#x2F; Insert cells right
+							for (i = 0; i &lt; colSpan - 1; i++)
+								dom.insertAfter(cloneCell(cell), cell);
+
+							fillLeftDown(x, y, rowSpan - 1, colSpan);
+						}
+					}
+				});
+			});
+		};
+
+		function merge(cell, cols, rows) {
+			var startX, startY, endX, endY, x, y, startCell, endCell, cell, children, count;
+
+			&#x2F;&#x2F; Use specified cell and cols&#x2F;rows
+			if (cell) {
+				pos = getPos(cell);
+				startX = pos.x;
+				startY = pos.y;
+				endX = startX + (cols - 1);
+				endY = startY + (rows - 1);
+			} else {
+				startPos = endPos = null;
+
+				&#x2F;&#x2F; Calculate start&#x2F;end pos by checking for selected cells in grid works better with context menu
+				each(grid, function(row, y) {
+					each(row, function(cell, x) {
+						if (isCellSelected(cell)) {
+							if (!startPos) {
+								startPos = {x: x, y: y};
+							}
+
+							endPos = {x: x, y: y};
+						}
+					});
+				});
+
+				&#x2F;&#x2F; Use selection
+				startX = startPos.x;
+				startY = startPos.y;
+				endX = endPos.x;
+				endY = endPos.y;
+			}
+
+			&#x2F;&#x2F; Find start&#x2F;end cells
+			startCell = getCell(startX, startY);
+			endCell = getCell(endX, endY);
+
+			&#x2F;&#x2F; Check if the cells exists and if they are of the same part for example tbody = tbody
+			if (startCell &amp;&amp; endCell &amp;&amp; startCell.part == endCell.part) {
+				&#x2F;&#x2F; Split and rebuild grid
+				split();
+				buildGrid();
+
+				&#x2F;&#x2F; Set row&#x2F;col span to start cell
+				startCell = getCell(startX, startY).elm;
+				setSpanVal(startCell, &#x27;colSpan&#x27;, (endX - startX) + 1);
+				setSpanVal(startCell, &#x27;rowSpan&#x27;, (endY - startY) + 1);
+
+				&#x2F;&#x2F; Remove other cells and add it&#x27;s contents to the start cell
+				for (y = startY; y &lt;= endY; y++) {
+					for (x = startX; x &lt;= endX; x++) {
+						if (!grid[y] || !grid[y][x])
+							continue;
+
+						cell = grid[y][x].elm;
+
+						if (cell != startCell) {
+							&#x2F;&#x2F; Move children to startCell
+							children = tinymce.grep(cell.childNodes);
+							each(children, function(node) {
+								startCell.appendChild(node);
+							});
+
+							&#x2F;&#x2F; Remove bogus nodes if there is children in the target cell
+							if (children.length) {
+								children = tinymce.grep(startCell.childNodes);
+								count = 0;
+								each(children, function(node) {
+									if (node.nodeName == &#x27;BR&#x27; &amp;&amp; dom.getAttrib(node, &#x27;data-mce-bogus&#x27;) &amp;&amp; count++ &lt; children.length - 1)
+										startCell.removeChild(node);
+								});
+							}
+							
+							&#x2F;&#x2F; Remove cell
+							dom.remove(cell);
+						}
+					}
+				}
+
+				&#x2F;&#x2F; Remove empty rows etc and restore caret location
+				cleanup();
+			}
+		};
+
+		function insertRow(before) {
+			var posY, cell, lastCell, x, rowElm, newRow, newCell, otherCell, rowSpan;
+
+			&#x2F;&#x2F; Find first&#x2F;last row
+			each(grid, function(row, y) {
+				each(row, function(cell, x) {
+					if (isCellSelected(cell)) {
+						cell = cell.elm;
+						rowElm = cell.parentNode;
+						newRow = cloneNode(rowElm, false);
+						posY = y;
+
+						if (before)
+							return false;
+					}
+				});
+
+				if (before)
+					return !posY;
+			});
+
+			for (x = 0; x &lt; grid[0].length; x++) {
+				&#x2F;&#x2F; Cell not found could be because of an invalid table structure
+				if (!grid[posY][x])
+					continue;
+
+				cell = grid[posY][x].elm;
+
+				if (cell != lastCell) {
+					if (!before) {
+						rowSpan = getSpanVal(cell, &#x27;rowspan&#x27;);
+						if (rowSpan &gt; 1) {
+							setSpanVal(cell, &#x27;rowSpan&#x27;, rowSpan + 1);
+							continue;
+						}
+					} else {
+						&#x2F;&#x2F; Check if cell above can be expanded
+						if (posY &gt; 0 &amp;&amp; grid[posY - 1][x]) {
+							otherCell = grid[posY - 1][x].elm;
+							rowSpan = getSpanVal(otherCell, &#x27;rowSpan&#x27;);
+							if (rowSpan &gt; 1) {
+								setSpanVal(otherCell, &#x27;rowSpan&#x27;, rowSpan + 1);
+								continue;
+							}
+						}
+					}
+
+					&#x2F;&#x2F; Insert new cell into new row
+					newCell = cloneCell(cell);
+					setSpanVal(newCell, &#x27;colSpan&#x27;, cell.colSpan);
+
+					newRow.appendChild(newCell);
+
+					lastCell = cell;
+				}
+			}
+
+			if (newRow.hasChildNodes()) {
+				if (!before)
+					dom.insertAfter(newRow, rowElm);
+				else
+					rowElm.parentNode.insertBefore(newRow, rowElm);
+			}
+		};
+
+		function insertCol(before) {
+			var posX, lastCell;
+
+			&#x2F;&#x2F; Find first&#x2F;last column
+			each(grid, function(row, y) {
+				each(row, function(cell, x) {
+					if (isCellSelected(cell)) {
+						posX = x;
+
+						if (before)
+							return false;
+					}
+				});
+
+				if (before)
+					return !posX;
+			});
+
+			each(grid, function(row, y) {
+				var cell, rowSpan, colSpan;
+
+				if (!row[posX])
+					return;
+
+				cell = row[posX].elm;
+				if (cell != lastCell) {
+					colSpan = getSpanVal(cell, &#x27;colspan&#x27;);
+					rowSpan = getSpanVal(cell, &#x27;rowspan&#x27;);
+
+					if (colSpan == 1) {
+						if (!before) {
+							dom.insertAfter(cloneCell(cell), cell);
+							fillLeftDown(posX, y, rowSpan - 1, colSpan);
+						} else {
+							cell.parentNode.insertBefore(cloneCell(cell), cell);
+							fillLeftDown(posX, y, rowSpan - 1, colSpan);
+						}
+					} else
+						setSpanVal(cell, &#x27;colSpan&#x27;, cell.colSpan + 1);
+
+					lastCell = cell;
+				}
+			});
+		};
+
+		function deleteCols() {
+			var cols = [];
+
+			&#x2F;&#x2F; Get selected column indexes
+			each(grid, function(row, y) {
+				each(row, function(cell, x) {
+					if (isCellSelected(cell) &amp;&amp; tinymce.inArray(cols, x) === -1) {
+						each(grid, function(row) {
+							var cell = row[x].elm, colSpan;
+
+							colSpan = getSpanVal(cell, &#x27;colSpan&#x27;);
+
+							if (colSpan &gt; 1)
+								setSpanVal(cell, &#x27;colSpan&#x27;, colSpan - 1);
+							else
+								dom.remove(cell);
+						});
+
+						cols.push(x);
+					}
+				});
+			});
+
+			cleanup();
+		};
+
+		function deleteRows() {
+			var rows;
+
+			function deleteRow(tr) {
+				var nextTr, pos, lastCell;
+
+				nextTr = dom.getNext(tr, &#x27;tr&#x27;);
+
+				&#x2F;&#x2F; Move down row spanned cells
+				each(tr.cells, function(cell) {
+					var rowSpan = getSpanVal(cell, &#x27;rowSpan&#x27;);
+
+					if (rowSpan &gt; 1) {
+						setSpanVal(cell, &#x27;rowSpan&#x27;, rowSpan - 1);
+						pos = getPos(cell);
+						fillLeftDown(pos.x, pos.y, 1, 1);
+					}
+				});
+
+				&#x2F;&#x2F; Delete cells
+				pos = getPos(tr.cells[0]);
+				each(grid[pos.y], function(cell) {
+					var rowSpan;
+
+					cell = cell.elm;
+
+					if (cell != lastCell) {
+						rowSpan = getSpanVal(cell, &#x27;rowSpan&#x27;);
+
+						if (rowSpan &lt;= 1)
+							dom.remove(cell);
+						else
+							setSpanVal(cell, &#x27;rowSpan&#x27;, rowSpan - 1);
+
+						lastCell = cell;
+					}
+				});
+			};
+
+			&#x2F;&#x2F; Get selected rows and move selection out of scope
+			rows = getSelectedRows();
+
+			&#x2F;&#x2F; Delete all selected rows
+			each(rows.reverse(), function(tr) {
+				deleteRow(tr);
+			});
+
+			cleanup();
+		};
+
+		function cutRows() {
+			var rows = getSelectedRows();
+
+			dom.remove(rows);
+			cleanup();
+
+			return rows;
+		};
+
+		function copyRows() {
+			var rows = getSelectedRows();
+
+			each(rows, function(row, i) {
+				rows[i] = cloneNode(row, true);
+			});
+
+			return rows;
+		};
+
+		function pasteRows(rows, before) {
+			var selectedRows = getSelectedRows(),
+				targetRow = selectedRows[before ? 0 : selectedRows.length - 1],
+				targetCellCount = targetRow.cells.length;
+
+			&#x2F;&#x2F; Calc target cell count
+			each(grid, function(row) {
+				var match;
+
+				targetCellCount = 0;
+				each(row, function(cell, x) {
+					if (cell.real)
+						targetCellCount += cell.colspan;
+
+					if (cell.elm.parentNode == targetRow)
+						match = 1;
+				});
+
+				if (match)
+					return false;
+			});
+
+			if (!before)
+				rows.reverse();
+
+			each(rows, function(row) {
+				var cellCount = row.cells.length, cell;
+
+				&#x2F;&#x2F; Remove col&#x2F;rowspans
+				for (i = 0; i &lt; cellCount; i++) {
+					cell = row.cells[i];
+					setSpanVal(cell, &#x27;colSpan&#x27;, 1);
+					setSpanVal(cell, &#x27;rowSpan&#x27;, 1);
+				}
+
+				&#x2F;&#x2F; Needs more cells
+				for (i = cellCount; i &lt; targetCellCount; i++)
+					row.appendChild(cloneCell(row.cells[cellCount - 1]));
+
+				&#x2F;&#x2F; Needs less cells
+				for (i = targetCellCount; i &lt; cellCount; i++)
+					dom.remove(row.cells[i]);
+
+				&#x2F;&#x2F; Add before&#x2F;after
+				if (before)
+					targetRow.parentNode.insertBefore(row, targetRow);
+				else
+					dom.insertAfter(row, targetRow);
+			});
+
+			&#x2F;&#x2F; Remove current selection
+			dom.removeClass(dom.select(&#x27;td.mceSelected,th.mceSelected&#x27;), &#x27;mceSelected&#x27;);
+		};
+
+		function getPos(target) {
+			var pos;
+
+			each(grid, function(row, y) {
+				each(row, function(cell, x) {
+					if (cell.elm == target) {
+						pos = {x : x, y : y};
+						return false;
+					}
+				});
+
+				return !pos;
+			});
+
+			return pos;
+		};
+
+		function setStartCell(cell) {
+			startPos = getPos(cell);
+		};
+
+		function findEndPos() {
+			var pos, maxX, maxY;
+
+			maxX = maxY = 0;
+
+			each(grid, function(row, y) {
+				each(row, function(cell, x) {
+					var colSpan, rowSpan;
+
+					if (isCellSelected(cell)) {
+						cell = grid[y][x];
+
+						if (x &gt; maxX)
+							maxX = x;
+
+						if (y &gt; maxY)
+							maxY = y;
+
+						if (cell.real) {
+							colSpan = cell.colspan - 1;
+							rowSpan = cell.rowspan - 1;
+
+							if (colSpan) {
+								if (x + colSpan &gt; maxX)
+									maxX = x + colSpan;
+							}
+
+							if (rowSpan) {
+								if (y + rowSpan &gt; maxY)
+									maxY = y + rowSpan;
+							}
+						}
+					}
+				});
+			});
+
+			return {x : maxX, y : maxY};
+		};
+
+		function setEndCell(cell) {
+			var startX, startY, endX, endY, maxX, maxY, colSpan, rowSpan;
+
+			endPos = getPos(cell);
+
+			if (startPos &amp;&amp; endPos) {
+				&#x2F;&#x2F; Get start&#x2F;end positions
+				startX = Math.min(startPos.x, endPos.x);
+				startY = Math.min(startPos.y, endPos.y);
+				endX = Math.max(startPos.x, endPos.x);
+				endY = Math.max(startPos.y, endPos.y);
+
+				&#x2F;&#x2F; Expand end positon to include spans
+				maxX = endX;
+				maxY = endY;
+
+				&#x2F;&#x2F; Expand startX
+				for (y = startY; y &lt;= maxY; y++) {
+					cell = grid[y][startX];
+
+					if (!cell.real) {
+						if (startX - (cell.colspan - 1) &lt; startX)
+							startX -= cell.colspan - 1;
+					}
+				}
+
+				&#x2F;&#x2F; Expand startY
+				for (x = startX; x &lt;= maxX; x++) {
+					cell = grid[startY][x];
+
+					if (!cell.real) {
+						if (startY - (cell.rowspan - 1) &lt; startY)
+							startY -= cell.rowspan - 1;
+					}
+				}
+
+				&#x2F;&#x2F; Find max X, Y
+				for (y = startY; y &lt;= endY; y++) {
+					for (x = startX; x &lt;= endX; x++) {
+						cell = grid[y][x];
+
+						if (cell.real) {
+							colSpan = cell.colspan - 1;
+							rowSpan = cell.rowspan - 1;
+
+							if (colSpan) {
+								if (x + colSpan &gt; maxX)
+									maxX = x + colSpan;
+							}
+
+							if (rowSpan) {
+								if (y + rowSpan &gt; maxY)
+									maxY = y + rowSpan;
+							}
+						}
+					}
+				}
+
+				&#x2F;&#x2F; Remove current selection
+				dom.removeClass(dom.select(&#x27;td.mceSelected,th.mceSelected&#x27;), &#x27;mceSelected&#x27;);
+
+				&#x2F;&#x2F; Add new selection
+				for (y = startY; y &lt;= maxY; y++) {
+					for (x = startX; x &lt;= maxX; x++) {
+						if (grid[y][x])
+							dom.addClass(grid[y][x].elm, &#x27;mceSelected&#x27;);
+					}
+				}
+			}
+		};
+
+		&#x2F;&#x2F; Expose to public
+		tinymce.extend(this, {
+			deleteTable : deleteTable,
+			split : split,
+			merge : merge,
+			insertRow : insertRow,
+			insertCol : insertCol,
+			deleteCols : deleteCols,
+			deleteRows : deleteRows,
+			cutRows : cutRows,
+			copyRows : copyRows,
+			pasteRows : pasteRows,
+			getPos : getPos,
+			setStartCell : setStartCell,
+			setEndCell : setEndCell
+		});
+	};
+
+	tinymce.create(&#x27;tinymce.plugins.TablePlugin&#x27;, {
+		init : function(ed, url) {
+			var winMan, clipboardRows, hasCellSelection = true; &#x2F;&#x2F; Might be selected cells on reload
+
+			function createTableGrid(node) {
+				var selection = ed.selection, tblElm = ed.dom.getParent(node || selection.getNode(), &#x27;table&#x27;);
+
+				if (tblElm)
+					return new TableGrid(tblElm, ed.dom, selection);
+			};
+
+			function cleanup() {
+				&#x2F;&#x2F; Restore selection possibilities
+				ed.getBody().style.webkitUserSelect = &#x27;&#x27;;
+
+				if (hasCellSelection) {
+					ed.dom.removeClass(ed.dom.select(&#x27;td.mceSelected,th.mceSelected&#x27;), &#x27;mceSelected&#x27;);
+					hasCellSelection = false;
+				}
+			};
+
+			&#x2F;&#x2F; Register buttons
+			each([
+				[&#x27;table&#x27;, &#x27;table.desc&#x27;, &#x27;mceInsertTable&#x27;, true],
+				[&#x27;delete_table&#x27;, &#x27;table.del&#x27;, &#x27;mceTableDelete&#x27;],
+				[&#x27;delete_col&#x27;, &#x27;table.delete_col_desc&#x27;, &#x27;mceTableDeleteCol&#x27;],
+				[&#x27;delete_row&#x27;, &#x27;table.delete_row_desc&#x27;, &#x27;mceTableDeleteRow&#x27;],
+				[&#x27;col_after&#x27;, &#x27;table.col_after_desc&#x27;, &#x27;mceTableInsertColAfter&#x27;],
+				[&#x27;col_before&#x27;, &#x27;table.col_before_desc&#x27;, &#x27;mceTableInsertColBefore&#x27;],
+				[&#x27;row_after&#x27;, &#x27;table.row_after_desc&#x27;, &#x27;mceTableInsertRowAfter&#x27;],
+				[&#x27;row_before&#x27;, &#x27;table.row_before_desc&#x27;, &#x27;mceTableInsertRowBefore&#x27;],
+				[&#x27;row_props&#x27;, &#x27;table.row_desc&#x27;, &#x27;mceTableRowProps&#x27;, true],
+				[&#x27;cell_props&#x27;, &#x27;table.cell_desc&#x27;, &#x27;mceTableCellProps&#x27;, true],
+				[&#x27;split_cells&#x27;, &#x27;table.split_cells_desc&#x27;, &#x27;mceTableSplitCells&#x27;, true],
+				[&#x27;merge_cells&#x27;, &#x27;table.merge_cells_desc&#x27;, &#x27;mceTableMergeCells&#x27;, true]
+			], function(c) {
+				ed.addButton(c[0], {title : c[1], cmd : c[2], ui : c[3]});
+			});
+
+			&#x2F;&#x2F; Select whole table is a table border is clicked
+			if (!tinymce.isIE) {
+				ed.onClick.add(function(ed, e) {
+					e = e.target;
+
+					if (e.nodeName === &#x27;TABLE&#x27;) {
+						ed.selection.select(e);
+						ed.nodeChanged();
+					}
+				});
+			}
+
+			ed.onPreProcess.add(function(ed, args) {
+				var nodes, i, node, dom = ed.dom, value;
+
+				nodes = dom.select(&#x27;table&#x27;, args.node);
+				i = nodes.length;
+				while (i--) {
+					node = nodes[i];
+					dom.setAttrib(node, &#x27;data-mce-style&#x27;, &#x27;&#x27;);
+
+					if ((value = dom.getAttrib(node, &#x27;width&#x27;))) {
+						dom.setStyle(node, &#x27;width&#x27;, value);
+						dom.setAttrib(node, &#x27;width&#x27;, &#x27;&#x27;);
+					}
+
+					if ((value = dom.getAttrib(node, &#x27;height&#x27;))) {
+						dom.setStyle(node, &#x27;height&#x27;, value);
+						dom.setAttrib(node, &#x27;height&#x27;, &#x27;&#x27;);
+					}
+				}
+			});
+
+			&#x2F;&#x2F; Handle node change updates
+			ed.onNodeChange.add(function(ed, cm, n) {
+				var p;
+
+				n = ed.selection.getStart();
+				p = ed.dom.getParent(n, &#x27;td,th,caption&#x27;);
+				cm.setActive(&#x27;table&#x27;, n.nodeName === &#x27;TABLE&#x27; || !!p);
+
+				&#x2F;&#x2F; Disable table tools if we are in caption
+				if (p &amp;&amp; p.nodeName === &#x27;CAPTION&#x27;)
+					p = 0;
+
+				cm.setDisabled(&#x27;delete_table&#x27;, !p);
+				cm.setDisabled(&#x27;delete_col&#x27;, !p);
+				cm.setDisabled(&#x27;delete_table&#x27;, !p);
+				cm.setDisabled(&#x27;delete_row&#x27;, !p);
+				cm.setDisabled(&#x27;col_after&#x27;, !p);
+				cm.setDisabled(&#x27;col_before&#x27;, !p);
+				cm.setDisabled(&#x27;row_after&#x27;, !p);
+				cm.setDisabled(&#x27;row_before&#x27;, !p);
+				cm.setDisabled(&#x27;row_props&#x27;, !p);
+				cm.setDisabled(&#x27;cell_props&#x27;, !p);
+				cm.setDisabled(&#x27;split_cells&#x27;, !p);
+				cm.setDisabled(&#x27;merge_cells&#x27;, !p);
+			});
+
+			ed.onInit.add(function(ed) {
+				var startTable, startCell, dom = ed.dom, tableGrid;
+
+				winMan = ed.windowManager;
+
+				&#x2F;&#x2F; Add cell selection logic
+				ed.onMouseDown.add(function(ed, e) {
+					if (e.button != 2) {
+						cleanup();
+
+						startCell = dom.getParent(e.target, &#x27;td,th&#x27;);
+						startTable = dom.getParent(startCell, &#x27;table&#x27;);
+					}
+				});
+
+				dom.bind(ed.getDoc(), &#x27;mouseover&#x27;, function(e) {
+					var sel, table, target = e.target;
+
+					if (startCell &amp;&amp; (tableGrid || target != startCell) &amp;&amp; (target.nodeName == &#x27;TD&#x27; || target.nodeName == &#x27;TH&#x27;)) {
+						table = dom.getParent(target, &#x27;table&#x27;);
+						if (table == startTable) {
+							if (!tableGrid) {
+								tableGrid = createTableGrid(table);
+								tableGrid.setStartCell(startCell);
+
+								ed.getBody().style.webkitUserSelect = &#x27;none&#x27;;
+							}
+
+							tableGrid.setEndCell(target);
+							hasCellSelection = true;
+						}
+
+						&#x2F;&#x2F; Remove current selection
+						sel = ed.selection.getSel();
+
+						try {
+							if (sel.removeAllRanges)
+								sel.removeAllRanges();
+							else
+								sel.empty();
+						} catch (ex) {
+							&#x2F;&#x2F; IE9 might throw errors here
+						}
+
+						e.preventDefault();
+					}
+				});
+
+				ed.onMouseUp.add(function(ed, e) {
+					var rng, sel = ed.selection, selectedCells, nativeSel = sel.getSel(), walker, node, lastNode, endNode;
+
+					&#x2F;&#x2F; Move selection to startCell
+					if (startCell) {
+						if (tableGrid)
+							ed.getBody().style.webkitUserSelect = &#x27;&#x27;;
+
+						function setPoint(node, start) {
+							var walker = new tinymce.dom.TreeWalker(node, node);
+
+							do {
+								&#x2F;&#x2F; Text node
+								if (node.nodeType == 3 &amp;&amp; tinymce.trim(node.nodeValue).length != 0) {
+									if (start)
+										rng.setStart(node, 0);
+									else
+										rng.setEnd(node, node.nodeValue.length);
+
+									return;
+								}
+
+								&#x2F;&#x2F; BR element
+								if (node.nodeName == &#x27;BR&#x27;) {
+									if (start)
+										rng.setStartBefore(node);
+									else
+										rng.setEndBefore(node);
+
+									return;
+								}
+							} while (node = (start ? walker.next() : walker.prev()));
+						}
+
+						&#x2F;&#x2F; Try to expand text selection as much as we can only Gecko supports cell selection
+						selectedCells = dom.select(&#x27;td.mceSelected,th.mceSelected&#x27;);
+						if (selectedCells.length &gt; 0) {
+							rng = dom.createRng();
+							node = selectedCells[0];
+							endNode = selectedCells[selectedCells.length - 1];
+							rng.setStartBefore(node);
+							rng.setEndAfter(node);
+
+							setPoint(node, 1);
+							walker = new tinymce.dom.TreeWalker(node, dom.getParent(selectedCells[0], &#x27;table&#x27;));
+
+							do {
+								if (node.nodeName == &#x27;TD&#x27; || node.nodeName == &#x27;TH&#x27;) {
+									if (!dom.hasClass(node, &#x27;mceSelected&#x27;))
+										break;
+
+									lastNode = node;
+								}
+							} while (node = walker.next());
+
+							setPoint(lastNode);
+
+							sel.setRng(rng);
+						}
+
+						ed.nodeChanged();
+						startCell = tableGrid = startTable = null;
+					}
+				});
+
+				ed.onKeyUp.add(function(ed, e) {
+					cleanup();
+				});
+
+				ed.onKeyDown.add(function (ed, e) {
+					fixTableCellSelection(ed);
+				});
+
+				ed.onMouseDown.add(function (ed, e) {
+					if (e.button != 2) {
+						fixTableCellSelection(ed);
+					}
+				});
+				function tableCellSelected(ed, rng, n, currentCell) {
+					&#x2F;&#x2F; The decision of when a table cell is selected is somewhat involved.  The fact that this code is
+					&#x2F;&#x2F; required is actually a pointer to the root cause of this bug. A cell is selected when the start 
+					&#x2F;&#x2F; and end offsets are 0, the start container is a text, and the selection node is either a TR (most cases)
+					&#x2F;&#x2F; or the parent of the table (in the case of the selection containing the last cell of a table).
+					var TEXT_NODE = 3, table = ed.dom.getParent(rng.startContainer, &#x27;TABLE&#x27;), 
+					tableParent, allOfCellSelected, tableCellSelection;
+					if (table) 
+					tableParent = table.parentNode;
+					allOfCellSelected =rng.startContainer.nodeType == TEXT_NODE &amp;&amp; 
+						rng.startOffset == 0 &amp;&amp; 
+						rng.endOffset == 0 &amp;&amp; 
+						currentCell &amp;&amp; 
+						(n.nodeName==&quot;TR&quot; || n==tableParent);
+					tableCellSelection = (n.nodeName==&quot;TD&quot;||n.nodeName==&quot;TH&quot;)&amp;&amp; !currentCell;	   
+					return  allOfCellSelected || tableCellSelection;
+					&#x2F;&#x2F; return false;
+				}
+				
+				&#x2F;&#x2F; this nasty hack is here to work around some WebKit selection bugs.
+				function fixTableCellSelection(ed) {
+					if (!tinymce.isWebKit)
+						return;
+
+					var rng = ed.selection.getRng();
+					var n = ed.selection.getNode();
+					var currentCell = ed.dom.getParent(rng.startContainer, &#x27;TD,TH&#x27;);
+				
+					if (!tableCellSelected(ed, rng, n, currentCell))
+						return;
+						if (!currentCell) {
+							currentCell=n;
+						}
+					
+					&#x2F;&#x2F; Get the very last node inside the table cell
+					var end = currentCell.lastChild;
+					while (end.lastChild)
+						end = end.lastChild;
+					
+					&#x2F;&#x2F; Select the entire table cell. Nothing outside of the table cell should be selected.
+					rng.setEnd(end, end.nodeValue.length);
+					ed.selection.setRng(rng);
+				}
+				ed.plugins.table.fixTableCellSelection=fixTableCellSelection;
+
+				&#x2F;&#x2F; Add context menu
+				if (ed &amp;&amp; ed.plugins.contextmenu) {
+					ed.plugins.contextmenu.onContextMenu.add(function(th, m, e) {
+						var sm, se = ed.selection, el = se.getNode() || ed.getBody();
+
+						if (ed.dom.getParent(e, &#x27;td&#x27;) || ed.dom.getParent(e, &#x27;th&#x27;) || ed.dom.select(&#x27;td.mceSelected,th.mceSelected&#x27;).length) {
+							m.removeAll();
+
+							if (el.nodeName == &#x27;A&#x27; &amp;&amp; !ed.dom.getAttrib(el, &#x27;name&#x27;)) {
+								m.add({title : &#x27;advanced.link_desc&#x27;, icon : &#x27;link&#x27;, cmd : ed.plugins.advlink ? &#x27;mceAdvLink&#x27; : &#x27;mceLink&#x27;, ui : true});
+								m.add({title : &#x27;advanced.unlink_desc&#x27;, icon : &#x27;unlink&#x27;, cmd : &#x27;UnLink&#x27;});
+								m.addSeparator();
+							}
+
+							if (el.nodeName == &#x27;IMG&#x27; &amp;&amp; el.className.indexOf(&#x27;mceItem&#x27;) == -1) {
+								m.add({title : &#x27;advanced.image_desc&#x27;, icon : &#x27;image&#x27;, cmd : ed.plugins.advimage ? &#x27;mceAdvImage&#x27; : &#x27;mceImage&#x27;, ui : true});
+								m.addSeparator();
+							}
+
+							m.add({title : &#x27;table.desc&#x27;, icon : &#x27;table&#x27;, cmd : &#x27;mceInsertTable&#x27;, value : {action : &#x27;insert&#x27;}});
+							m.add({title : &#x27;table.props_desc&#x27;, icon : &#x27;table_props&#x27;, cmd : &#x27;mceInsertTable&#x27;});
+							m.add({title : &#x27;table.del&#x27;, icon : &#x27;delete_table&#x27;, cmd : &#x27;mceTableDelete&#x27;});
+							m.addSeparator();
+
+							&#x2F;&#x2F; Cell menu
+							sm = m.addMenu({title : &#x27;table.cell&#x27;});
+							sm.add({title : &#x27;table.cell_desc&#x27;, icon : &#x27;cell_props&#x27;, cmd : &#x27;mceTableCellProps&#x27;});
+							sm.add({title : &#x27;table.split_cells_desc&#x27;, icon : &#x27;split_cells&#x27;, cmd : &#x27;mceTableSplitCells&#x27;});
+							sm.add({title : &#x27;table.merge_cells_desc&#x27;, icon : &#x27;merge_cells&#x27;, cmd : &#x27;mceTableMergeCells&#x27;});
+
+							&#x2F;&#x2F; Row menu
+							sm = m.addMenu({title : &#x27;table.row&#x27;});
+							sm.add({title : &#x27;table.row_desc&#x27;, icon : &#x27;row_props&#x27;, cmd : &#x27;mceTableRowProps&#x27;});
+							sm.add({title : &#x27;table.row_before_desc&#x27;, icon : &#x27;row_before&#x27;, cmd : &#x27;mceTableInsertRowBefore&#x27;});
+							sm.add({title : &#x27;table.row_after_desc&#x27;, icon : &#x27;row_after&#x27;, cmd : &#x27;mceTableInsertRowAfter&#x27;});
+							sm.add({title : &#x27;table.delete_row_desc&#x27;, icon : &#x27;delete_row&#x27;, cmd : &#x27;mceTableDeleteRow&#x27;});
+							sm.addSeparator();
+							sm.add({title : &#x27;table.cut_row_desc&#x27;, icon : &#x27;cut&#x27;, cmd : &#x27;mceTableCutRow&#x27;});
+							sm.add({title : &#x27;table.copy_row_desc&#x27;, icon : &#x27;copy&#x27;, cmd : &#x27;mceTableCopyRow&#x27;});
+							sm.add({title : &#x27;table.paste_row_before_desc&#x27;, icon : &#x27;paste&#x27;, cmd : &#x27;mceTablePasteRowBefore&#x27;}).setDisabled(!clipboardRows);
+							sm.add({title : &#x27;table.paste_row_after_desc&#x27;, icon : &#x27;paste&#x27;, cmd : &#x27;mceTablePasteRowAfter&#x27;}).setDisabled(!clipboardRows);
+
+							&#x2F;&#x2F; Column menu
+							sm = m.addMenu({title : &#x27;table.col&#x27;});
+							sm.add({title : &#x27;table.col_before_desc&#x27;, icon : &#x27;col_before&#x27;, cmd : &#x27;mceTableInsertColBefore&#x27;});
+							sm.add({title : &#x27;table.col_after_desc&#x27;, icon : &#x27;col_after&#x27;, cmd : &#x27;mceTableInsertColAfter&#x27;});
+							sm.add({title : &#x27;table.delete_col_desc&#x27;, icon : &#x27;delete_col&#x27;, cmd : &#x27;mceTableDeleteCol&#x27;});
+						} else
+							m.add({title : &#x27;table.desc&#x27;, icon : &#x27;table&#x27;, cmd : &#x27;mceInsertTable&#x27;});
+					});
+				}
+
+				&#x2F;&#x2F; Fix to allow navigating up and down in a table in WebKit browsers.
+				if (tinymce.isWebKit) {
+					function moveSelection(ed, e) {
+						var VK = tinymce.VK;
+						var key = e.keyCode;
+
+						function handle(upBool, sourceNode, event) {
+							var siblingDirection = upBool ? &#x27;previousSibling&#x27; : &#x27;nextSibling&#x27;;
+							var currentRow = ed.dom.getParent(sourceNode, &#x27;tr&#x27;);
+							var siblingRow = currentRow[siblingDirection];
+
+							if (siblingRow) {
+								moveCursorToRow(ed, sourceNode, siblingRow, upBool);
+								tinymce.dom.Event.cancel(event);
+								return true;
+							} else {
+								var tableNode = ed.dom.getParent(currentRow, &#x27;table&#x27;);
+								var middleNode = currentRow.parentNode;
+								var parentNodeName = middleNode.nodeName.toLowerCase();
+								if (parentNodeName === &#x27;tbody&#x27; || parentNodeName === (upBool ? &#x27;tfoot&#x27; : &#x27;thead&#x27;)) {
+									var targetParent = getTargetParent(upBool, tableNode, middleNode, &#x27;tbody&#x27;);
+									if (targetParent !== null) {
+										return moveToRowInTarget(upBool, targetParent, sourceNode, event);
+									}
+								}
+								return escapeTable(upBool, currentRow, siblingDirection, tableNode, event);
+							}
+						}
+
+						function getTargetParent(upBool, topNode, secondNode, nodeName) {
+							var tbodies = ed.dom.select(&#x27;&gt;&#x27; + nodeName, topNode);
+							var position = tbodies.indexOf(secondNode);
+							if (upBool &amp;&amp; position === 0 || !upBool &amp;&amp; position === tbodies.length - 1) {
+								return getFirstHeadOrFoot(upBool, topNode);
+							} else if (position === -1) {
+								var topOrBottom = secondNode.tagName.toLowerCase() === &#x27;thead&#x27; ? 0 : tbodies.length - 1;
+								return tbodies[topOrBottom];
+							} else {
+								return tbodies[position + (upBool ? -1 : 1)];
+							}
+						}
+
+						function getFirstHeadOrFoot(upBool, parent) {
+							var tagName = upBool ? &#x27;thead&#x27; : &#x27;tfoot&#x27;;
+							var headOrFoot = ed.dom.select(&#x27;&gt;&#x27; + tagName, parent);
+							return headOrFoot.length !== 0 ? headOrFoot[0] : null;
+						}
+
+						function moveToRowInTarget(upBool, targetParent, sourceNode, event) {
+							var targetRow = getChildForDirection(targetParent, upBool);
+							targetRow &amp;&amp; moveCursorToRow(ed, sourceNode, targetRow, upBool);
+							tinymce.dom.Event.cancel(event);
+							return true;
+						}
+
+						function escapeTable(upBool, currentRow, siblingDirection, table, event) {
+							var tableSibling = table[siblingDirection];
+							if (tableSibling) {
+								moveCursorToStartOfElement(tableSibling);
+								return true;
+							} else {
+								var parentCell = ed.dom.getParent(table, &#x27;td,th&#x27;);
+								if (parentCell) {
+									return handle(upBool, parentCell, event);
+								} else {
+									var backUpSibling = getChildForDirection(currentRow, !upBool);
+									moveCursorToStartOfElement(backUpSibling);
+									return tinymce.dom.Event.cancel(event);
+								}
+							}
+						}
+
+						function getChildForDirection(parent, up) {
+							var child =  parent &amp;&amp; parent[up ? &#x27;lastChild&#x27; : &#x27;firstChild&#x27;];
+							&#x2F;&#x2F; BR is not a valid table child to return in this case we return the table cell
+							return child &amp;&amp; child.nodeName === &#x27;BR&#x27; ? ed.dom.getParent(child, &#x27;td,th&#x27;) : child;
+						}
+
+						function moveCursorToStartOfElement(n) {
+							ed.selection.setCursorLocation(n, 0);
+						}
+
+						function isVerticalMovement() {
+							return key == VK.UP || key == VK.DOWN;
+						}
+
+						function isInTable(ed) {
+							var node = ed.selection.getNode();
+							var currentRow = ed.dom.getParent(node, &#x27;tr&#x27;);
+							return currentRow !== null;
+						}
+
+						function columnIndex(column) {
+							var colIndex = 0;
+							var c = column;
+							while (c.previousSibling) {
+								c = c.previousSibling;
+								colIndex = colIndex + getSpanVal(c, &quot;colspan&quot;);
+							}
+							return colIndex;
+						}
+
+						function findColumn(rowElement, columnIndex) {
+							var c = 0;
+							var r = 0;
+							each(rowElement.children, function(cell, i) {
+								c = c + getSpanVal(cell, &quot;colspan&quot;);
+								r = i;
+								if (c &gt; columnIndex)
+									return false;
+							});
+							return r;
+						}
+
+						function moveCursorToRow(ed, node, row, upBool) {
+							var srcColumnIndex = columnIndex(ed.dom.getParent(node, &#x27;td,th&#x27;));
+							var tgtColumnIndex = findColumn(row, srcColumnIndex);
+							var tgtNode = row.childNodes[tgtColumnIndex];
+							var rowCellTarget = getChildForDirection(tgtNode, upBool);
+							moveCursorToStartOfElement(rowCellTarget || tgtNode);
+						}
+
+						function shouldFixCaret(preBrowserNode) {
+							var newNode = ed.selection.getNode();
+							var newParent = ed.dom.getParent(newNode, &#x27;td,th&#x27;);
+							var oldParent = ed.dom.getParent(preBrowserNode, &#x27;td,th&#x27;);
+							return newParent &amp;&amp; newParent !== oldParent &amp;&amp; checkSameParentTable(newParent, oldParent)
+						}
+
+						function checkSameParentTable(nodeOne, NodeTwo) {
+							return ed.dom.getParent(nodeOne, &#x27;TABLE&#x27;) === ed.dom.getParent(NodeTwo, &#x27;TABLE&#x27;);
+						}
+
+						if (isVerticalMovement() &amp;&amp; isInTable(ed)) {
+							var preBrowserNode = ed.selection.getNode();
+							setTimeout(function() {
+								if (shouldFixCaret(preBrowserNode)) {
+									handle(!e.shiftKey &amp;&amp; key === VK.UP, preBrowserNode, e);
+								}
+							}, 0);
+						}
+					}
+
+					ed.onKeyDown.add(moveSelection);
+				}
+
+				&#x2F;&#x2F; Fixes an issue on Gecko where it&#x27;s impossible to place the caret behind a table
+				&#x2F;&#x2F; This fix will force a paragraph element after the table but only when the forced_root_block setting is enabled
+				function fixTableCaretPos() {
+					var last;
+
+					&#x2F;&#x2F; Skip empty text nodes form the end
+					for (last = ed.getBody().lastChild; last &amp;&amp; last.nodeType == 3 &amp;&amp; !last.nodeValue.length; last = last.previousSibling) ;
+
+					if (last &amp;&amp; last.nodeName == &#x27;TABLE&#x27;) {
+						if (ed.settings.forced_root_block)
+							ed.dom.add(ed.getBody(), ed.settings.forced_root_block, null, tinymce.isIE ? &#x27;&amp;nbsp;&#x27; : &#x27;&lt;br data-mce-bogus=&quot;1&quot; &#x2F;&gt;&#x27;);
+						else
+							ed.dom.add(ed.getBody(), &#x27;br&#x27;, {&#x27;data-mce-bogus&#x27;: &#x27;1&#x27;});
+					}
+				};
+
+				&#x2F;&#x2F; Fixes an bug where it&#x27;s impossible to place the caret before a table in Gecko
+				&#x2F;&#x2F; this fix solves it by detecting when the caret is at the beginning of such a table
+				&#x2F;&#x2F; and then manually moves the caret infront of the table
+				if (tinymce.isGecko) {
+					ed.onKeyDown.add(function(ed, e) {
+						var rng, table, dom = ed.dom;
+
+						&#x2F;&#x2F; On gecko it&#x27;s not possible to place the caret before a table
+						if (e.keyCode == 37 || e.keyCode == 38) {
+							rng = ed.selection.getRng();
+							table = dom.getParent(rng.startContainer, &#x27;table&#x27;);
+
+							if (table &amp;&amp; ed.getBody().firstChild == table) {
+								if (isAtStart(rng, table)) {
+									rng = dom.createRng();
+
+									rng.setStartBefore(table);
+									rng.setEndBefore(table);
+
+									ed.selection.setRng(rng);
+
+									e.preventDefault();
+								}
+							}
+						}
+					});
+				}
+
+				ed.onKeyUp.add(fixTableCaretPos);
+				ed.onSetContent.add(fixTableCaretPos);
+				ed.onVisualAid.add(fixTableCaretPos);
+
+				ed.onPreProcess.add(function(ed, o) {
+					var last = o.node.lastChild;
+
+					if (last &amp;&amp; (last.nodeName == &quot;BR&quot; || (last.childNodes.length == 1 &amp;&amp; (last.firstChild.nodeName == &#x27;BR&#x27; || last.firstChild.nodeValue == &#x27;\u00a0&#x27;))) &amp;&amp; last.previousSibling &amp;&amp; last.previousSibling.nodeName == &quot;TABLE&quot;) {
+						ed.dom.remove(last);
+					}
+				});
+
+
+				&#x2F;**
+				 * Fixes bug in Gecko where shift-enter in table cell does not place caret on new line
+				 *
+				 * Removed: Since the new enter logic seems to fix this one.
+				 *&#x2F;
+				&#x2F;*
+				if (tinymce.isGecko) {
+					ed.onKeyDown.add(function(ed, e) {
+						if (e.keyCode === tinymce.VK.ENTER &amp;&amp; e.shiftKey) {
+							var node = ed.selection.getRng().startContainer;
+							var tableCell = dom.getParent(node, &#x27;td,th&#x27;);
+							if (tableCell) {
+								var zeroSizedNbsp = ed.getDoc().createTextNode(&quot;\uFEFF&quot;);
+								dom.insertAfter(zeroSizedNbsp, node);
+							}
+						}
+					});
+				}
+				*&#x2F;
+
+				fixTableCaretPos();
+				ed.startContent = ed.getContent({format : &#x27;raw&#x27;});
+			});
+
+			&#x2F;&#x2F; Register action commands
+			each({
+				mceTableSplitCells : function(grid) {
+					grid.split();
+				},
+
+				mceTableMergeCells : function(grid) {
+					var rowSpan, colSpan, cell;
+
+					cell = ed.dom.getParent(ed.selection.getNode(), &#x27;th,td&#x27;);
+					if (cell) {
+						rowSpan = cell.rowSpan;
+						colSpan = cell.colSpan;
+					}
+
+					if (!ed.dom.select(&#x27;td.mceSelected,th.mceSelected&#x27;).length) {
+						winMan.open({
+							url : url + &#x27;&#x2F;merge_cells.htm&#x27;,
+							width : 240 + parseInt(ed.getLang(&#x27;table.merge_cells_delta_width&#x27;, 0)),
+							height : 110 + parseInt(ed.getLang(&#x27;table.merge_cells_delta_height&#x27;, 0)),
+							inline : 1
+						}, {
+							rows : rowSpan,
+							cols : colSpan,
+							onaction : function(data) {
+								grid.merge(cell, data.cols, data.rows);
+							},
+							plugin_url : url
+						});
+					} else
+						grid.merge();
+				},
+
+				mceTableInsertRowBefore : function(grid) {
+					grid.insertRow(true);
+				},
+
+				mceTableInsertRowAfter : function(grid) {
+					grid.insertRow();
+				},
+
+				mceTableInsertColBefore : function(grid) {
+					grid.insertCol(true);
+				},
+
+				mceTableInsertColAfter : function(grid) {
+					grid.insertCol();
+				},
+
+				mceTableDeleteCol : function(grid) {
+					grid.deleteCols();
+				},
+
+				mceTableDeleteRow : function(grid) {
+					grid.deleteRows();
+				},
+
+				mceTableCutRow : function(grid) {
+					clipboardRows = grid.cutRows();
+				},
+
+				mceTableCopyRow : function(grid) {
+					clipboardRows = grid.copyRows();
+				},
+
+				mceTablePasteRowBefore : function(grid) {
+					grid.pasteRows(clipboardRows, true);
+				},
+
+				mceTablePasteRowAfter : function(grid) {
+					grid.pasteRows(clipboardRows);
+				},
+
+				mceTableDelete : function(grid) {
+					grid.deleteTable();
+				}
+			}, function(func, name) {
+				ed.addCommand(name, function() {
+					var grid = createTableGrid();
+
+					if (grid) {
+						func(grid);
+						ed.execCommand(&#x27;mceRepaint&#x27;);
+						cleanup();
+					}
+				});
+			});
+
+			&#x2F;&#x2F; Register dialog commands
+			each({
+				mceInsertTable : function(val) {
+					winMan.open({
+						url : url + &#x27;&#x2F;table.htm&#x27;,
+						width : 400 + parseInt(ed.getLang(&#x27;table.table_delta_width&#x27;, 0)),
+						height : 320 + parseInt(ed.getLang(&#x27;table.table_delta_height&#x27;, 0)),
+						inline : 1
+					}, {
+						plugin_url : url,
+						action : val ? val.action : 0
+					});
+				},
+
+				mceTableRowProps : function() {
+					winMan.open({
+						url : url + &#x27;&#x2F;row.htm&#x27;,
+						width : 400 + parseInt(ed.getLang(&#x27;table.rowprops_delta_width&#x27;, 0)),
+						height : 295 + parseInt(ed.getLang(&#x27;table.rowprops_delta_height&#x27;, 0)),
+						inline : 1
+					}, {
+						plugin_url : url
+					});
+				},
+
+				mceTableCellProps : function() {
+					winMan.open({
+						url : url + &#x27;&#x2F;cell.htm&#x27;,
+						width : 400 + parseInt(ed.getLang(&#x27;table.cellprops_delta_width&#x27;, 0)),
+						height : 295 + parseInt(ed.getLang(&#x27;table.cellprops_delta_height&#x27;, 0)),
+						inline : 1
+					}, {
+						plugin_url : url
+					});
+				}
+			}, function(func, name) {
+				ed.addCommand(name, function(ui, val) {
+					func(val);
+				});
+			});
+		}
+	});
+
+	&#x2F;&#x2F; Register plugin
+	tinymce.PluginManager.add(&#x27;table&#x27;, tinymce.plugins.TablePlugin);
+})(tinymce);
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

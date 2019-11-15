@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* grid.css */
+.col-master{width:980px;margin:0 auto;}
+.showgrid{background:url(../img/global/blueprint_grid_35.png);}
+div.col1, div.col2, div.col3, div.col4, div.col5, div.col6, div.col7, div.col8, div.col9, div.col10, div.col11, div.col12, div.col13, div.col14, div.col15, div.col16, div.col17, div.col18, div.col19, div.col20, div.col21, div.col22{float:left;margin-right: 10px;}
+
+.col1{ width: 35px;}
+.col2{ width: 80px;}
+.col3{ width: 125px;}
+.col4{ width: 170px;}
+.col5{ width: 215px;}
+.col6{ width: 260px;}
+.col7{ width: 305px;}
+.col8{ width: 350px;}
+.col9{ width: 395px;}
+.col10{ width: 440px;}
+.col11{ width: 485px;}
+.col12{ width: 530px;}
+.col13{ width: 575px;}
+.col14{ width: 620px;}
+.col15{ width: 665px;}
+.col16{ width: 710px;}
+.col17{ width: 755px;}
+.col18{ width: 800px;}
+.col19{ width: 845px;}
+.col20{ width: 890px;}
+.col21{ width: 935px;}
+.col22, div.col22{ width: 980px; margin: 0; }
+
+.suf1{ padding-right: 45px;}
+.suf2{ padding-right: 90px;}
+.suf3{ padding-right: 135px;}
+.suf4{ padding-right: 180px;}
+.suf5{ padding-right: 225px;}
+.suf6{ padding-right: 270px;}
+.suf7{ padding-right: 315px;}
+.suf8{ padding-right: 360px;}
+.suf9{ padding-right: 405px;}
+.suf10{ padding-right: 450px;}
+.suf11{ padding-right: 495px;}
+.suf12{ padding-right: 540px;}
+.suf13{ padding-right: 585px;}
+.suf14{ padding-right: 630px;}
+.suf15{ padding-right: 675px;}
+.suf16{ padding-right: 720px;}
+.suf17{ padding-right: 765px;}
+.suf18{ padding-right: 810px;}
+.suf19{ padding-right: 855px;}
+.suf20{ padding-right: 900px;}
+.suf21{ padding-right: 945px;}
+
+.prefix1{ padding-left: 45px;}
+.prefix2{ padding-left: 90px;}
+.prefix3{ padding-left: 135px;}
+.prefix4{ padding-left: 180px;}
+.prefix5{ padding-left: 225px;}
+.prefix6{ padding-left: 270px;}
+.prefix7{ padding-left: 315px;}
+.prefix8{ padding-left: 360px;}
+.prefix9{ padding-left: 405px;}
+.prefix10{ padding-left: 450px;}
+.prefix11{ padding-left: 495px;}
+.prefix12{ padding-left: 540px;}
+.prefix13{ padding-left: 585px;}
+.prefix14{ padding-left: 630px;}
+.prefix15{ padding-left: 675px;}
+.prefix16{ padding-left: 720px;}
+.prefix17{ padding-left: 765px;}
+.prefix18{ padding-left: 810px;}
+.prefix19{ padding-left: 855px;}
+.prefix20{ padding-left: 900px;}
+.prefix21{ padding-left: 945px;}
+
+.pull-1{ margin-left: -45px;}
+.pull-2{ margin-left: -90px;}
+.pull-3{ margin-left: -135px;}
+.pull-4{ margin-left: -180px;}
+.pull-5{ margin-left: -225px;}
+.pull-6{ margin-left: -270px;}
+.pull-7{ margin-left: -315px;}
+.pull-8{ margin-left: -360px;}
+.pull-9{ margin-left: -405px;}
+.pull-10{ margin-left: -450px;}
+.pull-11{ margin-left: -495px;}
+.pull-12{ margin-left: -540px;}
+.pull-13{ margin-left: -585px;}
+.pull-14{ margin-left: -630px;}
+.pull-15{ margin-left: -675px;}
+.pull-16{ margin-left: -720px;}
+.pull-17{ margin-left: -765px;}
+.pull-18{ margin-left: -810px;}
+.pull-19{ margin-left: -855px;}
+.pull-20{ margin-left: -900px;}
+.pull-21{ margin-left: -945px;}
+.pull-22{ margin-left: -990px;}
+
+.pull-1, .pull-2, .pull-3, .pull-4, .pull-5, .pull-6, .pull-7, .pull-8, .pull-9, .pull-10, .pull-11, .pull-12, .pull-13, .pull-14, .pull-15, .pull-16, .pull-17, .pull-18, .pull-19, .pull-20, .pull-21, .pull-22{float:left;position:relative;}
+
+.push-1{ margin: 0 -45px 1.5em 45px;}
+.push-2{ margin: 0 -90px 1.5em 90px;}
+.push-3{ margin: 0 -135px 1.5em 135px;}
+.push-4{ margin: 0 -180px 1.5em 180px;}
+.push-5{ margin: 0 -225px 1.5em 225px;}
+.push-6{ margin: 0 -270px 1.5em 270px;}
+.push-7{ margin: 0 -315px 1.5em 315px;}
+.push-8{ margin: 0 -360px 1.5em 360px;}
+.push-9{ margin: 0 -405px 1.5em 405px;}
+.push-10{ margin: 0 -450px 1.5em 450px;}
+.push-11{ margin: 0 -495px 1.5em 495px;}
+.push-12{ margin: 0 -540px 1.5em 540px;}
+.push-13{ margin: 0 -585px 1.5em 585px;}
+.push-14{ margin: 0 -630px 1.5em 630px;}
+.push-15{ margin: 0 -675px 1.5em 675px;}
+.push-16{ margin: 0 -720px 1.5em 720px;}
+.push-17{ margin: 0 -765px 1.5em 765px;}
+.push-18{ margin: 0 -810px 1.5em 810px;}
+.push-19{ margin: 0 -855px 1.5em 855px;}
+.push-20{ margin: 0 -900px 1.5em 900px;}
+.push-21{ margin: 0 -945px 1.5em 945px;}
+.push-22{ margin: 0 -990px 1.5em 990px;}
+
+.push-1, .push-2, .push-3, .push-4, .push-5, .push-6, .push-7, .push-8, .push-9, .push-10, .push-11, .push-12, .push-13, .push-14, .push-15, .push-16, .push-17, .push-18, .push-19, .push-20, .push-21, .push-22{float:right;position:relative;}

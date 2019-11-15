@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>libs&#x2F;plugins&#x2F;jquery.featureCarousel.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.7.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.7.0&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/admin.html">admin</a></li>
+            
+                <li><a href="..&#x2F;classes/all-modules.html">all-modules</a></li>
+            
+                <li><a href="..&#x2F;classes/default.html">default</a></li>
+            
+                <li><a href="..&#x2F;classes/jcarousel.html">jcarousel</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.AutoSave.html">tinymce.plugins.AutoSave</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.ContextMenu.html">tinymce.plugins.ContextMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/usuario.html">usuario</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/ad-actions.html">ad-actions</a></li>
+            
+                <li><a href="..&#x2F;modules/add-class-middle.html">add-class-middle</a></li>
+            
+                <li><a href="..&#x2F;modules/add-favorites.html">add-favorites</a></li>
+            
+                <li><a href="..&#x2F;modules/all-checked-uncheked.html">all-checked-uncheked</a></li>
+            
+                <li><a href="..&#x2F;modules/banner-top classified.html">banner-top classified</a></li>
+            
+                <li><a href="..&#x2F;modules/carousel-products.html">carousel-products</a></li>
+            
+                <li><a href="..&#x2F;modules/count-word.html">count-word</a></li>
+            
+                <li><a href="..&#x2F;modules/data-ubigeo.html">data-ubigeo</a></li>
+            
+                <li><a href="..&#x2F;modules/geotags.html">geotags</a></li>
+            
+                <li><a href="..&#x2F;modules/impress-ad-list.html">impress-ad-list</a></li>
+            
+                <li><a href="..&#x2F;modules/lightbox-logIn-signUp.html">lightbox-logIn-signUp</a></li>
+            
+                <li><a href="..&#x2F;modules/moduleName.html">moduleName</a></li>
+            
+                <li><a href="..&#x2F;modules/placeholder.html">placeholder</a></li>
+            
+                <li><a href="..&#x2F;modules/preview-impress.html">preview-impress</a></li>
+            
+                <li><a href="..&#x2F;modules/register-category.html">register-category</a></li>
+            
+                <li><a href="..&#x2F;modules/remove-class-home.html">remove-class-home</a></li>
+            
+                <li><a href="..&#x2F;modules/report-ad.html">report-ad</a></li>
+            
+                <li><a href="..&#x2F;modules/scrollTop.html">scrollTop</a></li>
+            
+                <li><a href="..&#x2F;modules/search-categories.html">search-categories</a></li>
+            
+                <li><a href="..&#x2F;modules/send-ad-friend.html">send-ad-friend</a></li>
+            
+                <li><a href="..&#x2F;modules/send-list-ad-email.html">send-list-ad-email</a></li>
+            
+                <li><a href="..&#x2F;modules/show-advanced-search.html">show-advanced-search</a></li>
+            
+                <li><a href="..&#x2F;modules/show-example-ads.html">show-example-ads</a></li>
+            
+                <li><a href="..&#x2F;modules/show-login-trigger.html">show-login-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-photo-products.html">show-photo-products</a></li>
+            
+                <li><a href="..&#x2F;modules/show-popup.html">show-popup</a></li>
+            
+                <li><a href="..&#x2F;modules/show-questions.html">show-questions</a></li>
+            
+                <li><a href="..&#x2F;modules/show-register-trigger.html">show-register-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-video.html">show-video</a></li>
+            
+                <li><a href="..&#x2F;modules/showMoreCategories.html">showMoreCategories</a></li>
+            
+                <li><a href="..&#x2F;modules/some-module4.html">some-module4</a></li>
+            
+                <li><a href="..&#x2F;modules/tinymce-register.html">tinymce-register</a></li>
+            
+                <li><a href="..&#x2F;modules/uploader-photos.html">uploader-photos</a></li>
+            
+                <li><a href="..&#x2F;modules/validate.html">validate</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-document.html">validate-document</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-image.html">validate-image</a></li>
+            
+                <li><a href="..&#x2F;modules/venta.html">venta</a></li>
+            
+                <li><a href="..&#x2F;modules/yOSON.html">yOSON</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: libs&#x2F;plugins&#x2F;jquery.featureCarousel.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;*!
+ * Feature Carousel, Version 1.3
+ * http:&#x2F;&#x2F;www.bkosolutions.com
+ *
+ * Copyright 2011 Brian Osborne
+ * Licensed under GPL version 3
+ * brian@bkosborne.com
+ *
+ * http:&#x2F;&#x2F;www.gnu.org&#x2F;licenses&#x2F;gpl.txt
+ *&#x2F;
+(function($) {
+
+  $.fn.featureCarousel = function (options) {
+
+    &#x2F;&#x2F; Adds support for multiple carousels on one page
+    if (this.length &gt; 1) {
+      this.each(function() {
+        $(this).featureCarousel(options);
+      });
+      return this;
+    }
+    
+    &#x2F;&#x2F; override the default options with user defined options
+    options = $.extend({}, $.fn.featureCarousel.defaults, options || {});
+
+    &#x2F;* These are univeral values that are used throughout the plugin. Do not modify them
+     * unless you know what you&#x27;re doing. Most of them feed off the options
+     * so most customization can be achieved by modifying the options values *&#x2F;
+    var pluginData = {
+      currentCenterNum:     options.startingFeature,
+      containerWidth:       0,
+      containerHeight:      0,
+      largeFeatureWidth:    0,
+      largeFeatureHeight:   0,
+      smallFeatureWidth:    0,
+      smallFeatureHeight:   0,
+      totalFeatureCount:    $(this).children(&quot;div&quot;).length,
+      currentlyMoving:      false,
+      featuresContainer:    $(this),
+      featuresArray:        [],
+      containerIDTag:       &quot;#&quot;+$(this).attr(&quot;id&quot;),
+      timeoutVar:           null,
+      rotationsRemaining:   0,
+      itemsToAnimate:       0,
+      borderWidth:			    0
+    };
+
+    &#x2F;**
+     * Function to preload the images in the carousel if desired.
+     * This is not recommended if there are a lot of images in the carousel because
+     * it may take a while. Functionality does not depend on preloading the images
+     *&#x2F;
+    var preload = function(callback) {
+      &#x2F;&#x2F; user may not want to preload images
+      if (options.preload == true) {
+        var $imageElements = pluginData.featuresContainer.find(&quot;img&quot;);
+        var loadedImages = 0;
+        var totalImages = $imageElements.length;
+
+        $imageElements.each(function (index, element) {
+          &#x2F;&#x2F; Attempt to load the images					
+					var img = new Image();
+          $(img).bind(&#x27;load error&#x27;, function () {
+            &#x2F;&#x2F; Add to number of images loaded and see if they are all done yet
+            loadedImages++;
+            if (loadedImages == totalImages) {
+              &#x2F;&#x2F; All done, perform callback
+              callback();
+            }
+          });
+					
+					img.src = element.src;
+        });
+      } else {
+        &#x2F;&#x2F; if user doesn&#x27;t want preloader, then just go right to callback
+        callback();
+      }
+    }
+
+    &#x2F;&#x2F; Gets the feature container based on the number
+    var getContainer = function(featureNum) {
+      return pluginData.featuresArray[featureNum-1];
+    }
+
+    &#x2F;&#x2F; get a feature given it&#x27;s set position (the position that doesn&#x27;t change)
+    var getBySetPos = function(position) {
+      $.each(pluginData.featuresArray, function () {
+        if ($(this).data().setPosition == position)
+          return $(this);
+      });
+    }
+
+    &#x2F;&#x2F; get previous feature number
+    var getPreviousNum = function(num) {
+      if ((num - 1) == 0) {
+        return pluginData.totalFeatureCount;
+      } else {
+        return num - 1;
+      }
+    }
+
+    &#x2F;&#x2F; get next feature number
+    var getNextNum = function(num) {
+      if ((num + 1) &gt; pluginData.totalFeatureCount) {
+        return 1;
+      } else {
+        return num + 1;
+      }
+    }
+
+    &#x2F;**
+     * Because there are several options the user can set for the width and height
+     * of the feature images, this function is used to determine which options were set
+     * and to set the appropriate dimensions used for a small and large feature
+     *&#x2F;
+    var setupFeatureDimensions = function() {
+      &#x2F;&#x2F; Set the height and width of the entire carousel container
+      pluginData.containerWidth = pluginData.featuresContainer.width();
+      pluginData.containerHeight = pluginData.featuresContainer.height();
+
+      &#x2F;&#x2F; Grab the first image for reference
+      var $firstFeatureImage = $(pluginData.containerIDTag).find(&quot;.carousel-image:first&quot;);
+
+      &#x2F;&#x2F; Large Feature Width
+      if (options.largeFeatureWidth &gt; 1)
+        pluginData.largeFeatureWidth = options.largeFeatureWidth;
+      else if (options.largeFeatureWidth &gt; 0 &amp;&amp; options.largeFeatureWidth &lt; 1)
+        pluginData.largeFeatureWidth = $firstFeatureImage.width() * options.largeFeatureWidth;
+      else
+        pluginData.largeFeatureWidth = $firstFeatureImage.outerWidth();
+      &#x2F;&#x2F; Large Feature Height
+      if (options.largeFeatureHeight &gt; 1)
+        pluginData.largeFeatureHeight = options.largeFeatureHeight;
+      else if (options.largeFeatureHeight &gt; 0 &amp;&amp; options.largeFeatureHeight &lt; 1)
+        pluginData.largeFeatureHeight = $firstFeatureImage.height() * options.largeFeatureHeight;
+      else
+        pluginData.largeFeatureHeight = $firstFeatureImage.outerHeight();
+      &#x2F;&#x2F; Small Feature Width
+      if (options.smallFeatureWidth &gt; 1)
+        pluginData.smallFeatureWidth = options.smallFeatureWidth;
+      else if (options.smallFeatureWidth &gt; 0 &amp;&amp; options.smallFeatureWidth &lt; 1)
+        pluginData.smallFeatureWidth = $firstFeatureImage.width() * options.smallFeatureWidth;
+      else
+        pluginData.smallFeatureWidth = $firstFeatureImage.outerWidth() &#x2F; 2;
+      &#x2F;&#x2F; Small Feature Height
+      if (options.smallFeatureHeight &gt; 1)
+        pluginData.smallFeatureHeight = options.smallFeatureHeight;
+      else if (options.smallFeatureHeight &gt; 0 &amp;&amp; options.smallFeatureHeight &lt; 1)
+        pluginData.smallFeatureHeight = $firstFeatureImage.height() * options.smallFeatureHeight;
+      else
+        pluginData.smallFeatureHeight = $firstFeatureImage.outerHeight() &#x2F; 2;
+    }
+
+    &#x2F;**
+     * Function to take care of setting up various aspects of the carousel,
+     * most importantly the default positions for the features
+     *&#x2F;
+    var setupCarousel = function() {
+      &#x2F;&#x2F; Set the total feature count to the amount the user wanted to cutoff
+      if (options.displayCutoff &gt; 0 &amp;&amp; options.displayCutoff &lt; pluginData.totalFeatureCount) {
+        pluginData.totalFeatureCount = options.displayCutoff;
+      }
+
+      &#x2F;&#x2F; fill in the features array
+      pluginData.featuresContainer.find(&quot;.carousel-feature&quot;).each(function (index) {
+        if (index &lt; pluginData.totalFeatureCount) {
+          pluginData.featuresArray[index] = $(this);
+        }
+      });
+
+      &#x2F;&#x2F; Determine the total border width around the feature if there is one
+      if (pluginData.featuresContainer.find(&quot;.carousel-feature&quot;).first().css(&quot;borderLeftWidth&quot;) != &quot;medium&quot;) {
+        pluginData.borderWidth = parseInt(pluginData.featuresContainer.find(&quot;.carousel-feature&quot;).first().css(&quot;borderLeftWidth&quot;))*2;
+      }
+
+      &#x2F;&#x2F; Place all the features in a center hidden position to start off
+      pluginData.featuresContainer
+        &#x2F;&#x2F; Have to make the container relative positioning
+        .find(&quot;.carousel-feature&quot;).each(function () {
+          &#x2F;&#x2F; Center all the features in the middle and hide them
+          $(this).css({
+            &#x27;left&#x27;: (pluginData.containerWidth &#x2F; 2) - (pluginData.smallFeatureWidth &#x2F; 2) - (pluginData.borderWidth &#x2F; 2),
+            &#x27;width&#x27;: pluginData.smallFeatureWidth,
+            &#x27;height&#x27;: pluginData.smallFeatureHeight,
+            &#x27;top&#x27;: options.smallFeatureOffset + options.topPadding,
+            &#x27;opacity&#x27;: 0
+          });
+        })
+        &#x2F;&#x2F; Set all the images to small feature size
+        .find(&quot;.carousel-image&quot;).css({
+          &#x27;width&#x27;: pluginData.smallFeatureWidth
+        });
+        
+      &#x2F;&#x2F; set position to relative of captions if displaying below image
+      if (options.captionBelow) {
+        pluginData.featuresContainer.find(&#x27;.carousel-caption&#x27;).css(&#x27;position&#x27;,&#x27;relative&#x27;);
+      }
+
+      &#x2F;&#x2F; figure out number of items that will rotate each time
+      if (pluginData.totalFeatureCount &lt; 4) {
+        pluginData.itemsToAnimate = pluginData.totalFeatureCount;
+      } else {
+        pluginData.itemsToAnimate = 4;
+      }
+
+      &#x2F;&#x2F; Hide story info and set the proper positioning
+      pluginData.featuresContainer.find(&quot;.carousel-caption&quot;)
+        .hide();
+    }
+
+    &#x2F;**
+     * Here all the position data is set for the features.
+     * This is an important part of the carousel to keep track of where
+     * each feature within the carousel is
+     *&#x2F;
+    var setupFeaturePositions = function() {
+      &#x2F;&#x2F; give all features a set number that won&#x27;t change so they remember their
+      &#x2F;&#x2F; original order
+      $.each(pluginData.featuresArray, function (i) {
+        $(this).data(&#x27;setPosition&#x27;,i+1);
+      });
+
+      &#x2F;&#x2F; Go back one - This is done because we call the move function right away, which
+      &#x2F;&#x2F; shifts everything to the right. So we set the current center back one, so that
+      &#x2F;&#x2F; it displays in the center when that happens
+      var oneBeforeStarting = getPreviousNum(options.startingFeature);
+      pluginData.currentCenterNum = oneBeforeStarting;
+
+      &#x2F;&#x2F; Center feature will be position 1
+      var $centerFeature = getContainer(oneBeforeStarting);
+      $centerFeature.data(&#x27;position&#x27;,1);
+
+      &#x2F;&#x2F; Everything before that center feature...
+      var $prevFeatures = $centerFeature.prevAll();
+      $prevFeatures.each(function (i) {
+        $(this).data(&#x27;position&#x27;,(pluginData.totalFeatureCount - i));
+      });
+
+      &#x2F;&#x2F; And everything after that center feature...
+      var $nextFeatures = $centerFeature.nextAll();
+      $nextFeatures.each(function (i) {
+        if ($(this).data(&#x27;setPosition&#x27;) != undefined) {
+          $(this).data(&#x27;position&#x27;,(i + 2));
+        }
+      });
+
+      &#x2F;&#x2F; if the counter style is for including number tags in description...
+      if (options.counterStyle == &#x27;caption&#x27;) {
+        $.each(pluginData.featuresArray, function () {
+          var pos = getPreviousNum($(this).data(&#x27;position&#x27;));
+          var $numberTag = $(&quot;&lt;span&gt;&lt;&#x2F;span&gt;&quot;);
+          $numberTag.addClass(&quot;numberTag&quot;);
+          $numberTag.html(&quot;(&quot;+ pos + &quot; of &quot; + pluginData.totalFeatureCount + &quot;) &quot;);
+          $(this).find(&#x27;.carousel-caption p&#x27;).prepend($numberTag);
+        });
+      }
+    }
+
+    &#x2F;**
+     * This function will set up the two different types of trackers used
+     *&#x2F;
+    var setupTrackers = function()
+    {
+      if (options.trackerIndividual) {
+        &#x2F;&#x2F; construct the tracker list
+        var $list = $(&quot;&lt;ul&gt;&lt;&#x2F;ul&gt;&quot;);
+        $list.addClass(&quot;tracker-individual-container&quot;);
+        for (var i = 0; i &lt; pluginData.totalFeatureCount; i++) {
+          &#x2F;&#x2F; item position one plus the index
+          var counter = i+1;
+             &#x2F;&#x2F; Build the DOM for the tracker list
+            var $trackerBlip = $(&quot;&lt;div&gt;&quot;+counter+&quot;&lt;&#x2F;div&gt;&quot;);
+            $trackerBlip.addClass(&quot;tracker-individual-blip&quot;);
+            $trackerBlip.css(&quot;cursor&quot;,&quot;pointer&quot;);
+            $trackerBlip.attr(&quot;id&quot;,&quot;tracker-&quot;+(i+1));
+            var $listEntry = $(&quot;&lt;li&gt;&lt;&#x2F;li&gt;&quot;);
+            $listEntry.append($trackerBlip);
+            $listEntry.css(&quot;float&quot;,&quot;left&quot;);
+            $listEntry.css(&quot;list-style-type&quot;,&quot;none&quot;);
+            $list.append($listEntry);
+        }
+        &#x2F;&#x2F;Btn Media
+        var $btnmedia = $(&quot;&lt;div&gt;&lt;&#x2F;div&gt;&quot;);
+            $btnmedia.addClass(&#x27;btn-media-pause&#x27;);
+            $btnmedia.css(&quot;cursor&quot;,&quot;pointer&quot;);
+            $btnmedia.attr(&quot;id&quot;,&quot;btn-media&quot;);
+        var $listMedia = $(&quot;&lt;li&gt;&lt;&#x2F;li&gt;&quot;);
+            $listMedia.append($btnmedia);
+            $listMedia.css(&quot;float&quot;,&quot;left&quot;);
+            $listMedia.css(&quot;list-style-type&quot;,&quot;none&quot;);
+            $list.append($listMedia);
+        &#x2F;&#x2F; add the blip list and then make sure it&#x27;s visible
+        $(pluginData.containerIDTag).append($list);
+        $list.hide().show();
+      }
+      
+      if (options.trackerSummation) {
+        &#x2F;&#x2F; Build the tracker div that will hold the tracking data
+        var $tracker = $(&#x27;&lt;div&gt;&lt;&#x2F;div&gt;&#x27;);
+        $tracker.addClass(&#x27;tracker-summation-container&#x27;);
+        &#x2F;&#x2F; Collect info in spans
+        var $current = $(&#x27;&lt;span&gt;&lt;&#x2F;span&gt;&#x27;).addClass(&#x27;tracker-summation-current&#x27;).text(options.startingFeature);
+        var $total = $(&#x27;&lt;span&gt;&lt;&#x2F;span&gt;&#x27;).addClass(&#x27;tracker-summation-total&#x27;).text(pluginData.totalFeatureCount);
+        var $middle = $(&#x27;&lt;span&gt;&lt;&#x2F;span&gt;&#x27;).addClass(&#x27;tracker-summation-middle&#x27;).text(&#x27; of &#x27;);
+        &#x2F;&#x2F; Add it all together
+        $tracker.append($current).append($middle).append($total);
+        &#x2F;&#x2F; Insert into DOM
+        $(pluginData.containerIDTag).append($tracker);
+      }
+    }
+
+    &#x2F;&#x2F; Update the tracker information with the new centered feature
+    var updateTracker = function(oldCenter, newCenter) {
+      if (options.trackerIndividual) {
+        &#x2F;&#x2F; get selectors for the two trackers
+        var $trackerContainer = pluginData.featuresContainer.find(&quot;.tracker-individual-container&quot;);
+        var $oldCenter = $trackerContainer.find(&quot;#tracker-&quot;+oldCenter);
+        var $newCenter = $trackerContainer.find(&quot;#tracker-&quot;+newCenter);
+
+        &#x2F;&#x2F; change classes
+        $oldCenter.removeClass(&quot;tracker-individual-blip-selected&quot;);
+        $newCenter.addClass(&quot;tracker-individual-blip-selected&quot;);
+      }
+      
+      if (options.trackerSummation) {
+        var $trackerContainer = pluginData.featuresContainer.find(&#x27;.tracker-summation-container&#x27;);
+        $trackerContainer.find(&#x27;.tracker-summation-current&#x27;).text(newCenter);
+      }
+    }
+
+    &#x2F;**
+     * This function will set the autoplay for the carousel to
+     * automatically rotate it given the time in the options
+     * pass in TRUE to just clear the timer
+     *&#x2F;
+    var setTimer = function(stop) {
+      &#x2F;&#x2F; clear the timeout var if it exists
+      clearTimeout(pluginData.timeoutVar);
+
+      &#x2F;&#x2F; set interval for moving if autoplay is set
+      if (!stop &amp;&amp; options.autoPlay != 0) {
+        var autoTime = (Math.abs(options.autoPlay) &lt; options.carouselSpeed) ? options.carouselSpeed : Math.abs(options.autoPlay);
+        pluginData.timeoutVar = setTimeout(function () {
+          (options.autoPlay &gt; 0) ? initiateMove(true,1) : initiateMove(false,1);
+        }, autoTime);
+      }
+    }
+
+
+    &#x2F;&#x2F; This is a helper function for the animateFeature function that
+    &#x2F;&#x2F; will update the positions of all the features based on the direction
+    var rotatePositions = function(direction) {
+      $.each(pluginData.featuresArray, function () {
+        var newPos;
+        if (direction == false) {
+          newPos = getNextNum($(this).data().position);
+        } else {
+          newPos = getPreviousNum($(this).data().position);
+        }
+        $(this).data(&#x27;position&#x27;,newPos);
+      });
+    }
+
+    &#x2F;**
+     * This function is used to animate the given feature to the given
+     * location. Valid locations are &quot;left&quot;, &quot;right&quot;, &quot;center&quot;, &quot;hidden&quot;
+     *&#x2F;
+    var animateFeature = function($feature, direction)
+    {
+      var new_width, new_height, new_top, new_left, new_zindex, new_padding, new_fade;
+
+      &#x2F;&#x2F; Determine the old and new positions of the feature
+      var oldPosition = $feature.data(&#x27;position&#x27;);
+      var newPosition;
+      if (direction == true)
+        newPosition = getPreviousNum(oldPosition);
+      else
+        newPosition = getNextNum(oldPosition);
+        
+      &#x2F;&#x2F; callback for moving out of center pos
+      if (oldPosition == 1) {
+        options.leavingCenter($feature);
+      }
+
+      &#x2F;&#x2F; Caculate new new css values depending on where the feature will be located
+      if (newPosition == 1) {
+        new_width = pluginData.largeFeatureWidth;
+        new_height = pluginData.largeFeatureHeight;
+        new_top = options.topPadding;
+        new_zindex = $feature.css(&quot;z-index&quot;);
+        new_left = (pluginData.containerWidth &#x2F; 2) - (pluginData.largeFeatureWidth &#x2F; 2) - (pluginData.borderWidth &#x2F; 2);
+        new_fade = 1.0;
+      } else {
+        new_width = pluginData.smallFeatureWidth;
+        new_height = pluginData.smallFeatureHeight;
+        new_top = options.smallFeatureOffset + options.topPadding;
+        new_zindex = 1;
+        new_fade = 0.4;
+        &#x2F;&#x2F; some info is different for the left, right, and hidden positions
+        &#x2F;&#x2F; left
+        if (newPosition == pluginData.totalFeatureCount) {
+          new_left = options.sidePadding;
+        &#x2F;&#x2F; right
+        } else if (newPosition == 2) {
+          new_left = pluginData.containerWidth - pluginData.smallFeatureWidth - options.sidePadding - pluginData.borderWidth;
+        &#x2F;&#x2F; hidden
+        } else {
+          new_left = (pluginData.containerWidth &#x2F; 2) - (pluginData.smallFeatureWidth &#x2F; 2) - (pluginData.borderWidth &#x2F; 2);
+          new_fade = 0;
+        }
+      }
+      &#x2F;&#x2F; This code block takes care of hiding the feature information if the feature is leaving the center
+      if (oldPosition == 1) {
+        &#x2F;&#x2F; Slide up the story information
+        $feature.find(&quot;.carousel-caption&quot;)
+          .hide();
+      }
+
+      &#x2F;&#x2F; Animate the feature div to its new location
+      $feature
+        .animate(
+          {
+            width: new_width,
+            height: new_height,
+            top: new_top,
+            left: new_left,
+            opacity: new_fade
+          },
+          options.carouselSpeed,
+          options.animationEasing,
+          function () {
+            &#x2F;&#x2F; Take feature info out of hiding if new position is center
+            if (newPosition == 1) {
+              &#x2F;&#x2F; need to set the height to auto to accomodate caption if displayed below image
+              if (options.captionBelow)
+                $feature.css(&#x27;height&#x27;,&#x27;auto&#x27;);
+              &#x2F;&#x2F; fade in the feature information
+              $feature.find(&quot;.carousel-caption&quot;)
+                .fadeTo(&quot;fast&quot;,0.85);
+              &#x2F;&#x2F; callback for moved to center
+              options.movedToCenter($feature);
+            }
+            &#x2F;&#x2F; decrement the animation queue
+            pluginData.rotationsRemaining = pluginData.rotationsRemaining - 1;
+            &#x2F;&#x2F; have to change the z-index after the animation is done
+            $feature.css(&quot;z-index&quot;, new_zindex);
+            &#x2F;&#x2F; change trackers if using them
+            if (options.trackerIndividual || options.trackerSummation) {
+              &#x2F;&#x2F; just update the tracker once; once the new center feature has arrived in center
+              if (newPosition == 1) {
+                &#x2F;&#x2F; figure out what item was just in the center, and what item is now in the center
+                var newCenterItemNum = pluginData.featuresContainer.find(&quot;.carousel-feature&quot;).index($feature) + 1;
+                var oldCenterItemNum;
+                if (direction == false)
+                  oldCenterItemNum = getNextNum(newCenterItemNum);
+                else
+                  oldCenterItemNum = getPreviousNum(newCenterItemNum);
+                &#x2F;&#x2F; now update the trackers
+                updateTracker(oldCenterItemNum, newCenterItemNum);
+              }
+            }
+
+            &#x2F;&#x2F; did all the the animations finish yet?
+            var divide = pluginData.rotationsRemaining &#x2F; pluginData.itemsToAnimate;
+            if (divide % 1 == 0) {
+              &#x2F;&#x2F; if so, set moving to false...
+              pluginData.currentlyMoving = false;
+              &#x2F;&#x2F; change positions for all items...
+              rotatePositions(direction);
+
+              &#x2F;&#x2F; and move carousel again if queue is not empty
+              if (pluginData.rotationsRemaining &gt; 0)
+                move(direction);
+            }
+            
+            &#x2F;&#x2F; reset timer and auto rotate again
+            setTimer(false);
+          }
+        )
+        &#x2F;&#x2F; select the image within the feature
+        .find(&#x27;.carousel-image&#x27;)
+          &#x2F;&#x2F; animate its size down
+          .animate({
+            width: new_width,
+            height: new_height
+          },
+          options.carouselSpeed,
+          options.animationEasing)
+        .end();
+    }
+
+    &#x2F;**
+     * move the carousel to the left or to the right. The features that
+     * will move into the four positions are calculated and then animated
+     * rotate to the RIGHT when direction is TRUE and
+     * rotate to the LEFT when direction is FALSE
+     *&#x2F;
+    var move = function(direction)
+    {
+      &#x2F;&#x2F; Set the carousel to currently moving
+      pluginData.currentlyMoving = true;
+
+      &#x2F;&#x2F; Obtain the new feature positions based on the direction that the carousel is moving
+      var $newCenter, $newLeft, $newRight, $newHidden;
+      if (direction == true) {
+        &#x2F;&#x2F; Shift features to the left
+        $newCenter = getContainer(getNextNum(pluginData.currentCenterNum));
+        $newLeft = getContainer(pluginData.currentCenterNum);
+        $newRight = getContainer(getNextNum(getNextNum(pluginData.currentCenterNum)));
+        $newHidden = getContainer(getPreviousNum(pluginData.currentCenterNum));
+        pluginData.currentCenterNum = getNextNum(pluginData.currentCenterNum);
+      } else {
+        $newCenter = getContainer(getPreviousNum(pluginData.currentCenterNum));
+        $newLeft = getContainer(getPreviousNum(getPreviousNum(pluginData.currentCenterNum)));
+        $newRight = getContainer(pluginData.currentCenterNum);
+        $newHidden = getContainer(getNextNum(pluginData.currentCenterNum));
+        pluginData.currentCenterNum = getPreviousNum(pluginData.currentCenterNum);
+      }
+
+      &#x2F;&#x2F; The z-index must be set before animations take place for certain movements
+      &#x2F;&#x2F; this makes the animations look nicer
+      if (direction) {
+        $newLeft.css(&quot;z-index&quot;, 3);
+      } else {
+        $newRight.css(&quot;z-index&quot;, 3);
+      }
+      $newCenter.css(&quot;z-index&quot;, 4);
+
+      &#x2F;&#x2F; Animate the features into their new positions
+      animateFeature($newLeft, direction);
+      animateFeature($newCenter, direction);
+      animateFeature($newRight, direction);
+      &#x2F;&#x2F; Only want to animate the &quot;hidden&quot; feature if there are more than three
+      if (pluginData.totalFeatureCount &gt; 3) {
+        animateFeature($newHidden, direction);
+      }
+    }
+
+    &#x2F;&#x2F; This is used to relegate carousel movement throughout the plugin
+    &#x2F;&#x2F; It will only initiate a move if the carousel isn&#x27;t currently moving
+    &#x2F;&#x2F; It will set the animation queue to the number of rotations given
+    var initiateMove = function(direction, rotations) {
+      if (pluginData.currentlyMoving == false) {
+        var queue = rotations * pluginData.itemsToAnimate;
+        pluginData.rotationsRemaining = queue;
+        move(direction);
+      }
+    }
+
+    &#x2F;**
+     * This will find the shortest distance to travel the carousel from
+     * one position to another position. It will return the shortest distance
+     * in number form, and will be positive to go to the right and negative for left
+     *&#x2F;
+    var findShortestDistance = function(from, to) {
+      var goingToLeft = 1, goingToRight = 1, tracker;
+      tracker = from;
+      &#x2F;&#x2F; see how long it takes to go to the left
+      while ((tracker = getPreviousNum(tracker)) != to) {
+        goingToLeft++;
+      }
+
+      tracker = from;
+      &#x2F;&#x2F; see how long it takes to to to the right
+      while ((tracker = getNextNum(tracker)) != to) {
+        goingToRight++;
+      }
+
+      &#x2F;&#x2F; whichever is shorter
+      return (goingToLeft &lt; goingToRight) ? goingToLeft*-1 : goingToRight;
+    }
+
+    &#x2F;&#x2F; Move to the left if left button clicked
+    $(options.leftButtonTag).live(&#x27;click&#x27;,function () {
+      initiateMove(false,1);
+    });
+
+    &#x2F;&#x2F; Move to right if right button clicked
+    $(options.rightButtonTag).live(&#x27;click&#x27;,function () {
+      initiateMove(true,1);
+    });
+
+    &#x2F;&#x2F; These are the click and hover events for the features
+    pluginData.featuresContainer.find(&quot;.carousel-feature&quot;)
+      .click(function () {
+        var position = $(this).data(&#x27;position&#x27;);
+        if (position == 2) {
+          initiateMove(true,1);
+        } else if (position == pluginData.totalFeatureCount) {
+          initiateMove(false,1);
+        }
+      })
+      .mouseover(function () {
+        if (pluginData.currentlyMoving == false) {
+          var position = $(this).data(&#x27;position&#x27;);
+          if (position == 2 || position == pluginData.totalFeatureCount) {
+            $(this).css(&quot;opacity&quot;,0.8);
+          }
+        }
+        &#x2F;&#x2F; pause the rotation?
+        if (options.pauseOnHover) setTimer(true);
+        &#x2F;&#x2F; stop the rotation?
+        if (options.stopOnHover) options.autoPlay = 0;
+      })
+      .mouseout(function () {
+        if (pluginData.currentlyMoving == false) {
+          var position = $(this).data(&#x27;position&#x27;);
+          if (position == 2 || position == pluginData.totalFeatureCount) {
+            $(this).css(&quot;opacity&quot;,0.4);
+          }
+        }
+        &#x2F;&#x2F; resume the rotation
+        if (options.pauseOnHover) {
+          setTimer(false);
+        }
+      });
+
+    &#x2F;&#x2F; Add event listener to all clicks within the features container
+    &#x2F;&#x2F; This is done to disable any links that aren&#x27;t within the center feature
+    $(&quot;a&quot;, pluginData.containerIDTag).live(&quot;click&quot;, function (event) {
+      &#x2F;&#x2F; travel up to the container
+      var $parents = $(this).parentsUntil(pluginData.containerIDTag);
+      &#x2F;&#x2F; now check each of the feature divs within it
+      $parents.each(function () {
+        var position = $(this).data(&#x27;position&#x27;);
+        &#x2F;&#x2F; if there are more than just feature divs within the container, they will
+        &#x2F;&#x2F; not have a position and it may come back as undefined. Throw these out
+        if (position != undefined) {
+          &#x2F;&#x2F; if any of the links on a feature OTHER THAN the center feature were clicked,
+          &#x2F;&#x2F; initiate a carousel move but then throw the link action away
+          if (position != 1) {
+            if (position == pluginData.totalFeatureCount) {
+              initiateMove(false,1);
+            } else if (position == 2) {
+              initiateMove(true,1);
+            }
+            event.preventDefault();
+            return false;
+          &#x2F;&#x2F; if the position WAS the center (i.e. 1), fire callback
+          } else {
+            options.clickedCenter($(this));
+          }
+        }
+      });
+    });
+
+    &#x2F;&#x2F; Did someone click one of the individual trackers?
+    $(&quot;.tracker-individual-blip&quot;,  pluginData.containerIDTag).live(&quot;click&quot;,function () {
+      &#x2F;&#x2F; grab the position # that was clicked
+      var goTo = $(this).attr(&quot;id&quot;).substring(8);
+      &#x2F;&#x2F; find out where that feature # actually is in the carousel right now
+      var whereIsIt = pluginData.featuresContainer.find(&quot;.carousel-feature&quot;).eq(goTo-1).data(&#x27;position&#x27;);
+      &#x2F;&#x2F; which feature # is currently in the center
+      var currentlyAt = pluginData.currentCenterNum;
+      &#x2F;&#x2F; if the tracker was clicked for the current center feature, do nothing
+      if (goTo != currentlyAt) {
+        &#x2F;&#x2F; find the shortest distance to move the carousel
+        var shortest = findShortestDistance(1, whereIsIt);
+        &#x2F;&#x2F; initiate a move in that direction with given number of rotations
+        if (shortest &lt; 0) {
+          initiateMove(false,(shortest*-1));
+        } else {
+          initiateMove(true,shortest);
+        }
+      }
+
+    });
+    
+    &#x2F;****************
+     PUBLIC FUNCTIONS 
+     ****************&#x2F;
+    this.initialize = function () {
+      &#x2F;&#x2F; Call the preloader and pass in our callback, which is just a slew of function calls
+      &#x2F;&#x2F; that should only be executed after the images have been loaded
+      preload(function () {
+        setupFeatureDimensions();
+        setupCarousel();
+        setupFeaturePositions();
+        setupTrackers();
+        initiateMove(true,1);
+      });
+ 
+      return this;
+    };
+    
+    this.next = function() {
+      initiateMove(true, 1);
+    }
+    this.prev = function () {
+      initiateMove(false, 1);
+    }
+    this.pause = function () {
+      setTimer(true);
+    }
+    this.start = function () {
+      setTimer(false);
+    }
+   
+    &#x2F;&#x2F; Initialize the plugin
+    return this.initialize();
+  };
+  
+  $.fn.featureCarousel.defaults = {
+    &#x2F;&#x2F; If zero, take original width and height of image
+    &#x2F;&#x2F; If between 0 and 1, multiply by original width and height (acts as a percentage)
+    &#x2F;&#x2F; If greater than one, use as a forced width&#x2F;height for all of the images
+    largeFeatureWidth :   0,
+    largeFeatureHeight:		0,
+    smallFeatureWidth:    .5,
+    smallFeatureHeight:		.5,
+    &#x2F;&#x2F; how much to pad the top of the carousel
+    topPadding:           20,
+    &#x2F;&#x2F; spacing between the sides of the container
+    sidePadding:          50,
+    &#x2F;&#x2F; the additional offset to pad the side features from the top of the carousel
+    smallFeatureOffset:		50,
+    &#x2F;&#x2F; indicates which feature to start the carousel at
+    startingFeature:      1,
+    &#x2F;&#x2F; speed in milliseconds it takes to rotate the carousel
+    carouselSpeed:        1000,
+    &#x2F;&#x2F; time in milliseconds to set interval to autorotate the carousel
+    &#x2F;&#x2F; set to zero to disable it, negative to go left
+    autoPlay:             4000,
+    &#x2F;&#x2F; with autoplay enabled, set this option to true to have the carousel pause rotating
+    &#x2F;&#x2F; when a user hovers over any feature
+    pauseOnHover:         true,
+    &#x2F;&#x2F; with autoplay enabled, set this option to completely stop the autorotate functionality
+    &#x2F;&#x2F; when a user hovers over any feature
+    stopOnHover:          false,
+    &#x2F;&#x2F; numbered blips can appear and be used to track the currently centered feature, as well as 
+    &#x2F;&#x2F; allow the user to click a number to move to that feature. Set to false to not process these at all
+    &#x2F;&#x2F; and true to process and display them
+    trackerIndividual:    true,
+    &#x2F;&#x2F; a summation of the features can also be used to display an &quot;x Of y&quot; style of tracking
+    &#x2F;&#x2F; this can be combined with the above option as well
+    trackerSummation:     true,
+    &#x2F;&#x2F; true to preload all images in the carousel before displaying anything. If this is set to false,
+    &#x2F;&#x2F; you will probably need to set a fixed width&#x2F;height to prevent strangeness
+    preload:              true,
+    &#x2F;&#x2F; Will only display this many features in the carousel
+    &#x2F;&#x2F; set to zero to disable
+    displayCutoff:        0,
+    &#x2F;&#x2F; an easing can be specified for the animation of the carousel
+    animationEasing:      &#x27;swing&#x27;,
+    &#x2F;&#x2F; selector for the left arrow of the carousel
+    leftButtonTag:        &#x27;#carousel-left&#x27;,
+    &#x2F;&#x2F; selector for the right arrow of the carousel
+    rightButtonTag:       &#x27;#carousel-right&#x27;,
+    &#x2F;&#x2F; display captions below the image instead of on top
+    captionBelow:         false,
+    &#x2F;&#x2F; callback function for when a feature has animated to the center
+    movedToCenter:        $.noop,
+    &#x2F;&#x2F; callback function for when feature left center
+    leavingCenter:        $.noop,
+    &#x2F;&#x2F; callback function for when center feature was clicked
+    clickedCenter:        $.noop
+  };
+  
+})(jQuery);
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<div id="body-content" class="miscalificaciones-pag col-master">
+    <div id="s_level1" class="clearfix">
+        <h3>Koteando (Mi Cuenta)</h3>
+        <div id="account_navigation">
+<!--            <ul id="koteando_menu_secc">
+                <li id="km_opt1"><a href="#">Mis Compras</a></li>
+                <li id="km_opt2"><a href="#">Mis Ventas</a></li>
+                <li id="km_opt3" class="active"><a href="#">Mis Calificaciones</a></li>
+                <li id="km_opt4"><a href="#">Kotear Pagos</a></li>
+                <li id="km_opt5"><a href="#">Mis Datos</a></li>
+            </ul>
+-->
+<?php echo $this->action('navegacion','menu','default');?>
+
+            <ul class="koteando_tabs_menu">
+                <li><a href="#">Calificaciones Pendientes</a></li>
+                <li class="active"><a href="#">Mi Reputación</a></li>
+                <li><a href="#">Calificaciones realizadas</a></li>
+            </ul>
+            <ul class="koteando_rightmenu">
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Preguntas Frecuentes</a></li>
+            </ul>
+        </div>
+        <div class="pagetitle col17">
+            <h4>Calificar ahora</h4>
+        </div>
+    </div>
+    <div id="s_level2" class="replicar clearfix">
+        <div id="left-bar" class="col17">
+
+            <form id="replicarfrm" name="replicarfrm" method="post" action="<?php echo $this->baseUrl()?>/usuario/venta/guarda-respuesta">
+                <p>Responder a la pregunta: <?php echo $this->aviso->COMENT?> de: <?php echo $this->identity->ID_USR?></p>
+                <p class="block1 inpt"> <span class="title">Respuesta:</span>
+                    <textarea name="coment" id="coment" rows="4" class="pdgr291"></textarea>
+                </p>
+                <div class="controls">
+                    <button type="submit" class="sbmt">Guardar</button>
+                    <button type="reset" class="cancel">Cancelar</button>
+                    <?php echo $this->error; ?>
+                </div>
+                <input type="hidden" name='idusuario' id='idusuario' value='<?php echo $this->identity->ID_USR?>'>
+                <input type="hidden" name='idtipomensaje' id='idtipomensaje' value='2'>
+                <input type="text" name='comprador' id='comprador' value='<?php echo $this->comprador;?>'>
+
+                <input type="hidden" name='idmensaje' id='idmensaje' value='<?php echo $this->aviso->ID_MENSAJE?>'>
+                <input type="hidden" name='pregunta' id='pregunta' value='<?php echo $this->aviso->COMENT?>'>
+            </form>
+        </div>
+        <div id="right-bar" class="last col5">
+            <div class="block1 tip">
+                <p>Presta atención a la redacción de la réplica. Ten en cuenta que lo que escribas lo va a leer toda la comunidad.</p>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

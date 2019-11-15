@@ -1,0 +1,32 @@
+<div class="container">
+        <?php echo $this->action('busqueda','index','default'); ?>
+        <h3 class="k-title"><span></span>Registro / Validación de usuario</h3>
+         <?php if(isset($this->msg)){?>
+            <div class='rbox'><?php echo $this->msg?></div>
+	 <?php } ?>
+        <h3>Validación de usuario </h3>
+        <p>Completa con los datos que recibiste en el e-mail que te envió el sistema para validar tu registro en Kotear.pe: </p>
+        <form class="form-horizontal" name="cambioemail" id="change-email-valid" method="post">
+            <div class="control-group">
+                <label class="control-label" for="apodo"><span></span>Tu apodo</label>
+                <div class="controls">
+                    <input type="text" name="apodo" id="apodo" value="" />
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="confirma"><span></span>Tu código de registro</label>
+                <div class="controls">
+                   <input class="required" type="text" name="confirma" id="confirma" value="" />
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls footer-detail">
+                    <button type="submit" class="btn-kotear">Continuar</button>
+                </div>
+            </div>
+        </form>
+        <div class="tip-footer">
+            <h4>Consejo para tu clave</h4>
+            <p>La inclusión de tu apodo y código de registro servirán para validarte como usuario y habilitarte para poder operar en el sitio.</p>
+        </div>
+</div>

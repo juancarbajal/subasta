@@ -1,0 +1,365 @@
+<script type="text/javascript">
+
+function f_getDatosDistrito(codDIst){
+    $.ajax({
+		type: "GET",
+		url:'<?php echo $this->baseUrl()?>/pagos/index/ajax-get-distrito',
+		dataType: "json",
+		cache: "false",
+                data:{departamento:$('#departamento').val()},
+		contentType: "application/x-www-form-urlencoded",
+		success: function(data){
+                $("#distrito").empty();
+                    $("#distrito").append('<option value="">---Seleccione---</option>');
+                    for(var x=0; x < data.length; x++){
+                       
+                        if(data[x].CCIUDIS==codDIst){
+                            $("#distrito").append('<option selected="selected" value="'+ data[x].CCIUDIS +'">' + data[x].DCIUDIS+ '</option>');
+                        }else{
+                            $("#distrito").append('<option value="'+ data[x].CCIUDIS +'">' + data[x].DCIUDIS+ '</option>');
+                        }
+                    }
+		}
+	});
+}
+function neoFooterPopup(pagina){ ancho=606;alto=402;barras="no";izquierda=(screen.width)?(screen.width-ancho)/2:100;arriba=(screen.height)?(screen.height-alto)/2:100;
+opciones="toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars="+barras+",resizable=0,width="+ancho+",height="+alto+",left="+izquierda+",top="+arriba+"";
+window.open(pagina,"nombre",opciones);}
+</script>
+<style>
+a.icon_visa {
+    position: relative;
+    left: 282px;
+    top: -24px;
+    width: 67px;
+    height: 30px;
+    display: block;
+    background: url(<?php echo $this->baseUrl() ?>/f/img/global/pago-sprite.png) 934px -127px;
+}
+</style>
+<div id='overflow'>
+	<div id='content' class="proceso-pago-pag">
+        <div class='detail' style="width:340px; float:left;margin-top:10px;margin-left:10px">
+            <h3> Detalle de compra <a href="<?php echo $this->baseUrl() ?>/usuario/venta/activas/opc/categoria/codigo/0">mira tus avisos</a> </h3>
+			<div class='content'>
+				<h4>Aviso tipo <?php echo $this->TIT ?></h4>
+				<ul>
+					<?php if ($this->ID_TIPO_DESTAQUE != 2){ ?>
+                        <li>Publicación en Kotear.pe con destaque en portada</li>
+                        <li>Prioridad en lista de resultados</li>
+                    <?php  }else{ ?>
+                        <li>Prioridad en lista de resultados</li>
+                    <?php  } ?>
+                    <li> <?php echo ($this->CANT_FOTO==18)?'Fotos ilimitadas':$this->CANT_FOTO.'Fotos'; ?> para la web</li>
+                    <li> <?php echo $this->DIAS_PUB; ?>  D&iacute;as de tiempo de publicación en web a partir de hoy,
+					 <?php echo $this->FECHA_PUBWEB?> (1)</li>
+
+                    <?php if ($this->TIPO_IMPRESO == 1) {?>
+					<li>1 Anuncio en Edición impresa de Kotear para el <?php echo $this->FECHA_PUBLICACION; ?> (1)</li>
+                    <?php } ?>
+				</ul>
+				
+				<div class='total'>
+					<h4>Total</h4>
+					* El precio incluye IGV
+					<div class='price'>
+                    S/. <?php echo $this->MONTO; ?>
+                    </div>
+				</div>
+                <div class='legalpie'>
+                    <p>(1) Para iniciar los avisos debe estar todo cancelado</p>
+                </div>
+                
+			</div>            
+			<!--<div class='bottom_border'></div>-->
+		</div>
+
+	<div class="payment">
+	<form class="dlgrid no_padding no_bg" method="get" id="fromTipoComprobante" name="fromTipoComprobante" action="<?php echo $this->baseUrl() ?>/pagos/index/enviar-medio-pago" >
+		<div class="payment_inner mtb_10">
+			<h3>Tipo de Comprobante</h3>
+      <?php if (isset($this->errors)) { ?>
+        <div class="error" id="server">
+		 <dl>
+        <?php  foreach ($this->errors as $index =>$error):?>
+          <?php if ($error != null){ ?>
+          <dt><?php echo $index; ?></dt>
+          <dd><?php echo implode('<br/>', $error);?></dd>
+        <?php } ?>
+      <?php endforeach; ?>
+        </dl>
+      </div>
+      <?php } ?>
+			<div class="dform">
+				<fieldset>			
+					<div class="item radio">
+						<div class="title">Desea una</div>
+                    <?php if ($this->update){ ?>
+						<label>
+                            <input id="chk_bol" type="radio" checked="" value="0" name="document_type" class="cambioFormulario"/>
+							Boleta
+						</label>
+						<label>
+							<input id="chk_fac" type="radio" data='' value="3" name="document_type" class="cambioFormulario"/>
+							Factura
+						</label>
+                    <?php } else {?>
+   <label><?php echo (($this->datosUsuario['ID_TIPO_DOC']==1)?'FACTURA':'BOLETA'); ?></label>
+
+   <?php } ?>
+					</div> <!-- item_radio -->
+					
+					<div class="habilitado" id="boleta">
+						<div>
+<!--							<p>
+							<label class="label_perfil">Perfil Pago:</label>
+							<span class="nombre_perfil">Cliente Bolsa </span>
+							</p>
+	 -->
+						<input type="hidden" name="perfil_pago_boleta" value="15" />
+
+<!-- Formulario facturación-->
+            <table class="mf fb">
+                <tr>
+                    <input type="hidden" name="tipoDocumentoHidden" id="tipoDocumentoHidden" />
+                    <th width="30%">Número de Documento:</th><td>
+                        <?php if($this->update) { ?>
+                        <input type="text" name="numDoc" id="numDoc" value="<?php echo $this->datosUsuario['NRO_DOC'] ?>" >
+                        <?php } else { echo $this->datosUsuario['NRO_DOC']; } ?></td>
+                </tr>
+                <?php if($this->update) { //Si se ingresan ?>
+                <tr class="typeRUC">
+                <th width="30%">Razón Social:</th><td>
+                <input type="text" name="razonSocial" id="razonSocial" value="<?php echo $this->datosUsuario['RAZON_SOCIAL'] ?>" ></td>
+                </tr>
+                <tr class="typeDNI" id="divApePat">
+                                    <th width="30%">Apellido Paterno:</th><td>
+                 <input type="text" name="apePat" id="apePat" value="<?php echo $this->datosUsuario['APEPAT'] ?>" >
+                </td></tr>
+                <tr class="typeDNI">
+                                    <th width="30%">Apellido Materno:</th><td>
+                 <input type="text" name="apeMat" id="apeMat" value="<?php echo $this->datosUsuario['APEMAT'] ?>" >
+                 </td></tr>
+                 <tr class="typeDNI">
+                    <th width="30%">Nombres:</th><td>
+                        <input type="text" name="nombre" id="nombre" maxlength="200" value="<?php echo $this->datosUsuario['NOM'] ?>" >
+                        </td></tr>  
+            <?} else {?>
+            <?php if($this->datosUsuario[ID_TIPO_DOC]==1) {?>
+                  <tr class="typeRUC"><th width="30%">Razón Social:</th><td><?php echo $this->datosUsuario['RAZON_SOCIAL'];?></td></tr>
+                      <?php } else {?>
+            <tr class="typeDNI" id="divApePat"><th width="30%">Apellido Paterno:</th><td><?php echo $this->datosUsuario['APEPAT']; ?></td>
+            </tr>
+            <tr class="typeDNI">
+                    <th width="30%">Apellido Materno:</th><td><?php echo $this->datosUsuario['APEMAT'];?></td></tr>
+                
+                <tr class="typeDNI">
+                    <th width="30%">Nombres:</th><td><?php echo $this->datosUsuario['NOM'];?></td></tr>                
+                <?php }?>
+            <?php } ?>
+                <tr>
+                    <th width="30%">Email:</th><td>
+                        <?php if($this->update){ ?>
+                        <input type="text" name="email" id="email" value="<?php echo $this->datosUsuario['EMAIL']; ?>" ></td>
+                        <?php } else { echo $this->datosUsuario['EMAIL']; } ?>
+                </tr>
+                <tr>
+                    <th>Teléfono (9 digitos)</th><td>
+                        <?php if($this->update){ ?>
+                        <input type="text" name="telefono" id="telefono" value="<?php echo $this->datosUsuario['FONO'] ?>" ></td>
+                        <?php } else { echo $this->datosUsuario['FONO']; } ?>
+                </tr>
+               
+                <tr>
+                    <th>Departamento</th><td>
+                        <?php if($this->update){ ?>
+                        <select id="departamento" name="departamento" onchange="f_getDatosDistrito('')" name="departamento">
+                           <option value="">----seleccione----</option>
+                           <?php foreach($this->departamento as $index) {?>
+                           <option <?php if($this->datosUsuario['COD_DPTA'] == $index->CDPTEST) { ?> selected="selected" <?php } ?> value="<?php echo $index->CDPTEST ?>"><?php echo $index->DDPEST ?></option>
+                           <?php } ?>
+                        </select>
+                        <?php } else { echo $this->datosUsuario['NOM_DPTA']; } ?></td>
+                </tr>
+                <tr>
+                    <th>Distrito</th><td>
+                        <?php if($this->update){ ?>
+                        <select id="distrito" name="distrito"><option value="">----seleccione----</option></select></td>
+                        <?php } else { echo $this->datosUsuario['NOM_DIST']; } ?>
+                </tr>
+                <tr>
+                    <th>Urbanización</th><td>
+                        <?php if($this->update){ ?>
+                        <select id="urbanizacion" name="urbanizacion"><option value="">----seleccione----</option>
+                           <?php foreach($this->centrosPoblados as $index)
+                           {?>
+                           <option <?php if($this->datosUsuario[COD_URB] == $index->ctippob) { ?> selected="selected" <?php } ?> value="<?php echo $index->ctippob ?>"><?php echo $index->dtippob ?></option>
+                           <?php
+                           }  ?>
+                        </select>
+                        <?php } else { echo $this->datosUsuario['NOM_COD_URB']; } ?>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Nombre Urbanización</th><td>
+                        <?php if($this->update){ ?>
+                        <input type="text" name="nomUrbanizacion" id="nomUrbanizacion" value="<?php echo $this->datosUsuario[NOM_URB] ?>" ></td>
+                        <?php } else { echo $this->datosUsuario['NOM_URB']; } ?>
+                </tr>
+                <tr>
+                    <th>Tipo de v&iacute;a</th><td>
+                         <?php if($this->update){ ?>
+                        <select id="tipoCalle" name="tipoCalle"><option value="">----seleccione----</option>
+                           <?php foreach($this->tipoCalle as $index)
+                           {?>
+                           <option <?php if($this->datosUsuario['COD_TIPO_CALLE'] == $index->ctipcll) { ?> selected="selected" <?php } ?> value="<?php echo $index->ctipcll ?>"><?php echo $index->dtipcll ?></option>
+                           <?php } ?>
+                        </select>
+                         <?php } else { echo $this->datosUsuario['NOM_TIPO_CALLE']; } ?>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Nombre de V&iacute;a</th><td>
+                        <?php if($this->update){ ?>
+                        <input type="text" name="nomCalle" id="nomCalle" value="<?php echo $this->datosUsuario['NOM_CALLE'] ?>" ></td>
+                        <?php } else { echo $this->datosUsuario['NOM_CALLE']; } ?>
+                </tr>
+                <tr>
+                    <th>Número</th><td>
+                        <?php if($this->update){ ?>
+                        <input type="text" name="numero" id="numero" value="<?php echo $this->datosUsuario['NUMERO'] ?>" ></td>
+                        <?php } else { echo $this->datosUsuario['NUMERO']; } ?>
+                </tr>
+            </table>
+<!-- Fin Formulario Facturación-->
+						</div>			
+					
+					</div>
+				</fieldset>			
+			</div>
+		</div>    
+		<div class='payment_inner'>
+            <h3>Método de pago</h3>
+			<div class="dform" >
+                    <input type="hidden" name="ids" value="<?php echo $this->IDS;?>" />
+                    <input type="hidden" name="montoids" value="<?php echo $this->MONTO;?>" />
+                    <fieldset class="credit-cards clearfix">
+					<div class="title">
+          <span class="inline">Pagar sin Tarjeta de Crédito </span>
+					<span id="icon_pagoefectivo" class="modalEfectivoPago" style="cursor:pointer">
+            <a class="inline_mdl help inline-block cboxElement" title="Que es Pago Efectivo?" href="#"></a>
+          </span>
+          </div>
+					<div class="item radio clearfix">
+						<label class="pago-efectivo">
+							<input type="radio" value="1" checked="checked" name="medioPago">
+								<span class="card">Compra con PagoEfectivo y paga a través de internet o en cualquier oficina del BCP, BBVA, Scotiabank y en establecimientos autorizados que tengan el logo de PagoEfectivo y/o FullCarga</span>
+						</label>
+                      <a class="modalEfectivoPago" href="#" style="color: #525151;text-decoration: underline;float: left;margin-left: 103px;margin-bottom: 10px;"><strong>¿Qué es PagoEfectivo?</strong></a>
+					</div>				
+					<div class="title"><span class="inline">Pagar con Tarjeta de Crédito</span></div>
+					<div class="item radio clearfix">
+						<!--<label class="visa">
+							<input type="radio" value="2" name="medioPago">
+						        <span class="card relative">Pago con tarjeta de crédito Visa</span>
+						        <span class="icon_visa"></span>
+						</label>-->
+                                                 <div class='visa' style="line-height: 26px;">
+                                                        <input type="radio" name="metodo_pago" value="0"/>
+                                                         <a class="card" style="margin:0;width:0px;height:43px;float:left;" href="http://www.visanet.com.pe/" target="_blank"></a>
+                                                         <span class='relative' style="position:relative">Pago con Tarjeta de Crédito Visa<a href="javascript:neoFooterPopup('http://www.visanet.com.pe/visa.htm');" title="Verified by Visa" class="icon_visa"></a></span>
+                                                </div>
+					</div>
+					<div class="item radio clearfix">
+						<label class="mastercard">
+							<input type="radio" value="3" name="medioPago">
+								<span style="line-height: 15px;" class="card ">Pago con tarjeta de crédito Mastercard<br>Se aceptan tarjetas Curacao, Carsa, Ace Home Center, Ripley y afiliadas</span>
+								<span class="desc"></span>
+						</label>
+					</div>	
+					</fieldset>
+
+                    
+			</div>
+		</div>
+	
+    <div class="controls">
+        <input id="sub_button" class='submit btn_continue123' type='submit' value='Pagar' name="pagar" />
+    </div>
+</form>
+	</div>
+    	<div class='clear'></div>
+	</div>
+    <div id ="detalle_compra"> </div>
+	<div class='clear'></div>
+	<div class='clear'></div>
+</div>
+
+
+<div id="modalPago" class="modal" style="width: 620px; position: absolute; top: 228px; left: 346.5px; display: block; z-index: 9999; padding-bottom:50px;">
+    <div class="pagoefectivo-wrap-pago">
+      <div class="pagoefectivo-lb-pago">
+        <div class="pagoefectivo-container-pago">
+          <h2 class="title-pago">¿Qué es PagoEfectivo?</h2>
+          <p class="description-pago">PagoEfectivo es una forma fácil  y segura de comprar a través de internet. Es cómodo y efectivo pues no necesitas tarjeta de crédito.</p>
+          <div class="video-player-pago">
+
+            <div id="pagoefectivo-video-pago"></div>
+          
+          </div>
+          <p class="description2-pago">Hacerlo es absolutamente gratis, seguro y no incluye adicionales. Puedes hacer efectivo tu pago en las agencias autorizadas de:</p>
+          <div class="means-of-payment-pago">
+            <div class="left-pago"><img src="<?php echo $this->baseUrl() ?>/f/img/global/bcp-pe.jpg" alt="Full Carga" width="90" height="30">
+            </div>
+            <div class="right-pago">
+              <p>Agencias del BCP, Agentes BCP o por banca por internet BCP.</p>
+            </div>
+          </div>
+          <div class="means-of-payment-pago">
+            <div class="left-pago"><img src="<?php echo $this->baseUrl() ?>/f/img/global/bbva-pe.jpg" alt="Full Carga" width="90" height="30">
+            </div>
+            <div class="right-pago">
+              <p>Agencias del BBVA, AgentesExpress, Kasnet o por banca por internet del BBVA.</p>
+            </div>
+          </div>
+          <div class="means-of-payment-pago">
+            <div class="left-pago"><img src="<?php echo $this->baseUrl() ?>/f/img/global/scotiabank-pe.jpg" alt="Full Carga" width="90" height="30">
+            </div>
+            <div class="right-pago">
+              <p>Agencias de Scotiabank, Cajeros Express o por Vía Scotia en línea.</p>
+            </div>
+          </div>
+          <div class="means-of-payment-pago">
+            <div class="left-pago"><img src="<?php echo $this->baseUrl() ?>/f/img/global/fullcarga-pe.jpg" alt="Full Carga" width="90" height="30">
+            </div>
+            <div class="right-pago">
+              <p>Cualquier establecimiento autorizado (Bodegas, Farmacias, Cabinas, Locutorios, etc.) con el logo de PagoEfectivo y/o Fullcarga.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+    <div style=" position:fixed; top: 0px; left: 0px;opacity: 0.9; z-index: 9998; background-color: rgb(51, 51, 51);" id="exposeMask"></div>
+  <?php 
+    $dominio=str_replace("http://", "",$this->baseUrl());
+    $dominio=str_replace("/", "", $dominio);
+  ?>
+<script type="text/javascript">
+  var baseUrl_='<?php echo $this->baseUrl() ?>/';
+  var domainName_='<?php echo $dominio; ?>/';
+</script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl() ?>/f/js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl() ?>/f/js/lightbox/js/swfobject/swfobject.js"></script>
+    <script type="text/javascript">
+    var params={},
+    flashvars={};
+
+    params.allowscriptaccess = "always";
+    params.allowfullscreen = "true";
+    params.wmode = "opaque";
+    params.flashvars = "file="+baseUrl_+"f/video/1.flv&repeat=no&stretching=fill&skin="+baseUrl_+"f/js/lightbox/js/player/md.swf&autostart=false&bufferlength=1&image="+baseUrl_+"f/video/1.jpg";
+    swfobject.embedSWF(""+baseUrl_+"f/js/lightbox/js/player/playertv.swf", "pagoefectivo-video-pago", "500", "300", "9", ""+baseUrl_+"f/js/lightbox/js/swfobject/expressInstall.swf",flashvars, params);
+  </script>
+    

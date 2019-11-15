@@ -1,0 +1,14 @@
+<?if (isset($this->errors)){?>
+    <?foreach($this->errors  as $index=>$error){?>
+         <br/><b/> <?=$index ?></b><br/>
+              <?=implode('<br/>',$error)?>
+    <?}?>
+<?}?>
+<?=$this->form('frmRegistro',array('method'=>'get'))?>
+<div>Usuario <?=$this->formText('usuario')?></div>
+<div>Clave <?=$this->formPassword('clave')?></div>
+<div><?=$this->formSubmit('btnSubmit','Ingresar')?></div>
+</form>
+<script type="text/javascript">
+      document.getElementById('usuario').focus();
+</script>

@@ -1,0 +1,60 @@
+<?php 
+if (count($this->data)>0) {
+?>
+    <form method="post" action="" form="/item/especial-form" enctype="application/x-www-form-urlencoded" 
+          id="formAddEspecialSave">
+    <h4 class="header-seccion">Agregar Item - Especial</h4>
+    <div class="form-inline aFormLineBottom">
+        <label class="awidth2 optional" for="f_modulo">Módulo</label>
+        <span><?= $this->form->f_modulo->renderViewHelper(); ?></span>
+        <input type="submit" class="btn btn-primary" value="Guardar" id="apfbBtnSearch" name="a_guardar"> 
+    </div>
+    <table class="fbTable table table-bordered table-striped">
+        <thead >
+            <tr>
+                <th ></th>
+                <th >Foto</th>
+                <th >Cod Aviso</th>
+                <th >Titulo Aviso</th>
+                <th >Fec. pub</th>
+                <th >Precio</th>
+                <th >Duración</th>
+                <th >Apodo</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+            $class = array(0 => 'even', 1 => '');
+            $i = 0;
+            foreach ($this->data as $data) : 
+        ?>
+                <tr class="<?= $class[$i++ % 2] ?>">
+                    <td class="headAccion">
+                        <input type="radio" name="f_idAviso" value="<?= $this->escape($data->ID_AVISO) ?>">
+                    </td>
+                    <td>
+                        <!--<img src="<?=URL_STATIC?>img/notFound.jpg" 
+                             data-original="<?=$this->ruta.$this->escape($data->NOM)?>" 
+                             alt="<?=$this->escape($data->NOM)?>" width="90" height="68" class="lazy" /> -->
+                        <img onerror="this.src = '<?=URL_STATIC?>img/notFound.jpg'" src="<?=$this->ruta.$this->escape($data->NOM)?>" alt="<?=$this->escape($data->NOM)?>" width="90" height="68" />
+                    </td>
+                    <td ><?= $this->escape($data->ID_AVISO) ?></td>
+                    <td ><?= $this->escape($data->AVISO) ?></td>
+                    <td ><?= $this->escape($data->FEC_PUB) ?></td>
+                    <td ><?= $this->escape($data->PRECIO) ?></td>
+                    <td ><?= $this->escape($data->DURACION) ?></td>
+                    <td ><?= $this->escape($data->APODO) ?></td>
+                </tr>
+        <?  endforeach; ?>
+        </tbody>
+    </table>
+    </form>
+    <div class="fbPagination">
+        <?= $this->paginationControl($this->paginador, 'Sliding', '_partials/_pag.phtml') ?>
+    </div>
+<?php } else { ?>
+    <div class="alert alert-error">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>No hay datos registrados con esos parámetros.</strong>
+    </div>
+<?php } ?>

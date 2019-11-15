@@ -1,0 +1,43 @@
+
+<div id="body-content" class="cambioclave-pag regform-pag col-master">
+  <div id="s_level1" class="clearfix">
+    <div class="col17">
+      <h3>Recuperación de clave / Confirmación de solicitud de cambio de clave </h3>
+    </div>
+    <div class="last col5"></div>
+  </div>
+  <div id="s_level2" class="clearfix">
+    <div id="left-bar" class="col17">
+    <?php if (isset($this->msg)) {?>
+    <div class='error'><?php echo $this->msg?></div>
+    <?php }?>
+      <form action="" method="post" name="cambioclave" id="cambioclave">
+        <h4>Obtén tu nueva clave </h4>
+        <div class="block1 group clearfix">
+          <p>Ingresa tu Apodo y el Código de confirmación que te enviamos a tu casilla de correo para
+            obtener / cambiar tu clave: </p>
+          <p class="apodo inpt">
+            <label for="apodo">Apodo<br />
+              <input type="text" name="apodo" id="apodo" value="" />
+              <span class="required">(*) </span></label>
+          </p>
+          <p class="inpt">
+            <label for="codigo">Código de confirmación: <br />
+              <input type="text" name="codigo" id="codigo" value="" />
+              <span class="required">(*) </span> </label>
+          </p>
+        </div>
+        <div class="controls">
+          <button type="submit" class="botonContinuar">Continuar</button>
+        </div>
+      </form>
+    </div>
+    <div id="right-bar" class="last col5">
+      <div class="block1 tip">
+        <h4>Consejo para tu clave</h4>
+        <p> Al solicitar recuperar tu clave, el sistema te envió un e-mail con tu Apodo y un código de confirmación de solicitud. Incluye el Apodo y código que te enviamos para obtener tu clave. </p>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>

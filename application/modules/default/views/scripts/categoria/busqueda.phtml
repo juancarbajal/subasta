@@ -1,0 +1,92 @@
+  <div id="search">
+    <div class="content col-master">
+      <form id="searchfrm" class="prefix1" name="searchfrm" method="post" action="">
+        <h2 class="hide">Buscar</h2>
+        <p class="inpt">
+          <label for="lookingfor">Estoy buscando...
+            <input type="text" name="lookingfor" id="lookingfor" />
+          </label>
+        </p>
+        <p class="selc">
+          <label><span class="hide">En la categoria...</span>
+            <select name="categs" id="categs">
+              <option value="0">Todas las Categorias</option>
+            </select>
+          </label>
+        </p>
+        <p class="submt">
+          <button type="submit">Buscar</button>
+          <a href="#">Busqueda Avanzada</a></p>
+      </form>
+    </div>
+  </div>
+  <hr class="hide" />
+  <div id="body-content" class="cat-list col-master">
+    <!--inicio arbol-->
+    <h2>Categorías</h2>
+      <ul id="cat-list">
+         <?php
+            $cont1 = 0;
+            $cont2 = 0; //Indica
+            $cont3 = 0;
+            $cont4 = 0;
+            $contL2 = 0;
+            foreach ($this->arbolCategoria as $ac) :
+              $titulo = $ac->NOM_CATEGORIA;
+              $idCategoria = $ac->ID_CATEGORIA;
+              if ($ac->NIVEL == 1) {
+                  if ($cont1 == 0) { ?>
+          <li class="first even item-0">
+            <h3><a href="<?php echo $this->baseUrl(); ?>/busqueda/?c=<?php echo $idCategoria; ?>" title="<?php echo $titulo; ?>"><?php echo $titulo; ?></a></h3>
+                <ul>
+                    <?php
+                      $cont1++;
+                  }
+                  else { ?>
+                      </ul>
+                    </li>
+               <li class="first even item-0">
+                <h3><a href="<?php echo $this->baseUrl(); ?>/busqueda/?c=<?php echo $idCategoria; ?>" title="<?php echo $titulo; ?>"><?php echo $titulo; ?></a></h3>
+                <ul>
+                  <?php }
+              }
+            ?>
+              <?php
+                if ($ac->NIVEL == 2) {
+                    if ($cont2 == 0) {
+                       $cont2 = 1; ?>
+                    <li class="even item-0 first">
+                      <dl>
+                        <dt><a href="<?php echo $this->baseUrl(); ?>/busqueda/?c=<?php echo $idCategoria; ?>" title="<?php echo $titulo; ?>"><?php echo $titulo; ?></a></dt>
+                        <dd>
+                    <?php }
+                    else { ?>
+                        </dd>
+                      </dl>
+                    </li>
+                    <li class="odd item-0 first">
+                      <dl>
+                        <dt><a href="<?php echo $this->baseUrl(); ?>/busqueda/?c=<?php echo $idCategoria; ?>" title="<?php echo $titulo; ?>"><?php echo $titulo; ?></a></dt>
+                        <dd>
+                    <?php
+                    }
+                    ?>
+                <?php } ?>
+                <?php
+                if ($ac->NIVEL >= 3) {
+                    $cont4 == 0; ?>
+                    <a href="<?php echo $this->baseUrl(); ?>/busqueda/?c=<?php echo $idCategoria; ?>" title="<?php echo $titulo; ?>"><?php echo $titulo; ?></a>
+                <?php 
+                if ($ac->NIVEL == 4) {
+                    if ($cont4 == 0) { ?>
+                        <a href="<?php echo $this->baseUrl(); ?>/busqueda/?c=<?php echo $idCategoria; ?>" title="<?php echo $titulo; ?>" class="haschild"><?php echo $titulo; ?> + </a>
+                <?php
+                    $cont4++;
+                        }
+                    }
+                }?>
+            <?php 
+            endforeach; ?>
+         </ul>
+    <!--fin arbol-->
+  </div>

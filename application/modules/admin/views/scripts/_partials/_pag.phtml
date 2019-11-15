@@ -1,0 +1,40 @@
+<?php if ($this->pageCount) { ?>
+    <div class="pagination pagination-centered">
+        <ul>
+            <?php
+            if (isset($this->previous)) {
+                $params = array('page' => $this->first);
+                echo '<li class="itemPag firstNextP"><a rel=' . $this->first . ' class="linkPag firstP pag" href="#">
+                    «Primero</a></li>';
+            }
+
+            if (isset($this->previous)) {
+                $params = array('page' => $this->previous);
+                echo '<li class="itemPag"><a rel=' . $this->previous . ' class="linkPag first pag" href="#">Anterior</a></li>';
+            }
+            ?>
+
+            <? foreach ($this->pagesInRange as $page): ?>
+                <? if ($page != $this->current): ?>
+                    <li class="itemPag"><a class="pag" rel="<?= $page ?>" href="#"><?= $page; ?></a></li>
+                    <?= $this->last == $page ? '' : '' ?>
+                <? else: ?>
+                    <li class="itemPag active"><a class="linkPag" rel="<?= $page; ?>"><?= $page; ?> <?= $this->last == $page ? '' : '' ?></a></li>
+                <? endif; ?>
+            <? endforeach; ?>
+
+            <?
+            if (isset($this->next)) {
+                $params = array('page' => $this->next);
+                echo '<li class="itemPag"><a rel="' . $this->next . '" class="linkPag next pag" href="#">Siguiente</a></li>';
+            }
+
+            if (isset($this->next)) {
+                $params = array('page' => $this->last);
+                echo '<li class="itemPag lastNext">
+                    <a rel="' . $this->last . '" class="linkPag next pag" href="#">Último »</a> </li>';
+            }
+            ?>
+        </ul>
+    </div>
+<?php } ?>

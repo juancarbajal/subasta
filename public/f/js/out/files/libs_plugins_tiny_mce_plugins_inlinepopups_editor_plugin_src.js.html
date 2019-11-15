@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>libs&#x2F;plugins&#x2F;tiny_mce&#x2F;plugins&#x2F;inlinepopups&#x2F;editor_plugin_src.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.7.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.7.0&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/admin.html">admin</a></li>
+            
+                <li><a href="..&#x2F;classes/all-modules.html">all-modules</a></li>
+            
+                <li><a href="..&#x2F;classes/default.html">default</a></li>
+            
+                <li><a href="..&#x2F;classes/jcarousel.html">jcarousel</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.AutoSave.html">tinymce.plugins.AutoSave</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.ContextMenu.html">tinymce.plugins.ContextMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/usuario.html">usuario</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/ad-actions.html">ad-actions</a></li>
+            
+                <li><a href="..&#x2F;modules/add-class-middle.html">add-class-middle</a></li>
+            
+                <li><a href="..&#x2F;modules/add-favorites.html">add-favorites</a></li>
+            
+                <li><a href="..&#x2F;modules/all-checked-uncheked.html">all-checked-uncheked</a></li>
+            
+                <li><a href="..&#x2F;modules/banner-top classified.html">banner-top classified</a></li>
+            
+                <li><a href="..&#x2F;modules/carousel-products.html">carousel-products</a></li>
+            
+                <li><a href="..&#x2F;modules/count-word.html">count-word</a></li>
+            
+                <li><a href="..&#x2F;modules/data-ubigeo.html">data-ubigeo</a></li>
+            
+                <li><a href="..&#x2F;modules/geotags.html">geotags</a></li>
+            
+                <li><a href="..&#x2F;modules/impress-ad-list.html">impress-ad-list</a></li>
+            
+                <li><a href="..&#x2F;modules/lightbox-logIn-signUp.html">lightbox-logIn-signUp</a></li>
+            
+                <li><a href="..&#x2F;modules/moduleName.html">moduleName</a></li>
+            
+                <li><a href="..&#x2F;modules/placeholder.html">placeholder</a></li>
+            
+                <li><a href="..&#x2F;modules/preview-impress.html">preview-impress</a></li>
+            
+                <li><a href="..&#x2F;modules/register-category.html">register-category</a></li>
+            
+                <li><a href="..&#x2F;modules/remove-class-home.html">remove-class-home</a></li>
+            
+                <li><a href="..&#x2F;modules/report-ad.html">report-ad</a></li>
+            
+                <li><a href="..&#x2F;modules/scrollTop.html">scrollTop</a></li>
+            
+                <li><a href="..&#x2F;modules/search-categories.html">search-categories</a></li>
+            
+                <li><a href="..&#x2F;modules/send-ad-friend.html">send-ad-friend</a></li>
+            
+                <li><a href="..&#x2F;modules/send-list-ad-email.html">send-list-ad-email</a></li>
+            
+                <li><a href="..&#x2F;modules/show-advanced-search.html">show-advanced-search</a></li>
+            
+                <li><a href="..&#x2F;modules/show-example-ads.html">show-example-ads</a></li>
+            
+                <li><a href="..&#x2F;modules/show-login-trigger.html">show-login-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-photo-products.html">show-photo-products</a></li>
+            
+                <li><a href="..&#x2F;modules/show-popup.html">show-popup</a></li>
+            
+                <li><a href="..&#x2F;modules/show-questions.html">show-questions</a></li>
+            
+                <li><a href="..&#x2F;modules/show-register-trigger.html">show-register-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-video.html">show-video</a></li>
+            
+                <li><a href="..&#x2F;modules/showMoreCategories.html">showMoreCategories</a></li>
+            
+                <li><a href="..&#x2F;modules/some-module4.html">some-module4</a></li>
+            
+                <li><a href="..&#x2F;modules/tinymce-register.html">tinymce-register</a></li>
+            
+                <li><a href="..&#x2F;modules/uploader-photos.html">uploader-photos</a></li>
+            
+                <li><a href="..&#x2F;modules/validate.html">validate</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-document.html">validate-document</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-image.html">validate-image</a></li>
+            
+                <li><a href="..&#x2F;modules/venta.html">venta</a></li>
+            
+                <li><a href="..&#x2F;modules/yOSON.html">yOSON</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: libs&#x2F;plugins&#x2F;tiny_mce&#x2F;plugins&#x2F;inlinepopups&#x2F;editor_plugin_src.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * editor_plugin_src.js
+ *
+ * Copyright 2009, Moxiecode Systems AB
+ * Released under LGPL License.
+ *
+ * License: http:&#x2F;&#x2F;tinymce.moxiecode.com&#x2F;license
+ * Contributing: http:&#x2F;&#x2F;tinymce.moxiecode.com&#x2F;contributing
+ *&#x2F;
+
+(function() {
+	var DOM = tinymce.DOM, Element = tinymce.dom.Element, Event = tinymce.dom.Event, each = tinymce.each, is = tinymce.is;
+
+	tinymce.create(&#x27;tinymce.plugins.InlinePopups&#x27;, {
+		init : function(ed, url) {
+			&#x2F;&#x2F; Replace window manager
+			ed.onBeforeRenderUI.add(function() {
+				ed.windowManager = new tinymce.InlineWindowManager(ed);
+				DOM.loadCSS(url + &#x27;&#x2F;skins&#x2F;&#x27; + (ed.settings.inlinepopups_skin || &#x27;clearlooks2&#x27;) + &quot;&#x2F;window.css&quot;);
+			});
+		},
+
+		getInfo : function() {
+			return {
+				longname : &#x27;InlinePopups&#x27;,
+				author : &#x27;Moxiecode Systems AB&#x27;,
+				authorurl : &#x27;http:&#x2F;&#x2F;tinymce.moxiecode.com&#x27;,
+				infourl : &#x27;http:&#x2F;&#x2F;wiki.moxiecode.com&#x2F;index.php&#x2F;TinyMCE:Plugins&#x2F;inlinepopups&#x27;,
+				version : tinymce.majorVersion + &quot;.&quot; + tinymce.minorVersion
+			};
+		}
+	});
+
+	tinymce.create(&#x27;tinymce.InlineWindowManager:tinymce.WindowManager&#x27;, {
+		InlineWindowManager : function(ed) {
+			var t = this;
+
+			t.parent(ed);
+			t.zIndex = 300000;
+			t.count = 0;
+			t.windows = {};
+		},
+
+		open : function(f, p) {
+			var t = this, id, opt = &#x27;&#x27;, ed = t.editor, dw = 0, dh = 0, vp, po, mdf, clf, we, w, u, parentWindow;
+
+			f = f || {};
+			p = p || {};
+
+			&#x2F;&#x2F; Run native windows
+			if (!f.inline)
+				return t.parent(f, p);
+
+			parentWindow = t._frontWindow();
+			if (parentWindow &amp;&amp; DOM.get(parentWindow.id + &#x27;_ifr&#x27;)) {
+				parentWindow.focussedElement = DOM.get(parentWindow.id + &#x27;_ifr&#x27;).contentWindow.document.activeElement;
+			}
+			
+			&#x2F;&#x2F; Only store selection if the type is a normal window
+			if (!f.type)
+				t.bookmark = ed.selection.getBookmark(1);
+
+			id = DOM.uniqueId();
+			vp = DOM.getViewPort();
+			f.width = parseInt(f.width || 320);
+			f.height = parseInt(f.height || 240) + (tinymce.isIE ? 8 : 0);
+			f.min_width = parseInt(f.min_width || 150);
+			f.min_height = parseInt(f.min_height || 100);
+			f.max_width = parseInt(f.max_width || 2000);
+			f.max_height = parseInt(f.max_height || 2000);
+			f.left = f.left || Math.round(Math.max(vp.x, vp.x + (vp.w &#x2F; 2.0) - (f.width &#x2F; 2.0)));
+			f.top = f.top || Math.round(Math.max(vp.y, vp.y + (vp.h &#x2F; 2.0) - (f.height &#x2F; 2.0)));
+			f.movable = f.resizable = true;
+			p.mce_width = f.width;
+			p.mce_height = f.height;
+			p.mce_inline = true;
+			p.mce_window_id = id;
+			p.mce_auto_focus = f.auto_focus;
+
+			&#x2F;&#x2F; Transpose
+&#x2F;&#x2F;			po = DOM.getPos(ed.getContainer());
+&#x2F;&#x2F;			f.left -= po.x;
+&#x2F;&#x2F;			f.top -= po.y;
+
+			t.features = f;
+			t.params = p;
+			t.onOpen.dispatch(t, f, p);
+
+			if (f.type) {
+				opt += &#x27; mceModal&#x27;;
+
+				if (f.type)
+					opt += &#x27; mce&#x27; + f.type.substring(0, 1).toUpperCase() + f.type.substring(1);
+
+				f.resizable = false;
+			}
+
+			if (f.statusbar)
+				opt += &#x27; mceStatusbar&#x27;;
+
+			if (f.resizable)
+				opt += &#x27; mceResizable&#x27;;
+
+			if (f.minimizable)
+				opt += &#x27; mceMinimizable&#x27;;
+
+			if (f.maximizable)
+				opt += &#x27; mceMaximizable&#x27;;
+
+			if (f.movable)
+				opt += &#x27; mceMovable&#x27;;
+
+			&#x2F;&#x2F; Create DOM objects
+			t._addAll(DOM.doc.body, 
+				[&#x27;div&#x27;, {id : id, role : &#x27;dialog&#x27;, &#x27;aria-labelledby&#x27;: f.type ? id + &#x27;_content&#x27; : id + &#x27;_title&#x27;, &#x27;class&#x27; : (ed.settings.inlinepopups_skin || &#x27;clearlooks2&#x27;) + (tinymce.isIE &amp;&amp; window.getSelection ? &#x27; ie9&#x27; : &#x27;&#x27;), style : &#x27;width:100px;height:100px&#x27;}, 
+					[&#x27;div&#x27;, {id : id + &#x27;_wrapper&#x27;, &#x27;class&#x27; : &#x27;mceWrapper&#x27; + opt},
+						[&#x27;div&#x27;, {id : id + &#x27;_top&#x27;, &#x27;class&#x27; : &#x27;mceTop&#x27;}, 
+							[&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;mceLeft&#x27;}],
+							[&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;mceCenter&#x27;}],
+							[&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;mceRight&#x27;}],
+							[&#x27;span&#x27;, {id : id + &#x27;_title&#x27;}, f.title || &#x27;&#x27;]
+						],
+
+						[&#x27;div&#x27;, {id : id + &#x27;_middle&#x27;, &#x27;class&#x27; : &#x27;mceMiddle&#x27;}, 
+							[&#x27;div&#x27;, {id : id + &#x27;_left&#x27;, &#x27;class&#x27; : &#x27;mceLeft&#x27;, tabindex : &#x27;0&#x27;}],
+							[&#x27;span&#x27;, {id : id + &#x27;_content&#x27;}],
+							[&#x27;div&#x27;, {id : id + &#x27;_right&#x27;, &#x27;class&#x27; : &#x27;mceRight&#x27;, tabindex : &#x27;0&#x27;}]
+						],
+
+						[&#x27;div&#x27;, {id : id + &#x27;_bottom&#x27;, &#x27;class&#x27; : &#x27;mceBottom&#x27;},
+							[&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;mceLeft&#x27;}],
+							[&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;mceCenter&#x27;}],
+							[&#x27;div&#x27;, {&#x27;class&#x27; : &#x27;mceRight&#x27;}],
+							[&#x27;span&#x27;, {id : id + &#x27;_status&#x27;}, &#x27;Content&#x27;]
+						],
+
+						[&#x27;a&#x27;, {&#x27;class&#x27; : &#x27;mceMove&#x27;, tabindex : &#x27;-1&#x27;, href : &#x27;javascript:;&#x27;}],
+						[&#x27;a&#x27;, {&#x27;class&#x27; : &#x27;mceMin&#x27;, tabindex : &#x27;-1&#x27;, href : &#x27;javascript:;&#x27;, onmousedown : &#x27;return false;&#x27;}],
+						[&#x27;a&#x27;, {&#x27;class&#x27; : &#x27;mceMax&#x27;, tabindex : &#x27;-1&#x27;, href : &#x27;javascript:;&#x27;, onmousedown : &#x27;return false;&#x27;}],
+						[&#x27;a&#x27;, {&#x27;class&#x27; : &#x27;mceMed&#x27;, tabindex : &#x27;-1&#x27;, href : &#x27;javascript:;&#x27;, onmousedown : &#x27;return false;&#x27;}],
+						[&#x27;a&#x27;, {&#x27;class&#x27; : &#x27;mceClose&#x27;, tabindex : &#x27;-1&#x27;, href : &#x27;javascript:;&#x27;, onmousedown : &#x27;return false;&#x27;}],
+						[&#x27;a&#x27;, {id : id + &#x27;_resize_n&#x27;, &#x27;class&#x27; : &#x27;mceResize mceResizeN&#x27;, tabindex : &#x27;-1&#x27;, href : &#x27;javascript:;&#x27;}],
+						[&#x27;a&#x27;, {id : id + &#x27;_resize_s&#x27;, &#x27;class&#x27; : &#x27;mceResize mceResizeS&#x27;, tabindex : &#x27;-1&#x27;, href : &#x27;javascript:;&#x27;}],
+						[&#x27;a&#x27;, {id : id + &#x27;_resize_w&#x27;, &#x27;class&#x27; : &#x27;mceResize mceResizeW&#x27;, tabindex : &#x27;-1&#x27;, href : &#x27;javascript:;&#x27;}],
+						[&#x27;a&#x27;, {id : id + &#x27;_resize_e&#x27;, &#x27;class&#x27; : &#x27;mceResize mceResizeE&#x27;, tabindex : &#x27;-1&#x27;, href : &#x27;javascript:;&#x27;}],
+						[&#x27;a&#x27;, {id : id + &#x27;_resize_nw&#x27;, &#x27;class&#x27; : &#x27;mceResize mceResizeNW&#x27;, tabindex : &#x27;-1&#x27;, href : &#x27;javascript:;&#x27;}],
+						[&#x27;a&#x27;, {id : id + &#x27;_resize_ne&#x27;, &#x27;class&#x27; : &#x27;mceResize mceResizeNE&#x27;, tabindex : &#x27;-1&#x27;, href : &#x27;javascript:;&#x27;}],
+						[&#x27;a&#x27;, {id : id + &#x27;_resize_sw&#x27;, &#x27;class&#x27; : &#x27;mceResize mceResizeSW&#x27;, tabindex : &#x27;-1&#x27;, href : &#x27;javascript:;&#x27;}],
+						[&#x27;a&#x27;, {id : id + &#x27;_resize_se&#x27;, &#x27;class&#x27; : &#x27;mceResize mceResizeSE&#x27;, tabindex : &#x27;-1&#x27;, href : &#x27;javascript:;&#x27;}]
+					]
+				]
+			);
+
+			DOM.setStyles(id, {top : -10000, left : -10000});
+
+			&#x2F;&#x2F; Fix gecko rendering bug, where the editors iframe messed with window contents
+			if (tinymce.isGecko)
+				DOM.setStyle(id, &#x27;overflow&#x27;, &#x27;auto&#x27;);
+
+			&#x2F;&#x2F; Measure borders
+			if (!f.type) {
+				dw += DOM.get(id + &#x27;_left&#x27;).clientWidth;
+				dw += DOM.get(id + &#x27;_right&#x27;).clientWidth;
+				dh += DOM.get(id + &#x27;_top&#x27;).clientHeight;
+				dh += DOM.get(id + &#x27;_bottom&#x27;).clientHeight;
+			}
+
+			&#x2F;&#x2F; Resize window
+			DOM.setStyles(id, {top : f.top, left : f.left, width : f.width + dw, height : f.height + dh});
+
+			u = f.url || f.file;
+			if (u) {
+				if (tinymce.relaxedDomain)
+					u += (u.indexOf(&#x27;?&#x27;) == -1 ? &#x27;?&#x27; : &#x27;&amp;&#x27;) + &#x27;mce_rdomain=&#x27; + tinymce.relaxedDomain;
+
+				u = tinymce._addVer(u);
+			}
+
+			if (!f.type) {
+				DOM.add(id + &#x27;_content&#x27;, &#x27;iframe&#x27;, {id : id + &#x27;_ifr&#x27;, src : &#x27;javascript:&quot;&quot;&#x27;, frameBorder : 0, style : &#x27;border:0;width:10px;height:10px&#x27;});
+				DOM.setStyles(id + &#x27;_ifr&#x27;, {width : f.width, height : f.height});
+				DOM.setAttrib(id + &#x27;_ifr&#x27;, &#x27;src&#x27;, u);
+			} else {
+				DOM.add(id + &#x27;_wrapper&#x27;, &#x27;a&#x27;, {id : id + &#x27;_ok&#x27;, &#x27;class&#x27; : &#x27;mceButton mceOk&#x27;, href : &#x27;javascript:;&#x27;, onmousedown : &#x27;return false;&#x27;}, &#x27;Ok&#x27;);
+
+				if (f.type == &#x27;confirm&#x27;)
+					DOM.add(id + &#x27;_wrapper&#x27;, &#x27;a&#x27;, {&#x27;class&#x27; : &#x27;mceButton mceCancel&#x27;, href : &#x27;javascript:;&#x27;, onmousedown : &#x27;return false;&#x27;}, &#x27;Cancel&#x27;);
+
+				DOM.add(id + &#x27;_middle&#x27;, &#x27;div&#x27;, {&#x27;class&#x27; : &#x27;mceIcon&#x27;});
+				DOM.setHTML(id + &#x27;_content&#x27;, f.content.replace(&#x27;\n&#x27;, &#x27;&lt;br &#x2F;&gt;&#x27;));
+				
+				Event.add(id, &#x27;keyup&#x27;, function(evt) {
+					var VK_ESCAPE = 27;
+					if (evt.keyCode === VK_ESCAPE) {
+						f.button_func(false);
+						return Event.cancel(evt);
+					}
+				});
+
+				Event.add(id, &#x27;keydown&#x27;, function(evt) {
+					var cancelButton, VK_TAB = 9;
+					if (evt.keyCode === VK_TAB) {
+						cancelButton = DOM.select(&#x27;a.mceCancel&#x27;, id + &#x27;_wrapper&#x27;)[0];
+						if (cancelButton &amp;&amp; cancelButton !== evt.target) {
+							cancelButton.focus();
+						} else {
+							DOM.get(id + &#x27;_ok&#x27;).focus();
+						}
+						return Event.cancel(evt);
+					}
+				});
+			}
+
+			&#x2F;&#x2F; Register events
+			mdf = Event.add(id, &#x27;mousedown&#x27;, function(e) {
+				var n = e.target, w, vp;
+
+				w = t.windows[id];
+				t.focus(id);
+
+				if (n.nodeName == &#x27;A&#x27; || n.nodeName == &#x27;a&#x27;) {
+					if (n.className == &#x27;mceClose&#x27;) {
+						t.close(null, id);
+						return Event.cancel(e);
+					} else if (n.className == &#x27;mceMax&#x27;) {
+						w.oldPos = w.element.getXY();
+						w.oldSize = w.element.getSize();
+
+						vp = DOM.getViewPort();
+
+						&#x2F;&#x2F; Reduce viewport size to avoid scrollbars
+						vp.w -= 2;
+						vp.h -= 2;
+
+						w.element.moveTo(vp.x, vp.y);
+						w.element.resizeTo(vp.w, vp.h);
+						DOM.setStyles(id + &#x27;_ifr&#x27;, {width : vp.w - w.deltaWidth, height : vp.h - w.deltaHeight});
+						DOM.addClass(id + &#x27;_wrapper&#x27;, &#x27;mceMaximized&#x27;);
+					} else if (n.className == &#x27;mceMed&#x27;) {
+						&#x2F;&#x2F; Reset to old size
+						w.element.moveTo(w.oldPos.x, w.oldPos.y);
+						w.element.resizeTo(w.oldSize.w, w.oldSize.h);
+						w.iframeElement.resizeTo(w.oldSize.w - w.deltaWidth, w.oldSize.h - w.deltaHeight);
+
+						DOM.removeClass(id + &#x27;_wrapper&#x27;, &#x27;mceMaximized&#x27;);
+					} else if (n.className == &#x27;mceMove&#x27;)
+						return t._startDrag(id, e, n.className);
+					else if (DOM.hasClass(n, &#x27;mceResize&#x27;))
+						return t._startDrag(id, e, n.className.substring(13));
+				}
+			});
+
+			clf = Event.add(id, &#x27;click&#x27;, function(e) {
+				var n = e.target;
+
+				t.focus(id);
+
+				if (n.nodeName == &#x27;A&#x27; || n.nodeName == &#x27;a&#x27;) {
+					switch (n.className) {
+						case &#x27;mceClose&#x27;:
+							t.close(null, id);
+							return Event.cancel(e);
+
+						case &#x27;mceButton mceOk&#x27;:
+						case &#x27;mceButton mceCancel&#x27;:
+							f.button_func(n.className == &#x27;mceButton mceOk&#x27;);
+							return Event.cancel(e);
+					}
+				}
+			});
+			
+			&#x2F;&#x2F; Make sure the tab order loops within the dialog.
+			Event.add([id + &#x27;_left&#x27;, id + &#x27;_right&#x27;], &#x27;focus&#x27;, function(evt) {
+				var iframe = DOM.get(id + &#x27;_ifr&#x27;);
+				if (iframe) {
+					var body = iframe.contentWindow.document.body;
+					var focusable = DOM.select(&#x27;:input:enabled,*[tabindex=0]&#x27;, body);
+					if (evt.target.id === (id + &#x27;_left&#x27;)) {
+						focusable[focusable.length - 1].focus();
+					} else {
+						focusable[0].focus();
+					}
+				} else {
+					DOM.get(id + &#x27;_ok&#x27;).focus();
+				}
+			});
+			
+			&#x2F;&#x2F; Add window
+			w = t.windows[id] = {
+				id : id,
+				mousedown_func : mdf,
+				click_func : clf,
+				element : new Element(id, {blocker : 1, container : ed.getContainer()}),
+				iframeElement : new Element(id + &#x27;_ifr&#x27;),
+				features : f,
+				deltaWidth : dw,
+				deltaHeight : dh
+			};
+
+			w.iframeElement.on(&#x27;focus&#x27;, function() {
+				t.focus(id);
+			});
+
+			&#x2F;&#x2F; Setup blocker
+			if (t.count == 0 &amp;&amp; t.editor.getParam(&#x27;dialog_type&#x27;, &#x27;modal&#x27;) == &#x27;modal&#x27;) {
+				DOM.add(DOM.doc.body, &#x27;div&#x27;, {
+					id : &#x27;mceModalBlocker&#x27;,
+					&#x27;class&#x27; : (t.editor.settings.inlinepopups_skin || &#x27;clearlooks2&#x27;) + &#x27;_modalBlocker&#x27;,
+					style : {zIndex : t.zIndex - 1}
+				});
+
+				DOM.show(&#x27;mceModalBlocker&#x27;); &#x2F;&#x2F; Reduces flicker in IE
+				DOM.setAttrib(DOM.doc.body, &#x27;aria-hidden&#x27;, &#x27;true&#x27;);
+			} else
+				DOM.setStyle(&#x27;mceModalBlocker&#x27;, &#x27;z-index&#x27;, t.zIndex - 1);
+
+			if (tinymce.isIE6 || &#x2F;Firefox\&#x2F;2\.&#x2F;.test(navigator.userAgent) || (tinymce.isIE &amp;&amp; !DOM.boxModel))
+				DOM.setStyles(&#x27;mceModalBlocker&#x27;, {position : &#x27;absolute&#x27;, left : vp.x, top : vp.y, width : vp.w - 2, height : vp.h - 2});
+
+			DOM.setAttrib(id, &#x27;aria-hidden&#x27;, &#x27;false&#x27;);
+			t.focus(id);
+			t._fixIELayout(id, 1);
+
+			&#x2F;&#x2F; Focus ok button
+			if (DOM.get(id + &#x27;_ok&#x27;))
+				DOM.get(id + &#x27;_ok&#x27;).focus();
+			t.count++;
+
+			return w;
+		},
+
+		focus : function(id) {
+			var t = this, w;
+
+			if (w = t.windows[id]) {
+				w.zIndex = this.zIndex++;
+				w.element.setStyle(&#x27;zIndex&#x27;, w.zIndex);
+				w.element.update();
+
+				id = id + &#x27;_wrapper&#x27;;
+				DOM.removeClass(t.lastId, &#x27;mceFocus&#x27;);
+				DOM.addClass(id, &#x27;mceFocus&#x27;);
+				t.lastId = id;
+				
+				if (w.focussedElement) {
+					w.focussedElement.focus();
+				} else if (DOM.get(id + &#x27;_ok&#x27;)) {
+					DOM.get(w.id + &#x27;_ok&#x27;).focus();
+				} else if (DOM.get(w.id + &#x27;_ifr&#x27;)) {
+					DOM.get(w.id + &#x27;_ifr&#x27;).focus();
+				}
+			}
+		},
+
+		_addAll : function(te, ne) {
+			var i, n, t = this, dom = tinymce.DOM;
+
+			if (is(ne, &#x27;string&#x27;))
+				te.appendChild(dom.doc.createTextNode(ne));
+			else if (ne.length) {
+				te = te.appendChild(dom.create(ne[0], ne[1]));
+
+				for (i=2; i&lt;ne.length; i++)
+					t._addAll(te, ne[i]);
+			}
+		},
+
+		_startDrag : function(id, se, ac) {
+			var t = this, mu, mm, d = DOM.doc, eb, w = t.windows[id], we = w.element, sp = we.getXY(), p, sz, ph, cp, vp, sx, sy, sex, sey, dx, dy, dw, dh;
+
+			&#x2F;&#x2F; Get positons and sizes
+&#x2F;&#x2F;			cp = DOM.getPos(t.editor.getContainer());
+			cp = {x : 0, y : 0};
+			vp = DOM.getViewPort();
+
+			&#x2F;&#x2F; Reduce viewport size to avoid scrollbars while dragging
+			vp.w -= 2;
+			vp.h -= 2;
+
+			sex = se.screenX;
+			sey = se.screenY;
+			dx = dy = dw = dh = 0;
+
+			&#x2F;&#x2F; Handle mouse up
+			mu = Event.add(d, &#x27;mouseup&#x27;, function(e) {
+				Event.remove(d, &#x27;mouseup&#x27;, mu);
+				Event.remove(d, &#x27;mousemove&#x27;, mm);
+
+				if (eb)
+					eb.remove();
+
+				we.moveBy(dx, dy);
+				we.resizeBy(dw, dh);
+				sz = we.getSize();
+				DOM.setStyles(id + &#x27;_ifr&#x27;, {width : sz.w - w.deltaWidth, height : sz.h - w.deltaHeight});
+				t._fixIELayout(id, 1);
+
+				return Event.cancel(e);
+			});
+
+			if (ac != &#x27;Move&#x27;)
+				startMove();
+
+			function startMove() {
+				if (eb)
+					return;
+
+				t._fixIELayout(id, 0);
+
+				&#x2F;&#x2F; Setup event blocker
+				DOM.add(d.body, &#x27;div&#x27;, {
+					id : &#x27;mceEventBlocker&#x27;,
+					&#x27;class&#x27; : &#x27;mceEventBlocker &#x27; + (t.editor.settings.inlinepopups_skin || &#x27;clearlooks2&#x27;),
+					style : {zIndex : t.zIndex + 1}
+				});
+
+				if (tinymce.isIE6 || (tinymce.isIE &amp;&amp; !DOM.boxModel))
+					DOM.setStyles(&#x27;mceEventBlocker&#x27;, {position : &#x27;absolute&#x27;, left : vp.x, top : vp.y, width : vp.w - 2, height : vp.h - 2});
+
+				eb = new Element(&#x27;mceEventBlocker&#x27;);
+				eb.update();
+
+				&#x2F;&#x2F; Setup placeholder
+				p = we.getXY();
+				sz = we.getSize();
+				sx = cp.x + p.x - vp.x;
+				sy = cp.y + p.y - vp.y;
+				DOM.add(eb.get(), &#x27;div&#x27;, {id : &#x27;mcePlaceHolder&#x27;, &#x27;class&#x27; : &#x27;mcePlaceHolder&#x27;, style : {left : sx, top : sy, width : sz.w, height : sz.h}});
+				ph = new Element(&#x27;mcePlaceHolder&#x27;);
+			};
+
+			&#x2F;&#x2F; Handle mouse move&#x2F;drag
+			mm = Event.add(d, &#x27;mousemove&#x27;, function(e) {
+				var x, y, v;
+
+				startMove();
+
+				x = e.screenX - sex;
+				y = e.screenY - sey;
+
+				switch (ac) {
+					case &#x27;ResizeW&#x27;:
+						dx = x;
+						dw = 0 - x;
+						break;
+
+					case &#x27;ResizeE&#x27;:
+						dw = x;
+						break;
+
+					case &#x27;ResizeN&#x27;:
+					case &#x27;ResizeNW&#x27;:
+					case &#x27;ResizeNE&#x27;:
+						if (ac == &quot;ResizeNW&quot;) {
+							dx = x;
+							dw = 0 - x;
+						} else if (ac == &quot;ResizeNE&quot;)
+							dw = x;
+
+						dy = y;
+						dh = 0 - y;
+						break;
+
+					case &#x27;ResizeS&#x27;:
+					case &#x27;ResizeSW&#x27;:
+					case &#x27;ResizeSE&#x27;:
+						if (ac == &quot;ResizeSW&quot;) {
+							dx = x;
+							dw = 0 - x;
+						} else if (ac == &quot;ResizeSE&quot;)
+							dw = x;
+
+						dh = y;
+						break;
+
+					case &#x27;mceMove&#x27;:
+						dx = x;
+						dy = y;
+						break;
+				}
+
+				&#x2F;&#x2F; Boundary check
+				if (dw &lt; (v = w.features.min_width - sz.w)) {
+					if (dx !== 0)
+						dx += dw - v;
+
+					dw = v;
+				}
+	
+				if (dh &lt; (v = w.features.min_height - sz.h)) {
+					if (dy !== 0)
+						dy += dh - v;
+
+					dh = v;
+				}
+
+				dw = Math.min(dw, w.features.max_width - sz.w);
+				dh = Math.min(dh, w.features.max_height - sz.h);
+				dx = Math.max(dx, vp.x - (sx + vp.x));
+				dy = Math.max(dy, vp.y - (sy + vp.y));
+				dx = Math.min(dx, (vp.w + vp.x) - (sx + sz.w + vp.x));
+				dy = Math.min(dy, (vp.h + vp.y) - (sy + sz.h + vp.y));
+
+				&#x2F;&#x2F; Move if needed
+				if (dx + dy !== 0) {
+					if (sx + dx &lt; 0)
+						dx = 0;
+	
+					if (sy + dy &lt; 0)
+						dy = 0;
+
+					ph.moveTo(sx + dx, sy + dy);
+				}
+
+				&#x2F;&#x2F; Resize if needed
+				if (dw + dh !== 0)
+					ph.resizeTo(sz.w + dw, sz.h + dh);
+
+				return Event.cancel(e);
+			});
+
+			return Event.cancel(se);
+		},
+
+		resizeBy : function(dw, dh, id) {
+			var w = this.windows[id];
+
+			if (w) {
+				w.element.resizeBy(dw, dh);
+				w.iframeElement.resizeBy(dw, dh);
+			}
+		},
+
+		close : function(win, id) {
+			var t = this, w, d = DOM.doc, fw, id;
+
+			id = t._findId(id || win);
+
+			&#x2F;&#x2F; Probably not inline
+			if (!t.windows[id]) {
+				t.parent(win);
+				return;
+			}
+
+			t.count--;
+
+			if (t.count == 0) {
+				DOM.remove(&#x27;mceModalBlocker&#x27;);
+				DOM.setAttrib(DOM.doc.body, &#x27;aria-hidden&#x27;, &#x27;false&#x27;);
+				t.editor.focus();
+			}
+
+			if (w = t.windows[id]) {
+				t.onClose.dispatch(t);
+				Event.remove(d, &#x27;mousedown&#x27;, w.mousedownFunc);
+				Event.remove(d, &#x27;click&#x27;, w.clickFunc);
+				Event.clear(id);
+				Event.clear(id + &#x27;_ifr&#x27;);
+
+				DOM.setAttrib(id + &#x27;_ifr&#x27;, &#x27;src&#x27;, &#x27;javascript:&quot;&quot;&#x27;); &#x2F;&#x2F; Prevent leak
+				w.element.remove();
+				delete t.windows[id];
+
+				fw = t._frontWindow();
+
+				if (fw)
+					t.focus(fw.id);
+			}
+		},
+		
+		&#x2F;&#x2F; Find front most window
+		_frontWindow : function() {
+			var fw, ix = 0;
+			&#x2F;&#x2F; Find front most window and focus that
+			each (this.windows, function(w) {
+				if (w.zIndex &gt; ix) {
+					fw = w;
+					ix = w.zIndex;
+				}
+			});
+			return fw;
+		},
+
+		setTitle : function(w, ti) {
+			var e;
+
+			w = this._findId(w);
+
+			if (e = DOM.get(w + &#x27;_title&#x27;))
+				e.innerHTML = DOM.encode(ti);
+		},
+
+		alert : function(txt, cb, s) {
+			var t = this, w;
+
+			w = t.open({
+				title : t,
+				type : &#x27;alert&#x27;,
+				button_func : function(s) {
+					if (cb)
+						cb.call(s || t, s);
+
+					t.close(null, w.id);
+				},
+				content : DOM.encode(t.editor.getLang(txt, txt)),
+				inline : 1,
+				width : 400,
+				height : 130
+			});
+		},
+
+		confirm : function(txt, cb, s) {
+			var t = this, w;
+
+			w = t.open({
+				title : t,
+				type : &#x27;confirm&#x27;,
+				button_func : function(s) {
+					if (cb)
+						cb.call(s || t, s);
+
+					t.close(null, w.id);
+				},
+				content : DOM.encode(t.editor.getLang(txt, txt)),
+				inline : 1,
+				width : 400,
+				height : 130
+			});
+		},
+
+		&#x2F;&#x2F; Internal functions
+
+		_findId : function(w) {
+			var t = this;
+
+			if (typeof(w) == &#x27;string&#x27;)
+				return w;
+
+			each(t.windows, function(wo) {
+				var ifr = DOM.get(wo.id + &#x27;_ifr&#x27;);
+
+				if (ifr &amp;&amp; w == ifr.contentWindow) {
+					w = wo.id;
+					return false;
+				}
+			});
+
+			return w;
+		},
+
+		_fixIELayout : function(id, s) {
+			var w, img;
+
+			if (!tinymce.isIE6)
+				return;
+
+			&#x2F;&#x2F; Fixes the bug where hover flickers and does odd things in IE6
+			each([&#x27;n&#x27;,&#x27;s&#x27;,&#x27;w&#x27;,&#x27;e&#x27;,&#x27;nw&#x27;,&#x27;ne&#x27;,&#x27;sw&#x27;,&#x27;se&#x27;], function(v) {
+				var e = DOM.get(id + &#x27;_resize_&#x27; + v);
+
+				DOM.setStyles(e, {
+					width : s ? e.clientWidth : &#x27;&#x27;,
+					height : s ? e.clientHeight : &#x27;&#x27;,
+					cursor : DOM.getStyle(e, &#x27;cursor&#x27;, 1)
+				});
+
+				DOM.setStyle(id + &quot;_bottom&quot;, &#x27;bottom&#x27;, &#x27;-1px&#x27;);
+
+				e = 0;
+			});
+
+			&#x2F;&#x2F; Fixes graphics glitch
+			if (w = this.windows[id]) {
+				&#x2F;&#x2F; Fixes rendering bug after resize
+				w.element.hide();
+				w.element.show();
+
+				&#x2F;&#x2F; Forced a repaint of the window
+				&#x2F;&#x2F;DOM.get(id).style.filter = &#x27;&#x27;;
+
+				&#x2F;&#x2F; IE has a bug where images used in CSS won&#x27;t get loaded
+				&#x2F;&#x2F; sometimes when the cache in the browser is disabled
+				&#x2F;&#x2F; This fix tries to solve it by loading the images using the image object
+				each(DOM.select(&#x27;div,a&#x27;, id), function(e, i) {
+					if (e.currentStyle.backgroundImage != &#x27;none&#x27;) {
+						img = new Image();
+						img.src = e.currentStyle.backgroundImage.replace(&#x2F;url\(\&quot;(.+)\&quot;\)&#x2F;, &#x27;$1&#x27;);
+					}
+				});
+
+				DOM.get(id).style.filter = &#x27;&#x27;;
+			}
+		}
+	});
+
+	&#x2F;&#x2F; Register plugin
+	tinymce.PluginManager.add(&#x27;inlinepopups&#x27;, tinymce.plugins.InlinePopups);
+})();
+
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

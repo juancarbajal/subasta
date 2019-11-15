@@ -1,0 +1,95 @@
+<script type="text/javascript">
+var _categoria2 = <?=$this->arrCategoria['cat2Json']?>,
+    _categoria3 = <?=$this->arrCategoria['cat3Json']?>,
+    _categoria4 = <?=$this->arrCategoria['cat4Json']?>;
+</script>
+
+<div class="container">
+    <form name="formulariocategoria" id="formulariocategoria" method="post" action="<?=$this->baseUrl()?>/usuario/publicacion/registro-datos">
+        <?=($this->form->atoken)?$this->form->atoken->renderViewHelper():''?>
+        <?=$this->form->destaqueId->renderViewHelper()?>
+        
+        <div class="head-step">
+            <div class="step-title">
+                <h3 class="k-title"><span></span>
+                    <?php
+                        switch($this->publicacionEstado) {
+                            case 1 : ?>Publicar: Paso 2 - Selecciona el Rubro y Subrubros<?php break;
+                            case 2 : ?>Editar: Paso 2 - Selecciona el Rubro y Subrubros<?php break;
+                            case 3 : ?>Republicar: Paso 2 - Selecciona el Rubro y Subrubros<?php break;
+                            default : break;
+                    } ?>
+                    <?php if (isset($this->msg)){?>
+                        <div class="error">
+                            <?php echo $this->msg; ?>
+                        </div>
+                    <?php }?>
+                </h3>
+                <p>Elige el rubro y subrubros que más identifiquen a tu artículo a la venta</p>
+            </div>        
+            <ul class="step-progress">
+                <li><span>Destaca el Aviso</span><span class="icon-off-step"></span></li>
+                <li><span>Selecciona el Rubro</span><span class="icon-on-step"></span></li>
+                <li><span>Datos del Aviso</span><span class="icon-off-step"></span></li>
+                <li><span>Confirmación</span><span class="icon-off-step"></span></li>
+            </ul>
+        </div>
+        
+        <div class="category-options row">
+            <div class="entry">
+                <label for="entry-types">Rubro</label>
+                <select id="categoriaId1" name="categoriaId1">
+                    <option value='' selected="selected">Seleccionar</option>
+                    <?php
+                        foreach($this->arrCategoria['cat1'] as $index):?>
+                            <option value='<?php echo $index->K_ID_CATEGORIA ?>' title="<?php echo $index->K_TIT ?>"> <?php echo $index->K_TIT ?></option>
+                    <?php
+                            $valor_inicial = (!isset($valor_inicial))? $index->K_ID_CATEGORIA : $valor_inicial;
+                        endforeach;
+                    ?>
+                </select>
+                <input type="hidden" name='categoriaText1' value='' />
+            </div>
+            <div class="c-rubro">
+                <label>Subrubro 1</label>
+                <select id='categoriaId2' name='categoriaId2' size="20"></select>
+                <input type="hidden" name='categoriaText2' value="" />                    
+            </div>
+            <div class="c-rubro">
+                <label>Subrubro 2</label>
+                <select id='categoriaId3' name='categoriaId3' size="20"></select>
+                <input type="hidden" name='categoriaText3' value="" />
+            </div>
+            <div class="c-rubro fix">
+                <label>Subrubro 3</label>
+                <select id='categoriaId4' name='categoriaId4' size="20"></select>
+                <input type="hidden" name='categoriaText4' value="" />
+            </div>
+            <div class="advice">
+                <h3 class="k-title"><span class="start"></span>Consejo para publicar</h3>
+                <p>Elige el rubro y subrubros que se correspondan con el producto que estás por publicar a la venta. Ten en cuenta que, cuanto más precisa sea tu elección, más fácil será para los compradores acceder a tu aviso</p>
+                <div class="shadow-space-mini"></div>
+            </div>            
+        </div>
+        <div class="control">
+            <button id="btn-continue-validate" class="btn-kotear btn-large" type="submit">Continuar</button>
+        </div>
+    </form>
+</div>
+<div id="adulto-msg-temp" style="display:none">
+    <div id="adulto-msg">
+        <h2 class="k-title fix"><span></span>Estás por publicar un artículo en la categoría Adultos de Kotear.pe</h2>
+        <p class="notice"><strong>Es importante que conozcas el listado de productos que está prohibido ofrecer en esta categoría.</strong>.
+        No podrán ser publicados aquellos avisos, bienes o servicios: </p>
+        <p>Relacionados con <strong>pedofilia, pornografía infantil </strong>, desnudos<br />
+        de menores o que de cualquier modo involucre menores de edad.<br />
+        Que impliquen <strong>sexo forzado, violaciones, películas "snuff"</strong>.<br />
+        Películas o <strong>fotografías </strong> que hayan sido <strong> tomadas de forma ilegal </strong> o sin el consentimiento de las personas que en ellas aparecen.</p>
+        <p>Asimismo, se prohibe la venta de los artículos o servicios publicados u ofrecidos en la categoría Adultos a personas menores de 18 años de edad.</p>
+        <p class="mb20"> Por último, al contactarte con tus compradores, te solicitamos discreción y confidencialidad que estos artículos o servicios requieren. </p>
+      <div>
+        <button id="adult-acept" class="btn-kotear fix" name="aceptar">Acepto</button>
+        <button id="adult-cancel" class="btn-kotear fix" name="cancelar">No Acepto</button>
+      </div>
+    </div>
+</div>

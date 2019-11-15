@@ -1,0 +1,61 @@
+<?php $this->feed; ?>
+        <ul class="list-result-products">
+        <?php
+              $i = 0;
+              foreach ($this->avisos as $r) {
+                $titulo= $this->escape($r->TIT);      
+                $href = $this->baseUrl() . '/aviso/' . $r->ID_AVISO . '-' .$r->URL;
+    	        if ($r->IMAGEN <> 'none.gif') { $img = $this->rutaimagen . $r->IMAGEN; }
+        	      else { $img = $this->rutaimagen . 'none.gif'; }
+                  ?>    
+            <li class="product-row <?php echo $r->ESTILO; ?>">
+            <div class="description-product item-checked">
+              <input class="chk-item" type="checkbox" value="<?php echo $r->ID_AVISO?>" name="result[]" />
+              <div class="conteiner-img">
+                  <div class="inner-conteiner-img">
+                      <a href="<?php echo $this->escape($href); ?>" title="<?php $titulo;?>">
+                      <img src="<?=URL_STATIC?>img/bg.jpg" 
+                           data-original="<?php echo $img;?>" 
+                           class="list-img lazy" 
+                           title="<?php echo $titulo;?>"/>
+                      </a>
+                <!--[if lt IE 7]><b></b><![endif]-->
+                  </div>
+              </div>
+              <h3 class="especial">
+                <a href="<?php echo $href; ?>" title="<?php echo $titulo;?>">
+                    <?php  echo $titulo;?>
+                </a></h3>
+                <p><?php echo $r->APODO; ?></p>
+            </div>
+            <div class="line-vertical"></div>
+            <div class="visit-product">
+              <p><?php echo $r->VISITAS; ?></p>
+            </div>
+            <div class="line-vertical"></div>
+            <div class="precio-product">
+              <h4><?php echo $r->SIMB; ?>  <?php echo number_format($r->PRECIO,2,'.',',')?></h4>
+              <p><span>Caduca en <?php echo $r->CADUCIDAD; ?></span>
+              </p>
+            </div>
+          </li>          
+          <?php $i++;
+            if ($i == 3 || $this->paginaActual==1){ ?>                            
+            <li class="product-row" style="display:none">
+            <!-- FALTA CREAR UN DIV QUE ABARQUE LAS 4 COLUMNAS-->
+            <script type="text/javascript">eplAD4("Middle");</script>
+            </li>
+            
+        <?php }         
+            } // fin del for each
+          if($this->resultadoTotalAvisos >0 && $this->resultadoTotalAvisos <= 2 ){ ?>        
+            <li class="product-row" style="display:none">
+            <!-- FALTA CREAR UN DIV QUE ABARQUE LAS 4 COLUMNAS-->
+            <script type="text/javascript">eplAD4("Middle");</script>
+            </li>
+            <?php } ?>
+                
+        
+          
+        </ul>
+        <!-- Fin de resultados -->

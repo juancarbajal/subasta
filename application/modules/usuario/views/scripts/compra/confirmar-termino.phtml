@@ -1,0 +1,240 @@
+  <?php echo $this->action('buscador', 'busqueda', 'default'); ?>
+
+<div id="body-content" class="col-master">
+	<?php if (isset($this->msg)){?>
+    <div class="error"><?php echo $this->msg ?></div>
+    <?php } else {?>
+    <?php if (strtoupper($this->data->K_TIPO_VENTA) =='SUBASTA'){?>
+
+    <div class="clearfix" id="s_level1">
+    <h3><strong><?php echo $this->msgResultado?> </strong></h3>
+    </div>
+    <?php } else { ?>
+    <div class="clearfix" id="s_level1">
+    <h3>Felicidades <?php echo $this->identity->APODO ?>!</h3>
+    <p>Eres el comprador del artículo:</p>
+    </div>
+    <?php }?>
+    <?php }?>
+    
+    
+    <div>
+        <div class="r4 rpanel">
+            <div class="content zoom">
+            <?php if (strtoupper($this->data->K_TIPO_VENTA) =='COMPRA INMEDIATA'){?>                
+                <div class="round-box-white border_abajo col21_1">
+                	<div class="float_left col2_1">
+                    	<?php if (isset($this->imagen)) {?>
+                        	<span class=" pic img_termino">
+			                <img  src="<?php echo $this->imagen?>" alt="<?php echo $this->escape($this->data->K_TITULO)?>" />
+                            </span>
+            		    <?php } else {?>
+			                <div class="col7" id="noprodimg_gallery">&nbsp;</div>
+            		    <?php }?>
+                    </div>
+                    <div class="float_left">
+                    	<ul class="ul">
+                            <li class="li"><a href="<?php echo $this->volver; ?>" class="titulo_termino"><?php echo $this->data->K_TITULO?></a> <?php echo  strtoupper($this->data->K_TIPO_VENTA)?></li>
+                            <li class="li"><strong>Precio final </strong> <?php echo $this->data->K_SIMB_MONEDA?> <?php echo $this->oferta?></li>
+                            <li class="li"><strong>Cantidad total </strong> <?php echo $this->cantidad?></li>
+                            <li class="li"><strong>Precio total </strong> <?php echo $this->data->K_SIMB_MONEDA?> <?php echo $this->total?></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                    <br />                    
+                </div>
+                <br />
+                <div id="cont_vendedor">
+                	<p class="titulo">Contacta al vendedor </p>
+                    <div class="cont_vendedor_datos">
+                    	<div class="float_left col7 prefix1_1">
+                        	<ul class="ul">
+                            	<li class="li">
+                                	<strong>
+                                    	<span class="<?php echo $this->data->K_ICON?>"></span> <a class="font15" href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>" title="<?php echo $this->data->K_APODO_VENDEDOR?> (<?php echo $this->data->K_PUNTAJE?>)"> <?php echo $this->data->K_APODO_VENDEDOR?> (<?php echo $this->data->K_PUNTAJE?>)</a>
+                                    </strong>
+                                </li>
+                                <li class="li"><strong>Nombre y Apellido:</strong> <?php echo $this->vendedor->K_NOM_LARGO; ?></li>
+                                <li class="li"><strong>Ubicacion</strong> <?php echo $this->data->K_UBIGEO?></li>
+                                <li class="li"><span class="fono"><?php echo $this->vendedor->FONO1; ?> </span> </li>
+                				<li class="li"><span class="ico_email"><?php echo $this->vendedor->EMAIL; ?> </span> </li>
+                            </ul>
+                        </div>
+                        <div class="float_left">
+                        	<ul>
+                            	<!--<li class="li">
+                                	<a href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>" 
+                                      title="<?php echo $this->data->K_PORCENT_CAL_POSI?>% de calificaciones positivas">
+										<?php echo $this->data->K_PORCENT_CAL_POSI?>% de calificaciones positivas
+                                    </a>
+                                </li>
+                				<li class="li">
+                                	<a href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>" 
+                                    title="<?php echo $this->data->K_PORCENT_CAL_NEGA?>% de calificaciones negativas">
+										<?php echo $this->data->K_PORCENT_CAL_NEGA?>% de calificaciones negativas</a>
+                                </li>-->
+                				<li class="li">
+                                	<a href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>" title="Ver reputación">
+                                    	<strong>Ver reputación</strong>
+                                    </a>
+                                </li>
+                                <br /><br />
+                                <li class="li"><a href="<?php echo $this->baseUrl()?>/busqueda/?apodo=<?php echo $this->data->K_APODO_VENDEDOR?>" class="ico_etiqueta">Ver artículos del vendedor</a></li>
+                            </ul>
+                        </div>
+                        <div  class="clear"></div>
+                    </div>
+                    <br />
+                    <div class="ico_tip">Recibir&aacute;s estos datos en tu casilla de email &oacute; revisalo en tu 
+                    	<a href="<?php echo $this->baseUrl() ?>/usuario/compra/historial-compras/opc/categoria/codigo/0"> Historial de Compras</a>
+                    </div>
+                    <br /><br />
+                    <div class="center">
+                    	<button type="button" value="Confirmar compra" class="btn_submit round" title="Volver" onclick="var Backlen=history.length; history.go(-Backlen); window.location.href='<?=$this->volver?>'"><span>Volver</span></button>
+                    </div>
+                </div>
+            <?php }elseif (strtoupper($this->data->K_TIPO_VENTA) =='SUBASTA'){?>
+            	<div class="round-box-white  ">
+                	<div class="float_left col15 ">
+                    	<div class="border_abajo">
+                            <div class="float_left col2_1">
+                                <?php if (isset($this->imagen)) {?>
+                                    <span class=" pic img_termino">
+                                    <img  src="<?php echo $this->imagen?>" alt="<?php echo $this->escape($this->data->K_TITULO)?>" />
+                                    </span>
+                                <?php } else {?>
+                                    <div class="col7" id="noprodimg_gallery">&nbsp;</div>
+                                <?php }?>
+                            </div>
+                            <div class="float_left">
+                                <ul class="ul">
+                                    <li class="li"><a href="<?php echo $this->volver; ?>" class="titulo_termino"><?php echo $this->data->K_TITULO?></a> <?php echo  strtoupper($this->data->K_TIPO_VENTA)?></li>
+                                    <li class="li"><strong>Precio final </strong> <?php echo $this->data->K_SIMB_MONEDA?> <?php echo $this->oferta?></li>
+                                    <li class="li"><strong>Cantidad total </strong> <?php echo $this->cantidad?></li>
+                                    <li class="li"><strong>Precio total </strong> <?php echo $this->data->K_SIMB_MONEDA?> <?php echo $this->total?></li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                            <br />
+                         </div>
+                         <br /><br /><br />
+                         <div class="center"> 
+                            <?php
+                            if (strpos($this->msgResultado,'ganador')===false) {?>
+							   <span class="text_subasta">Tu oferta a sido insuficiente</span>				
+							<? } else { ?>
+                               <span class="ico_termino_subasta text_subasta">Recibimos tu oferta y eres el actual ganador de esta subasta.</span>
+							<? } ?>                      		                        
+                           <br /><br />
+                            <button type="button" value="Confirmar compra" class="btn_submit round" title="Volver" onclick="var Backlen=history.length; history.go(-Backlen); window.location.href='<?=$this->volver?>'"><span>Volver</span></button>
+                         </div>
+                    </div>
+                    
+                    <div id="derecha" class="float_left">
+                    	<p>Datos del Vendedor</p>
+                        <div id="vendedor_derecha">
+                            <ul class="ul">
+                      			<li class="li_vendedor">
+                                    <span class="<?php echo $this->data->K_ICON?>"></span><a class="font15" href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>" title="<?php echo $this->data->K_APODO_VENDEDOR?> (<?php echo $this->data->K_PUNTAJE?>)"> <?php echo $this->data->K_APODO_VENDEDOR?> (<?php echo $this->data->K_PUNTAJE?>)</a>
+                                </li>
+                                <li class="li_vendedor"><strong>Ubicacion</strong> <?php echo $this->data->K_UBIGEO?></li>
+                                <ul class="ul_vendedor_derecho">
+                                    <!--<li class="li">
+                                        <a href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>"  title="<?php echo $this->data->K_PORCENT_CAL_POSI?> % de calificaciones positivas">
+                                            <?php echo $this->data->K_PORCENT_CAL_POSI?>% de calificaciones positivas
+                                        </a>
+                                    </li>
+                                    <li class="li">
+                                        <a href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>" title="<?php echo $this->data->K_PORCENT_CAL_NEGA?>% de calificaciones negativas">
+                                            <?php echo $this->data->K_PORCENT_CAL_NEGA?>% de calificaciones negativas</a>
+                                    </li>-->
+                                    <li class="li">
+                                        <a href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>" title="Ver reputación">
+                                            <strong>Ver reputación</strong>
+                                        </a>
+                                    </li>                           
+                                </ul>
+                                <li class="li_vendedor">
+                                    <a href="<?php echo $this->baseUrl()?>/busqueda/?apodo=<?php echo $this->data->K_APODO_VENDEDOR?>" 
+                                        class="ico_etiqueta">Ver artículos del vendedor</a>
+                                </li>          	
+                            </ul>
+                            <br /><br /><br />
+                        </div>
+                    </div >
+                    <div class="clear"></div>                                     
+                </div >                
+            <?php }else{ ?>
+				<div class="round-box-white  ">
+                	<div class="float_left col15 ">
+                    	<div class="border_abajo">
+                            <div class="float_left col2_1">
+                                <?php if (isset($this->imagen)) {?>
+                                    <span class=" pic img_termino">
+                                    <img  src="<?php echo $this->imagen?>" alt="<?php echo $this->escape($this->data->K_TITULO)?>" />
+                                    </span>
+                                <?php } else {?>
+                                    <div class="col7" id="noprodimg_gallery">&nbsp;</div>
+                                <?php }?>
+                            </div>
+                            <div class="float_left">
+                                <ul class="ul">
+                                    <li class="li"><a href="#" class="titulo_termino"><?php echo $this->data->K_TITULO?></a> <?php echo  strtoupper($this->data->K_TIPO_VENTA)?></li>
+                                    <li class="li"><strong>Precio final </strong> <?php echo $this->data->K_SIMB_MONEDA?> <?php echo $this->oferta?></li>
+                                    <li class="li"><strong>Cantidad total </strong> <?php echo $this->cantidad?></li>
+                                    <li class="li"><strong>Precio total </strong> <?php echo $this->data->K_SIMB_MONEDA?> <?php echo $this->total?></li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                            <br />
+                         </div>
+                         <br /><br /><br />
+                         <div>                         	
+	                        <span class="text_subasta">Tu oferta a sido insuficiente</span>
+                            <br /><br />
+                            <button type="button" value="Confirmar compra" class="btn_submit center round" title="Volver" onclick="var Backlen=history.length; history.go(-Backlen); window.location.href='<?=$this->volver?>'"><span>Volver</span></button>
+                         </div>
+                    </div>
+                    
+                    <div id="derecha" class="float_left">
+                    	<p>Datos del Vendedor</p>
+                        <div id="vendedor_derecha">
+                            <ul class="ul">
+                      			<li class="li_vendedor">
+                                    <span class="<?php echo $this->data->K_ICON?>"></span><a class="font15" href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>" title="<?php echo $this->data->K_APODO_VENDEDOR?> (<?php echo $this->data->K_PUNTAJE?>)"> <?php echo $this->data->K_APODO_VENDEDOR?> (<?php echo $this->data->K_PUNTAJE?>)</a>
+                                </li>
+                                <li class="li_vendedor"><strong>Ubicacion</strong> <?php echo $this->data->K_UBIGEO?></li>
+                                <ul class="ul_vendedor_derecho">
+                                    <!--<li class="li">
+                                        <a href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>" 
+                                          title="0% de calificaciones positivas">
+                                            <?php echo $this->data->K_PORCENT_CAL_POSI?>% de calificaciones positivas
+                                        </a>
+                                    </li>
+                                    <li class="li">
+                                        <a href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>" 
+                                        title="100% de calificaciones negativas">
+                                            <?php echo $this->data->K_PORCENT_CAL_NEGA?>% de calificaciones negativas</a>
+                                    </li>-->
+                                    <li class="li">
+                                        <a href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>" title="Ver reputación">
+                                            <strong>Ver reputación</strong>
+                                        </a>
+                                    </li>                           
+                                </ul>
+                                <li class="li_vendedor">
+                                    <a href="<?php echo $this->baseUrl()?>/busqueda/?apodo=<?php echo $this->data->K_APODO_VENDEDOR?>" 
+                                        class="ico_etiqueta">Ver artículos del vendedor</a>
+                                </li>          	
+                            </ul>
+                            <br /><br /><br />
+                        </div>
+                    </div >
+                    <div class="clear"></div>                                     
+                </div >
+			
+			<?php }?>
+            </div>
+   		</div>
+    </div>
+</div>

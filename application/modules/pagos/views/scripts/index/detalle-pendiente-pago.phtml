@@ -1,0 +1,30 @@
+<?php if (!isset($this->resultDetalle) || (count($this->resultDetalle)==0)) { ?>
+<div class="error">No existen cargos asignados.</div>
+<?php } else {?>
+<?php //print_r($this->resultDetalle);?>
+
+<table class="mf" cellpadding="0" cellspacing="0">
+  <tr>
+    <th> Fecha </th>
+    <th> Descripci&oacute;n </th>
+    <th> Monto </th>
+  </tr>
+  <?php $monto = 0;  ?>
+  <?php foreach($this->resultDetalle as $index): ?>
+  <tr>
+    <td><?php echo $index->Fecha; ?></td>
+    <td><?php echo $index->Descripcion; ?>
+                                          <?php if ($index->IdAviso>0){?>
+- <a href="<?php echo $this->baseUrl()?>/aviso/<?php echo $index->IdAviso?>" target='blank'>Ver Aviso</a>
+          <?php } ?>
+</td>
+    <td class="number">S/. <?php echo number_format($index->Monto,2,'.',''); ?> &nbsp;</td>
+  </tr>
+  <?php $monto = $monto + $index->Monto;
+  endforeach; ?>
+  <tr class="rowtotal">
+  	<td colspan="2" class="desc"><strong>Total</strong></td>
+    <td class="number"><strong>S/. <?php echo number_format($monto,2,'.','') ?> &nbsp;</strong></td>
+  </tr>
+</table>
+<?php } //end if?>

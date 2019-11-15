@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html xmlns:fb="http://ogp.me/ns/fb#" class="no-js lt-ie lt-ie9 lt-ie8 lt-ie7" lang="es" itemtype="http://schema.org/WebPage" itemscope="itemscope"><![endif]-->
+<!--[if IE 7]><html xmlns:fb="http://ogp.me/ns/fb#" class="no-js lt-ie lt-ie9 lt-ie8" lang="es" itemtype="http://schema.org/WebPage" itemscope="itemscope"><![endif]-->
+<!--[if IE 8]><html xmlns:fb="http://ogp.me/ns/fb#" class="no-js lt-ie lt-ie9" lang="es" itemtype="http://schema.org/WebPage" itemscope="itemscope"><![endif]-->
+<!--[if gt IE 8]><!--><html xmlns:fb="http://ogp.me/ns/fb#" class="no-js lt-ie" lang="es" itemtype="http://schema.org/WebPage" itemscope="itemscope"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="google-site-verification" content="0ZWsiCvjZvsOUeRcUtV5PgTeUzDHpmXg0USJH1LBH-o" />
+    <?=$this->headMeta()?>
+    <?=$this->headTitle()?>
+    <?=$this->headLink()?>
+    <meta name="description" content="¿Quieres comprar o quieres vender en el Perú?, Kotear te ofrece el mejor espacio de compra y venta de productos y servicios, Anuncia Gratis en Kotear.clasificados.pe" />
+    <meta name="keywords" content="Comprar en Peru, Vender en Peru, compra y venta de productos y servicios clasificados peru. anuncio gratis, clasificados en el peru" />
+    <meta name="title" content="Comprar y Vender en el Perú. Anuncios de Productos y Servicios en el Perú | Kotear.clasificados.pe"/>
+    <meta name="author" content="kotear.clasificados.pe"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="language" content="es"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="geo.region" content="PE-LIM"/>
+    <meta name="geo.placename" content="Cercado de Lima"/>
+    <meta name="geo.position" content="-12.0478;-77.0622"/>
+    <meta name="ICBM" content="-12.0478, -77.0622"/>
+    <meta property="og:site_name" content="Kotear" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://kotear.pe" />
+    <meta property="og:title" content="Comprar y Vender en el Perú. Anuncios de Productos y Servicios en el Perú | Kotear.clasificados.pe"/>
+    <meta property="og:description" content="¿Quieres comprar  o quieres vender en el Perú?, Kotear te ofrece el mejor espacio de compra y venta de productos y servicios, Anuncia Gratis en Kotear.clasificados.pe"/>
+    <meta property="og:image" content="<?=URL_STATIC?>img/logo.jpg<?=App_Config::getStaticVersion()?>"/>
+    <link href="<?=URL_STATIC?>img/logo.jpg<?=App_Config::getStaticVersion()?>" rel="image_src" type="image/jpeg"/>
+    <link href="<?=URL_STATIC?>img/favicon.ico<?=App_Config::getStaticVersion()?>" rel="icon" type="image/vnd.microsoft.icon"/>
+    <link href="<?=URL_STATIC?>img/favicon.ico<?=App_Config::getStaticVersion()?>" rel="shortcut icon" type="image/x-icon"/>
+<!--    <link type="text/css" rel="stylesheet" href="< ?=$this->baseUrl()?>/f/css/bootstrap/bootstrap.css< ?=App_Config::getStaticVersion()?>"/>
+    <link type="text/css" rel="stylesheet" href="< ?=$this->baseUrl()?>/f/css/style.css< ?=App_Config::getStaticVersion()?>"/>-->
+    <script type="text/javascript" src="<?=$this->baseUrl()?>/f/js/libs/modernizr-respond.js<?=App_Config::getStaticVersion()?>"></script>
+    <?php $m = Zend_Controller_Action_HelperBroker::getStaticHelper('Redirector')->getRequest()->getModuleName()?>
+    <?php $c = Zend_Controller_Action_HelperBroker::getStaticHelper('Redirector')->getRequest()->getControllerName()?>
+    <?php $a = Zend_Controller_Action_HelperBroker::getStaticHelper('Redirector')->getRequest()->getActionName()?>
+    <?= $this->yoson?>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-28124903-1']);
+      _gaq.push(['_setDomainName', 'clasificados.pe']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_trackPageLoadTime']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+<body class="publicacion">
+    <?php
+        echo $this->mediakit;
+        echo $this->dax;
+        echo $this->clickTale;
+        echo $this->ClickTale_Top
+    ?>
+    <div id="wrapper">
+        <header>
+            <h1 class="min-img" itemtype="http://schema.org/Organization" itemscope="itemscope">
+                <a href="<?=$this->baseUrl()?>" title="kotear.clasificados.pe" itemprop="url">
+                    <img alt="<?=$this->baseUrl()?>" src="<?=URL_STATIC?>img/logo.jpg<?=App_Config::getStaticVersion()?>" width="130" height="40" />
+                </a>
+                <meta content="kotear.pe" itemprop="name">
+            </h1> 
+            <div id="user-name-login">
+                <?php if(isset($this->identity)){ ?>
+                    <p>Bienvenido</p>
+                    <a href="<?=$this->baseUrl()?>/usuario/cuenta" title="Ir a la cuenta de <?=$this->identity->APODO?>">
+                        <?=$this->identity->APODO?>
+                    </a>
+                    |
+                    <a class="user_state_session_on" href="<?=$this->baseUrl()?>/usuario/acceso/logout" 
+                       title="Terminar sesión">
+                        Salir
+                    </a>
+                <?php } /*else { ?>
+                    <a id="log-in" href="<?php echo $this->baseUrl(); ?>/usuario/acceso/ingresar" title="Ingresa">
+                        Ingresa
+                    </a>
+                <?php }*/ ?>
+            </div>
+            <div id="breadcrumb-steps">
+                <p>Estas en <a title="Consola de Video Juegos" href="<?=$this->baseUrl()?>">Inicio</a>
+                </p>&nbsp;›&nbsp;
+                <p>Publica en Kotear.pe</p>
+            </div>
+        </header>
+    
+  <!--          INICIO          -->
+	 <?=$this->layout()->content?>
+  <!--          FIN             -->  
+        <div class="shadow-space"></div>
+    </div>
+    <script src="<?=$this->baseUrl()?>/f/js/libs/<?=JOSON_MIN?>framework.js<?=App_Config::getStaticVersion()?>" type="text/javascript"></script>
+    <div style="visibility: hidden; display: none;">
+        <?php //echo $this->headScript();?>
+    </div>
+    <script src="<?=$this->baseUrl()?>/f/js/application/<?=JOSON_MIN?>yoson.js<?=App_Config::getStaticVersion()?>" type="text/javascript"></script>
+    <script src="<?=$this->baseUrl()?>/f/js/application/schemas/<?=JOSON_MIN?>requires.js<?=App_Config::getStaticVersion()?>" type="text/javascript"></script>
+    <script src="<?=$this->baseUrl()?>/f/js/modules/<?=JOSON_MIN?><?=$m?>.js<?=App_Config::getStaticVersion()?>" type="text/javascript"></script>
+    <script src="<?=$this->baseUrl()?>/f/js/modules/<?=JOSON_MIN?>all-modules.js<?=App_Config::getStaticVersion()?>" type="text/javascript"></script>
+    <script src="<?=$this->baseUrl()?>/f/js/application/schemas/<?=JOSON_MIN?>modules.js<?=App_Config::getStaticVersion()?>" type="text/javascript"></script>
+    <script src="<?=$this->baseUrl()?>/f/js/<?=JOSON_MIN?>appLoad.js<?=App_Config::getStaticVersion()?>" type="text/javascript"></script>
+    <!-- Begin DAX de Kotear --><script type="text/javascript" language="JavaScript1.3" src="http://b.scorecardresearch.com/c2/6906602/ct.js"></script><!-- Fin DAX de Kotear -->
+    <?php 
+        echo $this->scCXSearch;
+        echo $this->ClickTale_Bottom;
+    ?>
+</body>
+</html>

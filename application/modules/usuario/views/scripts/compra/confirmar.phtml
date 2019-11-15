@@ -1,0 +1,140 @@
+  <?php echo $this->action('buscador', 'busqueda', 'default'); ?>
+  <div id="body-content" class="col-master">
+  <div class="clearfix" id="s_level1">
+      <h3>Confirmar <?php if (strtoupper($this->data->K_TIPO_VENTA) == 'SUBASTA'){?>oferta <?php } else { ?>compra<?php }?></h3>
+      <p>Chequea toda la información antes de confirmar tu compra</p>
+    </div>
+    <div class="r4 rpanel">
+    <div class="content">
+      <span class="sectitle"> <?php echo $this->escape($this->data->K_TITULO)?></span>
+      <div class="round-box-white">
+        <div class="clearfix">
+          <div class="col7">
+              <div class="no_bg">
+              <?php if (isset($this->imagen)) {?>
+                <img class="center" src="<?php echo $this->imagen?>" alt="<?php echo $this->escape($this->data->K_TITULO)?>" />
+              <?php } else {?>
+                <div class="col7" id="noprodimg_gallery">&nbsp;</div>
+              <?php }?>
+
+
+            </div>
+          </div>
+          <div class="col7 dlgrid dlgridlines">
+            <div class="inner">
+              <div class="dlinline">
+              	<!-- <span class="block-title"> Datos de la <?php if (strtoupper($this->data->K_TIPO_VENTA) == 'SUBASTA'){?>oferta <?php } else { ?>compra<?php }?> </span> -->
+              <?php if (strtoupper($this->data->K_TIPO_VENTA) == 'SUBASTA'){?>
+                <div class="dlinline">
+                  <div class="w100 dic clearfix"> <span class="block-title">Datos del la oferta</span>
+                    <dl class="clearfix">
+                      <dt><strong>Tu oferta:</strong></dt>
+                      <dd>  <?php echo $this->data->K_SIMB_MONEDA?> <?php echo $this->oferta ?></dd>
+                    </dl>
+                    <dl class="clearfix">
+                      <dt><strong>Cantidad:</strong></dt>
+                      <dd><?php echo $this->cantidad ?></dd>
+                    </dl>
+                    <dl class="clearfix">
+                      <dt><strong>Fin de la subasta:</strong></dt>
+                      <dd> <?php echo $this->data->K_VENC_CADUCIDAD?></dd>
+                    </dl>
+                  </div>
+                </div>
+              <?php } else {?>
+                <div class="w100 dic clearfix">
+                  <dl class="clearfix">
+                    <dt><strong>Precio Base</strong></dt>
+                    <dd> <?php echo $this->data->K_SIMB_MONEDA?> <?php echo $this->oferta ?></dd>
+                  </dl>
+                  <dl class="clearfix">
+                    <dt><strong>Tipo de producto</strong></dt>
+                    <dd><?php echo $this->data->K_TIPO_PRODUCTO?></dd>
+                  </dl>
+                  <dl class="clearfix">
+                    <dt><strong>Precio final</strong></dt>
+                    <dd> <strong><?php echo $this->data->K_SIMB_MONEDA?> <?php echo $this->oferta ?></strong> (por unidad)</dd>
+                  </dl>
+                  <dl class="clearfix">
+                    <dt><strong>Cantidad a comprar</strong></dt>
+                    <dd><?php echo $this->cantidad ?></dd>
+                  </dl>
+                  <dl class="clearfix">
+                    <dt><strong>Total a pagar</strong></dt>
+                    <dd><?php echo $this->data->K_SIMB_MONEDA?> <?php echo $this->total?></dd>
+                  </dl>
+                </div>
+              <?php }?>
+              </div>
+              <br />
+               <form name="frmconfirmpurchase" id="frmconfirmpurchase" class="<?php if(!$this->identity!=null) { ?>no-loged<?php } ?>" method="post" action="<?php echo $this->baseUrl()?>/usuario/compra/confirmar-termino">
+
+                   <input type="hidden" name="id" value="<?php echo $this->idAviso?>">
+                   <input type="hidden" name="cantidad" value="<?php echo $this->cantidad ?>">
+                   <input type="hidden" name="total" value="<?php echo $this->total?>">
+              <?php if (strtoupper($this->data->K_TIPO_VENTA) == 'SUBASTA'){?>
+            <?php if ($this->ofertaAutomatica==1) {?>
+              <div>
+              <b>Oferta autom&aacute;tica activa:</b> El sistema ofertar&aacute; por t&iacute; lo minimo para mantenerte como ganador de la subasta hasta el monto aqu&iacute; arriba &iacute;ndicado.
+              </div>
+            <?php }?>
+                <button type="submit" value="Confirmar oferta" class="btn_submit center round" title="Confirmar oferta"><span>Confirmar oferta</span></button>
+                <p class="info">Al hacer clic en el botón de "Confirmar oferta"   estás asumiendo un compromiso con el vendedor.</p>
+              <?php } else {?>
+              	<button type="submit" value="Confirmar compra" class="btn_submit center round" title="Confirmar compra" name="confirmpurchase" id="confirmpurchase"><span>Confirmar compra</span></button>
+              	<p class="info">Al hacer clic en el botón de "Confirmar compra"   estás asumiendo un compromiso con el vendedor.</p>
+              <?php }?>
+                </form>
+            </div>
+          </div>
+          <div class="col7 last">
+            <div class="inner"> <span class="block-title">Datos del vendedor</span>
+              <p> <strong><a href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>" title="<?php echo $this->data->K_APODO_VENDEDOR?> (<?php echo $this->data->K_PUNTAJE?>)"> <?php echo $this->data->K_APODO_VENDEDOR?> (<?php echo $this->data->K_PUNTAJE?>)</a></strong><br />
+                (Miembro desde:  <?php echo $this->data->K_FECHA_REG_VENDEDOR?>)<br />
+                Puntaje del vendedor: <?php echo $this->data->K_PUNTAJE?></p>
+              <br />
+              <ul class="normalize no_margin">
+                <li><a href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>" title="<?php echo $this->data->K_PORCENT_CAL_POSI?>% de calificaciones positivas"><?php echo $this->data->K_PORCENT_CAL_POSI?>% de calificaciones positivas</a></li>
+                <li><a href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>" title="<?php echo $this->data->K_PORCENT_CAL_NEGA?>% de calificaciones negativas"><?php echo $this->data->K_PORCENT_CAL_NEGA?>% de calificaciones negativas</a></li>
+                <li><a href="<?php echo $this->baseUrl()?>/usuario/reputacion/ver/cod/<?php echo $this->data->K_ID_USR?>" title="Ver reputación"><strong>Ver reputación</strong></a></li>
+                <li><strong>Ubicacion</strong> <?php echo $this->data->K_UBIGEO?></li>
+              </ul>
+            </div>
+          </div>
+          </div>
+        </div><br />
+        <p class="gray"><strong>Importante</strong>: Kotear.pe no te cobra comisiones por tus compras. </p>
+      </div>  
+    </div>
+	<br />
+	<a href="javascript:history.go(-1)" class="volver_enlace"><< Volver</a>
+    <br /><br />
+    <div class="r4 rpanel">
+      <div class="content clearfix">
+        <p class="sectitle"><span class="bluetitle">¿Cómo comprar?</span> para comprar tienes que estar registrado; si todavía no te registraste,<a href="<?php echo $this->baseUrl()?>/usuario/registro/" title="Ir a registrarse"> ¡regístrate ahora gratis!</a></p>
+        <br />
+        <div class="steppanel">
+          <div class="col7">
+            <div class="inner">
+              <p class="stepball_1"> Infórmate bien sobre el producto antes de hacer una compra. Si tienes dudas, hacer preguntas al vendedor.</p>
+            </div>
+          </div>
+          <div class="col7">
+            <div class="inner">
+              <p class="stepball_2"><strong>Revisa la reputación</strong> del vendedor,
+                y fijate también en las <strong>condiciones
+                de envío y pago que se hayan
+                determinado</strong> para la compra / venta</p>
+            </div>
+          </div>
+          <div class="col7">
+            <div class="inner">
+              <p class="stepball_3">Una vez que te decidiste por la compra, haz clic en el botón de <strong>"Confirmar compra" </strong> para acceder a los datos de contacto del vendedor (e-mail y teléfono) para <strong>cerrar la operación.</strong></p>
+            </div>
+          </div>
+        </div>
+         <br />
+      </div>
+    </div>
+
+</div>

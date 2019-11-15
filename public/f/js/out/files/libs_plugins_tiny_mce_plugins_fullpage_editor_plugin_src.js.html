@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>libs&#x2F;plugins&#x2F;tiny_mce&#x2F;plugins&#x2F;fullpage&#x2F;editor_plugin_src.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.7.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.7.0&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/admin.html">admin</a></li>
+            
+                <li><a href="..&#x2F;classes/all-modules.html">all-modules</a></li>
+            
+                <li><a href="..&#x2F;classes/default.html">default</a></li>
+            
+                <li><a href="..&#x2F;classes/jcarousel.html">jcarousel</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.AutoSave.html">tinymce.plugins.AutoSave</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.ContextMenu.html">tinymce.plugins.ContextMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/usuario.html">usuario</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/ad-actions.html">ad-actions</a></li>
+            
+                <li><a href="..&#x2F;modules/add-class-middle.html">add-class-middle</a></li>
+            
+                <li><a href="..&#x2F;modules/add-favorites.html">add-favorites</a></li>
+            
+                <li><a href="..&#x2F;modules/all-checked-uncheked.html">all-checked-uncheked</a></li>
+            
+                <li><a href="..&#x2F;modules/banner-top classified.html">banner-top classified</a></li>
+            
+                <li><a href="..&#x2F;modules/carousel-products.html">carousel-products</a></li>
+            
+                <li><a href="..&#x2F;modules/count-word.html">count-word</a></li>
+            
+                <li><a href="..&#x2F;modules/data-ubigeo.html">data-ubigeo</a></li>
+            
+                <li><a href="..&#x2F;modules/geotags.html">geotags</a></li>
+            
+                <li><a href="..&#x2F;modules/impress-ad-list.html">impress-ad-list</a></li>
+            
+                <li><a href="..&#x2F;modules/lightbox-logIn-signUp.html">lightbox-logIn-signUp</a></li>
+            
+                <li><a href="..&#x2F;modules/moduleName.html">moduleName</a></li>
+            
+                <li><a href="..&#x2F;modules/placeholder.html">placeholder</a></li>
+            
+                <li><a href="..&#x2F;modules/preview-impress.html">preview-impress</a></li>
+            
+                <li><a href="..&#x2F;modules/register-category.html">register-category</a></li>
+            
+                <li><a href="..&#x2F;modules/remove-class-home.html">remove-class-home</a></li>
+            
+                <li><a href="..&#x2F;modules/report-ad.html">report-ad</a></li>
+            
+                <li><a href="..&#x2F;modules/scrollTop.html">scrollTop</a></li>
+            
+                <li><a href="..&#x2F;modules/search-categories.html">search-categories</a></li>
+            
+                <li><a href="..&#x2F;modules/send-ad-friend.html">send-ad-friend</a></li>
+            
+                <li><a href="..&#x2F;modules/send-list-ad-email.html">send-list-ad-email</a></li>
+            
+                <li><a href="..&#x2F;modules/show-advanced-search.html">show-advanced-search</a></li>
+            
+                <li><a href="..&#x2F;modules/show-example-ads.html">show-example-ads</a></li>
+            
+                <li><a href="..&#x2F;modules/show-login-trigger.html">show-login-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-photo-products.html">show-photo-products</a></li>
+            
+                <li><a href="..&#x2F;modules/show-popup.html">show-popup</a></li>
+            
+                <li><a href="..&#x2F;modules/show-questions.html">show-questions</a></li>
+            
+                <li><a href="..&#x2F;modules/show-register-trigger.html">show-register-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-video.html">show-video</a></li>
+            
+                <li><a href="..&#x2F;modules/showMoreCategories.html">showMoreCategories</a></li>
+            
+                <li><a href="..&#x2F;modules/some-module4.html">some-module4</a></li>
+            
+                <li><a href="..&#x2F;modules/tinymce-register.html">tinymce-register</a></li>
+            
+                <li><a href="..&#x2F;modules/uploader-photos.html">uploader-photos</a></li>
+            
+                <li><a href="..&#x2F;modules/validate.html">validate</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-document.html">validate-document</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-image.html">validate-image</a></li>
+            
+                <li><a href="..&#x2F;modules/venta.html">venta</a></li>
+            
+                <li><a href="..&#x2F;modules/yOSON.html">yOSON</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: libs&#x2F;plugins&#x2F;tiny_mce&#x2F;plugins&#x2F;fullpage&#x2F;editor_plugin_src.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * editor_plugin_src.js
+ *
+ * Copyright 2009, Moxiecode Systems AB
+ * Released under LGPL License.
+ *
+ * License: http:&#x2F;&#x2F;tinymce.moxiecode.com&#x2F;license
+ * Contributing: http:&#x2F;&#x2F;tinymce.moxiecode.com&#x2F;contributing
+ *&#x2F;
+
+(function() {
+	var each = tinymce.each, Node = tinymce.html.Node;
+
+	tinymce.create(&#x27;tinymce.plugins.FullPagePlugin&#x27;, {
+		init : function(ed, url) {
+			var t = this;
+
+			t.editor = ed;
+
+			&#x2F;&#x2F; Register commands
+			ed.addCommand(&#x27;mceFullPageProperties&#x27;, function() {
+				ed.windowManager.open({
+					file : url + &#x27;&#x2F;fullpage.htm&#x27;,
+					width : 430 + parseInt(ed.getLang(&#x27;fullpage.delta_width&#x27;, 0)),
+					height : 495 + parseInt(ed.getLang(&#x27;fullpage.delta_height&#x27;, 0)),
+					inline : 1
+				}, {
+					plugin_url : url,
+					data : t._htmlToData()
+				});
+			});
+
+			&#x2F;&#x2F; Register buttons
+			ed.addButton(&#x27;fullpage&#x27;, {title : &#x27;fullpage.desc&#x27;, cmd : &#x27;mceFullPageProperties&#x27;});
+
+			ed.onBeforeSetContent.add(t._setContent, t);
+			ed.onGetContent.add(t._getContent, t);
+		},
+
+		getInfo : function() {
+			return {
+				longname : &#x27;Fullpage&#x27;,
+				author : &#x27;Moxiecode Systems AB&#x27;,
+				authorurl : &#x27;http:&#x2F;&#x2F;tinymce.moxiecode.com&#x27;,
+				infourl : &#x27;http:&#x2F;&#x2F;wiki.moxiecode.com&#x2F;index.php&#x2F;TinyMCE:Plugins&#x2F;fullpage&#x27;,
+				version : tinymce.majorVersion + &quot;.&quot; + tinymce.minorVersion
+			};
+		},
+
+		&#x2F;&#x2F; Private plugin internal methods
+
+		_htmlToData : function() {
+			var headerFragment = this._parseHeader(), data = {}, nodes, elm, matches, editor = this.editor;
+
+			function getAttr(elm, name) {
+				var value = elm.attr(name);
+
+				return value || &#x27;&#x27;;
+			};
+
+			&#x2F;&#x2F; Default some values
+			data.fontface = editor.getParam(&quot;fullpage_default_fontface&quot;, &quot;&quot;);
+			data.fontsize = editor.getParam(&quot;fullpage_default_fontsize&quot;, &quot;&quot;);
+
+			&#x2F;&#x2F; Parse XML PI
+			elm = headerFragment.firstChild;
+			if (elm.type == 7) {
+				data.xml_pi = true;
+				matches = &#x2F;encoding=&quot;([^&quot;]+)&quot;&#x2F;.exec(elm.value);
+				if (matches)
+					data.docencoding = matches[1];
+			}
+
+			&#x2F;&#x2F; Parse doctype
+			elm = headerFragment.getAll(&#x27;#doctype&#x27;)[0];
+			if (elm)
+				data.doctype = &#x27;&lt;!DOCTYPE&#x27; + elm.value + &quot;&gt;&quot;; 
+
+			&#x2F;&#x2F; Parse title element
+			elm = headerFragment.getAll(&#x27;title&#x27;)[0];
+			if (elm &amp;&amp; elm.firstChild) {
+				data.metatitle = elm.firstChild.value;
+			}
+
+			&#x2F;&#x2F; Parse meta elements
+			each(headerFragment.getAll(&#x27;meta&#x27;), function(meta) {
+				var name = meta.attr(&#x27;name&#x27;), httpEquiv = meta.attr(&#x27;http-equiv&#x27;), matches;
+
+				if (name)
+					data[&#x27;meta&#x27; + name.toLowerCase()] = meta.attr(&#x27;content&#x27;);
+				else if (httpEquiv == &quot;Content-Type&quot;) {
+					matches = &#x2F;charset\s*=\s*(.*)\s*&#x2F;gi.exec(meta.attr(&#x27;content&#x27;));
+
+					if (matches)
+						data.docencoding = matches[1];
+				}
+			});
+
+			&#x2F;&#x2F; Parse html attribs
+			elm = headerFragment.getAll(&#x27;html&#x27;)[0];
+			if (elm)
+				data.langcode = getAttr(elm, &#x27;lang&#x27;) || getAttr(elm, &#x27;xml:lang&#x27;);
+	
+			&#x2F;&#x2F; Parse stylesheet
+			elm = headerFragment.getAll(&#x27;link&#x27;)[0];
+			if (elm &amp;&amp; elm.attr(&#x27;rel&#x27;) == &#x27;stylesheet&#x27;)
+				data.stylesheet = elm.attr(&#x27;href&#x27;);
+
+			&#x2F;&#x2F; Parse body parts
+			elm = headerFragment.getAll(&#x27;body&#x27;)[0];
+			if (elm) {
+				data.langdir = getAttr(elm, &#x27;dir&#x27;);
+				data.style = getAttr(elm, &#x27;style&#x27;);
+				data.visited_color = getAttr(elm, &#x27;vlink&#x27;);
+				data.link_color = getAttr(elm, &#x27;link&#x27;);
+				data.active_color = getAttr(elm, &#x27;alink&#x27;);
+			}
+
+			return data;
+		},
+
+		_dataToHtml : function(data) {
+			var headerFragment, headElement, html, elm, value, dom = this.editor.dom;
+
+			function setAttr(elm, name, value) {
+				elm.attr(name, value ? value : undefined);
+			};
+
+			function addHeadNode(node) {
+				if (headElement.firstChild)
+					headElement.insert(node, headElement.firstChild);
+				else
+					headElement.append(node);
+			};
+
+			headerFragment = this._parseHeader();
+			headElement = headerFragment.getAll(&#x27;head&#x27;)[0];
+			if (!headElement) {
+				elm = headerFragment.getAll(&#x27;html&#x27;)[0];
+				headElement = new Node(&#x27;head&#x27;, 1);
+
+				if (elm.firstChild)
+					elm.insert(headElement, elm.firstChild, true);
+				else
+					elm.append(headElement);
+			}
+
+			&#x2F;&#x2F; Add&#x2F;update&#x2F;remove XML-PI
+			elm = headerFragment.firstChild;
+			if (data.xml_pi) {
+				value = &#x27;version=&quot;1.0&quot;&#x27;;
+
+				if (data.docencoding)
+					value += &#x27; encoding=&quot;&#x27; + data.docencoding + &#x27;&quot;&#x27;;
+
+				if (elm.type != 7) {
+					elm = new Node(&#x27;xml&#x27;, 7);
+					headerFragment.insert(elm, headerFragment.firstChild, true);
+				}
+
+				elm.value = value;
+			} else if (elm &amp;&amp; elm.type == 7)
+				elm.remove();
+
+			&#x2F;&#x2F; Add&#x2F;update&#x2F;remove doctype
+			elm = headerFragment.getAll(&#x27;#doctype&#x27;)[0];
+			if (data.doctype) {
+				if (!elm) {
+					elm = new Node(&#x27;#doctype&#x27;, 10);
+
+					if (data.xml_pi)
+						headerFragment.insert(elm, headerFragment.firstChild);
+					else
+						addHeadNode(elm);
+				}
+
+				elm.value = data.doctype.substring(9, data.doctype.length - 1);
+			} else if (elm)
+				elm.remove();
+
+			&#x2F;&#x2F; Add&#x2F;update&#x2F;remove title
+			elm = headerFragment.getAll(&#x27;title&#x27;)[0];
+			if (data.metatitle) {
+				if (!elm) {
+					elm = new Node(&#x27;title&#x27;, 1);
+					elm.append(new Node(&#x27;#text&#x27;, 3)).value = data.metatitle;
+					addHeadNode(elm);
+				}
+			}
+
+			&#x2F;&#x2F; Add meta encoding
+			if (data.docencoding) {
+				elm = null;
+				each(headerFragment.getAll(&#x27;meta&#x27;), function(meta) {
+					if (meta.attr(&#x27;http-equiv&#x27;) == &#x27;Content-Type&#x27;)
+						elm = meta;
+				});
+
+				if (!elm) {
+					elm = new Node(&#x27;meta&#x27;, 1);
+					elm.attr(&#x27;http-equiv&#x27;, &#x27;Content-Type&#x27;);
+					elm.shortEnded = true;
+					addHeadNode(elm);
+				}
+
+				elm.attr(&#x27;content&#x27;, &#x27;text&#x2F;html; charset=&#x27; + data.docencoding);
+			}
+
+			&#x2F;&#x2F; Add&#x2F;update&#x2F;remove meta
+			each(&#x27;keywords,description,author,copyright,robots&#x27;.split(&#x27;,&#x27;), function(name) {
+				var nodes = headerFragment.getAll(&#x27;meta&#x27;), i, meta, value = data[&#x27;meta&#x27; + name];
+
+				for (i = 0; i &lt; nodes.length; i++) {
+					meta = nodes[i];
+
+					if (meta.attr(&#x27;name&#x27;) == name) {
+						if (value)
+							meta.attr(&#x27;content&#x27;, value);
+						else
+							meta.remove();
+
+						return;
+					}
+				}
+
+				if (value) {
+					elm = new Node(&#x27;meta&#x27;, 1);
+					elm.attr(&#x27;name&#x27;, name);
+					elm.attr(&#x27;content&#x27;, value);
+					elm.shortEnded = true;
+
+					addHeadNode(elm);
+				}
+			});
+
+			&#x2F;&#x2F; Add&#x2F;update&#x2F;delete link
+			elm = headerFragment.getAll(&#x27;link&#x27;)[0];
+			if (elm &amp;&amp; elm.attr(&#x27;rel&#x27;) == &#x27;stylesheet&#x27;) {
+				if (data.stylesheet)
+					elm.attr(&#x27;href&#x27;, data.stylesheet);
+				else
+					elm.remove();
+			} else if (data.stylesheet) {
+				elm = new Node(&#x27;link&#x27;, 1);
+				elm.attr({
+					rel : &#x27;stylesheet&#x27;,
+					text : &#x27;text&#x2F;css&#x27;,
+					href : data.stylesheet
+				});
+				elm.shortEnded = true;
+
+				addHeadNode(elm);
+			}
+
+			&#x2F;&#x2F; Update body attributes
+			elm = headerFragment.getAll(&#x27;body&#x27;)[0];
+			if (elm) {
+				setAttr(elm, &#x27;dir&#x27;, data.langdir);
+				setAttr(elm, &#x27;style&#x27;, data.style);
+				setAttr(elm, &#x27;vlink&#x27;, data.visited_color);
+				setAttr(elm, &#x27;link&#x27;, data.link_color);
+				setAttr(elm, &#x27;alink&#x27;, data.active_color);
+
+				&#x2F;&#x2F; Update iframe body as well
+				dom.setAttribs(this.editor.getBody(), {
+					style : data.style,
+					dir : data.dir,
+					vLink : data.visited_color,
+					link : data.link_color,
+					aLink : data.active_color
+				});
+			}
+
+			&#x2F;&#x2F; Set html attributes
+			elm = headerFragment.getAll(&#x27;html&#x27;)[0];
+			if (elm) {
+				setAttr(elm, &#x27;lang&#x27;, data.langcode);
+				setAttr(elm, &#x27;xml:lang&#x27;, data.langcode);
+			}
+
+			&#x2F;&#x2F; Serialize header fragment and crop away body part
+			html = new tinymce.html.Serializer({
+				validate: false,
+				indent: true,
+				apply_source_formatting : true,
+				indent_before: &#x27;head,html,body,meta,title,script,link,style&#x27;,
+				indent_after: &#x27;head,html,body,meta,title,script,link,style&#x27;
+			}).serialize(headerFragment);
+
+			this.head = html.substring(0, html.indexOf(&#x27;&lt;&#x2F;body&gt;&#x27;));
+		},
+
+		_parseHeader : function() {
+			&#x2F;&#x2F; Parse the contents with a DOM parser
+			return new tinymce.html.DomParser({
+				validate: false,
+				root_name: &#x27;#document&#x27;
+			}).parse(this.head);
+		},
+
+		_setContent : function(ed, o) {
+			var self = this, startPos, endPos, content = o.content, headerFragment, styles = &#x27;&#x27;, dom = self.editor.dom, elm;
+
+			function low(s) {
+				return s.replace(&#x2F;&lt;\&#x2F;?[A-Z]+&#x2F;g, function(a) {
+					return a.toLowerCase();
+				})
+			};
+
+			&#x2F;&#x2F; Ignore raw updated if we already have a head, this will fix issues with undo&#x2F;redo keeping the head&#x2F;foot separate
+			if (o.format == &#x27;raw&#x27; &amp;&amp; self.head)
+				return;
+
+			if (o.source_view &amp;&amp; ed.getParam(&#x27;fullpage_hide_in_source_view&#x27;))
+				return;
+
+			&#x2F;&#x2F; Parse out head, body and footer
+			content = content.replace(&#x2F;&lt;(\&#x2F;?)BODY&#x2F;gi, &#x27;&lt;$1body&#x27;);
+			startPos = content.indexOf(&#x27;&lt;body&#x27;);
+
+			if (startPos != -1) {
+				startPos = content.indexOf(&#x27;&gt;&#x27;, startPos);
+				self.head = low(content.substring(0, startPos + 1));
+
+				endPos = content.indexOf(&#x27;&lt;&#x2F;body&#x27;, startPos);
+				if (endPos == -1)
+					endPos = content.length;
+
+				o.content = content.substring(startPos + 1, endPos);
+				self.foot = low(content.substring(endPos));
+			} else {
+				self.head = this._getDefaultHeader();
+				self.foot = &#x27;\n&lt;&#x2F;body&gt;\n&lt;&#x2F;html&gt;&#x27;;
+			}
+
+			&#x2F;&#x2F; Parse header and update iframe
+			headerFragment = self._parseHeader();
+			each(headerFragment.getAll(&#x27;style&#x27;), function(node) {
+				if (node.firstChild)
+					styles += node.firstChild.value;
+			});
+
+			elm = headerFragment.getAll(&#x27;body&#x27;)[0];
+			if (elm) {
+				dom.setAttribs(self.editor.getBody(), {
+					style : elm.attr(&#x27;style&#x27;) || &#x27;&#x27;,
+					dir : elm.attr(&#x27;dir&#x27;) || &#x27;&#x27;,
+					vLink : elm.attr(&#x27;vlink&#x27;) || &#x27;&#x27;,
+					link : elm.attr(&#x27;link&#x27;) || &#x27;&#x27;,
+					aLink : elm.attr(&#x27;alink&#x27;) || &#x27;&#x27;
+				});
+			}
+
+			dom.remove(&#x27;fullpage_styles&#x27;);
+
+			if (styles) {
+				dom.add(self.editor.getDoc().getElementsByTagName(&#x27;head&#x27;)[0], &#x27;style&#x27;, {id : &#x27;fullpage_styles&#x27;}, styles);
+
+				&#x2F;&#x2F; Needed for IE 6&#x2F;7
+				elm = dom.get(&#x27;fullpage_styles&#x27;);
+				if (elm.styleSheet)
+					elm.styleSheet.cssText = styles;
+			}
+		},
+
+		_getDefaultHeader : function() {
+			var header = &#x27;&#x27;, editor = this.editor, value, styles = &#x27;&#x27;;
+
+			if (editor.getParam(&#x27;fullpage_default_xml_pi&#x27;))
+				header += &#x27;&lt;?xml version=&quot;1.0&quot; encoding=&quot;&#x27; + editor.getParam(&#x27;fullpage_default_encoding&#x27;, &#x27;ISO-8859-1&#x27;) + &#x27;&quot; ?&gt;\n&#x27;;
+
+			header += editor.getParam(&#x27;fullpage_default_doctype&#x27;, &#x27;&lt;!DOCTYPE html PUBLIC &quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD XHTML 1.0 Transitional&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;xhtml1&#x2F;DTD&#x2F;xhtml1-transitional.dtd&quot;&gt;&#x27;);
+			header += &#x27;\n&lt;html&gt;\n&lt;head&gt;\n&#x27;;
+
+			if (value = editor.getParam(&#x27;fullpage_default_title&#x27;))
+				header += &#x27;&lt;title&gt;&#x27; + value + &#x27;&lt;&#x2F;title&gt;\n&#x27;;
+
+			if (value = editor.getParam(&#x27;fullpage_default_encoding&#x27;))
+				header += &#x27;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text&#x2F;html; charset=&#x27; + value + &#x27;&quot; &#x2F;&gt;\n&#x27;;
+
+			if (value = editor.getParam(&#x27;fullpage_default_font_family&#x27;))
+				styles += &#x27;font-family: &#x27; + value + &#x27;;&#x27;;
+
+			if (value = editor.getParam(&#x27;fullpage_default_font_size&#x27;))
+				styles += &#x27;font-size: &#x27; + value + &#x27;;&#x27;;
+
+			if (value = editor.getParam(&#x27;fullpage_default_text_color&#x27;))
+				styles += &#x27;color: &#x27; + value + &#x27;;&#x27;;
+
+			header += &#x27;&lt;&#x2F;head&gt;\n&lt;body&#x27; + (styles ? &#x27; style=&quot;&#x27; + styles + &#x27;&quot;&#x27; : &#x27;&#x27;) + &#x27;&gt;\n&#x27;;
+
+			return header;
+		},
+
+		_getContent : function(ed, o) {
+			var self = this;
+
+			if (!o.source_view || !ed.getParam(&#x27;fullpage_hide_in_source_view&#x27;))
+				o.content = tinymce.trim(self.head) + &#x27;\n&#x27; + tinymce.trim(o.content) + &#x27;\n&#x27; + tinymce.trim(self.foot);
+		}
+	});
+
+	&#x2F;&#x2F; Register plugin
+	tinymce.PluginManager.add(&#x27;fullpage&#x27;, tinymce.plugins.FullPagePlugin);
+})();
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

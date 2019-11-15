@@ -1,0 +1,178 @@
+<script type="text/javascript">
+var _ubiProv = <?=$this->arrUbigeo['prov']?>,
+    _ubiDist = <?=$this->arrUbigeo['dist']?>;
+</script>
+<?php if(!empty($this->msg)){ ?>
+    <div class="ybox"><?=$this->msg?></div>
+<?php } ?>
+<form id="my-info" class="form-horizontal my-ads" method="post">
+    	<h1>Información Principal</h1>
+    	<p class="line-one">
+    		Aquí encontrarás todo acerca de tus compras, ventas, preferencias y datos personales
+    	</p>
+    	<p>
+    		Los datos con <span class="red-inline">* </span>son obligatorios.
+    	</p>
+    	<div class="control-group">
+    		<label class="control-label">Mi Apodo</label>
+    		<div class="controls"><?=$this->data->APODO;?></div>
+    	</div>
+    	<div class="control-group">
+    		<label class="control-label">Mi Email</label>
+    		<div class="controls"><?=$this->data->EMAIL?>
+    			<a href="#change-email" class="change-email-link" title="Cambiar correo">Cambiar correo</a>
+    		</div>
+    		
+    	</div>
+    	<div class="control-group">
+    		<label class="control-label">Mi Clave</label>
+    		<div class="controls">*********
+    			<a href="#change-password" class="change-password-link" title="Cambiar clave">Cambiar clave</a>
+    		</div>
+    		
+    	</div>
+    	<div class="shadow-space">
+    	</div>
+    	<div class="control-group">
+    		<label class="control-label"><span class="red">*</span>Nombres </label>
+    		<div class="controls">
+    			<?=$this->form->nombre->renderViewHelper()?>
+    		</div>
+    	</div>
+    	<div class="control-group">
+    		<label class="control-label"><span class="red">*</span>Apellidos </label>
+    		<div class="controls">
+    			<?=$this->form->apellido->renderViewHelper()?>
+    		</div>
+    	</div>
+    <div class="control-group">
+		<label class="control-label"><span class="red">*</span>Departamento</label>
+		<div class="controls"><?=$this->form->ubication_departement->renderViewHelper()?></div>
+    </div>
+    <div class="control-group">
+		<label class="control-label"><span class="red">*</span>Provincia</label>
+		<div class="controls"><?=$this->form->ubication_province->renderViewHelper()?></div>
+    </div>
+    <div class="control-group" style="display:none">
+		<label class="control-label"><span class="red">*</span>Distrito</label>
+		<div class="controls"><?=$this->form->ubication_district->renderViewHelper()?></div>
+     </div>
+	<div class="control-group">
+		<label class="control-label">
+		<span class="red">*</span>Teléfono 1 </label>
+		<div class="controls">
+			<?=$this->form->telefono->renderViewHelper()?>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Teléfono 2</label>
+		<div class="controls">
+			<?=$this->form->telefono2->renderViewHelper()?>
+		</div>
+	</div>
+	<div class="control-group">
+		<div>
+            <label class="checkbox">
+                <?=$this->form->suscripcionNews->renderViewHelper()?>
+                Estoy de acuerdo en recibir información o mensajes sobre nuevos servicios, 
+                promociones y novedades de Kotear.pe 
+            </label>
+		</div>
+	</div>
+	<div class="shadow-space"></div>
+	<div class="control-group btn-save">
+		<button type="submit" class="btn-kotear btn-large">Grabar</button>
+	</div>
+</form>
+<div class="tips">
+<h4>
+  <p>Consejos para tu clave</p>
+</h4><span>Para que tu clave sea más segura, te recomendamos usar:</span>
+<ul>
+  <li>Letras (sin tílde) y números.Caractéres especiales (Ej. #, @, &, *, etc.).</li>
+  <li>Combinar mayúsculas y minúsculas.</li>
+  <li>No incluir tu nombre real o tu apodo de Kotear.pe</li>
+</ul>
+</div>
+<div class="tips">
+<h4>
+  <p>Consejos para tus datos</p>
+</h4>
+<p>
+  <ul id="" class="">
+    <li>Incluye tu nombre y apellido completo tal como aparece en tu documento de identidad.</li>
+    <li>Ingresa tu teléfono; que son necesarios para que pueda contactarte tu contraparte en una compra/venta.</li>
+    <li>El primer  número telefónico será el que aparezca en tus AVISOS IMPRESOS.</li>
+  </ul><!-- / -->
+  </p>
+</div>
+
+<div class="hide">
+    <div id="change-password" class="message-modal">
+        <div id="change-password-msg" class="hidden-dom"></div>
+         <form  id="change-password-form" action="<?php echo $this->baseUrl(); ?>/usuario/edicion/clave" method="post" name="change-passw" class="form-horizontal" >
+                <h3 class="k-title"><span></span>Cambio de Clave</h3>
+                <div class="content">
+                  <h3>Cambiar tu clave ahora </h3>
+                  <div class="tip">Elegir una clave que puedas recordar fácilmente, pero que sea difícil de deducir por los demás. </div>
+                  <p class="mb20"><strong>Ingresar tu nueva clave para volver a operar en el sitio: </strong></p>
+                        <div class="control-group">
+                             <label class="control-label" for="newpassw">Nueva clave:</label>
+                            <div class="controls">
+                                <input type="password" maxlength="20" id="newpassw" name="newpassw">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="newpassw2">Repetir nueva clave:</label>
+                            <div class="controls">
+                                <input type="password" maxlength="20" id="newpassw2" name="newpassw2">
+                            </div>
+                        </div>
+                  <p class="mb20"><strong>Nota:</strong> Tu clave es confidencial. Kotear.pe nunca solicita datos de tu cuenta o clave por e-mail. </p>
+                </div>
+                <div class="control">
+                  <button name="continuar" class="btn-kotear" type="submit"><span>Cambiar</span></button>
+                  <a name="cancel" class="btn-close" value="Cancelar"><span>Cancelar</span></a>
+                </div>
+	</form>
+    </div>
+</div><!-- / recuperar email -->
+
+<div class="hide">
+    <div id="change-email" class="message-modal">
+        <div id="change-email-msg" class="hidden-dom"></div>
+		<form id="change-email-form" action="<?php echo $this->baseUrl(); ?>/usuario/edicion/correo" method="post" name="change-email">
+                     <h3 class="k-title"><span></span>Cambio de e-mail</h3>
+                   <div id="change-email-msg-error"></div>
+		  <div class="content">
+		    <h3>Modificación de tu e-mail de contacto </h3>
+		    <p class="mb10"><strong>Antes de modificar el e-mail que tienes registrado en Kotear.pe, ten en cuenta lo siguiente: </strong></p>
+		    <ul class="m-list">
+		      <li>La dirección <strong>tucorreo@hotmail.com</strong> es el medio que utiliza <strong>Kotear.pe</strong> y todas tus contrapartes en una compra-venta
+		        para mantenerse con contacto contigo. </li>
+		      <li>Por motivos de seguridad, al modificar tu e-mail el sistema debe enviarte un e-mail a tu nueva dirección de correo electrónico para validarla. Sólo al hacer clic en el link que se te envíe en ese e-mail vas a haber cambiado tu dirección de correo en <strong>Kotear.pe</strong> ; en tanto no hagas clic en el link, se continuará utilizando la presente dirección de correo electrónico. </li>
+		      <li>Una vez modificada tu dirección de correo, toda comunicación de <strong>Kotear.pe</strong> o de tus contrapartes en una
+		        compra-venta pasarán a enviarse a tu nueva dirección de correo electrónico.</li>
+		    </ul>
+		    <p>Ahora sí, por favor ingresa tu nuevo e-mail: </p>
+                    <div class="control-group">
+                        <label class="control-label" for="newmail">Nuevo e-mail:</label>
+                        <div class="controls m-small">
+                            <input type="text" id="newmail" name="newmail">
+                            <small>Este e-mail servirá para confirmar tu registro y será utilizado como vía de contacto. </small>
+                        </div>
+                    </div>
+                     <div class="control-group mb10">
+                        <label class="control-label" for="newmail2">Repetir nuevo e-mail:</label>
+                        <div class="controls">
+                            <input type="text" id="newmail2" name="newmail2">
+                        </div>
+                    </div>
+		  </div>
+		  <div class="control">
+			<button name="continuar" class="btn-kotear" type="submit">Continuar</button>
+		        <a href="javascript:;" name="cancel" class="btn-close" value="Cancelar">Cancelar</a>
+		  </div>
+		</form>
+	</div>
+</div><!-- / recuperar clave -->

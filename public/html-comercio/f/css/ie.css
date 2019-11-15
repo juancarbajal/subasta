@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+#s_level2, .breadcrumb, .clearfix, #footer-persistent .persistent-menu, * html .result-pag #s_level1 h3{ zoom:1; }
+
+/* IE 6
+--------------------------------------------------------------------------------*/
+* html>body .clearfix { display: inline-block; width: 100%; }
+* html .clearfix { height: 1%; }
+* html #publish-btn a { padding-bottom:5px; }
+* html #global-menu li ul{ top:36px!important; }
+* html #global-menu li table{ top:30px; }
+* html .search_result_paginator span{ padding-bottom:2px!important; }
+* html .result-list .lft{ margin-left:9px; }
+* html .r4 .tl{ z-index:-1; }
+* html .r4 .tr{ z-index:-2; }
+* html .r4 .bl{ z-index:-3; }
+* html .r4 .br{ z-index:-4; }
+* html #koportunidades .tr, * html #koportunidades .br{ right:-2px; }
+* html #left-bar ul{ list-style:url(../img/global/bullet1_blue_ie.gif)!important; }
+* html #left-bar ul li{ zoom:1!important; }
+* html #prodscrolls1 .next{ right:8px; }
+* html .bid_info .tr{ background-position:-270px top; right:-1px; }
+* html .bid_info .br{ background-position:-270px -9px; right:-1px; }
+
+/* IE 7
+--------------------------------------------------------------------------------*/
+.clearfix { min-width:1px; }
+#banner-top .extra{ overflow:hidden; line-height:0; }
+#empezarvender .button_rb{ margin-top:18px; }
+#left-bar .seller_info ul, #left-bar .seller_info li{ list-style-image:none!important; }

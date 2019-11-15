@@ -1,0 +1,47 @@
+<div class="congratulation container">
+    <div class="head-step fix">
+        <?php 
+        switch($this->publicacionEstado) {
+            case 1 :  $titleMsg = 'Su aviso ha sido publicado satisfactoriamente';
+                    $bodyMsg  = ($this->publicacionDestaqueEstado == 1)?'Confirmación de publicación de su aviso.':
+                                            'Confirmación de publicación de su aviso con cargos pendiente de pago.';
+                break;
+            case 2 :  $titleMsg = 'Su aviso ha sido editado satisfactoriamente';
+                    $bodyMsg  = ($this->publicacionDestaqueEstado == 1)?'Confirmación de la edición de su aviso.':
+                                            'Confirmación de la edición de su aviso con cargos pendiente de pago.'; 
+                break;
+            default : $titleMsg = '';
+                    $bodyMsg  = '';
+                break;
+        }
+        ?>
+        <h2 class="k-title"><span></span><?=$titleMsg?></h2>
+        <p><?=$bodyMsg?></p>
+    </div>
+    <div class="cnt-congratulation">
+        <h3 class="k-title nbc mb30"><span class="start"></span>Felicidades <?=$this->identity->APODO?></h3>
+        <p class="mb30">Tu aviso <a href="<?=$this->rutaAviso?>"><?=strip_tags($this->titulo)?></a> ya se encuentra publicado.<br/>
+        Puedes verlo ahora mismo desde la misma URL: <a href="<?=$this->rutaAviso?>"><?=strip_tags($this->titulo)?></a></p>
+        <a class="btn-kotear" href="<?=$this->baseUrl()?>/usuario/publicacion/registro-destaque">Publicar otro aviso</a>
+        <p class="share-fb"><!--Comparte tu aviso: <span class="icons fb"></span>--></p>
+        <div class="shadow-space mb10"></div>
+        <div class="data-contact">
+            <p class="strong mb10">La información de contacto que aparecerá en tu aviso es la siguiente:  <span class="iconsp mail"></span><a href="javascript:;"><?=$this->identity->EMAIL?></a><span class="iconsp phone"></span> <?=$this->identity->FONO1?></p>
+            <p>Si quieres actualizar tu información haz <a href="<?=$this->baseUrl() . '/usuario/edicion'?>">click aquí</a></p>
+        </div>
+        <div class="shadow-space"></div>
+    </div>
+    <h3 class="k-title fix mb20"><span class="start"></span>Recomendaciones para vender mejor</h3>
+    <ul class="list">
+        <li>
+            Revisa toda la información incluida en tu aviso: si encuentras algún error u omisión es preferible que 
+            modifiques tu publicación antes de que se registre tu compra.
+        </li>
+        <li>
+            Responde a todas las preguntas que te realicen los interesados en tu aviso: estar atento a sus 
+            inquietudes te va a ayudar a cerrar rapidamente una venta.
+        </li>
+        <li>Sigue de cerca tu aviso desde la sección de “Avisos Activos” dentro de Koteando (Mi Cuenta).</li>
+    </ul>
+    <div class="shadow-space"></div>
+</div>

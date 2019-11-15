@@ -1,0 +1,47 @@
+  <div class="container">
+          <h3 class="k-title"><span></span>Recuperación de clave / Confirmación de solicitud de cambio de clave</h3>
+          <?php if (isset($this->msg)){ ?>
+            <div class="ybox">
+          <?php echo $this->msg?>
+            </div>
+          <?php } else {?>
+
+          <?php if (isset($this->errors)) { ?>
+                <div class="rbox">
+                <?php if (is_array($this->errors)){?>
+                  <?php  foreach ($this->errors as $index =>$error):?>
+                  <dl>
+                  <?php if ($error != null){ ?>
+                  <dt><?php echo $index; ?></dt>
+                  <dd><?php echo implode('<br/>', $error);?></dd>
+                  </dl>
+                  <?php } ?>
+                  <?php endforeach; ?>
+                <?php } else {?>
+                <?php echo $this->errors?>
+                <?php }?>
+                </div>
+          <?php } ?>
+          <form name="cambioclave" id="insert-password-form" method="post" action="<?php echo $this->baseUrl()?>/usuario/clave/recuperar-nueva"> 
+              <h3>Ingresa tu nueva clave</h3>
+              <div class="form-horizontal">
+                <div class="control-group">
+                    <label for="new-password" class="control-label">Ingresar nueva clave</label>
+                    <div class="controls">
+                         <input type="password" id="new-password" name="clave">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="repeat-new-password" class="control-label">Repetir nueva clave</label>
+                    <div class="controls">
+                          <input type="password" id="repeat-new-password" name="clave2">
+                    </div>
+                </div>
+                <div class="control">
+                     <button type="submit" class="btn-kotear" tabindex="2">Continuar</button>
+                     <a href="javascript:;" class="btn-close" tabindex="3">Cancelar</a>
+                </div>
+            </div> 
+        </form>
+ <?php }?>
+  </div>

@@ -1,0 +1,42 @@
+    <?php if ($this->pageCount): ?>
+    <div class="paginationControl">
+    <p class="search_result_paginator">
+    <!-- Enlace para la primera pagina -->
+    <?php if (isset($this->previous)): ?>
+        <a href="<?php echo $this->baseUrl() . '/usuario/venta/historial/?' . $this->variables . '&p=' . $this->first ; ?>">«</a>
+        <?php else: ?>
+    <span>«</span>
+    <?php endif; ?>
+
+    <!-- Enlace para la anterior pagina -->
+    <?php if (isset($this->previous)): ?>
+        <a href="<?php echo $this->baseUrl() . '/usuario/venta/historial/?' . $this->variables . '&p=' . $this->previous; ?>">&lt; Anterior</a>
+    <?php else: ?>
+    <span>&lt; Anterior</span>
+    <?php endif; ?>
+
+    <!-- Enlace para paginas -->
+    <?php foreach ($this->pagesInRange as $page): ?>
+            <?php if ($page != $this->current): ?>
+                    <a href="<?php echo $this->baseUrl() . '/usuario/venta/historial/?' . $this->variables . '&p=' . $page; ?>"><?php echo $page; ?></a>
+            <?php else: ?>
+                    <span class="active"><?php echo $page; ?></span>
+            <?php endif; ?>
+    <?php endforeach; ?>
+
+    <!-- Enlace para la pagina siguiente -->
+    <?php if (isset($this->next)): ?>
+            <a href="<?php echo $this->baseUrl() . '/usuario/venta/historial/?' . $this->variables . '&p=' . $this->next; ?>">Siguiente &gt;</a>
+            <?php else: ?>
+                    <span>Siguiente &gt;</span>
+            <?php endif; ?>
+
+    <!-- Enlace para la ultima pagina -->
+    <?php if (isset($this->next)): ?>
+        <a href="<?php echo $this->baseUrl() . '/usuario/venta/historial/?' . $this->variables . '&p=' . $this->last; ?>">»</a>
+    <?php else: ?>
+        <span>»</span>
+    <?php endif; ?>
+    </p>
+    </div>
+    <?php endif; ?>

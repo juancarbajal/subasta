@@ -1,0 +1,45 @@
+@charset "utf-8";
+#conetenedor{ width:800px; font-family:Arial, Helvetica, sans-serif;  margin:auto;}
+#logo{top:10px; width:800px; }
+#search { background-color:#eee; border-bottom:1px solid #ccc; position:relative; width:auto; height:40px; }
+#search .content { background-color:#eee; border-bottom:1px solid #ccc; padding:0 12px 0; position:relative; bottom:-1px; height:39px; }
+#franja_roja{ background:#C70102; height:7px; width:800px;}
+.texto_impresion{ color:#0D62A8;float:right;font-family:Arial,Helvetica,sans-serif;font-size:11px;margin-top:14px;padding-right:10px; font-weight:bold;}
+#franja_plomo{ width:755px; height:21px;background:#F1F2F5 no-repeat; margin-left:23px;}
+img{ border:1px solid #CCCCCC; padding:4px;}
+.no_border{ border:none;}
+.tabla{ color:#454545;font-size:12px;font-weight:bold;margin-top:5px;}
+.tr_class{ border-bottom:1px solid #CCCCCC; padding:7px;}
+.titulo{display:block;float:left;font-size:15px;overflow:hidden;text-decoration:underline;width:530px; line-height:18px; }
+.precio{ font-size:14px; color:#CC0001;}
+.right{ text-align:right}
+.product-info p{margin: 0;}
+.content p img{border:1px solid #CCCCCC;margin:0 10px 10px 0;padding:4px;}
+div.col1, div.col2, div.col3, div.col4, div.col5, div.col6, div.col7, div.col8, div.col9, div.col10, div.col11, div.col12, div.col13, div.col14, div.col15, div.col16, div.col17, div.col18, div.col19, div.col20, div.col21, div.col22{float:left;margin-right: 10px;}
+.col1{ width: 35px;}
+.col2{ width: 80px;}
+.col2_1{ width: 92px;}
+.col3{ width: 125px;}
+.col4{ width: 170px;}
+.col5{ width: 215px;}
+.col6{ width: 260px;}
+.col7{ width: 305px;}
+.col8{ width: 350px;}
+.col9{ width: 395px;}
+.col10{ width: 440px;}
+.col10_1{ width: 470px;}
+.col11{ width: 485px;}
+.col12{ width: 530px;}
+.col13{ width: 575px;}
+.col14{ width: 620px;}
+.col15{ width: 665px;}
+.col16{ width: 710px;}
+.col17{ width: 755px;}
+.col18{ width: 800px;}
+.col19{ width: 845px;}
+.col20{ width: 890px;}
+.col21{ width: 935px;}
+.col21_1{ width: 940px;}
+.col22, div.col22{ width: 980px; margin: 0; }
+* html #search .inpt{position:relative;height:2em;}
+* html .titulo,.col12{ width:490px;}

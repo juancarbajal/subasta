@@ -1,0 +1,91 @@
+<script src='<?php echo $this->baseUrl() . '/f/js/jskotear.js' ?>' type="text/javascript"></script>
+
+<div id="body-content" class="publish-pag pub-step1 col-master">
+  <div id="s_level1" class="clearfix">
+    <div class="col15">
+      <?php
+      switch($this->publicacionEstado) {
+          case 1 : ?><h3>Publicar: Paso 1 - Selecciona el Destaque</h3><?php break;
+          case 2 : ?><h3>Editar: Paso 1 - Selecciona el Destaque</h3><?php break;
+          case 3 : ?><h3>Republicar: Paso 1 - Selecciona el Destaque</h3><?php break;
+          default : break;
+      } ?>
+      <?php if (isset($this->msg)){?>
+      <div class="error">
+          <?php echo $this->msg; ?>
+      </div>
+      <?php }?>
+      <p>Elige el destaque que mas beneficie a tu artículo a la venta.</p>
+    </div>
+    <div class="last col7">
+      <ul class="historic">
+        <li class="active">Selecciona el Rubro</li>
+        <!--<li>Datos del Aviso</li>-->
+        <!--<li>Destaca el Aviso</li>-->
+        <li>Confirmación</li>
+      </ul>
+    </div>
+  </div>
+  <div id="s_level2" class="clearfix">      
+    <div id="left-bar" class="col17">
+      <?php 
+      $getAviso = ($this->datosCategoria['aviso']!='')? '/cod/'.$this->datosCategoria['aviso'] : '';
+      ?>
+      <form name="formulariocategoria" id="formulariocategoria" method="post" action="<?php echo $this->baseUrl()?>/usuario/publicacion/registro-categoria<?php echo $getAviso; ?>" onsubmit="">
+        <input type="hidden" name='hrubro' id='hrubro' value='<?php echo $this->rubro[0] ?>' />
+        <input type="hidden" name='hsubrubro1' id='hsubrubro1' value="<?php echo $this->subrubro1[0] ?>" />
+        <input type="hidden" name='hsubrubro2' id='hsubrubro2' value="<?php echo $this->subrubro2[0] ?>" />
+        <input type="hidden" name='hsubrubro3' id='hsubrubro3' value="<?php echo $this->subrubro3[0] ?>" />
+        <input type="hidden" name='hrubro_nom' id='hrubro_nom' value="<?php echo $this->rubro[1] ?>" />
+        <input type="hidden" name='hsubrubro1_nom' id='hsubrubro1_nom' value="<?php echo $this->subrubro1[1] ?>" />
+        <input type="hidden" name='hsubrubro2_nom' id='hsubrubro2_nom' value="<?php echo $this->subrubro2[1] ?>" />
+        <input type="hidden" name='hsubrubro3_nom' id='hsubrubro3_nom' value="<?php echo $this->subrubro3[1] ?>" />
+        <input type="hidden" name='hrubro_adulto' id='hrubro_adulto' value="<?php echo $this->rubro[2] ?>" />
+
+        <input type="hidden" name='Titulo' id='Titulo' value="<?php echo $this->datosCategoria['Titulo'] ?>" />
+        <input type="hidden" name='estadoArticulo' id='estadoArticulo' value="<?php echo $this->datosCategoria['estadoArticulo']?>" />
+        <input type="hidden" name='estadoArticuloText' id='estadoArticuloText' value="<?php echo $this->datosCategoria['estadoArticuloText']?>" />
+        <input type="hidden" name='tipoPublicacion' id='tipoPublicacion' value="<?php echo $this->datosCategoria['tipoPublicacion']?>" />
+        <input type="hidden" name='moneda' id='moneda' value="<?php echo $this->datosCategoria['moneda']?>" />
+        <input type="hidden" name='preciofinal' id='preciofinal' value="<?php echo $this->datosCategoria['preciofinal']?>" />
+        <input type="hidden" name='duracion' id='duracion' value="<?php echo $this->datosCategoria['duracion']?>" />
+
+        <input type="hidden" name='republicacionAutomatica' id='republicacionAutomatica' value="<?php echo $this->datosCategoria['republicacionAutomatica']?>" />
+        <input type="hidden" name='duracionRepublicacionAutomatica' id='duracionRepublicacionAutomatica' value="<?php echo $this->datosCategoria['duracionRepublicacionAutomatica']?>" />
+
+        <input type="hidden" name='mediosDePagoSeleccionados' id='mediosDePagoSeleccionados' value="<?php echo $this->datosCategoria['mediosDePagoSeleccionados']?>" />
+        <input type="hidden" name='inf_adicional' id='inf_adicional' value="<?php echo $this->datosCategoria['inf_adicional']?>" />
+        <input type="hidden" name='lista_mediospago' id='lista_mediospago' value="<?php echo $this->datosCategoria['lista_mediospago'] ?>" />
+        <input type="hidden" name='cantidad' id='cantidad' value="<?php echo $this->datosCategoria['cantidad']?>" />
+        <input type="hidden" name="textmoneda" id='textmoneda' value='<?php echo $this->datosCategoria['textmoneda'] ?>' />
+        <input type="hidden" name="textduracion" id='textduracion' value='<?php echo $this->datosCategoria['textduracion'] ?>' />
+        <input type="hidden" name='destaqueprincipal' id='destaqueprincipal' value="<?php echo $this->datosCategoria['destaqueprincipal']?>" />
+        <input type="hidden" name='destaquelistado' id='destaquelistado' value="<?php echo $this->datosCategoria['destaquelistado'] ?>" />
+        <input type="hidden" name="textdestaque1" id='textdestaque1' value='<?php echo $this->datosCategoria['textdestaque1']?>' />
+        <input type="hidden" name="textdestaque2" id='textdestaque2' value='<?php echo $this->datosCategoria['textdestaque2']?>' />
+        <input type="hidden" name="precioDestaque1" id='precioDestaque1' value='<?php echo $this->datosCategoria['precioDestaque1']?>' />
+        <input type="hidden" name="precioDestaque2" id='precioDestaque2' value='<?php echo $this->datosCategoria['precioDestaque2']?>' />
+        <input type="hidden" name="aviso" id='aviso' value='<?php echo $this->datosCategoria['aviso']?>' />
+        <input type="hidden" name="subtitulo" id='subtitulo' value='<?php echo $this->datosCategoria['subtitulo']?>' />
+        <input type="hidden" name="departamento" id="departamento" value="<?php echo $this->datosCategoria['departamento']?>"/>
+
+        <input type="hidden" name='img_tipo_destaque' id='img_tipo_destaque' value="<?php echo $this->datosCategoria['img_tipo_destaque']?>" />
+        <!--<input type="hidden" name='img_tipo_destaque_2' id='img_tipo_destaque_2' value="<?php echo $this->datosCategoria['img_tipo_destaque_2']?>" />-->
+
+        <p class="note">Elige el destaque que consideres mas adecuado para el producto que deseas vender. Recuerda que cuanto mas alto sea el destaque mayores seran tus oportunidades para contactarte con nuestros compradores.</p>
+
+        <div class="controls"> <a class="cancel" href="<?php echo $this->baseUrl()?>/">Cancelar</a>
+          <button type="submit">Continuar</button>
+        </div>
+      </form>
+    </div>
+    <div id="right-bar" class="last col5">
+      <div class="block1 tip">
+        <h4>Consejo para destacar</h4>
+        <p>Elige el destaque que te de mas ventajas para publicar tu aviso. Ten en cuenta que, cuanto más alto sea el destaque, más fácil será para los contactos acceder a tu aviso. </p>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<hr class="hide" />

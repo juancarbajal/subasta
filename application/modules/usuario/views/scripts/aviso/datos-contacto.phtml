@@ -1,0 +1,79 @@
+<!--
+<div class="modal" id="ver_compra" style="width:620px;" >  
+<div class="close"></div>
+  <h2 style="border-bottom: 1px solid #c00;">Kotear | Datos del Vendedor </h2>
+  <div class="msgbox"></div>
+  <div class="content">
+      
+	<input type="hidden" name="avisourl" id="avisourl" value="<?php echo $this->avisoUrl;?>"/>    
+	<form  id="confirmatermino_nosession" method = 'post' action="<?php echo  $this->baseUrl()?>/usuario/compra/confirmar-termino">	
+        <div id="datos_usuario">
+        <p class="nota_usuario">Para comprar este producto o saber m&aacute;s de &eacute;l, llama o escribele a este vendedor: </p>                    
+                    <p class="descript"><span class="usuario_black">Apodo:</span><span class="regular"><strong><?php echo $this->datosUsuario->APODO;?></strong></span></p>
+                    <p class="descript"><span class="usuario_black">Nombre:</span><span class="regular"><strong><?php echo $this->datosUsuario->NOM." ".$this->datosUsuario->APEL;?></strong></span> </p>
+                    <p class="descript"><span class="usuario_black">Email:</span><span class="regular"><strong><?php echo $this->datosUsuario->EMAIL;?></strong></span> </p>
+                    <p class="descript"><span class="usuario_black">Telefono:</span><span class="regular"><strong><?php echo $this->datosUsuario->FONO1."<br>".$this->datosUsuario->FONO2;?></strong></span> </p>
+                    <?php if ($this->datosUsuario->FONO2<>null){echo '<br>';} ?>
+                    <p class="descript"><span class="usuario_black">Ubicaci&oacute;n:</span><span class="regular"><strong><?php echo $this->datosUsuario->UBIGEO;?></strong></span> </p>                   
+        </div>
+        <div class="vendedornosession">
+			<img class="imgavisonosession" src="<?php echo $this->prioridad['url'] ?>" alt="Imagen del producto"  />
+			<div class="costadoimagen">
+            <h3 class="titulo_aviso_nosession"><?php echo $this->data->K_TITULO?></h3>
+              <?php if ($this->infoBasica->K_TIPO_AVISO == 1){?>
+                        <p class="descript"><span class="usuario_black">Cantidad:</span><strong><span class="regular cantidad"></span></strong></p>
+						<p class="descript"><span class="usuario_black">Precio:</span><strong><span class="regular"><span class="precio"><?php echo $this->data->K_SIMB_MONEDA?> <?php echo number_format($this->data->K_PRECIO_FINAL,2,'.',',')?></span>&nbsp; <em> c/u </em></span></strong></p>
+						<p class="descript"><span class="usuario_black">Total a Pagar:</span><span class="resaltado regular"><?php echo $this->data->K_SIMB_MONEDA?></span>   <span class="total resaltado "></span></p>
+
+						<input type="hidden" name="idAviso" id="idAviso" value=""/>
+						<input type="hidden" name="cantidad" id="cantidad"/>
+						<input type="hidden" name="total" id="total"/>
+					<?php } else {?>
+						<p class="descript"><span  class="col3 float_left last">Fin de la Subasta:</span> <span class="fins bold"><?php echo $this->data->K_VENC_CADUCIDAD?></span></p>						
+						<p class="descript"><span  class="col3 float_left last">Oferta: </span><span class="bold resaltado"><?php echo $this->data->K_SIMB_MONEDA?> </span><span class="bold oferta resaltado"></span></p>
+						<div class="contoferta hide">
+						<b>Oferta automática activa:</b> El sistema ofertará por tí lo minimo para mantenerte como ganador de la subasta
+						hasta el monto aquí arriba índicado.
+						</div>
+						<input type="hidden" name="idAviso" id="idAviso" value=""/>
+						<input type="hidden" name="ofertaAutomatica" id="ofertaAutomatica" value ='0'/>
+						<input type="hidden" name="oferta" id="oferta" />
+						<input type="hidden" name="total" id="total"/>
+					<?php } ?>
+            </div>
+        </div>
+	</form>
+	</div>
+	
+		<form  id="confirmatermino_session" method = 'post' action="<?php echo  $this->baseUrl()?>/usuario/compra/confirmar-termino">
+            <div class="vendedorsession">
+            <img class="imgavisosession" src="<?php echo $this->prioridad['url'] ?>" alt="Imagen del producto" />    
+            <div class="costadoimagen">
+			
+			<h3 class="titulo_aviso_session"><?php echo $this->data->K_TITULO?></h3>
+
+				<?php if ($this->infoBasica->K_TIPO_AVISO == 1){?>
+					<p class="descript"><span class="usuario_black">Cantidad:</span><strong><span class="regular cantidad"></span></strong></p>
+					<p class="descript"><span class="usuario_black">Precio:</span><strong><span class="regular"><span class="precio"><?php echo $this->data->K_SIMB_MONEDA?> <?php echo number_format($this->data->K_PRECIO_FINAL,2,'.',',')?></span>&nbsp; <em> c/u </em></span></strong></p>
+					<p class="descript"><span class="usuario_black">Total a Pagar:</span><span class="resaltado regular"><?php echo $this->data->K_SIMB_MONEDA?></span>   <span class="total resaltado "></span></p>
+
+					<input type="hidden" name="idAviso" id="idAviso" value="<?php echo $this->idAviso ?>"/>
+					<input type="hidden" name="cantidad" id="cantidad"/>
+					<input type="hidden" name="total" id="total"/>
+				<?php } else {?>
+					<p class="descript"><span class="col3 float_left last">Fin de la Subasta:</span> <span class="fins bold"><?php echo $this->data->K_VENC_CADUCIDAD?></span></p>
+					<p class="descript"><span class="col3 float_left last">Oferta: </span><span class="bold resaltado"><?php echo $this->data->K_SIMB_MONEDA?> </span><span class="bold oferta resaltado"></span></p>
+					<div class="contoferta hide">					
+					</div>
+					<input type="hidden" name="idAviso" id="idAviso" value=""/>
+					<input type="hidden" name="ofertaAutomatica" id="ofertaAutomatica" value ='0'/>
+					<input type="hidden" name="oferta" id="oferta" />
+					<input type="hidden" name="total" id="total"/>
+				<?php } ?>
+            </div>
+            </div>
+		</form>
+    </div>
+</div>    
+-->
+  

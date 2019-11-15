@@ -1,0 +1,97 @@
+  <!--<?php //echo $this->action('buscador','busqueda','default'); ?>-->
+  
+  <div id="body-content" class="micuenta-pag col-master">
+    <div id="s_level1" class="clearfix">
+      <h3>Koteando <span>(Mi Cuenta)</span></h3>
+      <p>Aquí encontrarás todo acerca de tus compras, ventas, preferencias y datos personales</p>
+    </div>
+    <div id="s_level2" class="clearfix">
+      <div class="col17">
+        <div class="group">
+          <div id="catg1" class="column">
+            <h3>Mis Compras</h3>
+            <p class="subtitle">Gestiona tus compras</p>
+            <ul>
+              <!--<li><a href="<?php echo $this->baseUrl() ?>/usuario/compra/historial-compras/opc/categoria/codigo/0">Historial de Compras </a></li>-->
+              <li><a href="<?php echo $this->baseUrl() ?>/usuario/compra/preguntas-realizadas/opc/categoria/codigo/0">Preguntas Realizadas </a></li>
+              <li><a href="<?php  echo $this ->baseUrl() . '/usuario/compra/preguntas-realizadas/opc/pregunta/codigo/2' ?>">Preguntas Contestadas </a></li>
+              <li><a href="<?php echo $this->baseUrl() ?>/usuario/compra/seguimiento">Avisos de Seguimiento </a></li>
+            </ul>
+          </div>
+          <div id="catg2" class="column">
+            <h3>Mis Ventas</h3>
+            <p class="subtitle">Gestiona tus ventas</p>
+            <ul>
+              <li><a href="<?php echo $this->baseUrl() ?>/usuario/venta/activas/opc/categoria/codigo/0">Avisos Activos</a></li>
+              <li><a href="<?php echo $this->baseUrl() ?>/usuario/venta/inactivas/opc/categoria/codigo/0">Avisos no Activos</a></li>
+              <!--<li><a href="<?php echo $this->baseUrl() ?>/usuario/venta/historial">Historial de Ventas</a></li>-->
+              <li><a href="<?php echo $this->baseUrl() ?>/usuario/venta/preguntas-recibidas/opc/pregunta/codigo/1">Preguntas sin Contestar</a></li>
+              <li><a href="<?php echo $this->baseUrl() . '/usuario/venta/preguntas-recibidas/opc/pregunta/codigo/2' ?>">Preguntas Contestadas</a></li>
+
+            </ul>
+          </div>
+          <!--<div id="catg3" class="column">
+            <h3>Mis Calificaciones</h3>
+            <p class="subtitle">Gestiona tus Calificaciones</p>
+            <ul>
+              <li><a href="<?=$this->baseUrl() ?>/usuario/calificaciones/pendientes">Calificaciones pendientes</a></li>
+              <li><a href="<?=$this->baseUrl() ?>/usuario/calificaciones/realizadas">Calificaciones realizadas</a></li>
+			  <li><a href="<?=$this->baseUrl() ?>/usuario/calificaciones/recibidas">Calificaciones recibidas</a></li>
+              <li><a href="<?=$this->baseUrl() ?>/usuario/reputacion/ver">Ver reputación</a></li>
+            </ul>
+          </div>-->
+          <div id="catg5" class="column">
+            <h3>Datos Personales</h3>
+            <p class="subtitle">Gestiona tus Datos.</p>
+            <ul>
+              <li><a href="<?php echo $this->baseUrl()?>/usuario/edicion">Actualiza tus datos</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="group2">
+            <?php if ($this->gratuito == 0) { ?>
+          <div id="catg4" class="row clearfix">
+            <div class="info">
+              <h3>Kotear Pagos</h3>
+              <p class="subtitle">Gestiona tus cargos y pagos</p>
+              <p>Conoce el estado de tu cuenta y elige el medio de pago que mas te convenga. </p>
+            </div>
+            <ul class="rlinks">
+              <li><a href="<?=$this->baseUrl() ?>/pagos/index/cargos-pagados">Cargos Pagados</a></li>
+              <li><a href="<?=$this->baseUrl() ?>/pagos/index/pendiente-de-pago">Pendientes de Pago</a></li>
+            </ul>
+          </div>
+            <?php }?>
+          <!--<div id="catg5" class="row clearfix">
+            <div class="info">
+              <h3>Datos Personales</h3>
+              <p>Mantener actualizados tus teléfonos y tu e-mail para que otros usuarios siempre te encuentren.</p>
+            </div>
+            <ul class="rlinks">
+              <li><a href="<?php echo $this->baseUrl()?>/usuario/edicion">Actualiza tus datos de contacto</a></li>
+            </ul>
+          </div>-->
+        </div>
+      </div>
+      <div class="last col5">
+        <h2>Panel de Control</h2>
+        <?php
+            $totalAlertas = $this->preguntasSinContestar + $this->numeroCalificacionesPendientes + $this->avisosPorCaducar + $this->avisosSeguimiento;
+            $totalPagos = $this->saldo;
+        ?>
+        <div id="micuenta_alerts">
+          <h4>Enlaces más usados</h4>
+          <ul class="useful_links">
+            <li><a href="<?php echo $this->baseUrl() . '/usuario/venta/activas/opc/categoria/codigo/0'; ?>">Mis Avisos Activos </a></li>
+            <!--<li><a href="<?php echo $this->baseUrl() . '/usuario/calificaciones/pendientes'; ?>">Calificaciones pendientes</a></li>-->
+          </ul>
+          <?php if ($this->gratuito == 0 ) { ?>
+          <h4>Pagos</h4>                                                                                                        
+          <p class="payments_total">Pendientes de Pago <a href="<?php echo $this->baseUrl() . '/pagos/index/pendiente-de-pago'; ?>"> S/. <?php echo $this->saldo ?></a></p>
+          <?php } ?>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <hr class="hide" />

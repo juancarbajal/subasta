@@ -1,0 +1,21 @@
+<html><head>
+<title>Prueba de session</title>
+<script type="text/javascript" src="<?=$this->baseUrl() ?>/js/jquery.js"></script>
+<script type='text/javascript'>
+function f_mandar(){
+	$.ajax({
+		type: "POST",
+		url: "<?=$this->url(array('action'=>'ajax'))?>",
+		dataType: "json",
+		cache: "false",
+		success: function(data){
+			alert(data.msg);
+			}
+		})
+}
+</script>
+</head>
+<body>
+<input type="button" value="click" onclick="f_mandar()"/>
+</body>
+</html>

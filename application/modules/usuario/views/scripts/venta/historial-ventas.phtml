@@ -1,0 +1,179 @@
+ <?php echo $this->action('buscador','busqueda','default'); ?>
+  <div id="body-content" class="miscompras-pag col-master">
+    <div id="s_level1" class="clearfix">
+      <h3>Koteando (Mi Cuenta)</h3>
+
+       <?php $class3='active'; //include('navegacion.phtml'); 
+?>
+<?php echo $this->action('navegacion','menu','default', array('nav'=>'venta', 'opc'=>3));?>
+    </div>
+    <div class="pagetitle">
+      <h4>Historial de Ventas <span>(<?php  echo count($this->listarHC); ?> artículos vendidos)</span></h4>
+    </div>
+    <div id="s_level2" class="clearfix">
+      <div id="left-bar" class="col5">
+        <!--- --->
+        <?php
+        if(count($this->listarHC)>0)
+            {
+        ?>
+        <ul class="box">
+          <?php if ($this->codigo == 0){ ?>
+          <li class="active">Cualquier Categoría</li>
+          <?php } else { ?>
+          <li >
+              <a href="<?php echo $this->baseUrl()?>/usuario/compra/historial-compras/opc/categoria/codigo/0">Cualquier Categoría</a>
+          </li>
+          <?php }
+            if (isset($this->listarhcTodas)){
+             foreach($this->listarhcTodas as $indexTodo):
+              if($anteriorT!=$indexTodo->CATEGORIA_PADRE){
+                if($indexTodo->ID_CATEGORIA_PADRE == $this->codigo){
+              ?>
+          <li class="active"><?php echo $indexTodo->CATEGORIA_PADRE ?></li>
+                  <?php }
+                  else{
+
+                 ?>
+              <li><a href ="<?php  echo $this ->baseUrl() . '/usuario/compra/historial-compras/opc/categoria/codigo/' . $indexTodo->ID_CATEGORIA_PADRE ; ?> "><?php echo $indexTodo->CATEGORIA_PADRE ?></a></li>
+         <?php }}
+
+                $anteriorT = $indexTodo->CATEGORIA_PADRE;
+            endforeach;
+            }
+          ?>
+        </ul>
+        <ul class="box">
+          <?php if($this->codclasificacion == 0) {?>
+          <li class="active">Cualquier Estado</li>
+          <?php }
+          else
+              {?>
+              <li ><a href="<?php echo $this->baseUrl()?>/usuario/compra/historial-compras/opc/categoria/codigo/0">Cualquier Estado</a></li>
+              <?}
+          ?>
+          <?php if($this->codclasificacion==1) {?>
+          <li class="active">Sin Calificar</li>
+
+          <?php } else { ?>
+          <li><a href ="<?php  echo $this ->baseUrl() . '/usuario/compra/historial-compras/opc/calificacion/codigo/1'; ?> ">Sin Calificar</a></li>
+          <?php } ?>
+
+          <?php if($this->codclasificacion==2) {?>
+          <li class="active">Calificado</li>
+          <?php } else { ?>
+          <li><a href ="<?php  echo $this ->baseUrl() . '/usuario/compra/historial-compras/opc/calificacion/codigo/2'; ?> ">Calificado</a></li>
+
+          <?php } ?>
+         <?php if($this->codclasificacion==5) {?>
+          <li class="active">Calificacion  Vencida</li>
+          <?php } else { ?>
+          <li><a href ="<?php  echo $this ->baseUrl() . '/usuario/compra/historial-compras/opc/calificacion/codigo/5'; ?> ">Calificacion  Vencida</a></li>
+
+          <?php } ?>
+        </ul>
+        <ul class="box">
+          <?php if($this->codfecha == 0) {?>
+          <li class="active">Cualquier Fecha</li>
+            <?php } else { ?>
+          <li ><a href="<?php  echo $this ->baseUrl() . '/usuario/compra/historial-compras/opc/calificacion/codigo/0'; ?> ">Cualquier Fecha </a></li>
+          <?php } ?>
+           <?php if($this->codfecha == 3) {?>
+          <li class="active">Ultima Semana</li>
+            <?php } else { ?>
+          <li><a href ="<?php  echo $this ->baseUrl() . '/usuario/compra/historial-compras/opc/fecha/codigo/3'; ?> ">Ultima Semana</a></li>
+          <?php } ?>
+           <?php if($this->codfecha == 4) {?>
+          <li class="active">Ultima Mes</li>
+            <?php } else { ?>
+          <li><a href ="<?php  echo $this ->baseUrl() . '/usuario/compra/historial-compras/opc/fecha/codigo/4'; ?> ">Ultima Mes</a></li>
+          <?php } ?>
+        </ul>
+        <?php } ?>
+        <!----->
+      </div>
+      <div id="right-bar" class="col17 last">
+	  <?php
+		$countregs = count($this->listarHC);
+		$first = true;
+		$anterior = "";
+		$i = 0;
+        if (isset($this->listarHC)){
+            foreach ($this->listarHC as $index):
+
+			if($anterior!=$index->CATEGORIA_PADRE):
+				$anterior = $index->CATEGORIA_PADRE;
+				$first = true;
+		?>
+          </tbody>
+        </table>
+        <?php
+		endif;
+		$i++;
+		?>
+        <?php if($first): ?>
+        <table border="0" cellspacing="0" cellpadding="0">
+          <thead>
+            <tr>
+              <th class="subtitle" colspan="3">
+                  <strong><?php echo $index->CATEGORIA_PADRE; ?></strong>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+       <?php
+	   		$first = false;
+	   		endif;
+		?>
+            <tr>
+              <td class="pic"><a href="#"><img src="<?php echo $this->ruta.$index->RUTA_IMAGEN ?>" width="75" height="75" alt="foto" /></a></td>
+              <td>
+                  <h4><a href="<?php  echo $this ->baseUrl() . '/aviso/' . $index->ID_AVISO .'-'.$this->utils->convertSEO($index->TITULO);  ?>" target="_blanck"><?php echo $index->TITULO ?></a> <span class="transaccion-id">(Id: <?php echo $index->ID_TRANSACCION; ?>)</span></h4>
+                <p class="date">Realizada el <?php echo $index->FechaTransac; ?> Hs.</p>
+                <p class="price">Precio Unitario: <strong>S/. <?php echo $index->PRECIO_BASE; ?></strong></p>
+                <p class="cantidad">Cantidad: <strong><?php echo $index->CANT; ?></strong></p>
+                <p class="user">
+                	Vendedor:
+                    <span class="resaltador">
+                    	<a class="user-id <?php echo $index->ICON;  ?>" href="<?php echo $this->baseUrl() . '/usuario/reputacion/ver/cod/' . $index->ID_USR; ?>"
+                       target="_blanck">&nbsp; <?php echo $index->APODO; ?>
+                    <span class="score">(<?php echo $index->PUNTAJE; ?>) &nbsp;</span></a></span>
+                    <a class="email" href="mailto:<?php echo $index->EMAIL ?>"><?php echo $index->EMAIL ?></a>
+                    <span class="phone"><?php echo $index->FONO1 ?></span></p>
+              </td><!-- agregar clase granvendedor solo si es un gran vendedor -->
+               <?php if($index->CALIFICACION == '1'){ ?>
+              <td class="opts">
+                  <p><? //echo $index->CALIFICACION; ?></p>
+                  Calificado
+              </td>
+              <?php }else{ ?>
+                <td class="opts">
+                     <?php
+                         if($index->CALIFICACION_DIAS < 0 ){ ?>
+                         <p><? //echo $index->REGLA_COMPRADOR; ?></p>
+                         <p><? //echo $index->CALIFICACION; ?></p>
+                         <p>Calificacion Vencida</p>
+                         <?}else{ ?>
+                         <p><? //echo $index->REGLA_COMPRADOR; ?></p>
+                          <p><? //echo $index->CALIFICACION; ?></p>
+                          <a class="calificar" href="<?php echo $this->baseUrl() . '/usuario/calificaciones/calificar/trns/' . $index->ID_TRANSACCION; ?>">
+                              Calificar
+                          </a>
+                     <? } ?>
+                  </td>
+             <?php } ?>
+            </tr>
+        <?php
+		if($i==$countregs){ ?>
+          </tbody>
+        </table>
+        <?php } ?>
+        <?php
+			endforeach;
+		}
+		?>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <hr class="hide" />

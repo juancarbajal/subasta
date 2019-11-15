@@ -1,0 +1,71 @@
+<div id="search">
+  <div class="content col-master">
+    <form id="searchfrm" class="prefix1" name="searchfrm" method="post" action="">
+      <h2 class="hide">Buscar</h2>
+      <p class="inpt"> <label for="lookingfor">Estoy buscando... <input type="text" name="lookingfor" id="lookingfor" /> </label>
+      </p>
+      <p class="selc"> <label><span class="hide">En la categoria...</span>
+          <select name="categs" id="categs">
+            <option value="0">Todas las Categorias</option>
+          </select>
+        </label>
+      </p>
+      <p class="submt">
+        <button type="submit">Buscar</button>
+        <a href="#">Busqueda Avanzada</a></p>
+    </form>
+  </div>
+</div>
+<hr class="hide" />
+<div id="body-content" class="miscompras-pag col-master">
+  <div id="s_level1" class="clearfix">
+    <h3>Koteando (Mi Cuenta)</h3>
+    <?php include 'navegacion.phtml'; ?>
+  </div>
+  <div class="pagetitle">
+    <h4>Preguntas Realizadas <span class="small">(<?php echo count($this->listarPR);?> preguntas realizadas)</span></h4>
+    <ul class="labels">
+      <li class="pregunta_ico">Pregunta</li>
+      <li class="respuesta_ico">Respuesta</li>
+    </ul>
+  </div>
+  <div id="s_level2" class="clearfix">
+    <div id="left-bar" class="col5">
+      <ul class="box">
+        <li class="active">Cualquier Pregunta</li>
+        <li><a href="#">Preguntas No contestadas</a></li>
+        <li><a href="#"> Preguntas contestadas</a></li>
+      </ul>
+      <ul class="box">
+        <li class="active">Cualquier Categoría</li>
+        <li><a href="#">Informática</a></li>
+        <li><a href="#">Ropa y Accesorios</a></li>
+        <li><a href="#">Celulares, Telefonía y Faxes</a></li>
+        <li><a href="#">Deportes, Fitness y Aire Libre</a></li>
+      </ul>
+      <ul class="box">
+        <li class="active">Cualquier Fecha</li>
+        <li><a href="#">Ultima semana</a></li>
+        <li><a href="#"> Ultimo mes</a></li>
+      </ul>
+    </div>
+    <div id="right-bar" class="col17 last">
+      <p class="n-transac"><span class="n-left">Informática</span> <span class="n-right"><?php echo count($this->listarPR);?> preguntas realizadas</span></p>
+      <!-- agregar clase t-grouped solo si hay agrupacion -->
+      <ul class="transacciones t-grouped">
+        <?php foreach ($this->listarPR as $pr) {?>
+        <li class="item">
+          <p class="pic"><img src="<?=$this->baseUrl() ?>/img/global/img_placer_75.gif" width="75" height="75" alt="foto" /></p>
+          <h4><a href="#"><?php echo $pr->TIT?></a></h4>
+          <p class="date">Realizada el <?php  echo $pr->FEC_CREA; ?> hs.</p>
+          <p class="user">Vendedor: <a href="#" class="user-id bigseller"><?php echo $pr->APODO?> <span class="score">(229)</span></a></p>
+          <p class="pregunta"><?php echo $pr->COMENT;?></p>
+          <p class="respuesta">[Aqui va la respuesta]</p>
+        </li>
+        <?php }?>
+      </ul>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<hr class="hide" />

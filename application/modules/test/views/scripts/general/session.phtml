@@ -1,0 +1,27 @@
+<html><head>
+<title>Prueba de session</title>
+<script type="text/javascript" src="<?=$this->baseUrl() ?>/js/jquery.js"></script>
+<script type='text/javascript'>
+function f_cerrar_sesion(){
+	$.ajax({
+		type: "POST",
+		url: "<?=$this->url(array('action'=>'session'))?>",
+		dataType: "json",
+		cache: "false",
+		success: function(msg){
+			alert(msg.msg);
+			}
+		})
+}
+</script>
+</head>
+<body>
+<input type="button" value="click" onclick="f_cerrar_sesion()"/>
+Se ejecuta la sesión en la base de datos<br>
+se leyeron datos de <?=$this->tipo?>
+<pre>
+Seccion de Vista
+<?php print_r($this->data)?>
+</pre>
+</body>
+</html>

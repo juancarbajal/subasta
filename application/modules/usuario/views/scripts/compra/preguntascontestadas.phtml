@@ -1,0 +1,101 @@
+	  <div id="search">
+	    <div class="content col-master">
+	      <form id="searchfrm" class="prefix1" name="searchfrm" method="post" action="">
+	        <h2 class="hide">Buscar</h2>
+	        <p class="inpt">
+	          <label for="lookingfor">Estoy buscando...
+	            <input type="text" name="lookingfor" id="lookingfor" />
+	          </label>
+	        </p>
+	        <p class="selc">
+	          <label><span class="hide">En la categoria...</span>
+	            <select name="categs" id="categs">
+	              <option value="0">Todas las Categorias</option>
+	            </select>
+	          </label>
+	        </p>
+	        <p class="submt">
+	          <button type="submit">Buscar</button>
+	          <a href="#">Busqueda Avanzada</a></p>
+	      </form>
+	    </div>
+	  </div>
+	  <hr class="hide" />
+	  <div id="body-content" class="miscompras-pag col-master">
+	    <div id="s_level1" class="clearfix">
+	      <h3>Koteando (Mi Cuenta)</h3>
+	      <?php  
+      		 include 'navegacion.phtml';
+       		?>
+	    </div>
+	    <div class="pagetitle">
+	      <h4>Preguntas Realizadas <span>(<?php echo count($this->listarPC) ?> preguntas realizadas)</span></h4>
+	      <ul class="labels">
+	        <li class="pregunta_ico">Pregunta</li>
+	        <li class="respuesta_ico">Respuesta</li>
+	      </ul>
+	    </div>
+	    <div id="s_level2" class="clearfix">
+	      <div id="left-bar" class="col5">
+	        <ul class="box">
+	          <li class="active">Cualquier Pregunta</li>
+	          <li><a href="#">Preguntas No contestadas</a></li>
+	          <li><a href="#"> Preguntas contestadas</a></li>
+	        </ul>
+	        <ul class="box">
+	          <li class="active">Cualquier Categoría</li>
+	          <li><a href="#">Informática</a></li>
+	          <li><a href="#">Ropa y Accesorios</a></li>
+	          <li><a href="#">Celulares, Telefonía y Faxes</a></li>
+	          <li><a href="#">Deportes, Fitness y Aire Libre</a></li>
+	        </ul>
+	        <ul class="box">
+	          <li class="active">Cualquier Fecha</li>
+	          <li><a href="#">Ultima semana</a></li>
+	          <li><a href="#"> Ultimo mes</a></li>
+	        </ul>
+	      </div>
+	      <div id="right-bar" class="col17 last">
+	        <table border="0" cellspacing="0" cellpadding="0">
+	          <thead>
+	            <tr>
+	              <td class="subtitle">Informática</td>
+	              <td><?php echo count($this->listarPC) ?> Preguntas Contestadas</td>
+	            </tr>
+	          </thead>
+	          <tbody>
+	       		
+	            
+	            <?php 
+	            for($i=0;$i<count($this->listarPC);$i++)
+					
+					{
+						if($i%2==0)
+						{
+							
+						$r= $this->listarPC[$i]->COMENT."<br>";	
+						}
+						
+						//echo $r= $this->listarPC[$i]->COMENT."<br>";
+					?>
+	            <tr>
+	              <td class="pic"><img src="<?=$this->baseUrl() ?>/img/global/img_placer_75.gif" width="75" height="75" alt="foto" /></td>
+	              <td><p><a href="#"><?php echo $this->listarPC[$i]->TIT;  ?></a></p>
+	                <p>Realizada el <?php echo  $this->listarPC[$i]->FEC_CREA;?></p>
+	                <p>Vendedor: <a class="granvendedor badge seller" href="#"><?php    ?></a></p>
+	                <p class="pregunta">P// <?php echo $this->listarPC[$i]->COMENT;?> </p>
+	                <p class="respuesta">R//<?php echo $this->listarPC[$i]->COMENT; ?></p></td>
+	            	
+					
+				<?php 
+					}
+					
+	            ?>
+	          </tbody>
+	        </table>
+	        
+	      </div>
+	    </div>
+	    <div class="clear"></div>
+	  </div>
+	  <hr class="hide" />

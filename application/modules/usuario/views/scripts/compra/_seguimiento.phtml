@@ -1,0 +1,131 @@
+<form id="apFormSearch" action="<?=$this->baseUrl()?>/usuario/compra/seguimiento" method="get" style="width: 100%">
+    <div class="result-content">
+        <div class="content-right favorite-ad">
+            <h2>En Seguimiento</h2>
+            <div class="options-search row">
+                <div class="form-search">
+                    <input type="text" id="txtTitle" placeholder="Estoy buscando ..." class="input-medium search-query"
+                       value="<?=$this->filter['K_TIT']?>">
+                    <button type="submit" id="btnSearchTitle" class="btn-kotear btn-small">Buscar</button>
+                </div>
+                <div class="result-detail">
+                    Mostrando <?=count($this->data)?> de 
+                    <strong><?=empty($this->data[0]->TOTAL)?0:$this->data[0]->TOTAL?> </strong>
+                    en Seguimiento
+                </div>
+            </div>
+            <div class="options-search no-top row">
+                <div class="show-dates c-inline">
+                    <label>Mostrar avisos de</label>
+                    <select name="" id="cboMostrarAvisoDe">
+                        <option value="0">Cualquier fecha</option>
+                        <option value="1" <?=$this->filter['K_FILTRO_FECHA']==1?'selected':''?> >Ultima semana</option>
+                        <option value="2" <?=$this->filter['K_FILTRO_FECHA']==2?'selected':''?>>Ultimo mes</option>
+                    </select>
+                </div>
+                <div class="apPagination pagination-results">
+                    <?= $this->paginationControl($this->paginador, 'Sliding', '_partials/_pag.phtml') ?>
+                </div>
+            </div>
+            <?php  if(count($this->data)>0){ ?>
+            <div class="pagination-barra">
+                <ul>
+                    <?php 
+                        $orderAsc = 'row-asc'; 
+                        $orderDesc = 'row-desc';
+                    ?>
+                    <input type="hidden" id="hddOrder" value="<?=$this->filter['K_FILTRO']?>">
+<!--                    <li class="check-all">
+                    <input type="checkbox" name="name" id="id">
+                    </li>-->
+                    <li class="description">
+                        Descripción
+                        <a href="javascript:;" order="<?=$this->filter['K_FILTRO']==2?'1':'2'?>"
+                        class="linkOrder <?=$this->filter['K_FILTRO']==2?$orderAsc:$orderDesc?>">
+                        </a>
+                    </li>
+                    <li class="price">
+                    <div class="btn-price">
+                        Precio
+                        <a href="javascript:;" order="<?=$this->filter['K_FILTRO']==4?'3':'4'?>"
+                        class="linkOrder <?=$this->filter['K_FILTRO']==4?$orderAsc:$orderDesc?>">
+                    </a>
+                    </div>
+                    </li>
+                    <li class="delete">Acciones</li>
+                </ul>
+            </div>
+            <ul class="list-result-products">
+                <?php foreach($this->data as $index): ?>
+                <li class="product-row <?=$index->ESTILO?>">
+<!--                    <div class="check-product">
+                        <input type="checkbox" name="name" id="id">
+                    </div>
+                    <div class="line-vertical">
+                    </div>-->
+                    <div class="description-product">
+                        <img src="<?=$this->ruta.$index->RUTA_IMAGEN?>" alt="<?=$index->TIT?>" width="120px" height="90"/>
+                        <h3>
+                            <a href="<?=$this->baseUrl() . '/aviso/' . $index->ID_AVISO . '-' .$index->URL?>"
+                            title="<?=$index->TIT;?>">
+                                <?=(strlen($index->TIT) > 57)?substr($index->TIT, 0, 57) . ' ...':$index->TIT?>
+                            </a>
+                        </h3>
+                        <p><?=$index->APODO;?></p>
+                    </div>
+                    <div class="line-vertical">
+                    </div>
+                    <div class="precio-product">
+                        <h4><?=$index->MONEDA.' '.number_format($index->PRECIO,2,'.',',')?></h4>
+                        <p>
+                            <span>Caduca en <?=$index->CADUCIDAD?></span>
+                        </p>
+                    </div>
+                    <div class="line-vertical">
+                    </div>
+                    <div class="delete-product">
+                        <ul class="action-options">
+                            <li>
+<!--                                <a title="title" href="javascript:;">Eliminar</a><span class="icon-delete-action"></span>-->
+                                <a class="ad-link-modal" title="eliminar"
+                                   href="<?=$this->baseUrl()?>/usuario/compra/eliminar-seguimiento/idSeguimiento/<?=$index->ID_SEGUIMIENTO?>">
+                                    Eliminar                                    
+                                </a>
+                                <span class="icon-delete-action"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <?php  endforeach; ?>
+            </ul>            
+            <div class="options-search last row">
+                <div class="apPagination pagination-results">
+                    <?= $this->paginationControl($this->paginador, 'Sliding', '_partials/_pag.phtml') ?>
+                </div>
+            </div>
+            <?php } else { ?>
+            <div class="title-active-notices">
+                <div>No se encontraron resultados</div>
+            </div>
+            <?php }?>
+            
+        </div>
+    </div>
+</form>
+
+
+<div style="display:none">
+    <div id="message-ad" class="message-modal">
+        <div class="title-gen">
+            <h3 class="title-step">
+                <span class="icon-right"></span>
+                <p>Mensaje</p>
+            </h3>
+        </div>
+            <p class="message">Esta seguro que desea <strong style="font-size:16px">desabilitar</strong> el anuncio.</p>
+            <p class="btn-options">
+                <a class="btn-standar" href="javascript:;">Aceptar</a>
+                <a class="btn-finish" href="javascript:;">Cancelar</a>
+            </p>
+    </div>
+</div><!-- / finish ad -->

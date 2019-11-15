@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>modules&#x2F;usuario.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.7.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.7.0&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/admin.html">admin</a></li>
+            
+                <li><a href="..&#x2F;classes/all-modules.html">all-modules</a></li>
+            
+                <li><a href="..&#x2F;classes/default.html">default</a></li>
+            
+                <li><a href="..&#x2F;classes/jcarousel.html">jcarousel</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.AutoSave.html">tinymce.plugins.AutoSave</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.ContextMenu.html">tinymce.plugins.ContextMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/usuario.html">usuario</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/ad-actions.html">ad-actions</a></li>
+            
+                <li><a href="..&#x2F;modules/add-class-middle.html">add-class-middle</a></li>
+            
+                <li><a href="..&#x2F;modules/add-favorites.html">add-favorites</a></li>
+            
+                <li><a href="..&#x2F;modules/all-checked-uncheked.html">all-checked-uncheked</a></li>
+            
+                <li><a href="..&#x2F;modules/banner-top classified.html">banner-top classified</a></li>
+            
+                <li><a href="..&#x2F;modules/carousel-products.html">carousel-products</a></li>
+            
+                <li><a href="..&#x2F;modules/count-word.html">count-word</a></li>
+            
+                <li><a href="..&#x2F;modules/data-ubigeo.html">data-ubigeo</a></li>
+            
+                <li><a href="..&#x2F;modules/geotags.html">geotags</a></li>
+            
+                <li><a href="..&#x2F;modules/impress-ad-list.html">impress-ad-list</a></li>
+            
+                <li><a href="..&#x2F;modules/lightbox-logIn-signUp.html">lightbox-logIn-signUp</a></li>
+            
+                <li><a href="..&#x2F;modules/moduleName.html">moduleName</a></li>
+            
+                <li><a href="..&#x2F;modules/placeholder.html">placeholder</a></li>
+            
+                <li><a href="..&#x2F;modules/preview-impress.html">preview-impress</a></li>
+            
+                <li><a href="..&#x2F;modules/register-category.html">register-category</a></li>
+            
+                <li><a href="..&#x2F;modules/remove-class-home.html">remove-class-home</a></li>
+            
+                <li><a href="..&#x2F;modules/report-ad.html">report-ad</a></li>
+            
+                <li><a href="..&#x2F;modules/scrollTop.html">scrollTop</a></li>
+            
+                <li><a href="..&#x2F;modules/search-categories.html">search-categories</a></li>
+            
+                <li><a href="..&#x2F;modules/send-ad-friend.html">send-ad-friend</a></li>
+            
+                <li><a href="..&#x2F;modules/send-list-ad-email.html">send-list-ad-email</a></li>
+            
+                <li><a href="..&#x2F;modules/show-advanced-search.html">show-advanced-search</a></li>
+            
+                <li><a href="..&#x2F;modules/show-example-ads.html">show-example-ads</a></li>
+            
+                <li><a href="..&#x2F;modules/show-login-trigger.html">show-login-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-photo-products.html">show-photo-products</a></li>
+            
+                <li><a href="..&#x2F;modules/show-popup.html">show-popup</a></li>
+            
+                <li><a href="..&#x2F;modules/show-questions.html">show-questions</a></li>
+            
+                <li><a href="..&#x2F;modules/show-register-trigger.html">show-register-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-video.html">show-video</a></li>
+            
+                <li><a href="..&#x2F;modules/showMoreCategories.html">showMoreCategories</a></li>
+            
+                <li><a href="..&#x2F;modules/some-module4.html">some-module4</a></li>
+            
+                <li><a href="..&#x2F;modules/tinymce-register.html">tinymce-register</a></li>
+            
+                <li><a href="..&#x2F;modules/uploader-photos.html">uploader-photos</a></li>
+            
+                <li><a href="..&#x2F;modules/validate.html">validate</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-document.html">validate-document</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-image.html">validate-image</a></li>
+            
+                <li><a href="..&#x2F;modules/venta.html">venta</a></li>
+            
+                <li><a href="..&#x2F;modules/yOSON.html">yOSON</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: modules&#x2F;usuario.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+* Modulo principal de usuario
+* @class usuario
+* @module yOSON
+*&#x2F;
+
+&#x2F;**
+* Registrar categoria
+* @submodule register-category
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&quot;register-category&quot;, function(Sb){ 
+    function staticLoadCmb($id, $idDepend, $data, $clearOther, $callback) {
+        $($id).bind(&#x27;change&#x27;, function(){
+            var val = $(this).val(),
+                text = $($id+&#x27; :selected&#x27;).text();
+                $($id).next().val(text);
+                var dataFiltrada = $.grep($data.data, function(n, i){
+                    return (n[$data.nameFatherId] == val);
+                });
+                $($idDepend).html(&#x27;&lt;option value=&quot;&quot;&gt;Cargando...&lt;&#x2F;option&gt;&#x27;);
+                &#x2F;&#x2F;var html = &#x27;&lt;option value=&quot;&quot;&gt;&lt;&#x2F;option&gt;&#x27;;            
+                var html = &#x27;&#x27;;
+                $(dataFiltrada).each(function(i){
+                    html += &#x27;&lt;option value=&quot;&#x27;+this[$data.nameId]+&#x27;&quot;&gt;&#x27;+this[$data.nameValue]+&#x27;&lt;&#x2F;option&gt;&#x27;;
+                });
+                $($idDepend).html(html);
+                $($clearOther).html(&#x27;&#x27;);
+                $($clearOther).next().val(&#x27;&#x27;);
+                if ($callback &amp;&amp; typeof($callback) === &quot;function&quot;) {
+                    $callback();
+                } 
+                    
+
+        }); 
+    }
+    return {
+        init: function(oParams){          
+            $(&#x27;#categoriaId1 :nth-child(1)&#x27;).attr(&#x27;selected&#x27;, &#x27;selected&#x27;);
+            staticLoadCmb(&#x27;#categoriaId1&#x27;,
+                          &#x27;#categoriaId2&#x27;,
+                          {&#x27;data&#x27;:_categoria2,
+                           &#x27;nameFatherId&#x27;:&#x27;K_ID_PADRE&#x27;,
+                           &#x27;nameId&#x27;:&#x27;K_ID_CATEGORIA&#x27;,
+                           &#x27;nameValue&#x27;:&#x27;K_TIT&#x27;
+                           }, 
+                          &#x27;#categoriaId3, #categoriaId4&#x27;,
+                function() {   
+                    $(&#x27;#categoriaId2 :nth-child(1)&#x27;).attr(&#x27;selected&#x27;, &#x27;selected&#x27;).trigger(&#x27;change&#x27;);
+                }
+            );
+            staticLoadCmb(&#x27;#categoriaId2&#x27;,
+                          &#x27;#categoriaId3&#x27;, 
+                         {&#x27;data&#x27;:_categoria3,
+                          &#x27;nameFatherId&#x27;:&#x27;K_ID_PADRE&#x27;,
+                          &#x27;nameId&#x27;:&#x27;K_ID_CATEGORIA&#x27;,
+                          &#x27;nameValue&#x27;:&#x27;K_TIT&#x27;
+                         }, 
+                         &#x27;#categoriaId4&#x27;,
+                function() {   
+                    $(&#x27;#categoriaId3 :nth-child(1)&#x27;).attr(&#x27;selected&#x27;, &#x27;selected&#x27;).trigger(&#x27;change&#x27;);
+                }
+            );
+            staticLoadCmb(&#x27;#categoriaId3&#x27;,
+                          &#x27;#categoriaId4&#x27;, 
+                          {&#x27;data&#x27;:_categoria4,
+                           &#x27;nameFatherId&#x27;:&#x27;K_ID_PADRE&#x27;,
+                           &#x27;nameId&#x27;:&#x27;K_ID_CATEGORIA&#x27;, 
+                           &#x27;nameValue&#x27;:&#x27;K_TIT&#x27;
+                          }, 
+                &#x27;&#x27;,
+                function() {
+                    $(&#x27;#categoriaId4 :nth-child(1)&#x27;).attr(&#x27;selected&#x27;, &#x27;selected&#x27;).trigger(&#x27;change&#x27;);
+                }
+            ); 
+            staticLoadCmb(&#x27;#categoriaId4&#x27;);
+
+
+            $(&#x27;#formulariocategoria&#x27;).bind(&#x27;submit&#x27;,function(e){
+               if($(&#x27;#categoriaId1&#x27;).val() == 1656){
+                    e.preventDefault();
+                    $.fancybox({
+                        &#x27;content&#x27; : $(&#x27;#adulto-msg-temp&#x27;).html(),
+                        &#x27;onComplete&#x27; : function(){
+                            $(&#x27;#adulto-msg .btn-submit&#x27;).bind(&#x27;click&#x27;,function(){
+                                $(&#x27;#formulariocategoria&#x27;)[0].submit();
+                            });
+                            $(&#x27;#adulto-msg .btn-cancel&#x27;).bind(&#x27;click&#x27;,function(){
+                                $.fancybox.close();
+                            });
+                        }
+                    });
+
+                } 
+            });
+        },
+        &#x2F;*Public method : Implementacion de alguna funcionalidad asociada a este modulo.*&#x2F;
+        other: function(){  },
+        destroy: function(){ &#x2F;*Como destruir instacia de este modulo aqui*&#x2F; }
+    };
+},[&#x27;libs&#x2F;plugins&#x2F;jquery.fancybox.js&#x27;,&#x27;plugins&#x2F;fancybox&#x2F;jquery.fancybox.css&#x27;]);
+
+
+&#x2F;**
+* Mostrar la fotografia de como quedarian los destacados
+* @submodule show-example-ads
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;show-example-ads&#x27;, function(Sb){ 
+    var dom = {showExampleLink :$(&#x27;.show-example-img&#x27;)};
+    return {
+        init: function(){
+            dom.showExampleLink.fancybox({
+                    &#x27;transitionIn&#x27;   : &#x27;elastic&#x27;,
+                    &#x27;transitionOut&#x27; : &#x27;elastic&#x27;,
+                    &#x27;titleShow&#x27;    : false
+            });
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+},[&#x27;libs&#x2F;plugins&#x2F;jquery.fancybox.js&#x27;,&#x27;plugins&#x2F;fancybox&#x2F;jquery.fancybox.css&#x27;]);
+
+
+&#x2F;**
+* Muestra video pago efectivo
+* @submodule show-video
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;show-video&#x27;, function(Sb){ 
+    var dom = {linkVideo : $(&#x27;#link-video&#x27;)},
+        showVideo = function(){
+            dom.linkVideo.fancybox({
+                &#x27;transitionIn&#x27;   : &#x27;elastic&#x27;,
+                &#x27;transitionOut&#x27; : &#x27;elastic&#x27;,
+                &#x27;titleShow&#x27;    : false
+            });
+        }
+    return {
+        init: function(){
+            function checkVideo(){
+                if (!!document.createElement(&#x27;video&#x27;).canPlayType) {
+                    var vidTest = document.createElement(&quot;video&quot;);
+                    var oggTest = vidTest.canPlayType(&#x27;video&#x2F;ogg; codecs=&quot;theora, vorbis&quot;&#x27;);
+
+                    if (!oggTest) {
+                        h264Test = vidTest.canPlayType(&#x27;video&#x2F;mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;&#x27;);
+                        if (!h264Test) {
+                            return false;
+                        } else {
+                            if (h264Test == &quot;probably&quot;) {
+                                return true;
+                            } else {
+                                return false;
+                            }
+                        }
+                    } else {
+                        if (oggTest == &quot;probably&quot;) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    }
+                } else {
+                    return false;
+                }
+            }
+
+            if (checkVideo() != true) {
+                var params = {},
+                flashvars = {},
+                baseUrl_ = yOSON.baseHost ;&#x2F;*escribir aqui la ruta estatica del video y&#x2F;o la imagen tambien *&#x2F;
+                params.allowscriptaccess = &quot;always&quot;;
+                params.allowfullscreen = &quot;true&quot;;
+                params.wmode = &quot;opaque&quot;;
+                params.flashvars = &quot;file=&quot; + baseUrl_ + &quot;f&#x2F;video&#x2F;1.flv&amp;repeat=no&amp;stretching=fill&amp;skin=&quot; + baseUrl_ + &quot;f&#x2F;swf&#x2F;md.swf&amp;autostart=false&amp;bufferlength=1&amp;image=&quot; + baseUrl_ + &quot;f&#x2F;video&#x2F;1.jpg&quot;;
+                swfobject.embedSWF(&quot;&quot; + baseUrl_ + &quot;f&#x2F;swf&#x2F;playertv.swf&quot;, &quot;mediaplayer&quot;, &quot;500&quot;, &quot;300&quot;, &quot;9&quot;, &quot;&quot; + baseUrl_ + &quot;f&#x2F;js&#x2F;swfobject&#x2F;expressInstall.swf&quot;, flashvars, params);
+            }
+
+            showVideo();
+            
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+},[&#x27;libs&#x2F;plugins&#x2F;jquery.fancybox.js&#x27;,&#x27;plugins&#x2F;fancybox&#x2F;jquery.fancybox.css&#x27;,&#x27;swfobject&#x2F;swfobject.js&#x27;]);
+
+
+&#x2F;**
+* Cargador de fotos
+* @submodule uploader-photos
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;uploader-photos&#x27;, function(Sb){ 
+    var dom = {};
+    return {
+        init: function(){
+            var productPath=&#x27;&#x27;,
+            addImgUrl = yOSON.baseHost+&#x27;usuario&#x2F;publicacion&#x2F;image-upload&#x27;,
+            delImgUrl = yOSON.baseHost+&#x27;usuario&#x2F;publicacion&#x2F;image-delete&#x2F;idfoto&#x2F;&#x27;,
+            extension = &#x27;.jpg&#x27;,
+            dom = {
+                frm: &#x27;frm_add&#x27;,
+                parentRight: &#x27;.fielset-content-right&#x27;,
+                parentLeft: &#x27;.fielset-content-left&#x27;,
+                inputFile: &#x27;#photo_product&#x27;,
+                inputDesc: &#x27;#img-description&#x27;,
+                btnAdd: &#x27;#addProductImage&#x27;
+            },
+            options = {
+                frm: dom.frm,
+                onComplete: function (json){
+                    var data = $.parseJSON(json);
+
+                    $(dom.inputFile).val(&#x27;&#x27;);
+
+                    $padre = $(dom.inputFile).parent();
+                    $hijo = $(dom.inputFile);
+                    $padre.html(&#x27;&#x27;);
+                    $padre.append($hijo);
+
+                    $(&#x27;#&#x27;+dom.frm).attr(&#x27;action&#x27;, yOSON.baseHost+&#x27;usuario&#x2F;publicacion&#x2F;confirmar-publicacion&#x27;);
+                    $(&#x27;#&#x27;+dom.frm).attr(&#x27;target&#x27;, &#x27;&#x27;);
+
+                    $(dom.inputDesc).val(&#x27;&#x27;);
+
+                    if (data[&quot;status&quot;]==1){
+                        $(dom.parentRight).append(&#x27;&lt;div class=&quot;w120&quot; id=&quot;&#x27;+data[&quot;id&quot;]+&#x27;&quot;&gt;&lt;div class=&quot;options&quot;&gt;&lt;div class=&quot;item-del&quot;&gt;&lt;a title=&quot;eliminar&quot; href=&quot;javascript:;&quot;&gt;&lt;img class=&quot;&quot; alt=&quot;eliminar&quot; src=&quot;&#x27;+yOSON.statHost+&#x27;f&#x2F;img&#x2F;remove.png&quot;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;div&gt;&lt;div class=&quot;item-fav&quot;&gt;&lt;a title=&quot;default&quot; href=&quot;javascript:;&quot;&gt;&lt;img class=&quot;&quot; alt=&quot;default&quot; src=&quot;&#x27;+yOSON.statHost+&#x27;f&#x2F;img&#x2F;fav.png&quot;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;&lt;a title=&quot;imagen&quot; href=&quot;javascript:;&quot;&gt;&lt;img class=&quot;main-class&quot; alt=&quot;imagen&quot; width=&quot;130&quot; height=&quot;130&quot; src=&quot;&#x27;+data[&quot;url&quot;]+&#x27;&quot;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;div&gt;&#x27;);
+                        $(dom.parentRight).trigger(&#x27;change&#x27;);
+
+                    }else{
+                        &#x2F;&#x2F;console.log(data[&quot;status&quot;]);
+                    }
+                }
+            }
+
+            $(dom.btnAdd).click(function(){
+                $(&#x27;#&#x27;+dom.frm).attr(&#x27;action&#x27;, addImgUrl);         
+                $.fn.iframeUp(&#x27;submit&#x27;, options);
+            });
+
+            var options2 = {
+                frm: &#x27;#&#x27;+dom.frm,
+                parentRight: dom.parentRight,
+                parentLeft: dom.parentLeft,
+                url_del: delImgUrl,
+                inputType:&#x27;hidden&#x27;,
+                edit: false,
+                separator:&#x27;-&#x27;
+            };
+            $.fn.pictureManager(options2);
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+},[&#x27;libs&#x2F;plugins&#x2F;jqPictureManager.js&#x27;,&#x27;libs&#x2F;plugins&#x2F;jqSlider.js&#x27;,&#x27;libs&#x2F;plugins&#x2F;jqUploader.js&#x27;,&#x27;libs&#x2F;plugins&#x2F;ui.js&#x27;]);
+
+&#x2F;**
+* Slider para mostrar los productos en la parte inferior del detalle del producto
+* @submodule carousel-products
+* @main aviso
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;carousel-products&#x27;, function(Sb){ 
+    var dom = {adCarouselProducts:$(&#x27;#ad-carousel-products&#x27;),adCarouselProductsClas:$(&#x27;.ad-carousel-products&#x27;)};
+    function carouselInitCallback(carousel){
+        carousel.buttonNext.bind(&#x27;click&#x27;, function() {
+            carousel.startAuto(0);
+        });
+
+        carousel.buttonPrev.bind(&#x27;click&#x27;, function() {
+            carousel.startAuto(0);
+        });
+
+        carousel.clip.hover(function() {
+            carousel.stopAuto();
+        }, function() {
+            carousel.startAuto();
+        });
+    };
+    return {
+        init: function(){
+            dom.adCarouselProducts.jcarousel();
+            dom.adCarouselProductsClas.jcarousel({
+                easing: &#x27;easeInOutQuad&#x27;,
+                animation: 1250,
+                auto: 2,
+                wrap: &#x27;circular&#x27;,
+                initCallback: carouselInitCallback
+            });
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+},[&#x27;libs&#x2F;plugins&#x2F;jquery.jcarousel.js&#x27;,&#x27;libs&#x2F;plugins&#x2F;jquery.easing.js&#x27;]);
+
+&#x2F;**
+* Estilar buscador detalle producto y posiciona la busqueda avanzada
+* @submodule remove-class-home
+* @main default
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;remove-class-home&#x27;, function(Sb){ 
+    var dom = {inputSearch:$(&#x27;#q&#x27;),advancedSearch:$(&#x27;#advanced-search&#x27;)};
+    return {
+        init: function(){
+            dom.inputSearch.removeClass(&#x27;home&#x27;);
+            dom.advancedSearch.css({&#x27;top&#x27;:&#x27;100px&#x27;,&#x27;left&#x27;:&#x27;220px&#x27;});
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+});
+
+
+
+&#x2F;**
+* Mostrar las fotos del producto
+* @submodule show-photo-products
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;show-photo-products&#x27;, function(Sb){ 
+    var dom = {showMainPhoto :$(&#x27;.show-photo[rel=groupGallery]&#x27;)};
+    return {
+        init: function(){
+            dom.showMainPhoto.fancybox({
+                    &#x27;padding&#x27;           : 0,
+                    &#x27;transitionIn&#x27;      : &#x27;elastic&#x27;,
+                    &#x27;transitionOut&#x27;     : &#x27;elastic&#x27;,
+                    &#x27;titlePosition&#x27;     : &#x27;over&#x27;,
+                    &#x27;titleFormat&#x27;       : function(title,currentArray,currentIndex,currentOpts){
+                        return &#x27;&lt;span id=&quot;fancybox-title-over&quot;&gt;&#x27;+(currentIndex+1)+&#x27;&#x2F;&#x27;+currentArray.length+(title.length?&#x27; &amp;nbsp; &#x27;+title:&#x27;&#x27;)+&#x27;&lt;&#x2F;span&gt;&#x27;
+                    }
+            });
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+},[&#x27;libs&#x2F;plugins&#x2F;jquery.fancybox.js&#x27;,&#x27;plugins&#x2F;fancybox&#x2F;jquery.fancybox.css&#x27;]);
+
+
+
+&#x2F;**
+* Permite contar las palabras escritas
+* @submodule count-word
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;count-word&#x27;, function(Sb){ 
+    var dom = {letterFree:$(&quot;#letter_free&quot;),textImpValid:$(&quot;#text_imp_valid&quot;),displayCountError:$(&quot;.display_count_error&quot;),textImpWordValid:$(&quot;#text_imp_word_valid&quot;)};
+    return {
+        init: function(){
+            var nunMax= 10;
+            dom.letterFree.wordCount({
+                maxWords: nunMax,
+                onOverflow: function(){
+                    var longitud = dom.textImpValid.val().length;
+                    dom.letterFree.attr(&quot;maxlength&quot;,longitud);
+                    dom.displayCountError.text(&quot;- Excediste el limite de &quot;+ nunMax +&quot; palabras permitidas.&quot;);
+                    dom.displayCountError.addClass(&quot;error&quot;); 
+                    dom.textImpWordValid.val(&quot;&quot;).addClass(&quot;error&quot;);
+                },
+                onRegular: function(){
+                    dom.displayCountError.text(&quot;&quot;);
+                    dom.displayCountError.removeClass(&quot;error&quot;); 
+                    dom.textImpWordValid.val(&quot;wordEx&quot;).removeClass(&quot;error&quot;);
+                }
+            });     
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+},[&#x27;libs&#x2F;plugins&#x2F;jquery.wordCount.js&#x27;]);
+
+
+&#x2F;**
+* Edición de texto de ingreso para el registro de un anuncio
+* @submodule tinymce-register
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;tinymce-register&#x27;, function(Sb){ 
+    var dom = {textAreaTinymce:$(&#x27;textarea#informacion_adicional&#x27;),linkInline:$(&#x27;a#_mce_item_31&#x27;)};
+    return {
+        init: function(){
+            dom.textAreaTinymce.attr(&#x27;rows&#x27;,&#x27;15&#x27;);
+            dom.textAreaTinymce.attr(&#x27;cols&#x27;,&#x27;80&#x27;);
+            dom.textAreaTinymce.css(&#x27;width&#x27;,&#x27;80%&#x27;);
+            dom.textAreaTinymce.tinymce({
+                &#x2F;&#x2F; Location of TinyMCE script
+                script_url : yOSON.baseHost+&#x27;f&#x2F;js&#x2F;libs&#x2F;plugins&#x2F;tiny_mce&#x2F;tiny_mce.js&#x27;,
+                language : &quot;es&quot;,
+                &#x2F;&#x2F; General options
+                theme : &quot;advanced&quot;,
+                plugins : &quot;autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist&quot;,
+
+                &#x2F;&#x2F; Theme options
+                theme_advanced_buttons1 : &quot;bold,italic,underline,justifyleft,justifycenter,justifyright,|,bullist,numlist,|,outdent,indent,|,link,unlink,image,cleanup&quot;,
+                theme_advanced_buttons2 : &quot;fontselect,fontsizeselect,|,forecolor,backcolor,|,undo,redo,|,fullscreen,code&quot;,
+                theme_advanced_toolbar_location : &quot;top&quot;,
+                theme_advanced_toolbar_align : &quot;left&quot;,
+                theme_advanced_statusbar_location : &quot;bottom&quot;,
+                theme_advanced_resizing : true,
+                theme_advanced_resize_horizontal : false,
+
+
+                &#x2F;&#x2F; Replace values for the template plugin
+                template_replace_values : {
+                    username : &quot;Kotear&quot;,
+                    staffid : &quot;991234&quot;
+                }
+            });
+            dom.linkInline.css(&#x27;display&#x27;,&#x27;inline&#x27;);
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+},[&#x27;libs&#x2F;plugins&#x2F;tiny_mce&#x2F;tiny_mce.js&#x27;,&#x27;libs&#x2F;plugins&#x2F;tiny_mce&#x2F;jquery.tinymce.js&#x27;]);
+
+
+&#x2F;**
+* Envia mensaje para validar la imagen
+* @submodule validate-image
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;validate-image&#x27;, function(Sb){ 
+    var dom = {formRegisterData:$(&#x27;.form-register-data&#x27;),idsHiddenAd:$(&#x27;.ids_hidden_ad&#x27;),msgErrorImages:$(&#x27;.msg-error-images&#x27;),adminImageContent:$(&#x27;.admin-image-content&#x27;)};
+    return {
+        init: function(){
+            $(&#x27;.ids_hidden_ad&#x27;).addClass(&#x27;ignore&#x27;);
+            $(&#x27;.form-register-data&#x27;).submit(function(event){
+                if($(&#x27;.ids_hidden_ad&#x27;).val() == &#x27;&#x27;){
+                    event.preventDefault();
+                    if($(&#x27;.msg-error-images&#x27;).length == 0){
+                        $(&#x27;.admin-image-content&#x27;).before(&#x27;&lt;div class=&quot;msg-error-images ybox&quot;&gt;Debe de ingresar almenos una imagen&lt;&#x2F;div&gt;&#x27;);
+                    }else{
+                        $(&#x27;.admin-image-content&#x27;).fadeOut(&#x27;slow&#x27;).fadeIn(&#x27;slow&#x27;);
+                    }
+                    
+                    return false;
+                }else{
+                    return true;
+                }
+            });
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+});
+
+
+&#x2F;**
+* Muestra la previsualizacion del aviso impreso
+* @submodule preview-impress
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;preview-impress&#x27;, function(Sb){ 
+    var dom = {
+        announcementTitleImpress      :$(&quot;#announcement_title_impress&quot;),
+        letterFree                    :$(&quot;#letter_free&quot;),
+        price                         :$(&quot;#price&quot;),
+        ubicationDistrict             :$(&quot;#ubication_district&quot;),
+        ubicationDistrictOpt          :$(&quot;#ubication_district option&quot;),
+        fono                          :$(&quot;#fono1&quot;),
+        impTit                        :$(&quot;#imp_tit&quot;),
+        impDesLinea1                  :$(&quot;#imp_des_linea1&quot;),
+        impDesLinea2                  :$(&quot;#imp_des_linea2&quot;),
+        impTitHidden                  :$(&quot;#imp_tit_hidden&quot;),
+        impDesLinea1Hidden            :$(&quot;#impreso_des_linea1_hidden&quot;),
+        textImpValid                  :$(&quot;#text_imp_valid&quot;),
+        backPrint                     :$(&quot;#backPrint&quot;),
+        inputMonedaCheck              :$(&quot;input[name=moneda]:checked&quot;),
+        inputMoneda                   :$(&quot;input[name=moneda]&quot;),
+        impress                       :$(&quot;.impreso&quot;)
+    };
+    return {
+        init: function(){
+            &#x2F;* Se le coloca la clase impreso para que el keyup actualize la vista previa *&#x2F;
+            dom.announcementTitleImpress.addClass(&#x27;impreso&#x27;);
+            dom.announcementTitleImpress.attr(&#x27;onpaste&#x27;,&#x27;return false;&#x27;);
+            dom.letterFree.addClass(&#x27;impreso&#x27;);
+            dom.letterFree.attr(&#x27;onpaste&#x27;,&#x27;return false;&#x27;);
+            dom.price.addClass(&#x27;impreso&#x27;);
+
+            &#x2F;* Validacion de &#x27; para Titulo de impreso *&#x2F;
+            dom.announcementTitleImpress.keyup(function(e){
+                if(&#x2F;[&#x27;*]&#x2F;.test(dom.announcementTitleImpress.val())){
+                    var texto = $(this).val();
+                    texto=$(this).val().split(&quot;*&quot;).join(&#x27;&#x27;).split(&quot;&#x27;&quot;).join(&#x27;&#x27;);
+                    $(this).val(texto);
+                }
+            });
+
+            &#x2F;* Validacion de &#x27; para Palabras libres  *&#x2F;
+            dom.letterFree.keyup(function(e){
+                if(&#x2F;[&#x27;*]&#x2F;.test(dom.letterFree.val())){
+                    var texto = $(this).val();
+                    texto=$(this).val().split(&quot;*&quot;).join(&#x27;&#x27;).split(&quot;&#x27;&quot;).join(&#x27;&#x27;);
+                    $(this).val(texto);
+                }
+            });
+
+
+            update_impreso = function(typeMoney,selectLevel){
+                $.ajax({
+                    type: &quot;POST&quot;,
+                    url:yOSON.baseHost + &quot;usuario&#x2F;publicacion&#x2F;texto-aviso&quot;,
+                    dataType: &quot;json&quot;,
+                    cache: &quot;false&quot;,
+                    data:{
+                        titulo      :dom.announcementTitleImpress.val(),
+                        precio      :dom.price.val(),
+                        distrito    :dom.ubicationDistrict.val(),
+                        letterFree :dom.letterFree.val(),
+                        fono1       :dom.fono.val(),
+                        typeMoneyVal:typeMoney
+                    },
+                    contentType: &quot;application&#x2F;x-www-form-urlencoded&quot;,
+                    success: function(data){
+                        
+                        &#x2F;* validacion de texto de ubicacion *&#x2F;
+                        if(selectLevel == 2){
+                            var locationText = $(&quot;#ubication_province&quot;).val();
+                            locationText = (locationText == undefined)?&#x27; &#x27;:$(&quot;#ubication_province option&quot;).text();
+                        }else if(selectLevel == 3){
+                            var locationText = $(&quot;#ubication_district&quot;).val();
+                            locationText = (locationText == undefined)?&#x27; &#x27;:$(&quot;#ubication_district option:selected&quot;).text();
+                        }
+                        
+                        &#x2F;* Tipo de moneda *&#x2F;
+                        var typeMoneySimbol = (data[&#x27;typeMoneyVal&#x27;] == 1)?&#x27;S&#x2F;.&#x27;:&#x27;$&#x27;;
+                        
+                        &#x2F;* se crea vista previa *&#x2F;
+                        dom.impTit.html(data[&quot;titulo&quot;]);
+                        dom.impDesLinea1.html(data[&quot;letterFree&quot;]);
+                        dom.impDesLinea2.html(locationText +&quot; &lt;strong&gt;&quot; + typeMoneySimbol + &quot;&lt;&#x2F;strong&gt; &quot; + data[&quot;precio&quot;]+ &quot; &lt;strong&gt;T.&lt;&#x2F;strong&gt;&quot;+dom.fono.val());
+
+                        &#x2F;* se crea vista previa hidden *&#x2F;
+                        dom.impTitHidden.val(data[&quot;titulo&quot;]);
+                        dom.impDesLinea1Hidden.val(data[&quot;letterFree&quot;]+&quot; &quot;+locationText+&quot; &quot;+ typeMoneySimbol +&quot; &quot;+data[&quot;precio&quot;]+&quot; T.&quot;+dom.fono.val());
+
+                        &#x2F;* se usa para la validacion de texto impreso *&#x2F;
+                        dom.textImpValid.val(data[&quot;letterFree&quot;]);
+
+                        if(dom.textImpValid.length != 0){
+                            if(dom.textImpValid.val().length &lt; dom.letterFree.val().length){
+                                dom.letterFree.attr(&quot;maxlength&quot;,100);
+                            }
+                        }
+                    }
+                });
+            }
+
+            if(dom.backPrint.val() == 0){
+
+                selectLevel = ($(&quot;#ubication_district&quot;).is(&#x27;:visible&#x27;))?3:2;
+
+                if(selectLevel == 2){
+                    var locationText = $(&quot;#ubication_province&quot;).val();
+                    locationText = (locationText == undefined)?&#x27; &#x27;:$(&quot;#ubication_province option&quot;).text();
+                }else if(selectLevel == 3){
+                    var locationText = $(&quot;#ubication_district&quot;).val();
+                    locationText = (locationText == undefined)?&#x27; &#x27;:$(&quot;#ubication_district option&quot;).text();
+                }
+
+                var typeMoneySimbol  = ($(&quot;input[name=moneda]:checked&quot;).val() == 1 )?&#x27;S&#x2F;.&#x27;:&#x27;$&#x27;;
+
+
+                dom.impTit.html(dom.announcementTitleImpress .val());
+                dom.impDesLinea1.html(dom.letterFree.val()) ;
+                dom.impDesLinea2.html(locationText +&quot; &lt;strong&gt;&quot; + typeMoneySimbol + &quot;&lt;&#x2F;strong&gt; &quot; + dom.price.val()+ &quot; &lt;strong&gt;T.&lt;&#x2F;strong&gt;&quot;+dom.fono.val());
+            
+            }
+
+        &#x2F;* validacion de existencia *&#x2F;
+        
+            $(&quot;.impreso&quot;).bind(&quot;keyup&quot;, function(){
+                update_impreso(dom.inputMonedaCheck.val(),3);
+            });
+
+            $(&quot;input[name=moneda]&quot;).bind(&quot;click&quot;, function(){
+                var typeMoney = $(this).val();
+                update_impreso(typeMoney,3);
+            });
+
+            $(&quot;#ubication_district&quot;).bind(&#x27;change&#x27;,function(){
+                update_impreso($(&quot;input[name=moneda]:checked&quot;).val(),3);
+            });
+
+            $(&quot;#ubication_district&quot;).trigger(&#x27;change&#x27;);
+
+            &#x2F;*validate selector lima *&#x2F;
+            $(&#x27;#ubication_departement&#x27;).bind(&#x27;change&#x27;,function(){
+                if($(this).val() == 15){
+                    $(&quot;#ubication_district&quot;).parent().parent().slideDown(&#x27;slow&#x27;);
+                }else{
+                    $(&quot;#ubication_district&quot;).parent().parent().slideUp(&#x27;slow&#x27;);
+                    $(&#x27;#ubication_province&#x27;).bind(&#x27;change&#x27;,function(){
+                        $(&#x27;#ubication_district&#x27;).children(2).attr(&#x27;selected&#x27;,true);
+                        update_impreso($(&quot;input[name=moneda]:checked&quot;).val(),2);
+                    });
+                }
+            });
+
+                &#x2F;* Si se ingresa 2 cuando se selecciona el segundo combo actualiza el aviso impreso ,
+                   Si se ingresa 3 cuando se selecciona el tercero combo actualiza el aviso impreso   *&#x2F;
+        
+ 
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+});
+
+
+&#x2F;**
+* Mostrar formulario de olvidado de contraseña
+* @submodule moduleName
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;show-forget-pass&#x27;, function(Sb){ 
+    var dom = {recoverPassw :$(&#x27;.recover-passw&#x27;)};
+    return {
+        init: function(){
+            dom.recoverPassw.fancybox({
+                    &#x27;transitionIn&#x27;   : &#x27;elastic&#x27;,
+                    &#x27;transitionOut&#x27; : &#x27;elastic&#x27;,
+                    &#x27;titleShow&#x27;    : false
+            });
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+},[&#x27;libs&#x2F;plugins&#x2F;jquery.fancybox.js&#x27;,&#x27;plugins&#x2F;fancybox&#x2F;jquery.fancybox.css&#x27;]);
+
+
+&#x2F;**
+* Mostrar registro mediante un trigger
+* @submodule show-register-trigger
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;show-register-trigger&#x27;, function(Sb){ 
+    var dom = {showRegister:$(&#x27;#show-register&#x27;),signIn:$(&#x27;#sign-in&#x27;)};
+    return {
+        init: function(){
+            dom.showRegister.bind(&#x27;click&#x27;,function(){
+                dom.signIn.trigger(&#x27;click&#x27;); 
+            });
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+});
+
+&#x2F;**
+* Mostrar login mediante un trigger
+* @submodule show-login-trigger
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;show-login-trigger&#x27;, function(Sb){ 
+    var dom = {showLogIn:$(&#x27;#show-log-in&#x27;),logIn:$(&#x27;#log-in&#x27;)};
+    return {
+        init: function(){
+            dom.showLogIn.bind(&#x27;click&#x27;,function(){
+                if(dom.logIn == 1){
+                    dom.logIn.trigger(&#x27;click&#x27;);
+                }
+            });
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+});
+
+
+
+&#x2F;**
+* Reportar aviso
+* @submodule report-ad
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;report-ad&#x27;, function(Sb){ 
+    var dom = {reportAdLink :$(&#x27;.report-ad-link&#x27;),logIn : $(&#x27;#log-in&#x27;),btnClose:$(&#x27;.btn-close&#x27;)};
+    return {
+        init: function(){
+            dom.reportAdLink.bind(&#x27;click&#x27;,function(){
+               if(dom.logIn.length == 1){
+                dom.logIn.trigger(&#x27;click&#x27;);
+                }else if(dom.logIn.length == 0){
+                    $.fancybox({
+                        &#x27;transitionIn&#x27;   : &#x27;fade&#x27;,
+                        &#x27;transitionOut&#x27; : &#x27;fade&#x27;,
+                        &#x27;titleShow&#x27;    : false,
+                        &#x27;type&#x27; : &#x27;inline&#x27;,
+                        &#x27;content&#x27;: &#x27;#report-ad&#x27;,
+                        &#x27;onComplete&#x27; : function(){
+                            yOSON.AppCore.runModule(&#x27;validate&#x27;, {form:&#x27;#report-ad-form&#x27;});
+                        }
+                    });
+                } 
+            });
+            dom.btnClose.bind(&#x27;click&#x27;,function(){
+                $.fancybox.close();
+            });
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+},[&#x27;libs&#x2F;plugins&#x2F;jquery.fancybox.js&#x27;,&#x27;plugins&#x2F;fancybox&#x2F;jquery.fancybox.css&#x27;]);
+
+
+&#x2F;**
+* Enviar aviso a un amigo
+* @submodule send-ad-friend
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;send-ad-friend&#x27;, function(Sb){ 
+    var dom = {sendFriendLink :$(&#x27;.send-friend-link&#x27;),btnClose:$(&#x27;.btn-close&#x27;)};
+    return {
+        init: function(){
+            dom.sendFriendLink.fancybox({
+                &#x27;transitionIn&#x27;   : &#x27;elastic&#x27;,
+                &#x27;transitionOut&#x27; : &#x27;elastic&#x27;,
+                &#x27;titleShow&#x27;    : false,
+                &#x27;onComplete&#x27; : function(){
+                    yOSON.AppCore.runModule(&#x27;validate&#x27;, {form:&#x27;#send-friend-form&#x27;});
+                }
+            });
+
+            dom.btnClose.bind(&#x27;click&#x27;,function(){
+                $.fancybox.close();
+            });
+
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+},[&#x27;libs&#x2F;plugins&#x2F;jquery.fancybox.js&#x27;,&#x27;plugins&#x2F;fancybox&#x2F;jquery.fancybox.css&#x27;]);
+
+&#x2F;**
+* Añadir a mis favoritos
+* @submodule add-favorites
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;add-favorites&#x27;, function(Sb){ 
+    var dom = {bookMarkAdd:$(&quot;a.book-mark-add&quot;)};
+    return {
+        init: function(){
+            &#x2F;&#x2F; add a &quot;rel&quot; attrib if Opera 7+
+            if(window.opera) {
+                if (dom.bookMarkAdd.attr(&quot;rel&quot;) != &quot;&quot;){ &#x2F;&#x2F; don&#x27;t overwrite the rel attrib if already set
+                    dom.bookMarkAdd.attr(&quot;rel&quot;,&quot;sidebar&quot;);
+                }
+            }
+
+            dom.bookMarkAdd.click(function(event){
+                event.preventDefault(); &#x2F;&#x2F; prevent the anchor tag from sending the user off to the link
+                var url = $(this).attr(&#x27;href&#x27;),
+                    title = $(this).attr(&#x27;title&#x27;);
+
+                if (!url) {url = window.location}
+                if (!title) {title = document.title}
+                var browser=navigator.userAgent.toLowerCase();
+                if (window.sidebar) { &#x2F;&#x2F; Mozilla, Firefox, Netscape
+                    window.sidebar.addPanel(title, url,&quot;&quot;);
+                } else if( window.external) { &#x2F;&#x2F; IE or chrome
+                    if (browser.indexOf(&#x27;chrome&#x27;)==-1){ &#x2F;&#x2F; ie
+                        window.external.AddFavorite( url, title); 
+                    } else { &#x2F;&#x2F; chrome
+                        alert(&#x27;Porfavor presione CTRL+D (o Comando+D para Mac) para añadir esta página.&#x27;);
+                    }
+                }
+                else if(window.opera &amp;&amp; window.print) { &#x2F;&#x2F; Opera - automatically adds to sidebar if rel=sidebar in the tag
+                    return true;
+                }
+                else if (browser.indexOf(&#x27;konqueror&#x27;)!=-1) { &#x2F;&#x2F; Konqueror
+                    alert(&#x27;Porfavor presione CTRL+B para añadir esta página.&#x27;);
+                }
+                else if (browser.indexOf(&#x27;safari&#x27;)!=-1){ &#x2F;&#x2F; safari
+                    alert(&#x27;Porfavor presione CTRL+D (o Comando+D para Mac) para añadir esta página.&#x27;);
+                } else {
+                    alert(&#x27;Tu explorador no puede añadir esta pagina, porfavor añadela manualmente.&#x27;)
+                }
+
+            });
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+});
+
+
+&#x2F;**
+* Aviso-inactivos
+* @submodule venta
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&quot;ap-pagination-venta&quot;, function(Sb){
+    return {
+        init: function(oParams){
+            
+            var formSearch=&quot;#apFormSearch&quot;,
+                btnNewAviso = &quot;#btnNewAviso&quot;,
+                btnSearchTitle = &quot;#btnSearchTitle&quot;,
+                btnRepublish = &quot;#btnRepublish&quot;,
+                cboMostrarAvisoDe = &quot;#cboMostrarAvisoDe&quot;,
+                linkOrder = &quot;.linkOrder&quot;,
+                hddOrder = &quot;#hddOrder&quot;,
+                txtTitle = &quot;#txtTitle&quot;;
+&#x2F;&#x2F;                tablePagination=&quot;#tablePagination&quot;;
+                
+            var ApPagination = {
+                init: function () {
+                    ApPagination.afnPaginacion();
+                    ApPagination.afnNewAViso();
+                    ApPagination.afnMostrarAvisoDe();
+                    ApPagination.afnTitle();
+                    ApPagination.afnOrder();
+                    ApPagination.afnRepublish();
+                },
+                afnPaginacion : function(){
+                    $(&quot;.apPagination a&quot;).bind(&#x27;click&#x27;, function(event){
+                        event.preventDefault();
+                        var formValues = ApPagination._afnFormValues();
+                        var $action = $(formSearch).attr(&quot;action&quot;)+formValues+&#x27;&#x2F;page&#x2F;&#x27;+$(this).attr(&quot;rel&quot;);
+                        ApPagination._afnFormSubmit($action);
+                        &#x2F;&#x2F;$(&quot;#hpag&quot;).val($(this).attr(&quot;rel&quot;));
+                    });
+                },
+                afnNewAViso : function(){
+                    $(btnNewAviso).bind(&#x27;click&#x27;, function(event){
+                        event.preventDefault();
+                        var $action = $(this).attr(&quot;action&quot;);
+                        ApPagination._afnFormSubmit($action);
+                    });
+                },
+                afnMostrarAvisoDe : function(){
+                    $(cboMostrarAvisoDe).bind(&#x27;change&#x27;, function(){
+                        var formValues = ApPagination._afnFormValues();
+                        var $action = $(formSearch).attr(&quot;action&quot;)+formValues;&#x2F;&#x2F;&#x27;&#x2F;fechade&#x2F;&#x27;+$(this).val();
+                        ApPagination._afnFormSubmit($action);
+                    });
+                },
+                afnTitle : function(){
+                    $(btnSearchTitle).bind(&#x27;click&#x27;, function(){
+                        ApPagination._afnFormClear();
+                        var formValues = ApPagination._afnFormValues();
+&#x2F;&#x2F;                        var textTitle = escape($(txtTitle).val());
+                        var $action = $(formSearch).attr(&quot;action&quot;)+formValues;
+                        ApPagination._afnFormSubmit($action);
+                    });
+                },
+                afnOrder : function(){
+                    $(linkOrder).bind(&#x27;click&#x27;, function(){
+                        $(hddOrder).val($(this).attr(&quot;order&quot;));
+                        var formValues = ApPagination._afnFormValues();
+                        var $action = $(formSearch).attr(&quot;action&quot;)+formValues;
+                        ApPagination._afnFormSubmit($action);
+                    });
+                },
+                afnRepublish : function(){
+                    $(btnRepublish).bind(&#x27;click&#x27;, function(event){
+                        event.preventDefault();
+                        var $action = $(this).attr(&quot;href&quot;);
+                       var $method = $(this).attr(&quot;method&quot;);
+                        
+                        ApPagination._afnFormSubmit($action, $method);
+                    });
+                },
+                _afnFormClear : function(){
+                    &#x2F;&#x2F;$(cboMostrarAvisoDe).val(&#x27;&#x27;);
+                    &#x2F;&#x2F;$(txtTitle).val();
+                    $(hddOrder).val(&#x27;&#x27;);
+                },
+                _afnFormValues : function(){
+                    var $return = &#x27;&#x27;,
+                        mostrarAvisoDe = $(cboMostrarAvisoDe).val(),
+                        title = escape($(txtTitle).val()),
+                        order = $(hddOrder).val();
+                    $return = (mostrarAvisoDe!=&#x27;0&#x27;)?(&#x27;&#x2F;fechade&#x2F;&#x27;+mostrarAvisoDe):$return;
+                    $return = (title!=&#x27;&#x27;)?($return+&#x27;&#x2F;title&#x2F;&#x27;+title):$return;
+                    $return = (order!=&#x27;&#x27; &amp;&amp; order!=&#x27;0&#x27;)?($return+&#x27;&#x2F;order&#x2F;&#x27;+order):$return;
+                    return $return;
+                },
+                _afnFormSubmit : function($action, $method){
+                    $(formSearch).attr(&quot;action&quot;, $action);
+                    if ($method != &#x27;&#x27;) $(formSearch).attr(&quot;method&quot;, $method);
+                    $(formSearch).submit();
+                }
+            }
+            ApPagination.init();
+        },
+        &#x2F;*Public method : Implementacion de alguna funcionalidad asociada a este modulo.*&#x2F;
+        other: function(){  },
+        destroy: function(){ &#x2F;*Como destruir instacia de este modulo aqui*&#x2F; }
+    };
+});
+
+
+
+
+&#x2F;**
+* eliminar y desactivar para acciones
+* @submodule ad-actions  
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;ad-actions-active&#x27;, function(Sb){ 
+    var dom = {
+        adLink      : $(&#x27;.ad-link-modal&#x27;),
+        btnAceptar  : $(&#x27;#message-ad .btn-standar&#x27;),
+        btnCancel   : $(&#x27;#message-ad .btn-finish&#x27;),
+        btnOptions  : $(&#x27;#message-ad .btn-options&#x27;),
+        messageDiv  : $(&#x27;#message-ad .message&#x27;),
+        btnPaid     : $(&#x27;.paid-btn&#x27;)
+    }; 
+    return {
+        init: function(){
+
+                var urlProduct;
+
+                dom.adLink.bind(&#x27;click&#x27;,function(event){
+
+                    event.preventDefault();
+
+                    var contentRel;
+                    
+                    urlProduct = $(this).attr(&#x27;href&#x27;);
+
+                         $.fancybox({
+                            &#x27;content&#x27;  :  &#x27;#message-ad&#x27;,
+                            &#x27;type&#x27;     :  &#x27;inline&#x27;
+                        });
+                });
+
+                dom.btnAceptar.bind(&#x27;click&#x27;,function(event){
+                    event.preventDefault();
+                    $.ajax({
+                      url:  urlProduct,
+                      success : function(value){
+                        if(value.code == 0){
+                            dom.btnOptions.slideUp(&#x27;down&#x27;);
+                            dom.messageDiv.html(value.msg);
+                            dom.btnOptions.addClass(&#x27;done&#x27;);
+                        }
+                      }
+                    });
+
+                });
+
+                &#x2F;* cerrar modal con cerrar *&#x2F;
+                dom.btnCancel.bind(&#x27;click&#x27;,function(event){
+                    event.preventDefault();
+                    $.fancybox.close();
+                });
+
+                &#x2F;* recargar venta al cerrar*&#x2F;
+                $(&#x27;#fancybox-close&#x27;).bind(&#x27;click&#x27;,function(){
+                    if(dom.btnOptions.hasClass(&#x27;done&#x27;)){
+                        location.reload(true);
+                    }else{}
+                });
+
+                dom.btnPaid.bind(&#x27;click&#x27;,function(event){
+                    event.preventDefault();
+                    var urlType = $(this).attr(&#x27;href&#x27;);
+                    $.ajax({
+                        url : urlType,
+                        success : function(value){
+                            $.fancybox({
+                                &#x27;content&#x27; : value
+                            });
+                        }
+                    });
+                });
+
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+},[&#x27;libs&#x2F;plugins&#x2F;jquery.fancybox.js&#x27;,&#x27;plugins&#x2F;fancybox&#x2F;jquery.fancybox.css&#x27;]);
+
+
+&#x2F;**
+* Mostrar y constestar las preguntas recibidas
+* @submodule show-questions 
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;show-questions&#x27;, function(Sb){ 
+    &#x2F;*var dom = {
+        showQuestionLink        : $(&#x27;.show-question-link&#x27;),
+        showRequestTextLink     : $(&#x27;.show-request-text&#x27;),
+        unansweredQuestions     : $(&#x27;.unanswered-questions&#x27;),
+        showRequestForm         : $(&#x27;.show-request-form&#x27;),
+        listResultProducts      : $(&#x27;.list-result-products&#x27;)
+    }; *&#x2F;
+    return {
+        init: function(){
+
+                $(&#x27;.list-result-products&#x27;).each(function(i,ul){
+                    $(&#x27;.show-question-link&#x27;,ul).bind(&#x27;click&#x27;,function(){
+                            if($(&#x27;.unanswered-questions&#x27;,ul).css(&quot;display&quot;)==&quot;none&quot;){
+                                $(&#x27;.arrow-uniq&#x27;,ul).rotate({animateTo:+180});
+                            }else{
+                                $(&#x27;.arrow-uniq&#x27;,ul).rotate({animateTo:0});
+                            }                            
+                            $(&#x27;.unanswered-questions&#x27;,ul).slideToggle(&#x27;down&#x27;);
+                    });
+                    
+                    $(&#x27;.detail-content&#x27;,ul).each(function(i,div){
+
+                        $(&#x27;.show-request-text&#x27;,div).bind(&#x27;click&#x27;,function(){
+
+                            if($(&#x27;.show-request-form&#x27;,div).css(&quot;display&quot;)==&quot;none&quot;){
+                                $(&#x27;.arrow-uniq-iner&#x27;,div).rotate({animateTo:+180});
+                            }else{
+                                $(&#x27;.arrow-uniq-iner&#x27;,div).rotate({animateTo:0});
+                            } 
+
+                            $(&#x27;.show-request-form&#x27;,div).slideToggle(&#x27;down&#x27;);
+
+                            &#x2F;* Envio de ajax *&#x2F;
+
+                            $(&#x27;.btn-request-answer&#x27;,div).bind(&#x27;click&#x27;,function(event){
+                                event.preventDefault();
+                                $that = $(this,div);
+                                var href = $(this,div).attr(&#x27;href&#x27;),
+                                    comprador = $(this,div).attr(&#x27;comprador&#x27;),
+                                    idmensaje = $(this,div).attr(&#x27;idmensaje&#x27;),
+                                    comment = $(&#x27;textarea&#x27;,div).val();
+
+                                $(&#x27;.text-area-comment&#x27;,div).validate({
+                                    rules :{comment : {required :true}},
+                                    messages: {comment : {required : &#x27;Debe ingresar un comentario&#x27;}}
+                                });
+                                if($(&#x27;.text-area-comment&#x27;,div).valid()){
+                                        $.ajax({
+                                            url : href,
+                                            type: &#x27;post&#x27;,
+                                            data: &#x27;comprador=&#x27;+comprador+&#x27;&amp;idmensaje=&#x27;+idmensaje+&#x27;&amp;comment=&#x27;+comment,
+                                            success : function(value){
+                                                $(&#x27;.show-request-text&#x27;,div).slideUp(&#x27;slow&#x27;);
+                                                $(&#x27;.show-request-form&#x27;,div).slideUp(&#x27;slow&#x27;);
+                                                $that.parents(&#x27;.unanswered-questions&#x27;,div).after(&#x27;&lt;li class=&quot;unanswered-questions&quot; style=&quot;display: list-item;&quot;&gt;&lt;div class=&quot;detail-content&quot;&gt;&lt;div class=&quot;answer-question&quot;&gt;&lt;div class=&quot;column-icon&quot;&gt;&lt;span class=&quot;icon-question-ok&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;&lt;div class=&quot;column-text&quot;&gt;&lt;div&gt;&#x27;+comment+&#x27;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;&lt;&#x2F;li&gt;&#x27;);
+                                            }
+                                        });
+                                }else{
+                                    return false;
+                                }
+
+                            });
+
+                        });
+                    }); 
+
+                });
+
+
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+},[&#x27;libs&#x2F;plugins&#x2F;jquery.rotate.js&#x27;,&#x27;libs&#x2F;plugins&#x2F;jqValidate.js&#x27;]);
+
+
+
+&#x2F;**
+* Hacer check a toda la lista
+* @submodule all-checked-uncheked  
+* @main usuario
+*&#x2F;
+yOSON.AppCore.addModule(&#x27;all-checked-uncheked&#x27;, function(Sb){ 
+    var dom = {
+        checkParent     : $(&#x27;.check-parent&#x27;),
+        checkChildren   : $(&#x27;.check-children&#x27;),
+        listResultProducts  : $(&#x27;.list-result-products&#x27;)
+    }; 
+    return {
+        init: function(){
+            dom.checkParent.bind(&#x27;click&#x27;,function(){
+                dom.listResultProducts.find(dom.checkChildren).attr(&#x27;checked&#x27;,this.checked);
+            });
+
+        },
+        destroy: function(){ &#x2F;*destruir la instancia de este modulo aqui*&#x2F; }
+    };
+});
+
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

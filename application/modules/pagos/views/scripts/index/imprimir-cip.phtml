@@ -1,0 +1,40 @@
+
+        <div id="s_level1" class="clearfix">
+            <table border="1px" cellspacing="0" width="100%" >
+                <thead><th align="center">Detalle</th><th width="20%" align="center">Monto</th></thead>
+            <tbody>
+                <tr><td>Se ha generado un cargo a su nombre en Kotear</td><td align="right"><strong>S/.<?php echo $this->monto; ?></strong></td></tr>
+            </tbody>
+            </table>
+        </div>
+
+        <div align="center">
+            <h4>CIP (C&oacute;digo Id de Pago)<br/><?php echo $this->numCip; ?></h4>
+            <img  src="<?php echo $this->codBarra; ?>">
+        </div>
+<br/>
+        <div style=" border: black 1px solid;">
+            <b>Ud. puede pagar su aviso de las siguientes maneras:</b>
+            <ol>
+                <li>En una agencia BCP:
+                    <ul>
+                        <li>Imprima esta boleta.</li>
+                        <li>Dir&iacute;jase a agencia BCP.</li>
+                        <li>Indique que va ha realizar un <b>Credipago - Pago Efectivo</b>.</li>
+                    </ul>
+                    * El pago no le pertenece a ninguna de las cuentas de El Comercio en el BCP.
+                </li>
+                <li>
+                    V&iacute;a Internet BCP, seguir los siguientes pasos:
+                    <ul>
+                        <li>Ingresa en tu cuenta.</li>
+                        <li>Selecciona la opci&oacute;n Pago de Servicios ubicada en la columna izquierda.</li>
+                        <li>Seleccione Empresas Diversas.</li>
+                        <li>Selecciona <b>Pago Efectivo</b>.</li>
+                        <li>Ingresa el siguiente C&oacute;digo de Pago : <?php echo $this->numCip; ?></li>
+                    </ul>
+                </li>
+
+            </ol>
+        </div>
+

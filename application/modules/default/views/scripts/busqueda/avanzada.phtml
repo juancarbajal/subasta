@@ -1,0 +1,97 @@
+  <?php echo $this->action('buscador','busqueda','default'); ?>
+  <div id="body-content" class="busquedavanzada-pag col-master">
+    <div id="s_level1" class="clearfix">
+      <h3>Búsqueda Avanzada</h3>
+      <p>Digíta o selecciona las opciones para tu búsqueda -no tienen que ser todas- y haz clic en el botón "Buscar". </p>
+    </div>
+    <div id="s_level2" class="clearfix">
+      <div id="left-bar" class="col18">
+        <form id="advanced_search" name="advanced_search" method="get" action="<?php echo $this->baseUrl()?>/busqueda/">
+          <div class="block2 group clearfix">
+            <p class="inpt">
+              <label>Ingresa la palabra clave o el número del ítem<br />
+                <input type="text" name="q" id="q" value="" />
+              </label>
+              <button type="submit" class="btn_submit round"><span>Buscar</span></button>
+            </p>
+            <p class="inpt">
+              <label for="exclude">No incluir las siguiente palabras<br />
+                <input type="text" name="exclude" id="exclude" value="" />
+              </label>
+            </p>
+            <p class="inpt">
+              <label for="categss">En la categoria<br />
+            <select id="categss" name="categs">
+                  <option value="">Todas las Categorias</option>
+            <?php foreach ($this->categoriasBuscador as $cb): ?>
+                    <option value='<?php echo $cb->ID_CATEGORIA ?>'><?php echo $cb->TIT ?></option>
+            <?php endforeach; ?>
+                </select>
+              </label>
+            </p>
+            <hr />
+            <p class="inpt">
+              <label for="apodo">Apodo del Vendedor<br />
+                <input type="text" name="apodo" id="apodo" value="" />
+              </label>
+            </p>           
+            <hr />
+            <p class="rad inpt precio"><span class="title">Rango de Precio</span>
+              <label for="rangoprecio">
+                <input type="checkbox" value="1" name="rangoprecio" id="rangoprecio" class="toggleChk" alt=".rprice" />
+                Mostrar productos entre</label>
+                <span class="rprice">
+                  <label for="rangopreciovaldesde" class="rangoprecio">
+                    <input type="text" name="pmin" id="pmin" value="" class="ismoney" />
+                    &nbsp;Y&nbsp;
+                    <input type="text" name="pmax" id="pmax" value="" class="ismoney" />
+                   </label>
+                  <label for="currency1">
+                    <input type="radio" name="tm" id="currency1" value="1" checked="checked" />
+                    S/.</label>
+                  <label for="currency2">
+                    <input type="radio" name="tm" id="currency2" value="2" />
+                    US$.</label>
+                </span>
+               <em><?php echo 'Valor del cambio ' . $this->tipoCambio->DOLARCAMBIO . ' al ' . $this->tipoCambio->FECHA; ?></em>
+            </p>
+            <hr />
+            <p class="ubication inpt">
+            <span class="slc-ubicacion"><label for="ub">Seleccione ubicación<br /><br />
+
+              <select id="ub" name="ub">
+                <option value="-1">Todas las ciudades</option>
+	        <?php foreach($this->listarCiudades as $ciudades) : ?>
+                <option value="<?php echo $ciudades->ID_UBIGEO?>"><?php echo $ciudades->NOM?></option>
+	        <?php endforeach; ?>
+              </select>
+            </label>
+            </span>
+            <label for="todasubicaciones">
+             <input type="button" alt="#ub:#geotags" class="tag-selector btn_submit round" value="Agregar"/>
+             </label>
+            <div class="ubicacion clearfix" id="geotags"> </div>
+            </p>
+            <hr />
+            <p class="rad inpt mas-opciones"><span class="title">Más Opciones</span>
+              <label>
+                <input type="checkbox" value="1" name="tp1" id="optproductonuevo" />
+                Producto Nuevo</label>
+                <label for="optproductousado">
+                <input type="checkbox" value="2" name="tp2" id="optproductousado" />
+                Producto Usado</label>
+            </p>
+            <div class="controls">
+            <button type="submit" class="btn_submit round" ><span>Buscar</span></button>
+            <a href="#" class="reset-filters">Limpiar filtros</a>
+          </div>
+          <p class="note"><em>También puedes realizar búsquedas por palabras desde cualquier página de Kotear.pe, utilizando el buscador que se encuentra en el encabezado.</em></p>
+          </div>
+        </form>
+      </div>
+      <div id="right-bar" class="last col4">
+      <div class="ad ads160_600"><script type="text/javascript">eplAD4M("Right");</script></div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>

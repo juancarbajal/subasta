@@ -1,0 +1,77 @@
+<?php if(!empty($this->msg)) { ?><div class="ybox"><?=$this->msg?></div><?php } ?>
+<form id="frm_confirm" class="form-horizontal" class="new-enterprise" method="post" >
+	<h1>Datos de Facturación</h1>
+	<p class="line-one">
+		La información de la empresa que registre podrá ser utilizada para emitir las facturas de sus compras.
+	</p>
+	<p>
+		Los datos con <span class="red-inline">* </span>son obligatorios.
+	</p>
+<!--	<div class="control-group">
+		<label class="control-label"><span class="red">*</span>< ?=$this->form->document_type->getLabel()?></label>
+		<div class="controls">
+            < ?=$this->form->document_type->renderViewHelper()?>
+		</div>
+	</div>-->
+	<div class="control-group">
+		<label class="control-label"><span class="red">*</span><?=$this->form->document_number->getLabel()?></label>
+		<div class="controls">
+			<?=$this->form->document_number->renderViewHelper()?>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label"><span class="red">*</span><?=$this->form->customer_name->getLabel()?></label>
+		<div class="controls">
+			<?=$this->form->customer_name->renderViewHelper()?>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label"><span class="red">*</span><?=$this->form->address->getLabel()?></label>
+		<div class="controls">
+			<?=$this->form->address->renderViewHelper()?>
+		</div>
+	</div>
+	
+<!--    <div class="control-group">
+        <label class="control-label">
+            <span class="red">*</span>< ?=$this->form->ubication_departement->getLabel()?>
+        </label>
+        <div class="controls">
+            < ?=$this->form->ubication_departement->renderViewHelper()?>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">
+            <span class="red">*</span>< ?=$this->form->ubication_province->getLabel()?>
+        </label>
+        <div class="controls">
+            < ?=$this->form->ubication_province->renderViewHelper()?>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">
+            <span class="red">*</span>< ?=$this->form->ubication_district->getLabel()?>
+        </label>
+        <div class="controls">
+            < ?=$this->form->ubication_district->renderViewHelper()?>
+        </div>
+    </div>-->
+        
+<!--	<div class="control-group">
+		<div class="controls">
+			<label class="checkbox">
+			< ?=$this->form->terms_conditions->renderViewHelper()?>
+            <a title="title" href="javascript:;">Acepto los términos y condiciones</a>
+			</label>
+		</div>
+	</div>-->
+    
+	<div class="shadow-space">
+	</div>
+    <?php if($this->form->save){ ?>
+        <div class="control-group btn-save">
+            <?//=$this->form->save->renderViewHelper()?>
+            <button type="submit" class="btn-kotear">Grabar</button>
+        </div>
+    <?php } ?>
+</form>

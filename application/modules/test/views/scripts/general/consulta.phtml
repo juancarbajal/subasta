@@ -1,0 +1,29 @@
+<table>
+<tr><td>
+<form action="<?=$this->url(array('consulta'))?>" method="post">
+  <dt>Consulta<dt>
+    <dd>
+      <textarea name="sql" id="sql" rows="10" cols="40"><?=$this->sql?></textarea>
+    <dd>
+      <input value="Consultar" type="submit"/>
+</form>
+</td>
+<td>
+Tablas<br/>
+<select multiple="multiple" size="10">
+<? foreach($this->tablas as $tabla){?>
+<option><?=$tabla->name?></option>
+<?}?>
+</select>
+</td>
+</tr>
+</table>
+<table>
+<? foreach($this->data as $row){?>
+<tr>
+<? foreach($row as $r){?>
+<td><?=$r?></td>
+<? } ?>
+</tr>
+<?}?>
+</table>

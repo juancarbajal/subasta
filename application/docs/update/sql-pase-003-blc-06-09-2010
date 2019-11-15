@@ -1,0 +1,222 @@
+ALTER procedure [dbo].[KO_SP_AVISO_COMPRADORES_SEL]( 
+	@IDAVISO BIGINT,
+	@IDUSUARIO BIGINT,
+	@FILTRO INT
+	
+) 
+/**************************************************************** 
+*Descripcion:	procedimiento de los compradores de un aviso pendientes. 
+*Fecha Crea:	16/03/2010   
+*Fecha Mod:     16/03/2010 (Nazart Jara)
+*ParÃ¡m. de entrada: "@IDAVISO": aviso a consultar. 
+					"@IDUSUARIO" usuario logueado: 
+						
+*Autor: Nazart Jara 
+*VersiÃ³n: 1.0 (Kotear)   
+*****************************************************************/ 
+
+/*
+EXEC KO_SP_AVISO_COMPRADORES_SEL 124528, 157246, 0
+*/
+AS 
+SET NOCOUNT ON 
+BEGIN	  
+DECLARE @SQL NVARCHAR(MAX)='  select distinct usr.APEL, usr.NOM,usr.EMAIL, usrp.ID_USR, usrp.APODO, usr.FONO1_ANEXO,usr.FONO1, avi.stock,avi.visitas,
+trs.ID_TRANSACCION,trs.REGLA_VENDEDOR, 
+--convert(date,trs.FEC_REG) FECR, 
+CONVERT(VARCHAR, trs.FEC_REG, 103) as FECR,
+(10-(SELECT DATEDIFF(DAY,trs.FEC_REG,GETDATE()))) AS DIAS_CALIFIC 
+from KO_AVISO  avi inner join KO_OFERTA ofe on ofe.ID_AVISO=avi.ID_AVISO 
+inner join KO_TRANSACCION trs on trs.ID_OFERTA=ofe.ID_OFERTA and (ofe.est=1 or ofe.est=5)
+inner join KO_USUARIO usr on usr.ID_USR=ofe.ID_USR 
+inner join KO_USUARIO_PORTAL usrp on usrp.ID_USR=usr.ID_USR 
+left join KO_CALIFICACION cal on cal.ID_TRANSACCION=trs.ID_TRANSACCION  
+where avi.ID_AVISO='+convert(VARCHAR,@IDAVISO)+'  and avi.ID_USR='+convert(VARCHAR,@IDUSUARIO) 
+ 
+IF @FILTRO=0 BEGIN 
+set @SQL=@SQL 
+END 
+ 
+IF @FILTRO=1 BEGIN 
+set @SQL=@SQL+'and DATEDIFF(DAY,ofe.FEC_REG,GETDATE())<=7 ' 
+END 
+ 
+IF @FILTRO=2 BEGIN 
+set @SQL=@SQL+'and DATEDIFF(DAY,ofe.FEC_REG,GETDATE())<=30 ' 
+END 
+ 
+IF @FILTRO=3 BEGIN 
+set @SQL=@SQL+'and trs.REGLA_VENDEDOR is null' 
+END 
+ 
+IF @FILTRO=4 BEGIN 
+set @SQL=@SQL+'and trs.REGLA_VENDEDOR is not null' 
+END 
+ 
+EXEC SP_EXECUTESQL @SQL  
+ 
+END
+
+GO
+
+
+
+
+
+ALTER PROCEDURE [dbo].[KO_SP_COMPRAS_SEG_SEL] (  
+    @KO_IDUSUARIO BIGINT,  
+    @KO_ESTADO VARCHAR(MAX),
+    @KO_TIPO_FILTRO int,
+    @KO_FILTRO int,
+    @KO_VALOR_FILTRO int 
+)  
+/****************************************************************  
+*Descripcion:    procedimiento que muestra a los avisos que el usuario le esta siendo seguimiento 
+
+*Fecha Crea:    10/03/2010    
+*Fecha Mod:    
+*Parám. de entrada: "@KO_IDUSUARIO": usuario a consultar.  
+                    "@KO_ESTADO": los estados que deseo visualizar los avisos
+                    "@KO_TIPO_FILTRO ":0 para los grupos de categorias y 1 para la lista de los avisos 
+		 			"@KO_FILTRO ": el tipo de filtro que se quiere hacer
+					"@KO_VALOR_FILTRO ": en caso el @KO_FILTRO =1 se requiere de un valor del filtro
+
+*Autor: NAZART JARA  
+*Versión: 1.0 (Kotear)    
+*****************************************************************/  
+--exec KO_SP_COMPRAS_SEG_SEL 5,'1,2',1,0,0
+as 
+begin
+declare 
+
+        @TOTAL int,
+        @VCOUNT int,
+        @sql_estad varchar(max),
+        @esta_act int,
+        @sql varchar(max),
+		@sql1 varchar(max)
+SET @TOTAL=dbo.ko_fn_SplitCount(@KO_ESTADO,',') 
+set @sql_estad=''
+SET @VCOUNT=1 
+WHILE(@VCOUNT<=@TOTAL) BEGIN  
+ set @esta_act = dbo.ko_fn_Split(@KO_ESTADO,',',@VCOUNT)
+ 
+ if @VCOUNT = 1
+	 set @sql_estad = @sql_estad + ' avi.EST=' + convert(varchar,(@esta_act)) 
+ else 
+	set @sql_estad = @sql_estad + ' or avi.EST=' + convert(varchar,(@esta_act)) 
+ 
+ set @VCOUNT= @VCOUNT+1
+end 
+
+set @sql= 'select  avi.ID_USR, avi.ID_TIPO_AVISO, avi.URL, fot.NOM as NOMFOTO, ag.L1_NOM,ag.L1 ,DATEDIFF(day,avi.FEC_PUB,getdate())as FP,seg.ID_SEGUIMIENTO,ag.L1_NOM,avi.ID_AVISO,avi.TIT,CONVERT(VARCHAR, avi.FEC_FIN,103) FEC_EXP,avi.PRECIO,mon.SIMB,avi.VISITAS
+		   ,(SELECT COUNT(cal.ID_CALIFICACION) FROM ko_oferta ofe inner join KO_CALIFICACION cal on cal.ID_OFERTA=ofe.ID_OFERTA and ofe.ID_AVISO=avi.id_aviso)  CALIFICACION, 
+		DBO.KO_FN_RETURN_CANT_COMPRAS (avi.ID_AVISO) CANT_COMPRAS
+			  from KO_SEGUIMIENTO seg 
+           inner join KO_AVISO avi on avi.ID_AVISO=seg.ID_AVISO and (avi.est>=1 and avi.est<=2) and avi.stock>0 and avi.flag_moderacion=0 and avi.activo=1 and avi.fec_fin<getdate()
+           inner join KO_AVISO_CATEGORIA as avc on avc.ID_AVISO=avi.ID_AVISO
+           inner join KO_AGRUPADOR ag on ag.ID_CATEGORIA=avc.ID_CATEGORIA
+           left join KO_FOTO as fot on fot.ID_AVISO=avi.ID_AVISO and fot.PRIO=1
+           inner join KO_MONEDA mon on mon.ID_MONEDA=avi.ID_MONEDA
+           where seg.EST=1 and seg.ID_USR='+ convert(varchar,@KO_IDUSUARIO)  +'and avi.ID_USR!='+convert(varchar,@KO_IDUSUARIO)+ 'and ('+ @sql_estad + ') ' 
+           
+ 
+set @sql1= 'select ag.L1_NOM,ag.L1 from KO_SEGUIMIENTO seg 
+           inner join KO_AVISO avi on avi.ID_AVISO=seg.ID_AVISO and (avi.est>=1 and avi.est<=2) and avi.stock>0 and avi.flag_moderacion=0 and avi.activo=1 and avi.fec_fin<getdate()
+           inner join KO_AVISO_CATEGORIA as avc on avc.ID_AVISO=avi.ID_AVISO
+           inner join KO_AGRUPADOR ag on ag.ID_CATEGORIA=avc.ID_CATEGORIA
+           inner join KO_MONEDA mon on mon.ID_MONEDA=avi.ID_MONEDA 
+           where seg.EST=1 and seg.ID_USR='+ convert(varchar,@KO_IDUSUARIO)  +'and avi.ID_USR!='+convert(varchar,@KO_IDUSUARIO)+ 'and ('+ @sql_estad + ')'
+           + 'group by ag.L1_NOM,ag.L1'
+           
+           
+           
+if @KO_TIPO_FILTRO=0 begin
+exec sp_sqlexec @sql1 
+end
+
+if @KO_TIPO_FILTRO=1 
+begin
+
+	
+	if @KO_FILTRO=0 or @KO_FILTRO=''  begin
+	set @sql= @sql + ' order by ag.L1_NOM'
+	end 
+		
+	if @KO_FILTRO=1 begin
+	set @sql=@sql + ' and ag.L1=' + CONVERT(varchar,@KO_VALOR_FILTRO) + ' order by ag.L1_NOM,ag.L1 '
+		end 
+
+	if @KO_FILTRO=2 begin
+	set @sql=@sql + ' and DATEDIFF(day,avi.FEC_PUB,getdate()) < 7' + ' order by ag.L1_NOM,ag.L1 '
+		end 
+
+
+	if @KO_FILTRO=3 begin
+	set @sql=@sql + ' and DATEDIFF(day,avi.FEC_PUB,getdate()) < 30 order by ag.L1_NOM,ag.L1 ' 
+		end 
+
+
+	if @KO_FILTRO=4 begin
+	set @sql=@sql + ' order by ag.L1_NOM,ag.L1 ,avi.PRECIO desc' 
+		end 
+
+
+	if @KO_FILTRO=5 begin
+	set @sql=@sql + ' order by ag.L1_NOM,ag.L1 ,CANT_COMPRAS desc'
+		end 
+
+
+	if @KO_FILTRO=6 begin
+	set @sql=@sql + ' order by ag.L1_NOM,ag.L1 ,avi.VISITAS desc'
+		end 
+
+
+	if @KO_FILTRO=7 begin
+	
+	set @sql=@sql + ' order by ag.L1_NOM,ag.L1 ,avi.FEC_FIN asc'
+		end 
+
+	exec sp_sqlexec @sql 
+
+	end
+
+end
+
+GO
+
+
+
+ALTER FUNCTION [dbo].[KO_FN_CONT_COMPRAS_SEG]
+ (
+ @K_IDUSUARIO BIGINT
+ --@K_L1 INT 
+ )
+ RETURNS INT
+ 
+ AS
+ begin
+ /*******************************************************   
+*Descripción: Función que permite obtener la cantidad de avisos en seguimiento perteneciente a un usuario en particular. 
+*Fecha Creacion: 13-04-2010
+*Fecha Mod:   
+*Parámetros:
+			@K_IDUSUARIO: Es el identificador del usuario por el cual se realizará el filtro.
+			*Autor: Laura Mariños
+*Versión: 1.0 (Kotear)   
+***************************************/  
+
+declare 
+@cont int
+   select  @cont=count(1)
+	   from KO_SEGUIMIENTO seg 
+           inner join KO_AVISO avi on avi.ID_AVISO=seg.ID_AVISO and (avi.est>=1 and avi.est<=2) and avi.stock>0 and avi.flag_moderacion=0 and avi.activo=1 and avi.fec_fin<getdate()
+           inner join KO_AVISO_CATEGORIA as avc on avc.ID_AVISO=avi.ID_AVISO
+           inner join KO_AGRUPADOR ag on ag.ID_CATEGORIA=avc.ID_CATEGORIA
+           inner join KO_MONEDA mon on mon.ID_MONEDA=avi.ID_MONEDA
+           where seg.ID_USR=isnull(@K_IDUSUARIO,-1)  and avi.ID_USR!=isnull(@K_IDUSUARIO,-1)
+           return @cont
+END
+
+GO
+

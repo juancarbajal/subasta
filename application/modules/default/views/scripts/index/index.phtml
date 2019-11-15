@@ -1,0 +1,183 @@
+<div class="container">
+    <div class="banner exp"><script type="text/javascript">eplAD4("Expandible");</script></div>
+    <nav class="nav-menu">
+        <h3 class="k-title"><span></span>Categorías</h3>    
+        <ul class="list-menu">
+            <?php foreach ($this->categoriasHome as $ch) { ?>
+            <li>
+                <a href="<?=$this->baseUrl() . '/categoria/' . $ch->ID_CATEGORIA . '-' . $ch->URL?>"><?=$this->escape($ch->TIT); ?><?=($ch->AVISOS <> null)?'('. $ch->AVISOS .')':''?></a>
+            </li>
+            <?php } ?>
+        </ul>
+        <div class="shadow-space"></div>
+        <?php $band = 1; 
+        for ($i=0; $i<count($mi = $this->moduloItems); $i++ ) {
+            if ($band == 1) { // Colocamos el primer titulo ?>
+        <h3 class="k-title"><span></span><?=$this->escape($mi[$i]->TIT)?></h3>
+        <ul class="list-menu">
+            <?php $band = 0; } ?>
+            <?php if ($band == 0) { // Ahora son los Items ?>
+            <li>
+                <a href="<?=$this->escape($mi[$i]->LINK)?>"><?=$this->escape($mi[$i]->DES)?></a>
+            </li>
+           <?php } ?>
+           <?php if ($mi[$i]->ID_MODULO <> $mi[$i+1]->ID_MODULO) { // Si es el ultimo item cerramos y colocamos la bandera ?>
+        </ul>
+        <div class="shadow-space"></div>
+           <?php $band = 1; } ?>
+        <?php } ?>  
+    </nav>
+    <div class="content-right">          
+        <?=$this->action('busqueda','index', 'default');?>
+        <?php /* <!-- Inicio de "Los Mas Destacados" -->  */?>
+        <?php if (count($this->modulo4) > 0) { ?>
+        <div class="gallery-3d">
+            <div class="carousel-container">
+                <div id="carousel">
+                    <?php foreach ($this->modulo4 as $lmd) {
+                                $href = $this->baseUrl() . '/aviso/' . $lmd->ID_AVISO . '-' .$lmd->URL;
+                                $image = $this->rutaimagen300 . $lmd->RUTA_IMAGEN; ?>
+                    <div class="carousel-feature carousel-shadow-item">
+                        <a class="carousel-image-contenedor"  href="<?=$href?>">
+                            <img class="carousel-image lazy" src="<?=URL_STATIC?>img/bg.jpg" alt="<?=$this->escape($lmd->TIT)?>" data-original="<?=$image?>" >
+                        </a>
+                        <!--[if lt IE 7]><b></b><![endif]-->
+                        <div class="carousel-caption">
+                            <p><?=$this->escape($lmd->TIT)?></p>
+                        </div>
+                        <span class="carousel-caption-price"><?=$lmd->SIMB?> <?=number_format($lmd->PRECIO,2,'.',',')?></span>
+                    </div>                
+                    <?php } ?>                    
+                </div>
+                <div id="carousel-left">
+                    <img width="31" height="66" src="<?=URL_STATIC?>img/btn-left.jpg<?=App_Config::getStaticVersion(); ?>" />
+                </div>
+                <div id="carousel-right">
+                    <img width="31" height="66" src="<?=URL_STATIC?>img/btn-right.jpg<?=App_Config::getStaticVersion(); ?>" />
+                </div>
+            </div>
+        </div>
+        <?php }?>
+        <?php /* <!-- Fin de "Los Mas Destacados" -->*/ ?>
+        <ul class="steps">
+          <li class="st1">Vender en <span class="hk1">KOTEAR</span> <span class="hk2">es FÁCIL!</span></li>
+          <li class="line"></li>
+          <li class="st2">
+              <span class="number">1.</span>
+              <span>Publica tu<br /> aviso</span>
+              <figure></figure>
+          </li>
+          <li class="line"></li>
+          <li class="st3">
+              <span class="number">2.</span>
+              <span>Responde las<br /> preguntas</span>
+              <figure></figure>
+          </li>
+          <li class="line"></li>
+          <li class="st4">
+              <span class="number">3. </span>
+              <span>Empieza a<br />
+                  recibir muchas<br />
+                  llamadas y mails</span>
+              <figure></figure>
+          </li>
+        </ul>
+        <div class="shadow-space h34"></div>
+        <div class="banner-img"></div>
+        <?php /* <!-- Avisos del dia --> */ ?>
+        <?php
+        if (count($this->modulo3) > 0) {?>
+        <h3 class="k-title"><span></span><?php echo $this->tituloModulo3->TIT; ?></h3>
+            <ul class="content-product">
+                <?php $c=0;
+                foreach($this->modulo3 as $od) { 
+                   $class = ($c%4==0||$c==0)?"class='first'":"";
+                   $c++;
+                   $title = $this->escape($od->TIT);
+                ?>
+                <li itemtype="http://www.schema.org/Product" <?=$class?> itemscope="itemscope">
+                    <a class="product-img" itemprop="url" href="<?=$this->baseUrl() . '/aviso/' . $od->ID_AVISO . '-' .$od->URL?>" title="<?=$title?>" >
+                        <img src="<?=URL_STATIC?>img/bg.jpg" data-original="<?=$this->rutaimagen150 . $od->RUTA_IMAGEN?>" class="lazy" alt="<?=$title?>" />
+                    </a>
+                    <h2 itemprop="name">
+                        <a itemprop="url" title="<?=$title?>" href="<?=$this->baseUrl() . '/aviso/' . $od->ID_AVISO . '-' .$od->URL; ?>"><?=(strlen($od->TIT) > 45)?substr($title, 0, 45) . ' ...':$title?></a>
+                    </h2>
+                    <div class="product-offer" itemtype="http://www.schema.org/Offer" itemscope="itemscope" itemprop="offers">
+                        <span class="price" itemprop="price"><?=$od->SIMB?> <?=number_format($od->PRECIO,2,'.',',')?></span>
+                        <span itemprop="seller">Vendedor: <?=$od->APODO?></span>
+                    </div>
+                    <span itemprop="review">Visitas: <?=$od->NROVISITAS?></span> 
+                    <ul style="display:none" class="ranking" itemtype="http://www.schema.org/AggregateRating" itemscope="itemscope" itemprop="aggregateRating">
+                        <li style="width: 50px;" class="current-rating" id="rankingMainProduct-">
+                            <span itemprop="ratingValue" class="hide">3</span>
+                            <span itemprop="ratingCount" class="hide"><?=$od->NROVISITAS?></span>
+                            <span itemprop="reviewCount" class="hide"><?=$od->NROVISITAS?></span>
+                        </li>
+                        <li id="rankingIndividualProduct-1">
+                            <a href="javascript:;" title="Deja tu puntuación: 1 de 5" rel="nofollow">1</a>
+                        </li>
+                        <li id="rankingIndividualProduct-2">
+                            <a href="javascript:;" title="Deja tu puntuación: 2 de 5" rel="nofollow">2</a></li>
+                        <li id="rankingIndividualProduct-3"><a href="javascript:;" title="Deja tu puntuación: 3 de 5" rel="nofollow">3</a></li>
+                        <li id="rankingIndividualProduct-4"><a href="javascript:;" title="Deja tu puntuación: 4 de 5" rel="nofollow">4</a></li>
+                        <li id="rankingIndividualProduct-5"><a href="javascript:;" title="Deja tu puntuación: 5 de 5" rel="nofollow">5</a></li>
+                    </ul>
+                 </li>
+                 <?php } ?>
+            </ul>
+        <?php $c=$c+1; } ?>
+        <?php /* <!-- Inicio de "Palabras Mas Buscadas" --> */?>
+        <?php 
+        if (count($this->loMasBuscado) > 0) {?>
+        <h3 class="k-title mb10"><span></span>Lo más buscado</h3>
+        <div class="most-searched">
+            <ul class="row">
+                <?php foreach ($this->loMasBuscado as $tags) { 
+                    $palabra = $this->escape($tags->K_TAG);
+                ?>
+                <li class="<?php switch ($tags->K_PRIORIDAD) : 
+                       case 1: echo 'tag1';break; 
+                       case 2: echo 'tag2';break; 
+                       case 3: echo 'tag3';break; 
+                       case 4: echo 'tag4';break;
+                       endswitch;?>">
+                        <a href="<?php echo $tags->K_URL ?>"><?php echo $palabra;?></a>
+                </li>
+                <?php } ?>              
+            </ul>
+        </div>
+        <div class="shadow-space h34"></div>
+        <?php } ?>
+        <?php /* <!-- Fin de "Palabras Mas Buscadas" --> */?>
+        <?php /* <!-- Inicio de "Los Mas Visitados" --> */ ?>
+        <?php if (count($this->loMasContactado) <> 0) {?>    
+        <h3 class="k-title"><span></span>Lo más visitado</h3>
+            <ul class="content-product">
+                <?php $c=0;
+                foreach ($this->loMasContactado as $uc) :
+                     $class=($c%4==0||$c==0)?"class='first'":""; 
+                     $title = $this->escape($uc->TIT);
+                     $sourl = $this->escape($uc->SEOURL);
+                ?>  
+                <li <?=$class?> itemscope="itemscope" itemtype="http://www.schema.org/Product">         
+                    <a class="product-img" itemprop="url" href="<?=$this->baseUrl(). '/aviso/' .$uc->ID_AVISO. '-' .$sourl?>" title="<?=$title?>">
+                        <img src="<?=URL_STATIC?>img/bg.jpg" data-original="<?=$this->rutaimagen150 . $uc->RUTA_IMAGEN; ?>" class="lazy" alt="<?=$title?>" />
+                    </a>
+                    <h2 class="name" itemprop="name">
+                        <a title="<?=$title?>" href="<?=$this->baseUrl().'/aviso/'.$uc->ID_AVISO.'-'.$sourl?>"><?=($this->escape(strlen($uc->TIT)) > 47)?substr($title, 0, 47) . ' ...':$title?></a>
+                    </h2>
+                    <div class="product-offer" itemprop="offers" itemscope="itemscope" itemtype="http://www.schema.org/Offer">
+                        <span itemprop="price" class="price"><?=$uc->SIMB?> 
+                            <?=number_format($uc->PRECIO,2,'.',',')?>
+                        </span>
+                        <span itemprop="seller">Vendedor: <?=$uc->APODO?></span>
+                    </div>
+                    <span itemprop="review">Visitas: <?=$uc->VISITAS?></span>
+                </li>
+                <?php $c=$c+1;
+                endforeach; ?>                
+            </ul>
+        <?php } ?>
+        <?php /* <!-- Fin de "Palabras Mas Buscadas" --> */ ?>
+    </div>
+</div>

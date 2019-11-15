@@ -1,0 +1,116 @@
+/*
+mixins
+*/
+
+rojo(){
+	color #CC0000
+}
+ffhelveNormal(){
+	font-family: 'Helvetica', Arial;
+}
+ffhelve(){
+	font-family: 'HelveticaNeue', Arial;
+}
+ffarial(){
+	font-family: Arial,Tahoma,'trebuchet MS'
+}
+fftre(){
+	font-family: 'trebuchet MS',Arial,sans-serif
+}
+
+fs(size)
+	font-size size
+layout()
+	display block
+border-radius()
+	-webkit-border-radius arguments
+	-moz-border-radius arguments
+	-ms-border-radius arguments
+	-o-border-radius arguments
+	border-radius arguments
+box-shadow()
+	-moz-box-shadow arguments
+	-webkit-box-shadow arguments
+	box-shadow arguments
+bold()
+	font-weight 700
+tac()
+	text-align center
+tal()
+	text-align left
+tar()
+	text-align right
+
+normal()
+	font-weight 400
+
+layout()
+	width 100%
+	display block
+
+dbfl()
+	display block
+	float left
+
+dbfr()
+	display block
+	float left
+bgButton()
+	background #f51217
+	background -moz-linear-gradient(top,  #f51217 0%, #c00013 100%)
+	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f51217), color-stop(100%,#c00013))
+	background -webkit-linear-gradient(top,  #f51217 0%,#c00013 100%)
+	background -o-linear-gradient(top,  #f51217 0%,#c00013 100%)
+	background -ms-linear-gradient(top,  #f51217 0%,#c00013 100%)
+	background linear-gradient(to bottom,  #f51217 0%,#c00013 100%)
+	filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#f51217', endColorstr='#c00013',GradientType=0)")
+bgButtonHover()
+	background: #D3D3D3	
+	background: -moz-linear-gradient(top, #D3D3D3 0%, #B1B1B1 100%)
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#D3D3D3), color-stop(100%,#B1B1B1))
+	background: -webkit-linear-gradient(top, #D3D3D3 0%,#B1B1B1 100%)
+	background: -o-linear-gradient(top, #D3D3D3 0%,#B1B1B1 100%)
+	background: -ms-linear-gradient(top, #D3D3D3 0%,#B1B1B1 100%)
+	background: linear-gradient(to bottom, #D3D3D3 0%,#B1B1B1 100%)
+	filter: unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#D3D3D3', endColorstr='#B1B1B1',GradientType=0 )") /* IE6-8 */
+bgButtonStar()
+	background: #8e8e8e
+	background: -moz-linear-gradient(top, #8e8e8e 0%, #353535 100%)
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8e8e8e), color-stop(100%,#353535))
+	background: -webkit-linear-gradient(top, #8e8e8e 0%,#353535 100%)
+	background: -o-linear-gradient(top, #8e8e8e 0%,#353535 100%)
+	background: -ms-linear-gradient(top, #8e8e8e 0%,#353535 100%)
+	background: linear-gradient(to bottom, #8e8e8e 0%,#353535 100%)
+	filter: unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e8e8e', endColorstr='#353535',GradientType=0 )") 
+bgBarResult()
+	background: #EDEDED
+	background: unquote("url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIyMSUiIHN0b3AtY29sb3I9IiNlZGVkZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjY2VjZWNlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==)")
+	background: -moz-linear-gradient(top, #EDEDED 21%, #CECECE 100%)
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(21%,#EDEDED), color-stop(100%,#CECECE))
+	background: -webkit-linear-gradient(top, #EDEDED 21%,#CECECE 100%)
+	background: -o-linear-gradient(top, #EDEDED 21%,#CECECE 100%)
+	background: -ms-linear-gradient(top, #EDEDED 21%,#CECECE 100%)
+	background: linear-gradient(to bottom, #EDEDED 21%,#CECECE 100%)
+blockSpace(w,h)
+	height h
+	width w
+	float left
+	display block
+
+bgButtonCancel()
+	background: #eeeeee
+	background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%)
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc))
+	background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%)
+	background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%)
+	background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%)
+	background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%)
+
+bgButtonCancelHover()
+	background: #eeeeee
+	background: -moz-linear-gradient(top,  #eeeeee 0%, #A8A8A8 100%)
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#A8A8A8))
+	background: -webkit-linear-gradient(top,  #eeeeee 0%,#A8A8A8 100%)
+	background: -o-linear-gradient(top,  #eeeeee 0%,#A8A8A8 100%)
+	background: -ms-linear-gradient(top,  #eeeeee 0%,#A8A8A8 100%)
+	background: linear-gradient(to bottom,  #eeeeee 0%,#A8A8A8 100%)

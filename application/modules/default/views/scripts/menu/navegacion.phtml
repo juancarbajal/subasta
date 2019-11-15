@@ -1,0 +1,132 @@
+<?php switch ($this->nav) {
+case 'venta' : ?>
+<div id="account_navigation" class="clearfix">
+    <ul id="koteando_menu_secc">
+        <li id="km_opt1"><a href="<?php echo $this->baseUrl() ?>/usuario/compra/historial-compras/opc/categoria/codigo/0">Mis Compras</a></li>
+        <li id="km_opt2" class="active"><a href="<?php echo $this->baseUrl() ?>/usuario/venta/activas/opc/categoria/codigo/0">Mis Ventas</a></li>        
+        <?php if ($this->servicioGratuito ==0){?>
+        <li id="km_opt4"><a href="<?php echo $this->baseUrl() ?>/pagos/index/pendiente-de-pago">Kotear Pagos</a></li>
+        <?php }?>
+        <li id="km_opt5"><a href="<?php echo $this->baseUrl()?>/usuario/edicion">Mis Datos</a></li>
+    </ul>
+    <ul class="koteando_tabs_menu">
+        <li class="<?php if ($this->opc==1) echo 'active';?>" ><a href="<?php echo $this->baseUrl() ?>/usuario/venta/activas/opc/categoria/codigo/0">Avisos Activos</a></li>
+        <li class="<?php if ($this->opc==2) echo 'active';?>"><a href="<?php echo $this->baseUrl() ?>/usuario/venta/inactivas/opc/categoria/codigo/0">Avisos no Activos</a></li>
+        <!--<li class="<?php if ($this->opc==3) echo 'active';?>"><a href="<?php echo $this->baseUrl() ?>/usuario/venta/historial">Historial de Ventas</a></li>-->
+        <li class="<?php if ($this->opc==4) echo 'active';?>"><a href="<?php echo$this->baseUrl() ?>/usuario/venta/preguntas-recibidas/opc/categoria/codigo/0">Preguntas Recibidas</a></li>
+    </ul>  
+</div>
+<?php break;?>
+<?php case 'calificacion' : ?>
+ <div id="account_navigation" class="clearfix">
+    <ul id="koteando_menu_secc">
+        <!--
+        <li id="km_opt1"><a href="<?php echo  $this->baseUrl()?>/usuario/compra/historial-compras/opc/categoria/codigo/0">Mis Compras</a></li>
+        <li id="km_opt2"><a href="<?php echo  $this->baseUrl() ?>/usuario/venta/activas/opc/categoria/codigo/0">Mis Ventas</a></li>
+        <li id="km_opt3" class="active"><a href="<?php echo $this->baseUrl() ?>/usuario/calificaciones/pendientes">Mis Calificaciones</a></li>
+        <?php if ($this->servicioGratuito ==0){?>
+        <li id="km_opt4"><a href="<?php echo  $this->baseUrl() ?>/pagos/index/pendiente-de-pago">Kotear Pagos</a></li>
+        <?php }?>
+          <li id="km_opt5"><a href="<?php echo  $this->baseUrl()?>/usuario/edicion">Mis Datos</a></li>
+        -->
+    </ul>
+    <ul class="koteando_tabs_menu">
+          <!--
+          <li class="<?php if ($this->opc==1) echo 'active';?>"><a href="<?php echo  $this->baseUrl()?>/usuario/calificaciones/pendientes">Calificaciones Pendientes</a></li>
+          <li class="<?php if ($this->opc==2) echo 'active';?>"><a href="<?php echo  $this->baseUrl()?>/usuario/reputacion/ver">Mi Reputacion</a></li>
+          <li class="<?php if ($this->opc==3) echo 'active';?>"><a href="<?php echo  $this->baseUrl()?>/usuario/calificaciones/realizadas">Calificaciones Realizadas</a></li>
+          -->
+    </ul>
+</div>
+<?php break;?>
+<?php case 'reputacion':?>
+ <div id="account_navigation" class="clearfix">
+    <ul id="koteando_menu_secc">
+        <!--
+        <li id="km_opt1"><a href="<?php echo  $this->baseUrl()?>/usuario/compra/historial-compras/opc/categoria/codigo/0">Mis Compras</a></li>
+        <li id="km_opt2"><a href="<?php echo  $this->baseUrl() ?>/usuario/venta/activas/opc/categoria/codigo/0">Mis Ventas</a></li>
+        <li id="km_opt3" class="active"><a href="<?php echo $this->baseUrl() ?>/usuario/calificaciones/pendientes">Mis Calificaciones</a></li>
+        <?php if ($this->servicioGratuito ==0){?>
+        <li id="km_opt4"><a href="<?php echo  $this->baseUrl() ?>/pagos/index/pendiente-de-pago">Kotear Pagos</a></li>
+        <?php }?>
+        <li id="km_opt5"><a href="<?php echo  $this->baseUrl()?>/usuario/edicion">Mis Datos</a></li>-->
+    </ul>
+    <ul class="koteando_tabs_menu">
+        <!--<li class="<?php if ($this->opc==1) echo 'active';?>" ><a href="<?php echo  $this->baseUrl()?>/usuario/calificaciones/pendientes">Calificaciones Pendientes</a></li>
+        <li class="<?php if ($this->opc==2) echo 'active';?>" ><a href="<?php echo  $this->baseUrl()?>/usuario/reputacion/ver">Mi Reputacion</a></li>
+        <li class="<?php if ($this->opc==3) echo 'active';?>" ><a href="<?php echo  $this->baseUrl()?>/usuario/calificaciones/realizadas">Calificaciones Realizadas</a></li>-->
+    </ul>
+  <!--
+  <ul class="koteando_rightmenu">
+    <li><a href="#">Ayuda</a></li>
+    <li><a href="#">Preguntas Frecuentes</a></li>
+  </ul>
+  -->
+</div>
+<?php break;?>
+<?php case 'compra':?>
+<div id="account_navigation" class="clearfix">
+  <?php //echo $this->action('menuSeccion', 'menu', 'usuario'); ?>
+  <ul id="koteando_menu_secc">
+    <li id="km_opt1" class="active"><a href="<?php echo $this->baseUrl()?>/usuario/compra/historial-compras/opc/categoria/codigo/0">Mis Compras</a></li>
+    <li id="km_opt2"><a href="<?php echo $this->baseUrl() ?>/usuario/venta/activas/opc/categoria/codigo/0">Mis Ventas</a></li>    
+<?php if ($this->servicioGratuito ==0){?>
+    <li id="km_opt4"><a href="<?php echo $this->baseUrl() ?>/pagos/index/pendiente-de-pago">Kotear Pagos</a></li>
+                                       <?php }?>
+    <li id="km_opt5"><a href="<?php echo $this->baseUrl()?>/usuario/edicion">Mis Datos</a></li>
+  </ul>
+  <ul class="koteando_tabs_menu">
+    <!--<li class="<?php if ($this->opc==1) echo 'active';?>"><a href="<?php echo $this->baseUrl()?>/usuario/compra/historial-compras/opc/categoria/codigo/0">Historial de Compras </a></li>-->
+    <li class="<?php if ($this->opc==2) echo 'active';?>"><a href="<?php echo $this->baseUrl() ?>/usuario/compra/preguntas-realizadas/opc/categoria/codigo/0">Preguntas Realizadas</a></li>
+    <li class="<?php if ($this->opc==3) echo 'active';?>"><a href="<?php echo $this->baseUrl()?>/usuario/compra/seguimiento">Compras en seguimiento</a></li>
+  </ul>
+  <!--
+  <ul class="koteando_rightmenu">
+    <li><a href="#">Ayuda</a></li>
+    <li><a href="#">Preguntas Frecuentes</a></li>
+  </ul>
+  -->
+</div>
+<?php break;?>
+<?php case 'usuario':?>
+    <div id="account_navigation" class="clearfix">
+      <ul id="koteando_menu_secc">
+        <li id="km_opt1"><a href="<?php echo $this->baseUrl()?>/usuario/compra/historial-compras/opc/categoria/codigo/0">Mis Compras</a></li>
+        <li id="km_opt2"><a href="<?php echo $this->baseUrl()?>/usuario/venta/activas/opc/categoria/codigo/0">Mis Ventas</a></li>        
+<?php if ($this->servicioGratuito ==0){?>
+        <li id="km_opt4"><a href="<?php echo $this->baseUrl()?>/pagos/index/pendiente-de-pago">Kotear Pagos</a></li>
+<?php }?>
+        <li id="km_opt5" class="active"><a href="<?php echo $this->baseUrl()?>/usuario/edicion">Mis Datos</a></li>
+      </ul>
+  <!--
+  <ul class="koteando_rightmenu">
+    <li><a href="#">Ayuda</a></li>
+    <li><a href="#">Preguntas Frecuentes</a></li>
+  </ul>
+  -->
+    </div>
+<?php break;?>
+<?php case 'pagos':?>
+ <div id="account_navigation" class="clearfix">
+    <ul id="koteando_menu_secc">
+        <li id="km_opt1"><a href="<?php echo  $this->baseUrl()?>/usuario/compra/historial-compras/opc/categoria/codigo/0">Mis Compras</a></li>
+        <li id="km_opt2"><a href="<?php echo  $this->baseUrl() ?>/usuario/venta/activas/opc/categoria/codigo/0">Mis Ventas</a></li>        
+        <?php if ($this->servicioGratuito ==0) { ?>
+        <li id="km_opt4" class="active"><a href="<?php echo  $this->baseUrl() ?>/pagos/index/pendiente-de-pago">Kotear Pagos</a></li>
+        <?php }?>
+        <li id="km_opt5"><a href="<?php echo  $this->baseUrl()?>/usuario/edicion">Mis Datos</a></li>
+    </ul>
+    <ul class="koteando_tabs_menu">
+        <li class="<?php if ($this->opc==1) echo 'active';?>" ><a href="<?php echo $this->baseUrl() ?>/pagos/index/pendiente-de-pago">Pendiente de Pago</a></li>
+        <li class="<?php if ($this->opc==2) echo 'active';?>" ><a href="<?php echo $this->baseUrl() ?>/pagos/index/cargos-pagados">Cargos Pagados</a></li>
+    </ul>
+  <!-- 
+  <ul class="koteando_rightmenu">
+    <li><a href="#">Ayuda</a></li>
+    <li><a href="#">Preguntas Frecuentes</a></li>
+  </ul>
+  -->
+    </div>
+<?php break;?>
+
+<?php }?>

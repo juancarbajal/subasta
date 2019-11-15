@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>libs&#x2F;plugins&#x2F;tiny_mce&#x2F;plugins&#x2F;autosave&#x2F;editor_plugin_src.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.7.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.7.0&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/admin.html">admin</a></li>
+            
+                <li><a href="..&#x2F;classes/all-modules.html">all-modules</a></li>
+            
+                <li><a href="..&#x2F;classes/default.html">default</a></li>
+            
+                <li><a href="..&#x2F;classes/jcarousel.html">jcarousel</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.AutoSave.html">tinymce.plugins.AutoSave</a></li>
+            
+                <li><a href="..&#x2F;classes/tinymce.plugins.ContextMenu.html">tinymce.plugins.ContextMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/usuario.html">usuario</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/ad-actions.html">ad-actions</a></li>
+            
+                <li><a href="..&#x2F;modules/add-class-middle.html">add-class-middle</a></li>
+            
+                <li><a href="..&#x2F;modules/add-favorites.html">add-favorites</a></li>
+            
+                <li><a href="..&#x2F;modules/all-checked-uncheked.html">all-checked-uncheked</a></li>
+            
+                <li><a href="..&#x2F;modules/banner-top classified.html">banner-top classified</a></li>
+            
+                <li><a href="..&#x2F;modules/carousel-products.html">carousel-products</a></li>
+            
+                <li><a href="..&#x2F;modules/count-word.html">count-word</a></li>
+            
+                <li><a href="..&#x2F;modules/data-ubigeo.html">data-ubigeo</a></li>
+            
+                <li><a href="..&#x2F;modules/geotags.html">geotags</a></li>
+            
+                <li><a href="..&#x2F;modules/impress-ad-list.html">impress-ad-list</a></li>
+            
+                <li><a href="..&#x2F;modules/lightbox-logIn-signUp.html">lightbox-logIn-signUp</a></li>
+            
+                <li><a href="..&#x2F;modules/moduleName.html">moduleName</a></li>
+            
+                <li><a href="..&#x2F;modules/placeholder.html">placeholder</a></li>
+            
+                <li><a href="..&#x2F;modules/preview-impress.html">preview-impress</a></li>
+            
+                <li><a href="..&#x2F;modules/register-category.html">register-category</a></li>
+            
+                <li><a href="..&#x2F;modules/remove-class-home.html">remove-class-home</a></li>
+            
+                <li><a href="..&#x2F;modules/report-ad.html">report-ad</a></li>
+            
+                <li><a href="..&#x2F;modules/scrollTop.html">scrollTop</a></li>
+            
+                <li><a href="..&#x2F;modules/search-categories.html">search-categories</a></li>
+            
+                <li><a href="..&#x2F;modules/send-ad-friend.html">send-ad-friend</a></li>
+            
+                <li><a href="..&#x2F;modules/send-list-ad-email.html">send-list-ad-email</a></li>
+            
+                <li><a href="..&#x2F;modules/show-advanced-search.html">show-advanced-search</a></li>
+            
+                <li><a href="..&#x2F;modules/show-example-ads.html">show-example-ads</a></li>
+            
+                <li><a href="..&#x2F;modules/show-login-trigger.html">show-login-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-photo-products.html">show-photo-products</a></li>
+            
+                <li><a href="..&#x2F;modules/show-popup.html">show-popup</a></li>
+            
+                <li><a href="..&#x2F;modules/show-questions.html">show-questions</a></li>
+            
+                <li><a href="..&#x2F;modules/show-register-trigger.html">show-register-trigger</a></li>
+            
+                <li><a href="..&#x2F;modules/show-video.html">show-video</a></li>
+            
+                <li><a href="..&#x2F;modules/showMoreCategories.html">showMoreCategories</a></li>
+            
+                <li><a href="..&#x2F;modules/some-module4.html">some-module4</a></li>
+            
+                <li><a href="..&#x2F;modules/tinymce-register.html">tinymce-register</a></li>
+            
+                <li><a href="..&#x2F;modules/uploader-photos.html">uploader-photos</a></li>
+            
+                <li><a href="..&#x2F;modules/validate.html">validate</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-document.html">validate-document</a></li>
+            
+                <li><a href="..&#x2F;modules/validate-image.html">validate-image</a></li>
+            
+                <li><a href="..&#x2F;modules/venta.html">venta</a></li>
+            
+                <li><a href="..&#x2F;modules/yOSON.html">yOSON</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: libs&#x2F;plugins&#x2F;tiny_mce&#x2F;plugins&#x2F;autosave&#x2F;editor_plugin_src.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * editor_plugin_src.js
+ *
+ * Copyright 2009, Moxiecode Systems AB
+ * Released under LGPL License.
+ *
+ * License: http:&#x2F;&#x2F;tinymce.moxiecode.com&#x2F;license
+ * Contributing: http:&#x2F;&#x2F;tinymce.moxiecode.com&#x2F;contributing
+ *
+ * Adds auto-save capability to the TinyMCE text editor to rescue content
+ * inadvertently lost. This plugin was originally developed by Speednet
+ * and that project can be found here: http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;tinyautosave&#x2F;
+ *
+ * TECHNOLOGY DISCUSSION:
+ * 
+ * The plugin attempts to use the most advanced features available in the current browser to save
+ * as much content as possible.  There are a total of four different methods used to autosave the
+ * content.  In order of preference, they are:
+ * 
+ * 1. localStorage - A new feature of HTML 5, localStorage can store megabytes of data per domain
+ * on the client computer. Data stored in the localStorage area has no expiration date, so we must
+ * manage expiring the data ourselves.  localStorage is fully supported by IE8, and it is supposed
+ * to be working in Firefox 3 and Safari 3.2, but in reality is is flaky in those browsers.  As
+ * HTML 5 gets wider support, the AutoSave plugin will use it automatically. In Windows Vista&#x2F;7,
+ * localStorage is stored in the following folder:
+ * C:\Users\[username]\AppData\Local\Microsoft\Internet Explorer\DOMStore\[tempFolder]
+ * 
+ * 2. sessionStorage - A new feature of HTML 5, sessionStorage works similarly to localStorage,
+ * except it is designed to expire after a certain amount of time.  Because the specification
+ * around expiration date&#x2F;time is very loosely-described, it is preferrable to use locaStorage and
+ * manage the expiration ourselves.  sessionStorage has similar storage characteristics to
+ * localStorage, although it seems to have better support by Firefox 3 at the moment.  (That will
+ * certainly change as Firefox continues getting better at HTML 5 adoption.)
+ * 
+ * 3. UserData - A very under-exploited feature of Microsoft Internet Explorer, UserData is a
+ * way to store up to 128K of data per &quot;document&quot;, or up to 1MB of data per domain, on the client
+ * computer.  The feature is available for IE 5+, which makes it available for every version of IE
+ * supported by TinyMCE.  The content is persistent across browser restarts and expires on the
+ * date&#x2F;time specified, just like a cookie.  However, the data is not cleared when the user clears
+ * cookies on the browser, which makes it well-suited for rescuing autosaved content.  UserData,
+ * like other Microsoft IE browser technologies, is implemented as a behavior attached to a
+ * specific DOM object, so in this case we attach the behavior to the same DOM element that the
+ * TinyMCE editor instance is attached to.
+ *&#x2F;
+
+(function(tinymce) {
+	&#x2F;&#x2F; Setup constants to help the compressor to reduce script size
+	var PLUGIN_NAME = &#x27;autosave&#x27;,
+		RESTORE_DRAFT = &#x27;restoredraft&#x27;,
+		TRUE = true,
+		undefined,
+		unloadHandlerAdded,
+		Dispatcher = tinymce.util.Dispatcher;
+
+	&#x2F;**
+	 * This plugin adds auto-save capability to the TinyMCE text editor to rescue content
+	 * inadvertently lost. By using localStorage.
+	 *
+	 * @class tinymce.plugins.AutoSave
+	 *&#x2F;
+	tinymce.create(&#x27;tinymce.plugins.AutoSave&#x27;, {
+		&#x2F;**
+		 * Initializes the plugin, this will be executed after the plugin has been created.
+		 * This call is done before the editor instance has finished it&#x27;s initialization so use the onInit event
+		 * of the editor instance to intercept that event.
+		 *
+		 * @method init
+		 * @param {tinymce.Editor} ed Editor instance that the plugin is initialized in.
+		 * @param {string} url Absolute URL to where the plugin is located.
+		 *&#x2F;
+		init : function(ed, url) {
+			var self = this, settings = ed.settings;
+
+			self.editor = ed;
+
+			&#x2F;&#x2F; Parses the specified time string into a milisecond number 10m, 10s etc.
+			function parseTime(time) {
+				var multipels = {
+					s : 1000,
+					m : 60000
+				};
+
+				time = &#x2F;^(\d+)([ms]?)$&#x2F;.exec(&#x27;&#x27; + time);
+
+				return (time[2] ? multipels[time[2]] : 1) * parseInt(time);
+			};
+
+			&#x2F;&#x2F; Default config
+			tinymce.each({
+				ask_before_unload : TRUE,
+				interval : &#x27;30s&#x27;,
+				retention : &#x27;20m&#x27;,
+				minlength : 50
+			}, function(value, key) {
+				key = PLUGIN_NAME + &#x27;_&#x27; + key;
+
+				if (settings[key] === undefined)
+					settings[key] = value;
+			});
+
+			&#x2F;&#x2F; Parse times
+			settings.autosave_interval = parseTime(settings.autosave_interval);
+			settings.autosave_retention = parseTime(settings.autosave_retention);
+
+			&#x2F;&#x2F; Register restore button
+			ed.addButton(RESTORE_DRAFT, {
+				title : PLUGIN_NAME + &quot;.restore_content&quot;,
+				onclick : function() {
+					if (ed.getContent({draft: true}).replace(&#x2F;\s|&amp;nbsp;|&lt;\&#x2F;?p[^&gt;]*&gt;|&lt;br[^&gt;]*&gt;&#x2F;gi, &quot;&quot;).length &gt; 0) {
+						&#x2F;&#x2F; Show confirm dialog if the editor isn&#x27;t empty
+						ed.windowManager.confirm(
+							PLUGIN_NAME + &quot;.warning_message&quot;,
+							function(ok) {
+								if (ok)
+									self.restoreDraft();
+							}
+						);
+					} else
+						self.restoreDraft();
+				}
+			});
+
+			&#x2F;&#x2F; Enable&#x2F;disable restoredraft button depending on if there is a draft stored or not
+			ed.onNodeChange.add(function() {
+				var controlManager = ed.controlManager;
+
+				if (controlManager.get(RESTORE_DRAFT))
+					controlManager.setDisabled(RESTORE_DRAFT, !self.hasDraft());
+			});
+
+			ed.onInit.add(function() {
+				&#x2F;&#x2F; Check if the user added the restore button, then setup auto storage logic
+				if (ed.controlManager.get(RESTORE_DRAFT)) {
+					&#x2F;&#x2F; Setup storage engine
+					self.setupStorage(ed);
+
+					&#x2F;&#x2F; Auto save contents each interval time
+					setInterval(function() {
+						if (!ed.removed) {
+							self.storeDraft();
+							ed.nodeChanged();
+						}
+					}, settings.autosave_interval);
+				}
+			});
+
+			&#x2F;**
+			 * This event gets fired when a draft is stored to local storage.
+			 *
+			 * @event onStoreDraft
+			 * @param {tinymce.plugins.AutoSave} sender Plugin instance sending the event.
+			 * @param {Object} draft Draft object containing the HTML contents of the editor.
+			 *&#x2F;
+			self.onStoreDraft = new Dispatcher(self);
+
+			&#x2F;**
+			 * This event gets fired when a draft is restored from local storage.
+			 *
+			 * @event onStoreDraft
+			 * @param {tinymce.plugins.AutoSave} sender Plugin instance sending the event.
+			 * @param {Object} draft Draft object containing the HTML contents of the editor.
+			 *&#x2F;
+			self.onRestoreDraft = new Dispatcher(self);
+
+			&#x2F;**
+			 * This event gets fired when a draft removed&#x2F;expired.
+			 *
+			 * @event onRemoveDraft
+			 * @param {tinymce.plugins.AutoSave} sender Plugin instance sending the event.
+			 * @param {Object} draft Draft object containing the HTML contents of the editor.
+			 *&#x2F;
+			self.onRemoveDraft = new Dispatcher(self);
+
+			&#x2F;&#x2F; Add ask before unload dialog only add one unload handler
+			if (!unloadHandlerAdded) {
+				window.onbeforeunload = tinymce.plugins.AutoSave._beforeUnloadHandler;
+				unloadHandlerAdded = TRUE;
+			}
+		},
+
+		&#x2F;**
+		 * Returns information about the plugin as a name&#x2F;value array.
+		 * The current keys are longname, author, authorurl, infourl and version.
+		 *
+		 * @method getInfo
+		 * @return {Object} Name&#x2F;value array containing information about the plugin.
+		 *&#x2F;
+		getInfo : function() {
+			return {
+				longname : &#x27;Auto save&#x27;,
+				author : &#x27;Moxiecode Systems AB&#x27;,
+				authorurl : &#x27;http:&#x2F;&#x2F;tinymce.moxiecode.com&#x27;,
+				infourl : &#x27;http:&#x2F;&#x2F;wiki.moxiecode.com&#x2F;index.php&#x2F;TinyMCE:Plugins&#x2F;autosave&#x27;,
+				version : tinymce.majorVersion + &quot;.&quot; + tinymce.minorVersion
+			};
+		},
+
+		&#x2F;**
+		 * Returns an expiration date UTC string.
+		 *
+		 * @method getExpDate
+		 * @return {String} Expiration date UTC string.
+		 *&#x2F;
+		getExpDate : function() {
+			return new Date(
+				new Date().getTime() + this.editor.settings.autosave_retention
+			).toUTCString();
+		},
+
+		&#x2F;**
+		 * This method will setup the storage engine. If the browser has support for it.
+		 *
+		 * @method setupStorage
+		 *&#x2F;
+		setupStorage : function(ed) {
+			var self = this, testKey = PLUGIN_NAME + &#x27;_test&#x27;, testVal = &quot;OK&quot;;
+
+			self.key = PLUGIN_NAME + ed.id;
+
+			&#x2F;&#x2F; Loop though each storage engine type until we find one that works
+			tinymce.each([
+				function() {
+					&#x2F;&#x2F; Try HTML5 Local Storage
+					if (localStorage) {
+						localStorage.setItem(testKey, testVal);
+
+						if (localStorage.getItem(testKey) === testVal) {
+							localStorage.removeItem(testKey);
+
+							return localStorage;
+						}
+					}
+				},
+
+				function() {
+					&#x2F;&#x2F; Try HTML5 Session Storage
+					if (sessionStorage) {
+						sessionStorage.setItem(testKey, testVal);
+
+						if (sessionStorage.getItem(testKey) === testVal) {
+							sessionStorage.removeItem(testKey);
+
+							return sessionStorage;
+						}
+					}
+				},
+
+				function() {
+					&#x2F;&#x2F; Try IE userData
+					if (tinymce.isIE) {
+						ed.getElement().style.behavior = &quot;url(&#x27;#default#userData&#x27;)&quot;;
+
+						&#x2F;&#x2F; Fake localStorage on old IE
+						return {
+							autoExpires : TRUE,
+
+							setItem : function(key, value) {
+								var userDataElement = ed.getElement();
+
+								userDataElement.setAttribute(key, value);
+								userDataElement.expires = self.getExpDate();
+
+								try {
+									userDataElement.save(&quot;TinyMCE&quot;);
+								} catch (e) {
+									&#x2F;&#x2F; Ignore, saving might fail if &quot;Userdata Persistence&quot; is disabled in IE
+								}
+							},
+
+							getItem : function(key) {
+								var userDataElement = ed.getElement();
+
+								try {
+									userDataElement.load(&quot;TinyMCE&quot;);
+									return userDataElement.getAttribute(key);
+								} catch (e) {
+									&#x2F;&#x2F; Ignore, loading might fail if &quot;Userdata Persistence&quot; is disabled in IE
+									return null;
+								}
+							},
+
+							removeItem : function(key) {
+								ed.getElement().removeAttribute(key);
+							}
+						};
+					}
+				},
+			], function(setup) {
+				&#x2F;&#x2F; Try executing each function to find a suitable storage engine
+				try {
+					self.storage = setup();
+
+					if (self.storage)
+						return false;
+				} catch (e) {
+					&#x2F;&#x2F; Ignore
+				}
+			});
+		},
+
+		&#x2F;**
+		 * This method will store the current contents in the the storage engine.
+		 *
+		 * @method storeDraft
+		 *&#x2F;
+		storeDraft : function() {
+			var self = this, storage = self.storage, editor = self.editor, expires, content;
+
+			&#x2F;&#x2F; Is the contents dirty
+			if (storage) {
+				&#x2F;&#x2F; If there is no existing key and the contents hasn&#x27;t been changed since
+				&#x2F;&#x2F; it&#x27;s original value then there is no point in saving a draft
+				if (!storage.getItem(self.key) &amp;&amp; !editor.isDirty())
+					return;
+
+				&#x2F;&#x2F; Store contents if the contents if longer than the minlength of characters
+				content = editor.getContent({draft: true});
+				if (content.length &gt; editor.settings.autosave_minlength) {
+					expires = self.getExpDate();
+
+					&#x2F;&#x2F; Store expiration date if needed IE userData has auto expire built in
+					if (!self.storage.autoExpires)
+						self.storage.setItem(self.key + &quot;_expires&quot;, expires);
+
+					self.storage.setItem(self.key, content);
+					self.onStoreDraft.dispatch(self, {
+						expires : expires,
+						content : content
+					});
+				}
+			}
+		},
+
+		&#x2F;**
+		 * This method will restore the contents from the storage engine back to the editor.
+		 *
+		 * @method restoreDraft
+		 *&#x2F;
+		restoreDraft : function() {
+			var self = this, storage = self.storage, content;
+
+			if (storage) {
+				content = storage.getItem(self.key);
+
+				if (content) {
+					self.editor.setContent(content);
+					self.onRestoreDraft.dispatch(self, {
+						content : content
+					});
+				}
+			}
+		},
+
+		&#x2F;**
+		 * This method will return true&#x2F;false if there is a local storage draft available.
+		 *
+		 * @method hasDraft
+		 * @return {boolean} true&#x2F;false state if there is a local draft.
+		 *&#x2F;
+		hasDraft : function() {
+			var self = this, storage = self.storage, expDate, exists;
+
+			if (storage) {
+				&#x2F;&#x2F; Does the item exist at all
+				exists = !!storage.getItem(self.key);
+				if (exists) {
+					&#x2F;&#x2F; Storage needs autoexpire
+					if (!self.storage.autoExpires) {
+						expDate = new Date(storage.getItem(self.key + &quot;_expires&quot;));
+
+						&#x2F;&#x2F; Contents hasn&#x27;t expired
+						if (new Date().getTime() &lt; expDate.getTime())
+							return TRUE;
+
+						&#x2F;&#x2F; Remove it if it has
+						self.removeDraft();
+					} else
+						return TRUE;
+				}
+			}
+
+			return false;
+		},
+
+		&#x2F;**
+		 * Removes the currently stored draft.
+		 *
+		 * @method removeDraft
+		 *&#x2F;
+		removeDraft : function() {
+			var self = this, storage = self.storage, key = self.key, content;
+
+			if (storage) {
+				&#x2F;&#x2F; Get current contents and remove the existing draft
+				content = storage.getItem(key);
+				storage.removeItem(key);
+				storage.removeItem(key + &quot;_expires&quot;);
+
+				&#x2F;&#x2F; Dispatch remove event if we had any contents
+				if (content) {
+					self.onRemoveDraft.dispatch(self, {
+						content : content
+					});
+				}
+			}
+		},
+
+		&quot;static&quot; : {
+			&#x2F;&#x2F; Internal unload handler will be called before the page is unloaded
+			_beforeUnloadHandler : function(e) {
+				var msg;
+
+				tinymce.each(tinyMCE.editors, function(ed) {
+					&#x2F;&#x2F; Store a draft for each editor instance
+					if (ed.plugins.autosave)
+						ed.plugins.autosave.storeDraft();
+
+					&#x2F;&#x2F; Never ask in fullscreen mode
+					if (ed.getParam(&quot;fullscreen_is_enabled&quot;))
+						return;
+
+					&#x2F;&#x2F; Setup a return message if the editor is dirty
+					if (!msg &amp;&amp; ed.isDirty() &amp;&amp; ed.getParam(&quot;autosave_ask_before_unload&quot;))
+						msg = ed.getLang(&quot;autosave.unload_msg&quot;);
+				});
+
+				return msg;
+			}
+		}
+	});
+
+	tinymce.PluginManager.add(&#x27;autosave&#x27;, tinymce.plugins.AutoSave);
+})(tinymce);
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<script type="text/javascript">
+
+function f_getDatosDistrito(codDIst){
+    $.ajax({
+		type: "GET",
+		url:'<?php echo $this->baseUrl()?>/pagos/index/ajax-get-distrito',
+		dataType: "json",
+		cache: "false",
+                data:{departamento:$('#departamento').val()},
+		contentType: "application/x-www-form-urlencoded",
+		success: function(data){
+                $("#distrito").empty();
+                    $("#distrito").append('<option value="">---Seleccione---</option>');
+                    for(var x=0; x < data.length; x++){
+                        if(data[x].CCIUDIS==codDIst){
+                            $("#distrito").append('<option selected="selected" value="'+ data[x].CCIUDIS +'">' + data[x].DCIUDIS+ '</option>');
+                        }else{
+                            $("#distrito").append('<option value="'+ data[x].CCIUDIS +'">' + data[x].DCIUDIS+ '</option>');
+                        }
+                    }
+    		}
+	});
+}
+
+</script>
+<!--
+<?php foreach ($this->transacciones as $t) : ?>
+    <?php $monto=$monto+$t->Monto;
+endforeach; ?>
+-->
+<?php echo $this->action('buscador', 'busqueda', 'default');?>
+<div id="body-content" class="estadocuenta-pag col-master">
+    <div id="s_level1" class="clearfix">
+        <h3>Koteando (Mi Cuenta)</h3>
+    </div>
+    <?php $active1='active'; ?>
+    <?php echo $this->action('navegacion','menu','default', array('nav'=>'pagos', 'opc'=>2));?>
+    <div class="pagetitle">
+        <h4>Cargos Pagados</h4>
+    </div>
+    <div id="s_level2" class="clearfix">
+        <div id="left-bar" class="col5">
+             <ul class="box">
+                <li class="active">Importante</li>
+                <li>Si desea generar facturas a partir de ahora registre sus <a href="<?php echo $this->baseUrl(); ?>/pagos/index/datos-facturacion">datos de facturacion</a></li>
+            </ul>
+        </div>
+        <div id="right-bar" class="col17 last">
+
+            <form action="<?php $this->baseUrl(); ?>/pagos/index/datos-facturacion" method="post" id="fromTipoComprobante" >
+                     <?php if (isset($this->errors)) { ?>
+        <div class="error" id="server">
+		 <dl>
+                     <table>
+        <?php  foreach ($this->errors as $index =>$error):?>
+          <?php if ($error != null){ ?>
+          <tr><td><?php echo $index; ?></td><td><?php echo '&nbsp;&nbsp; :'.implode('<br/>', $error);?></td></tr>
+        <?php } ?>
+      <?php endforeach; ?>
+                     </table>
+        </dl>
+      </div>
+      <?php } ?>
+	   <div class="error_item"></div><br/>
+					<div class="item radio">
+						<div class="title">&nbsp;</div>
+                    <?php if ($this->update){ ?>
+						<label>
+                            <input id="chk_bol" type="radio" checked="" value="2" name="tipoDocumento" class="cambioFormularioFacturacion"/>
+							<strong>Boleta</strong>
+						</label>
+                        <label>
+							<input id="chk_fac" type="radio" data='' value="1" name="tipoDocumento" class="cambioFormularioFacturacion"/>
+                            Factura
+						</label>
+                    <?php } else {?>
+                        <strong><?php echo (($this->datosUsuario['ID_TIPO_DOC']==1)?'FACTURA':'BOLETA'); ?> </strong>
+
+   <?php } ?>
+					</div> <!-- item_radio -->
+					<br/>
+					<div class="habilitado" id="boleta">
+						<div>
+						<input type="hidden" name="perfil_pago_boleta" value="15" />       
+            <table class="mf fb">
+<!--                <tr>
+                    <th>Tipo de Documento:</th>
+                    <td>
+                        <?php if($this->update){ ?>
+                        <select id="tipoDocumento" name="tipoDocumento"><option value="">---seleccione---</option><option value="1" <?php if($this->datosUsuario['ID_TIPO_DOC']==1){ ?> selected <?php }?>>RUC</option><option value="2" <?php if($this->datosUsuario['ID_TIPO_DOC'] == '2'){ ?> selected="selected"  <?php }?>>DNI</option></select>
+                        <?php } else { if($this->datosUsuario['ID_TIPO_DOC']==1){ echo 'RUC';  }
+                                        if($this->datosUsuario['ID_TIPO_DOC']==2){ echo 'DNI';  } }?>
+                        <?php if($this->datosUsuario['ID_TIPO_DOC']==2){ ?>
+                        <input type="hidden" name="razonSocial" id="razonSocial" value=''>
+                        <?php } ?>
+                        <?php if($this->datosUsuario['ID_TIPO_DOC']==1){ ?>
+                        <input type="hidden" name="apePat" id="apePat" value=''>
+                        <input type="hidden" name="apeMat" id="apeMat" value=''>
+                        <input type="hidden" name="nombre" id="nombre" value=''>
+                        <?php } ?>
+                    </td>
+                </tr>	-->
+                <tr>
+                    <th width="30%">Número de Documento:</th><td>
+                        <?php if($this->update) { ?>
+                        <input type="text" name="numDoc" id="numDoc" value="<?php echo $this->datosUsuario['NRO_DOC'] ?>" >
+                        <?php } else { echo $this->datosUsuario['NRO_DOC']; } ?></td>
+                </tr>
+      <?php if($this->update) { //Si se ingresan ?>
+       <tr class="typeRUC">
+              <th width="30%">Razón Social:</th><td>
+              <input type="text" name="razonSocial" id="razonSocial" value="<?php echo $this->datosUsuario['RAZON_SOCIAL'] ?>" ></td>
+</tr>
+<tr class="typeDNI" id="divApePat">
+                    <th width="30%">Apellido Paterno:</th><td>
+ <input type="text" name="apePat" id="apePat" value="<?php echo $this->datosUsuario['APEPAT'] ?>" >
+</td></tr>
+<tr class="typeDNI">
+                    <th width="30%">Apellido Materno:</th><td>
+ <input type="text" name="apeMat" id="apeMat" value="<?php echo $this->datosUsuario['APEMAT'] ?>" >
+ </td></tr>                     
+ <tr class="typeDNI">
+                    <th width="30%">Nombres:</th><td>
+                        <input type="text" name="nombre" id="nombre" maxlength="200" value="<?php echo $this->datosUsuario['NOM'] ?>" >
+                        </td></tr>  
+            <?} else {?>
+            <?php if($this->datosUsuario[ID_TIPO_DOC]==1) {?>
+                  <tr class="typeRUC"><th width="30%">Razon Social:</th><td><?php echo $this->datosUsuario['RAZON_SOCIAL'];?></td></tr>
+                      <?php } else {?>
+            <tr class="typeDNI" id="divApePat"><th width="30%">Apellido Paterno:</th><td><?php echo $this->datosUsuario['APEPAT']; ?></td>
+            </tr>
+            <tr class="typeDNI">
+                    <th width="30%">Apellido Materno:</th><td><?php echo $this->datosUsuario['APEMAT'];?></td></tr>
+                
+                <tr class="typeDNI">
+                    <th width="30%">Nombres:</th><td><?php echo $this->datosUsuario['NOM'];?></td></tr>                
+                <?php }?>
+            <?php } ?>
+                <tr>
+                    <th width="30%">Email:</th><td>
+                        <?php if($this->update){ ?>
+                        <input type="text" name="email" id="email" value="<?php echo $this->datosUsuario['EMAIL']; ?>" ></td>
+                        <?php } else { echo $this->datosUsuario['EMAIL']; } ?>
+                </tr>
+                <tr>
+                    <th>Teléfono (9 digitos)</th><td>
+                        <?php if($this->update){ ?>
+                        <input type="text" name="telefono" id="telefono" value="<?php echo $this->datosUsuario['FONO'] ?>" ></td>
+                        <?php } else { echo $this->datosUsuario['FONO']; } ?>
+                </tr>
+               
+                <tr>
+                    <th>Departamento</th><td>
+                        <?php if($this->update){ ?>
+                        <select id="departamento" name="departamento" onchange="f_getDatosDistrito('')" name="departamento">
+                           <option value="">----seleccione----</option>
+                           <?php foreach($this->departamento as $index) {?>
+                           <option <?php if($this->datosUsuario['COD_DPTA'] == $index->CDPTEST) { ?> selected="selected" <?php } ?> value="<?php echo $index->CDPTEST ?>"><?php echo $index->DDPEST ?></option>
+                           <?php } ?>
+                        </select>
+                        <?php } else { echo $this->datosUsuario['NOM_DPTA']; } ?></td>
+                </tr>
+                <tr>
+                    <th>Distrito</th><td>
+                        <?php if($this->update){ ?>
+                        <select id="distrito" name="distrito"><option value="">----seleccione----</option></select></td>
+                        <?php } else { echo $this->datosUsuario['NOM_DIST']; } ?>
+                </tr>
+                <tr>
+                    <th>Urbanización</th><td>
+                        <?php if($this->update){ ?>
+                        <select id="urbanizacion" name="urbanizacion"><option value="">----seleccione----</option>
+                           <?php foreach($this->centrosPoblados as $index)
+                           {?>
+                           <option <?php if($this->datosUsuario[COD_URB] == $index->ctippob) { ?> selected="selected" <?php } ?> value="<?php echo $index->ctippob ?>"><?php echo $index->dtippob ?></option>
+                           <?php
+                           }  ?>
+                        </select>
+                        <?php } else { echo $this->datosUsuario['NOM_COD_URB']; } ?>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Nombre Urbanización</th><td>
+                        <?php if($this->update){ ?>
+                        <input type="text" name="nomUrbanizacion" id="nomUrbanizacion" value="<?php echo $this->datosUsuario[NOM_URB] ?>" ></td>
+                        <?php } else { echo $this->datosUsuario['NOM_URB']; } ?>
+                </tr>
+                <tr>
+                    <th>Tipo de v&iacute;a</th><td>
+                         <?php if($this->update){ ?>
+                        <select id="tipoCalle" name="tipoCalle"><option value="">----seleccione----</option>
+                           <?php foreach($this->tipoCalle as $index)
+                           {?>
+                           <option <?php if($this->datosUsuario['COD_TIPO_CALLE'] == $index->ctipcll) { ?> selected="selected" <?php } ?> value="<?php echo $index->ctipcll ?>"><?php echo $index->dtipcll ?></option>
+                           <?php } ?>
+                        </select>
+                         <?php } else { echo $this->datosUsuario['NOM_TIPO_CALLE']; } ?>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Nombre de V&iacute;a</th><td>
+                        <?php if($this->update){ ?>
+                        <input type="text" name="nomCalle" id="nomCalle" value="<?php echo $this->datosUsuario['NOM_CALLE'] ?>" ></td>
+                        <?php } else { echo $this->datosUsuario['NOM_CALLE']; } ?>
+                </tr>
+                <tr>
+                    <th>Número</th><td>
+                        <?php if($this->update){ ?>
+                        <input type="text" name="numero" id="numero" value="<?php echo $this->datosUsuario['NUMERO'] ?>" ></td>
+                        <?php } else { echo $this->datosUsuario['NUMERO']; } ?>
+                </tr>
+            </table>
+           <?php if($this->update){ ?>
+           <div class="controls">
+                <button class="btn_submit" type="submit"><span>Continuar</span></button>
+                <a  class="sep_left btn_cancel" href="<?php echo $this->baseUrl(); ?>/usuario/cuenta">Cancelar</a>
+            </div>
+           <?php } ?>
+            </div>
+           </div>
+            </form>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+</div>
+<hr class="hide" />
+<div id="paydetail" class="modal">
+    <h3>Detalle de cargos</h3>
+    <div class="content">
+
+    </div>
+
+    <p class="buttons">
+        <button name="cancel" type="button" value="Cancelar" class="btn_submit close"><span>Cerrar</span></button>
+    </p>
+</div>
+<div id="paydetailConsolidado" class="modal">
+    <h3>Detalle de cargos</h3>
+    <div class="content">
+
+    </div>
+
+    <p class="buttons">
+        <button name="cancel" type="button" value="Cancelar" class="btn_submit close"><span>Cerrar</span></button>
+    </p>
+</div>

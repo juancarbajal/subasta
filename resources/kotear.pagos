@@ -1,0 +1,16 @@
+<VirtualHost *:80>
+DocumentRoot "/var/www/kotear/kotear_pagos/public"
+ServerName kotear.pagos
+
+# This should be omitted in the production environment
+#ErrorLog "/var/www/kotear/kotear_pagos/var/logs/kotear.pagos-error_log"
+#CustomLog "/var/www/kotear/kotear_pagos/var/logs/kotear.pagos-access.log" common
+
+	<Directory "/var/www/kotear/kotear_pagos/public">
+		php_value include_path ".:/var/www/Zend/ZendFramework-1.12.0/library"
+		Options Indexes MultiViews FollowSymLinks
+		AllowOverride All
+		Order allow,deny
+		Allow from all
+	</Directory> 
+</VirtualHost>

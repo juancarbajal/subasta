@@ -1,0 +1,27 @@
+<table width="95%">
+  <tr>
+    <th></th>
+    <th colspan="2" width="70%">Avisos</th>
+    <th>Precio</th>
+    <th>Ofertas</th>
+    <th>Visitas</th>
+    <th>Caduca</th>
+  </tr>
+  <? foreach($this->data as $row){?>
+  <tr>
+    <td width="5%"><input type="checkbox" dojoType="dijit.form.Checkbox"/></td>
+    <td width="5%"><img src="<?=$this->baseUrl()?>/img/icons/camara.gif" alt="Imagen"/></td>
+    <td><a href="<?=$this->baseUrl()?>/aviso/<?=$row->ID_AVISO?>-<?=$row->TIT?>"><?=$row->TIT?></a></td>
+    <td align="right"><b><?=$row->Simbolo?> <?=number_format($row->PRECIO,2,'.',' ')?></b></td>
+    <td><?=$row->Contactos?></td>
+    <td><?=$row->VISITAS?></td>
+    <td><?=$row->Caduca?></td>
+
+  </tr>
+  <?}?>
+</table>
+<br/>
+<div>
+<a href="#"><img src="<?=$this->baseUrl()?>/img/icons/email.gif"/> Enviar</a> &nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="#"><img src="<?=$this->baseUrl()?>/img/icons/imprimir.gif"/> Imprimir</a>
+</div>

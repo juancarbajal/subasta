@@ -1,0 +1,75 @@
+  <?php foreach ($this->transacciones as $t) : ?>
+  <?php $monto=$monto+$t->Monto;
+  endforeach;  ?>
+  <?php echo $this->action('buscador', 'busqueda', 'default');?>
+  <div id="body-content" class="pendienteDePago-pag col-master">
+    <div id="s_level1" class="clearfix">
+      <h3>Koteando (Mi Cuenta)</h3>
+    </div>
+
+      <?php $active2='active';
+      require_once 'navegacion2.phtml';
+      ?>
+    <div class="pagetitle">
+      <h4>Pendiente de Pago</h4>
+    </div>
+    <div id="s_level2" class="clearfix">
+      <div id="left-bar" class="col5">
+        <ul class="box">
+          <li class="active">Cualquier Fecha</li>
+          <li><a href="<?php echo $this->baseURL(); ?>/usuario/pagos/pendiente-de-pago/filtro1/1">Ultima semana</a></li>
+          <li><a href="<?php echo $this->baseURL(); ?>/usuario/pagos/pendiente-de-pago/filtro1/2">Ultimo mes</a></li>
+        </ul>
+      </div>
+      <div id="right-bar" class="col17 last">
+        <div class="total-detail float_right inblock">
+          	<p>Saldo total a pagar al &nbsp; <?php echo date('d/m/Y') ;?> &nbsp; <strong class="mount"> S/. <?php echo number_format($monto,2); ?></strong> <a href="<?php echo $this->baseUrl() . '/usuario/pagos/kotear-pagos-estado-cuenta/'; ?>" class="btn_submit sep_left" title="Pagar">Pagar</a></p>
+        </div>
+        <table border="0" cellspacing="0" cellpadding="0" class="mf float_right" width="100%">
+          <thead>
+            <tr>
+              <th width="15%">Fecha</th>
+              <th width="55%">Concepto</th>
+              <th width="15%" class="right">Monto</th>
+              <th width="15%" class="right">Saldo</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <?php foreach ($this->transacciones as $t) : ?>
+            <tr>
+              <td><?php echo $t->Fecha; ?></td>
+              <?php if($t->EsTransaccion==1){?>
+              <td><a href="<?php echo $this->baseUrl(); ?>/usuario/pagos/detalle-transaccion/cod/<?php echo  $t->ID?>" rel="#paydetail" class="cmd_remote" title="Concepto: <?php echo $t->Descripcion; ?>"><?php echo $t->Descripcion; ?></a></td>
+              <?php } else {?>
+              <td><?php echo $t->Descripcion; ?></td>
+               <?php } ?>
+              <td class="number">S/. <?php echo $t->Monto; ?>  </td>
+              <td class="number">S/. <?php echo $t->Monto; ?>  </td>
+            </tr>
+            <?php
+//            $monto=$monto+$t->Monto;
+
+            endforeach; ?>
+          </tbody>
+
+        </table>
+
+        <div class="total-detail float_right inblock">
+            <p>Saldo total a pagar al &nbsp; <?php echo date('d/m/Y') ;?> &nbsp; <strong class="mount">S/. <?php echo number_format($monto,2); ?>  </strong> <a href="<?php echo $this->baseUrl() . '/usuario/pagos/kotear-pagos-estado-cuenta/'; ?>" class="btn_submit sep_left" title="Pagar">Pagar</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+
+  </div>
+  <hr class="hide" />
+  <div id="paydetail" class="modal">
+  	<h3>Detalle de cargos</h3>
+    <div class="content">
+
+    </div>
+    <p class="buttons">
+		<button name="cancel" type="button" value="Cancelar" class="btn_submit close"><span>Cerrar</span></button>
+	</p>
+  </div>

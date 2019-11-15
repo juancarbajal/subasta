@@ -1,0 +1,157 @@
+var apFiltroBusqueda = {
+                init: function () {
+                    apFiltroBusqueda.fntSearchCleanEvents();
+                    apFiltroBusqueda.fntSearchForm();
+                    //$(afbBtnSearch).trigger('click');
+                },
+                fntSearchForm : function(){
+                        apFiltroBusqueda.fntSearchCleanEvents();
+                        var data = $(formSearch).serialize();
+                        apFiltroBusqueda._fntSearchFind(data);
+                },
+                fntSearchCleanEvents : function () {
+                    $(pag).unbind();
+                    $(btnOpenModal).unbind();
+                },
+                _fntSearchFind: function(data) {
+                    $(btnSearch).attr("disabled","disabled");
+                    apFiltroBusqueda.fntSearchCleanEvents();
+                    $(divResultSearch).html('&nbsp;');
+                    $(divResultSearch).addClass("loading");
+                    var urlAction=$(formSearch).attr("action");
+                    $.ajax({
+                        url : yOSON.baseHost+yOSON.module+urlAction,
+                        type : 'GET',
+                        dataType : 'html',
+                        data : data,
+                        success : function (html) {
+                            apFiltroBusqueda.fntSearchCleanEvents();
+                            $(divResultSearch).removeClass("loading").append(html);
+                            $(pag).bind('click', apFiltroBusqueda._fntSearchPagination);
+                            apFiltroBusqueda._fntModalAccion(btnOpenModal);
+                            $(btnSearch).removeAttr("disabled");
+                        }
+                    })
+                },
+                _fntSearchPagination : function(){
+                    apFiltroBusqueda.fntSearchCleanEvents();
+                    var data = $(formSearch).serialize();
+                    data = data + '&page=' + $(this).attr('rel');
+                    apFiltroBusqueda._fntSearchFind(data);
+                    return false;
+                },
+                _fntModalAccion : function(A){
+                    $(A).bind('click',function(){
+                        var idHidden = $(this).attr("data-id");
+                        $.fancybox({
+                            //llamado de formulario
+                            href : yOSON.baseHost+yOSON.module+'/'+$(formSearch).attr("form-edit")+'?f_id='+idHidden,
+                            onComplete : function(){
+                                // asignacion de hidden
+                                console.log(idHidden);
+                                $("#apfbForm").attr("id-form",idHidden);
+                                //validacion
+                                yOSON.AppCore.runModule('validate',{form:'#apfbForm'});
+                            }
+                        });
+
+//                        if ($(this).attr("disabled")!='disabled'){
+//                            var contenido=$(divContentModal),
+//                                T = $(this),
+//                                tipo = "",
+//                                data = "",
+//        //                        csrf = $(myModal + "#csrf").text(),
+//                                form = '',
+//                                url = yOSON.baseHost+yOSON.module+'/'+$(formSearch).attr("form-edit");
+//                            var id=T.attr("data-id");
+//
+//                            if('#'+T.attr('id')==btnSave) {
+//                                tipo = 'POST';
+//                                form = $(formEdit).serialize();
+//        //                        id = $(afbId).val();
+//                                data = form;
+//                                //$(form).serialize() + '&csrf=' + valcsrf,
+//                            } else {
+//                                tipo = 'GET';
+//                                data = 'f_id='+id;
+//                            }                            
+//                                                        
+//                            $.ajax({
+//                                'url' : url,
+//                                'type' : tipo,
+////                                'dataType' : 'html',
+//                                'data' : data,
+//                                'success' : function(msg) {
+//                                     
+////                                    contenido.removeClass("loading");
+//                                    try
+//                                    {
+//                                        var $isData = $(msg).attr('isData'),
+//                                            $msg = $(msg).attr('msg');
+//                                        if ($isData == '-1') { //->NORMAL
+//                                            //contenido.html(msg);
+//                                            apFiltroBusqueda._fntModalOpen(msg)
+//                                            apFiltroBusqueda._fntModalCleanEvents();
+//                                            apFiltroBusqueda._fntModalAccion(btnSave);
+//                                            apFiltroBusqueda._fntModalClose();
+//                                            
+//                                        } else if ($isData == '0') { //->OK
+////                                            contenido.html(apFiltroBusqueda._fntModalMsg(0, $msg));
+//                                            apFiltroBusqueda._fntModalOpen(apFiltroBusqueda._fntModalMsg(0, $msg))
+//                                            apFiltroBusqueda._fntModalCloseTime();
+//                                        } else { //->ERROR
+////                                            contenido.html(apFiltroBusqueda._fntModalMsg(1, $msg));
+//                                            apFiltroBusqueda._fntModalOpen(apFiltroBusqueda._fntModalMsg(1, $msg))
+//                                            apFiltroBusqueda._fntModalCloseTime();
+//                                        }
+//                                    }
+//                                    catch(err)
+//                                    {
+//                                        contenido.html(apFiltroBusqueda._fntModalMsg(1, ''));
+//                                        apFiltroBusqueda._fntModalCloseTime();
+//                                    } 
+//                                    
+//                                }
+//                            });
+//                            
+//                        }
+                    })//bind
+                },
+                _fntModalCleanEvents : function () {
+                    $(btnCloseModal).unbind();
+                    $(btnSave).unbind();
+                },
+                _fntModalCloseTime: function (){
+                    setTimeout(
+                        function(){
+                            $.fancybox.close()
+                        },
+                        1500
+                    );
+                },
+                _fntModalClose: function (){
+                    $(btnCloseModal).bind('click',function(){
+                        $.fancybox.close()
+                    })
+                },
+                _fntModalOpen: function ($content){
+                    $.fancybox({
+                        'autoDimensions':   false,
+                        'width': 800,
+                        'height': 600,
+                        'content' : $content
+                    });
+                },
+                _fntModalMsg: function (tipo, msg){
+                    var $alert = 'error', $msg = "Error: No se pudo guardar.";
+                    if(tipo==0){
+                        $alert = 'info';
+                        $msg = "Éxito: Datos guardados correctamente.";
+                    }
+                    $msg = (msg!='')?msg:$msg;
+                    var $html ='<div class="alert alert-'+$alert+'">';
+                    $html +='<p class="maring0">'+$msg+'</p>';
+                    $html +='</div>';
+                    return $html;            
+                }
+            }

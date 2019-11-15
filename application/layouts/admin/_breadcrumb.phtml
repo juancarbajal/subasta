@@ -1,0 +1,18 @@
+<?php 
+    $active = $this->layout()->active;
+    $modulo = App_Controller_Action_Admin::$seccion[$active['seccion']];
+    $nivel2 = $active['nivel2'];
+    $nivel2True = !empty($nivel2);
+?>
+<ul class="breadcrumb">
+    <li><a href="#"><?=$modulo['title']?></a> <span class="divider">/</span></li>    
+    <li class="<?= !empty($nivel2True)?'':'active' ?>">
+        <?= ($nivel2True)?'<a href="'.URL_SITE_ADMIN.'/'.$active['controller'].'">':'' ?>
+        <?=$active['title']?>
+        <?= ($nivel2True)?'</a>':'' ?>
+    </li>
+    <?php if ($nivel2True) { ?>
+        <span class="divider">/</span></li> 
+        <li class="active"><?=$nivel2['title']?></li>
+    <?php } ?>
+</ul>

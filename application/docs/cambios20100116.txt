@@ -1,0 +1,11 @@
+ALTER TABLE Usuario ADD Telefono1 VARCHAR(15);
+ALTER TABLE Usuario ADD Telefono1 VARCHAR(15);
+ALTER TABLE Usuario ADD AnexoTelefono1 VARCHAR(4);
+ALTER TABLE Usuario Session DROP Data;
+ALTER TABLE Usuario ADD Session TEXT;
+ALTER TABLE Mensaje ADD Texto TEXT;
+INSERT INTO Ubigeo (IdUbigeo,Nombre) VALUES(1,'Amazonas');
+INSERT INTO Ubigeo (IdUbigeo,Nombre) VALUES(2,'Ancash');
+INSERT INTO Ubigeo (IdUbigeo,Nombre) VALUES(3,'Apurimac');
+INSERT INTO Ubigeo (IdUbigeo,Nombre) VALUES(4,'Arequipa');
+INSERT INTO Ubigeo (IdUbigeo,Nombre) VALUES(5,'Ayacucho');

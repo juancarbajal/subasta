@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie6" lang="es"><![endif]-->
+<!--[if IE 7]><html class="ie7" lang="es"><![endif]-->
+<!--[if IE 8]><html class="ie8" lang="es"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="es"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="es"><!--<![endif]-->
+    <head>
+        <?=$this->headTitle()?>
+        <?=$this->headLink()?>
+        <?=$this->headMeta()?>
+        <?php 
+            if ($this->layout()->staticCache) {
+                $excepciones = array("jquery");
+                $this->CacheStatic($this->headScript(), $excepciones);
+            }
+        ?>
+        <?=$this->yoson; ?>
+        <?=$this->headScript()?>
+        <?=$this->headStyle()?>
+    </head>
+    <body>
+        <div id="wrapper" class="wrapper-login">
+            <div id="header">
+                <h1 itemscope="itemscope" itemtype="http://schema.org/Organization">
+                    <a href="<?=$this->baseUrl()?>" title="<?=$this->baseUrl()?>" itemprop="url">
+                        <img itemprop="image" alt="Kotear" width="271" height="84"
+                             src="<?=URL_STATIC?>img/logo.jpg"/>
+                    </a>
+                    <meta itemprop="name" content="kotear.pe"/>
+                </h1>
+            </div>
+            <div id="content">
+                <?=$this->layout()->content?>
+            </div>
+            <div id="footer">
+                <p class="muted credit">
+                    Todos los derechos reservados <a href="<?=$this->baseUrl()?>">kotear.pe</a>.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Joson -->
+        <?php $sv = App_Config::getStaticVersion(); ?>
+        <script type="text/javascript" src="<?=URL_STATIC?>js/libs/<?=JOSON_MIN?>framework.js<?=$sv?>"></script>
+        <script type="text/javascript" src="<?=URL_STATIC?>js/application/<?=JOSON_MIN?>yoson.js<?=$sv?>" >
+        </script>
+        <script type="text/javascript" 
+            src="<?=URL_STATIC?>js/application/schemas/<?=JOSON_MIN?>requires.js<?=$sv?>"></script>
+        <script type="text/javascript" src="<?=URL_STATIC?>js/modules/<?=JOSON_MIN?>admin.js<?=$sv?>">
+        </script>
+        <script type="text/javascript" src="<?=URL_STATIC?>js/application/schemas/<?=JOSON_MIN?>modules.js<?=$sv?>" >
+        </script>
+        <script type="text/javascript" src="<?=URL_STATIC?>js/<?=JOSON_MIN?>appLoad.js<?=$sv?>"></script>
+        <script type="text/javascript" src="<?=URL_STATIC?>js/libs/bootstrap/bootstrap.min.js"></script>
+    </body>
+</html>

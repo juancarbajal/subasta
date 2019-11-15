@@ -1,0 +1,33 @@
+    <?php //var_dump($this->parametros); ?>
+        <table class="list" cellspacing="0" cellpadding="0" summary="Resultados de la busqueda">
+        <tbody>
+          <?php foreach ($this->avisosSeleccionados as $r) {
+          	  var_dump($r);
+              $href = $this->baseUrl() . '/aviso/' . $r->ID_AVISO . '-' .$r->URL;
+              if ($r->FOTO == 1) { $img = $this->rutaimagen . $r->IMAGEN; }
+              else { $img = $this->rutaimagen . 'none.gif'; }
+              ?>
+          <tr class="item <?php echo $r->ESTILO; ?>">
+			<td class="chk"> <input type="checkbox" name="result[<?php echo $r->ID_AVISO; ?>]" value="<?php echo $r->ID_AVISO; ?>    " /> </td>
+            <td class="pic"><a href="<?php echo $href; ?>"><img src="<?php echo $img; ?>" alt="<?php echo $r->TIT?>" /> <!-- fix vertical-align IE --></a></td>
+            <td>
+            <div class="detail">
+            <h4><a href="<?php echo $href; ?>"><?php echo $r->TIT; ?></a></h4>
+              <?php echo $r->SUBTIT; ?>
+              <p class="seller">
+                  <a <?php if ($r->ID_TIPO_USUARIO > 1) { ?>class="bigseller"<?php } ?> href="<?php echo $this->baseUrl() . '/usuario/reputacion/ver/cod/' . $r->ID_USR; ?>"><?php echo $r->USUARIO; ?> (<?php echo $r->PUNTAJE; ?>)</a></p>
+              <a class="zoompic" href="<?php echo $img; ?>">Agrandar la imagen</a>
+            </div>
+            </td>
+            <td class="moreinfo">
+            <p class="price"><?php echo $r->SIMB; ?> <?php echo $r->PRECIO; ?></p>
+            <p class="minfo">
+            <span class="timeleft">Caduca en <?php echo $r->CADUCIDAD; ?></span><br />
+            <span class="bids"><?php echo $r->NUM_OFERTAS; ?> Ofertas</span><br />
+            <span class="visits"><?php echo $r->VISITAS; ?> Visitas</span>
+            </p>
+            </td>
+          </tr>
+          <?php } ?>
+          </tbody>
+        </table>

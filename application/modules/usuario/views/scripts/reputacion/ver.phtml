@@ -1,0 +1,194 @@
+<?php
+	$arrayDatosReputacion=$this->data;
+	$arrayDatosUsuario=$this->usuario;
+?>
+<div class="reputation">
+    <div class="w980">
+        <?php echo $this->action('buscador', 'busqueda', 'default'); ?>
+        <div class="title-main">
+            <span class="icon"></span>
+            <h2 class="title">Reputación</h2>
+            <?php $op=2?>
+            <?php
+               if($this->cod == ''){
+                   echo $this->action('navegacion','menu','default',array('nav'=>'reputacion', 'opc'=>2));      
+            }?>
+        </div>
+        <p>Revisa la reputación de este usuario: Fijate en sus calificaciones y los comentarios que recibió.</p>
+        <div class="my-data">
+            <h3>Mis Datos: </h3>
+            <a <?php if($arrayDatosUsuario->ID_TIPO_USUARIO == 2) { ?>class="user bigseller" <?php } ?>href="#"><?php echo $arrayDatosUsuario->APODO ?><span class="medal"></span></a>
+            <p>Miembro desde: <?php echo $arrayDatosUsuario->FEC_REG ?> </p>
+            <p><?php echo $arrayDatosUsuario->UBIGEO ?></p>
+            <?php if ($this->cod == '') { ?>
+            <p> <span><?php echo $arrayDatosUsuario->FONO1 ?> <?php if ($arrayDatosUsuario->FONO2) { echo "  /  " . $arrayDatosUsuario->FONO2; }?></span> </p>
+            <!--<a class="email" href="#"><?php echo $arrayDatosUsuario->EMAIL ?></a>-->
+            <?php } ?>
+            <a href="<?php echo $this->baseUrl() ?>/vendedor/<?php echo $arrayDatosUsuario->APODO ?>">Ver artículos del vendedor</a>
+        </div><!-- //my-data -->
+        <div class="colum-1">
+           <div class="score">
+               <h3>Puntaje:<span><?php echo $arrayDatosReputacion[0]->PUNTAJE ; ?> *</span></h3>
+               <p class="green">Calificaciones positivas: <b>(<?php echo $arrayDatosReputacion[0]->PORCENT_CALIFIC_POSI; ?>%)</b></p>
+               <p class="red">Calificaciones negativas: <b>(<?php echo $arrayDatosReputacion[0]->PORCENT_CALIFIC_NEGA; ?>%)</b></p>
+               <p class="detail">* Estas calificaciones son de usuarios únicos.</p>
+           </div>
+           <div class="total-qualifications">
+               <p class="green">Total calificaciones Positivas: <b><?php echo $arrayDatosReputacion[0]->TOTAL_CALIFIC_POSI; ?></b></p>
+               <p class="red">Total calificaciones Negativas: <b><?php echo $arrayDatosReputacion[0]->TOTAL_CALIFIC_NEGA; ?></b></p>
+               <a href="#">Aprende más sobre estos números</a>
+           </div>
+        </div>
+        <div class="colum-2">
+            <div class="qualifications">
+                <table>
+                    <thead>
+                      <tr>
+                        <th><b>Calificaciones Recibidas:</b></th>
+                        <th>Ultimos 7 días</th>
+                        <th>Ultimo Mes</th>
+                        <th>Ultimos 6 Meses</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="odd">
+                        <td class="green"><span class="icon positive-calification"></span>Positiva</td>
+                        <td><?php echo $arrayDatosReputacion[0]->CALIFIC_POSI_7_DIAS ?></td>
+                        <td><?php echo $arrayDatosReputacion[0]->CALIFIC_POSI_MES ?></td>
+                        <td><?php echo $arrayDatosReputacion[0]->CALIFIC_POSI_6_MESES ?></td>
+                      </tr>
+                      <tr>
+                          <td class="neutral"><span class="icon neutral-calification"></span>Neutral</td>
+                          <td><?php echo $arrayDatosReputacion[0]->CALIFIC_NEUT_7_DIAS?></td>
+                          <td><?php echo $arrayDatosReputacion[0]->CALIFIC_NEUT_MES?></td>
+                          <td><?php echo $arrayDatosReputacion[0]->CALIFIC_NEUT_6_MESES?></td>
+                      </tr>
+                      <tr class="odd">
+                          <td class="negative"><span class="icon negative-calification"></span>Negativa</td>
+                          <td><?php echo $arrayDatosReputacion[0]->CALIFIC_NEGA_7_DIAS?></td>
+                          <td><?php echo $arrayDatosReputacion[0]->CALIFIC_NEGA_MES?></td>
+                          <td><?php echo $arrayDatosReputacion[0]->CALIFIC_NEGA_6_MESES?></td>
+                      </tr>
+                    </tbody> 
+                </table>
+            </div>
+            <div class="dealings">
+               <table>
+                <thead>
+                  <tr>
+                       <th><b>Calificaciones Recibidas:</b></th>
+                       <th>Ultimos 7 días</th>
+                       <th>Ultimo Mes</th>
+                       <th>Ultimos 6 Meses</th>
+                   </tr>
+                </thead>
+                <tbody>
+                  <tr class="odd">
+                       <td>Artículos vendidos</td>
+                       <td><?php echo $arrayDatosReputacion[0]->VENTAS_7_DIAS ?></td>
+                       <td><?php echo $arrayDatosReputacion[0]->VENTAS_MES ?></td>
+                       <td><?php echo $arrayDatosReputacion[0]->VENTAS_6_MESES ?></td>
+                   </tr>
+                   <tr>
+                       <td>Artículos comprados</td>
+                       <td><?php echo $arrayDatosReputacion[0]->COMPRAS_7_DIAS ?></td>
+                       <td><?php echo $arrayDatosReputacion[0]->COMPRAS_MES ?></td>
+                       <td><?php echo $arrayDatosReputacion[0]->COMPRAS_6_MESES ?></td>
+                   </tr>
+                </tbody>
+               </table>
+           </div>
+        </div>
+        <div class="reputacion"><?php echo count($this->listarCR); ?> transacciones</div><!-- //transacciones  -->
+        
+        <ul id="list-recomendation">
+          <li id="617433" class="positive">
+            <h4>
+              <span class="icon-recomendation"></span>
+              <a href="http://kotear.clasificados.pe/aviso/261438" class="tit_aviso">Celular Multitouch A5000 Android 2.2 Froyo Doblechip Gps Wifi Tv Táctil Pantalla Capacitiva</a>
+              <span>(130152)</span>
+            </h4>
+            <p>Realizada el <span>21/01/2012 13:34</span> hs.</p>
+            <p>Comprador:
+              <a href="http://kotear.clasificados.pe/usuario/reputacion/ver/cod/297462"><span>luisdu</span><span>(0)</span></a>
+            </p>
+              <!-- agregar clase bigseller solo si es un gran vendedor -->
+            <div class="comment-user">
+              <p>no tenia mucho dinero pero n</p>
+            </div>
+          </li>
+        </ul> <!-- comentarios -->
+        
+                
+         
+    </div><!-- //w980 -->
+</div> <!-- // reputacion -->
+
+<div style="display:none">
+  <form action="<?php echo $this->baseUrl() . '/usuario/reputacion/denunciar-calificacion'; ?>" method="post" class="modal" name="denunciar_calificacion" id="denunciar_calificacion" >
+   <input type="hidden" value="" id="idTransaccion" name="idTransaccion">
+   <?php if ($this->cod == '') { ?>
+   <h2>Denunciar calificación</h2>
+   <?php } ?>
+   <div class="content">
+     <p>Describanos el motivo de su denuncia</p>
+     <fieldset>
+       <dl>
+         <dt>
+           <label for="slcmotivo">Motivo</label>
+         </dt>
+         <dd>
+           <select id="idMotivo" name="idMotivo" class="required">
+             <option value="">Seleccione motivo</option>
+             <?php foreach ($this->listarMotivos as $lm) :?>
+             <option value="<?php echo $lm->ID_MOTIVO; ?>"><?php echo $lm->TIT; ?></option>
+             <?php endforeach; ?>
+           </select>
+         </dd>
+       </dl>
+       <dl>
+         <dt>
+           <label for="mensaje">Mensaje</label>
+         </dt>
+         <dd>
+           <textarea cols="50" rows="4" maxlength="250" id="mensaje" name="mensaje" class="required"></textarea>
+         </dd>
+       </dl>
+     </fieldset>
+   </div>
+   <p class="buttons">
+     <button value="Enviar" class="btn_submit round" name="continuar" type="submit"><span>Enviar</span></button>
+     <button value="Cancelar"  class="close btn_cancel" name="cancel" type="button"><span>Cancelar</span></button>
+   </p>
+ </form> <!-- Denunciar modal calificacion -->    
+</div><!-- display:none -->
+
+<div style="display:none">
+    <form id="replicar_form" name="replicar_form" class="modal" method="post" action="<?php echo $this->baseUrl() ?>/usuario/calificaciones/replicar">
+                 <?php if ($this->transaccion->VENDEDOR == 1) { $vendedor=true; }?>
+                   <!-- BORRAR : la clase puede cambiar de neutral a positivo o negativo según sea el caso -->
+                   <h2>Replicar calificación</h2>
+                   <div class="content">
+                         <fieldset>
+                                 <p class="c1">Titulo del aviso: <span class="bold titulo_aviso"></span></p>
+                                 <p class="c2"><span class="tipo_usuario">Vendedor</span>: <span class=" bold apodo_usuario"></span> <span class="score_user"></span></p>
+                                 <p class="c3">Realizada el <span class=" bold fecha"></span> hs.</p>
+                                 <input type="hidden" name="idmensajereplica" id="idmensajereplica">
+                                 <dl>
+                                         <dt><label for="comment">Replica</label></dt>
+                                         <dd><textarea name="comentario" id="comentario" rows="4" cols="50" class="required"></textarea></dd>
+                                 </dl>				
+                         </fieldset>
+                   </div>			
+                         <p class="buttons">
+                                 <button type="submit" id="submitresponder" name="continuar" value="Continuar"  class="btn_submit round"><span>Enviar</span></button>
+                                 <button type="button" id="cancelresponder" name="cancel" class="close btn_cancel round"><span>Cancelar</span></button>
+                         </p>		
+                 <div class="block1 tip">
+           <p>Presta atención a la redacción de la réplica. Ten en cuenta que lo que escribas lo va a leer toda la comunidad.</p>
+         </div>
+ </form> <!-- modal replica -->      
+</div><!-- display:none -->
+
+
+           

@@ -1,0 +1,36 @@
+<h3 class="k-title"><span></span>Recuperación de clave</h3>
+<div id="recover-passw-error"></div>
+<h4>Obtén tu clave nuevamente</h4>
+<p>Para recuperar tu clave, ingresa el código de verificacíon e ingresa tu Apodo o E-mail:  </p>
+<form id="recover-passw-form" name="recover-passw" method="post" action=""> 
+    <div class="form-horizontal">
+            <div class="control-group" >
+                <label for="txtVerificacion" class="control-label">Código de verificacíon</label>
+                <div class="controls">
+                    <?php echo $this->captcha->render($this)?>
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="captcha" class="control-label">Código de verificacíon</label>
+                <div class="controls">
+                    <input type="text" name="captcha" id="captcha" maxlength="10" tabindex="1" />
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="usercontact" class="control-label">Apodo o E-mail:</label>
+                <div class="controls">
+                    <input type="text" name="usercontact" id="usercontact" tabindex="2" />
+                </div>
+            </div>
+            <p class="footer-tip">
+            <span class="icon-footer-tip"></span>
+            Por razones de seguridad, 
+            <b>Kotear</b> te recomienda modificar tu clave una vez recuperada
+            </p>
+            <div class="control">
+                 <button type="submit" class="btn-kotear" tabindex="3">Continuar</button>
+                 <a href="javascript:;" class="btn-close" tabindex="4">Cancelar</a>
+            </div>
+    </div>
+    
+</form>

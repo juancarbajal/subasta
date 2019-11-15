@@ -1,0 +1,46 @@
+<div class="error-msg container">
+   <?php echo $this->action('busqueda','index', 'default');?>    
+     
+    <?php if ('development' == APPLICATION_ENV){ ?>
+        <div class="title-main"><span class="icon"></span>
+             <h1 class="title">An error occurred :(</h1>
+        </div>
+        <h2><?php echo $this->message ?></h2>
+        <h3>Exception information:</h3>
+        <p>
+            <b>Message:</b> <?php echo $this->exception->getMessage() ?>
+        </p>
+
+        <h3>Stack trace:</h3>
+        <pre><?php echo $this->exception->getTraceAsString() ?>
+        </pre>
+
+        <h3>Request Parameters:</h3>
+        <pre><?php echo var_export($this->request->getParams(), true) ?>
+        </pre>
+        
+        <?php } else {?>   
+
+           <div id="error404">
+              <div class="column-left">
+                  <div class="img-admiration"></div>
+                  <div class="text-error">
+                    <h2>Página no encontrada</h2>
+                    <p>Lo sentimos, parece que hemos perdido esta página pero no queremos perderte a ti</p>
+                  </div>
+                  <ul>
+                      <li>Puedes visitar nuestra Portada.</li>
+                      <li>Si estás tratando de encontrar una página, puedes localizarla a través del Buscador.</li>
+                      <li>Si el inconveniente persiste, contacta a nuestra <a target="_blank" href="http://centraldeayuda.kotear.pe/home?">Atención al Cliente.</a></li>
+                  </ul>
+              </div> 
+              <div class="column-right">
+                  <div class="img-404"></div>
+              </div>
+          </div> 
+              
+        <?php }?>
+       
+   
+</div>
+

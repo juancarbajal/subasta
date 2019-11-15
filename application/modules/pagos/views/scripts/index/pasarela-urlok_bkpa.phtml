@@ -1,0 +1,59 @@
+<div id="body-content" class="estadocuenta-pag col-master">
+
+
+  <div id="s_level1" class="clearfix">
+      <h3>Confirmaci&oacute;n de Pasarela</h3>
+
+
+    <p> </p>
+</div>
+<div align="center" class="info_box">
+    <p>
+    <?php if ($error == 0) { ?>
+    <div class="inf_intpagos">
+        <div align="center" class="pagetitle"><h4>Proceso satisfactorio</h4></div>
+    <p>Hemos recibido el pago de tu operaci&oacute;n por Pasarela con los siguientes datos</p>
+    <br>
+    <ul class="ul">
+    <li class="floar_left">Medio de pago: <strong><?php echo $this->medioPago; ?></strong></li>
+    <li class="floar_left">Transacci&oacute;n: <?php echo $this->idTransaccion; ?></li>
+    <li class="floar_left">Monto Pagado:  S/. <?php echo $this->monto; ?></li>
+    <li class="floar_left">Fecha de Pago: <?php echo $this->fechaPasarela;  ?> </li>
+    </ul>
+    </div>
+    <?php } else {?>
+    <div class="pagetitle">
+        <h4>
+        <?php if ($this->msgerror == '') { ?>
+            No se pudo almacenar el registro, ponte en contacto con nuestra central de <a href="mailto:info@kotear.pe">atencion al cliente www.info@kotear.pe</a>
+            <?php } else {
+                echo $this->msgerror ;
+            } ?>
+        </h4>
+        
+    </div>
+    <?php }?>
+    <br><br><p>
+        <button class="btn_submit" onclick="location.href='<?php echo $this->baseUrl()?>/pagos/index/pendiente-de-pago'" name="continuar" type="submit"><span>volver</span></button>
+    </p>
+    <br><br>
+</div>
+
+    <p>
+    <ul class="ul">
+        <li >Una copia de esta operaci&oacute;n ha sido enviada a tu correo <a><?php echo $this->mail?></a></li>
+        <li class="clear"></li>
+    </ul>
+
+</div>
+
+<div id="paydetail" class="modal">
+    <h2>Kotear | Env&iacute;o de correo</h2>
+    <div class="content">
+
+    </div>
+
+     <p class="buttons">
+         <button name="cancel" type="button"  value="Cancelar" class="btn_submit close"><span>Cerrar</span></button>
+    </p>
+</div>

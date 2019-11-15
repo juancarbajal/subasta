@@ -1,0 +1,19 @@
+<form name="form" id="form" >
+
+        <div style="width: 425px; border:  solid 2px #C5C5C6; background: #E9E9E9; padding: 10px;" align="left">
+            <div  class="listaCargo" align="left">
+
+            <p><label><span>Transaccion:</span></label>  Transaccion #123 </p>
+            <p><label><span>Tipo Cargo:</span></label> Destaque </p>
+            <p><label><span>Fecha: </span></label> 17/05/10 </p>
+            <p><label><span>Importe: </span></label> S/.129</p>
+            <p><label><span>Medio Pago: </span></label> <select><option>Selecione el medio de pago</option><option>Pasarela</option><option>Pago Efectivo</option></select></p>
+            </div>
+                    <div align="left">
+            <a class="btn_submit sep_left" href="#" onclick="javascript:var frm = document.getElementById('form'); frm.action='<?php echo $this->baseUrl()?>/pagos/index/medio-pago'; frm.submit(); return false; " >Pagar</a>
+        </div>
+        </div>
+
+    
+</form>
+

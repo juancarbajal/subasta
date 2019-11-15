@@ -1,0 +1,101 @@
+<!--<form method="post" action="/usuario/buscar" form-edit="usuario/form" enctype="application/x-www-form-urlencoded" id="afbFormSearch"><div class="ahero-unit">
+<div class="form-inline aFormLine">
+<label class="awidth2 optional" for="a_apodo">Apodo:</label>
+<span class="element">
+<input type="text" errmsg="¡Se requiere un apodo Correcto!" class="span3" maxlength="60" value="" id="a_apodo" name="a_apodo"></span>
+<label class="awidth2 optional" for="a_tipDoc">Tipo DOC:</label>
+<span class="element">
+<select errmsg="¡Se seleccione un tipo Doc correcto!" class="span3" id="a_tipDoc" name="a_tipDoc">
+    <option label="" value=""></option>
+    <option label="DNI" value="05">DNI</option>
+    <option label="Pasaporte" value="06">Pasaporte</option>
+    <option label="RUC" value="07">RUC</option>
+</select></span></div>
+<div class="form-inline aFormLine">
+<label class="awidth2 optional" for="a_email">E-mail:</label>
+<span class="element">
+<input type="text" errmsg="¡Se requiere un email Correcto!" class="span3" maxlength="60" value="" id="a_email" name="a_email"></span>
+<label class="awidth2 optional" for="a_nDoc">N° DOC:</label>
+<span class="element">
+<input type="text" errmsg="¡Se requiere un N DOC Correcto!" class="span3" maxlength="60" value="" id="a_nDoc" name="a_nDoc"></span></div>
+<div class="form-inline aFormLine">
+<label class="awidth2 optional" for="a_tipoUsuario">Usuario:</label>
+<span class="element">
+<select errmsg="¡Se seleccione un tipo Doc correcto!" class="span3" id="a_tipoUsuario" name="a_tipoUsuario">
+    <option label="" value=""></option>
+    <option label="Usuario Web" value="1">Usuario Web</option>
+    <option label="Gran Vendedor" value="2">Gran Vendedor</option>
+</select></span>
+<label class="awidth2 optional" for="a_estadoUsuario">Estado:</label>
+<span class="element">
+<select errmsg="¡Se seleccione un tipo Doc correcto!" class="span3" id="a_estadoUsuario" name="a_estadoUsuario">
+    <option label="" value=""></option>
+    <option label="PENDIENTE ACTIVACION" value="1">PENDIENTE ACTIVACION</option>
+    <option label="ACTIVO" value="2">ACTIVO</option>
+    <option label="SUSPENDIDO" value="4">SUSPENDIDO</option>
+    <option label="DADO DE BAJA" value="5">DADO DE BAJA</option>
+</select></span></div>
+<div class="form-inline aFormLine">
+<label class="awidth2 optional" for="a_fecIni">Desde:</label>
+<span class="element">
+<input type="text" errmsg="¡Se requiere un Fecha Correcta!" class="span3" maxlength="10" value="" id="a_fecIni" name="a_fecIni"></span>
+<label class="awidth2 optional" for="a_fecFin">Hasta:</label>
+<span class="element">
+<input type="text" errmsg="¡Se requiere un Fecha Correcta!" class="span3" maxlength="10" value="" id="a_fecFin" name="a_fecFin"></span></div>
+<div class="form-actions">
+<button class="btn btn-primary" type="button" id="afbBtnSearch" name="a_buscar">Listar</button></div></div></form>-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>kotear</title>
+    <!-- Bootstrap -->
+    <link href="<?=URL_STATIC?>css/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="<?=URL_STATIC?>css/admin.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+      <div id="wrapper" class="wrapper-login">
+         <div id="header">
+              <h1 itemscope="itemscope" itemtype="http://schema.org/Organization"> 
+                  <a href="#" title="<?php echo $this->baseUrl(); ?>" itemprop="url">
+                  <img itemprop="image" alt="Kotear" src="<?=URL_STATIC?>img/logo.jpg?v=7cae6c1" width="271" height="84"/>
+                  </a>
+                  <meta itemprop="name" content="kotear.pe"/>
+              </h1>
+          </div>
+          <div id="content">
+            <form class="form-horizontal ">
+              <div class="control-group">
+                <label class="control-label" for="input-user">Usuario</label>
+                <div class="controls">
+                  <div class="input-prepend">
+                    <span class="add-on"><i class="icon-user"></i></span>
+                    <input class="span2" id="input-user" type="text">
+                  </div>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="input-password">Clave</label>
+                <div class="controls">
+                  <div class="input-prepend">
+                    <span class="add-on"><i class="icon-chevron-right"></i></span>
+                    <input class="span2" id="input-password" type="text">
+                  </div>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="controls">
+                  <label class="checkbox">
+                    <input type="checkbox"> Recordarme
+                  </label>
+                  <button type="submit" class="btn btn-danger">Iniciar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div id="footer">
+                 <p class="muted credit">Todos los derechos reseravdos <a href="#">kotear.pe</a>.</p>
+          </div>
+      </div><!-- wrapper -->
+  </body>
+</html>

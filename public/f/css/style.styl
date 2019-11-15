@@ -1,0 +1,3378 @@
+/*@import "bootstrap/responsive.css?version";*/
+@import "mixins.styl";
+@font-face {
+	font-family: 'HelveticaNeue';
+	src: url('wf/helveticaneue/helveticaneue-lightcond-webfont.eot');
+	src: url('wf/helveticaneue/helveticaneue-lightcond-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('wf/helveticaneue/helveticaneue-lightcond-webfont.woff') format('woff'),
+	     url('wf/helveticaneue/helveticaneue-lightcond-webfont.ttf') format('truetype');
+	     url('wf/helveticaneue/helveticaneue-lightcond-webfont.svg#HelveticaNeue') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* Reset */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section
+	display block
+audio,canvas,video
+	display inline-block
+	*display inline
+	*zoom 1
+html
+	font-size: 100%
+	-webkit-text-size-adjust: 100%
+	-ms-text-size-adjust: 100%
+a:focus
+	outline thin dotted #333
+	outline 5px auto -webkit-focus-ring-color
+	outline-offset -2px
+img
+	max-width 100%
+	width auto\9
+	height auto
+	vertical-align middle
+	border 0
+	-ms-interpolation-mode bicubic
+button,input,select,textarea
+	margin: 0
+	font-size: 100%
+	vertical-align: middle
+button,input
+	*overflow: visible;
+	line-height: normal;
+button::-moz-focus-inner,input::-moz-focus-inner
+	padding: 0
+	border: 0
+button,html input[type="button"],input[type="reset"],input[type="submit"]
+	-webkit-appearance: button
+	cursor: pointer
+label,select,button,input[type="button"],input[type="reset"],input[type="submit"],input[type="radio"],input[type="checkbox"]
+	cursor: pointer
+textarea
+	overflow auto
+	vertical-align top
+form
+	padding 0
+	margin 0
+iframe
+	display block
+dd, dl
+	margin 0
+ol
+	margin 0 0 15px 0
+/* Generales */
+body
+	background-color #F4F4F4
+	color #333
+	font-family: 'trebuchet MS',Arial,sans-serif
+	font-size: 13px
+	line-height 18px
+	margin 0
+	padding 0
+.publicacion
+	background #FFF
+	#wrapper
+		width 980px
+		padding 1px 0 6px
+		box-shadow none
+a
+	display block
+	color #003399
+	outline 0 !important
+	text-decoration none
+a:hover
+	opacity 0.90
+	/*filter unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=90)")*/
+	color #003399
+	text-decoration underline
+textarea
+	resize none
+h1,h2,h3,h4
+	margin 0 0 15px
+ul
+	padding 0
+	margin 0
+p
+	margin 0 0 10px
+	a
+		display inline
+.block
+	display block
+img.shadow-transition
+	border 2px solid #fff
+	box-shadow 0 0 2px #808080
+	transition all 0.5s ease 0s
+	-moz-transition all 0.5s ease 0s
+	-webkit-transition all 0.5s ease 0s
+	-o-transition all 0.5s ease 0s
+img.shadow-transition:hover
+	box-shadow 0 0 4px #777070
+/* Forms */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+label,
+input,
+button,
+select,
+textarea {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: Arial, sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+select,
+textarea,
+input {
+  border: 1px solid #CCC;
+  display: inline-block;
+  height: auto;
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #555;
+  width: 210px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+select option{border-bottom: 1px solid #D6D5D5; padding: 3px;}
+textarea {
+  height: auto;
+}
+
+textarea,
+input[type="text"],
+input[type="password"] {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+     -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+       -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+          transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  *margin-top: 0;
+  line-height: normal;
+  cursor: pointer;
+}
+
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+
+select,
+input[type="file"] {
+  height: 28px;
+  *margin-top: 4px;
+  line-height: 28px;
+}
+
+select {
+  width: 220px;
+  background-color: #ffffff;
+  border: 1px solid #bbb;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #999999;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #999999;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+
+.radio,
+.checkbox {
+  min-height: 18px;
+  padding-left: 18px;
+}
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: -18px;
+}
+
+.radio.inline,
+.checkbox.inline {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+  margin-left: 10px;
+}
+
+input[class*="span"],
+select[class*="span"],
+textarea[class*="span"] {
+  float: none;
+  margin-left: 0;
+}
+
+input,
+textarea {
+  margin-left: 0;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  cursor: default;
+  background-color: #eeeeee;
+}
+
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][readonly],
+input[type="checkbox"][readonly] {
+  background-color: transparent;
+}
+
+.control-group .checkbox.error,
+.control-group .radio.error,
+.control-group input.error,
+.control-group select.error,
+.control-group textarea.error {
+  color: #b94a48;
+  border-color: #b94a48;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.control-group .checkbox.error:focus,
+.control-group .radio.error:focus,
+.control-group input.error:focus,
+.control-group select.error:focus,
+.control-group textarea.error:focus {
+  border-color: #953b39;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+}
+
+input:focus:required:invalid,
+textarea:focus:required:invalid,
+select:focus:required:invalid {
+  color: #b94a48;
+  border-color: #ee5f5b;
+}
+
+input:focus:required:invalid:focus,
+textarea:focus:required:invalid:focus,
+select:focus:required:invalid:focus {
+  border-color: #e9322d;
+  -webkit-box-shadow: 0 0 6px #f8b9b7;
+     -moz-box-shadow: 0 0 6px #f8b9b7;
+          box-shadow: 0 0 6px #f8b9b7;
+}
+
+.form-horizontal input,
+.form-horizontal textarea,
+.form-horizontal select {
+  display: inline-block;
+  *display: inline;
+  margin-bottom: 0;
+  vertical-align: middle;
+  *zoom: 1;
+}
+
+.form-horizontal .control-group {
+  margin-bottom: 20px;
+  *zoom: 1;
+}
+
+.form-horizontal .control-group:before,
+.form-horizontal .control-group:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.form-horizontal .control-group:after {
+  clear: both;
+}
+
+.form-horizontal .control-label {
+  float: left;
+  width: 140px;
+  padding-top: 5px;
+  text-align: left;
+}
+
+.form-horizontal .controls {
+  margin-left: 160px;
+}
+
+.control{
+	text-align : center;
+}
+.search-query {
+    border-radius: 14px 14px 14px 14px;
+    margin-bottom: 0;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+.label {
+  font-size: 11.844px;
+  font-weight: bold;
+  line-height: 14px;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: #999;
+   padding: 1px 4px 2px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+.c-inline
+	label
+		display inline-block
+		*display inline
+		margin 0
+		padding-top 3px
+		vertical-align top
+		*zoom 1
+	select
+		margin 0 0 0 10px
+
+.input-large
+	width 256px
+select.input-large
+	width 266px
+.input-medium
+	width 171px
+.input-small
+	width 81px
+/* Botones */
+.btn-kotear
+	border-radius 5px
+	border 0
+	bgButton()
+	padding 10px 18px
+	font-family 'HelveticaNeue',Arial,sans-serif
+	font-size 18px
+	line-height 18px
+	color #fff
+	display inline-block
+	*display inline
+	*zoom 1
+	cursor pointer
+	vertical-align top
+	&:hover
+		background #B00000
+		color #FFF
+		text-decoration none
+	& + .btn-close
+		margin-left 6px
+	& + .btn-kotear
+		margin-left 6px
+	&.btn-large
+		font-size 24px
+		line-height 24px
+		padding 12px 38px
+	&.btn-small
+		font-size 15px
+		line-height 15px
+		padding 6px 16px
+	&.btn-middle
+		font-size 16px
+		line-height 16px
+		padding 9px 18px
+.btn-close
+	color #666
+	border-radius 5px
+	border 0
+	bgButtonCancel()
+	padding 10px 18px
+	font-family 'HelveticaNeue',Arial,sans-serif
+	font-size 18px
+	line-height 18px
+	display inline-block
+	*display inline
+	*zoom 1
+	cursor pointer
+	vertical-align top
+	&:hover
+		color #666
+		bgButtonCancelHover()
+		text-decoration none
+	&.btn-small
+		font-size 15px
+		line-height 15px
+		padding 6px 16px
+	&.btn-large
+		font-size 24px
+		line-height 24px
+		padding 12px 38px
+/* Utilitarios */
+.banner
+	background black
+	color #fff
+	text-align center
+	margin 10px auto 0px
+	&.exp
+		margin 0 0 14px
+.k-title
+	border-bottom 3px solid #CCC
+	font 700 20px/24px "Trebuchet MS",Arial,sans-serif
+	margin 0 0 4px
+	padding-bottom 4px
+	word-wrap break-word
+	span
+		background url("../img/icon-set-wl.png?version") -151px -7px
+		display inline-block
+		*display inline
+		height 20px
+		margin 1px 7px 0 0
+		vertical-align top
+		width 20px
+		*zoom 1
+	.start
+		background url("../img/icon-set-steps.png?version") no-repeat -147px -23px
+	&.fix
+		color #CC0000
+	&.nbc
+		color #CC0000
+		border none
+	a
+		display inline-block
+		*display inline
+		vertical-align top
+		*zoom 1
+.head-step
+	border-bottom 5px solid #CCC
+	padding-bottom 15px
+	height 62px
+	margin-bottom 10px
+	.k-title
+		color #CC0000
+		border none
+		margin 0
+		padding-bottom 10px
+	p
+		margin 0
+	&.fix
+		height auto
+		p
+			color #666
+#fancybox-content
+	.k-title
+		margin-bottom 12px
+.list-menu
+	font-size 13px
+	list-style none
+	margin 0
+	overflow hidden
+	position relative
+	li
+		padding 10px 0
+		border-top 1px solid #CCC
+		&:first-child
+			border none
+	a
+		color #003399
+		word-wrap break-word
+.shadow-space
+	background url('../img/bg-box-shadow.jpg?version') no-repeat center top
+	height 20px
+	width 100%
+	&.h34
+		height 34px
+.banner-img
+	margin-bottom 12px
+	img
+		display block
+.content-product
+	list-style none
+	margin 0 0 32px
+	font-family 'trebuchet MS',Arial,sans-serif
+	padding-top 1px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+	&:after
+		clear both
+	li
+		float left
+		height 248px
+		margin 6px 0 0 22px
+		width 170px
+		word-wrap break-word
+		&.first
+			margin-left 0
+	.product-img
+		display table-cell
+		height 150px
+		text-align center
+		vertical-align middle
+		width 170px
+	img
+		max-width 168px
+		max-height 150px
+	h2
+		font-size 14px
+		font-weight 400
+		height 32px
+		line-height 16px
+		margin 0 0 4px
+		overflow hidden
+		padding 4px 0 0
+		position relative
+	span
+		color #666
+		display block
+	.price
+		color #DF0B13
+		font-size 14px
+		font-weight 700
+		padding-bottom 4px
+#breadcrumb-steps
+	clear both
+	color #2C2C2C
+	font-family Arial,sans-serif
+	height 18px
+	line-height 18px
+	p
+		font-size 14px
+		display inline
+	a
+		display inline
+		text-decoration underline
+#breadcrumb
+	color #2C2C2C
+	height 27px
+	line-height 23px
+	margin-bottom 15px
+	.logo
+		background url('../img/icon-set-wl.png?version') no-repeat -8px -160px
+		float left
+		margin 0px 10px 0px 0px 
+		height 27px
+		width 36px
+	a
+		display inline
+		text-decoration underline
+.obs
+	font-size 11px
+	margin 0
+	span
+		color #CF0000
+		font-size 26px
+		vertical-align top
+		display inline-block
+		*display inline
+		*zoom 1
+.control-label
+	span
+		color #FF0000
+		display inline-block
+		*display inline
+		font-size 18px
+		line-height 18px
+		vertical-align top
+		*zoom 1
+#geotags
+	margin 0
+	padding 0
+	li
+		line-height inherit
+		padding 0.2em 22px 0.2em 0.5em
+		position relative
+		background #D2D7E0
+		border 1px solid #C1C1C1
+		border-radius 0px 6px 0px 6px
+		color #555
+		font-weight normal
+		display block
+		float left
+		margin 7px 5px 2px 0
+		&:hover
+			background-color #BBCEF1
+			border-color #6D95E0
+		&:active
+			color #0073EA
+	a
+		cursor pointer
+		position absolute
+		text-decoration none
+		margin 0
+		top 3px
+		right 5px
+.ybox
+	background #FFFBE2
+	border 1px solid #FFE222
+	margin 0 0 10px
+	padding 10px
+	border-radius 3px
+.ov
+	overflow hidden
+	position relative
+	width 100%
+	padding 10px 0
+.hide
+	display none
+.icon-footer-tip
+	background url('../img/icon-set-wl.png?version') no-repeat -431px -179px
+	margin 7px 7px 7px 0px
+	height 20px
+	width 26px
+	vertical-align top
+	display inline-block
+	*display inline
+	*zoom 1
+	&.fix
+		margin-top 0
+.show-all
+	border-top 1px solid #CCC
+	padding 10px 0
+.icons,.iconsp
+	display inline-block
+	*display inline
+	vertical-align top
+	*zoom 1
+.icons
+	background url("../img/icon-set-wl.png?version") no-repeat
+	&.fb
+		background-position 0 -4px
+		height 27px
+		width 26px
+.iconsp
+	background url("../img/icon-set-steps.png?version") no-repeat
+	&.mail
+		background-position -700px -639px
+		height 20px
+		width 30px
+	&.phone
+		background-position -741px -639px
+		height 20px
+		width 30px
+.list
+	color #666
+	list-style disc outside none
+	font-size 13px
+	line-height 16px
+	margin 0 0 15px 15px
+	li
+		margin-top 6px
+		&:first-child
+			margin 0
+	a
+		display inline
+/* Contenedores */
+#wrapper
+	background #fff
+	margin 0 auto
+	padding 1px 10px 6px
+	width 960px
+	box-shadow 0 6px 7px #A2A2A2
+	*zoom 1
+	&:before, &:after
+		display table
+		content ""
+	&:after
+		clear both
+.row
+	display block
+	*zoom 1
+	&:before, &:after
+		display table
+		content ""
+	&:after
+		clear both
+.content-right
+	float right
+	width 747px	
+	position relative
+	padding-bottom 1px
+.box-center
+	width 960px
+	padding 0 10px
+	margin 0 auto
+	*zoom 1
+	&:before, &:after
+		display table
+		content ""
+	&:after
+		clear both
+.nav-menu
+	float left
+	width 188px
+	z-index 10
+	.k-title
+		font-size 17px
+		line-height 22px
+		margin 0
+		span
+			background-position -174px -7px
+			margin-right 5px
+	.shadow-space
+		background-position center -4px
+		height 50px
+.result-content
+	*zoom 1
+	&:before, &:after
+		display table
+		content ""
+	&:after
+		clear both
+.publicacion
+	.container
+		margin-bottom 16px
+.container
+	margin 0 0 20px
+	z-index 10
+	*zoom 1
+	&:before, &:after
+		display table
+		content ""
+	&:after
+		clear both
+/* Header */
+.wpage-gec
+	display block
+	margin 0 auto
+	width 965px
+
+.top-gec, a.logo-gec, span.part-of-gec-lupa, .arrows-gec-bg
+	background url('../img/gec-bg.png') no-repeat
+.top-gec
+	background url('../img/top-gec.png') repeat-x center 0 transparent
+	width 100%
+	layout()
+	z-index 90
+	height 28px
+	.left-gec
+		float left
+		width 400px
+		z-index 10
+		a.logo-gec
+			background-position -24px 0px
+			color white
+			display block
+			float left
+			height 17px
+			margin 1px 0 0
+			padding 2px 0 0 123px
+			text-decoration none
+		h4.clasificados-gec
+			color white
+			float left
+			font-family Tahoma, Arial
+			font-size 11px
+			font-weight normal
+			height auto
+			line-height 1
+			margin 5px 0 0
+			padding 0
+			position relative
+	.middle-gec
+		float left
+		height 22px
+		width 350px
+	.right-gec
+		color #333333
+		float right
+		font-family Arial, Tahoma
+		font-size 11px
+		margin 3px 7px 0 0
+		position relative
+		width 190px
+		z-index 15
+		.head-gec
+			-webkit-border-radius 7px 7px 0px 0px
+			background none repeat scroll 0 0 #FFFFFF
+			border-radius 7px 7px 0px 0px
+			height 24px
+			line-height @height
+			padding 0 0 0 10px
+			width 180px
+			z-index 20
+			border-width 1px 1px 0px 1px
+			border-color #CCCCCC
+			border-style solid
+			span.part-of-gec-lupa
+				background-position -11px -0px
+				width 13px
+				height 12px
+				float left
+				margin 6px 8px 0 0
+			span.part-of-gec
+				display block
+				float left
+				height 24px
+				width 45px
+			a.link-gec
+				color black
+				display block
+				float left
+				font-weight 700
+				height 16px
+				text-decoration none
+				width 102px
+				padding-bottom 7px
+		.body-gec
+			position absolute
+			width @width
+			z-index 20
+			ul#slide-gec
+				-webkit-border-radius 0px 0px 7px 7px
+				-webkit-box-shadow 1px 1px 2px 0px #454545
+				border-radius 0px 0px 7px 7px
+				box-shadow 1px 1px 2px 0px #454545
+				display none
+				list-style none outside none
+				width @width
+				border-width 0 1px 1px 1px
+				border-color #CCCCCC
+				border-style solid
+				li
+					border-color #E4E4E4
+					border-style solid
+					border-width 1px 0 0 0
+					height 37px
+					list-style @list-style
+					padding 3px 10px 0
+					width 170px
+					background none no-repeat 0 0 white
+					-webkit-transition all 0.5s cubic-bezier(.23, .91, .96, .54)
+					-moz-transition all 0.5s cubic-bezier(.23, .91, .96, .54)
+					-o-transition all 0.5s cubic-bezier(.23, .91, .96, .54)
+					transition all 0.5s ease-out
+					&:hover
+						background #F3F3F3
+						//cursor pointer
+					&:active
+						background #D6D4D4
+						box-shadow inset 0 0px 3px 3px #ccc
+					span.title-gec
+						display block
+						height 16px			
+						width @width
+					a.main-link-gec
+						color #015CAD
+						display block
+						font-size 11px
+						width 150px
+						transition all 0.2s ease 0s
+						&:hover
+							color #1376ce
+				li.first-gec
+					border-color #FFF
+				li.last-gec
+					-webkit-border-radius 0px 0px 7px 7px
+					border-radius 0px 0px 7px 7px
+#list-img
+	margin 0 auto
+	width 500px
+	li
+		display inline-block
+.arrows-gec-bg
+	background-position 90px 10px
+	width 11px
+	height 24px
+#arrow-gec
+	margin-left 3px
+
+header
+	height 103px
+	padding 10px 0
+	margin 0
+	h1
+		float left
+		padding-top 10px
+		margin 0
+		a, img
+			display block
+			width 260px
+			height 84px
+		&.min-img
+			margin-bottom 22px
+			a, img
+				display block
+				width 130px
+				height 40px
+	.log-in
+		float right
+		width 500px
+		margin 0
+	.options
+		list-style none
+		margin 0 0 12px
+		float right
+		font-size 12px
+		line-height 18px
+		li
+			float left
+		.break
+			margin 0 6px
+		a
+			display block
+			color #003399			
+	.button-publicity
+		float right
+		width 500px
+		p 
+			float left
+			font-size 24px
+			color #666
+			line-height 30px
+			text-align right
+			ffhelve()
+			width 200px
+			margin 0
+		a
+			bgButton()
+			border 0px
+			border-radius 5px
+			color #FFFFFF
+			ffhelve()
+			float right
+			font-size 24px
+			line-height 57px
+			height 61px
+			width 267px
+			display block
+			text-align center
+			&:hover
+				background #B00000
+				border-radius 5px
+				text-decoration none
+.publicacion
+	header
+		padding-bottom 0
+/* Menus */
+.menu-general
+	background url('../img/bg-menu.jpg?version') repeat-x
+	border 1px solid #ccc
+	border-radius 5px
+	color #333
+	font-size 16px
+	height 48px
+	margin-bottom 14px
+	li
+		float left
+	ul
+		float left
+		list-style none
+		margin 0
+		padding 0		
+	.c-nav
+		a
+			color #333
+			float left
+			display block
+			text-transform uppercase
+			padding 14px 20px 16px
+			&:hover
+				bgButtonHover()
+				text-decoration none
+	.line
+		background url('../img/line-menu-sepa.jpg?version') repeat-y
+		height 49px
+		width 2px
+	.hover-star
+		bgButtonStar()
+		border-radius 5px 0 0 5px
+		a
+			color #FFF
+			&:hover
+				bgButtonStar()
+				border-radius 5px 0 0 5px
+	.social-links
+		float right
+		margin-right 6px
+		li
+			a
+				margin 5px
+				float left
+				padding 0px
+				height 38px
+				width 25px
+	.link-facebook
+		background url('../img/icon-set-wl.png?version') 0 2px no-repeat
+	.link-twitter
+		background url('../img/icon-set-wl.png?version') -35px 2px no-repeat
+.c-search
+	margin-bottom 12px
+	position relative
+	z-index 13
+.search-general
+	background #F0F0F0
+	border-radius 5px
+	border solid 1px #E0E0E0
+	height 56px
+	*zoom 1
+	&:before, &:after
+		display table
+		content ""
+	&:after
+		clear both
+	input, select, button 
+		border 1px solid #CCCCCC
+		color #666666
+		float left
+		margin 13px 5px 13px 10px
+		padding 4px 5px 5px 10px
+		width 26%
+	input.home
+		width 19%
+	select 
+		margin 13px 3px 
+		width 17%
+	button
+		color #FFFFFF
+		margin 9px 5px
+		height 32px
+		width 90px
+		font-size 20px
+		bgButton()
+		border 0px
+		border-radius 5px
+		line-height 18px
+		ffhelve()
+	button:hover
+		background #B00000
+		border-radius 5px
+	a
+		display block
+		float left
+		color #003399
+		margin 8px 5px
+		height 38px
+		width 60px
+/* Footer */
+footer
+	background #191919
+	background-image unquote("url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE5MTkxOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)");
+	background-image -ms-linear-gradient(top, #191919, #000)
+	background-image -webkit-gradient(linear, 0 0, 0 100%, from( #191919), to(#000))
+	background-image -webkit-linear-gradient(top, #191919, #000)
+	background-image -o-linear-gradient(top, #191919,#000)
+	background-image linear-gradient(top, #191919, #000)
+	background-image -moz-linear-gradient(top, #191919,#000 )
+	transition background-position 0.1s linear
+	border-radius 5px
+	padding 14px
+	color #FFF
+	margin-bottom 20px
+	.column-three
+		float left
+		width 215px
+		margin-left 16px
+		&:first-child
+			margin 0
+		h4
+			color #ccc
+			border-bottom 5px solid #333
+			padding-top 7px
+			span
+				background url('../img/icon-set-wl.png?version') no-repeat scroll -127px -8px
+				position absolute
+				height 20px				
+				width 20px
+				top 9px
+				left 0
+		ul
+			list-style none
+			margin 0 0 0 25px
+		li
+			line-height 20px
+		a
+			color #fff
+			text-decoration underline
+	h4
+		position relative
+		font-size 20px
+		line-height 22px
+		padding 0 0 4px 26px
+		margin-bottom 10px
+	form
+		margin 0
+	p
+		margin 0
+	.help-fast
+		background #fff
+		border-radius 5px
+		float left
+		margin 0 0 0 15px
+		width 220px
+		padding 8px 10px 10px
+		h4
+			color #333
+			span
+				background url('../img/icon-set-wl.png?version') no-repeat scroll -103px -8px
+				height 20px
+				left 0
+				position absolute
+				top 2px
+				width 20px			
+		.question-tooltip
+			background url('../img/icon-set-wl.png?version') no-repeat -358px -109px
+			float left
+			margin 0 18px 10px 10px
+			height 68px
+			width 71px
+		.question-description
+			color #000
+			float left
+			height 84px
+			width 116px
+		.btn-help
+			float left
+			width 100%
+			button
+				border 0
+				bgButton()
+				ffhelve()
+				border-radius 5px
+				color #ffffff
+				display block
+				font-size 20px
+				margin 0 auto
+				line-height 24px
+				height 35px
+				width 113px
+			button:hover
+				background #B00000
+				border-radius 5px
+.see-also
+	background #000
+	font 11px Arial
+	padding 3px 0 9px
+	.box-center
+		width 892px
+	span
+		padding-top 6px
+		color #ffffff			
+		width 84px
+		float left
+		font-size 12px
+	ul
+		width 794px
+		list-style none
+		margin 0
+		float left
+		.last
+			border none
+	li
+		border-right 1px solid #605C5C
+		float left
+		line-height 12px
+		margin-top 6px
+		padding 0 5px
+	a
+		color #fff
+		text-decoration none
+.means-of-payment
+	color #000
+	display block
+	[class*="ico"]
+		background url("../img/icon-set-wl.png?version") no-repeat -5px -123px
+		float left
+		height 29px
+	.ico-pefectivo
+		width 80px
+	.ico-visa
+		width 72px
+		background-position -76px -124px
+	.ico-vrvisa
+		width 75px
+		background-position -141px -124px
+	.ico-afvisa
+		height 39px
+		width 75px
+		float right
+		background-position -411px -240px
+	.ico-mastercard
+		width 74px
+		background-position -203px -124px
+	.ico-smastercard
+		width 72px
+		background-position -267px -124px
+	.buy-insurance
+		fs(15px)
+		line-height 27px
+		margin-bottom 10px
+		height 39px
+		span
+			display block
+			float left
+			height 29px
+			margin 0 0 0 210px
+			width 200px
+	.buy-detail
+		clear both
+		margin-bottom 10px
+		text-align center
+		width 100%
+.copyright
+	height 30px
+	list-style none
+	margin 0
+	padding-top 4px
+	text-align center
+	li
+		float left
+		padding 0 10px
+		a
+			color #003399
+			float left
+		.complaints-book
+			span
+				background url('../img/icon-set-wl.png?version') -428px -8px no-repeat	
+				float left
+				height 30px
+				width 50px	
+	.copyright-link
+			color #666
+			padding 0 10px 0 0
+/* Home */
+.gallery-3d
+	margin-bottom 25px
+	overflow hidden
+	position relative
+	width 746px
+	z-index 1
+.steps
+	background #fff
+	background unquote("url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNGU0ZTQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)");
+	background -moz-linear-gradient(top,  #fff 0%, #e4e4e4 100%)
+	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e4e4e4))
+	background -webkit-linear-gradient(top,  #fff 0%,#e4e4e4 100%)
+	background -o-linear-gradient(top,  #fff 0%,#e4e4e4 100%)
+	background -ms-linear-gradient(top,  #fff 0%,#e4e4e4 100%)
+	background linear-gradient(to bottom,  #fff 0%,#e4e4e4 100%)
+	border-radius 5px
+	border 1px solid #CCC
+	list-style none	
+	margin 0 auto
+	ffhelve()
+	font-size 20px
+	height 96px
+	width 746px
+	li
+		float left
+		padding 14px
+	.line
+		background url('../img/icon-set-wl.png?version') no-repeat -194px 0
+		float left
+		height 96px
+		width 1px
+		padding 0
+	.number
+		font-weight 700
+		margin-right 8px
+	figure
+		background url('../img/icon-set-wl.png?version') no-repeat -283px -54px
+		float right
+		width 47px
+		margin 0
+		padding 0
+		height 50px
+	span
+		float left
+	[class*="st"]
+		width 180px
+		padding-top 26px
+	.st1
+		color #666
+		font-size 24px
+		line-height 24px
+		padding 11px 22px 0 12px
+		text-align right
+		width 94px
+	.st2
+		width 155px
+	.st3
+		figure
+			background-position -342px -52px
+	.st4
+		padding-top 20px
+		width 196px
+		figure
+			background-position -413px -52px
+	[class*="hk"]
+		float none
+	.hk1
+		font-weight 700
+		color #333
+	.hk2
+		color #E00B14
+.most-searched
+	background #F3F3F3
+	font-size 10px
+	padding 12px 10px
+	ul
+		list-style none
+		margin 0
+	li
+		float left
+		padding 5px 8px
+		height 18px
+		line-height 18px
+.tag1
+	font-size 2em
+.tag2
+	font-size 1.8em
+.tag3
+	font-size 1.6em
+.tag4
+	font-size 1.4em
+/* Publicacion */
+#user-name-login
+	float right
+	top 23px
+	position relative
+	p,a
+		display inline
+		margin 0 2px
+	a
+		font-size 12px
+.step-title
+	float left
+	padding-top 10px
+	width 600px
+.step-progress
+	list-style none
+	margin 0
+	padding 0
+	width 266px
+	float right
+	&.fix
+		width 154px
+	li
+		float left
+		width 63px
+		text-align center
+		line-height 12px
+	span
+		display block
+		float left
+		font-size 10px
+		ffarial()
+		height 28px
+	.icon-on-step
+		background url('../img/icon-set-steps.png?version') -6px 0px no-repeat
+		height 26px
+		width 77px
+	.icon-off-step
+		background url('../img/icon-set-steps.png?version') -6px -25px no-repeat
+		height 26px
+		width 77px
+.steps-options
+	padding 0px 0 10px
+	text-align center
+	font-family Arial,sans-serif
+.steps-align
+	width 820px
+	margin 0 auto
+	ul
+		list-style none
+		margin 0
+		padding 0
+		height 560px
+		width 190px
+		float left
+	& > ul
+		margin-left 20px
+		&:first-child,&.fix
+			margin 0
+	li
+		width 94%
+	h1
+		font-size 22px
+		line-height 24px
+		margin 0
+	h2
+		font-size 25px
+		line-height 38px
+	h3
+		color #FF0000
+		font-size 14px
+		font-weight 700
+		line-height 15px
+		margin 0
+	span
+		font-size 12px
+		font-weight bold
+	a
+		text-decoration none
+	.title
+		padding-top 14px
+		height 50px
+		a
+			display block
+	.price
+		height 40px
+		padding 30px 0 9px
+		a
+			color #000
+	.day
+		height 39px
+	.photo
+		height 20px
+		padding 4px 0
+		h3
+			display inline
+			font-size 12px
+			margin-right 5px
+	.impress-detail
+		height 61px
+		font-weight bold
+		padding 4px 0 15px
+		line-height 12px
+		h3
+			font-size 12px
+			width 150px
+			margin 0 auto 3px
+			line-height 15px
+		.specification
+			font-size 12px
+			font-style italic
+			margin-bottom 3px
+	.detail
+		height 154px
+		line-height 13px
+		padding-top 10px
+		.square-black
+			background #000
+			height 4px
+			width 4px
+			float left
+			margin 5px 5px 5px 0
+		span
+			font-weight bold
+			font-size 12px
+			display block
+			margin 0 auto
+			width 150px
+		ul
+			float none
+			font-size 10px
+			height auto
+			margin 0 auto
+			text-align left
+			width 160px
+		li
+			margin-bottom 3px
+			line-height 12px
+			font-weight normal
+			font-size 11px
+		.red
+			color #CF0000
+			display inline
+	.important
+		padding 3px 0 6px
+		font-weight bold
+		height 35px
+		span
+			width 166px
+			display block
+			margin 0 auto
+	.c-continue
+		a
+			color #FFF
+			font-size 19px
+			padding-top 7px
+			height 29px
+			width 134px
+			display block
+			margin 0 auto
+			text-decoration none
+		a:hover
+			text-decoration none
+	.free
+		background url('../img/icon-set-steps.png?version') -1px -67px no-repeat
+	.silver
+		background url('../img/icon-set-steps.png?version') -193px -67px no-repeat
+	.gold
+		background url('../img/icon-set-steps.png?version') -390px -67px no-repeat
+	.platinium
+		background url('../img/icon-set-steps.png?version') -586px -67px no-repeat
+	.gold
+		.important span
+			*font-size 11px
+.category-options
+	padding 20px 0
+	.entry
+		margin-bottom 10px
+		label
+			float left
+			font-size 18px
+			font-weight bold
+			fftre()
+			line-height 25px
+			margin-right 20px
+	.c-rubro
+		float left
+		margin-right 20px
+		label
+			font-weight bold
+			font-size 14px
+			fftre()
+		&.fix
+			margin 0
+	.k-title
+		font 16px/24px 'Trebuchet MS',Arial,sans-serif
+	.advice
+		float right
+		width 225px
+		p
+			width 203px
+			ffarial()
+			font-size 12px
+			line-height 15px
+			color #666
+			margin 0
+			padding 10px 12px
+	.shadow-space-mini
+		background url('../img/icon-set-wl.png?version') no-repeat -15px -205px
+		height 20px
+
+.register-data
+	padding 20px 0 20px 0
+	fftre()
+	.k-title
+		font 16px/24px 'Trebuchet MS',Arial,sans-serif
+	// first colum
+	.register-data-form
+		width 75%
+		float left
+		h3
+			font-size 16px
+			color #666
+			margin-bottom 8px
+		.selected-category
+			border-radius 20px
+			background #CCC
+			margin-left 10px
+			padding 11px 10px
+			width 700px
+			span
+				font-size 12px
+			.strong
+				font-weight bold
+				font-size 14px
+			.row-r
+				margin 0 2px
+		.shadow-space
+			background url('../img/bg-box-shadow.jpg?version') no-repeat
+			height 34px
+			width 730px
+		label
+			font-size 12px
+		.register-user
+			padding-left 10px
+		.red-important
+			font-size 20px
+			color #CF0000
+			margin-top 0
+			margin-left 5px
+		.input-xxlarge
+			width 684px
+			margin-bottom 0px
+		.detail-max-number
+			display block
+			margin 0 0 0 19px
+			padding 0
+			color #999
+			font-size 11px
+		.control-group >
+			label
+				text-align left
+				width 100px
+			.controls
+				margin-left 110px
+		.control-group >
+			label.xlarge
+				text-align left
+				width 200px
+			.controls.xlarge
+				margin-left 220px
+		.margin-min
+			margin-bottom 9px
+		.type-paid
+			list-style none
+			margin 0
+			padding 0
+			*zoom 1
+			&:before,&:after
+				display table
+				content ""
+				line-height 0
+			&:after
+				clear both
+			li
+				float left
+				width 100px
+				margin 10px
+				span,label
+					height 50px
+					width 47px
+					display block
+					margin 0 auto
+					line-height 13px
+				span.name-type
+					display block
+					width 90%
+					text-align center
+					font-size 12px
+					ffarial()
+					color #666666
+				input
+					margin 0 45%
+				label
+					display block
+			.icon-cash
+				background url('../img/icon-set-steps.png?version') -177px -6px no-repeat
+			.icon-check
+				background url('../img/icon-set-steps.png?version') -234px -7px no-repeat
+			.icon-deposit
+				background url('../img/icon-set-steps.png?version') -294px -7px no-repeat
+			.icon-money-order
+				background url('../img/icon-set-steps.png?version') -350px -7px no-repeat
+			.icon-reimbursement
+				background url('../img/icon-set-steps.png?version') -405px -7px no-repeat
+			.icon-credit-card
+				background url('../img/icon-set-steps.png?version') -467px -7px no-repeat
+		#photo-prdoduct
+			width 327px
+			margin-bottom 0px
+			height 25px
+		.gallery-up
+			line-height 20px
+		.impress
+			width 260px
+			border-top 1px solid #000
+			border-bottom 1px solid #000
+			padding 5px 0
+			font-weight bold
+			> strong, > span
+				display block
+
+	// second colum
+	.register-data-advice
+		width 24%
+		float right
+		.advice
+			float right
+			width 225px
+			p
+				width 203px
+				ffarial()
+				font-size 12px
+				line-height 15px
+				color #666
+				margin 0
+				padding 6px 12px
+			.shadow-space-mini
+				background url('../img/icon-set-wl.png?version') no-repeat -15px -205px
+				float left
+				height 20px
+				width 100%
+		.w246-h564
+			blockSpace(246px,564px)
+		.w246-h17
+			blockSpace(246px,17px)
+.cnt-congratulation
+	padding-top 40px
+	text-align center
+	margin-bottom 30px
+	.share-fb
+		color #666
+		font-size 12px
+		line-height 27px
+		margin 40px 0 20px
+		text-align right
+		.icons
+			margin-right 6px
+	.data-contact
+		font-size 12px
+		margin-bottom 20px
+		.iconsp
+			margin 0 6px
+/* Detalle Producto */
+.image-product
+	float left
+	margin 5px
+	width 340px
+	.image-main
+		display block
+		margin 10px auto
+		max-height 300px
+		max-width 300px
+	p
+		line-height 35px
+		height 65px
+		margin 0
+		span
+			background url('../img/icon-set-wl.png?version') -433px -159px 
+			float left
+			margin 12px
+			height 11px
+			width 14px
+		a
+			color #666
+			float left
+	.image-mini-product
+		list-style none
+		margin 0px auto
+		padding 0px
+		width 260px
+		*width 270px
+		overflow hidden
+		max-height 300px
+		*height 280px
+		*overflow-x hidden
+		*overflow-y hidden
+		li
+			float left
+		a
+			float left
+			height 90px
+			width 120px
+			margin 5px
+			text-align center
+		img
+			max-width 75px
+			min-height 75px
+			*width 75px
+			*height 75px
+	.see-more
+		border-top 1px solid #CCC
+		margin 5px 0 0 0
+		float left
+		width 93%
+		a
+			color #003399
+			float right
+	.shadow-space-mini
+		background url('../img/icon-set-wl.png?version') no-repeat 36px -205px
+		float left
+		height 20px
+		width 98%
+.text-product
+	float left
+	width 420px
+	z-index 1
+	position relative
+	h2
+		font-size 24px
+		line-height 36px
+		margin-bottom 30px
+		word-wrap break-word
+	.k-title
+		margin-bottom 10px
+	.social-buttons
+		margin 0 0 10px
+		height 64px
+		div
+			float left
+			padding-left 20px
+	.detail-text-product
+		list-style none
+		margin 0
+		padding 5px 0 15px 0
+		li
+			float left
+			width 235px
+			label 
+				float left
+				width 42%
+			span
+				float left
+				width 50%
+		li.right-position
+			width 100px
+			label 
+				width 62%
+			span
+				width 38%
+	.price-product
+		background #FFEEEA
+		border-radius 5px
+		height 52px
+		padding 6px 0
+		margin-bottom 20px
+		span
+			float left
+			padding 17px 14px
+			color #666666
+		.price-number-product
+			color #CC0000
+			font-size 28px
+			padding 13px 0
+		.red
+			color #CC0000
+			font-size 10px
+	.detail-text-seller
+		border-radius 5px
+		margin 0px 0 10px 0px
+		padding 10px 0
+		background #E6EDFF
+		ul
+			list-style none
+		li
+			padding 5px 0
+			margin 0
+		h3
+			float left
+			font-size 15px
+			line-height 20px
+			margin 0
+		div
+			width 20px
+			display inline-block
+			*display inline
+			vertical-align top
+			*zoom 1
+		.item-seller
+			height 20px
+			width 85px
+			padding-left 4px
+		[class*="icon-"]
+			background url('../img/icon-set-wl.png?version') -364px -234px
+			height 20px
+		.icon-email-seller
+			background-position -366px -258px
+		.icon-phone-seller
+			background-position -343px -235px
+		.icon-location-seller
+			background-position -345px -258px
+		.data-seller
+			width 190px
+		.list-data-seller
+			width 92%
+			float left
+			padding 0 0 7px 10px
+			margin 0 0 0 10px
+			border-bottom 1px solid #B9D1FF 
+	.list-medals
+		margin 0 0 0 40px
+		padding 10px 0 0
+		text-align center
+		width 350px
+		float left
+		li
+			padding 0
+			width 33%
+			text-align center
+			float left
+			span
+				display block
+			.medal
+				margin 5px auto 0
+				height 46px
+				width 31px
+			.user
+				margin 5px auto 0
+				height 46px
+				width 41px
+			.big-user
+				background url('../img/icon-set-wl.png?version') no-repeat -48px -40px
+			.normal-user
+				background url('../img/icon-set-wl.png?version') no-repeat -2px -42px
+			.medal-super
+				background url('../img/icon-set-wl.png?version') no-repeat -50px -160px
+			.medal-gold
+				background url('../img/icon-set-wl.png?version') no-repeat -81px -160px
+			.medal-silver
+				background url('../img/icon-set-wl.png?version') no-repeat -115px -160px
+			.medal-bronce
+				background url('../img/icon-set-wl.png?version') no-repeat -151px -160px
+	.list-comunication
+		border-top 1px solid #B9D1FF
+		float left
+		margin 9px 0 0 10px
+		padding 9px 0 0 15px
+		width 381px
+		li
+			padding 0px
+			height 20px
+		span
+			float left
+		.icon-other-productos
+			height 16px
+			width 16px
+			margin-right 33px
+			background url('../img/icon-set-wl.png?version') -399px -207px no-repeat
+		.text-other-productos
+			width 85%
+		.icon-question
+			height 15px
+			width 18px
+			margin-right 33px
+			background url('../img/icon-set-wl.png?version') -379px -206px no-repeat 
+		.text-question
+			height 20px
+			width 85%
+	.payment
+		border-radius 5px
+		border 1px solid #CCC
+		margin 0 0 15px
+		padding 10px 0
+		h3
+			font-size 15px
+			line-height 20px
+			margin 0px 10px
+		ul
+			margin 0
+			padding 8px 0 0 0
+			list-style none
+		span
+			float left
+			margin-left 10px
+		li
+			margin-top 10px
+			height 20px
+			&:first-child
+				margin 0
+		[class*="icon-"]
+			background url('../img/icon-set-wl.png?version') no-repeat -183px -159px
+			margin-right 11px
+		.icon-payment-cash
+			height 20px
+			width 29px
+		.icon-payment-check
+			background-position -212px -159px
+			height 19px
+			margin-right 10px
+			width 30px
+		.icon-payment-deposit
+			background-position -182px -181px
+			height 21px
+			width 29px
+		.icon-payment-money-order
+			background-position -212px -181px
+			height 20px
+			width 29px
+		.icon-payment-reimbursement
+			background-position -242px -159px
+			height 19px
+			margin-right 10px
+			width 30px
+		.icon-payment-credit-card
+			background-position -242px -182px
+			height 21px
+			width 29px
+	.options-share
+		border-radius 5px
+		border 1px solid #CCC
+		margin-bottom 15px
+		padding 10px 0
+		height 20px
+		ul
+			float left
+			list-style none
+		span
+			float left		
+		li
+			float left
+			margin 0 2px			
+		a
+			float left
+			margin-left 3px
+		[class*="icon-"]
+			background url('../img/icon-set-wl.png?version') no-repeat -356px -181px
+			width 20px
+		.icon-options-mail
+			height 18px
+		.icon-options-print
+			background url('../img/icon-set-wl.png?version') no-repeat -380px -181px
+			height 20px
+		.icon-options-favorites
+			background url('../img/icon-set-wl.png?version') no-repeat -416px -204px
+			height 20px
+		.icon-options-continue
+			background url('../img/icon-set-wl.png?version') no-repeat -442px -204px
+			height 20px
+	.options-alert
+		text-align right
+		a
+			display inline-block
+			*display inline
+			margin-left 3px
+			padding-top 1px
+			vertical-align top
+			*zoom 1
+		.icon-options-alert
+			background url('../img/icon-set-wl.png?version') no-repeat -405px -177px
+			display inline-block
+			*display inline
+			height 20px
+			width 20px
+			*zoom 1
+.vertical-promo
+	background #fff
+	float left
+	margin-left 30px
+	height 600px
+	width 160px
+.text-question-to-seller
+	.icon-question
+		background url('../img/icon-set-wl.png?version') no-repeat -321px -163px
+		float left
+		margin 7px
+		height 15px
+		width 17px
+	.icon-answer
+		background url('../img/icon-set-wl.png?version') no-repeat -342px -164px
+		float left
+		margin 7px
+		height 15px
+		width 17px
+	p
+		float left
+		padding 7px 0
+		width 85%
+	.date-hour
+		float left
+		padding 7px 0
+		width 110px
+	.question-customer
+		background #FFFAEB
+		float left
+		font-weight normal
+		width 100%
+		border-bottom 1px solid #ccc
+	.border-bottom
+		border-bottom 0px
+	.answer-seller
+		background #FFFFFF
+		border-bottom 1px solid #CCCCCC
+		float left
+		font-weight normal
+		width 100%
+		margin 0
+.maybe-sesion-star
+	border-bottom 1px solid #ccc
+	padding 10px 0
+	margin 0 0 10px 0
+	text-align center
+	p
+		margin 0
+	a
+		display inline
+		margin 0 4px
+.footer-tip
+	padding 0 5%
+	height 36px
+	.icon-footer-tip
+		background url('../img/icon-set-wl.png?version') no-repeat -431px -179px
+		float left
+		margin 7px 7px 7px 0px
+		height 20px
+		width 26px
+	p
+		color #999
+		text-align left
+		font-size 11px
+		margin 0
+.detail-product
+	float left
+	position relative
+	width 770px
+#background-desabled-add, #img-desabled-add
+	height 100%
+	left 0
+	position absolute
+	top 0
+	width 100%
+#background-desabled-add
+	z-index 5
+	background white
+	opacity 0.5
+	filter unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=50)")
+#img-desabled-add
+	z-index 10
+	background url('../img/ads-finish.png') no-repeat
+/* Buscadores */
+
+/* Usuario Acesso */
+.c-acceso
+	padding 0 108px
+	input
+		width 206px
+	.control-label
+		width 110px
+	.controls
+		margin-left 114px
+	.control-group
+		margin-bottom 10px
+	[class*="col-"]
+		float left
+		width 330px
+	.col-left
+		border-right 1px solid #ccc
+		padding 18px 40px 18px 0
+	.col-right
+		padding 18px 0 18px 40px
+/* Cuenta */
+.menu-level-one
+	li
+		display inline-block
+		*display inline
+		*zoom 1
+	a
+		border-top 1px solid #ccc
+		border-left 1px solid #ccc
+		border-right 1px solid #ccc
+		border-radius 5px 5px 0 0
+		display inline-block
+		*display inline
+		*zoom 1
+		*float left
+		margin 0 3px
+		padding 4px 10px
+		font-size 14px
+	.first
+		margin-left 10px
+	.active-page
+		a
+			color #000
+			font-size 16px
+			font-weight bold
+			position relative
+			border-bottom none
+			position relative
+			z-index 10
+			left 0
+			background #fff
+			padding 5px 10px
+			*padding 4px 10px
+	.opportunity
+		a
+			background #FFCC00
+.content-level-one
+	border-radius 5px
+	border 1px solid #ccc
+	position relative
+	padding 40px 10px 10px 10px
+	h2
+		text-align center
+.menu-level-two
+	float left
+	> li
+		margin-bottom 10px
+		border-radius 5px 0 0 5px
+		display block
+		border 1px solid #ccc
+		-webkit-transition all 0.2s ease-in-out
+		-moz-transition all 0.2s ease-in-out
+		-o-transition all 0.2s ease-in-out
+		transition all 0.2s ease-in-out
+		> a
+			color #039
+			display block
+			margin 0 2px
+			padding 3px 10px
+	> li:hover
+		box-shadow -3px 3px 3px #CCC
+	.active-page
+		border-right none
+		box-shadow -1px 2px 2px #CCC
+		position relative
+		left -2px
+		top 0px
+		background #FFF
+		z-index 10
+		> a
+			color #000
+			font-weight bold
+.content-level-two
+	background #fff
+	border-radius 5px
+	box-shadow 3px 4px 4px #CCC
+	border 1px solid #ccc
+	margin-top -20px
+	margin-left -3px
+	width 81%
+	float left
+	padding 10px
+	margin-bottom 10px
+	min-height 200px
+	/* Lista de Favoritos */
+	.result-detail
+		margin-top 5px
+		width 60%
+	.description
+		width 458px !important
+	.price
+		text-align center
+		width 120px !important
+	.delete
+		text-align center
+		width 65px !important
+	.description-product
+		width 466px !important
+	.precio-product
+		width 123px !important
+	.icon-delete
+		background url('../img/icon-set-wl.png?version') -465px -121px no-repeat
+		height 20px
+		width 20px
+.tips
+	float right
+	width 220px
+	line-height 14px
+	color #666666
+	background #F3F3F3
+	padding 10px
+	ul
+		list-style disc
+		margin 5px 24px 24px 24px
+		font-size 11px
+		ffarial()
+	h4
+		margin-bottom 5px
+		padding-bottom 3px
+		p
+			display inline-block
+			*display inline
+			*zoom 1
+			margin 0 0 0 5px
+			font-size 12px
+			fftre()
+			color #000
+			width 170px
+			line-height 20px
+			border-top 0
+			padding 0
+	span
+		width 203px
+		ffarial()
+		font-size 11px
+		line-height 15px
+		color #666
+		padding-top 7px
+		display inline-block
+		*display inline
+		*zoom 1
+	.shadow-space-mini
+		background url('../img/icon-set-wl.png?version') no-repeat -15px -205px
+		float left
+		height 20px
+		width 100%
+.title-active-notices
+	height 38px
+	padding-bottom 10px
+	h2
+		float left
+		margin 0
+		padding-top 6px
+	span
+		color #CC0000
+		font-size 20px
+	> div
+		font-size 20px
+		font-weight bold
+		margin-top 20px
+	.btn-kotear
+		float right
+.form-search
+	border-top 1px solid #CCC
+	border-bottom 1px solid #CCC
+	padding 10px 0
+	height 27px
+	input
+		float left
+		width 150px
+	button,a
+		float left
+		margin-left 12px
+.options-search
+	border-top 1px solid #CCC
+	border-bottom 1px solid #CCC
+	padding 10px 0
+	&.no-top
+		border-top none
+	&.last
+		padding 5px 0
+		margin-top 5px
+		.pagination-results
+			padding 0
+	.form-search
+		border none
+		padding 0
+		float left
+	.result-detail
+		float right !important
+		width auto !important
+		margin 0 !important
+	.show-dates
+		float left
+	.pagination-results
+		float right
+		line-height 21px
+		padding-top 5px
+		a
+			color #039
+			float left
+			margin 0 5px
+			&:hover
+				text-decoration none
+		.current
+			color #000
+			font-weight bold
+			&:hover
+				color #000
+		.on-content
+			text-decoration underline
+		.off-content
+			text-align none
+			color #000
+			font-weight normal
+		.pagination
+			color #A7A7A7
+	ul
+		list-style none
+		margin 0
+		padding 0
+		float left
+		li
+			float left
+			a
+				float left
+			.icon-list-line-active, span.icon-list-square-active, span.icon-list-line-noActive, span.icon-list-square-noActive
+				margin 0 3px
+				height 26px
+				width 26px
+			.icon-list-line-active
+				background url('../img/icon-set-wl.png?version') -463px -177px no-repeat
+			.icon-list-square-active
+				background url('../img/icon-set-wl.png?version') -463px -208px no-repeat
+			.icon-list-line-noActive
+				background url('../img/icon-set-wl.png?version') -463px -54px no-repeat
+			.icon-list-square-noActive
+				background url('../img/icon-set-wl.png?version') -463px -85px no-repeat
+		.item-line
+			line-height 26px
+	
+
+.list-result-products
+	list-style none
+	margin 0
+	padding 0
+	clear both
+	*zoom 1
+	&:before, &:after
+		display table
+		content ""
+	&:after
+		clear both
+	.product-row
+		float left
+		width 100%
+		margin 5px 0
+		div
+			float left
+			padding 7px 0
+		.check-product
+			height 20px
+			width 23px
+			text-align center
+		.star-product
+			height 20px
+			width 75px
+			text-align center
+		.description-product,div.description-product-large
+			margin-left 5px
+			padding 5px 0 0 0
+			input,h3,img,p
+				float left
+			.conteiner-img
+				display table-cell
+				height 93px
+				margin 0 10px 5px 0
+				padding 0
+				text-align center
+				vertical-align middle
+				width 80px
+			h3
+				color #003399
+				display block
+				width 68%
+				line-height 23px
+				font-size 14px
+				overflow hidden
+				max-height 70px
+			img
+				background #CCC
+				margin 0px 10px 5px 5px
+				max-height 75px
+				max-width 75px
+				font-size 0
+				*text-indent -9999px
+			input
+				margin 10px 0 0 0
+			span.finish-data
+				float left
+				display block
+				color #666
+				font-size 12px
+		.description-product
+			width 286px !important
+		.description-product-large
+			width 526px
+		.type-product
+			width 100px
+			text-align center
+			font-weight bold
+			span
+				font-size 18px
+				color #CC0000
+		.visit-product
+			height 20px
+			width 68px
+			text-align center
+		.price-product
+			height 20px
+			width 87px
+			text-align center
+		.down-motive-product
+			height 20px
+			width 136px
+			text-align center
+		.line-vertical
+			height 83px
+			width 2px
+			border-right 1px solid #999999
+			margin 5px 0
+		.delete-product
+			text-align center
+			width 119px
+		.questions
+			width 218px
+			text-align right
+			padding-right 10px
+		.action-options
+			display block
+			width 100%
+			text-align right
+			float left
+			a
+				display inline-block
+				*display inline
+				*zoom 1
+				span.block
+					display block
+					float left
+					width 78px
+					*width 73px
+					margin-right 5px
+			li
+				margin-bottom 5px
+				float left
+				width 90%
+			
+		.icon-edit-action
+			background url('../img/icon-set-wl.png?version') -393px -234px no-repeat
+			height 13px
+			width 13px
+			margin-left 6px
+			margin-top 6px
+		.icon-delete-action
+			background url('../img/icon-set-wl.png?version') -392px -249px no-repeat
+			height 13px
+			width 13px
+			margin-left 6px
+			margin-top 3px
+		.icon-disabled-action
+			background url('../img/icon-set-wl.png?version') -325px -259px no-repeat
+			height 13px
+			width 13px
+			margin-left 6px
+			margin-top 3px
+		.icon-start-action
+			background url('../img/icon-set-wl.png?version') -325px -238px no-repeat
+			height 13px
+			width 13px
+			margin-left 6px
+			margin-top 3px
+		.icon-active-action
+			background url('../img/icon-set-wl.png?version') -299px -173px no-repeat
+			height 13px
+			width 13px
+			margin-left 6px
+			margin-top 4px
+		.icon-republish-action
+			background url('../img/icon-set-wl.png?version') -411px -224px no-repeat
+			height 13px
+			width 13px
+			margin-left 6px
+			margin-top 5px
+		.arrow-dow
+			width 10px
+			height 10px
+			background url('../img/bg-toogle.png?version') 0 3px no-repeat
+			display inline-block
+			*display inline
+			*zoom 1
+			*float left
+		.unanswered-questions
+			width 300px
+			background #FFF
+			margin -5px
+	.unanswered-questions
+		width 690px
+		float right
+		display none
+		li
+			border-bottom 1px solid #A09F9F
+			margin 0 0 10px 0
+			padding 0 0 10px 0
+			float left
+		.detail-content
+			background #F7F7F7
+			padding 5px 10px 10px
+			float left
+			width 670px
+		p
+			padding 6px 0
+			float left
+			line-height 16px
+			font-family Arial,sans-serif
+			margin 0
+	.green
+		background #E0EBCC
+	.yellow
+		background #FFF5CC
+	.gray
+		background #EBEBEB
+	.blue
+		background #E1E8F0
+	.icon-question,.icon-question-ok
+		height 20px
+		width 20px
+		display inline-block
+		*display inline
+		*zoom 1
+		*float left
+	.icon-question
+		background url('../img/icon-set-steps.png?version') -745px -670px no-repeat
+	.icon-question-ok
+		background url('../img/icon-set-steps.png?version') -745px -692px no-repeat
+	.column-date
+		width 100%
+		float left
+		margin-bottom 5px
+	.column-icon
+		width 30px
+		float left
+	.column-text
+		width 640px
+		float left
+		a
+			display inline
+	.arrow-dow
+		width 10px
+		height 10px
+		background url('../img/arrowUpDown.png?version') 0 3px no-repeat
+		display inline-block
+		*display inline
+		*zoom 1
+		*float left
+		margin-left 5px
+	.answer-question
+		float left
+		padding-top 10px
+		padding-bottom 10px
+		border-top 1px solid #ccc
+#layer-opacity
+	opacity 0.5
+	filter unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=50)")
+	background white
+	position relative
+	width 100%
+	height 666px
+	z-index 3
+#tape-coming-soon
+	position absolute
+	z-index 5
+	background url('../img/tape-coming-soon.png') no-repeat
+	width 1009px
+	height 453px
+	top 125px
+	left -27px
+#landing
+	background url('../img/landing.jpg') no-repeat
+	position relative
+	width 679px
+	height 656px
+	z-index 1
+	margin 0 auto
+
+.internal-message
+	margin-bottom 20px
+	[class^="icon-"]
+		display inline-block
+		*display inline
+		vertical-align top
+		*zoom 1
+	.menu-level-one
+		margin-bottom -1px
+	.select-highlight .steps-options
+		border-top 0px
+	a:hover
+		text-decoration none
+	ul
+		padding 0
+		margin 0
+		list-style none
+	form
+		margin 0 0 9px	
+	// menu nivel dos
+	
+	.options
+		border-top 1px #CCC solid
+		width 140px
+		margin 3px 0 10px 9px
+		padding 3px 0 0 0
+		li
+			border none
+		li.active
+			list-style disc inside !important
+			a
+				color #000
+				margin 0px
+				display inline-block
+				*display inline
+				*zoom 1
+			a:hover
+				text-decoration none
+		a
+			list-style none
+			color #039
+			margin 5px 0 5px 15px		
+		a:hover
+			text-decoration underline
+
+		/* Avisos internos */
+	.my-ads,.new-enterprise,.active-notices
+		.control-group > label
+			width 94px
+			text-align left
+		.controls
+			margin-left 120px
+		h1
+			font-size 20px
+		p
+			font-size 12px
+			color #666666
+		.checkbox
+			a
+				font-size 13px
+				text-decoration underline
+				line-height 18px
+	.my-ads
+		.input-large
+			width 195px
+		.control-group
+			margin-left 25px
+	.line-one
+		margin-top -5px
+	.new-enterprise
+		width 770px
+		form
+			width 770px
+		.shadow-space
+			background url('../img/bg-box-shadow.jpg?version')  26px 0 no-repeat scroll 131px 0px transparent
+			height 34px
+			width 770px
+	form
+		width 500px
+		float left
+	span.red
+		color red
+		font-size 15px
+		font-size 15px
+		font-weight bold
+		margin-left -6px
+	span.red-inline
+		color red
+		font-size 15px
+		font-size 15px
+		font-weight bold
+	.checkbox
+		font-size 11px
+		color #999
+		line-height 13px
+	.shadow-space-mini
+		background url('../img/icon-set-wl.png?version') no-repeat -15px -201px
+		float left
+		height 50px
+		width 100%
+	.shadow-space
+		//background url('../img/bg-box-shadow.jpg?version') 44px 0 no-repeat
+		background url('../img/bg-box-shadow.jpg?version') -147px 0 no-repeat
+		height 34px
+		width 500px
+	.btn-save
+		text-align center
+	.pagination-barra
+		bgBarResult()
+		float left
+		height 35px
+		width 100%
+		margin 10px 0 10px
+		ul
+			list-style none
+			float left
+			padding 0
+			margin 0
+			li
+				float left
+				padding 10px 10px 0px 10px
+				a
+					color #333333
+					display inline-block
+					*display inline
+					*zoom 1
+					*height 12px
+					font-size 14px
+			.check-all
+				width 8px
+				text-align center
+				padding 9px 9px 0 6px
+			.star
+				width 60px
+				text-align center
+			.description
+				width 268px !important
+				text-align center
+			.visit
+				width 64px
+				text-align center
+			.prices
+				width 65px
+				text-align center
+			.message-types
+				width 82px
+				text-align center
+			.actions
+				width 96px
+				text-align center
+			.down-motive
+				width 130px
+				text-align center
+/* Popups  */
+#fancybox-content
+	.form-horizontal
+		.control-group
+			margin-bottom 6px
+	.btn-kotear,.btn-close
+		padding 8px 15px
+		&.fix
+			padding 10px 18px
+
+#fancybox-content label.checkbox{
+	font-size 12px
+}
+
+.log-in
+	width 330px
+	.control-label
+		width 100px
+	.controls
+		margin-left 110px
+	p
+		font-size 14px
+	.btn-kotear
+		display block
+		margin-bottom 8px
+#recover-passw-form, #change-password-form
+	.control-label
+		width 150px
+	.controls
+		margin-left 110px
+	.form-horizontal
+		.controls
+			margin-left 150px
+	.footer-tip
+		line-height 30px
+.sign-in
+	width 400px
+	.control-label
+		width 108px
+	.controls
+		margin-left 130px
+	#captcha-label-control
+		img
+			margin-bottom 6px
+	.btn-kotear
+		display block
+		margin-bottom 8px
+	.terms-condition
+		display inline
+.login-column
+	float left
+	padding-right 30px
+.sign-in-column
+	border-left 1px solid #CCC
+	float left
+	padding-left 30px
+/* Hacks */
+.impress
+	.shadow-space
+		clear both
+.mt10
+	margin-top 10px
+.mb10
+	margin-bottom 10px
+.mb20
+	margin-bottom 20px
+.mb30
+	margin-bottom 30px
+.strong
+	font-weight 700
+.ta-right
+	text-align right
+.lt-ie9
+	.steps
+		filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#E4E4E4',GradientType=0)")
+		*zoom 1
+.lt-ie9
+	footer
+		filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#191919', endColorstr='#000000',GradientType=0)")
+		*zoom 1
+.lt-ie9
+	.result-content
+		.content-right
+			.pagination-barra
+				filter: unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#EDEDED', endColorstr='#CECECE',GradientType=0 )")
+	.internal-message
+		.pagination-barra
+			filter: unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#EDEDED', endColorstr='#CECECE',GradientType=0 )")
+/* A borrar en un futuro */
+.m-list
+	list-style square outside none
+	margin 0 0 10px
+	padding-left 16px
+.m-small
+	input[type="text"]
+		margin 0
+	small
+		display block
+		font-size 10px
+/* Tabla modal pago pendiente */
+.modal-paid table
+	border 1px solid #CCCCCC
+	border-collapse collapse
+	margin 1em auto
+	width 99%
+
+.modal-paid table th, .modal-paid table td
+	padding 0.3em 0.5em 0.2em
+	vertical-align middle
+
+.modal-paid table th
+	background none repeat scroll 0 0 #EEEEEE
+	border-bottom 1px solid #CCCCCC
+	font-weight bold
+
+.modal-paid table td
+	border-top 1px solid #EEEEEE
+
+.modal-paid
+	.control-group
+		text-align center
+
+/* -- Tabla modal pago pendiente */
+
+/* listado de productos */
+#avisos-seleccionados
+	margin 0px 20px 20px 20px
+	background rgb(243, 240, 240)
+	padding 10px
+	list-style none
+	border 1px solid #ccc
+	border-radius 5px
+	li
+		border-top 1px solid #ccc
+		padding 3px 0
+		margin-bottom 5px
+	li:first-child
+		border-top 0px
+
+@import "basura.styl"
+
+/* Plugins ver que hacer luego */
+/********************
+ * FEATURE CAROUSEL *
+ ********************/
+.carousel-container
+	position relative
+	width 747px
+#carousel
+	background-color #FFF
+	font-family Arial
+	font-size 12px
+	height 355px
+	position relative
+	width 747px
+.carousel-image
+	border 0
+	display block
+	margin 0 auto
+.carousel-feature
+	background white
+	box-shadow 0 0 5px #666
+	cursor pointer
+	left -1000px
+	position:absolute
+	top -1000px
+	overflow hidden
+	display table
+.lt-ie9 .carousel-feature
+	border 1px solid #ccc
+.carousel-image-contenedor
+	display table-cell
+	vertical-align middle
+.carousel-feature .carousel-caption
+	background-color #000
+	bottom 25px
+	left 0%
+	padding 0px
+	position absolute
+	width 60%
+.carousel-feature .carousel-caption p
+	color white
+	font-size 12px
+	font-weight bold
+	margin 0
+	padding 5px
+.carousel-feature .carousel-caption-price
+	background #E10B15
+	bottom 25px
+	color #fff
+	display block
+	float right
+	font-size 18px
+	font-weight bold
+	padding 10px
+	position absolute
+	right 0px
+.tracker-summation-container
+	position absolute
+	color white
+	right 48px
+	top 292px
+	padding 3px
+	margin 3px
+	background-color #000
+.tracker-individual-container
+	bottom 0
+	color white
+	margin 0
+	padding 0
+	position absolute
+	right 0
+.tracker-individual-container li
+	float left
+	list-style none
+.tracker-individual-container .tracker-individual-blip
+	background-color #C7C7C7
+	color #333
+	font-weight bold
+	margin 0 3px
+	padding 0 3px
+	text-align center
+	transition all 0.3s ease 0s
+	-webkit-transition all 0.3s ease 0s
+	-o-transition all 0.3s ease 0s
+	-moz-transition all 0.3s ease 0s
+.tracker-individual-container .tracker-individual-blip-selected
+	background-color #E10B15
+	color white
+	font-weight bold
+#carousel-left
+	bottom 120px
+	cursor pointer
+	left 25px
+	position absolute
+	z-index 20
+#carousel-right
+	bottom 120px
+	cursor pointer
+	position absolute
+	right -5px
+	z-index 20
+#btn-media
+	height 18px
+	margin 0 3px
+	width 17px
+.btn-media-pause
+	background: url('../img/btn-media.jpg') -1px -1px no-repeat
+.btn-media-play
+	background: url('../img/btn-media.jpg') -1px -20px no-repeat
+/* Mostrar consejo nivel de clave */
+#show-tip
+	float right
+	display inline-block
+	*zoom 1
+	*display inline
+.kotear-tip
+	background none repeat scroll 0 0 #DDDDDD
+	border-radius 5px 5px 5px 5px
+	color #747272
+	font-family arial
+	font-size 11px
+	padding 5px
+	width 96%
+	position relative
+	margin-top 10px
+.arrow-min-toltip
+	background url("../img/arrow-mini.png") no-repeat scroll 0 0 transparent
+	display block
+	height 9px
+	position absolute
+	right 15px
+	top -9px
+	width 18px
+/* Fancybox Version: 1.3.4 */
+#fancybox-loading
+	cursor pointer
+	display none
+	height 40px
+	left 50%
+	margin-left -20px
+	margin-top -20px
+	overflow hidden
+	position fixed
+	top 50%
+	width 40px
+	z-index 1104
+#fancybox-loading div
+	position absolute
+	top 0
+	left 0
+	width 40px
+	height 480px
+	background-image url('plugins/fancybox/fancybox.png')
+#fancybox-overlay
+	display none
+	left 0
+	position fixed
+	top 0
+	width 100%
+	z-index 1100
+#fancybox-tmp
+	border 0
+	display none
+	margin 0
+	overflow auto
+	padding 0
+#fancybox-wrap
+	display none
+	left 0
+	outline none
+	padding 20px
+	position absolute
+	top 0
+	z-index 1101
+#fancybox-outer
+	background #fff
+	height 100%
+	position relative
+	width 100%
+#fancybox-content
+	border 0px solid #fff
+	height 0
+	outline none
+	overflow hidden
+	padding 0
+	position relative
+	width 0
+	z-index 1102
+#fancybox-hide-sel-frame
+	background transparent
+	height 100%
+	left 0
+	position absolute
+	top 0
+	width 100%
+	z-index 1101
+#fancybox-close
+	background transparent url('plugins/fancybox/fancybox.png') -40px 0px
+	cursor pointer
+	display none
+	height 30px
+	position absolute
+	right -15px
+	top -15px
+	width 30px
+	z-index 1103
+#fancybox-error
+	color #444
+	font normal 12px/20px Arial
+	margin 0
+	padding 14px
+#fancybox-img
+	border none
+	height 100%
+	line-height 0
+	margin 0
+	outline none
+	padding 0
+	vertical-align top
+	width 100%
+#fancybox-frame
+	border none
+	display block
+	height 100%
+	width 100%
+#fancybox-left, #fancybox-right
+	background transparent url('plugins/fancybox/blank.gif')
+	bottom 0px
+	cursor pointer
+	display none
+	height 100%
+	outline none
+	position absolute
+	width 35%
+	z-index 1102
+#fancybox-left
+	left 0px
+#fancybox-right
+	right 0px
+#fancybox-left-ico, #fancybox-right-ico
+	cursor pointer
+	display block
+	height 66px
+	margin-top -15px
+	position absolute
+	top 50%
+	width 31px
+	z-index 1102
+#fancybox-left-ico
+	background url('../img/btn-left.jpg') no-repeat
+	left 0px
+#fancybox-right-ico
+	background url('../img/btn-right.jpg') no-repeat;
+	right 0px
+#fancybox-left:hover, #fancybox-right:hover
+	visibility visible
+#fancybox-left:hover span
+	left 0px
+#fancybox-right:hover span
+	right 0px
+.fancybox-bg
+	border 0
+	height 20px
+	margin 0
+	padding 0
+	position absolute
+	width 20px
+	z-index 1001
+#fancybox-bg-n
+	background-image url('plugins/fancybox/fancybox-x.png')
+	left 0
+	top -20px
+	width 100%
+#fancybox-bg-ne
+	background-image url('plugins/fancybox/fancybox.png')
+	background-position -40px -162px
+	right -20px
+	top -20px
+#fancybox-bg-e
+	background-image url('plugins/fancybox/fancybox-y.png')
+	background-position -20px 0px
+	height 100%
+	right -20px
+	top 0
+#fancybox-bg-se
+	background-image url('plugins/fancybox/fancybox.png')
+	background-position -40px -182px
+	bottom -20px
+	right -20px
+#fancybox-bg-s
+	background-image url('plugins/fancybox/fancybox-x.png')
+	background-position 0px -20px
+	bottom -20px
+	left 0
+	width 100%
+#fancybox-bg-sw
+	background-image url('plugins/fancybox/fancybox.png')
+	background-position -40px -142px
+	bottom -20px
+	left -20px
+#fancybox-bg-w
+	background-image url('plugins/fancybox/fancybox-y.png')
+	height 100%
+	left -20px
+	top 0
+#fancybox-bg-nw
+	background-image url('plugins/fancybox/fancybox.png')
+	background-position -40px -122px
+	left -20px
+	top -20px
+#fancybox-title
+	font-family Helvetica
+	font-size 12px
+	z-index 1102
+.fancybox-title-inside
+	background #fff
+	color #333
+	padding-bottom 10px
+	position relative
+	text-align center
+.fancybox-title-outside
+	color #fff
+	padding-top 10px
+.fancybox-title-over
+	bottom 0
+	color #FFF
+	left 0
+	position absolute
+	text-align left
+#fancybox-title-over
+	padding 10px
+	background-image url('plugins/fancybox/fancy_title_over.png')
+	display block
+.fancybox-title-float
+	bottom -20px
+	height 32px
+	left 0
+	position absolute
+#fancybox-title-float-wrap
+	border none
+	border-collapse collapse
+	width auto
+#fancybox-title-float-wrap td
+	border none
+	white-space: nowrap
+#fancybox-title-float-left
+	background url('plugins/fancybox/fancybox.png') -40px -90px no-repeat
+	padding 0 0 0 15px
+#fancybox-title-float-main
+	background url('plugins/fancybox/fancybox-x.png') 0px -40px
+	color #FFF
+	font-weight bold
+	line-height 29px
+	padding 0 0 3px 0
+#fancybox-title-float-right
+	background url('plugins/fancybox/fancybox.png') -55px -90px no-repeat
+	padding 0 0 0 15px
+@css{
+/* IE6 */
+.fancybox-ie6 #fancybox-close { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='plugins/fancybox/fancy_close.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-left-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='plugins/fancybox/fancy_nav_left.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-right-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='plugins/fancybox/fancy_nav_right.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-over { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='plugins/fancybox/fancy_title_over.png', sizingMethod='scale'); zoom: 1; }
+.fancybox-ie6 #fancybox-title-float-left { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='plugins/fancybox/fancy_title_left.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-float-main { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='plugins/fancybox/fancy_title_main.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-float-right { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='plugins/fancybox/fancy_title_right.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-bg-w, .fancybox-ie6 #fancybox-bg-e, .fancybox-ie6 #fancybox-left, .fancybox-ie6 #fancybox-right, #fancybox-hide-sel-frame {
+	height: expression(this.parentNode.clientHeight + "px");
+}
+#fancybox-loading.fancybox-ie6 {
+	position: absolute; margin-top: 0;
+	top: expression( (-20 + (document.documentElement.clientHeight ? document.documentElement.clientHeight/2 : document.body.clientHeight/2 ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop )) + 'px');
+}
+#fancybox-loading.fancybox-ie6 div	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='plugins/fancybox/fancy_loading.png', sizingMethod='scale'); }
+/* IE6, IE7, IE8 */
+.fancybox-ie .fancybox-bg { background: transparent !important; }
+}
+.red{
+	color: #E00B14;
+}

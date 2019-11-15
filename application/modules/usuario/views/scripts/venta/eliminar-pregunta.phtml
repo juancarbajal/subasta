@@ -1,0 +1,20 @@
+<div id="body-content" class="regform-pag col-master">
+<!--Pregunta-->
+<div class="mensajeerror">
+  <img src="<?=$this->baseUrl()?>/img/icons/warning.gif"/> 	Atención: No se permite incluir datos personales o incurrir en cualquier intercambio de información que no corresponda al producto en cuestión. Todo usuario que no cumpla con esta regla será suspendido.
+</div>
+<div class="title"><h1><?=$this->aviso->TIT?></h1></div>
+
+<div id="frmPregunta" name="frmPregunta" dojoType="dijit.form.Form" action="<?=$this->baseUrl()?>/usuario/compra/preguntacompleta" method="post"> 
+<input type="hidden" name="id_aviso" id="id_aviso" value="<?=$this->aviso->ID_AVISO?>"/>
+  <table>
+    <tr>
+      <td valign="top">Pregunta</td>
+      <td><textarea rows="10" cols="40" name="coment" id="coment"></textarea><br/>
+        <input class="redbutton" type="submit" value="Preguntar al Vendedor"/>
+        <input class="redbutton" type="button" value="Cancelar" onclick="window.location.href='<?=$this->volver?>'"/>
+      </td>
+    </tr>
+  </table>
+</div>
+</div>

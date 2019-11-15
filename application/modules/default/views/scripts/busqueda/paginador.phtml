@@ -1,0 +1,40 @@
+    <?php if ($this->pageCount): ?>
+    <div class="pagination-results">    
+    <!-- Enlace para la primera pagina -->
+    <?php if (isset($this->previous)): ?>
+        <a href="<?php echo $this->baseUrl() . '/busqueda/?' . $this->variables . '&page=' . $this->first ; ?>" class="on-content">&lsaquo;&lsaquo;</a>
+    <?php else: ?><a class="on-content"></a>
+    <?php endif; ?>
+    
+    <!-- Enlace para la anterior pagina -->
+    <?php if (isset($this->previous)): ?>
+        <a href="<?php echo $this->baseUrl() . '/busqueda/?' . $this->variables . '&page=' . $this->previous; ?>" class="on-content"> Anterior</a>
+    <?php else: ?>
+	<a  class="on-content"></a>
+    <?php endif; ?>
+
+    <!-- Enlace para paginas -->
+    <?php foreach ($this->pagesInRange as $page): ?>
+            <?php if ($page != $this->current): ?>
+                    <a href="<?php echo $this->baseUrl() . '/busqueda/?' . $this->variables . '&page=' . $page; ?>" class="on-content"><?php echo $page; ?></a>
+            <?php else: ?>
+                    <a class="current"><?php echo $page; ?></a>
+            <?php endif; ?>
+    <?php endforeach; ?>
+
+    <!-- Enlace para la pagina siguiente -->
+    <?php if (isset($this->next)): ?>
+            <a href="<?php echo $this->baseUrl() . '/busqueda/?' . $this->variables . '&page=' . $this->next; ?>" class="on-content">Siguiente</a>
+            <?php else: ?>
+                    <a class="on-content"></a>
+            <?php endif; ?>
+
+    <!-- Enlace para la ultima pagina -->
+    <?php if (isset($this->next)): ?>
+        <a href="<?php echo $this->baseUrl() . '/busqueda/?' . $this->variables . '&page=' . $this->last; ?>" class="on-content">&rsaquo;&rsaquo;</a>
+    <?php else: ?>
+        <a class="on-content"></a>
+    <?php endif; ?>
+    </div>
+    <?php endif; ?>    
+       

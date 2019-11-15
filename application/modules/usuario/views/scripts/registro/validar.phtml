@@ -1,0 +1,35 @@
+<div id="valid-data" class="container">
+           <?php echo $this->action('busqueda','index', 'default');?>
+          <h2 class="k-title mb10"><span></span>Validación de registro de usuario</h2>
+          <p class="mb20">Completa con los datos que recibiste en el e-mail que te envió el sistema para validar tu registro en Kotear.pe </p>
+                <?php if (isset($this->msg)){?>
+                <div class='rbox'>
+                  <p><?php echo $this->msg?></p>
+                </div>
+                <?php } ?>
+          <div class="content-valida-data">
+          <form class="form-horizontal" id="register-user-validate">
+              <div class="control-group">
+                <label class="control-label" for="txt-nick">Tu apodo</label>
+                <div class="controls">
+                  <input type="text" name="apodo" id="txt-nick" />
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="txt-password">Tu clave</label>
+                <div class="controls">
+                  <input type="password" name="clave" id="txt-password" />
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="txt-code">Tu código de registro</label>
+                <div class="controls">
+                  <input type="password" name="confirma" id="txt-code" />
+                </div>
+              </div>
+              <div class="control">
+                  <button type="submit" class="btn-kotear ">Aceptar</button>
+              </div>
+          </form>
+      </div><!-- / content-valida-data -->
+</div> <!-- / valid-data -->

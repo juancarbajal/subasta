@@ -1,0 +1,28 @@
+   
+        <ul class="square-result-products row">
+        <?php 
+        foreach ($this->avisos as $r) { 
+            $href = $this->baseUrl() . '/aviso/' . $r->ID_AVISO . '-' .$r->URL;
+            if ($r->IMAGEN <> 'none.gif') { 
+                $img = $this->rutaimagen . $r->IMAGEN; }
+            else { 
+                $img = $this->rutaimagen . 'none.gif'; } ?>
+        <li class="product-square item-checked <?php echo $r->ESTILO;?>">
+            <input class="chk-item" type="checkbox" value="<?php echo $r->ID_AVISO; ?>" name="result[]"/>
+            <div class="conteiner-img">
+                <div class="inner-conteiner-img">
+                    <a href="<?php echo $this->escape($href); ?>">
+                    <img  class="lazy" src="<?=URL_STATIC?>img/bg.jpg" data-original="<?php echo $img;?>"  alt="<?php echo $this->escape($r->TIT);?>"/>
+                    </a>
+                    <!--[if lt IE 7]><b></b><![endif]-->
+                </div>
+            </div>
+            <h4><?php echo $r->SIMB; ?> <?php echo number_format($r->PRECIO,2,'.',',')?></h4>
+            <h3><a href="<?php echo $this->escape($href); ?>"><?php echo $this->escape($r->TIT);?></a>
+            </h3>
+            <p><?php echo $r->APODO; ?></p>
+            <span>Caduca en <?php echo $r->CADUCIDAD; ?></span>
+            <span><?php echo $r->VISITAS; ?> visitas</span>
+        </li>    
+        <?php } ?>
+        </ul>

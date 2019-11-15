@@ -1,0 +1,76 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="es"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="es"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="es"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <title>Vista de Impresion | Kotear.pe</title>
+  <link type="text/css" rel="stylesheet" href="<?php echo $this->baseUrl() ?>/f/css/style.css?id=10" media="all"/>
+</head>
+
+<body class="impress" onload = 'window.print()'>
+<div id="wrapper">
+    <header class="header">
+           <h1 class="min-img" itemtype="http://schema.org/Organization" itemscope="itemscope">
+                <a href="<?php echo $this->baseUrl() ?>" title="Kotear.pe" itemprop="url">
+                    <img width="130" height="40" alt="Kotear.pe" src="<?=URL_STATIC?>img/logo-mini.jpg"/>
+                </a>
+                <meta content="kotear.pe" itemprop="name">
+           </h1>
+          <div id="user-name-login">
+            <a href="javascript:;" title="title" onclick = 'window.print()'>Impresión multiple</a>
+          </div>
+          <div class="shadow-space"></div>
+    </header>
+
+        <div class="info-impress">
+            <div class="header-impress"></div>
+            <div class="content-impress row">                
+                <ul class="list-result-products-grupal">                    
+                    <li class="product-row gray">
+                        <?php foreach ($this->avisos as $r) : 
+                            $$img = '';
+                            //$href = $this->baseUrl() . '/aviso/' . $r->K_ID_AVISO . '-' .$r->K_URL;
+                            if ($r->K_FOTO_PRINCIPAL <> 'none.gif') { 
+                                $img = $this->rutaimagen . $r->K_FOTO_PRINCIPAL; 
+                            }
+                            
+                        ?>
+                        <div class="description-product-large">
+                            <div class="conteiner-img">
+                            <img class="photo" src="<?=$img;?>" alt="<?=$r->K_TITULO;?>" 
+                                 onerror="this.src = '<?=URL_STATIC?>img/notFound.jpg'" />
+                            </div>
+                            <h3><?php echo $r->K_TITULO; ?></h3>                            
+                            <span><?php echo $r->K_APODO_VENDEDOR; ?></span>
+                        </div>
+                        <div class="line-vertical"></div>
+                        <div class="detail-product">
+                            <ul>
+                                <li>
+                                    <span class="red">
+                                        <?php echo $r->K_SIMB_MONEDA; ?>
+                                        
+                                        <?php echo  number_format($r->K_PRECIO_FINAL, 2, '.', ','); ?>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>Caduca en <?php echo $r->K_FECHA_CADUCA; ?></span>
+                                </li>                                
+                                <li>
+                                    <span><?php echo $r->K_NUM_VISITAS; ?> Visitas</span>
+                                </li>
+                            </ul>
+                        </div><!-- / -->
+                       <?php endforeach; ?> 
+                    </li>
+                    
+                </ul>
+             
+            </div>
+    </div>
+</div>
+</body>
+</html>
